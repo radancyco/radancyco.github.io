@@ -1,0 +1,33 @@
+/* Color Palette */
+
+$palette: (
+
+	color-1: rgb(51, 51, 51),
+	color-2: rgb(51, 129, 183),
+	color-3: rgb(0, 39, 118),
+	color-4: rgb(243, 243, 243),
+	color-5: rgb(154, 154, 154),
+	color-6: rgb(215, 220, 222),
+	color-7: rgb(211, 224, 209),
+	color-8: rgb(0, 0, 0),
+	color-9: rgb(255, 255, 255),
+	color-10: rgb(0, 144, 199),
+	color-11: rgb(145, 211, 1),
+	color-12: rgb(102, 0, 153),
+	color-13: rgb(187, 0, 0)
+
+);
+
+// Generate style name 
+
+@each $name, $color in $palette {
+
+	.#{$name} {
+
+		background-color: $color;
+		color: text-color($color); 
+	
+	}
+
+}
+

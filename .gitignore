@@ -1,0 +1,15 @@
+*.lock
+*.gem
+pkg/
+*.swp
+*~
+_httpdocs/
+.bundle/
+.DS_Store
+bbin/
+gh-pages/
+site/_httpdocs/
+coverage
+.ruby-version
+.sass-cache
+node_modules

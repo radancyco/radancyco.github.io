@@ -1,0 +1,45 @@
+---
+# This ensures Jekyll reads the file to be transformed into CSS later
+# Only Main files contain this front matter, not partials.
+---
+
+/*! TMP Worldwide Standards (tmp.com) - Global CSS */
+/*! Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy */
+
+// ### Framework: Related project frameworks and global resets, etc. ###
+
+	// Normalize: A CSS reset which levels out many cross-browser inconsistiences.
+
+	@import "core/normalize"; 
+
+// ### Project: Global variables, functionality, mixins and localizations ###
+
+	// Variables: Global variables used within this project.
+
+	@import "core/variables"; 
+
+	// Functions: Global functions used within this project.
+
+	@import "core/functions"; 
+
+	// Mixins: Global mixins used within this project.
+
+	@import "core/mixins"; 
+
+	// Placeholder: Placeholder patterns used withn this project (may need to move to layout)
+
+	@import "core/placeholders";
+
+	// Common: Common best practices and baseline behavior.
+
+	@import "core/common";
+
+// ### Project: Global frameworks, style guides and theme(s), used within a specific project ###
+
+	// Style Guide: Colors, typography, modules, grids, etc.
+
+	@import "styleguide/index";
+
+	// Theme: Contains imports to other partials that help construct the layout.
+
+	@import "theme/index";   

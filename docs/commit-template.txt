@@ -1,0 +1,17 @@
+[TYPE]: [WHAT PORTION OF CODE CHANGED]
+
+[LONG DESCRIPTION]
+
+# Uncomment below if it applies:
+# closes #
+# fixes #
+
+# Types allowed:
+#   Add - Add functionality
+#   Fix - Fix a bug
+#   Mer(ge) - Merge code with the current branch
+#   Mod(ify) - Change existing functionality
+#   Ref(actor) - Change the code without (add|remov|alter)ing functionality
+#   Rem(ove) - Remove functionality
+#   Wip (Work in Progress) - Adding new un(finish|test)ed functionality
+#--------------------------------------------------------------------------

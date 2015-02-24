@@ -1,0 +1,33 @@
+// *** Shared Functions ***
+
+// Relative Media Queries
+
+@function mq($width) {
+
+  @return #{$width/16.0}em
+
+}
+
+// Divide font size value by base font size of 16
+
+@function px($target) {
+
+	@return #{$target/16.0}rem
+
+}
+
+// Lighten: We'll let SASS choose which text color to set depending on color parameter that is passed in
+
+@function text-color($background-color) {
+
+	@if (lightness($background-color) > 40) {
+
+		@return #000; // Lighter backgorund, return dark color
+
+	} @else {
+
+		@return #fff; // Darker background, return light color
+
+	}
+
+}

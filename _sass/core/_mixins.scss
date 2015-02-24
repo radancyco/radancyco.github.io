@@ -1,0 +1,107 @@
+// *** Shared Mixins ***
+
+// Breakpoints
+
+@mixin breakpoint($point) {
+
+	@if $point == theforce { // It's maxi big
+
+		@media (min-width: mq(1180)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == palpatine {
+
+		@media (min-width: mq(1024)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == kenobi {
+
+		@media (min-width: mq(980)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == vader {
+
+		@media (min-width: mq(940)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == yoda {
+
+		@media (min-width: mq(860)) {
+
+			@content; 
+
+		}
+
+	}
+
+	@else if $point == luke {
+
+		@media (min-width: mq(778)) {
+
+			@content;
+
+		}
+
+	}
+
+	@else if $point == leia {
+
+ 		@media (min-width: mq(580)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else if $point == solo {
+
+ 		@media (min-width: mq(520)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else if $point == threepio {
+
+ 		@media (min-width: mq(480)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+	@else ifh $point == artoo {
+
+ 		@media (min-width: mq(320)) { 
+
+ 			@content; 
+
+ 		}
+
+	}
+
+}

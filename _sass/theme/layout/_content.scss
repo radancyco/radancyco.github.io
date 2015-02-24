@@ -1,0 +1,103 @@
+/* Main Content Area */
+
+main {
+max-width: 1054px;
+background-color: map-get($palette, color-9);
+margin: 0 auto;
+padding: 1em;
+
+	 @include breakpoint(luke) {
+
+	 	padding: 1em 3em;
+
+	 }
+
+}
+
+.logo {
+margin: 1em 0;
+}
+
+blockquote {
+background: map-get($palette, color-4);
+border-left: 7px dotted map-get($palette, color-5);
+border-radius: 0 5px 5px 0;
+margin: 1em 0;
+padding: 2em;
+
+	p {
+	margin: 0;
+	}
+
+	cite {
+	display: block;
+	margin: 1em 0 0;
+	text-align: right;
+	}
+
+}
+
+code {
+padding: 0 10px 2px;
+background: #2d2d2d;
+color: #f2f0ec;
+border-radius: 5px;
+
+  span:first-child {
+  margin-left: -.65em;
+  }
+
+}
+
+.fork-github {
+margin: 0;
+
+	a {
+	background-color: #000;
+	border: 1px #000 solid;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-size: px(14);
+	margin: 0 auto;
+	padding: .8em;
+	text-align: center;
+	width: 200px;
+
+		&:focus, &:hover, &:visited {
+		text-decoration: none;
+		}
+
+		&:focus, &:hover {
+		background-color: #fff;
+		color: #000;
+		}
+
+	 	@include breakpoint(luke) {
+
+			-webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+			box-shadow: 0 3px 5px 0 rgba(0,0,0,.2);
+			padding: 3px 0;
+			position: absolute;
+			right: -45px;	
+			top: 40px;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+
+	 	}
+
+	 }
+
+	 @include breakpoint(luke) {
+
+		height: 140px;
+		overflow: hidden;
+		position: fixed;
+		right: 0;	
+		top: 0;
+		width: 140px;
+		z-index: 2;
+
+	 }
+
+}

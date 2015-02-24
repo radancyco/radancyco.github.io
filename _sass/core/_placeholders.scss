@@ -1,0 +1,24 @@
+// *** Shared Placeholders ***
+
+%clearfix { 
+	
+	&:after {
+	clear: both; 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	visibility: hidden;
+	}
+
+}
+
+%wai {
+	
+	height: 0;
+	left: -999em;
+	position: absolute;
+	text-indent: $text-offscreen;
+	top: 0;
+	width: 0;
+
+}

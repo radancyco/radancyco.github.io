@@ -1,0 +1,19 @@
+{% include header.html %}
+
+	<main class="page" role="main" >
+
+		<img class="logo" src="assets/img/hdr-logo-wide.png" alt="TMP Worldwide, LLC"/>
+
+		<article>
+
+			{{ content }}
+
+		</article>
+
+		<p class="copyright">&copy; {{ "now" | date: "%Y" }} tmp.worldwide</p>
+
+		<p class="fork-github"><a href="https://github.com/tmpworldwide/ui-dev-standards">Fork me on Github</a></p>
+
+	</main>
+
+{% include footer.html %}

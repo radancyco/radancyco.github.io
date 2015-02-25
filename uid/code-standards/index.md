@@ -8,7 +8,7 @@ layout: default
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide developers. This document seeks to foster a standard approach to front-end development and should be shared with any developers who produce front-end code within our company as well as with vendors who produce code for TMP Worldwide.
 
-* This is a living document that changes often. [Bookmark it](/) and check back on regular basis.
+* This is a living document that changes often. [Bookmark it](/uid/code-standards) and check back on regular basis.
 * [Contributions are encouraged!](#how-to-contribute)
 
 <section id="our-standards" markdown="block">
@@ -419,7 +419,7 @@ When committing changes to a repository, use the standardized commit message tem
 
 To configure Git to use the commit template:
 
-1. [Download the standardized commit message template](docs/commit-template.txt) and place it in a permanent location on your local hard drive.
+1. [Download the standardized commit message template](/docs/commit-template.txt) and place it in a permanent location on your local hard drive.
 1. From your shell, type `git config --global commit.template path/to/commit/message`. Be sure to replace `path/to/commit/message` with the actual path to the commit message template.
 
 When you make a new commit, do not use the `-m` option. Instead just use `git commit` and let Git create a new commit message using the template.
@@ -440,7 +440,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 
 * [Package Control](https://sublime.wbond.net/)
 * [EditorConfig](https://sublime.wbond.net/packages/EditorConfig)
-    * [Download our standard EditorConfig file](docs/editorconfig.txt), rename it to `.editorconfig`, and place it in your project root.
+    * [Download our standard EditorConfig file](/docs/editorconfig.txt), rename it to `.editorconfig`, and place it in your project root.
 * [Emmet](https://sublime.wbond.net/packages/Emmet)
 * [HTML-CSS-JS Prettify](https://sublime.wbond.net/packages/HTML-CSS-JS%20Prettify)
 * [Nettuts+ Fetch](https://sublime.wbond.net/packages/Nettuts%2B%20Fetch)
@@ -472,28 +472,6 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [A List Apart](http://alistapart.com/)
 * [Sitepoint](http://sitepoint.com)
 
-
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 </section>
-
-### Keeper(s) of the Standards Guide
-
-* [Michael "Spell" Spellacy](https://github.com/michaelspellacy)
-
-### Contributors
-
-* [The TMP Worldwide UID Team](https://github.com/tmpworldwide/ui-dev-standards/graphs/contributors)
-
-### Frozen in Carbonite
-
-* [Stephanie "Plum" Plumeri](https://github.com/s-plum)
-* [Seth "Slopez" Lopez](https://github.com/sethlopezme)
-
-### How to Contribute
-
-* Suggest a change or offer your opinion by [opening or commenting on an issue](https://guides.github.com/features/issues/).
-* [Fork](https://guides.github.com/activities/forking/) the UI Dev Standards project, make some changes, and [create a pull request](https://guides.github.com/activities/forking/#making-a-pull-request).
-* New to GitHub? [Learn the basics with the guide](https://guides.github.com/activities/hello-world/), and [learn the GitHub flow](https://guides.github.com/introduction/flow/).
-
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }

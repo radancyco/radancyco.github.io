@@ -1,3 +1,5 @@
+[![TMP Worldwide](http://tmpworldwide.github.io/assets/img/hdr-logo.png)](http://www.tmp.com/)
+
 # Development Standards, Guidelines, Tools and Best Practices
 
 Welcome to TMP Worldwide's open development resource on GitHub! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us! Feel free to contribute to these documents or fork and use as a basis for your own development standards.

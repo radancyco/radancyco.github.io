@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Development Standards, Guidelines, Tools and Best Practices
 ---
 
 # Development Standards, Guidelines, Tools and Best Practices

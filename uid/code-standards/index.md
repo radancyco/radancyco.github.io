@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Front-end Standards and Guidelines
+
 ---
 
 # Front-end Standards and Guidelines

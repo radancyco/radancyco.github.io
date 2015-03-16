@@ -114,7 +114,7 @@ doc-how_to_apply.pdf
 
 * Image filenames should follow this structure: `page-descriptor-#.extension`.
     * **page** &mdash; Name of the page where the image appears.
-    * **descriptor** &mdash; Short, concise description of image. Prefer the location of the image on the page. E.g. The first banner image on the homepage is `banner-home-1.jpg`.
+    * **descriptor** &mdash; Short, concise description of image. Prefer the location of the image on the page. E.g. The first banner image on the homepage is `home-banner-1.jpg`.
     * **#** &mdash; Number of the image in a series.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
@@ -168,7 +168,7 @@ doc-how_to_apply.pdf
 .nav-item {
   padding: .5em;
 
-  &::after {
+  &:after {
     background: url('//fake.path/images/nav-item.png') no-repeat center;
     content: '';
     display: block;
@@ -200,7 +200,6 @@ doc-how_to_apply.pdf
 
 #### 3.1.2 CSS Spacing & Line Breaks
 
-* Leave all CSS uncompressed.
 * Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
 * Align all rule declarations to the left edge of the editor.
 * Do not leave white-space at the end of any lines.
@@ -246,9 +245,25 @@ doc-how_to_apply.pdf
 }
 {% endhighlight %}
 
-#### 3.1.4 CSS Selectors
+#### 3.1.4 Border-box
+Use `box-sizing: border-box` with fallbacks on the HTML element along with `box-sizing: inherit` on the universal selector. When an element does not need border-box, you can apply `box-sizing: content-box`. Since the universal selector uses inheritance, when `content-box` is applied to an element, all of its descendants are converted as well. 
 
-##### 3.1.4.1 Specificity
+<p markdown="block">
+{% highlight css %}
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+{% endhighlight %}
+</p>
+
+#### 3.1.5 CSS Selectors
+
+##### 3.1.5.1 Specificity
 
 At most, aim for three levels or less of selector specificity, not counting pseudo selectors or media queries.
 
@@ -270,7 +285,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 {% endhighlight %}
 </p>
 
-##### 3.1.4.2 Naming
+##### 3.1.5.2 Naming
 
 * CSS selectors should be semantic, describing the elements' function. Semantic names do not include:
     * the name of a person.
@@ -292,7 +307,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 {% endhighlight %}
 </p>
 
-##### 3.1.4.3 Complexity
+##### 3.1.5.3 Complexity
 
 * Avoid using overly complex selector combinations and naming schemes.
 * Use as few selectors as possible to apply styling, while also keeping the CSS modular and flexible.

@@ -104,8 +104,8 @@ logo_1.png
 doc-How-To-Apply.pdf
 
 <!-- Recommended -->
-banner-home-1.jpg
-banner-custom_l2-1.jpg
+home-banner-1.jpg
+custom_l2-banner-1.jpg
 logo-1.png
 doc-how_to_apply.pdf
 {% endhighlight %}
@@ -255,7 +255,9 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 {% endhighlight %}

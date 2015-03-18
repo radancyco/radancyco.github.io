@@ -182,7 +182,7 @@ doc-how_to_apply.pdf
 
 Inappropriate use of spawning new windows may actually confuse users or make the experience unnecessarily complex or unpleasant. Some mobile devices even cap out the amount of windows one can have open. There are, of course, some good reasons to spawn new windows, but for the most part, the decision to open a link in a window should be left up to the end user to decide.
 
-#### 2.2.1 Accessibility & New Windows
+#### 2.2.1 Accessibility &amp; New Windows
 
 When a developer is required to spawn a new window, it is considered very good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader.
  

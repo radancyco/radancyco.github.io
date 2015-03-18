@@ -13,8 +13,6 @@ This document defines best practices for HTML, CSS, and JavaScript development, 
 * This is a living document that changes often. [Bookmark it](/uid/code-standards) and check back on regular basis.
 * [Contributions are encouraged!](#how-to-contribute)
 
-<section id="our-standards" markdown="block">
-
 ## 1. General Concepts
 
 As front-end developers at TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to the core principles of [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement). In this endeavor, we use the following front-end languages in the majority of our work:
@@ -528,5 +526,3 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Sitepoint](http://sitepoint.com)
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
-
-</section>

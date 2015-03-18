@@ -13,6 +13,8 @@ This document defines best practices for HTML, CSS, and JavaScript development, 
 * This is a living document that changes often. [Bookmark it](/uid/code-standards) and check back on regular basis.
 * [Contributions are encouraged!](#how-to-contribute)
 
+<section id="our-standards" markdown="block">
+
 ## 1. General Concepts
 
 As front-end developers at TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to the core principles of [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement). In this endeavor, we use the following front-end languages in the majority of our work:
@@ -180,7 +182,7 @@ doc-how_to_apply.pdf
 
 Inappropriate use of spawning new windows may actually confuse users or make the experience unnecessarily complex or unpleasant. Some mobile devices even cap out the amount of windows one can have open. There are, of course, some good reasons to spawn new windows, but for the most part, the decision to open a link in a window should be left up to the end user to decide.
 
-#### 2.2.1 Accessibility &amp; New Windows
+#### 2.2.1 Accessibility & New Windows
 
 When a developer is required to spawn a new window, it is considered very good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader.
  

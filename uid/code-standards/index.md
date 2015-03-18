@@ -178,6 +178,42 @@ doc-how_to_apply.pdf
 }
 {% endhighlight %}
 
+### 2.2 New Window Links
+
+Inappropriate use of spawning new windows may actually confuse users or make the experience unnecessarily complex or unpleasant. Some mobile devices even cap out the amount of windows one can have open. There are, of course, some good reasons to spawn new windows, but for the most part, the decision to open a link in a window should be left up to the end user to decide.
+
+#### 2.2.1 Accessibility & New Windows
+
+When a developer is required to spawn a new window, it is considered very good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader.
+ 
+<p markdown="block">
+{% highlight html %}
+<a href="link.com" target="_blank" alt="">Web Accessibility in Mind <span class="wai">(link opens in new window)</span></a>
+{% endhighlight %}
+
+{% highlight scss %}
+.wai {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+{% endhighlight %}
+</p>
+
+#### 2.2.2 Media
+
+User initiated media is another example:
+
+<p markdown="block">
+{% highlight html %}
+<a href="https://www.youtube.com/watch?v=4wGR4-SeuJ0" target="_blank">
+  <span class="wai">Video opens in new window</span>
+  <img src="img-path.jpg" alt="">
+</a>
+{% endhighlight %}
+
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 3. CSS

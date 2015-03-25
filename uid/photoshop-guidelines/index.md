@@ -17,9 +17,9 @@ This document gives general guidelines for art directors on setting up Photoshop
 
 ![](img/no-name-layers.jpg)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
-
 While the development process is generally very structured, by contrast, the design process is quite often spontaneous and full of experimentation. This can lead to a host of unused and unnamed layers that don’t end up as part of the final approved design. For developers, sifting through many unnamed layers (Layer 1, Layer 23 copy, etc.) can be confusing and time consuming.
+
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
  
 ## 2.0 Prepping the File  
 

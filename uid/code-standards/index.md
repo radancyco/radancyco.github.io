@@ -144,6 +144,20 @@ Our performance budget is:
 * [JPEGmini](http://www.jpegmini.com/) (Online Tool, jpg only)
 * [RIOT](http://luci.criosweb.ro/riot/) (Standalone Application)
 
+### 2.5 Minify
+
+#### 2.5.1 HTML
+Do not minify HTML.
+
+#### 2.5.2 CSS
+CSS should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large CSS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted.
+
+#### 2.5.3 Javascript
+Javascript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
+
+#### 2.5.4 Third-Party Libraries
+All third-party libraries should be minified unless some sort of customization has been made to it and requires readability.
+
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 3. Markup

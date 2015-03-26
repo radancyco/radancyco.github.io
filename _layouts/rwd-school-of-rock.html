@@ -2,12 +2,13 @@
 <html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8"/>
+	<meta name="robots" content="noindex, nofollow"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" href="/assets//css/rwd.css"/>
+	<link rel="stylesheet" href="/assets/css/rwd.css"/>
 	<title>{{ page.title }} -  RWD School of Rock!</title>
 </head>
 
-<body id="{{ model.page-id }}"{% if model.page-section %} class="{{ model.page-section }}"{% endif %}{% if model.scripts %} data-spy="scroll" data-target="#menu" data-scroll="50"{% endif %}>
+<body id="{{page.url | replace:'.html',''| replace: '/', '-' | remove_first: '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}{% if page.scripts %} data-spy="scroll" data-target="#menu" data-scroll="50"{% endif %}>
 
 	<main id="content">
 
@@ -34,9 +35,9 @@
 	<footer>
 
 		<ul>
-			<li><a href="/index">Home</a></li>
-			<li><a href="/creative/index">Creative</a></li>
-			<li><a href="/qa/index">Quality Assurance</a></li>
+			<li><a href="/uid/rwd-school-of-rock/">Home</a></li>
+			<li><a href="/uid/rwd-school-of-rock/creative/">Creative</a></li>
+			<li><a href="/uid/rwd-school-of-rock/">Quality Assurance</a></li>
 		</ul>
 
 		<p>A collaborative training experience brought to you by <a href="mailto:stephanie.plumeri@tmp.com">Stephanie Plumeri</a> and <a href="mailto:michael.spellacy@tmp.com">Michael "Spell" Spellacy</a> for TMP Worldwide.</p>
@@ -45,13 +46,13 @@
 
 	</footer>
 
-	<!-- if model.scripts == true -->
+	{% if page.scripts == true %}
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="/js/libs/misc/bootstrap-scrollspy.min.js"></script>
-	<script src="/js/global.min.js"></script>
+	<script src="/uid/rwd-school-of-rock/js/libs/misc/bootstrap-scrollspy.js"></script>
+	<script src="/uid/rwd-school-of-rock/js/global.js"></script>
 
-	<!-- endif -->
+	{% endif %}
 
 </body>
 </html>

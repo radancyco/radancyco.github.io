@@ -24,16 +24,7 @@ As front-end developers at TMP Worldwide, we embrace web standards and keep up-t
 * ECMAScript 5.1 (JavaScript)
 * jQuery
 
-### 1.1 Performance Budget
-
-As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each front-end developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
-
-Our performance budget is:
-
-* **HTTP Requests:** ~40-50
-* **Cumulative Page Weight:** ~450-550 KB
-
-### 1.2 Accessibility
+### 1.1 Accessibility
 
 > All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet [WCAG 2.0 Level A guidelines](http://www.tmp.com/web-standards/docs/wcag-2-level-a-overview.pdf).
 > <cite>&mdash; [TMP Web Standards](http://www.tmp.com/web-standards/)</cite>
@@ -43,7 +34,7 @@ Our performance budget is:
 * [Understanding WCAG 2.0](http://www.w3.org/TR/UNDERSTANDING-WCAG20/)
 * [Techniques for WCAG 2.0](http://www.w3.org/TR/WCAG20-TECHS/)
 
-### 1.3 Operating System Support
+### 1.2 Operating System Support
 
 TMP supports applications on the following operating systems:
 
@@ -54,7 +45,7 @@ TMP supports applications on the following operating systems:
 * iOS 7
 * Android 4.x
 
-### 1.4 Browser Support
+### 1.3 Browser Support
 
 TMP supports the *current* and *prior* major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
@@ -63,7 +54,7 @@ TMP supports the *current* and *prior* major release versions of all browsers. C
 * Safari
 * Internet Explorer
 
-### 1.5 HTTP Protocols
+### 1.4 HTTP Protocols
 
 HTTP protocols should be omitted unless absolutely necessary.
 
@@ -89,9 +80,9 @@ HTTP protocols should be omitted unless absolutely necessary.
 {% endhighlight %}
 </p>
 
-### 1.6 File Naming Conventions
+### 1.5 File Naming Conventions
 
-#### 1.6.1 General Files
+#### 1.5.1 General Files
 
 * Only use lowercase alphanumeric characters, hyphens, and underscores.
 * Separate sections with hyphens and words with underscores.
@@ -110,7 +101,7 @@ logo-1.png
 doc-how_to_apply.pdf
 {% endhighlight %}
 
-#### 1.6.2 Images
+#### 1.5.2 Images
 
 * Image filenames should follow this structure: `page-descriptor-#.extension`.
     * **page** &mdash; Name of the page where the image appears.
@@ -119,16 +110,52 @@ doc-how_to_apply.pdf
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 2. Markup
+## 2. Optimization
 
-### 2.1 HTML Coding Style
+### 2.1 Validation
 
-#### 2.1.1 HTML Spacing & Line Breaks
+Code validation is an easy way to spot small issues that you might have missed without having to examine every element. Things like accessibility issues can easily be identified and fixed without much time wasted. 
+
+Check each completed project using the [W3C Markup Validation Service](http://validator.w3.org/) to scan for issues.
+
+### 2.2 Page Load Speed
+
+Loading time is a major contributing factor to page abandonment. So after completion of a site, each front-end developer should test their site using the [Google Developers PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or [Pingdom](http://tools.pingdom.com/fpt/) for more detailed results. It is as easy as copying and pasting the URL into the text field.
+
+Our desired score should be anything above 70/100, however our absolute lowest score should not fall below 60/100 on both mobile and desktop tests.
+
+While it might not be possible to always achieve a perfect or near-perfect score, we should strive for a site that has the best possible score while maintaining the client requirements. Some issues might be out of our control as front-end developers, but we can take other precautions in order to develop the most efficient site possible.
+
+### 2.3 Performance Budget
+
+As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each front-end developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
+
+Our performance budget is:
+
+* **HTTP Requests:** ~40-50
+* **Cumulative Page Weight:** ~450-550 KB
+
+### 2.4 Image Compression
+
+**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also contribute to adhering to our [Performance Budget](#performance-budget). There are various tools for this including (but not limited to):
+
+* [Tiny PNG](https://tinypng.com/) (Online Tool, not only png)
+* [Compressor.io](https://compressor.io/) (Online Tool)
+* [JPEGmini](http://www.jpegmini.com/) (Online Tool, jpg only)
+* [RIOT](http://luci.criosweb.ro/riot/) (Standalone Application)
+
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+
+## 3. Markup
+
+### 3.1 HTML Coding Style
+
+#### 3.1.1 HTML Spacing & Line Breaks
 
 * Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any development environment.
 * Do not leave white-space at the end of any lines.
 
-#### 2.1.2 HTML Formatting
+#### 3.1.2 HTML Formatting
 
 * Use double-quotes around attributes.
 * Classes should be used instead of IDs unless you need to link (anchor) to something specific on the page.
@@ -141,7 +168,7 @@ doc-how_to_apply.pdf
 * Avoid writing closing tag comments.
     * E.g. `<!-- /.class -->`.
 
-#### 2.1.3 HTML Semantics & Nesting
+#### 3.1.3 HTML Semantics & Nesting
 
 * HTML should be as semantic and purposeful as possible.
 * Take care not to unnecessarily nest elements.
@@ -178,11 +205,11 @@ doc-how_to_apply.pdf
 }
 {% endhighlight %}
 
-### 2.2 New Window Links
+### 3.2 New Window Links
 
 Inappropriate use of spawning new windows may actually confuse users or make the experience unnecessarily complex or unpleasant. Some mobile devices even cap out the amount of windows one can have open. There are, of course, some good reasons to spawn new windows, but for the most part, the decision to open a link in a window should be left up to the end user to decide.
 
-#### 2.2.1 Accessibility & New Windows
+#### 3.2.1 Accessibility & New Windows
 
 When a developer is required to spawn a new window, it is considered very good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader.
  
@@ -202,7 +229,7 @@ When a developer is required to spawn a new window, it is considered very good f
 {% endhighlight %}
 </p>
 
-#### 2.2.2 Media
+#### 3.2.2 Media
 
 User initiated media is another example:
 
@@ -216,11 +243,11 @@ User initiated media is another example:
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 3. CSS
+## 4. CSS
 
-### 3.1 CSS Coding Style
+### 4.1 CSS Coding Style
 
-#### 3.1.1 Author Comment Block
+#### 4.1.1 Author Comment Block
 
 **Always include an author comment block at the top of your CSS.** This is an important resource for any developers who work on the code after you.
 
@@ -234,7 +261,7 @@ User initiated media is another example:
 {% endhighlight %}
 </p>
 
-#### 3.1.2 CSS Spacing & Line Breaks
+#### 4.1.2 CSS Spacing & Line Breaks
 
 * Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
 * Align all rule declarations to the left edge of the editor.
@@ -247,7 +274,7 @@ User initiated media is another example:
 * Put `}` in rule declarations on a separate line.
 * When grouping selectors, put each selector on a separate line.
 
-#### 3.1.3 CSS Formatting
+#### 4.1.3 CSS Formatting
 
 * Use hex codes for colors, unless using rgba() for alpha transparency.
 * Use the three-character color shorthand when possible.
@@ -281,7 +308,7 @@ User initiated media is another example:
 }
 {% endhighlight %}
 
-#### 3.1.4 Border-box
+#### 4.1.4 Border-box
 Use `box-sizing: border-box` with fallbacks on the HTML element along with `box-sizing: inherit` on the universal selector. When an element does not need border-box, you can apply `box-sizing: content-box`. Since the universal selector uses inheritance, when `content-box` is applied to an element, all of its descendants are converted as well. 
 
 <p markdown="block">
@@ -299,9 +326,9 @@ html {
 {% endhighlight %}
 </p>
 
-#### 3.1.5 CSS Selectors
+#### 4.1.5 CSS Selectors
 
-##### 3.1.5.1 Specificity
+##### 4.1.5.1 Specificity
 
 At most, aim for three levels or less of selector specificity, not counting pseudo selectors or media queries.
 
@@ -323,7 +350,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 {% endhighlight %}
 </p>
 
-##### 3.1.5.2 Naming
+##### 4.1.5.2 Naming
 
 * CSS selectors should be semantic, describing the elements' function. Semantic names do not include:
     * the name of a person.
@@ -345,7 +372,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 {% endhighlight %}
 </p>
 
-##### 3.1.5.3 Complexity
+##### 4.1.5.3 Complexity
 
 * Avoid using overly complex selector combinations and naming schemes.
 * Use as few selectors as possible to apply styling, while also keeping the CSS modular and flexible.
@@ -373,36 +400,36 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 4. SASS
+## 5. SASS
 
 SASS is the preprocessor of choice for TMP front-end developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
 
-### 4.1 SASS Coding Style
+### 5.1 SASS Coding Style
 
 The same rules for CSS also apply to SASS, unless specified below.
 
-#### 4.1.1 SASS Spacing & Line Breaks
+#### 5.1.1 SASS Spacing & Line Breaks
 
 * Align first-level rule declarations to the left edge of the editor.
 * Nested rule declarations should have two-space indentation from the edge of the parent.
 * Put one blank line between property declarations and nested rule declarations.
 
-#### 4.1.2 SASS Formatting
+#### 5.1.2 SASS Formatting
 
 * Always put imports (`@import`) at the top of the document.
 * Always place mixins (`@include`) at the top of rule declarations, unless it **must** go somewhere else.
 
-#### 4.1.3 SASS Selectors
+#### 5.1.3 SASS Selectors
 
 * At most, aim for three levels of selector specificity, not counting pseudo selectors, media queries, or mixins.
 
-#### 4.1.4 SASS Variables, Functions, and Mixins
+#### 5.1.4 SASS Variables, Functions, and Mixins
 
 * Variables, functions, and mixins should follow the same naming rules as CSS selectors.
 * Variables, functions, and mixins should be kept together in their respective groupings.
     * E.g. `variables.scss`, `functions.scss`, `mixins.scss`.
 
-### 4.2 SASS Directory Structure
+### 5.2 SASS Directory Structure
 
 It is very important that all UI Developers have a consistent and uniform structure for their SASS directories. You will find yourself using the same base SASS files for multiple projects.
 
@@ -417,11 +444,11 @@ scss/
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 5. JavaScript
+## 6. JavaScript
 
-### 5.1 JavaScript Coding Style
+### 6.1 JavaScript Coding Style
 
-#### 5.1.1 JavaScript Spacing & Line-Breaks
+#### 6.1.1 JavaScript Spacing & Line-Breaks
 
 * Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
 * Do not leave white-space at the end of any lines.
@@ -432,7 +459,7 @@ scss/
 * Use a space before `{` in function declarations and control statements.
 * Closing `}` (`})` for closures) for functions and control statements should be on a separate line.
 
-#### 5.1.2 JavaScript Formatting
+#### 6.1.2 JavaScript Formatting
 
 * Use single-quotes around strings.
 * Declare new variables with `var`.
@@ -444,9 +471,9 @@ scss/
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 6. Images
+## 7. Images
 
-### 6.1 Image File Types
+### 7.1 Image File Types
 
 While extracting images from a creative design, it's important to consider which file type to use. Not all file types are created equal and while some offer images that are smaller, others are better suited to different situations.
 
@@ -454,21 +481,17 @@ While extracting images from a creative design, it's important to consider which
 * **.png** &mdash; PNG is a lossless format (larger file size) and is recommended in situations where the quality of the image is important, or where transparency is required. A possible use-case for a PNG image is a clients' logo, where the quality of the logo is important and may contain transparent sections around it.
 * **.svg** &mdash; SVG is an older vector image format that has recently become a more viable option for the web. SVG is recommended for more simple images that need to scale or retain sharpness on a number of different screen densities. SVG also supports transparency. A great use-case for the SVG format would be, again, a logo or icons.
 
-### 6.2 Image Sprites
+### 7.2 Image Sprites
 
 To aid in adhering to our [Performance Budget](#performance-budget), it's recommended that logos, icons, and other small images be combined into a sprite. This results in a reduction in page requests, as well as a small reduction in file size.
 
 If you're not using a build tool, such as [Grunt](http://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
 
-### 6.3 Image Compression
-
-**All** images should be run through an image optimization tool, such as [Compressor.io](https://compressor.io/), in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also contribute to adhering to our [Performance Budget](#performance-budget).
-
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 7. Git
+## 8. Git
 
-### 7.1 Git Commits
+### 8.1 Git Commits
 
 When committing changes to a repository, use the standardized commit message template to detail your changes.
 
@@ -481,17 +504,17 @@ When you make a new commit, do not use the `-m` option. Instead just use `git co
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 8. Recommended Tools
+## 9. Recommended Tools
 
-### 8.1 Editors
+### 9.1 Editors
 
 * [Sublime Text 2/3](http://www.sublimetext.com/)
 
-#### 8.1.1 Editor Plugins
+#### 9.1.1 Editor Plugins
 
 Below are recommended plugins listed for each recommended editor (if they support plugins).
 
-##### 8.1.1.1 Sublime Text
+##### 9.1.1.1 Sublime Text
 
 * [Package Control](https://sublime.wbond.net/)
 * [EditorConfig](https://sublime.wbond.net/packages/EditorConfig)
@@ -506,11 +529,11 @@ Below are recommended plugins listed for each recommended editor (if they suppor
     * [SublimeLinter-html-tidy](https://sublime.wbond.net/packages/SublimeLinter-html-tidy)
     * [SublimeLinter-jshint](https://sublime.wbond.net/packages/SublimeLinter-jshint)
 
-## 9. Required Reading
+## 10. Required Reading
 
 * [A Dao of Web Design by John Allsopp](http://alistapart.com/article/dao)
 
-## 10. (Highly) Recommended Reading
+## 11. (Highly) Recommended Reading
 
 * [Designing with Web Standards (3rd Edition) by Jeffery Zeldman](http://www.amazon.com/Designing-Web-Standards-3rd-Edition/dp/0321616952)
 * [Developing with Web Standards by John Allsopp](http://www.amazon.com/Developing-Web-Standards-John-Allsopp/dp/0321646924)
@@ -522,7 +545,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Responsive Web Design (2nd Edition) by Ethan Marcotte](http://www.abookapart.com/products/responsive-web-design)
 * [Adaptive Web Design (First Edition) by Aaron Gustafson](http://adaptivewebdesign.info/1st-edition/)
 
-## 11. Daily Reading
+## 12. Daily Reading
 
 * [A List Apart](http://alistapart.com/)
 * [Sitepoint](http://sitepoint.com)

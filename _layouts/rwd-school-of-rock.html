@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="/assets//css/rwd.css"/>
+	<title>{{ page.title }} -  RWD School of Rock!</title>
+</head>
+
+<body id="{{ model.page-id }}"{% if model.page-section %} class="{{ model.page-section }}"{% endif %}{% if model.scripts %} data-spy="scroll" data-target="#menu" data-scroll="50"{% endif %}>
+
+	<main id="content">
+
+		<article>
+
+			<!-- if model.navigation -->
+
+			<a id="skip-nav" href="#menu">Skip to Navigation</a>
+
+			<!-- endif -->
+
+			<h1><abbr title="Resposive Web Design">RWD</abbr> School<b>of Rock!</b></h1>
+
+			{{ content }}
+
+		</article>
+
+	</main>
+
+	<!-- block navigation -->
+
+	<a class="button button-big back-to-top" href="#top">Back to top</a>
+
+	<footer>
+
+		<ul>
+			<li><a href="/index">Home</a></li>
+			<li><a href="/creative/index">Creative</a></li>
+			<li><a href="/qa/index">Quality Assurance</a></li>
+		</ul>
+
+		<p>A collaborative training experience brought to you by <a href="mailto:stephanie.plumeri@tmp.com">Stephanie Plumeri</a> and <a href="mailto:michael.spellacy@tmp.com">Michael "Spell" Spellacy</a> for TMP Worldwide.</p>
+
+		<p>Design by Stephanie Plumeri</p>
+
+	</footer>
+
+	<!-- if model.scripts == true -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="/js/libs/misc/bootstrap-scrollspy.min.js"></script>
+	<script src="/js/global.min.js"></script>
+
+	<!-- endif -->
+
+</body>
+</html>

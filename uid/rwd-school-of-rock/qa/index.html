@@ -1,0 +1,480 @@
+---
+layout: rwd-school-of-rock
+title: QA Edition
+---
+
+  <h2 class="subtitle">QA Edition</h2>
+
+  <section id="overview">
+
+  <div>
+
+    <h2>An Overview of Responsive Design and Development</h2>
+
+    <h3>What Responsive Is</h3>
+
+    <p>Responsive design/development allows designers and developers to craft an experience that can be used across a wide variety of  browsers on both desktop and mobile devices. </p>
+
+    <p>In order to design a truly responsive experience, our creative teams must keep unknown content scenarios, varying device viewports, and different cross-device user behaviors in mind. The challenge comes in the fact that the site can be viewed on multiple devices, but only has one code base. Users on a laptop will be served the exact same site code as users on a smartphone. This means that designs must never cater to one specific browser, device, or operating system.</p>
+
+    <p>On the technical side of the fence, responsive design is comprised of three primary ingredients. These are:</p>
+
+    <ul>
+      <li><b>Flexible grids</b></li>
+      <li><b>Flexible images (or other media)</b></li>
+      <li><b>CSS media queries</b></li>
+    </ul>
+
+    <hr/>
+
+    <h3>Media Query Example</h3>
+
+      <h4>Baseline</h4>
+
+      <p>Our baseline properties come first.</p>
+
+<pre><code>body {
+
+  color: red; /* On small screens, the body text will be red.*/
+
+}</code></pre>
+
+      <h4>Enhanced</h4>
+
+      <p>Following the baseline properties are our enhanced properties that will be available when the viewport is 600 pixel or wider.</p>
+
+<pre><code><mark>@media(min-width: 600px) {</mark>
+
+  body {
+
+  color: green; /* On larger screens, the body text will be green... */
+  font-weight: bold; /* ...and bold */
+  text-decoration: underline; /* ...and underlined */
+
+  }
+
+<mark>}</mark></code></pre>
+
+    <p>There are no preterminded breakpoints (That is adaptive). The flow of content and the flexibility of the grid determine where breakpoints are set. That is true responsive design.
+
+    <hr/>
+
+    <h3>What Responsive  Isn't</h3>
+
+    <p>Now that we understand the basics of responsive design, it is important that we abandon any notion that responsive design is simply about making sites or applications "squishy". There is more to it than that. Not only must these experiences conform to different viewport sizes, but they must also <em>perform well</em> and be just as <strong>accessible</strong>, <strong>pleasant</strong>, and as <strong>intuitive</strong> to use across a now wide spectrum of browsing devices as they are within desktop-only environments.</p>
+
+    <p>The success of a responsive experience not only depends on how well we can manage, design, code, and test, but also on how well we can work <em>together as a team</em>. As stewards of our client's brand we have an even <strong>greater obligation</strong> to ensure that the experience we produce is well received by all, regardless of their technological or physical capabilities. In a way, responsive design is just another form of accessibility, making sites easier to use for individuals who do not have the luxury of a large screen. Given this challenge, the importance of collaboration and good communication throughout any given project <em>cannot be understated</em>.</p>
+
+    <figure>
+
+      <img src="../img/fig-1.jpg" alt=""/>
+
+      <figcaption>Collaboration is key to successful web experience. Death to silos!</figcaption>
+
+    </figure>
+
+    <p>In the past year, the <abbr title="User Interface Development">UID</abbr> team has made great progress in helping our creative colleagues see past the desktop. The UID team now reviews designs very closely before they are sent to the client for approval, and small screen comps are now a requirement on all responsive projects. Training through the <a href="/creative/index">RWD School of Rock</a> sessions have also been instrumental in getting our project managers and designers, here and abroad, up to speed on what it means to design in a multi-device world.<p>
+
+  </div>
+
+</section>
+
+<section id="workflow">
+
+  <div>
+
+    <h2>The New Workflow</h2>
+
+    <p>The responsive web changes the nature of the development process, and we must therefore adjust our workflow to <em>respond</em> to these changes. Here is an example of what an ideal collaborative workflow might look like. As you can see, it is very agile-like in nature. If we are to be successful in producing great responsive work, the QA team must be brought into the fold much sooner than usual. Designing, building, and testing for multiple devices can be extraordinarily challenging work, so the sooner QA is brought into the process, the better.</p>
+
+    <figure>
+
+      <a href="../img/fig-2.jpg" target="_blank"><img src="../img/fig-2.jpg" alt=""/></a>
+   
+      <figcaption>A custom web site workflow.</figcaption>
+
+    </figure>
+
+    <p><b>Discuss:</b> This might be a good time to segue into the question of how QA currently tests responsive TalentBrew implementations. Open training to brief discussion and invite suggestions on improving the situation , if needed. It should not be left to development to figure out what that process should be. We are merely here to assist and to share our knowledge of responsive design and development. Ask about booking time, including QA on email threads/creative reviews and making sure they have access to tracking docs.</p> 
+
+  </div>
+
+</section>
+
+<section id="mobile-first">
+
+  <div>
+
+    <h2>How We Roll: Mobile First</h2>
+
+    <p>With the ever growing prominence of mobile, TMP now embraces a "mobile-first" methodology that all QA technicians should be aware of. By focusing on the core message of our site, we can then create an optimal and (hopefully) more pleasant experience across all browsers. Small screen size limitations often force us to focus on the core experience as well. This helps keep the brand message consistent across all screen sizes, to focus the experience for users on all devices.  This is a good thing, as more and more users have come to expect a certain level of consistency across different devices. A user can start her day off reviewing a job description on her iPhone and return to apply for that job on her desktop browser later on&mdash;or vice-versa. The experience is not always a singular one.</p>
+   
+    <h3>Mobile-first and Progressive Enhancement: Perfect Together</h3>
+
+    <p>With progressive enhancement, we focus on our content offerings and baseline experience first and then introduce a more robust experience on more modern browsers. We also future-proof our work and guarantee that our sites will look and behave just as well on future versions of browsers as they do on current ones.</p>
+
+    <p>Mobile-first design and development patterns dovetail beautifully with progressive enhancement, in that we typically begin with our small screen experience, a single column layout for instance, and then expand upon that layout and also introduce design and technical enhancements for browsers on larger screens or with wider feature support. In a world  inundated with so many different viewing devices, progressive enhancement is a really <em>smart approach</em> to dealing with the new reality we now live in.</p>
+
+    <figure>
+
+      <img src="../img/fig-3.jpg" alt=""/>
+
+      <figcaption>The new reality. Welcome.</figcaption>
+
+    </figure>
+
+    <p>Keep in mind  that bigger is not always better. Many smartphones now come packed with many capabilities that are not present on even modern desktop browsers, such as integrated social network share functionality and GPS location.</p>
+
+    <h3>Mobile-first Progressive Enhancement: An Example</h3>
+
+    <h4>Layer 1: Focusing On Our Core</h4>
+
+    <figure>
+
+      <a href="../img/fig-4.jpg" target="_blank"><img src="../img/fig-4.jpg" alt=""/></a>
+
+      <figcaption>While this may not look gorgeous, getting our markup right is essential to success. CSS? We don't need no stinkin' CSS (or JavaScript)!</figcaption>
+
+    </figure>
+
+    <h4>Layer 2: Applying The Basics</h4>
+
+    <figure>
+
+      <a href="../img/fig-5.jpg" target="_blank"><img src="../img/fig-5.jpg" alt=""/></a>
+
+      <figcaption><a href="http://jobsattmp.com">jobsattmp.com</a> as seen on Internet Explorer 8...</figcaption>
+
+    </figure>
+
+    <h2>Whoa! Back up! Wait a second...</h2>
+
+    <figure>
+
+      <img src="../img/doc-brown.jpg" alt=""/>
+
+      <figcaption><q>Great Scott! A mobile web site on Internet Explorer 8?!?</q> Yes, Doc Brown, this is progressive enhancement at it's finest!</figcaption>
+
+    </figure>
+
+    <p><em>Versions of Internet Explorer prior to and including Internet Explorter 8 do not support CSS media queries. This means that IE8 cannot read the "instructions" the media queries give for how the page should appear on larger screen sizes&mdash;it can only read the base layout styles intended for smaller screens. If mobile-first is the way (and it is), and we create our baseline layouts first, then IE 8 is behaving <strong>precisely</strong> as it should.</em></p> 
+
+    <h4>Layer 3: The Creshendo</h4>
+
+    <figure>
+
+      <a href="../img/fig-6.jpg" target="_blank"><img src="../img/fig-6.jpg" alt=""/></a>
+
+     <figcaption>All of the bells and whistles our clients love. <a href="http://jobsattmp.com">jobsattmp.com</a> as seen on a modern desktop browser.</figcaption>
+
+    </figure>
+
+    <h4>Mobilized!</h4>
+
+    <figure>
+
+      <img src="../img/fig-7.jpg" alt=""/>
+
+      <figcaption><a href="http://jobsattmp.com">jobsattmp.com</a> as seen on iOS Safari, Opera Mini, and Chrome.</figcaption>
+
+    </figure>
+
+    <h4>The Big Payoff</h4>
+
+    <figure>
+
+      <img src="../img/fig-8.jpg" alt=""/>
+
+      <figcaption><a href="http://jobsattmp.com">jobsattmp.com</a> as seen on a <strong>2002</strong> HP iPAQ Pocket PC! Insane! Here we have come full circle. This is <em>why</em> we embrace progressive enhancement&mdash;so that anyone, anywhere, on any device, can access our site content.</figcaption>
+
+    </figure>
+
+    <p>Mobile-first progressive enhancement allows us to reach considerably more users who may be accessing the experiences we build through the thousands of different devices that now exist across the planet. In many developing nations, the only point of Internet access for individuals is a mobile device. The name of the game here is <em>global reach</em>&mdash;not rounded corners or drop-shadows .</p>
+
+    <p>While aesthetics and Javascript functionalities behind what we produce are certainly important , they should only ever be looked upon as enhancements. Tip the scale too far in either direction and you will have a lackluster experience on your hands. Too much style and scripting will overload a page and overshadow the core content, while too little will minimize the impact of client branding. Good web design and development, responsive or otherwise, is about striking the perfect balance to accentuate our clients' messages and brands&mdash;not replace or mute them.</p>
+
+  </div>
+
+</section>
+
+<section id="performance">
+
+  <div>
+
+    <h2>Performance</h2>
+
+    <blockquote>
+
+      <img src="../img/laura-swanson.jpg" alt=""/>
+
+      <p>Performance + Beauty = Overall User Experience</p>
+
+      <cite>Laura Swanson, Engineering Manager of Performance at Etsy (<a href="http://etsy.com">etsy.com</a>)</cite>
+
+    </blockquote>
+
+    <p>Throughout the design and development process, it is very easy to get caught up on aesthetics, flashy technological "widgets", and our own assumptions about how others use the web. Things look beautiful and function great and we pat ourselves on the back for our ingenuity...until we try to load our site on a mobile device, and it takes half a minute for all of those beautiful graphics to appear.</p>
+
+    <p>Unbeknownst to many, performance actually starts at the design level. The sky is not always the limit in our canvas, the browser. Heavy designs, extraneous images, scripts, CSS files, and other glut that have no content value can spell certain doom for any of the sites we produce if we are not careful. This is one of many reasons why the UID team seeks to be more proactive in the design process at an earlier stage. There are rules to abide by when it comes to loading assets on a web page, and some designers may not always be familiar with the technical specifications. In the review of designs, we help to steer it in the right direction from a performance (and maintenance) perspective. 
+
+    <p>If the sites we produce cannot load quickly for users, regardless of device, it doesn't really matter what we put on the page. Sites that take over 4 seconds to load run the risk of losing impatient users, or at the very least introducing them to the brand in a slow, negative light . Site speed is also factored into many search engine algorithms. Ranking can be greatly harmed if one's site takes a considerably long time to load.</p>
+
+    <p>Performance has always been important, but the desire has been rekindled due to the rise of mobile. Not all data connections are created equal (3G, 4G, Edge Networks) and, unlike broadband, users have data plans that we must now consider in our work. If I'm a user with only a few megabytes of data allotted to me each month, I'm not going to waste it loading your gigantic banner image slider. I will click away before you drain my data budget.</p>
+
+    <h3>How Can We Measure Performance Easily?</h3>
+
+    <p>The UID team always attempts to keep the following two numbers as low as they possibly can be on each page that is developed:</p>
+
+    <p><b>HTTP Requests:</b> The more requests to the server for page related assets there are, the longer a site will take to load. This is called latency. The time it takes to make each request also plays a role in latency (server proximity is also a factor, but we won't get into that right now).</p>
+
+    <p><b>Cumulative Page Weight:</b> Cumulative page weight includes markup, images, video, audio, scripts, CSS, and other assets that contribute to the rendering of the page.</p>
+
+    <p>We can easily see what these two numbers are, by opening up our favorite browser's web development toolbar and then monitor network activity when a page loads.</p>
+
+    <p>In Chrome, do the following:</p>
+
+    <ol>
+      <li>Open the developer toolbar by clicking the F12 key or by navigating to the menu icon and selecting Tools > Developer Tools.</li>
+      <li>In the upper right hand corner, select the gear icon <img src="../img/ico-chrome-settings.jpg" class="ico" alt=""/>. This will bring up the toolbar's settings.</li>
+      <li>Select "Disable cache (while DevTools is open)". We always want to ensure that we are seeing all requests, as they will initially be requested from the server.
+
+      <figure>
+
+        <a href="../img/fig-11.jpg" target="_blank"><img src="../img/fig-11.jpg" alt=""/></a>
+
+        <figcaption>DevTools: A friend to UI Developers AND QA Technicians.</figcaption>
+
+      </figure>
+
+      </li>
+      <li>After closing the Settings panel, select the "Network" tab and then navigate to or refresh the page you are reviewing. You will then be presented with a list of all resources being pulled into the page. The totals at the bottom of the panel.
+
+      <figure>
+
+        <a href="../img/fig-12.jpg" target="_blank"><img src="../img/fig-12.jpg" alt=""/></a>
+
+        <figcaption>No, friends don't let friends create 8 megabyte web pages.</figcaption>
+
+      </figure>
+
+      </li>
+    </ol>
+
+    <h3>The Performance Budget</h3>
+
+    <p>Keeping HTTP requests and cumulative page weight low will have a considerable positive effect on performance and is the <em>easiest</em> thing we can do to keep the experience in check. Therefore, the UI team would like to establish a performance budget for all pages and sites we develop, responsive or otherwise. The numbers we should be striving for are as follows:</p>
+
+    <h4>HTTP Requests</h4> 
+
+    <p class="highlight"><b>~ 40 - 50</b></p>
+
+    <h4>Cumulative Page Weight</h4>
+
+    <p class="highlight"><b>~ 450 - 550 KB</b></p>
+
+    <p>These are not "hard and fast" numbers. Client insistence on a certain branded image or feature may push a site over these limits. However,  knowing when a page is coming in over a certain threshold would, at the very least, alert the UI developer to any potential performance problems, and allow us to plan and budget in the appropriate time to alleviate such issues. While UI will be certainly aiming for these numbers during development (and to hopefully brings pages in under these numbers), we feel that QA should be spot-checking and flagging these numbers to the UI team as well.</p>
+
+    <p>Other page performance tools include:</p>
+
+    <ul>
+      <li><a href="http://developers.google.com/speed/pagespeed/insights/">Google Page Speed</a></li>
+      <li><a href="https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli?hl=en">PageSpeed Insights (Chrome Add-on)</a></li>
+      <li><a href="http://www.webpagetest.org/">WebPageTest: http://www.webpagetest.org/</a></li>
+      <li><a href="https://addons.mozilla.org/en-US/firefox/addon/yslow/">YSlow (Firefox Add-on)</a></li>
+    </ul>
+
+    <p><b>Discuss:</b> What does QA currently use to measure page performance and speed?</p>
+
+  </div>
+
+</section>
+
+<section id="testing-responsive-design">
+
+  <div>
+
+    <h2>Testing Responsive Designs</h2>
+
+    <p>Mobile has turned testing on its ear.  The days of safety testing on two or three browsers are well behind us. How can we now reliably test on the never ending arrival of devices that appear on the market on an almost daily basis? Here are a couple of helpful tips:</p> 
+
+    <ol>
+      <li><strong>Support the latest devices and most used browsers only.</strong> By embracing progressive enhancement, we are doing our due diligence to support as many of the older devices and browsers as we possibly can. The mobile market is now moving faster than we can hope to keep up with. The latest devices we purchase are nearly obsolete several months after purchasing them. The years to come will bring us even more smartphones, tablets, smart televisions, wearable devices, and other gadgets yet to be conceived.</li>
+      <li><strong>Test on real devices!</strong> Emulators are okay, but will only get you so far and <strong>do not</strong> always accurately portray a site as it will be experienced on a real phone or tablet. Test on as many devices as you have access to, with the allotted time that you have. Testing responsive sites on desktop browsers is fine, but it must not be the only test you run of site performance on smaller screens.</li>
+      <li><strong>Pray!</strong> (Just kidding...well, maybe not)</li>
+    </ol>
+
+    <h3>Emulation in Chrome DevTools</h3>
+
+    <p>If you need to test or smokescreen your work in an emulator, look no further than Chrome DevTools.</p>
+
+    <div class="video-container">
+
+      <iframe src="//www.youtube.com/embed/z7sTRdSpA04" allowfullscreen></iframe>
+
+    </div>
+
+    <p><strong>Important!</strong> <em>Emulation should not be used</em> if TMP has a perfectly functioning device on hand to test on. Only use when there are no other options available or time is extraordinarily short. Emulation testing is better than no physical device testing at all!</p>
+
+  </section>
+
+  <section id="responsive-talentbrew">
+
+    <h2>Responsive TalentBrew</h2>
+
+    <figure>
+
+      <img src="../img/fig-9.jpg" alt=""/>
+
+      <figcaption>Defcon 1! March 1st, 2014 saw the launch of "Responsive" TalentBrew.</figcaption>
+
+    </figure>
+
+    <h3>So, what has changed?</h3>
+
+    <p>Responsive TalentBrew is an ongoing endeavor to improve some of the underlying code that may negatively impact  the overall user experience across <strong>all</strong> viewing environments&mdash;especially on mobile devices.  These updates, as always, seek to improve the workflow of UI developers as well.</p> 
+
+    <p>To date, we have seen the following improvements:
+
+    <ol>
+      <li>Addition of Responsive Flag (When enabled, optimized code will load)
+      <li>Rearrangement of render-blocking assets, scripts removed from &lt;head&gt; and placed at bottom of page, etc. (this helps perception of faster loading page)
+      <li>Removal of baked in functionality such as modal windows (these decisions are best left up to the UI and creative teams)
+      <li>Refactoring of key features such as Advanced Job Alerts, Employee Profiles (Meet Our People), Job Matching, and Work With Me
+      <li>Framework improvements:
+
+        <ul>
+          <li>Script optimizations and reductions</li>
+          <li>IE conditionals (for older IE support...if needed)</li>
+          <li>Addition of responsive helpers (Modernizr, Viewport meta tags, etc.)</li>
+        </ul>
+
+      </li>
+      <li>New Features:
+      
+        <ul>
+          <li>GeoLocation (a.k.a. GPS)</li>
+        </ul>
+
+      </li>
+      <li>Server Configurations: 
+    
+        <ul>
+          <li>Addition of response header to disable Internet Explorers "compatibility mode" on client-side (this alone killed off many complaints about page display in older versions of Internet Explorer)</li>
+          <li>Addition of web.config to Seostatic.tmp.com to manage file types (web wont support coming soon)</li>
+        </ul>
+
+      </li>
+      <li>Admin Updates:
+
+        <ul>
+          <li>UI can now add scripts to the bottom of the template</li>
+        </ul>
+
+      </li>
+    </ol>
+
+    <h3>Upcoming Improvements</h3>
+
+    <p>Basic and Advanced Job Search (Summer/Fall 2014)</p>
+
+    <h3>Template Update</h3>
+
+    <p>In addition to the aforementioned changes, the current design was re-implemented with mobile in mind. Images were used only when relevant to content, large banners were replaced by smaller accent images, and scripts and styles were minified to reduce load times.</p> 
+
+    <figure>
+
+      <a href="../img/fig-10.jpg" target="_blank"><img src="../img/fig-10.jpg" alt=""/></a>
+
+      <figcaption>Doing more with less on TalentBrew.</figcaption>
+
+    </figure>
+
+    <table>
+    <caption>Jobstattmp.com Home Page</caption>
+    <thead>
+    <tr>
+      <th colspan="2">Before</th>
+      <th>After</th>
+      <th>Reduction</th>
+    </tr>
+    <tbody>
+    <tr>
+      <th><abbr title="Hypertext Transfer Protocol">HTTP</abbr> Requests</th>
+      <td>53</td>
+      <td>42</td>
+      <td>-<b class="awesome">11</b></td>
+    </tr>
+    <tr>
+      <th>Page Weight</th>
+      <td>999.5 KB</td>
+      <td>568.5 KB</td>
+      <td><b class="awesome">-43.1%</b></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <p>With a better code base to support responsive design and development now in place, TMP seeks to sunset its Mobile NextGen product within the next 12-18 months. We are also working to sunset our current waterfall, siloed workflow,  and  have a stronger design and development process in place by the time TalentBrew 2.0 launches , you know...eventually.</p>
+
+  </div>
+
+</section>
+
+<section id="conclusion">
+
+  <div>
+
+    <h2>Conclusion</h2>
+
+    <p>Mobile and responsive design and development may seem disruptive at times, and perhaps even a little unsettling. Fear not the future! Responsive should simply be looked at as the maturation of the web and a natural next step in its evolution. By working closely with one another we can overcome the new challenges that are presented  and push this medium forward.</p>
+
+    <p>The web is driven and governed by people (not robots) (except plumbot).</p>
+
+    <figure>
+
+      <img src="../img/spell-and-plumbot.jpg" alt=""/>
+
+      <figcaption>Plumbot says, <q>01101001101.</q> Translation: <q>I love web standards.</q></figcaption>
+
+    </figure>
+
+    <h3>Questions?</h3>
+
+    <p>Feel free to reach out to <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a> or <a href="mailto:stephanie.plumeri@tmp.com">Stephanie Plumeri</a> anytime! There is also a <a href="mailto:rwd@tmp.com">RWD hotline</a> you can buzz for all of your responsive design and development needs.</p>
+
+  </div>
+
+</section>
+
+<section id="refresher">
+
+  <div>
+
+    <h2>Need a refresher?</h2>
+
+    <h3>Recorded Session</h3>
+
+    <div class="video-container">
+
+      <iframe src="https://www.youtube.com/embed/fQ7thdnHBfs?rel=0&showinfo=0" allowfullscreen></iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!--nav id="menu">
+
+  <ul class="nav">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#workflow">Workflow</a></li>
+    <li><a href="#mobile-first">Mobile First</a></li>
+    <li><a href="#performance">Performance</a></li>
+    <li><a href="#testing-responsive-design">Testing</a></li>
+    <li><a href="#responsive-talentbrew">TalentBrew</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+
+</nav -->
+
+

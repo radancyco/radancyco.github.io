@@ -7,7 +7,7 @@ title: Guidelines for Preparing Photoshop Files for Web Developers
 
 By [Deborah Foerst](https://github.com/dafoerst)
 
-Last Updated: {{ "now" | date: "%A, %B %-d, %Y" }}
+Last Updated: **{{ "now" | date: "%A, %B %-d, %Y" }}**
 
 <section id="our-standards" markdown="block">
  

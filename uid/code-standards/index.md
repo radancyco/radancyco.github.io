@@ -152,10 +152,13 @@ Do not minify HTML.
 #### 2.5.2 CSS
 CSS should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large CSS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted.
 
-#### 2.5.3 Javascript
+#### 2.5.3 SCSS
+SCSS should never be minified. If the server has the ability to tie in a CSS preprocessor, no CSS output file should exist. However, if server-side CSS preprocessing is not available, all compiled CSS should be minified.
+
+#### 2.5.4 Javascript
 Javascript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
 
-#### 2.5.4 Third-Party Libraries
+#### 2.5.5 Third-Party Libraries
 All third-party libraries should be minified unless some sort of customization has been made to it and requires readability.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }

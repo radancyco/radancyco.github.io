@@ -5,6 +5,8 @@ title: Code Review Process
 
 # Code Review Process
 
+<section id="our-standards" markdown="block">
+
 ## 1. Overview
 
 Code reviews can be defined as the systematic review of code by peers which reduces defects, spreads code ownership, and mentors developers both experienced and new to the team. They must not be rigid or rigorous so that they encourage and make the team feel free to discuss best coding practices.
@@ -36,3 +38,4 @@ After reviewing the code, the issue list created by the reviewer will be sent to
 ## 4. Code Review Workflow
 
 ![](img/code-review-workflow-diagram_1-3.png)
+</section>

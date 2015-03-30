@@ -1,6 +1,7 @@
 markdown: kramdown
 highlighter: pygments
 destination: _httpdocs
+url: tmpworldwide.github.io
 sass:
     style: :compressed
 exclude: [

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="/assets/css/global.css"/>
   <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="canonical" href="https://{{ site.url }}{{ page.url }}" />
   <title>TMP Worldwide - {{ page.title }}</title>
 </head>
 <body id="{{page.url | replace:'.html',''| replace: '/', '-' | remove_first: '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>

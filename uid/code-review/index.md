@@ -3,9 +3,11 @@ layout: default
 title: Code Review Process
 ---
 
-# Code Review Process
+# {{ page.title }}
 
-<section id="our-standards" markdown="block">
+Last Updated: **{{ "now" | date: "%A, %B %-d, %Y" }}**
+
+<section id="code-review" markdown="block">
 
 ## 1. Overview
 

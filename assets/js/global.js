@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	var newLine, el, title, link;
 
-	$("#our-standards h2").each(function() {
+	$("#our-standards h2, #code-review h2").each(function() {
 
 		el = $(this);
 		title = el.text();
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 	ToC += "</ul></nav>";
 
-	$("#our-standards").prepend(ToC);
+	$("#our-standards, #code-review").prepend(ToC);
 
 	// Back to top
 

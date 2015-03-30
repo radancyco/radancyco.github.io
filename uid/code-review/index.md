@@ -17,13 +17,13 @@ Code reviews can be defined as the systematic review of code by peers which redu
 
 ## 2. Hurdles of Adoption
 
-*"It takes too much time"*
+*"It takes too much time"*  
 This is incorrect as defects are rejected before the client can find them. Fixing issues before they are discovered later on will significantly decrease maintenance time. It also ensures all code follows a certain standard, so when another developer other than the original author needs to perform maintenance on a site, they will be familiar with the coding style thus decreasing the time required to fix the issue. Lastly, every developer involved in the process will have learned something from each review, which will build an aggregate of skills that will be applied to each new project.
 
-*"Code reviews can get nasty"*
+*"Code reviews can get nasty"*  
 Defects found should be celebrated since it is a learning experience and proof that the team process is working correctly. Also by following a standardized code review process, issues can be backed up by documentation when necessary. Reviews should not be viewed as neither right or wrong. They should encourage discussion among peers about what is considered best practice, potentially leading to a change to the code standards.
 
-*"We need to stick to an XYZ process"*
+*"We need to stick to an XYZ process"*  
 Code reviews are typically non-conforming. Depending on the level of detail the reviews are assessed, they can be molded to fit whatever current processes are already in place. For example, more detailed reviews could be implemented early on to bring the entire team to a more even level of style, correctness, and altruism. As the team starts to get on the same page, review times and detail can decrease.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }

@@ -152,6 +152,6 @@ There is certainly no one right way to organize PSD files, so these are suggesti
 * All common images the same size
 * Any special instructions
 * Hover, Active and/or Visited states are specified for links and buttons
-* List the fonts, whether they are web fonts or non-web fonts, off to the side on the homepage using the “note tool”
+* List the fonts, whether they are web fonts or non-web fonts, off to the side on the homepage using the “note tool” 
 
 </section>

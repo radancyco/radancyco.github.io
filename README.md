@@ -1,4 +1,4 @@
-[![TMP Worldwide](http://tmpworldwide.github.io/assets/img/hdr-logo.png)](http://www.tmp.com/)
+[![TMP Worldwide](http://tmpworldwide.github.io/assets/img/tmp-standards.png)](http://www.tmp.com/)
 
 # Development Standards, Guidelines, Tools and Best Practices
 

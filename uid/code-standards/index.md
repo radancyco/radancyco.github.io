@@ -40,9 +40,10 @@ TMP supports applications on the following operating systems:
 
 * Windows 8/8.1
 * Windows 7
-* Mac OS 10.8+
+* Mac OS 10.10
 * iOS 8
 * iOS 7
+* Android 5.x
 * Android 4.x
 
 ### 1.3 Browser Support

@@ -83,31 +83,23 @@ HTTP protocols should be omitted unless absolutely necessary.
 
 ### 1.5 File Naming Conventions
 
-#### 1.5.1 General Files
-
-* Only use lowercase alphanumeric characters, hyphens, and underscores.
-* Separate sections with hyphens and words with underscores.
+* Only use lowercase alphanumeric characters and hyphens.
+  * Non-indexable files (such as SASS) may also contain underscores.
+* Names should be descriptive of the file's contents or image.
 
 {% highlight html %}
 <!-- Not recommended -->
-Banner Home 1.jpg
-banner_custom_l2-1.jpg
+Banner Home Background.jpg
 logo_1.png
-doc-How-To-Apply.pdf
+doc-How_To_Apply.pdf
+coffee.shop.jpg
 
 <!-- Recommended -->
-home-banner-1.jpg
-custom_l2-banner-1.jpg
+home-banner-background.jpg
 logo-1.png
-doc-how_to_apply.pdf
+doc-how-to-apply.pdf
+coffee-shop.jpg
 {% endhighlight %}
-
-#### 1.5.2 Images
-
-* Image filenames should follow this structure: `page-descriptor-#.extension`.
-    * **page** &mdash; Name of the page where the image appears.
-    * **descriptor** &mdash; Short, concise description of image. Prefer the location of the image on the page. E.g. The first banner image on the homepage is `home-banner-1.jpg`.
-    * **#** &mdash; Number of the image in a series.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 

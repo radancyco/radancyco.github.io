@@ -76,7 +76,7 @@ Merge layers, which will not require further editing by the developer. This prov
 
 ### 5.2 Fonts
 
-Web fonts, which are used for headings and copy, should be left as editable text. This allows developers to easily check the character panel to see what values need to be applied to font properties in the style sheet. **Pixels** should be used when sizing fonts instead of **point** sizes, and the size of the fonts should be rounded off (full numbers). Do not use kerning in editable text when designing web sites. Kerning will only remain intact if made into rasterized or flattened images. Also, for text, anti-aliasing would be best to set as crisp. This is better for web design.
+Web fonts, which are used for headings and copy, should be left as editable text. This allows developers to easily check the character panel to see what values need to be applied to font properties in the style sheet. **Pixels** should be used when sizing fonts instead of **point** sizes, and the size of the fonts should be rounded off (full numbers). Do not use kerning in editable text when designing web sites. Tracking (letter spacing) can be altered but avoid kerning individual letters. Kerning will only remain intact if made into rasterized or flattened images. Also, for text, anti-aliasing would be best to set as crisp. This is better for web design.
 
 Along with the Photoshop files, supply the fonts, which may not be common on most platforms. Specify if these fonts are client specific. 
 
@@ -93,6 +93,8 @@ Just because a font can be used on the web does not mean it should be used for a
 ### 5.3 Smart Objects (Vector and Raster)*
 
 If using smart objects within the Photoshop file, the designer should rasterize or merge with other layers to reduce the overall file’s size because smart objects can often contain photos or other artwork, which most likely will have a higher resolution (e.g. 300 dpi) than is required for the final output. Another reason for flattening these smart objects is to prevent a “File Not Found” error message in case the developer double clicks the smart object layer. 
+
+If you're designing an icon create it in illustrator and embed as a smart object. 
 
 **Note:** If the site that is being designed is responsive, images may need to be sized or cropped differently, so rasterizing an image may not always be ideal. If you are uncertain, work closely with the UI development team to determine the best course of action.  
 
@@ -153,5 +155,6 @@ There is certainly no one right way to organize PSD files, so these are suggesti
 * Any special instructions
 * Hover, Active and/or Visited states are specified for links and buttons
 * List the fonts, whether they are web fonts or non-web fonts, off to the side on the homepage using the “note tool” 
+* For more details please refer to:[http://photoshopetiquette.com/] (http://photoshopetiquette.com/)
 
 </section>

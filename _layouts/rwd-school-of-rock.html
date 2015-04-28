@@ -14,11 +14,11 @@
 
 		<article>
 
-			<!-- if model.navigation -->
+			{% if page.scripts == true %}
 
 			<a id="skip-nav" href="#menu">Skip to Navigation</a>
 
-			<!-- endif -->
+			{% endif %}
 
 			<h1><abbr title="Resposive Web Design">RWD</abbr> School<b>of Rock!</b></h1>
 
@@ -27,8 +27,6 @@
 		</article>
 
 	</main>
-
-	<!-- block navigation -->
 
 	<a class="button button-big back-to-top" href="#top">Back to top</a>
 
@@ -45,6 +43,8 @@
 		<p>Design by Stephanie Plumeri</p>
 
 	</footer>
+
+	{% include analytics.html %}
 
 	{% if page.scripts == true %}
 

@@ -1,6 +1,11 @@
-{% block content %}
+---
+layout: rwd-school-of-rock
+title: "Creative Session: Sprint 2014 - Week 1"
+scripts: true
+section: creative-spring-2014-week-1
+---
 
-<h2 class="subtitle">Fall Semester: 2013</h2>
+<h2 class="subtitle">Spring Semester: 2014</h2>
 
 <section id="intro">
 
@@ -36,7 +41,7 @@
 
 	<div>
 
-		<h2>Why Responsive?</h2>
+		<h2>Why RWD?</h2>
 
 		<q>Oh, users will <strong>never</strong> want to do that on a mobile device.</q>
 
@@ -72,6 +77,37 @@
 
 </section>
 
+<section id="print">
+
+	<div>
+
+		<h2>Why Not Print?</h2>
+
+		<p>Transitioning from print to web design can be challenging, especially when working with the responsive web. While many traditional design principles hold, there are some major differences between the two media that you should keep in mind:</p>
+
+		<ul>
+			<li>Print is static, so print designs only have to conform to one width/height. Responsive designs have to take into consideration a near-infinite combination of widths/heights.</li>
+			<li>There is no "fold". Users know how to scroll - you don't have to cram every piece of content you want to feature at the very top of the page.</li>
+			<li>Large images weigh down pages. Choose your images carefully, to make sure they are adding some sort of value to the page content. Large banner images of smiling stock models are nice, but add very little real content value at a high data cost.</li>
+			<li>White space is your friend. Users can't tap a link that is wedged between three other features.</li>
+			<li>The final appearance of a responsive design is under the user's control. The end user decides:
+
+				<ul>
+					<li>Width and height of the site display (device used to view site)</li>
+					<li>Image display (browser controls to show/hide images)</li>
+					<li>Color balance/contrast (screen display settings)</li>
+					<li>Font size (browser zoom)</li>
+					<li>Functionality (enabling/disabling javascript)</li>
+				</ul>
+
+			</li>
+
+		</ul>
+
+	</div>
+
+</section>
+
 <section id="adaptive">
 
 	<div>
@@ -100,11 +136,23 @@
 		<p>We asked you to review:</p>
 
 		<ul>
-			<li><a href="/documents/definition_of_rwd.pdf">Definition of RWD (PDF)</a></li>
+			<li><a href="../../documents/definition_of_rwd.pdf">Definition of RWD (PDF)</a></li>
 			<li><a href="http://alistapart.com/article/dao">A Dao of Web Design</a></li>
 		</ul>
 
 		<a href="http://ui.tmp.com/projects/respond/" class="button button-big">Let's get responsive.</a>
+
+		<br/><br/>
+
+		<h3>Additional Examples:</h3>
+
+		<ul>
+			<li>Blog: <a href="http://alistapart.com/">A List Apart</a></li>
+			<li>Traditional News: <a href="http://www.bostonglobe.com/">The Boston Globe</a></li>
+			<li>Ecommerce: <a href="http://www.unitedpixelworkers.com/">United Pixelworkers</a></li>
+			<li>Institutional: <a href="http://www.lancaster.ac.uk/">Lancaster University</a></li>
+			<li>Corporate: <a href="http://www.microsoft.com/en-us/default.aspx">Microsoft</a></li>
+		</ul>
 
 	</div>
 
@@ -114,7 +162,7 @@
 
 	<div>
 
-		<h2>Your Response</h2>
+		<h2>Responses?</h2>
 
 		<h3>Discuss:</h3>
 
@@ -127,7 +175,8 @@
 
 		<ul>
 			<li>Dipping our toes into HTML/CSS</li>
-			<li>Responsive site walkthrough: <a href="http://nissan-jobs.tmpqa.com/">nissan-jobs.tmpqa.com</a></li>
+			<li>Navigation patterns</li>
+			<li>The Wonderful World of Web Fonts</li>
 			<li>Be on the lookout for the next RWD Food for Thought email</li>
 		</ul>
 
@@ -135,54 +184,15 @@
 
 </section>
 
-<section id="refresher">
-
-	<div>
-
-		<h2>Need a refresher?</h2>
-
-		<h3>Session 1A</h3>
-
-		<div class="video-container">
-
-			<iframe src="http://www.youtube.com/embed/zkmaZuyFqmI?rel=0&showinfo=0" allowfullscreen></iframe>
-
-		</div>
-
-		<h3>Session 1B</h3>
-
-		<div class="video-container">
-
-			<iframe src="http://www.youtube.com/embed/ow4tr8HP_jo?rel=0&showinfo=0" allowfullscreen></iframe>
-
-		</div>
-
-		<h3>Session 1C (Q<span>&amp;</span>A only)</h3>
-
-		<div class="video-container">
-
-			<iframe src="http://www.youtube.com/embed/IAFzpi2BErs?rel=0&showinfo=0" allowfullscreen></iframe>
-
-		</div>
-
-	</div>
-
-</section>
-
-{% endblock %}
-
-{% block navigation %}
-
 <nav id="menu">
 
 	<ul class="nav">
 		<li><a href="#intro">Intro</a></li>
-		<li><a href="#why">Why Responsive?</a></li>
+		<li><a href="#why">Why RWD?</a></li>
+		<li><a href="#print">Why Not Print?</a></li>
 		<li><a href="#adaptive">A Note on Adaptive</a></li>
 		<li><a href="#rwd101">RWD 101</a></li>
-		<li><a href="#response">Your Response</a></li>
+		<li><a href="#response">Responses?</a></li>
 	</ul>
 
 </nav>
-
-{% endblock %}

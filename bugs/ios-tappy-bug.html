@@ -7,7 +7,9 @@
 
     <style>
         
-
+    *:active {
+    -webkit-tap-highlight-color: tomato;
+    }
 
     </style>
 
@@ -17,9 +19,15 @@
 
     <h1>YouTube embed not working in iOS Safari and Chrome</h1>
 
-    <p>There appears to be a bug within iOS webkit related browsers where, under certain conditions, YouTube videos embedded within iframes cannot be viewed when a user clicks on them. <em>Eep!</em></p>
+    <p><input type="text" placeholder="Search"/></p>
 
-    <p>In our particular instance, the conditions had to be just right. A "perfect storm" of bugs, if you will.</p>
+    <iframe src="https://www.youtube-nocookie.com/embed/ngElkyQ6Rhs?showinfo=0&controls=0" allowfullscreen title="Star Wars: Episode 7 - The Force Awakens Trailer"></iframe>
+
+    <p>There appears to be a bug within iOS webkit related browsers where, under certain conditions, YouTube videos embedded within iframes cannot be viewed when a user clicks on the video. <em>Eep!</em></p>
+
+    <p>In our particular instance, the conditions had to be just right. A "perfect storm" of bugs, if you will. :)</p>
+
+    <h2>The Bug</h2>
 
     <p>Applying a universal selector to the <code>:active</code> pseudo-class with a declaration property of <code>-webkit-tap-highlight-color</code> seemed to be our culprit.</p> 
 
@@ -31,7 +39,7 @@
 
 </pre></code>
 
-<p>Now, here is the odd part. The bug is only present when the above CSS block is present <strong>and</strong> there is an <code>input</code> element on the page with a type attribute value of "search". I know, crazy, right?</p>
+    <p>Now, here is the odd part. The bug is only triggered when the above CSS block is present <strong>and</strong> there is an <code>input</code> element present on the page with a type attribute value of "search". I know, crazy, right?</p>
 
 <code><pre>
 
@@ -39,15 +47,11 @@
 
 </pre></code>
 
-<h2>Solution</h2>
+<h2>The Solution</h2>
 
-<p>Either renaming the input type to "text" or removing <code>-webkit-tap-highlight-color</code> should clear up the issue.</p>
+<p>Either renaming the input type to "text" or removing <code>-webkit-tap-highlight-color</code> should alleviate the problem.</p>
 
-<hr/>
-
-    <p><input type="text" placeholder="Search"/></p>
-
-   <iframe src="https://www.youtube-nocookie.com/embed/ngElkyQ6Rhs?showinfo=0&controls=0" allowfullscreen title="Star Wars: Episode 7 - The Force Awakens Trailer"></iframe>
+<p><a href="ios-tappy-bug-fix.html">Here is the page without the webkit-tap-highlight-color property.</a></p>
 
 </body>
 </html>

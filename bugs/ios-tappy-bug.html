@@ -33,10 +33,21 @@
 
 </pre></code>
 
+<p>Now, here is the odd part. The bug is only present when the above CSS block is present <strong>and</strong> there is an <code>input</code> element on the page with a type attribute value of "search". I know, crazy, right?</p>
+
+<code><pre>
+
+&lt;input type="search" placeholder="Search"/&gt;
+
+</pre></code>
+
+<p>Either removing the input (or using a "text" value instead of "search") eliminates the issue.</p>
+
 
 <hr/>
 
 
+    <p><input type="text" placeholder="Search"/></p>
 
    <iframe src="https://www.youtube-nocookie.com/embed/ngElkyQ6Rhs?showinfo=0&controls=0" allowfullscreen title="Star Wars: Episode 7 - The Force Awakens Trailer"></iframe>
 

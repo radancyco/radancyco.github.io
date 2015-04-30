@@ -23,7 +23,12 @@
 
     <p>Posted on <time datetime="2015-04-30 00:38">Thursday, April 30, 2015 12:38:00 AM</time> <abbr title="Eastern Daylight Time">EDT</abbr> by <a href="https://github.com/michaelspellacy">Michael "Spell" Spellacy</a></p>
 
-    <p><b>iPhone 5s Model:</b> ME341LL/A <b>iOS Version:</b> 8.3 (12F0)</p>
+    <p>
+
+        <b>iPhone 5s Model:</b> ME341LL/A<br/>
+        <b>iOS Version:</b> 8.3 (12F0)<br/>
+        <b>Chrome Version:</b> 42.0.2311.47
+    </p>
 
     <p><input type="search" placeholder="Search"/></p>
 
@@ -35,7 +40,7 @@
 
     <h2>The Bug</h2>
 
-    <p>Applying the <code>:active</code> pseudo-class to a universal selector (*) and including a property of <code>-webkit-tap-highlight-color</code> seemes to be the culprit.</p> 
+    <p>Applying the <code>:active</code> pseudo-class to a universal selector (*) and including a property of <code>-webkit-tap-highlight-color</code> seems to be the culprit.</p> 
 
 <code><pre>
 
@@ -53,7 +58,7 @@
 
 </pre></code>
 
-    <p>Another oddity here is that when you apply focus to the seach input, type something in, and then attempt to play video, it will then work.</p>
+    <p>Another oddity here is that when you apply focus to the search input, type something in, and then attempt to play video, it will then work.</p>
 
     <h2>The Solution</h2>
 

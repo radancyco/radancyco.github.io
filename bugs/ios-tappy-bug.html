@@ -7,9 +7,7 @@
 
     <style>
         
-    *:active {
-    -webkit-tap-highlight-color: tomato;
-    }
+
 
     </style>
 
@@ -28,7 +26,7 @@
 <code><pre>
 
 *:active {
--webkit-tap-highlight-color: <color>;
+-webkit-tap-highlight-color: tomato;
 }
 
 </pre></code>
@@ -41,11 +39,11 @@
 
 </pre></code>
 
-<p>Either removing the input (or using a "text" value instead of "search") eliminates the issue.</p>
+<h2>Solution</h2>
 
+<p>Either renaming the input type to "text" or removing <code>-webkit-tap-highlight-color</code> should clear up the issue.</p>
 
 <hr/>
-
 
     <p><input type="text" placeholder="Search"/></p>
 

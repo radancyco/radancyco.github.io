@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	
+	<meta charset="utf-8"/>
+	<meta name="robots" content="noindex, nofollow"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>Responsible Responsive Development</title>
+	<link rel="stylesheet" href="css/global.css"/>
+	<!--[if lte IE 8 ]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#outline" data-offset="50" class="no-js">
+	<script src="js/plumrnizr.min.js"></script>
+	<a href="#content" class="wai">Skip Navigation</a>
+	<header>
+		<nav role="navigation" id="outline">
+			<ul class="nav">
+				<li><a href="#intro">Introduction</a></li>
+				<li><a href="#bcad">B.C. &amp; A.D.</a></li>
+				<li><a href="#mobile">Mobile First</a></li>
+				<li><a href="#tech">Tech Specs</a></li>
+				<li><a href="#optimize">Compact Cars</a></li>
+				<li><a href="#play">Go Play</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article id="content">
+		<section id="intro">
+			<h1>Responsible Responsive Design
+			<span>Case Study: Nissan Global Careers Site</span></h1>
+			
+			<p>The Nissan Global Careers site is not only one of TMP's first fully responsive custom careers sites, but also one of the first to be developed through a more collaborative workflow between IXD, creative, and development. The team worked together from day one to discuss content, layout, and functionality, which allowed them to work out potential issues and avoid endless back-and-forth e-mails later on in the development process.</p>
+			
+			<p>This case study details the development process from both a procedural and a technical standpoint. Understanding the benefits of effective communication among team members early on in the responsive development process is as necessary to successful project completion as is knowing the general mechanics of responsive, mobile-first websites.</p>
+			
+			<p>Before moving on, <a href="http://www.ihighfive.com/" target="blank">Internet high fives</a> all around to the Nissan team:</p>
+			<ul>
+				<li><strong>Sean Brittain</strong> - Producer</li>
+				<li><strong>Sara DiOrazio</strong> - Project Manager</li>
+				<li><strong>Neha Pahwa</strong> - IXD</li>
+				<li><strong>John Heberer</strong> - Creative</li>
+				<li><strong>Jessica Benoit</strong> - Creative</li>
+				<li><strong>Colin Connor</strong> - Copywriting</li>
+				<li><strong>Stephanie Plumeri</strong> - Front End Development</li>
+				<li><strong>Georg Jezersek</strong> - QA</li>
+				<li><strong>Ruben Nieves</strong> - QA</li>
+			</ul>
+		</section>
+		<section id="bcad">
+			<h2>B.C. &amp; A.D.</h2>
+			<p>Normal workflow for site conceptualization/development is very <em>linear</em>:</p>
+			<ol class="flowchart">
+				<li>IXD/Wireframes</li>
+				<li>Creative</li>
+				<li>Client Approval</li>
+				<li>Development</li>
+			</ol>
+				<p>In this pattern, the developer doesn't see what is going on until <em>after</em> client expectations have already been set. Any elements of the site that cannot be developed as indicated in the mockups will not be able to be delivered as promised, which can lead to disappointed clients. We can do a <strong>lot</strong> with responsive development, but there are some limitations and considerations that we need to take into account in a design <em>before</em> it goes to the client.</p>
+			<dl>
+				<dt>B.C. ("Before Creative")</dt>
+				<dd>This is when the front end developer was brought in to conversations about site content and functionality on the Nissan project, and this is when the developer <em>should</em> enter the picture.</dd>
+				<dt>A.D. ("After Design")</dt>
+				<dd>The developer should continue to be looped in as revisions are made to site wireframes and mockups. A quick conversation only takes a few minutes and can save hours of back-and-forth when it comes time to actually build the site.</dd>
+			</dl>
+			
+			<p>The responsive development workflow should look more like this (which you may recognize from an earlier Digiknow):</p>
+			<a href="img/flowchart.jpg" class="example" target="blank"><img class="chart" src="img/flowchart.jpg" alt="Responsive development workflow chart"/></a>
+			
+			<p>For the Nissan site, the developer began building out basic wireframes in the browser <em>before</em> final creative was completed. This not only sped up development once creative was approved, but also helped the creative team design for mobile by showing them a living, <span class="breathe">breathing</span> version of the site that they were designing.</p>
+			<ul class="sidebyside">
+				<li><img src="img/wireframe-home.jpg" alt="Nissan site wireframes"/></li>
+				<li><img src="img/roughdev-home.jpg" alt="Nissan wireframes in browser"/></li>
+			</ul>
+			<p>In addition, the project manager sent out every new round of wireframes and creative to all team members for feedback before being presented to the client. This allowed the team (especially the very picky developer) to flag any potential issues and develop several potential solutions to be presented as options on the client calls.</p>
+			<p>The <a href="example.html" target="blank">Nissan History page</a> is one of many pieces of the overall development process that exemplifies how the collaborative process can quickly and effectively resolve potential issues that may arise in creative, IXD, and/or programming.</p>
+		</section>
+		<section id="mobile">
+			<h2>Mobile First</h2>
+			<ul class="sidebyside">
+				<li><img src="img/about-mobile.jpg" alt="Nissan website - mobile view"/></li>
+				<li><img src="img/about-desktop.jpg" alt="Nissan website - desktop view"/></li>
+			</ul>
+			<p>Mobile first development focuses on building the site structure around <em>content</em>, not images or functionality. Before a single wire is put to frame, one question must be asked and answered: <strong>What do we want users to see first in a limited screen space?</strong></p>
+			<p>Discussions about content priority to optimize the user experience should be held early and often between all members of the project team: project managers, IXD, creative, copywriters, and developers. It is important to keep everyone in the loop, especially if (and when) the client requests new content or features are added, or to change existing site elements.</p> 
+			<dl>
+				<dt>Progressive enhancement</dt>
+				<dd>This content-focused strategy builds the basic site structure to be accessible on the lowest common denominator of browser, and treats additional styles and scripts as additional features that are <em>nice</em> but not <em>necessary</em> to deliver the site content to the end user.<br/><br/>
+				With the mobile first development strategy, we treat the use of the extra screen space provided by desktop browsers as an enhancement on the mobile site, rather than as the starting point for development.
+				</dd>
+			</dl>
+			<h3>Mobile browsing considerations</h3>
+			<ul>
+				<li>Page weight
+					<ul class="sub">
+						<li>Users pay for every byte that they download - make those bytes count!</li>
+						<li>Avoid use of large, superflous images and unnecessary scripts.</li>
+						<li>Take advantage of CSS for as much as possible - arrows, background gradients, buttons, etc.</li>
+					</ul>
+				</li>
+				<li>Form fields
+					<ul class="sub">
+						<li>Most mobile browsers have their own ways of handling user interaction with form elements (such as the global location selector).</li>
+						<li>Avoid custom styling of dropdowns to allow native browser functionality to work properly.<br/><br/></li>
+					</ul>
+					<ul class="sidebyside">
+						<li><img src="img/form-behavior.jpg" alt="form behavior on iPad mini"/></li>
+						<li><img src="img/form-behavior-2.jpg" alt="form behavior on Android browser"/></li>
+					</ul>
+				</li>
+				<li>Finger vs. Mouse
+					<ul class="sub">
+						<li>Need to increase link sizes/hit points for "fat fingers" on touch screens.</li>
+						<li>Cannot rely on "hover" action trigger on touch screens - use "click" as a fallback.</li>
+					</ul><br/>
+					<img src="img/dropmenu.jpg" alt="dropdown hover menu"/>
+				</li>
+			</ul>
+		</section>
+		<section id="tech">
+			<h2>Tech Specs</h2>
+			<p>The Nissan site was built (as per client delivery specifications) in flat HTML, CSS, and Javascript files. HTML5 was the code standard of choice, as it uses a more semantic, easier to read markup (for both developers and web crawler bots).</p>
+			<p><a href="http://www.w3.org/TR/WCAG/" target="blank">Web Content Accessibility Guidelines (WCAG)</a> were also taken into consideration during development. The HTML includes proper form element labels, attribute tags, and navigation links to comply with accessibility standards.</p>
+			<p>Additionally, the site was built with a number of fallbacks for browsers that do not have Javascript enabled. Users can access <em>all</em> of the site content regardless of their browser settings.</p>
+			<ul class="sidebyside">
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+		<section id="optimize">
+			<h2>Compact Cars</h2>
+			<p><em>Note - this is the only car-related pun in this presentation. You can thank me later.</em></p>
+			<p>An important formula to remember when developing a site is: <strong>faster websites = better user experiences</strong>. This is especially the case for mobile browsing on a 3G/4G network.</p>
+			
+			<h3>Optimizing Nissan, byte by byte</h3>
+			<ul>
+				<li>Minified CSS and Javascript</li>
+				<li>Compressed images</li>
+				<li>Dynamic loading of thumbnail images in <a href="http://nissan-jobs.tmpqa.com/locations.html" target="blank">Locations page</a> accordion - only load when content is expanded</li>
+			</ul>
+			
+			<h3>Antisocial optimization</h3>
+			<p>The Nissan site, by design, has a social "slider" on the desktop version of the site. On touch screens/mobile devices, the full feeds do not load. Instead, the social icons function as plain links to Nissan's respective profile pages on those social networks.</p>
+			<p>How much weight do those feeds add to the page? Not to be rude, but social feeds are pretty <strong><em>fat</em></strong>. Take the Nissan Careers Culture Page, for example:</p>
+			<ul class="social">
+				<li>Page load sans social: <strong>22</strong> server requests <span>(457 KB)</span></li>
+				<li>Page load with social: <strong>72</strong> server requests <span>(894 KB)</span></li>
+			</ul>
+			<p>Again, the only difference here is adding in the social feeds - all other images and content load into the page on both mobile and desktop views of the site.</p>
+		</section>
+		<section id="play">
+			<h2>Go Play</h2>
+			<a id="sitelink" href="http://nissan-jobs.tmpqa.com" target="blank">Nissan Global Careers Site (in QA)</a>
+			
+			<h3>More on standards and accessibility:</h3>
+			<ul>
+				<li><a href="http://alistapart.com/article/dao" target="blank">A Dao of Web Design</a></li>
+				<li><a href="http://alistapart.com/article/improving-ux-through-front-end-performance" target="blank">Improving UX Through Front-End Performance</a></li>
+				<li><a href="http://blog.silktide.com/2013/01/things-learned-pretending-to-be-blind-for-a-week/" target="blank">Things I Learned by Pretending to be Blind for a Week</a></li>
+			</ul>
+		</section>
+	</article>
+	<footer>
+		<p>tmp worldwide &nbsp;|&nbsp; april 2013</p>
+	</footer>
+	<script src="/js/ga.js"></script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/bootstrap-scrollspy.js"></script>
+	<script src="js/global.js"></script>
+</body>
+</html>

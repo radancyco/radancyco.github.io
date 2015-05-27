@@ -40,4 +40,5 @@ After reviewing the code, the issue list created by the reviewer will be sent to
 ## 4. Code Review Workflow
 
 ![](img/code-review-workflow-diagram_1-3.png)
+
 </section>

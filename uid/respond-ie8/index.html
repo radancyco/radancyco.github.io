@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>Respond II: Responding to IE8</title>
+	<link rel="stylesheet" href="css/global.css"/>
+	<!--[if lte IE 8 ]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body class="flexslider">
+	<article class="slides">
+			<section class="intro">
+				<div>
+					<h1>Respond II.<span>Responding to IE8</span></h1>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>What is "responsive"?</h2>
+					<h3>Responsive is not "squishy".</h3>
+					<p>This would imply that a responsive website is simply a site designed for a desktop browser, then shrunk down and rearranged to fit on smaller screens. That is the exact opposite of how we design and develop responsive pages.</p>
+					<h3>Responsive is "fluid".</h3>
+					<p>Developers start with one set of content, then style it in such a way that it flows naturally to fill different screen sizes. Additional styles are added on to direct the flow of content as the room to display it increases with screen size.</p>
+					<h3>Responsive websites <em>respond</em> to the viewing environment when presenting content to the user.</h3>
+					<ul>
+						<li>Screen size</li>
+						<li>Hardware</li>
+						<li>Network connection speeds</li>
+						<li>Browser capabilities</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>IE8: The Incapable Browser</h2>
+					<h3>Point 1: Internet Explorer versions 8 and below do not natively support responsive web technologies. They will render pages with the same styles that would be applied to small screen/mobile devices.</h3>
+					
+					<h3>Point 2: Despite a dwindling browser market share and imminent Microsoft support drop, many clients still want their sites to appear as precisely in IE8 as they do in more modern browsers.</p>
+						<br/>
+					<h3>How do we resolve these two points?</h3>
+					<p>On the current, non-responsive TalentBrew product, TMP offers “limited support” for IE8, meaning we only address issues that prevent users from accessing core site content or functionality.</p>
+					<p>Given the extreme limitations of the browser when it comes to responsive design and development, we need to rethink our support standards for responsive products in order to ensure that we are developing sites capable of delivering a solid user experience to the greatest number of individuals.</p>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>"It has to be perfect in IE8 because our CEO uses IE8."</h2>
+					<h3>But what browser do <em>job seekers</em> use?</h3>
+					<p>It is important that stakeholders are satisfied with the site's appearance. However, devoting excess resources to IE8 fixes is  inefficient from an expense standpoint, given how many job seekers use older browsers.</p>
+					<h3>TMP-hosted site traffic breakdown (as of 15 November 2013):</h3>
+					<ul>
+						<li>Chrome - 23%</li>
+						<li>Internet Explorer 10 - 15%</li>
+						<li>Firefox - 8.4%</li>
+						<li>Safari 7 - 7.5%</li>
+						<li><strong>Internet Explorer 8 - 6.8%</strong></li>
+					</ul>
+					<h3>Why focus more resources on achieving pixel-perfection in a browser used by few, when they could be used to explore new mobile web technologies for many?</h3>
+				</div>
+			</section>
+			<section class="mobile-stats">
+				<div>
+					<h2>The mobile user</h2>
+					<ul>
+						<li>77% of job seekers use mobile job search apps <a href="http://about.beyond.com/infographics/mobile-job-search-apps" class="source">[Beyond.com Career Network Survey]</a></li>
+						<li>30% of jobseekers think applying for jobs on mobile devices is difficult <a class="source" href="http://www.glassdoor.com/blog/infographic-rise-mobile-job-search/">[Glassdoor.com]</a></li>
+						<li>25% would not apply to a job if the company's career site was not mobile optimized <a class="source" href="http://www.glassdoor.com/blog/infographic-rise-mobile-job-search/">[Glassdoor.com]</a></li>
+						<li>68% of jobseekers use their mobile device to search for jobs once a week or more <a class="source" href="http://www.glassdoor.com/blog/infographic-rise-mobile-job-search/">[Glassdoor.com]</a></li>
+						<li>86% of jobseekers who have a smartphone <em>would</em> use their phone to search for a job if career sites were better optimized for mobile <a href="http://www.recruiter.com/i/the-importance-of-mobile-recruiting-infographic/" class="source">[Recruiter.com]</a></li>
+						<li>84% believe mobile devices will be the most common way for people to search for jobs within the next 5 years <a class="source" href="http://www.glassdoor.com/blog/infographic-rise-mobile-job-search/">[Glassdoor.com]</a></li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>Are mobile styles on IE8 a bad thing?</h2>
+					<h3>No, because IE8 still displays all page content and functionality.</h3>
+					<ul>
+						<li>User is receiving the same information and has access to the same tools they would be able to see in the "desktop" view on a more modern browser</li>
+						<li>Only differences are in the styling</li>
+						<li>Sites are build with the mobile experience at the forefront - IE8 will always render the core experience upon which the entire framework of the site is founded</li>
+						<li>No user will ever be a "second-class citizen" because of his/her choice of browser</li>
+					</ul>
+					<br/>
+					<h3>Yes, because clients are expecting their page to look identical in all browsers.</h3>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>It's time to break bad habits.</h2>
+					<p>The expectation that web pages always look exactly the same in every browser is an outdated, print-centric notion that stands as the conceptual opposite of responsive development.</p>
+					<p>In the past, we attempted to meet this expectation with hacks and stylesheets that attempted to force IE8 and below to render pages as would a more modern desktop browser.</p>
+					<h3>The process of hacking back to try and force older browsers to render pages in ways in which the browser was not natively designed is:</h3>
+					<ul>
+						<li>Costly (more to come on that in a moment)</li>
+						<li>Resource-intensive</li>
+						<li>Out of line with industry-accepted web standards</li>
+						<li>Detrimental to the user experience</li>
+						<li>Ultimately harmful to the performance and visibility of the client site</li>
+					</ul>
+				</div>
+			</section>
+			<section class="maths">
+				<div>
+					<h2>In mathematical terms:</h2>
+					<p><strong>More hacks = More potential issues = Less satisfied users = Lower site rankings
+</strong></p>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>The solution:</h2>
+					<h3>Responsive development should not be considered part of <a href="http://www.tmp.com/web-standards/#limited-support">"limited support"</a> for Internet Explorer 8. New TalentBrew implementations should not behave responsively in that browser, or in any browser versions below it.</h3>
+					<ul>
+						<li>Content, and core functionality (such as job search on TalentBrew) will still be fully accessible to all users in all browsers.</li>
+						<li>Sites will render in the small screen/mobile layout in browsers that do not support responsive styles.</li>
+						<li>If a client wishes for a site to render identically in all browsers, spanning back to IE8, then their site will not be built responsively. We will no longer “hack back” to support older browsers.</li>
+					</ul>
+					<h3>We need to set a hard stop on outdated technologies if we want resources available to explore new ones.</h3>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>Benefits of dropping IE8 support:</h2>
+					<ul>
+						<li><h3>Reduction in turnaround time for responsive product implementation, and more efficient use of resources</h3>
+							<ul>
+								<li>Adding hacks and making IE-specific style tweaks can add days to the development schedule</li>
+								<li>Quality Assurance must already test on multiple browsers and devices - adding another, generally very buggy browser, will also necessitate additional QA resource time</li>
+								<li>Less back-and-forth between development and QA in addressing IE8 issues (which more often than not make up the majority of QA issues on a responsive site) leaves more time for developers to work on other client implementations</li>
+							</ul>
+						</li>
+						<li><h3>Lower initial project costs</h3>
+							<ul>
+								<li>Reducing the project timeline by eliminating resource hours needed for building and extensively testing sites in IE8 and below lowers overall cost to the client</li>
+							</ul>
+						</li>
+						<li><h3>Lower maintenance costs</h3>
+							<ul>
+								<li>Sites can be developed with maintainable, accessible, future-friendly code</li>
+								<li>Will work on all devices, even those yet to be invented</li>
+								<li>No reliance on unstable hacks, conditional statements, or scripts to render the important information on a site</li>
+								<li>No need to revamp the product or undo old hacks every time a new piece of web-capable hardware enters the market</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>Savings by numbers</h2>
+					<p>The following cost estimates are from a recent responsive content page project for Walmart TalentBrew and Careers Site:</p>
+					<h3>Development Time</h3>
+					<ul>
+						<li>Total development hours: 69</li>
+						<li>Development hours logged for IE8/7 fixes: 20</li>
+						<li><strong>Percentage of time spent on IE8/7 fixes: 29%</strong></li>
+					</ul>
+					<h3>Development Cost</h3>
+					<ul>
+						<li>Total development cost: $4,761</li>
+						<li>Costs billed for IE8/7 fix hours (rounded): $1,200</li>
+						<li><strong>Percentage of total cost spent on IE8/7 fixes: 25%</strong></li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div>
+					<h2>Drawbacks to dropping IE8 support:</h2>
+					<ul>
+						<li><h3>Client resistance to the same site appearing differently on different browsers</h3>
+							<ul>
+								<li>Requesting a site to be responsive and also fully compatible with older browsers is a sign that the client does not understand the purpose of building sites responsively.</li>
+								<li>As the "digital brand authority", it is our job to educate clients on the benefits of developing sites with their eyes toward the future, rather than the past. This may require extra effort on the part of all members of the digital team: account representatives, project managers, IXD, designers, and developers.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="bottom-line">
+				<div>
+					<h2>The bottom line:</h2>
+					<p>If clients wish to look toward the future of web browsing with responsive sites, they cannot also be allowed to cling to the obsolete technologies of the past.</p>
+					<p>The transition away from older browser support will be difficult and may be met with resistance. However, dropping support for IE8 and below will ultimately be both cost effective and beneficial to site users.</p>
+					<p>We can meet (and exceed) client expectations of site performance by moving our focus from supporting outdated browsers to upholding modern web standards and improving the cross-device user experience.</p>
+				</div>
+			</section>
+	</article>
+<script src="/js/ga.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/global.js"></script>
+<!-- developed november 2013 by stephanie plumeri - web developer, baker of noms, casual economist -->
+<!-- web. standards. -->
+</body>
+</html>

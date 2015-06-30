@@ -370,9 +370,10 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 * CSS selectors should be semantic, describing the elements' function. Semantic names do not include:
     * the name of a person.
     * an elements' placement on the page, such as `.left` or `.top`.
-* Selectors should be camelCase and use hyphens to separate levels.
-    * E.g. `.jobGroup-title`.
+* Selectors should use hyphens to separate levels.
+    * E.g. `.job-group-title`.
 * Selectors should not include underscores or any uncommon unicode characters.
+* Selectors should not use camelCase.
 
 <p markdown="block">
 {% highlight css %}

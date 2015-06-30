@@ -383,8 +383,8 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 .left-box {}
 
 /* Recommended */
-.parentName-childName {}
-.relatedLinks {}
+.parent-name-child-name {}
+.related-links {}
 {% endhighlight %}
 </p>
 

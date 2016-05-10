@@ -38,22 +38,13 @@ As front-end developers at TMP Worldwide, we embrace web standards and keep up-t
 
 TMP supports applications on the following operating systems:
 
-* Windows 8/8.1
-* Windows 7
-* Mac OS 10.10
-* iOS 8
-* iOS 7
-* Android 5.x
-* Android 4.x
+See [TMP Support](https://www.tmp.com/support/) for more details. 
 
 ### 1.3 Browser Support
 
 TMP supports the *current* and *prior* major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
-* Google Chrome
-* Mozilla Firefox
-* Safari
-* Internet Explorer
+See [TMP Support](https://www.tmp.com/support/) for more details. 
 
 ### 1.4 HTTP Protocols
 
@@ -126,7 +117,7 @@ As part of our commitment to provide users with the best experience possible, we
 Our performance budget is:
 
 * **HTTP Requests:** ~40-50
-* **Cumulative Page Weight:** ~450-550 KB
+* **Cumulative Page Weight:** ~750-950 KB
 
 ### 2.4 Image Compression
 

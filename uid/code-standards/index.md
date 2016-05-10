@@ -26,8 +26,8 @@ As front-end developers at TMP Worldwide, we embrace web standards and keep up-t
 
 ### 1.1 Accessibility
 
-> All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet [WCAG 2.0 Level A guidelines](http://www.tmp.com/web-standards/docs/wcag-2-level-a-overview.pdf).
-> <cite>&mdash; [TMP Web Standards](http://www.tmp.com/web-standards/)</cite>
+> All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet [WCAG 2.0 Level A guidelines](https://www.tmp.com/web-standards/docs/wcag-2-level-a-overview.pdf).
+> <cite>&mdash; [TMP Web Standards](http://www.tmp.com/support/)</cite>
 
 * [WCAG 2.0 Documentation](http://www.w3.org/TR/WCAG20/)
 * [How to Meet WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/)
@@ -116,7 +116,7 @@ As part of our commitment to provide users with the best experience possible, we
 
 Our performance budget is:
 
-* **HTTP Requests:** ~40-50
+* **HTTP Requests:** ~60-70
 * **Cumulative Page Weight:** ~750-950 KB
 
 ### 2.4 Image Compression

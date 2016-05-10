@@ -98,6 +98,8 @@ Just because a font can be used on the web does not mean it should be used for a
 * [Compressor.io](https://compressor.io/) (Online Tool)
 * [JPEGmini](http://www.jpegmini.com/) (Online Tool, jpg only)
 * [RIOT](http://luci.criosweb.ro/riot/) (Online Tool, jpg only)
+ 
+For more information about image optimization please see Google's [image optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en) suggestions.
 
 As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each front-end developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
 

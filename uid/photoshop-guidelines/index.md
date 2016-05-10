@@ -88,9 +88,25 @@ Fonts that are not considered web safe fonts ([list of web safe fonts](http://ww
 
 #### 5.2.1 Testing Fonts
 
-Just because a font can be used on the web does not mean it should be used for all content on the site. Certain fonts were designed to work well on screen, but not all fonts were, especially when using these fonts in small sizes. The recommended use for these fonts is to use them for headlines and special types of elements, not for all content. Check fonts at the following site: [Font Dragr](http://fontdragr.com/).  Drag a font file to the page and the text will change to that font.  
+Just because a font can be used on the web does not mean it should be used for all content on the site. Certain fonts were designed to work well on screen, but not all fonts were, especially when using these fonts in small sizes. The recommended use for these fonts is to use them for headlines and special types of elements, not for all content. Check fonts at the following site: [Font Dragr](http://fontdragr.com/).  Drag a font file to the page and the text will change to that font.
 
-### 5.3 Smart Objects (Vector and Raster)*
+### 5.3 Image Optimization
+
+**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also continue to adhering to our [Performance Budget](https://tmpworldwide.github.io/uid/code-standards/#performance-budget). There are various tools for this including (but not limited to):
+
+* [Tiny PNG](https://tinypng.com/) (Online Tool, not only png)
+* [Compressor.io](https://compressor.io/) (Online Tool)
+* [JPEGmini](http://www.jpegmini.com/) (Online Tool, jpg only)
+* [RIOT](http://luci.criosweb.ro/riot/) (Online Tool, jpg only)
+
+As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each front-end developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
+
+Our performance budget is:
+
+*	**HTTP Requests:** ~40-50
+*	**Cumulative Page Weight:** ~450-950 KB
+
+### 5.4 Smart Objects (Vector and Raster)*
 
 If using smart objects within the Photoshop file, the designer should rasterize or merge with other layers to reduce the overall file’s size because smart objects can often contain photos or other artwork, which most likely will have a higher resolution (e.g. 300 dpi) than is required for the final output. Another reason for flattening these smart objects is to prevent a “File Not Found” error message in case the developer double clicks the smart object layer. 
 
@@ -98,7 +114,7 @@ If you're designing an icon create it in illustrator and embed as a smart object
 
 **Note:** If the site that is being designed is responsive, images may need to be sized or cropped differently, so rasterizing an image may not always be ideal. If you are uncertain, work closely with the UI development team to determine the best course of action.  
 
-### 5.4 Background Images
+### 5.5 Background Images
 
 The web is a dynamic environment, so make sure that any complex background graphics fit. Check that the image or images extend beyond the right and bottom of the browser window so that the images are large enough to accommodate an expanded browser window. This is especially important now because responsive websites can be viewed on many devices.
 

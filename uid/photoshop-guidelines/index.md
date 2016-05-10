@@ -103,8 +103,8 @@ As part of our commitment to provide users with the best experience possible, we
 
 Our performance budget is:
 
-*	**HTTP Requests:** ~40-50
-*	**Cumulative Page Weight:** ~450-950 KB
+*	**HTTP Requests:** ~60-70
+*	**Cumulative Page Weight:** ~750-950 KB
 
 ### 5.4 Smart Objects (Vector and Raster)*
 

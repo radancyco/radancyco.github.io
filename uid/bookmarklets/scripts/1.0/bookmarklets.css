@@ -1,0 +1,67 @@
+.btn-close-nyan {
+position: fixed;
+top: 80%;
+right: 115px;
+z-index: 10000;
+}
+
+
+.highlight-page-type #page-list [data-page-type = "error"] {
+background-color: red;
+}
+
+.highlight-page-type #page-list [data-page-type = "home"] {
+background-color: orange;
+}
+
+.highlight-page-type #page-list [data-page-type = "search"] {
+background-color: yellow;
+}
+
+.highlight-page-type #page-list [data-page-type = "location"] {
+background-color: green;
+}
+
+.highlight-page-type #page-list [data-page-type = "job"] {
+background-color: blue;
+}
+
+.highlight-page-type #page-list [data-page-type = "jobmatching"] {
+background-color: indigo;
+}
+
+.highlight-page-type #page-list [data-page-type = "jobalertmanagement"] {
+background-color: pink;
+}
+
+.highlight-page-type #page-list [data-page-type = "workwithme"] {
+background-color: royalblue;
+}
+
+.highlight-page-type #page-list [data-page-type = "unsubscribe"] {
+background-color: yellowgreen;
+}
+
+.highlight-page-type #page-list [data-page-type = "sitemap"] {
+background-color: salmon;
+}
+
+.highlight-page-type #page-list [data-page-type = "jobalertverify"] {
+background-color: goldenrod;
+}
+
+.highlight-page-type #page-list [data-page-type = "content"] {
+background-color: darkseagreen;
+}
+
+.highlight-page-type #page-list [data-page-type = "maintenance"] {
+background-color: indianred;
+}
+
+.highlight-page-type #page-list [data-page-type = "preview"] {
+background-color: darkturquoise;
+}
+
+.edit-menu-copy {
+background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDFBNDZEREEyQkM0MTFFNUEzMDRFMEZDODY4NkRERkUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDFBNDZEREIyQkM0MTFFNUEzMDRFMEZDODY4NkRERkUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MUE0NkREODJCQzQxMUU1QTMwNEUwRkM4Njg2RERGRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MUE0NkREOTJCQzQxMUU1QTMwNEUwRkM4Njg2RERGRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ptarv/0AAAEsSURBVHja7FftDYIwFATSAboBjMAIdQNHwBGcQJxAN0An0A1gA9wAnEA3qK/JI2ma0i9A/nDJRUlOjnsctcSc82gNJA4aCqyB3JGVk7NIbOGD+6MFUtN5iWNigR54N+hSYIHfc5zSDvgNTVxjitqiY5rkHTDX6ZOFO5Rh8tyWmEoJfe8lM+g+wEz2Uo0vgUUaTlrhhQ/sJB0zlUseydkyxpP0mxaLdFA0paQzjloes610unGqRSrHEs9ZLorJi7lWLl+IlWtvE5EJBlelE1Q6Fp/PpYyPyjHDZzZaa9Sb8Wa8Gc+KFJ/rdIkFxIRCs2b3a4z6phqTBY2GjaHY7L3+Neo3sAn9kygDCuUMYijAaULixvdNIlM2aCGoHLZNUTzy0sYCk2qLpMNPgAEASoud88KNAH4AAAAASUVORK5CYII=");
+}

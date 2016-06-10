@@ -52,11 +52,11 @@ function displayVanity(clientDomain, vanityURL, redirectURL, i) {
 
 	if (vanityURL == "") {
 
-		$(pages[i]).children(":eq(1)").append('<p><a href=' + redirectURL + ' target=_blank>' + redirectURL + '</a>');
+		$(pages[i]).children(":eq(1)").append('<p class=theme-url><a href=' + redirectURL + ' target=_blank>' + redirectURL + '</a>');
 
 	} else {
 
-		$(pages[i]).children(":eq(1)").append('<p><a href=https://' + clientDomain + vanityURL + ' target=_blank>' + 'https://' + clientDomain + vanityURL + '</a></p>');
+		$(pages[i]).children(":eq(1)").append('<p class=theme-url><a href=https://' + clientDomain + vanityURL + ' target=_blank>' + 'https://' + clientDomain + vanityURL + '</a></p>');
 
 	}
 

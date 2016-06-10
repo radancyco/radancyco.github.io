@@ -1,3 +1,5 @@
+// TMP Worldwide Bookmarklet: Sort Pages by Name
+
 $('#page-list tbody').each(function(index) {
 
 	$(this).find('tr').sort(function (a, b) {
@@ -12,16 +14,50 @@ $('#page-list tbody').each(function(index) {
 
 	$(this).find('td:first-child a').attr('target', '_blank');
 
-	$(this).find('[data-page-type=content] td:first-child a').each(function() {
+});
 
-		var localURL = $.get($(this).attr('href'), function(data) {
+// Dropping Jorge's code in...
 
-				data.find($('#vanity-url').text())
+var pages = $('[data-page-type="content"]');
+var pageCount = pages.length;
+
+for (var i = 0; i <= pageCount; i++) {
+
+	(function(i) {
+
+		var url = $(pages[i]).find('a').attr('href');
+		var vanity = "";
+
+		$.ajax({
+
+			url: url,
+			type: 'GET',
+			success: function(data) {
+
+				vanity = $(data).find('#vanity-url').val();
+				redirect = $(data).find('#RedirectUrl').val();
+				domain = $(data).find('#vanity-url').prev().text();
+
+				displayVanity(domain, vanity, redirect, i);
+
+			}
 
 		});
 
-			$(this).parent().parent().find('td:nth-child(2)').append($('<p>' + localURL + '</p>'));
+	})(i);
 
-	});
+}
 
-});
+function displayVanity(clientDomain, vanityURL, redirectURL, i) {
+
+	if (vanityURL == "") {
+
+		$(pages[i]).children(":eq(1)").append('<p><a href=' + redirectURL + ' target=_blank>' + redirectURL + '</a>');
+
+	} else {
+
+		$(pages[i]).children(":eq(1)").append('<p><a href=https://' + clientDomain + vanityURL + ' target=_blank>' + 'https://' + clientDomain + vanityURL + '</a></p>');
+
+	}
+
+}

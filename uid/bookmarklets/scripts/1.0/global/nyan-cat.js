@@ -1,7 +1,10 @@
 
+// TMP Worldwide Bookmarklet: Nyan Cat
+// Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy
+
 if(!$('body').hasClass("nyan")) {
 
-	n();
+	n(); // Thanks, Plum :-)
 
 }
 
@@ -14,7 +17,6 @@ if(!$('#css-bookmarklet').length) {
 if(!$('.btn-close-nyan').length) {
 
 	$('body').append('<button type="submit" class="btn-close-nyan">Shoo, Nyan Cat!</button>');
-	$('.page-wrap').wrap('<marquee/>');
 
 }
 
@@ -23,7 +25,5 @@ $('.btn-close-nyan').on('click', function() {
   $('body').removeClass('nyan');
   $('#nyan').remove();
   $(this).remove();
-  $('.page-wrap').unwrap();
-  location.reload();
 
 });

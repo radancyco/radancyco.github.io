@@ -26,6 +26,4 @@ $('.btn-close-nyan').on('click', function() {
   $('#nyan').remove();
   $(this).remove();
 
-  alert("hello");
-
 });

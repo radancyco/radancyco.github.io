@@ -11,9 +11,9 @@ In my experience, I have  found that there is generally a lot of confusion surro
 
 Outbound refers to any hyperlinks or form posts that leave the page.
 
-The following is a non-secure hyperlink to <code>http://www.tmp.com</code>. The secure environment that this link renders within (the page you are now reading - look in the address bar) has no bearing on it. Outbound links will work as they always have. There is no need to alter them programatically. In fact, the web is built on hyperlinks, so it would be silly to even suggest to our clients that they set up a secure environment to link to or only allow them to link to other secure pages.
+The following is a non-secure hyperlink to <code>http://archive.tmp.com</code>. The secure environment that this link renders within (the page you are now reading - look in the address bar) has no bearing on it. Outbound links will work as they always have. There is no need to alter them programatically. In fact, the web is built on hyperlinks, so it would be silly to even suggest to our clients that they set up a secure environment to link to or only allow them to link to other secure pages.
 
-<a href="http://www.tmp.com">http://www.tmp.com</a>
+<a href="http://archive.tmp.com">http://archive.tmp.com</a>
 
 ## &#10003; Solution
 
@@ -27,9 +27,9 @@ Inbound refers to any asset that is pulled into and contributes to the rendering
 
 ### Images
 
-The following image (that is one crazy looking contraption) is loaded in from a non-secure environment (<code>http://www.tmp.com/images/content-our-work-overview.jpg</code>)
+The following image (that is one crazy looking contraption) is loaded in from a non-secure environment (<code>http://archive.tmp.com/images/content-our-work-overview.jpg</code>)
 
-<img src="http://www.tmp.com/images/content-our-work-overview.jpg" alt=""/>
+<img src="http://archive.tmp.com/images/content-our-work-overview.jpg" alt=""/>
 
 It will likely load for you (this is considered <a href="https://developer.mozilla.org/en-US/docs/Security/MixedContent#Mixed_passive.2Fdisplay_content">passive mixed content</a>), however, all browsers will complain about it in some form or another (some more obnoxiously than others, I might add) and user can still block this if they wish. Examples:
 
@@ -39,7 +39,7 @@ It will likely load for you (this is considered <a href="https://developer.mozil
 
 In console, you will also see the following warning:
 
-The page at "https://dl.dropboxusercontent.com/u/58819/ui-tmp-com/web/articles/ssl-101.html" was loaded over HTTPS, but displayed insecure content from "http://www.tmp.com/images/content-our-work-overview.jpg": this content should also be loaded over HTTPS.
+The page at "https://dl.dropboxusercontent.com/u/58819/ui-tmp-com/web/articles/ssl-101.html" was loaded over HTTPS, but displayed insecure content from "http://archive.tmp.com/images/content-our-work-overview.jpg": this content should also be loaded over HTTPS.
 
 ### Internet Explorer (Older)
 

@@ -27,7 +27,7 @@ As front-end developers at TMP Worldwide, we embrace web standards and keep up-t
 ### 1.1 Accessibility
 
 > All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet [WCAG 2.0 Level A guidelines](https://www.tmp.com/web-standards/docs/wcag-2-level-a-overview.pdf).
-> <cite>&mdash; [TMP Web Standards](http://www.tmp.com/support/)</cite>
+> <cite>&mdash; [TMP Web Standards](https://www.tmp.com/support/)</cite>
 
 * [WCAG 2.0 Documentation](http://www.w3.org/TR/WCAG20/)
 * [How to Meet WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/)
@@ -404,6 +404,14 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 </ul>
 {% endhighlight %}
 </p>
+
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+
+#### 4.1.6 CSS & Accessibility
+
+##### 4.1.6.1 Outlines
+
+The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If default outlines are not desirable, a new global default can be created. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way they do when they visit other websites. So, changing outlines could have a negative impact on the user experience. 
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>video {display: block; max-width: 100%;}</style>
+    <title>Performance: Chrome Downloads 2 Poster Images When Crossorigin Attribute (Anonymous) Present on Video - TMP Worldwide Development Blog</title>
+</head>
+
+<body>
+
+    <a href="/"><img class="logo" src="/assets/img/hdr-logo-wide.png" alt="TMP Worldwide, LLC"></a>
+
+    <h1>Performance: Chrome Downloads 2 Poster Images When Crossorigin Attribute (Anonymous) Present on Video</h1>
+
+    <p>Posted on <time datetime="2016-09-26 19:30">Monday, September 26, 2016 19:30:00 PM</time> <abbr title="Eastern Standard Time">EST</abbr> by <a href="https://github.com/michaelspellacy">Michael "Spell" Spellacy</a></p>
+
+    <p>
+        <b>Browser:</b> Chrome 53.0.2785.116 (64-bit)<br/>
+        <b>Operating System:</b> OS X 10.11.5
+    </p>
+
+    <p>This issue also present on most stable release of Chrome for Windows.</p>
+
+    <h2>Issue:</h2>
+
+    <video preload="none" poster="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.jpg" controls>
+
+        <source src="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.mp4" type="video/mp4">
+        <track label="English" kind="subtitles" srclang="en" src="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.en.vtt"/>
+
+    </video>
+
+    <br/>
+
+    <p>The poster image on a <code>video</code> element appears to be downloaded <strong>twice</strong> when a <code>crossorgin</code> attribute with a value of "anonymous" also exists on same element.</p>
+
+    <p>This attribute and value are required to get our video captioning to render.</p>
+
+    <h2>Code</h2>
+
+<code><pre>
+
+&lt;video <b>crossorigin="anonymous"</b> preload="none" <b>poster="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.jpg"</b> controls&gt;
+
+        &lt;source src="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.mp4" type="video/mp4"&gt;
+        &lt;track label="English" kind="subtitles" srclang="en" src="https://tbcdn.talentbrew.com/company/3401/v1_0/media/case-study-microsoft.en.vtt"&gt;
+
+&lt;/video&gt;</pre></code>
+
+    <h2>Attribute: Present</h2>
+
+    <p><a href="https://screencast.com/t/95Kwa5fd8IGq" target="_blank">https://screencast.com/t/95Kwa5fd8IGq</a></p>
+
+    <h2>Attribute: Not Present</h2>
+
+    <p><a href="https://screencast.com/t/IAei3CZDJ" target="_blank">https://screencast.com/t/IAei3CZDJ</a></p>
+
+    <hr/>
+
+    <br/>
+
+    <img src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e?s=200" alt="Michael Spellacy" style="width: 100px; height: 100px; border-radius: 50%;">
+
+    <p>I am Michael "Spell" Spellacy, Director of User Interface Design and Development at <a href="http://www.tmp.com/">TMP Worldwide</a>. If you have any questions, feel free to contact me on <a href="https://github.com/michaelspellacy">Github</a> or follow me on <a href="https://twitter.com/spellacy">Twitter</a>.</p>
+
+    <script src="/js/ga.js"></script>
+
+</body>
+</html>

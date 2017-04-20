@@ -5,7 +5,7 @@ title: "How To Host An Infographic"
 
 # {{ page.title }}
 
-[![](/assets/news/2016/infographic-hosting-101.jpg)](/assets/news/2016/infographic-hosting-101.jpg)
+[![How To Host An Infographic (Text Version)](/assets/news/2016/infographic-hosting-101.jpg)](/assets/news/2016/infographic-hosting-101.jpg)
 
 **[Text Version](how-to-host-an-infographic-text-only.html)**
 

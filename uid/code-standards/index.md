@@ -565,4 +565,3 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [A List Apart](http://alistapart.com/)
 * [Sitepoint](http://sitepoint.com)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }

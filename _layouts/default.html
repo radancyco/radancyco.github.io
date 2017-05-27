@@ -1,51 +1,86 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://services.tmpwebeng.com/tmp-styleguide/theme/waves/css/global.css"/>{% if page.localcss %}
+	<link rel="stylesheet" href="{{ page.localcss }}"/>{% endif %}
+	<link rel="shortcut icon" href="https://styleguide.tmp.com/favicon.ico" type="image/x-icon">
+	<script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
+	<title>{{ page.title }} - TMP Worldwide</title>
+</head>
 
-	<main class="page" role="main" >
+<body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}">
 
-		<a href="/"><img class="logo" src="/assets/img/hdr-logo-wide.png" alt="TMP Worldwide, LLC"/></a>
+	<div class="page">
 
-		<article>
+		<header id="top" class="banner">
 
-			{{ content }}
+			<h1><a href="https://www.tmp.com/"><img src="https://services.tmpwebeng.com/tmp-styleguide/theme/waves/img/hdr-logo.svg" alt="TMP Worldwide, LLC"></a></h1>
 
-			<hr/>
+		</header>
 
-			<h3 id="contributors">Contributors</h3>
+		<main>
 
-			<ul>
-				<li><a href="https://github.com/tmpworldwide/tmpworldwide.github.io/graphs/contributors">The TMP Worldwide UID Team</a></li>
-			</ul>
+			<article>
 
-			<h3 id="moderators">Moderators</h3>
+				{{ content }}
 
-			<ul>
-				<li><a href="https://github.com/michaelspellacy">Michael "Spell" Spellacy</a></li>
-				<li><a href="https://github.com/Brockenstein">Brock Barnett</a></li>
-			</ul>
+				<section id="feedback">
 
-			<h3 id="how-to-contribute">How to Contribute</h3>
+					<h3 id="moderators">Moderators</h3>
 
-			<ul>
-				<li>Suggest a change or offer your opinion by <a href="https://guides.github.com/features/issues/">opening or commenting on an issue</a>.</li>
-				<li><a href="https://guides.github.com/activities/forking/">Fork</a> the <i>tmpworldwide.github.io</i> project, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</li>
-				<li>New to GitHub? <a href="https://guides.github.com/activities/hello-world/">Learn the basics with the guide</a>, and <a href="https://guides.github.com/introduction/flow/">learn the GitHub flow</a>.</li>
-			</ul>
+					<ul>
+						<li><a href="https://github.com/michaelspellacy">Michael "Spell" Spellacy</a></li>
+						<li><a href="https://github.com/Brockenstein">Brock Barnett</a></li>
+					</ul>
 
-			<h3 id="frozen-in-carbonite">Frozen in Carbonite</h3>
+					<h3 id="contributors">Contributors</h3>
 
-			<ul>
-				<li><a href="https://github.com/s-plum">Stephanie "Plum" Plumeri</a></li>
-				<li><a href="https://github.com/mhartz">Max Hartz</a></li>
-				<li><a href="https://github.com/sethlopezme">Seth "Slopez" Lopez</a></li>
-				<li><a href="https://github.com/sethtompkins">Seth "Stompkins" Tompkins</a></li>
-			</ul>
+					<ul>
+						<li><a href="https://github.com/tmpworldwide/tmpworldwide.github.io/graphs/contributors">The TMP Worldwide UID Team</a></li>
+					</ul>
 
-		</article>
+					<p>If you wish to contribute, <a href="https://guides.github.com/activities/forking/">fork</a> the <a href="https://github.com/tmpworldwide/tmp-pattern-library">project</a>, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</p>
 
-		<p class="copyright">&copy; {{ "now" | date: "%Y" }} tmp.worldwide</p>
+					<p>New to GitHub? <a href="https://guides.github.com/activities/hello-world/">Learn the basics with the guide</a> and <a href="https://guides.github.com/introduction/flow/">learn the GitHub flow</a>.</p>
 
-		<p class="fork-github"><a href="https://github.com/tmpworldwide/tmpworldwide.github.io">Fork me on Github</a></p>
+					<h3 id="qa-a11y">Quality Assurance and Accessibility</h3>
 
-	</main>
+        			<p>All patterns, functionality and layouts are tested against our <a href="https://www.tmp.com/support/">supported browsers</a>. We also look for accessibility issues via an automated scan and with other assistive technology tools and methods. TMP is committed to the accessibility of it's websites and products and seeks to meet as much of WCAG 2.0 Level A and AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}issues">open up an issue</a> and let us know about it or contact <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a>.</p>
 
-{% include footer.html %}
+				</section>
+
+			</article>
+
+		</main>
+
+  		<p class="back-to-top"><a href="#top">Return to top</a></p>
+
+	</div><!--/.page-->
+
+	<footer class="contentinfo">
+
+	  <h2>Additional Links</h2>
+
+	  <p>We're in advertising &mdash; of course we're an equal opportunity employer.</p>
+
+	  <ul class="link-list">
+	      <li><a href="https://www.tmp.com/connect/">Contact Us</a></li>
+	      <li><a href="https://www.tmp.com/privacy/">Privacy</a></li>
+	      <li><a href="https://www.tmp.com/accessibility/">Accessibility</a></li>
+	      <li><a href="https://www.tmp.com/support/">Support</a></li>
+	  </ul>
+
+	  <p>&copy; {{ "now" | date: "%Y" }} tmp.worldwide</p>
+
+	</footer>
+
+	<script src="/js/ga.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://services.tmpwebeng.com/tmp-styleguide/theme/waves/js/global.js"></script>{% if page.globaljs %}
+	<script src="{{ page.globaljs }}"></script>{% endif %}{% if page.localjs %}
+	<script src="{{ page.localjs }}"></script>{% endif %}
+
+</body>
+</html>

@@ -160,8 +160,6 @@ As we all know, art directors and developers do not always think alike. Whereas 
 
 There is certainly no one right way to organize PSD files, so these are suggestions. The art directors may want to reach out to the developers, or the developers may reach out to the art directors.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
-
 ## 8.0 Checklist
 
 * Company’s branding specs

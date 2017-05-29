@@ -92,12 +92,10 @@ We'll also write a simple selector that will change the color of the text below 
 
 <p>Use <a href="http://www.paulirish.com/2010/the-protocol-relative-url/">protocol-relative URLs</a> or <code>https</code> as a default in these cases.</p>
 
+<p><strong>Update!</strong> Paul no longer recommends this method. If you know that the server you are pointing to has SSL, then always point to https.</p>
+
 <p><b>Note:</b> Pages that you would like to pull into an <code>iframe</code> could very well have extra measures applied to them by their server administrators. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options">X-Frame-Options</a> response header for more information. The same goes for other cross-site server requests. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">HTTP Access Control (CORS)</a>.</p>
 
 <p>So, there you go! It's not that hard to wrap your head around it when you come at it like that! Hope this helps! &#9786;</p>
 
-<hr/>
-
-<img src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e?s=200" alt="Michael Spellacy" style="width: 100px; height: 100px; border-radius: 50%;">
-
-<p>I am Michael "Spell" Spellacy, Director of User Interface Design and Development at <a href="http://www.tmp.com/">TMP Worldwide</a>. If you have any questions, feel free to contact me on <a href="https://github.com/michaelspellacy">Github</a> or follow me on <a href="https://twitter.com/spellacy">Twitter</a>.</p>
+{% include bio-spell.html %} 

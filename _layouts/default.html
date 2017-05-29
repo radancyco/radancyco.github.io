@@ -10,7 +10,7 @@
 	<title>{{ page.title }} - TMP Worldwide</title>
 </head>
 
-<body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}">
+<body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
 
 	<div class="page">
 

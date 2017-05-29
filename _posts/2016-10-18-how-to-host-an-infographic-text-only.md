@@ -7,9 +7,7 @@ title: "How To Host An Infographic (Text Only)"
 
 ## Infographic Hosting 101
 
-An infographic on how to host infographics.
-
-By Michael "Spell" Spellacy
+An inforgraphic on how to host an infographics.
 
 ### One Image
 
@@ -35,8 +33,4 @@ Source: [http://bit.ly/2eDwel8](http://bit.ly/2eDwel8)
 
 **[Infographic](how-to-host-an-infographic.html)**
 
-<hr/>
-
-<img src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e?s=200" alt="Michael Spellacy" style="width: 100px; height: 100px; border-radius: 50%;">
-
-<p>I am Michael "Spell" Spellacy, Director of User Interface Design and Development at <a href="http://www.tmp.com/">TMP Worldwide</a>. If you have any questions, feel free to contact me on <a href="https://github.com/michaelspellacy">Github</a> or follow me on <a href="https://twitter.com/spellacy">Twitter</a>.</p>
+{% include bio-spell.html %} 

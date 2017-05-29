@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Page Content Grabber"
+---
+
+<h1>{{page.title}}</h1>
+
+<p>A little utility to grab needed content from a page via ajax calls. Handy and better than having to go to the SA tool to grab what you need.</p>
+
+<ul class="link-list">
+	<li><a href="https://www.tmp.com/if-this-desk-could-talk">https://www.tmp.com/if-this-desk-could-talk</a></li>
+	<li><a href="https://www.tmp.com/debunking-social-media-recruiting-myths">https://www.tmp.com/debunking-social-media-recruiting-myths</a></li>
+	<li><a href="https://www.tmp.com/emoji-job-description">https://www.tmp.com/emoji-job-description</a></li>
+</ul>
+
+<button id="btn-html">Render HTML</button>
+
+<button id="btn-clear">Clear Code</button>
+
+<pre><code></code></pre>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+
+$(".link-list a").on( "click", function() {
+
+	var Path = $(this).attr("href");
+
+	$("<div>").load($(this).attr("href") + " .story-content >", function() {
+
+      $("code").append("<p><strong>Page: " + Path + "</strong><p>");
+
+      if($("button").hasClass("html-render")) {
+
+      	$("code").append($(this).html($(this).html()));
+
+      } else {
+
+      	$("code").append($(this).html($(this).html().replace(new RegExp("<", "g"), '&lt;').replace(new RegExp(">", "g"), '&gt;').replace(/\n/g, "<br>")));
+
+      }
+
+	});
+
+	return false;
+
+});
+
+$("#btn-html").on( "click", function() {
+
+	$(this).toggleClass("html-render");
+
+});
+
+$("#btn-clear").on( "click", function() {
+
+	$("code").empty();
+
+});
+
+</script>
+
+{% include bio-spell.html %} 

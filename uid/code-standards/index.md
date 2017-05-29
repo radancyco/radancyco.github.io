@@ -4,9 +4,9 @@ title: Front-end Standards and Guidelines
 
 ---
 
-# Front-end Standards and Guidelines
+<h1>Front-end Standards and Guidelines</h1>
 
-## Abstract
+<h2>Abstract</h2>
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide developers. This document seeks to foster a standard approach to front-end development and should be shared with any developers who produce front-end code within our company as well as with vendors who produce code for TMP Worldwide.
 
@@ -14,6 +14,11 @@ This document defines best practices for HTML, CSS, and JavaScript development, 
 * [Contributions are encouraged!](#how-to-contribute)
 
 <section id="our-standards" markdown="block">
+
+<h3>Table of Contents</h3>
+
+* TOC
+{:toc}
 
 ## 1. General Concepts
 

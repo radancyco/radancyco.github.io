@@ -3,7 +3,7 @@
 @import "compass/support";
 @import "breakpoint";
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 
 @function pem($pixels) {
 	@return #{$pixels/16.0}em

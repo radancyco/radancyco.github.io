@@ -28,14 +28,6 @@ We like to teach at TMP. Here are but a few topics we have covered for our colle
 	<li><a href="/uid/respond">Respond: Responsive Design 101 By Stephanie Plumeri</a></li>
 </ul>
 
-<ul>
-{% for post in site.posts %}
-    
-	<li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a></li>
-
-{% endfor %}
-</ul>
-
 ## Reported Browser Issues
 
 Responsible web citizens report bugs to browser vendors. Here are a couple that we have dropped.

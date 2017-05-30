@@ -30,7 +30,7 @@ We like to teach at TMP. Here are but a few topics we have covered for our colle
 
 ## Reported Browser Issues
 
-Responsible web citizens report bugs to browser vendors. Here are a couple that we have dropped.
+Responsible netizens report bugs to browser vendors. Here are a couple that we have dropped.
 
 <ul>
 	<li><a href="/bugs/ios-tappy-bug.html">YouTube embed not working in iOS 8 Safari and Chrome - April 30, 2015</a></li>

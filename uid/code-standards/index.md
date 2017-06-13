@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Front-end Standards and Guidelines
-
 ---
 
 <h1>Front-end Standards and Guidelines</h1>
@@ -10,8 +9,9 @@ title: Front-end Standards and Guidelines
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide developers. This document seeks to foster a standard approach to front-end development and should be shared with any developers who produce front-end code within our company as well as with vendors who produce code for TMP Worldwide.
 
-* This is a living document that changes often. [Bookmark it](/uid/code-standards) and check back on regular basis.
-* [Contributions are encouraged!](#contributors)
+Please note that this is a living document that changes frequently. You may bookmark it and check back on regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository. 
+
+Help us make this document even better! [Contributions are encouraged!](#contributors)
 
 <section id="our-standards" markdown="block">
 
@@ -22,62 +22,35 @@ This document defines best practices for HTML, CSS, and JavaScript development, 
 
 ## 1. General Concepts
 
-As front-end developers at TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to the core principles of [Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement). In this endeavor, we use the following front-end languages in the majority of our work:
+As front-end developers at TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [Resilient Design](https://resilientwebdesign.com/). In this endeavor, we use the following front-end languages in the majority of our work:
 
 * HTML5
 * CSS3
-* ECMAScript 5.1 (JavaScript)
-* jQuery
+* JavaScript (ES6)
+* jQuery (Latest)
 
 ### 1.1 Accessibility
 
-> All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet WCAG 2.0 Level AA guidelines.
-> <cite>&mdash; [TMP Web Standards](https://www.tmp.com/support/)</cite>
+All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings attempt to meet WCAG 2.0 Level AA guidelines at all times.
 
-* [WCAG 2.0 Documentation](http://www.w3.org/TR/WCAG20/)
-* [How to Meet WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/)
-* [Understanding WCAG 2.0](http://www.w3.org/TR/UNDERSTANDING-WCAG20/)
-* [Techniques for WCAG 2.0](http://www.w3.org/TR/WCAG20-TECHS/)
+* [WCAG 2.0 Documentation](https://www.w3.org/TR/WCAG20/)
+* [How to Meet WCAG 2.0](https://www.w3.org/WAI/WCAG20/quickref/)
+* [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/)
+* [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/)
 
 ### 1.2 Operating System Support
 
 TMP supports applications on the following operating systems:
 
-See [TMP Support](https://www.tmp.com/support/) for more details. 
+See [TMP Support](https://www.tmp.com/support/#operating-systems) for more details. 
 
 ### 1.3 Browser Support
 
 TMP supports the *current* and *prior* major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
-See [TMP Support](https://www.tmp.com/support/) for more details. 
+See [TMP Support](https://www.tmp.com/support/#browser) for more details. 
 
-### 1.4 HTTP Protocols
-
-HTTP protocols should be omitted unless absolutely necessary.
-
-<p markdown="block">
-{% highlight html %}
-<!-- Not recommended -->
-<script src="http://seostatic.tmp.com/script.js"></script>
-
-<!-- Recommended -->
-<script src="//seostatic.tmp.com/script.js"></script>
-{% endhighlight %}
-
-{% highlight css %}
-/* Not recommended */
-.example {
-  background: url('http://seostatic.tmp.com/styles.css');
-}
-
-/* Recommended */
-.example {
-  background: url('//seostatic.tmp.com/styles.css');
-}
-{% endhighlight %}
-</p>
-
-### 1.5 File Naming Conventions
+### 1.4 File Naming Conventions
 
 * Only use lowercase alphanumeric characters and hyphens.
   * Non-indexable files (such as SASS) may also contain underscores.
@@ -105,11 +78,19 @@ coffee-shop.jpg
 
 Code validation is an easy way to spot small issues that you might have missed without having to examine every element. Things like accessibility issues can easily be identified and fixed without much time wasted. 
 
-Check each completed project using the [W3C Markup Validation Service](http://validator.w3.org/) to scan for issues.
+Check each completed project using the [W3C Markup Validation Service](https://validator.w3.org/) to scan for issues.
+
+<div id="axe-core" class="callout accessibility" markdown="1">
+
+<h2>Accessibility Testing</h2>
+
+A really great tool to have at your disposal is Deque System's [aXe extension](https://www.deque.com/products/axe/). If you are interested in including aXe testing within your local development or build process, please see [Accessibility Testing with aXe-core](https://www.deque.com/products/axe-core).
+
+</div>
 
 ### 2.2 Page Load Speed
 
-Loading time is a major contributing factor to page abandonment. So after completion of a site, each front-end developer should test their site using the [Google Developers PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or [Pingdom](http://tools.pingdom.com/fpt/) for more detailed results. It is as easy as copying and pasting the URL into the text field.
+Loading time is a major contributing factor to page abandonment. After completion of a site, each front-end developer should test their site using the [Google Developers PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or [Pingdom](https://tools.pingdom.com/fpt/) for more detailed results. It is as easy as copying and pasting the URL into the text field.
 
 Our desired score should be anything above 70/100, however our absolute lowest score should not fall below 60/100 on both mobile and desktop tests.
 
@@ -121,8 +102,8 @@ As part of our commitment to provide users with the best experience possible, we
 
 Our performance budget is:
 
-* **HTTP Requests:** ~60-70
-* **Cumulative Page Weight:** ~750-950 KB
+* **HTTP Requests:** ~70-80
+* **Cumulative Page Weight:** ~1 and 1.2 MB
 
 ### 2.4 Image Compression
 
@@ -130,7 +111,7 @@ Our performance budget is:
 
 * [Tiny PNG](https://tinypng.com/) (Online Tool, not only png)
 * [Compressor.io](https://compressor.io/) (Online Tool)
-* [JPEGmini](http://www.jpegmini.com/) (Online Tool, jpg only)
+* [JPEGmini](https://www.jpegmini.com/) (Online Tool, jpg only)
 * [RIOT](http://luci.criosweb.ro/riot/) (Standalone Application)
 
 ### 2.5 Minify
@@ -194,7 +175,7 @@ All third-party libraries should be minified unless some sort of customization h
   padding: .5em;
 
   span {
-    background: url('//fake.path/images/nav-item.png') no-repeat center;
+    background: url('https://fake.path/img/nav-item.png') no-repeat center;
     content: '';
     display: block;
     height: 20px;
@@ -207,49 +188,13 @@ All third-party libraries should be minified unless some sort of customization h
   padding: .5em;
 
   &:after {
-    background: url('//fake.path/images/nav-item.png') no-repeat center;
+    background: url('https://fake.path/img/nav-item.png') no-repeat center;
     content: '';
     display: block;
     height: 20px;
     width: 20px;
   }
 }
-{% endhighlight %}
-
-### 3.2 New Window Links
-
-Inappropriate use of spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. Some mobile devices even cap out the amount of windows one can have open. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should be left up to the end user to decide.
-
-#### 3.2.1 Accessibility & New Windows
-
-When a developer is required to spawn a new window, it is considered very good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader.
- 
-<p markdown="block">
-{% highlight html %}
-<a href="link.com" target="_blank" alt="">Web Accessibility in Mind <span class="wai">(link opens in new window)</span></a>
-{% endhighlight %}
-
-{% highlight scss %}
-.wai {
-    position: absolute;
-    display: block;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-}
-{% endhighlight %}
-</p>
-
-#### 3.2.2 Media
-
-User initiated media is another example:
-
-<p markdown="block">
-{% highlight html %}
-<a href="https://www.youtube.com/watch?v=4wGR4-SeuJ0" target="_blank">
-  <span class="wai">Video opens in new window</span>
-  <img src="img-path.jpg" alt="">
-</a>
 {% endhighlight %}
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
@@ -412,14 +357,6 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-#### 4.1.6 CSS & Accessibility
-
-##### 4.1.6.1 Outlines
-
-The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If default outlines are not desirable, a new global default can be created. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way they do when they visit other websites. So, changing outlines could have a negative impact on the user experience. 
-
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
-
 ## 5. SASS
 
 SASS is the preprocessor of choice for TMP front-end developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
@@ -501,11 +438,19 @@ While extracting images from a creative design, it's important to consider which
 * **.png** &mdash; PNG is a lossless format (larger file size) and is recommended in situations where the quality of the image is important, or where transparency is required. A possible use-case for a PNG image is a clients' logo, where the quality of the logo is important and may contain transparent sections around it.
 * **.svg** &mdash; SVG is an older vector image format that has recently become a more viable option for the web. SVG is recommended for more simple images that need to scale or retain sharpness on a number of different screen densities. SVG also supports transparency. A great use-case for the SVG format would be, again, a logo or icons.
 
+<div id="alternative-text" class="callout accessibility" markdown="1">
+
+<h2>Alternative Text</h2>
+
+Alternative text is very important to assistive technology users. If an image has text in it or is relevent to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
+
+</div>
+
 ### 7.2 Image Sprites
 
 To aid in adhering to our [Performance Budget](#performance-budget), it's recommended that logos, icons, and other small images be combined into a sprite. This results in a reduction in page requests, as well as a small reduction in file size.
 
-If you're not using a build tool, such as [Grunt](http://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
+If you're not using a build tool, such as [Grunt](https://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
@@ -524,17 +469,55 @@ When you make a new commit, do not use the `-m` option. Instead just use `git co
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 9. Recommended Tools
+## 9. Patterns & Anti-patterns
 
-### 9.1 Editors
+Through the trial and errors of others or just plain common sense, we have come to know what works on the web and what does not. This section will be dedicated to sharing some of this conventional wisdom.
 
-* [Sublime Text 2/3](http://www.sublimetext.com/)
+### 9.1 New Window Links
 
-#### 9.1.1 Editor Plugins
+Inappropriate use of spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. Some mobile devices even cap out the amount of windows one can have open. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should always be left up to the end user to decide.
+
+<div id="a11y-new-window" class="callout accessibility" markdown="1">
+
+<h2>Accessibility & New Windows</h2>
+
+When a developer is required to open a new window, it is considered good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader. There are a few ways to do this. Here is one example: 
+ 
+</div>
+
+<p markdown="block">
+
+{% highlight html %}
+
+<a href="https://www.tmp.com/" target="_blank" aria-describedby="new-window">TMP Worldwide</a>
+
+...
+
+<div hidden id="new-window">Opens New Window</div>
+
+{% endhighlight %}
+
+</p>
+
+The `aria-describedby` attribute on the hyperlink can then be used as a styling hook for a visual enhancment, such as an icon, that indicates that the link opens up a new window.
+
+### 9.2 Focus Outlines
+
+The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interactd with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
+
+[Return to Table of Contents](#table-of-contents){: .back-to-toc } 
+
+## 10. Recommended Tools
+
+### 10.1 Editors
+
+* [Sublime Text 2/3](https://www.sublimetext.com/)
+
+#### 10.1.1 Editor Plugins
 
 Below are recommended plugins listed for each recommended editor (if they support plugins).
 
-##### 9.1.1.1 Sublime Text
+##### 10.1.1.1 Sublime Text
 
 * [Package Control](https://sublime.wbond.net/)
 * [EditorConfig](https://sublime.wbond.net/packages/EditorConfig)
@@ -549,24 +532,26 @@ Below are recommended plugins listed for each recommended editor (if they suppor
     * [SublimeLinter-html-tidy](https://sublime.wbond.net/packages/SublimeLinter-html-tidy)
     * [SublimeLinter-jshint](https://sublime.wbond.net/packages/SublimeLinter-jshint)
 
-## 10. Required Reading
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-* [A Dao of Web Design by John Allsopp](http://alistapart.com/article/dao)
+## 11. Publications
 
-## 11. (Highly) Recommended Reading
+### 11.1 Required Reading
 
-* [Designing with Web Standards (3rd Edition) by Jeffery Zeldman](http://www.amazon.com/Designing-Web-Standards-3rd-Edition/dp/0321616952)
-* [Developing with Web Standards by John Allsopp](http://www.amazon.com/Developing-Web-Standards-John-Allsopp/dp/0321646924)
-* [Don't Make Me Think: A Common Sense Approach to Web Usability (3rd Edition) by Steve Krug](http://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=dp_ob_title_bk)
-* [JavaScript: The Good Parts by Douglas Crockford](http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
-* [DOM Scripting: Web Design with JavaScript and the Document Object Model by Jeremy Keith and Jeffery Sambells](http://www.amazon.com/DOM-Scripting-Design-JavaScript-Document/dp/1430233893)
-* [Designing with Progressive Enhancement: Building the Web that Works for Everyone by by Todd Parker, Scott Jehl, Maggie Costello Wachs, Patty Toland](http://www.amazon.com/Designing-Progressive-Enhancement-Building-Everyone/dp/0321658884/ref=sr_1_1?s=books&ie=UTF8&qid=1422386916&sr=1-1&keywords=progressive+enhancement)
-* [Mobile First by Luke Wroblewski](http://www.abookapart.com/products/mobile-first)
-* [Responsive Web Design (2nd Edition) by Ethan Marcotte](http://www.abookapart.com/products/responsive-web-design)
-* [Adaptive Web Design (First Edition) by Aaron Gustafson](http://adaptivewebdesign.info/1st-edition/)
+* [A Dao of Web Design by John Allsopp](https://alistapart.com/article/dao)
+* [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
 
-## 12. Daily Reading
+### 11.2. (Highly) Recommended Reading
 
-* [A List Apart](http://alistapart.com/)
-* [Sitepoint](http://sitepoint.com)
+* [Adaptive Web Design (First Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)
+* [DOM Scripting: Web Design with JavaScript and the Document Object Model by Jeremy Keith and Jeffery Sambells](https://www.amazon.com/DOM-Scripting-Design-JavaScript-Document/dp/1430233893)
+* [Designing with Progressive Enhancement: Building the Web that Works for Everyone by Todd Parker, Scott Jehl, Maggie Costello Wachs, Patty Toland](https://www.amazon.com/Designing-Progressive-Enhancement-Building-Everyone/dp/0321658884/ref=sr_1_1?s=books&ie=UTF8&qid=1422386916&sr=1-1&keywords=progressive+enhancement)
+* [Designing with Web Standards (3rd Edition) by Jeffery Zeldman](https://www.amazon.com/Designing-Web-Standards-3rd-Edition/dp/0321616952)
+* [Developing with Web Standards by John Allsopp](https://www.amazon.com/Developing-Web-Standards-John-Allsopp/dp/0321646924)
+* [Don't Make Me Think: A Common Sense Approach to Web Usability (3rd Edition) by Steve Krug](https://www.amazon.com/Dont-Make-Think-Revisited-Usability/dp/0321965515/ref=dp_ob_title_bk)
+* [Inclusive Design Patterns by Heydon Pickering](https://shop.smashingmagazine.com/products/inclusive-design-patterns)
+* [JavaScript: The Good Parts by Douglas Crockford](https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742)
+* [Mobile First by Luke Wroblewski](https://www.abookapart.com/products/mobile-first)
+* [Responsive Web Design (2nd Edition) by Ethan Marcotte](https://www.abookapart.com/products/responsive-web-design)
 
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }

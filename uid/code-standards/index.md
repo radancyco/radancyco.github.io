@@ -15,7 +15,7 @@ Help us make this document even better! [Contributions are encouraged!](#contrib
 
 <section id="our-standards" markdown="block">
 
-<h3>Table of Contents</h3>
+<h3 id="table-of-contents">Table of Contents</h3>
 
 * TOC
 {:toc}

@@ -475,13 +475,13 @@ Through the trial and errors of others or just plain common sense, we have come 
 
 ### 9.1 New Window Links
 
-Inappropriate use of spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. Some mobile devices even cap out the amount of windows one can have open. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should always be left up to the end user to decide.
+Inappropriate use of spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. Some mobile devices even cap out the amount of windows one can have open. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should almost always be left up to the end user to decide.
 
 <div id="a11y-new-window" class="callout accessibility" markdown="1">
 
 <h2>Accessibility & New Windows</h2>
 
-When a developer is required to open a new window, it is considered good form to pepper in some additional helper text for the benefit of those who may be using assistive technology, such as a screen reader. There are a few ways to do this. Here is one example: 
+Inndicating that a new window can be opened, can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example: 
  
 </div>
 

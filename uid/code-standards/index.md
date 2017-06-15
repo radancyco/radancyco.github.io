@@ -26,7 +26,7 @@ As front-end developers at TMP Worldwide, we embrace web standards and keep up-t
 
 * HTML5
 * CSS3
-* JavaScript (ES6)
+* JavaScript (ES5/ES6)
 * jQuery (Latest)
 
 ### 1.1 Accessibility

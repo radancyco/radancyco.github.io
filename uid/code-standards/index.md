@@ -442,7 +442,7 @@ While extracting images from a creative design, it's important to consider which
 
 <h2>Alternative Text</h2>
 
-Alternative text is very important to assistive technology users. If an image has text in it or is relevent to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
+Alternative text is very important to assistive technology users. If an image has text in it or is relevent to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alternative Text Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
 </div>
 

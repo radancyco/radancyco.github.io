@@ -1,5 +1,5 @@
 
-## User Interface Developmemt
+## User Interface Development
 
 ### Front-end Standards and Guidelines
 
@@ -31,7 +31,7 @@ Enjoy some of our teams thoughts on various web topics.
 
 ## Tutorials
 
-We like to teach at TMP. Here are but a few topics we have covered for our collegues over the years.
+TMP's UI team is filled with teachers. Here are but a few topics we have shared with our colleagues over the years.
 
 <ul>
 	<li><a href="/uid/rwd-school-of-rock/">Responsive Web Design: School of Rock By Stephanie Plumeri & Michael Spellacy</a></li>

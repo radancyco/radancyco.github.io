@@ -124,13 +124,13 @@ Do not minify HTML.
 
 CSS should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large CSS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted.
 
-#### 2.5.3 SCSS
+#### 2.5.3 Sass (SCSS)
 
 SCSS should never be minified. If the server has the ability to tie in a CSS preprocessor, no CSS output file should exist. However, if server-side CSS preprocessing is not available, all compiled CSS should be minified.
 
-#### 2.5.4 Javascript
+#### 2.5.4 JavaScript
 
-Javascript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
+JavaScript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
 
 #### 2.5.5 Third-Party Libraries
 
@@ -166,7 +166,7 @@ All third-party libraries should be minified unless some sort of customization h
 * Take care not to unnecessarily nest elements.
 * Before you use an element purely for styling purposes, ask these questions:
     * Can the parent element or a parent sibling be styled, instead, to achieve the same effect?
-    * Can a psuedo-element be used in place of a span or div?
+    * Can a pseudo-element be used in place of a span or div?
     * Can the HTML be restructured to be just as semantic *and* easier to style?
 
 {%  highlight scss %}
@@ -313,7 +313,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
     * an elements' placement on the page, such as `.left` or `.top`.
 * Selectors should use hyphens to separate levels.
     * E.g. `.job-group-title`.
-* Selectors should not include underscores or any uncommon unicode characters.
+* Selectors should not include underscores or any uncommon Unicode characters.
 * Selectors should not use camelCase.
 
 <p markdown="block">
@@ -442,7 +442,7 @@ While extracting images from a creative design, it's important to consider which
 
 <h2>Alternative Text</h2>
 
-Alternative text is very important to assistive technology users. If an image has text in it or is relevent to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alternative Text Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
+Alternative text is very important to assistive technology users. If an image has text in it or is relevant to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alternative Text Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
 </div>
 
@@ -481,7 +481,7 @@ Inappropriate use of spawning new windows may actually *confuse users or make th
 
 <h2>Accessibility & New Windows</h2>
 
-Inndicating that a new window can be opened can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example: 
+Indicating that a new window can be opened can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example: 
  
 </div>
 
@@ -499,11 +499,11 @@ Inndicating that a new window can be opened can help avoid creating a confusing 
 
 </p>
 
-The `aria-describedby` attribute on the hyperlink can then be used as a styling hook for a visual enhancment, such as an icon, that indicates that the link opens up a new window.
+The `aria-describedby` attribute on the hyperlink can then be used as a styling hook for a visual enhancement, such as an icon, that indicates that the link opens up a new window.
 
 ### 9.2 Focus Outlines
 
-The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interactd with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
+The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interacted with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc } 
 

@@ -1,9 +1,9 @@
 
 ## User Interface Development
 
-### Front-end Standards and Guidelines
+### User Interface Standards and Guidelines
 
-[Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide developers.](/uid/code-standards/)
+[Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers.](/uid/code-standards/)
 
 ### Resource Library
 

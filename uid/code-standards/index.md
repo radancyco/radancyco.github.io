@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Front-end Standards and Guidelines
+title: User Interface Standards and Guidelines
 ---
 
-<h1>Front-end Standards and Guidelines</h1>
+<h1>User Interface Standards and Guidelines</h1>
 
 <h2>Abstract</h2>
 
-This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide developers. This document seeks to foster a standard approach to front-end development and should be shared with any developers who produce front-end code within our company as well as with vendors who produce code for TMP Worldwide.
+This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for TMP Worldwide.
 
 Please note that this is a living document that changes frequently. You may bookmark it and check back on regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository. 
 
@@ -22,7 +22,7 @@ Help us make this document even better! [Contributions are encouraged!](#contrib
 
 ## 1. General Concepts
 
-As front-end developers at TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [Resilient Design](https://resilientwebdesign.com/). In this endeavor, we use the following front-end languages in the majority of our work:
+At TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [Resilient Design](https://resilientwebdesign.com/). In this endeavor, we use the following front-end languages in the majority of our work:
 
 * HTML5
 * CSS3
@@ -90,15 +90,15 @@ A really great tool to have at your disposal is Deque System's [aXe extension](h
 
 ### 2.2 Page Load Speed
 
-Loading time is a major contributing factor to page abandonment. After completion of a site, each front-end developer should test their site using the [Google Developers PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or [Pingdom](https://tools.pingdom.com/fpt/) for more detailed results. It is as easy as copying and pasting the URL into the text field.
+Loading time is a major contributing factor to page abandonment. After completion of a site, each user interface developer should test their site using the [Google Developers PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) or [Pingdom](https://tools.pingdom.com/fpt/) for more detailed results. It is as easy as copying and pasting the URL into the text field.
 
 Our desired score should be anything above 70/100, however our absolute lowest score should not fall below 60/100 on both mobile and desktop tests.
 
-While it might not be possible to always achieve a perfect or near-perfect score, we should strive for a site that has the best possible score while maintaining the client requirements. Some issues might be out of our control as front-end developers, but we can take other precautions in order to develop the most efficient site possible.
+While it might not be possible to always achieve a perfect or near-perfect score, we should strive for a site that has the best possible score while maintaining the client requirements. Some issues might be out of our control as user interface developers, but we can take other precautions in order to develop the most efficient site possible.
 
 ### 2.3 Performance Budget
 
-As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each front-end developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
+As part of our commitment to provide users with the best experience possible, we adhere to a performance budget for sites that we develop. Each user interface developer should monitor site performance during development, and each site goes through a performance audit during the QA process.
 
 Our performance budget is:
 
@@ -359,7 +359,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 
 ## 5. SASS
 
-SASS is the preprocessor of choice for TMP front-end developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
+SASS is the preprocessor of choice for TMP developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
 
 ### 5.1 SASS Coding Style
 

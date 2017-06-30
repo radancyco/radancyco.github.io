@@ -1,4 +1,4 @@
-[![TMP Worldwide](http://tmpworldwide.github.io/assets/img/tmp-standards.png)](http://www.tmp.com/)
+[![TMP Worldwide](https://tmpworldwide.github.io/assets/img/tmp-standards.png)](http://www.tmp.com/)
 
 # Standards, Guidelines, Tools and Best Practices
 

@@ -102,8 +102,8 @@ As part of our commitment to provide users with the best experience possible, we
 
 Our performance budget is:
 
-* **HTTP Requests:** ~70-80
-* **Cumulative Page Weight:** ~1 and 1.2 MB
+* **HTTP Requests:** ~75-85
+* **Cumulative Page Weight:** ~1.5 and 2 MB
 
 ### 2.4 Image Compression
 

@@ -141,6 +141,8 @@ title: "AT&T Article Grabber"
 
 <button id="btn-clear">Clear Code</button>
 
+<button id="btn-reload">Reload</button>
+
 <pre><code></code></pre>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -182,6 +184,12 @@ $("#btn-html").on( "click", function() {
 $("#btn-clear").on( "click", function() {
 
 	$("code").empty();
+
+});
+
+$("#btn-reload").on( "click", function() {
+
+	location.reload();
 
 });
 

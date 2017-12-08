@@ -8,7 +8,7 @@ title: "Page Content Grabber"
 
 <p>A little utility to grab needed content from a page via ajax calls. Handy and better than having to go to the SA tool to grab what you need.</p>
 
-<ul class="link-list">
+<ol class="link-list">
 	<li><a href="https://att.runmytests.com/article-life-at-att-top-posts">https://att.runmytests.com/article-life-at-att-top-posts</a></li>
 	<li><a href="https://att.runmytests.com/call-center-office-competitions">https://att.runmytests.com/call-center-office-competitions</a></li>
 	<li><a href="https://att.runmytests.com/article-family-employment-legacy">https://att.runmytests.com/article-family-employment-legacy</a></li>
@@ -136,7 +136,7 @@ title: "Page Content Grabber"
 	<li><a href="https://att.runmytests.com/att-celebrates-hispanic-heritage-month">https://att.runmytests.com/att-celebrates-hispanic-heritage-month</a></li>
 	<li><a href="https://att.runmytests.com/article-launchability-autism-awareness-internship">https://att.runmytests.com/article-launchability-autism-awareness-internship</a></li>
 	<li><a href="https://att.runmytests.com/working-living-dallas-fortworth-att">https://att.runmytests.com/working-living-dallas-fortworth-att</a></li>
-</ul>
+</ol>
 
 <button id="btn-html">Render HTML</button>
 
@@ -150,7 +150,7 @@ title: "Page Content Grabber"
 
 $(".link-list a").on( "click", function() {
 
-	$(this).append(" - copied!");
+	$(this).append(" - <b>copied!</b>");
 
 	var Path = $(this).attr("href");
 

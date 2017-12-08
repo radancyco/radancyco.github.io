@@ -149,7 +149,7 @@ title: "AT&T Article Grabber"
 
 $(".link-list a").on( "click", function() {
 
-	$(this).attr("disabled", "disabled").append(" - <b>copied!</b>");
+	$(this).append(" - <b>copied!</b>").contents().unwrap();
 
 	var Path = $(this).attr("href");
 

@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "AT&T Article Grabber"
+title: "TalentBrew Article Scraper"
 ---
 
 <h1>{{page.title}}</h1>
-
 
 <p>A little utility to grab needed content from a page via ajax calls. Handy and better than having to go to the SA tool to grab what you need.</p>
 
@@ -178,6 +177,7 @@ $(".link-list a").on( "click", function() {
 $("#btn-html").on( "click", function() {
 
 	$(this).toggleClass("html-render");
+	$(this).text(text == "Render HTML" ? "Render Code" : "Render HTML");
 
 });
 

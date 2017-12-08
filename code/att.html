@@ -177,6 +177,8 @@ $(".link-list a").on( "click", function() {
 $("#btn-html").on( "click", function() {
 
 	$(this).toggleClass("html-render");
+	
+	var text = $(this).text();
 	$(this).text(text == "Render HTML" ? "Render Code" : "Render HTML");
 
 });

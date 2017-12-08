@@ -7,6 +7,10 @@ title: "TalentBrew Article Scraper"
 
 <p>A little utility to grab needed content from a page via ajax calls. Handy and better than having to go to the SA tool to grab what you need.</p>
 
+<p>Before you begin, do you want to render code or parsed HTML? The default output is code.</p>
+
+<button id="btn-html">Render HTML</button>
+
 <ol class="link-list">
 	<li><a href="https://att.runmytests.com/article-life-at-att-top-posts">https://att.runmytests.com/article-life-at-att-top-posts</a></li>
 	<li><a href="https://att.runmytests.com/call-center-office-competitions">https://att.runmytests.com/call-center-office-competitions</a></li>
@@ -136,8 +140,6 @@ title: "TalentBrew Article Scraper"
 	<li><a href="https://att.runmytests.com/working-living-dallas-fortworth-att">https://att.runmytests.com/working-living-dallas-fortworth-att</a></li>
 </ol>
 
-<button id="btn-html">Render HTML</button>
-
 <button id="btn-clear">Clear Code</button>
 
 <button id="btn-reload">Reload</button>
@@ -177,7 +179,7 @@ $(".link-list a").on( "click", function() {
 $("#btn-html").on( "click", function() {
 
 	$(this).toggleClass("html-render");
-	
+
 	var text = $(this).text();
 	$(this).text(text == "Render HTML" ? "Render Code" : "Render HTML");
 

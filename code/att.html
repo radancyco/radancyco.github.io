@@ -22,7 +22,6 @@ title: "Page Content Grabber"
 	<li><a href="https://att.runmytests.com/employee-takeover-madeline-littrell">https://att.runmytests.com/employee-takeover-madeline-littrell</a></li>
 	<li><a href="https://att.runmytests.com/article-employee-takeover-nova-kopp">https://att.runmytests.com/article-employee-takeover-nova-kopp</a></li>
 	<li><a href="https://att.runmytests.com/Centro-de-Servicio-al-Cliente-Toreo">https://att.runmytests.com/Centro-de-Servicio-al-Cliente-Toreo</a></li>
-	<li><a href="https://att.runmytests.com/Centro-de-Servicio-al-Cliente-Toreo">https://att.runmytests.com/Centro-de-Servicio-al-Cliente-Toreo</a></li>
 	<li><a href="https://att.runmytests.com/att-employee-provides-life-saving-resources-veterans">https://att.runmytests.com/att-employee-provides-life-saving-resources-veterans</a></li>
 	<li><a href="https://att.runmytests.com/article-2016-employee-resource-group-conference">https://att.runmytests.com/article-2016-employee-resource-group-conference</a></li>
 	<li><a href="https://att.runmytests.com/att-employee-resource-groups-connect-at-annual-conference">https://att.runmytests.com/att-employee-resource-groups-connect-at-annual-conference</a></li>
@@ -150,7 +149,7 @@ title: "Page Content Grabber"
 
 $(".link-list a").on( "click", function() {
 
-	$(this).append(" - <b>copied!</b>");
+	$(this).attr("disabled", "disabled").append(" - <b>copied!</b>");
 
 	var Path = $(this).attr("href");
 

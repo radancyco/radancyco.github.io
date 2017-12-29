@@ -3,12 +3,8 @@ layout: default
 title: Guidelines for Preparing Photoshop Files for Web Developers
 ---
 
-By [Deborah Foerst](https://github.com/dafoerst)
+Last Updated: **12/31/2017**
 
-Last Updated: **{{ "now" | date: "%A, %B %-d, %Y" }}**
-
-<section id="our-standards" markdown="block">
- 
 ## 1.0 Introduction
 
 This document gives general guidelines for art directors on setting up Photoshop files to hand off to web developers for programming web pages.
@@ -169,6 +165,6 @@ There is certainly no one right way to organize PSD files, so these are suggesti
 * Any special instructions
 * Hover, Active and/or Visited states are specified for links and buttons
 * List the fonts, whether they are web fonts or non-web fonts, off to the side on the homepage using the “note tool” 
-* For more details please refer to: [http://photoshopetiquette.com/] (http://photoshopetiquette.com/)
+* For more details please refer to: [http://photoshopetiquette.com/](http://photoshopetiquette.com/)
 
-</section>
+{% include bio-deb.html %} 

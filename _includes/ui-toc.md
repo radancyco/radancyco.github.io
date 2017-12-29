@@ -27,11 +27,12 @@ Enjoy some of our teams thoughts on various web topics.
 {% endfor %}
 </ul>
 
-## Tutorials
+## Education & Outreach
 
 TMP's UI team is filled with teachers. Here are but a few topics we have shared with our colleagues over the years.
 
 <ul>
+	<li>Accessibility 101 By Michael Spellacy (Coming 2018)</li>
 	<li><a href="/uid/rwd-school-of-rock/">Responsive Web Design: School of Rock By Stephanie Plumeri & Michael Spellacy</a></li>
 	<li><a href="/uid/respond-ie8/">Respond II: Responding to IE8 By Stephanie Plumeri</a></li>
 	<li><a href="/uid/respond">Respond: Responsive Design 101 By Stephanie Plumeri</a></li>

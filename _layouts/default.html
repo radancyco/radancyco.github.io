@@ -1,98 +1,135 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://styleguide.tmp.com/wave/theme/css/global.min.css">{% if page.localcss %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://styleguide.tmp.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://styleguide.tmp.com/crossover/theme/css/global.min.css">{% if page.localcss %}
 	<link rel="stylesheet" href="{{ page.localcss }}">{% endif %}
-	<link rel="shortcut icon" href="https://styleguide.tmp.com/favicon.ico" type="image/x-icon">
-	<script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
-	<title>{{ page.title }} - TMP Worldwide</title>
+    <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
+    <title>{{ page.title }} - TMP Worldwide</title>
 </head>
+<body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}"class="nav-pulldown{{ page.section }}">
+  
+    <div id="page"> 
+    
+        <div id="header-search-container">
+    
+            <div id="primary-header-container">
 
-<body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
+				<header id="primary-header">
 
-	<div class="page">
+					<h1 id="primary-header-logo"><a href="https://www.tmp.com/"><img src="https://styleguide.tmp.com/crossover/theme/img/global/tmp-logo.svg" alt="TMP Worldwide"></a></h1>
 
-		<header id="top" class="banner">
+					<p id="btn-skip-nav"><a href="#primary-content"><b>Skip to Main Content</b></a></p>
 
-			<h1><a href="https://www.tmp.com/"><img src="https://styleguide.tmp.com/wave/theme/img/hdr-logo.svg" alt="TMP Worldwide"></a></h1>
+					<p id="btn-partners"><a href="https://www.tmp.com/our-offices/"><b>Current Partner Site:</b> <span>Global Locations <i>(View All)</i></span></a></p>
 
-			<a id="skip-nav" class="access-link" href="#primary-navigation">Skip to navigation</a>
+				</header>
 
-		</header>
+				<nav id="nav-primary" aria-label="primary" data-iso="en" data-label-menu="Menu" data-label-close="Close">
+					
+					<h2 id="nav-heading">Navigation</h2>
 
-		<main>
+					<ul id="nav-container">
+						<li id="nav-home" class="nav-item">
+
+							<a href="/" class="nav-subheading">Home</a>
+
+						</li>
+						<li id="nav-uid-code-standards"class="nav-item">
+
+							<a href="/uid/code-standards/" class="nav-subheading">UI Standards</a>
+
+						</li>
+						<li id="nav-tmp-resource-library" class="nav-item">
+
+							<a href="/tmp-resource-library/" class="nav-subheading">Resource Library</a>
+
+						</li>
+
+					</ul>
+
+				</nav>
+
+            </div><!--/#primary-header-container-->
+                 
+        </div><!--/#header-search-container-->
+    
+        <main id="primary-content">
 
 			<article>
+			           
+			    <h1 class="primary-heading">{{ page.title }}</h1>
+			                
+				<div class="tertiary-wrapper">
 
-				{{ content }}
+					{{ content }}
 
-				<section id="feedback">
+				</div>
 
-					<h3 id="moderators">Moderators</h3>
+				<section id="feedback" class="tertiary-wrapper">
 
-					<ul>
-						<li><a href="https://github.com/michaelspellacy">Michael "Spell" Spellacy</a></li>
-						<li><a href="https://github.com/Brockenstein">Brock Barnett</a></li>
-					</ul>
+					<h2 id="contributors">Contributors</h2>
 
-					<h3 id="contributors">Contributors</h3>
-
-					<ul>
-						<li><a href="{{ site.repo }}graphs/contributors">The TMP Worldwide UID Team</a></li>
-					</ul>
+					<p><a href="{{ site.repo }}graphs/contributors">The TMP Worldwide UID Team</a></p>
 
 					<p>If you wish to contribute, <a href="https://guides.github.com/activities/forking/">fork</a> this <a href="{{ site.repo }}">project</a>, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</p>
 
 					<p>New to GitHub? <a href="https://guides.github.com/activities/hello-world/">Learn the basics with the guide</a> and <a href="https://guides.github.com/introduction/flow/">learn the GitHub flow</a>.</p>
 
-					<h3 id="qa-a11y">Quality Assurance and Accessibility</h3>
+					<h2 id="qa-a11y">Quality Assurance and Accessibility</h2>
 
-        			<p>All patterns, layouts, and functionality are tested against our <a href="https://www.tmp.com/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools. TMP is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.0 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}issues">open up an issue</a> and let us know about it or contact <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a>.</p>
+		        	<p>All patterns, layouts, and functionality are tested against our <a href="https://www.tmp.com/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools. TMP is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.0 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}issues">open up an issue</a> and let us know about it or contact <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a>.</p>
 
 				</section>
 
 			</article>
 
-		</main>
+        </main><!--/#primary-content-->
+        
+    	<a class="footer-call-to-action" href="https://www.tmp.com/connect/">Contact Us</a>
 
-  		<p class="back-to-top"><a href="#top">Return to top</a></p>
+		<footer id="primary-footer">
+    
+		    <h1 id="primary-footer-logo"><a href="/"><img src="https://styleguide.tmp.com/crossover/theme/img/global/tmp-logo-drk.svg" alt="TMP Worldwide"></a></h1>
 
-		<nav id="primary-navigation">
+			<h2 id="primary-footer-subtitle">Build Your Talent</h2>
 
-			<h2>Navigation</h2>
+			<h3 id="primary-footer-social-heading">Share</h3>
 
-			<ul>
-				<li id="nav-home"><a href="/">Home</a></li>
-				<li id="nav-uid-code-standards"><a href="/uid/code-standards/">UI Standards</a></li>
-				<li id="nav-tmp-resource-library"><a href="/tmp-resource-library/">Resource Library</a></li>
+			<ul id="primary-footer-social" data-selector-name="socialmedia">
+		    	<li><a class="btn-facebook" href="https://www.facebook.com/tmpworldwide"><b>Visit us on Facebook</b></a></li>
+		    	<li><a class="btn-twitter" href="https://twitter.com/tmpww"><b>Visit us on Twitter</b></a></li>
+		    	<li><a class="btn-linkedin" href="https://www.linkedin.com/company/tmp-worldwide"><b>Visit us on LinkedIn</b></a></li>
+		    	<li><a class="btn-youtube" href="https://www.youtube.com/user/TMPWorldwideNA"><b>Visit us on YouTube</b></a></li>
 			</ul>
+			
+			<div id="primary-footer-copyright">
 
-		</nav>
+				<p><small>&copy; {{ "now" | date: "%Y" }} TMP Worldwide. An equal opportunity employer.</small></p>
 
-	</div><!--/.page-->
+				<ul>
+					<li><a href="http://go.tmp.com/DemoTalentBrew">Request a Demo</a></li>
+				    <li><a href="https://www.tmp.com/connect/">Contact Us <span class="wai">(TMP)</span></a></li>
+					<li><a href="https://www.tmp.com/privacy/">Privacy Statement</a></li>
+					<li><a href="https://www.tmp.com/terms/">Terms &amp; Conditions</a></li>
+					<li><a href="https://www.tmp.com/support/">Support</a></li>
+					<li><a href="https://www.tmp.com/accessibility/">Accessibility</a></li>
+					<li><a href="https://www.tmp.com/sitemap/">Sitemap</a></li>
+				</ul>
 
-	<footer class="contentinfo">
+			</div>
+	
+		</footer>
+        
+		<a class="btn-back-to-top" href="#page"><b>Back to top</b></a>
 
-	  <h2>Additional Links</h2>
+    </div><!--/#page-->
 
-	  <p>We're in advertising &mdash; of course we're an equal opportunity employer.</p>
-
-	  <ul class="link-list">
-	      <li><a href="https://www.tmp.com/connect/">Contact Us</a></li>
-	      <li><a href="https://www.tmp.com/privacy/">Privacy</a></li>
-	      <li><a href="https://www.tmp.com/accessibility/">Accessibility</a></li>
-	      <li><a href="https://www.tmp.com/support/">Support</a></li>
-	  </ul>
-
-	  <p>&copy; {{ "now" | date: "%Y" }} tmp.worldwide</p>
-
-	</footer>
-
-	<script src="/js/ga.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://styleguide.tmp.com/wave/theme/js/global.min.js"></script>{% if page.globaljs %}
+    <script src="/js/ga.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://styleguide.tmp.com/crossover/theme/js/global.min.js"></script>{% if page.globaljs %}
 	<script src="{{ page.globaljs }}"></script>{% endif %}{% if page.localjs %}
 	<script src="{{ page.localjs }}"></script>{% endif %}
 

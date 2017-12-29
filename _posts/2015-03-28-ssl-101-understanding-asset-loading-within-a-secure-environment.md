@@ -3,8 +3,6 @@ layout: default
 title: "SSL 101: Understanding asset loading within a secure environment"
 ---
 
-# {{ page.title }}
-
 In my experience, I have  found that there is generally a lot of confusion surrounding the loading of assets within a web page that exists within a secure environment. To help eliminate that confusion, here is a small guide that will hopefully explain which elements are and are not affected by SSL. It really comes down to two things: Outbound and Inbound.
 
 ## Outbound

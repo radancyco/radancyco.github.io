@@ -3,8 +3,6 @@ layout: default
 title: "How To Host An Infographic (Text Only)"
 ---
 
-# {{ page.title }}
-
 ## Infographic Hosting 101
 
 An inforgraphic on how to host an infographics.

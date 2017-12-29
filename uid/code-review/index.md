@@ -3,8 +3,6 @@ layout: default
 title: Code Review Process
 ---
 
-# {{ page.title }}
-
 Last Updated: **{{ "now" | date: "%A, %B %-d, %Y" }}**
 
 <section id="code-review" markdown="block">
@@ -29,6 +27,7 @@ Code reviews are typically non-conforming. Depending on the level of detail the 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 3. Code Review Process
+
 When the developer has finished coding the project and it is ready to be reviewed by QA, it must first be sent to another developer for a code review. At this time, the developer should contact traffic in order to schedule a peer review by another developer who is currently available based on their schedule. Two hours will be needed for each review, one for reviewing the code and documenting the issues and another for the one-on-one preparation and meeting to discuss the issues.
 
 Reviewers will be provided a spreadsheet that contains a list of items from the standards that they should use as a checklist when reviewing the code. Reviewers do not need to go through every line of code and find every issue. Instead, they should look for instances of each item on the checklist, identify the issue, provide an explanation of the issue, provide an example of the issue in either the form of a screenshot, in text, or both. They should then provide the section where the issue is stated in the code standards and/or provide a solution if possible. Other issues outside the standards can be addressed, but they must be major issues that either cause or can cause the site to break during maintenance. These issues will need a detailed explanation or external reference stating why it needs to be done differently.

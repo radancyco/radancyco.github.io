@@ -5,6 +5,8 @@ title: User Interface Standards and Guidelines
 
 <h2>Abstract</h2>
 
+![](/assets/img/tmp-standards.png){: .article-image }
+
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for TMP Worldwide.
 
 Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository. 

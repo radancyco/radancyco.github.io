@@ -1,19 +1,17 @@
 
-## User Interface Development
-
-### User Interface Standards and Guidelines
+## User Interface Standards and Guidelines
 
 [Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers.](/uid/code-standards/)
 
-### Resource Library
+## Resource Library
 
 [A library of common design patterns, resources, and functional code found on Talentbrew and many of our other custom crafted websites.](/tmp-resource-library/)
 
-### Code Review Process
+## Code Review Process
 
 [Provides a record of the different resources used to create the code standards guide.](/uid/code-review/)
 
-### Photoshop Guidelines
+## Photoshop Guidelines
 
 [Guidelines for preparing a photoshop file to be handed off to development teams.](/uid/photoshop-guidelines/)
 

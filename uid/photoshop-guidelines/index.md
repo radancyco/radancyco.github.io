@@ -3,8 +3,6 @@ layout: default
 title: Guidelines for Preparing Photoshop Files for Web Developers
 ---
 
-# {{ page.title }}
-
 By [Deborah Foerst](https://github.com/dafoerst)
 
 Last Updated: **{{ "now" | date: "%A, %B %-d, %Y" }}**

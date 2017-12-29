@@ -59,11 +59,11 @@ Let's try loading a third-party script library, such as jQuery, from a non-secur
 
 We'll also write a simple selector that will change the color of the text below from red to green.
 
-<code>$("#script-test").addClass("make-green");</code>
+<code>$("#script-test").addClass("success");</code>
 
 <p id="script-test">I &#9829; web standards!</p>
 
-<script>$("#script-test").addClass("make-green");</script>
+<script>$("#script-test").addClass("success");</script>
 
 <p>In many browsers, the text, "I &#9829; web standards!", will remain red. This means that the script library has not loaded. The security policies that revolve around scripting within a secure page (and several other elemets - see list below) may be much more stringent. Scripts from a non-secure location will simply not load, and your script based functionality will fail. Sometimes siliently, as was the case with Advanced Job Search from within Facebook Job Search (Ajax requests must also come from a secure location).</p>
 

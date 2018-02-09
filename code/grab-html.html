@@ -30,21 +30,21 @@ title: "Page Content Scraper"
 
 $(".link-list a").on( "click", function() {
 
-	$(this).append(" - <b>Copied!</b>").contents().unwrap();
+	$(this).prepend(" - <b>Copied!</b>").contents().unwrap();
 
 	var Path = $(this).attr("href");
 
 	$("<div>").load($(this).attr("href") + " .story-content >", function() {
 
-      $("code").append("<p><strong>Page: " + Path + "</strong><p>");
+      $("code").prepend("<p><strong>Page: " + Path + "</strong><p>");
 
       if($("button").hasClass("html-render")) {
 
-      	$("code").append($(this).html($(this).html()));
+      	$("code").prepend($(this).html($(this).html()));
 
       } else {
 
-      	$("code").append($(this).html($(this).html().replace(new RegExp("<", "g"), '&lt;').replace(new RegExp(">", "g"), '&gt;').replace(/\n/g, "<br>")));
+      	$("code").prepend($(this).html($(this).html().replace(new RegExp("<", "g"), '&lt;').replace(new RegExp(">", "g"), '&gt;').replace(/\n/g, "<br>")));
       }
 
 	});

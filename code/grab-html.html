@@ -5,7 +5,7 @@ title: "Page Content Scraper"
 
 <p>A little utility to scrape needed content from a page via ajax calls. Handy and better than having to go to the SA tool to grab what you need.</p>
 
-<p>Before you begin, do you want to render raw HTML or parsed HTML? The default output is code.</p>
+<p>Before you begin, do you want to render raw HTML or parsed HTML? The default output is raw HTML.</p>
 
 <button id="btn-html">Parsed HTML</button>
 
@@ -16,13 +16,15 @@ title: "Page Content Scraper"
 	<li><a href="https://www.tmp.com/thought-leader-effects-of-mobilegeddon">https://www.tmp.com/thought-leader-effects-of-mobilegeddon</a></li>
 </ul>
 
-<button id="btn-clear">Clear Code</button>
+<!-- button class="btn-clear">Clear Code</button -->
 
-<button id="btn-reload">Reload</button>
+<button class="btn-reload">Reload</button>
 
 <p>Now just copy the below content into the admin tool! It's so easy!</p>
 
 <pre><code></code></pre>
+
+<button class="btn-reload">Reload</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -45,7 +47,6 @@ $(".link-list a").on( "click", function() {
       } else {
 
       	$("code").append($(this).html($(this).html().replace(new RegExp("<", "g"), '&lt;').replace(new RegExp(">", "g"), '&gt;').replace(/\n/g, "<br>")));
-
       }
 
 	});
@@ -63,13 +64,13 @@ $("#btn-html").on( "click", function() {
 
 });
 
-$("#btn-clear").on( "click", function() {
+$(".btn-clear").on( "click", function() {
 
 	$("code").empty();
 
 });
 
-$("#btn-reload").on( "click", function() {
+$(".btn-reload").on( "click", function() {
 
 	location.reload();
 

@@ -9,7 +9,7 @@ title: User Interface Standards and Guidelines
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for TMP Worldwide.
 
-Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository. 
+Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository.
 
 Help us make this document even better! [Contributions are encouraged!](#contributors)
 
@@ -42,13 +42,13 @@ All of your prospective job candidates, regardless of physical or technological 
 
 TMP supports websites and applications on the following operating systems:
 
-See [TMP Support](https://www.tmp.com/support/#operating-systems) for more details. 
+See [TMP Support](https://www.tmp.com/support/#operating-systems) for more details.
 
 ### 1.3 Browser Support
 
 TMP supports the **current** and **prior** major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
-See [TMP Support](https://www.tmp.com/support/#browser) for more details. 
+See [TMP Support](https://www.tmp.com/support/#browser) for more details.
 
 ### 1.4 File Naming Conventions
 
@@ -76,7 +76,7 @@ coffee-shop.jpg</code></pre>
 
 ### 2.1 Validation
 
-Code validation is an easy way to spot issues that you might have missed without having to examine every element. Things like accessibility issues can easily be identified and fixed without much time wasted. 
+Code validation is an easy way to spot issues that you might have missed without having to examine every element. Things like accessibility issues can easily be identified and fixed without much time wasted.
 
 Check each completed project using the [W3C Markup Validation Service](https://validator.w3.org/) to scan for issues.
 
@@ -118,7 +118,7 @@ Our performance budget is:
 
 ### 2.5 Video Optimization
 
-Make all efforts to optimize video as much as possible—especially if it is being self-hosted. [Handbrake](https://handbrake.fr/) is a very useful tool for this task. There are lots of great tutorials on the web that can teach you how to use Handbrake and tighten up the screws for optimal video streaming and playback. 
+Make all efforts to optimize video as much as possible—especially if it is being self-hosted. [Handbrake](https://handbrake.fr/) is a very useful tool for this task. There are lots of great tutorials on the web that can teach you how to use Handbrake and tighten up the screws for optimal video streaming and playback.
 
 <div id="video-captions" class="callout accessibility" markdown="1">
 
@@ -249,7 +249,7 @@ Comments: [Succinct description of tasks performed]
 * Use a space before `{` in rule declarations.
 * Place each property declaration on a separate line.
 * Use one space after `:` in property declarations.
-* Place spaces after commas in lists: 
+* Place spaces after commas in lists:
     * E.g. `color: rgba(0, 0, 0, .5);`.
 * Put `}` in rule declarations on a separate line.
 * When grouping selectors, put each selector on a separate line.
@@ -478,23 +478,19 @@ Inappropriate use of spawning new windows may actually *confuse users or make th
 
 <h2>Accessibility & New Windows</h2>
 
-Indicating that a new window can be opened can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example: 
- 
+Indicating that a new window can be opened can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example:
+
 </div>
 
-<pre><code>&lt;a href="https://www.tmp.com/" target="_blank" aria-describedby="new-window"&gt;TMP Worldwide&lt;/a&gt;
+<pre><code>&lt;a href="https://www.tmp.com/" target="_blank" aria-label="Manage third-party cookie preferences (opens in a new window)"&gt;click here&lt;/a&gt;</code></pre>
 
-...
-
-&lt;div hidden id="new-window"&gt;Opens New Window&lt;/div&gt;</code></pre>
-
-The `aria-describedby` attribute on the hyperlink can then be used as a styling hook for a visual enhancement, such as an icon, that indicates that the link opens up a new window.
+The `target="_blank"` attribute and value can also be used as a styling hook to add a visual enhancement, such as an icon, that indicates that the link will open a new tab or window.
 
 ### 9.2 Focus Outlines
 
 The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interacted with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc } 
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 10. Recommended Tools
 

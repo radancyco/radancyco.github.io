@@ -530,7 +530,8 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 
 ### 11.2. (Highly) Recommended Reading
 
-* [Adaptive Web Design (First Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)
+* [Accessibility for Everyone by Laura Kalbag](https://abookapart.com/products/accessibility-for-everyone/)
+* [Adaptive Web Design (1st Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)
 * [DOM Scripting: Web Design with JavaScript and the Document Object Model by Jeremy Keith and Jeffery Sambells](https://www.amazon.com/DOM-Scripting-Design-JavaScript-Document/dp/1430233893)
 * [Designing with Progressive Enhancement: Building the Web that Works for Everyone by Todd Parker, Scott Jehl, Maggie Costello Wachs, Patty Toland](https://www.amazon.com/Designing-Progressive-Enhancement-Building-Everyone/dp/0321658884/ref=sr_1_1?s=books&ie=UTF8&qid=1422386916&sr=1-1&keywords=progressive+enhancement)
 * [Designing with Web Standards (3rd Edition) by Jeffery Zeldman](https://www.amazon.com/Designing-Web-Standards-3rd-Edition/dp/0321616952)

@@ -526,6 +526,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 
 * [A Dao of Web Design by John Allsopp](https://alistapart.com/article/dao)
 * [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
+* [Ethical Design Manifesto](https://2017.ind.ie/)
 
 ### 11.2. (Highly) Recommended Reading
 

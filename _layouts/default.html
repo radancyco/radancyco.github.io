@@ -2,7 +2,8 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">{% if page.noindex %}
+	  <meta name="robots" content="noindex, nofollow">{% endif %}
     <link rel="shortcut icon" href="https://styleguide.tmp.com/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://styleguide.tmp.com/crossover/theme/css/global.min.css">{% if page.localcss %}
 	<link rel="stylesheet" href="{{ page.localcss }}">{% endif %}
@@ -10,11 +11,11 @@
     <title>{{ page.title }} - TMP Worldwide</title>
 </head>
 <body id="tmp-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}"class="nav-pulldown {{ page.section }}">
-  
-    <div id="page"> 
-    
+
+    <div id="page">
+
         <div id="header-search-container">
-    
+
             <div id="primary-header-container">
 
 				<header id="primary-header">
@@ -28,7 +29,7 @@
 				</header>
 
 				<nav id="nav-primary" aria-label="primary" data-iso="en" data-label-menu="Menu" data-label-close="Close">
-					
+
 					<h2 id="nav-heading">Navigation</h2>
 
 					<ul id="nav-container">
@@ -53,15 +54,15 @@
 				</nav>
 
             </div><!--/#primary-header-container-->
-                 
+
         </div><!--/#header-search-container-->
-    
+
         <main id="primary-content">
 
 			<article>
-			           
+
 			    <h1 class="primary-heading">{{ page.title }}</h1>
-			                
+
 				<div class="tertiary-wrapper">
 
 					{{ content }}
@@ -87,11 +88,11 @@
 			</article>
 
         </main><!--/#primary-content-->
-        
+
     	<a class="footer-call-to-action" href="https://www.tmp.com/connect/">Contact Us</a>
 
 		<footer id="primary-footer">
-    
+
 		    <h1 id="primary-footer-logo"><a href="/"><img src="https://styleguide.tmp.com/crossover/theme/img/global/tmp-logo-drk.svg" alt="TMP Worldwide"></a></h1>
 
 			<h2 id="primary-footer-subtitle">Build Your Talent</h2>
@@ -104,7 +105,7 @@
 		    	<li><a class="btn-linkedin" href="https://www.linkedin.com/company/tmp-worldwide"><b>Visit us on LinkedIn</b></a></li>
 		    	<li><a class="btn-youtube" href="https://www.youtube.com/user/TMPWorldwideNA"><b>Visit us on YouTube</b></a></li>
 			</ul>
-			
+
 			<div id="primary-footer-copyright">
 
 				<p><small>&copy; {{ "now" | date: "%Y" }} TMP Worldwide. An equal opportunity employer.</small></p>
@@ -120,9 +121,9 @@
 				</ul>
 
 			</div>
-	
+
 		</footer>
-        
+
 		<a class="btn-back-to-top" href="#page"><b>Back to top</b></a>
 
     </div><!--/#page-->

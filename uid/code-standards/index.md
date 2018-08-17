@@ -31,12 +31,12 @@ At TMP Worldwide, we embrace web standards and keep up-to-date with the latest d
 
 ### 1.1 Accessibility
 
-All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve a users right to universal access, our baseline development standards for all of our web offerings attempt to meet WCAG 2.0 Level AA guidelines at all times.
+All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve a users right to universal access, our baseline development standards for all of our web offerings attempt to meet WCAG 2.1 Level AA guidelines at all times.
 
-* [WCAG 2.0 Documentation](https://www.w3.org/TR/WCAG20/)
-* [How to Meet WCAG 2.0](https://www.w3.org/WAI/WCAG20/quickref/)
-* [Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/)
-* [Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/)
+* [WCAG 2.1 Documentation](https://www.w3.org/TR/WCAG21/)
+* [How to Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1)
+* [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
+* [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
 
 ### 1.2 Operating System Support
 
@@ -124,7 +124,7 @@ Make all efforts to optimize video as much as possible—especially if it is bei
 
 <h2>Video Captions</h2>
 
-Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
+Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
 
 </div>
 

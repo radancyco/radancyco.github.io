@@ -3,14 +3,13 @@ layout: default
 title: "TMP Support Guidelines"
 noindex: true
 ---
+<article id="push-content">
 
-<article id="syndicate">
-
-  <p class="effective-date">Last updated <time>March 30th, 2018</time></p>
+  <p class="effective-date">Last updated <time>August 18th, 2018</time></p>
 
   <h2 id="web-standards">Web Standards</h2>
 
-  <img src="//tbcdn.talentbrew.com/company/3401/v1_0/img/global/tmp-web-standards.png" class="article-image" alt=""/>
+  <img src="https://tbcdn.talentbrew.com/company/3401/v1_0/img/global/tmp-web-standards.png" class="article-image" alt=""/>
 
   <p>Our development methodologies adhere to many standards and guidelines proposed by the <a href="http://www.w3c.org/" title="World Wide Web Consortium">W3C</a>.</p>
 
@@ -22,7 +21,7 @@ noindex: true
 
   <h2 id="accessibility">Accessibility</h2>
 
-  <p>All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings <em>attempt</em> to meet as many WCAG 2.1 Level A and AA</a> guidelines as possible. However, many aspects of accessibility touch upon how a site is designed and implemented and require a more stringent process, so if there is a need to fully support accessibility guidelines, please bring this to the attention of your account representative as soon as possible.</p>
+  <p>All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve users' right of universal access, our baseline development standards for all of our web offerings <em>attempt</em> to meet as many WCAG 2.1 Level A and AA guidelines as possible. However, many aspects of accessibility touch upon how a site is designed and implemented and require a more stringent process, so if there is a need to fully support accessibility guidelines, please bring this to the attention of your account representative as soon as possible.</p>
 
   <h2 id="operating-systems">Operating System Support</h2>
 

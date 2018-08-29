@@ -1,4 +1,6 @@
-fetch("https://tmpworldwide.github.io/support/").then(function(response) {
+var pagePath = document.getElementById("tmp-syndicate-link").href;
+
+fetch(pagePath).then(function(response) {
 
   return response.text();
 

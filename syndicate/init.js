@@ -1,20 +1,25 @@
-var pagePath = document.getElementById("tmp-syndicate-link").href;
 
-fetch(pagePath).then(function(response) {
+(function() {
 
-  console.log(response);
+  var pagePath = document.getElementById("tmp-syndicate-link").href;
 
-  return response.text();
+  fetch(pagePath).then(function(response) {
 
-}).then(function(body) {
+    console.log(response);
 
-  document.querySelector("#tmp-syndicate").innerHTML = body;
+    return response.text();
 
-}).catch(function(error) {
+  }).then(function(body) {
 
-    console.log('Looks like there was a problem: \n', error);
+    document.querySelector("#tmp-syndicate").innerHTML = body;
 
-});
+  }).catch(function(error) {
+
+      console.log('Looks like there was a problem: \n', error);
+
+  });
+
+})();
 
 // Example Usage
 

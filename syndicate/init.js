@@ -2,6 +2,8 @@ var pagePath = document.getElementById("tmp-syndicate-link").href;
 
 fetch(pagePath).then(function(response) {
 
+  console.log(response);
+
   return response.text();
 
 }).then(function(body) {

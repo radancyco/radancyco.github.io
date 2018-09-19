@@ -1,12 +1,16 @@
 var pagePath = document.getElementById("tmp-syndicate-link").href;
 
-fetch("https://tmpworldwide.github.io/support/index.html").then(function(response) {
+fetch(pagePath).then(function(response) {
 
   return response.text();
 
 }).then(function(body) {
 
   document.querySelector("#tmp-syndicate").innerHTML = body;
+
+}).catch(function() {
+
+    console.log("error");
 
 });
 

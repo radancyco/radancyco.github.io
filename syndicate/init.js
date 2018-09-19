@@ -10,9 +10,9 @@ fetch(pagePath).then(function(response) {
 
   document.querySelector("#tmp-syndicate").innerHTML = body;
 
-}).catch(function() {
+}).catch(function(error) {
 
-    console.log("error");
+    console.log('Looks like there was a problem: \n', error);
 
 });
 

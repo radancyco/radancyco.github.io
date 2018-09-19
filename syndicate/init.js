@@ -3,7 +3,7 @@
 
   var pagePath = document.getElementById("tmp-syndicate-link").href;
 
-  fetch(pagePath).then(function(response) {
+  fetch("https://cors-anywhere.herokuapp.com/" + pagePath).then(function(response) {
 
     console.log(response);
 

@@ -472,7 +472,7 @@ Through the trial and errors of others or just plain common sense, we have come 
 
 ### 9.1 New Window Links
 
-Inappropriate use of spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should almost always be left up to the end user to decide.
+Spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should almost always be left up to the end user to decide.
 
 <div id="a11y-new-window" class="callout accessibility" markdown="1">
 

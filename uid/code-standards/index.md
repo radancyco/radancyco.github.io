@@ -482,7 +482,7 @@ Indicating that a new window can be opened can help avoid creating a confusing o
 
 </div>
 
-<pre><code>&lt;a href="https://www.tmp.com/" target="_blank" aria-label="Manage third-party cookie preferences (opens in a new window)"&gt;click here&lt;/a&gt;</code></pre>
+<pre><code>&lt;a href="https://www.tmp.com/" target="_blank" rel="noopener" aria-label="Manage third-party cookie preferences (opens in a new window)"&gt;click here&lt;/a&gt;</code></pre>
 
 The `target="_blank"` attribute and value can also be used as a styling hook to add a visual enhancement, such as an icon, that indicates that the link will open a new tab or window.
 

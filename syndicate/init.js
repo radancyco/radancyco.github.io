@@ -54,7 +54,7 @@
 
 <div id="tmp-syndicate">
 
-    <a href="https://tmpworldwide.dev/support/"><noscript>View TMP Support</noscript></a>
+    <a href="https://tmpworldwide.dev/support/#accessibility">View TMP Support</a>
 
 </div>
 

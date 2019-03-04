@@ -1,23 +1,42 @@
 
 (function() {
 
-  var pagePath = document.getElementById("tmp-syndicate-link").href;
+  var pageElement = document.getElementById("tmp-syndicate");
+  var pageElementHref = pageElement.children[0];
+  var pageError = "<p>We're sorry, the content you are looking for can't be displayed right now. However, you can <a href='" + pageElementHref + "'>access it directly</a>.</p>";
+  var request = new XMLHttpRequest();
 
-  fetch("https://cors-anywhere.herokuapp.com/" + pagePath).then(function(response) {
+  request.open('GET', pageElementHref, true);
 
-    console.log(response);
+  request.onload = function() {
 
-    return response.text();
+    if (request.status >= 200 && request.status < 400) {
 
-  }).then(function(body) {
+      // Success!
 
-    document.querySelector("#tmp-syndicate").innerHTML = body;
+      var response = request.responseText;
 
-  }).catch(function(error) {
+      pageElement.innerHTML = response;
 
-      console.log('Looks like there was a problem: \n', error);
+    } else {
 
-  });
+      // We reached our target server, but it returned an error
+
+      pageElement.innerHTML = pageError;
+
+    }
+
+  };
+
+  request.onerror = function() {
+
+    // There was a connection error of some sort
+
+    pageElement.innerHTML = pageError;
+
+  };
+
+  request.send();
 
 })();
 
@@ -35,7 +54,7 @@
 
 <div id="tmp-syndicate">
 
-    <a id="tmp-syndicate-link" href="https://tmpworldwide.github.io/support/"><noscript>View TMP Support</noscript></a>
+    <a href="https://tmpworldwide.dev/support/"><noscript>View TMP Support</noscript></a>
 
 </div>
 

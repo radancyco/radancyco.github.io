@@ -54,10 +54,10 @@
 
 <div id="tmp-syndicate">
 
-    <a href="https://tmpworldwide.dev/support/#accessibility">View TMP Support</a>
+    <a href="https://tmpworldwide.dev/support/">View Support Guidelines</a>
 
 </div>
 
-<script src="https://tmpworldwide.github.io/syndicate/init.js"></script>
+<script id="tmp-syndicate-init" src="https://tmpworldwide.dev/syndicate/init.js"></script>
 
 */

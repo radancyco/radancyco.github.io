@@ -1,9 +1,9 @@
 markdown: kramdown
 highlighter: rouge
 destination: _httpdocs
-url: tmpworldwide.github.io
+url: tmpworldwide.dev
 repo: https://github.com/tmpworldwide/tmpworldwide.github.io/
-ghpage: https://tmpworldwide.github.io/
+ghpage: https://tmpworldwide.dev/
 sass:
     style: :compressed
 exclude: [

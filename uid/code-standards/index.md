@@ -304,10 +304,7 @@ display: block;
 <pre><code>.one .two div {
 display: block;
 }
-
-.one .two div:hover {
-display: none;
-}</code></pre>
+</code></pre>
 
 ##### 4.1.4.2 Naming
 

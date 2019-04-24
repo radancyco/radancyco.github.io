@@ -15,18 +15,6 @@
 
 [Guidelines for preparing a photoshop file to be handed off to development teams. Educate Yourself &#8594;](/uid/photoshop-guidelines/)
 
-## Team Articles
-
-Enjoy some of our teams thoughts on various web topics.
-
-<ul>
-{% for post in site.posts %}
-    
-	<li><a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a></li>
-
-{% endfor %}
-</ul>
-
 ## Education & Outreach
 
 TMP's UI team is filled with teachers. Here are but a few topics we have shared with our colleagues over the years.

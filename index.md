@@ -8,4 +8,3 @@ Welcome to TMP Worldwide's open design and development resource on GitHub! We be
 [![TMP Worldwide](/assets/img/tmp-standards.png){: .article-image }](http://www.tmp.com/)
 
 {% include ui-toc.md %}
-

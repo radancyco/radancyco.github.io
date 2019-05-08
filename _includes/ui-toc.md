@@ -25,12 +25,3 @@ TMP's UI team is filled with teachers. Here are but a few topics we have shared 
 	<li><a href="/uid/respond-ie8/">Respond II: Responding to IE8 By Stephanie Plumeri</a></li>
 	<li><a href="/uid/respond">Respond: Responsive Design 101 By Stephanie Plumeri</a></li>
 </ul>
-
-## Reported Browser Issues
-
-Responsible netizens report bugs to browser vendors. Here are a couple that we have dropped.
-
-<ul>
-	<li><a href="/bugs/ios-tappy-bug.html">YouTube embed not working in iOS 8 Safari and Chrome - April 30, 2015</a></li>
-	<li><a href="/bugs/chrome-crossorigin.html">Performance: Chrome Downloads 2 Poster Images When Crossorigin Attribute (Anonymous) Present on Video - September 26, 2016</a></li>
-</ul>

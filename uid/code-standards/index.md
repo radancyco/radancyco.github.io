@@ -465,23 +465,11 @@ When you make a new commit, do not use the `-m` option. Instead just use `git co
 
 ## 9. Patterns & Anti-patterns
 
-Through the trial and errors of others or just plain common sense, we have come to know what works on the web and what does not. This section will be dedicated to sharing some of this conventional wisdom.
+Through the trial and errors of our community or just plain common sense, we have come to discover what works better for users on on the web and what does not. This section is dedicated to sharing some of this conventional wisdom.
 
 ### 9.1 New Window Links
 
-Spawning new windows may actually *confuse users or make the experience unnecessarily complex or unpleasant*. There are, of course, [some good reasons](https://css-tricks.com/use-target_blank/) to spawn new windows, but for the most part, the decision to open a link in a window should almost always be left up to the end user to decide.
-
-<div id="a11y-new-window" class="callout accessibility" markdown="1">
-
-<h2>Accessibility & New Windows</h2>
-
-Indicating that a new window can be opened can help avoid creating a confusing or disorienting experience for all users. This is especially true for those users who may be using assitive technology to navigate your site or application. There are a few ways to do this. Here is one example:
-
-</div>
-
-<pre><code>&lt;a href="https://www.tmp.com/" target="_blank" rel="noopener" aria-label="Manage third-party cookie preferences (opens in a new window)"&gt;click here&lt;/a&gt;</code></pre>
-
-The `target="_blank"` attribute and value can also be used as a styling hook to add a visual enhancement, such as an icon, that indicates that the link will open a new tab or window.
+If new windows must be opened, please ensure they are being implemented properly, otherwise it is often best to avoid the practice entirely. Before making a decision, please read <a href="https://spellacy.net/the-last-word-on-opening-new-windows/">The Last Word (Maybe) on Opening New Windows</a>.
 
 ### 9.2 Focus Outlines
 

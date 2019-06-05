@@ -527,5 +527,6 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Mobile First by Luke Wroblewski](https://www.abookapart.com/products/mobile-first)
 * [Responsive Web Design (2nd Edition) by Ethan Marcotte](https://www.abookapart.com/products/responsive-web-design)
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
+* [Anything written by Scott O'Hara](https://www.scottohara.me/writing/)
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }

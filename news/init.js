@@ -69,9 +69,9 @@
 
     tmpNewsAlert.setAttribute("id", "tmp-notice");
     tmpNewsAlert.setAttribute("href", "#");
-    tmpNewsAlert.setattribute("data-custom-event", "true");
-    tmpNewsAlert.setattribute("data-custom-category", "###");
-    tmpNewsAlert.setattribute("data-custom-label", "########");
+    tmpNewsAlert.setAttribute("data-custom-event", "true");
+    tmpNewsAlert.setAttribute("data-custom-category", "###");
+    tmpNewsAlert.setAttribute("data-custom-label", "########");
     tmpNewsAlert.innerHTML = tmpNewsMsg;
 
     setTimeout(function(){

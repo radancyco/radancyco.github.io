@@ -5,9 +5,6 @@
 
 */
 
-
-
-
 (function() {
 
   // Get hostname so that we can select between QA and Production scripts.
@@ -68,28 +65,31 @@
 
     }
 
-    setTimeout(function(){
-
     var tmpNewsAlert = document.createElement("a");
 
     tmpNewsAlert.setAttribute("id", "tmp-notice");
     tmpNewsAlert.setAttribute("href", "#");
+    tmpNewsAlert.setattribute("data-custom-event", "true");
+    tmpNewsAlert.setattribute("data-custom-category", "###");
+    tmpNewsAlert.setattribute("data-custom-label", "########");
     tmpNewsAlert.innerHTML = tmpNewsMsg;
-
-    tmpNewsBody.insertBefore(tmpNewsAlert, tmpNewsBody.firstChild);
-
-    var noticeHeight = tmpNewsAlert.offsetHeight;
-
-    tmpPageWrapper.style.cssText = "top: -" + noticeHeight + "px";
 
     setTimeout(function(){
 
-      tmpNewsBody.classList.add("tmp-notice-active");
+      tmpNewsBody.insertBefore(tmpNewsAlert, tmpNewsBody.firstChild);
+
+      var noticeHeight = tmpNewsAlert.offsetHeight;
+
+      tmpPageWrapper.style.cssText = "top: -" + noticeHeight + "px";
+
+      setTimeout(function(){
+
+        tmpNewsBody.classList.add("tmp-notice-active");
+
+      }, 625);
 
     }, 625);
 
-  }, 625);
-
-}
+  }
 
 })();

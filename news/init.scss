@@ -1,0 +1,48 @@
+// TMP Notice
+
+#page {
+position: relative;
+z-index: 2;
+
+  .tmp-notice-active & {
+
+    top: 0 !important;
+
+  }
+
+}
+
+#primary-header-container {
+margin-bottom: -1px;
+}
+
+#tmp-notice {
+background-color: #032439;
+color: #fff;
+display: block;
+font-size: 18px;
+letter-spacing: 0.6px;
+padding: 1.4em;
+position: relative;
+text-align: center;
+visibility: hidden;
+width: 100%;
+z-index: 1;
+
+    .tmp-notice-active & {
+    visibility: visible;
+    }
+
+    .learn-more {
+    text-decoration: underline;
+    }
+
+    &:hover, &:focus {
+
+      .learn-more {
+      text-decoration: none;
+      }
+
+    }
+
+}

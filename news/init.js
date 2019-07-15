@@ -81,7 +81,7 @@
 
       tmpNewsBody.classList.add("tmp-notice-active");
 
-    }, 1250);
+    }, 1850);
 
   }
 

@@ -5,6 +5,9 @@
 
 */
 
+
+
+
 (function() {
 
   // Get hostname so that we can select between QA and Production scripts.
@@ -65,6 +68,8 @@
 
     }
 
+    setTimeout(function(){
+
     var tmpNewsAlert = document.createElement("a");
 
     tmpNewsAlert.setAttribute("id", "tmp-notice");
@@ -75,14 +80,16 @@
 
     var noticeHeight = tmpNewsAlert.offsetHeight;
 
-    tmpPageWrapper.style.setProperty ("top", "-" + noticeHeight + "px");
+    tmpPageWrapper.style.cssText = "top: -" + noticeHeight + "px";
 
     setTimeout(function(){
 
       tmpNewsBody.classList.add("tmp-notice-active");
 
-    }, 1850);
+    }, 625);
 
-  }
+  }, 625);
+
+}
 
 })();

@@ -43,6 +43,10 @@
 
     var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
 
+  } else if (tmpNewsInstance === "france") {
+
+    var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
+
   } else if (tmpNewsInstance === "germany") {
 
     tmpNewsMsg = "TMP verändert mit der Akquisition von Perengo die Personalbeschaffungslandschaft weiter. <span class='learn-more'>Mehr erfahren</span>";

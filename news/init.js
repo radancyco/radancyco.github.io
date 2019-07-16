@@ -45,11 +45,11 @@
 
   } else if (tmpNewsInstance === "brazil") {
 
-    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo <span class='learn-more'>Saber mais.</span>";
+    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
-    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo <span class='learn-more'>Saber mais.</span>";
+    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
 
   } else {
 

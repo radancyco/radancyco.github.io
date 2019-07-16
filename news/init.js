@@ -33,7 +33,8 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>"
+    var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo."
+    var tmpNewsLink = "#";
 
   } else if (tmpNewsInstance === "canada-french") {
 
@@ -54,13 +55,14 @@
   } else {
 
     var tmpNewsMsg = "TMP continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>"
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   }
 
   var tmpNewsAlert = document.createElement("a");
 
   tmpNewsAlert.setAttribute("id", "tmp-notice");
-  tmpNewsAlert.setAttribute("href", "https://www.tmp.com//programmatic-jobs-media-buying/");
+  tmpNewsAlert.setAttribute("href", tmpNewsLink);
   tmpNewsAlert.setAttribute("data-custom-event", "true");
   tmpNewsAlert.setAttribute("data-custom-category", "Custom Event");
   tmpNewsAlert.setAttribute("data-custom-label", "Perengo Acquisition");

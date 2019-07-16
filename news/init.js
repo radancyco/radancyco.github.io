@@ -27,7 +27,7 @@
 
   // Grab Data Attribute
 
-  //var tmpNewsInstance = tmpNewsScript.getAttribute("data-instance");
+  var tmpNewsInstance = tmpNewsScript.getAttribute("data-instance");
 
   // Create News Alert
 

@@ -42,22 +42,27 @@
   } else if (tmpNewsInstance === "canada-french") {
 
     var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "france") {
 
     var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "germany") {
 
     tmpNewsMsg = "TMP verändert mit der Akquisition von Perengo die Personalbeschaffungslandschaft weiter. <span class='learn-more'>Mehr erfahren</span>";
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "brazil") {
 
     tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
     tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
+    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else {
 

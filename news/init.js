@@ -33,11 +33,8 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo."
-    var tmpNewsLink = "#";
-
-  // var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>";
-  // var tmpNewsLink = "https://www.aia.co.uk/programmatic-jobs-media-buying/";
+    var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>";
+    var tmpNewsLink = "/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "canada-french") {
 

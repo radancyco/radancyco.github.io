@@ -51,7 +51,7 @@
 
   } else if (tmpNewsInstance === "germany") {
 
-    tmpNewsMsg = "TMP verändert mit der Akquisition von Perengo die Personalbeschaffungslandschaft weiter. <span class='learn-more'>Mehr erfahren</span>";
+    tmpNewsMsg = "TMP verändert die Welt der Talent Acquisition weiter und übernimmt Perengo. <span class='learn-more'>Mehr erfahren</span>";
     var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
 
   } else if (tmpNewsInstance === "brazil") {

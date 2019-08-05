@@ -469,7 +469,7 @@ Through the trial and errors of our community or just plain common sense, we hav
 
 ### 9.1 New Window Links
 
-If new windows must be opened, please ensure they are being implemented properly, otherwise it is often best to avoid the practice entirely. Before making a decision, please read [The Last Word (Maybe) on Opening New Windows](https://spellacy.net/the-last-word-on-opening-new-windows/).
+If new windows must be opened, please ensure they are being implemented properly, otherwise it is often best to avoid the practice entirely. Before making a decision, please read [The Last Word (Maybe) on Opening New Windows](https://michaelspellacy.com/the-last-word-on-opening-new-windows/).
 
 ### 9.2 Focus Outlines
 

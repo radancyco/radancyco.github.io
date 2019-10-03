@@ -15,7 +15,7 @@
   tmpNewsCSS.setAttribute("rel", "stylesheet");
   tmpNewsCSS.setAttribute("href", "https://tmpworldwide.dev/news/init.css");
 
-  // Append CSS to DOM.
+  // Append CSS to DOM. 
 
   document.head.appendChild(tmpNewsCSS);
 

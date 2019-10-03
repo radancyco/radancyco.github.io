@@ -39,27 +39,27 @@
   } else if (tmpNewsInstance === "canada-french") {
 
     var tmpNewsMsg = "TMP acquiert Maximum - une entreprise de technologie de marketing spécialisée dans le recrutement située aux Pays-Bas. <span class='learn-more'>Apprenez-en plus.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsLink = "https://www.prnewswire.com/fr/communiques-de-presse/tmp-worldwide-etend-son-implantation-geographique-via-l-acquisition-de-maximum-societe-technologique-de-marketing-recrutement-basee-aux-pays-bas-859539444.html";
 
   } else if (tmpNewsInstance === "france") {
 
     var tmpNewsMsg = "TMP fait l’acquisition de Maximum - société technologique de Marketing Recrutement basée aux Pays-bas. <span class='learn-more'>En savoir plus.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsLink = "https://www.prnewswire.com/fr/communiques-de-presse/tmp-worldwide-etend-son-implantation-geographique-via-l-acquisition-de-maximum-societe-technologique-de-marketing-recrutement-basee-aux-pays-bas-859539444.html";
 
   } else if (tmpNewsInstance === "germany") {
 
     tmpNewsMsg = "TMP verändert die Welt der Talent Acquisition weiter und übernimmt Perengo. <span class='learn-more'>Mehr erfahren.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsLink = "https://www.prnewswire.com/de/pressemitteilungen/tmp-worldwide-erweitert-global-prasenz-durch-akquise-von-maximum-einer-recruitment-marketing-tech-firma-825884443.html";
 
   } else if (tmpNewsInstance === "brazil") {
 
     tmpNewsMsg = "TMP Adquire a Maximum - empresa de tecnologia de marketing de recrutamento sediada na Holanda. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsLink = "https://www.prnewswire.com/news-releases/a-tmp-worldwide-aumenta-sua-presenca-global-com-a-aquisicao-da-maximum-empresa-de-tecnologia-de-marketing-de-recrutamento-sediada-na-holanda-843419823.html";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
     tmpNewsMsg = "TMP adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsLink = "https://www.prnewswire.com/news-releases/a-tmp-worldwide-aumenta-sua-presenca-global-com-a-aquisicao-da-maximum-empresa-de-tecnologia-de-marketing-de-recrutamento-sediada-na-holanda-843419823.html";
 
   } else {
 

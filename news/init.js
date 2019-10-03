@@ -33,38 +33,38 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "AIA continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>";
-    var tmpNewsLink = "/programmatic-jobs-media-buying/";
+    var tmpNewsMsg = "TMP Acquires Maximum – a Netherland's based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else if (tmpNewsInstance === "canada-french") {
 
-    var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    var tmpNewsMsg = "TMP acquiert Maximum - une entreprise de technologie de marketing spécialisée dans le recrutement située aux Pays-Bas. <span class='learn-more'>Apprenez-en plus.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else if (tmpNewsInstance === "france") {
 
-    var tmpNewsMsg = "TMP poursuit la transformation de l’écosystème recrutement avec l’acquisition de Perengo. <span class='learn-more'>En savoir plus.</span>";
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    var tmpNewsMsg = "TMP fait l’acquisition de Maximum - société technologique de Marketing Recrutement basée aux Pays-bas. <span class='learn-more'>En savoir plus.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else if (tmpNewsInstance === "germany") {
 
-    tmpNewsMsg = "TMP verändert die Welt der Talent Acquisition weiter und übernimmt Perengo. <span class='learn-more'>Mehr erfahren</span>";
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    tmpNewsMsg = "TMP verändert die Welt der Talent Acquisition weiter und übernimmt Perengo. <span class='learn-more'>Mehr erfahren.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else if (tmpNewsInstance === "brazil") {
 
-    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    tmpNewsMsg = "TMP Adquire a Maximum - empresa de tecnologia de marketing de recrutamento sediada na Holanda. <span class='learn-more'>Saber mais.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
-    tmpNewsMsg = "A TMP continua a transformar o cenário de recrutamento com a aquisição da Perengo. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    tmpNewsMsg = "TMP adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else {
 
-    var tmpNewsMsg = "TMP continues to transform the recruitment landscape with the acquisition of Perengo. <span class='learn-more'>Learn More</span>"
-    var tmpNewsLink = "https://www.tmp.com/programmatic-jobs-media-buying/";
+    var tmpNewsMsg = "TMP Acquires Maximum – a Netherland's based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   }
 
@@ -74,7 +74,7 @@
   tmpNewsAlert.setAttribute("href", tmpNewsLink);
   tmpNewsAlert.setAttribute("data-custom-event", "true");
   tmpNewsAlert.setAttribute("data-custom-category", "Custom Event");
-  tmpNewsAlert.setAttribute("data-custom-label", "Perengo Acquisition");
+  tmpNewsAlert.setAttribute("data-custom-label", "Maximum Acquisition");
   tmpNewsAlert.innerHTML = tmpNewsMsg;
 
   setTimeout(function(){

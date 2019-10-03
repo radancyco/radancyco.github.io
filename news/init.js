@@ -33,7 +33,7 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "TMP Acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsMsg = "TMP acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
     var tmpNewsLink = "https://www.prnewswire.co.uk/news-releases/aia-worldwide-grows-its-global-footprint-with-the-acquisition-of-maximum-a-netherlands-based-recruitment-marketing-tech-firm-860544745.html";
 
   } else if (tmpNewsInstance === "canada-french") {
@@ -53,17 +53,17 @@
 
   } else if (tmpNewsInstance === "brazil") {
 
-    tmpNewsMsg = "TMP Adquire a Maximum - empresa de tecnologia de marketing de recrutamento sediada na Holanda. <span class='learn-more'>Saber mais.</span>";
+    tmpNewsMsg = "TMP adquire a Maximum - empresa de tecnologia de marketing de recrutamento sediada na Holanda. <span class='learn-more'>Saber mais.</span>";
     var tmpNewsLink = "https://www.prnewswire.com/news-releases/a-tmp-worldwide-aumenta-sua-presenca-global-com-a-aquisicao-da-maximum-empresa-de-tecnologia-de-marketing-de-recrutamento-sediada-na-holanda-843419823.html";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
     tmpNewsMsg = "TMP adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://www.prnewswire.com/news-releases/a-tmp-worldwide-aumenta-sua-presenca-global-com-a-aquisicao-da-maximum-empresa-de-tecnologia-de-marketing-de-recrutamento-sediada-na-holanda-843419823.html";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else {
 
-    var tmpNewsMsg = "TMP Acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsMsg = "TMP acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
     var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   }

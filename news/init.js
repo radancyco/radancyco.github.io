@@ -15,7 +15,7 @@
   tmpNewsCSS.setAttribute("rel", "stylesheet");
   tmpNewsCSS.setAttribute("href", "https://tmpworldwide.dev/news/init.css");
 
-  // Append CSS to DOM. 
+  // Append CSS to DOM.
 
   document.head.appendChild(tmpNewsCSS);
 
@@ -33,8 +33,8 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "TMP Acquires Maximum – a Netherland's based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsMsg = "TMP Acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsLink = "https://www.prnewswire.co.uk/news-releases/aia-worldwide-grows-its-global-footprint-with-the-acquisition-of-maximum-a-netherlands-based-recruitment-marketing-tech-firm-860544745.html";
 
   } else if (tmpNewsInstance === "canada-french") {
 
@@ -63,7 +63,7 @@
 
   } else {
 
-    var tmpNewsMsg = "TMP Acquires Maximum – a Netherland's based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsMsg = "TMP Acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
     var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   }

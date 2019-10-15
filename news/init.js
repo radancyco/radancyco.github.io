@@ -63,8 +63,8 @@
 
   } else {
 
-    var tmpNewsMsg = "TMP acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
-    var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
+    var tmpNewsMsg = "TMP acquires Carve – a UK based social media leader. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsLink = "https://blog.tmp.com/2019/10/15/were-trending-on-social-tmp-worldwide-acquires-social-media-innovator-carve/";
 
   }
 

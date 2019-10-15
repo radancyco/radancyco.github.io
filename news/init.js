@@ -33,8 +33,8 @@
 
   if(tmpNewsInstance === "aia") {
 
-    var tmpNewsMsg = "TMP acquires Maximum – a Netherlands based recruitment marketing tech firm. <span class='learn-more'>Learn more.</span>";
-    var tmpNewsLink = "https://www.prnewswire.co.uk/news-releases/aia-worldwide-grows-its-global-footprint-with-the-acquisition-of-maximum-a-netherlands-based-recruitment-marketing-tech-firm-860544745.html";
+    var tmpNewsMsg = "AIA acquires Carve – a UK based social media leader. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsLink = "https://www.prnewswire.co.uk/news-releases/aia-worldwide-acquires-uk-based-social-media-leader-carve-821667559.html";
 
   } else if (tmpNewsInstance === "canada-french") {
 
@@ -48,13 +48,13 @@
 
   } else if (tmpNewsInstance === "germany") {
 
-    tmpNewsMsg = "TMP verändert die Welt der Talent Acquisition weiter und übernimmt Perengo. <span class='learn-more'>Mehr erfahren.</span>";
-    var tmpNewsLink = "https://www.prnewswire.com/de/pressemitteilungen/tmp-worldwide-erweitert-global-prasenz-durch-akquise-von-maximum-einer-recruitment-marketing-tech-firma-825884443.html";
+    tmpNewsMsg = "TMP Worldwide übernimmt den britischen Social Media-Marktführer Carve. <span class='learn-more'>Mehr erfahren.</span>";
+    var tmpNewsLink = "https://www.finanzen.net/nachricht/aktien/tmp-worldwide-uebernimmt-den-britischen-social-media-marktfuehrer-carve-8101243";
 
   } else if (tmpNewsInstance === "brazil") {
 
-    tmpNewsMsg = "TMP adquire a Maximum - empresa de tecnologia de marketing de recrutamento sediada na Holanda. <span class='learn-more'>Saber mais.</span>";
-    var tmpNewsLink = "https://www.prnewswire.com/news-releases/a-tmp-worldwide-aumenta-sua-presenca-global-com-a-aquisicao-da-maximum-empresa-de-tecnologia-de-marketing-de-recrutamento-sediada-na-holanda-843419823.html";
+    tmpNewsMsg = "TMP Worldwide adquire a Carve, líder de mídia social do Reino Unido. <span class='learn-more'>Saber mais.</span>";
+    var tmpNewsLink = "https://www.infomoney.com.br/patrocinados/pr-newswire/tmp-worldwide-adquire-a-carve-lider-de-midia-social-do-reino-unido/";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 

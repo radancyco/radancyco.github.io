@@ -56,7 +56,7 @@
     tmpNewsMsg = "TMP Worldwide adquire a Carve, líder de mídia social do Reino Unido. <span class='learn-more'>Saber mais.</span>";
     var tmpNewsLink = "https://www.infomoney.com.br/patrocinados/pr-newswire/tmp-worldwide-adquire-a-carve-lider-de-midia-social-do-reino-unido/";
 
-  } else if (tmpNewsInstance === "brazil-latin-america") {
+  } else if (tmpNewsInstance === "brazil-latin-america") { 
 
     tmpNewsMsg = "TMP adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
     var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";

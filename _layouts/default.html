@@ -7,8 +7,9 @@
     <link rel="shortcut icon" href="https://tmpworldwide.dev/tmp-styleguide/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://tmpworldwide.dev/tmp-styleguide/crossover/theme/css/global.min.css">{% if page.localcss %}
 	  <link rel="stylesheet" href="{{ page.localcss }}">{% endif %}
-    <link rel="micropub" href="https://tmpworldwide.dev/micropub/main">
-    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+    <link href="https://indieauth.com/auth" rel="authorization_endpoint">
+    <link href="https://tokens.indieauth.com/token" rel="token_endpoint">
+    <link href="https://tmpworldwide-dev.herokuapp.com/micropub/main" rel="micropub">
     <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
     <title>{{ page.title }} - TMP Worldwide</title>
 </head>

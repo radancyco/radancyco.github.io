@@ -1,0 +1,366 @@
+---
+layout: default
+title: Accessibility Testing Baselines
+---
+
+<style>
+
+html {
+scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+  scroll-behavior: auto;
+  }
+
+}
+
+.section {
+border-radius: 10px;
+border: 1px transparent solid;
+padding: 0 1em;
+}
+
+.section:target {
+background-color: #eee;
+border: 1px #000 solid;
+color: #000;
+transition: all 300ms 1.2s ease-in-out;
+}
+
+.table-container {
+overflow-X: auto;
+}
+
+table, table th, table td {
+border: 1px #263343 solid;
+padding: 0.5em;
+}
+
+table td:nth-child(1) {
+font-weight: bold;
+}
+
+table td:nth-child(2) {
+text-align: center;
+}
+
+table td:nth-child(4) {
+white-space: nowrap;
+}
+
+table tr:nth-child(even) {
+background-color: #eee;
+}
+
+table th {
+text-align: center;
+background-color: #263343;
+color: #fff;
+}
+
+table a {
+color: #263343;
+text-decoration: underline;
+}
+
+table a[target="_blank"]::after {
+background-color: transparent;
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAclBMVEUAAAAWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmEWJmGEDiaiAAAAJXRSTlMAgMjOaRL0vvZfDrOkt26hhvrCjHXb2NKrmXlkW0QzJQhMLCQc4w6HOwAAAONJREFUOMvNkFkWgyAMRR9VpNXiVDvP0/63WGpEOETtb+8HJ/AuRgJOuoxUR12fwYnfHmtwhC9EAJ7H46LnlJ/vvjADVlR5R00pDnlid4t3gMKXvLKCCoUahqX73tasVeKY6z5PWmFm1jKVqUVKoGhzEfdCAw+bazhBwOL6Z0A5LBRdTgNYk8Dv25nvSAhzTZuTaG4k8PtS60xdAJDAcshvcQiFvesv56aKA+Fl+48Jt4zuDwqENs+aFHDFDwH/K8TgJPY8MoUSjLIy5zkJo5BQTAjt2B7j+Qotl/1mG3E2in79A5rTPUZPwwJQAAAAAElFTkSuQmCC);
+background-position: center right;
+background-repeat: no-repeat;
+background-size: contain;
+content: "";
+display: inline-block;
+height: 10px;
+margin-left: 8px;
+width: 10px;
+}
+
+table tr:focus-within, table tr:hover {
+background-color: #263343;
+color: #fff;
+}
+
+table tr:focus-within a, table tr:hover a {
+color: inherit;
+}
+
+table tr:focus-within a::after, table tr:hover a::after {
+filter: brightness(1000%);
+}
+
+</style>
+
+<p>The following WCAG 2.1 guidelines make up the baseline of accessibility issues we strive to test against in our products and websites. If there is a need to fully support WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
+
+<div class="table-container">
+
+  <table>
+    <caption></caption>
+  	<tr>
+  		<th>Success Criterion</th>
+  		<th>Level</th>
+  		<th>Synopsis</th>
+  		<th>Details</th>
+  	</tr>
+  	<tr>
+  		<td><a href="#non-text-content">1.1.1: Non-text Content</a></td>
+  		<td>A</td>
+  		<td>Provide text alternatives for non-text content.</td>
+  		<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content" target="_blank" rel="noopener">Understanding SC 1.1.1 <span class="wai">(opens in new window)</span></a></td>
+  	</tr>
+    <tr>
+      <td><a href="#captions-pre-recorded">1.2.2: Captions (Prerecorded)</a></td>
+      <td>A</td>
+      <td>Provide captions for videos with audio</td>
+  		<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded" target="_blank" rel="noopener">Understanding SC 1.2.2 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#info-and-relationships">1.3.1: Info and Relationships</a></td>
+      <td>A</td>
+      <td>Semantic markup is used appropriately. Logical structure, etc.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships" target="_blank" rel="noopener">Understanding SC 1.3.1 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#use-of-color">1.4.1: Use of Color</a></td>
+      <td>A</td>
+      <td>Don't use presentation that relies solely on color.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank" rel="noopener">Understanding SC 1.4.1 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+  	<tr>
+      <td><a href="#keyboard">2.1.1: Keyboard</a></td>
+      <td>A</td>
+      <td>Accessible by keyboard only.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" target="_blank" rel="noopener">Understanding SC 2.1.1 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#pause-stop-hide">2.2.2: Pause, Stop, Hide</a></td>
+      <td>A</td>
+      <td>Provide user controls for moving content.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide" target="_blank" rel="noopener">Understanding SC 2.2.2 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#bypass-blocks">2.4.1: Bypass Blocks</a></td>
+      <td>A</td>
+      <td>Provide a 'Skip to Content' link.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" target="_blank" rel="noopener">Understanding SC 2.4.1 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#page-titled">2.4.2: Page Titled</a></td>
+      <td>A</td>
+      <td>Use helpful and clear page titles.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled" target="_blank" rel="noopener">Understanding SC 2.4.2 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#parsing">4.1.1: Parsing</a></td>
+      <td>A</td>
+      <td>No major code errors.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing" target="_blank" rel="noopener">Understanding SC 4.1.1 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#name-role-value">4.1.2: Name, Role, Value</a></td>
+      <td>A</td>
+      <td>Build all elements for accessibility.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value" target="_blank" rel="noopener">Understanding SC 4.1.2 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#non-text-contrast">1.4.11: Non-text Contrast</a></td>
+      <td>AA</td>
+      <td>Ensure important visual information such as graphics and icons meets the same minimum contrast that is required for larger text (3:1).</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank" rel="noopener">Understanding SC 1.4.11 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#contrast-minimum">1.4.3: Contrast (Minimum)</a></td>
+      <td>AA</td>
+      <td>Contrast ratio between text and background is at least 4.5:1.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum" target="_blank" rel="noopener">Understanding SC 1.4.3 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#focus-visible">2.4.7: Focus Visible</a></td>
+      <td>AA</td>
+      <td>Ensure keyboard focus is visible and clear.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible" target="_blank" rel="noopener">Understanding SC 2.4.7 <span class="wai">(opens in new window)</span></a></td>
+    </tr>
+  </table>
+
+</div>
+
+<div id="non-text-content" class="section">
+
+  <h2>1.1.1 Non-text Content</h2>
+
+  <ul>
+    <li>Images, form image buttons, and image map hot spots have appropriate, equivalent alternative text.</li>
+    <li>Images that do not convey content, are decorative, or contain content that is already conveyed in text are given null alt text (alt="") or implemented as CSS backgrounds. All linked images have descriptive alternative text.</li>
+    <li>Equivalent alternatives to complex images are provided in context or on a separate linked page (e.g. graphs, infographics).</li>
+    <li>Form buttons have a descriptive value.</li>
+    <li>Form inputs have associated text labels.</li>
+    <li>Embedded multimedia is identified via accessible text (e.g., HTML video or audio).</li>
+    <li>Frames and iframes are appropriately titled.</li>
+  </ul>
+
+  <p><strong>Testing Tip:</strong> For images, use the Web Developer Toolbar to <a href="https://www.screencast.com/t/uTeobjpoe">view alternative text</a>. Ask yourself, is alternative text really required/accurate? Does it convey what is in the image? If you are not sure when image should have alternative text, then check out the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Alt Decision Tree</a>.</p>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="captions-pre-recorded" class="section">
+
+  <h2>1.2.2 Captions (Pre-recorded)</h2>
+
+  <ul>
+    <li>Synchronized captions are provided for non-live video (YouTube videos, etc.).</li>
+  </ul>
+
+  <p><strong>Tip:</strong> Watch videos. Are they accurate? If videos are missing captions, then reach out to <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a>.</p>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="info-and-relationships" class="section">
+
+  <h2>1.3.1 Info and Relationships</h2>
+
+  <ul>
+    <li>Semantic markup is used to designate headings (<code>&lt;h1&gt;</code>), regions/landmarks, lists (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, and <code>&lt;dl&gt;</code>), emphasized or special text (<code>&lt;strong&gt;</code>, <code>&lt;code&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;blockquote&gt;</code>, for example), etc. Semantic markup is used appropriately.</li>
+    <li>Tables are used for tabular data and data cells are associated with their headers. Data table captions, if present, are associated to data tables.</li>
+    <li>Text labels are associated with form input elements. Related form elements are grouped with fieldset/legend. ARIA labelling may be used when standard HTML is insufficient.</li>
+  </ul>
+
+  <p><strong>Testing Tip:</strong> If you ever want to view the <a href="https://www.screencast.com/t/S9n3Nwu8W">heading hierarchy</a>, the Web Developer Toolbar is great for this, too.  Headings should be well structured and not skipped.</p>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="parsing" class="section">
+
+  <h2>4.1.1 Parsing</h2>
+
+  <ul>
+    <li>Significant HTML/XHTML validation/parsing errors are avoided. Check at <a href="http://validator.w3.org/">http://validator.w3.org/</a>.</p>
+  </ul>
+
+  <p><strong>Testing Tip:</strong> The Web Developer Toolbar has the W3C Validator <a href="https://www.screencast.com/t/L0l6nSl2O">built in</a>. Only flag errors, not warnings.</p>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="page-titled" class="section">
+
+  <h2>2.4.2 Page Titled</h2>
+
+  <ul>
+    <li>The web page has a descriptive and informative page title.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="name-role-value" class="section">
+
+  <h2>4.1.2 Name, Role, Value</h2>
+
+  <ul>
+    <li>Markup is used in a way that facilitates accessibility. This includes following the HTML/XHTML specifications and using forms, form labels, frame titles, etc. appropriately.</li>
+    <li>ARIA is used appropriately to enhance accessibility when HTML is not sufficient. (e.g., <code>&lt;button aria-expanded="true"&gt;Menu&lt;/button&gt;</code>)</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="use-of-color" class="section">
+
+  <h2>1.4.1 Use of Color</h2>
+
+  <ul>
+    <li>Color is not used as the sole method of conveying content or distinguishing visual elements.</li>
+    <li>Color alone is not used to distinguish links from surrounding text unless the contrast ratio between the link and the surrounding text is at least 3:1 and an additional distinction (e.g., it becomes underlined) is provided when the link is hovered over and receives focus.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="contrast-minimum" class="section">
+
+  <h2>1.4.3 Contrast (Minimum)</h2>
+
+  <ul>
+    <li>Text and images of text have a contrast ratio of at least 4.5:1.</li>
+    <li>Large text - at least 18 point (typically 24px) or 14 point (typically 18.66px) and bold - has a contrast ratio of at least 3:1.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="non-text-contrast" class="section">
+
+  <h2>1.4.11 Non-text Contrast</h2>
+
+  <ul>
+    <li>A contrast ratio of at least 3:1 is present for differentiating graphical objects (such as icons and components of charts or graphs) and author-customized interface components (such as buttons, form controls, and focus indicators/outlines).</li>
+    <li>At least 3:1 contrast must be provided in the various states (focus, hover, active, etc.) of author-customized interactive components.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="keyboard" class="section">
+
+  <h2>2.1.1 Keyboard</h2>
+
+  <ul>
+    <li>All page functionality is available using the keyboard, unless the functionality cannot be accomplished in any known way using a keyboard (e.g., free hand drawing).</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="focus-visible" class="section">
+
+  <h2>2.4.7 Focus Visible</h2>
+
+  <ul>
+    <li>It is visually apparent which page element has the current keyboard focus (i.e., as you tab through the page, you can see where you are).</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="bypass-blocks" class="section">
+
+  <h2>2.4.1 Bypass Blocks</h2>
+
+  <ul>
+    <li>A link is provided to skip navigation and other page elements that are repeated across web pages.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>
+
+<div id="pause-stop-hide" class="section">
+
+  <h2>2.2.2 Pause, Stop, Hide</h2>
+
+  <ul>
+    <li>Automatically moving, blinking, or scrolling content (such as carousels, marquees, or animations) that lasts longer than 5 seconds can be paused, stopped, or hidden by the user.</li>
+    <li>Automatically updating content (e.g., a dynamically-updating news ticker, chat messages, etc.) can be paused, stopped, or hidden by the user or the user can manually control the timing of the updates.</li>
+  </ul>
+
+  <p><a href="#primary-content">Back to top</a></p>
+
+</div>

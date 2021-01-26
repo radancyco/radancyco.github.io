@@ -1,0 +1,31 @@
+I"�<p>Welcome to TMP Worldwide’s open design and development resource on GitHub! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us! Feel free to contribute to these documents or fork and use as a basis for your own development standards.</p>
+
+<p><a href="http://www.tmp.com/"><img src="/assets/img/tmp-standards.png" alt="TMP Worldwide" class="article-image" /></a></p>
+
+<h2 id="user-interface-standards-and-guidelines">User Interface Standards and Guidelines</h2>
+
+<p><a href="/uid/code-standards/">Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. Standards rule! Learn More →</a></p>
+
+<h2 id="resource-library">Resource Library</h2>
+
+<p><a href="/tmp-resource-library/">A library of common design patterns, resources, and functional code found on Talentbrew and many of our other custom crafted websites. Check it out →</a></p>
+
+<h2 id="code-review-process">Code Review Process</h2>
+
+<p><a href="/uid/code-review/">Provides a record of the different resources used to create the code standards guide. Learn More →</a></p>
+
+<h2 id="photoshop-guidelines">Photoshop Guidelines</h2>
+
+<p><a href="/uid/photoshop-guidelines/">Guidelines for preparing a photoshop file to be handed off to development teams. Educate Yourself →</a></p>
+
+<h2 id="education--outreach">Education &amp; Outreach</h2>
+
+<p>TMP’s UI team is filled with teachers. Here are but a few topics we have shared with our colleagues over the years.</p>
+
+<ul>
+	<li><a href="/uid/rwd-school-of-rock/">Responsive Web Design: School of Rock By Stephanie Plumeri &amp; Michael Spellacy</a></li>
+	<li><a href="/uid/respond-ie8/">Respond II: Responding to IE8 By Stephanie Plumeri</a></li>
+	<li><a href="/uid/respond">Respond: Responsive Design 101 By Stephanie Plumeri</a></li>
+</ul>
+
+:ET

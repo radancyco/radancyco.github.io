@@ -2,7 +2,7 @@ markdown: kramdown
 highlighter: rouge
 destination: _httpdocs
 url: tmpworldwide.dev
-repo: https://github.com/tmpworldwide/tmpworldwide.github.io/
+repo: https://github.com/radancyco.github.io/
 ghpage: https://tmpworldwide.dev/
 sass:
     style: :compressed

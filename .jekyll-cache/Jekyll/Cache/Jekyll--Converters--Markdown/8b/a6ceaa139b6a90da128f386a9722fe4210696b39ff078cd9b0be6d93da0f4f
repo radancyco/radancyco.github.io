@@ -2,9 +2,9 @@
 
 <p><img src="/assets/img/tmp-standards.png" alt="" class="article-image" /></p>
 
-<p>This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for TMP Worldwide.</p>
+<p>This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by Radancy designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for Radancy.</p>
 
-<p>Please note that this is a living document that changes <em>frequently</em>. You may bookmark it and check back on a regular basis or <a href="https://github.com/tmpworldwide/tmpworldwide.github.io/subscription">subscribe to notifications</a> for this repository.</p>
+<p>Please note that this is a living document that changes <em>frequently</em>. You may bookmark it and check back on a regular basis or <a href="https://github.com/radancyco.github.io/subscription">subscribe to notifications</a> for this repository.</p>
 
 <p>Help us make this document even better! <a href="#contributors">Contributions are encouraged!</a></p>
 
@@ -112,7 +112,7 @@
 
   <h2 id="general-concepts">1. General Concepts</h2>
 
-  <p>At TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving all users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as <a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a> and <a href="https://resilientwebdesign.com/">Resilient Design</a>. In this endeavor, we use the following front-end languages in the majority of our work:</p>
+  <p>At Radancy, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving all users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as <a href="https://en.wikipedia.org/wiki/Progressive_enhancement">Progressive Enhancement</a> and <a href="https://resilientwebdesign.com/">Resilient Design</a>. In this endeavor, we use the following front-end languages in the majority of our work:</p>
 
   <ul>
     <li>HTML5</li>
@@ -134,15 +134,15 @@
 
   <h3 id="operating-system-support">1.2 Operating System Support</h3>
 
-  <p>TMP supports websites and applications on the following operating systems:</p>
+  <p>Radancy supports websites and applications on the following operating systems:</p>
 
-  <p>See <a href="https://www.tmp.com/support/#operating-systems">TMP Support</a> for more details.</p>
+  <p>See <a href="https://radancy.com/support/#operating-systems">Radancy Support</a> for more details.</p>
 
   <h3 id="browser-support">1.3 Browser Support</h3>
 
-  <p>TMP supports the <strong>current</strong> and <strong>prior</strong> major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:</p>
+  <p>Radancy supports the <strong>current</strong> and <strong>prior</strong> major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:</p>
 
-  <p>See <a href="https://www.tmp.com/support/#browser">TMP Support</a> for more details.</p>
+  <p>See <a href="https://radancy.com/support/#browser">Radancy Support</a> for more details.</p>
 
   <h3 id="file-naming-conventions">1.4 File Naming Conventions</h3>
 
@@ -514,7 +514,7 @@ display: block;
 
   <h2 id="sass">5. SASS</h2>
 
-  <p>SASS is the preprocessor of choice for TMP developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.</p>
+  <p>SASS is the preprocessor of choice for Radancy developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.</p>
 
   <h3 id="sass-coding-style">5.1 SASS Coding Style</h3>
 

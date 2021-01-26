@@ -5,11 +5,9 @@ title: User Interface Standards and Guidelines
 
 <h2>Abstract</h2>
 
-![](/assets/img/tmp-standards.png){: .article-image }
+This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by Radancy designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for Radancy.
 
-This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by TMP Worldwide designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for TMP Worldwide.
-
-Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/tmpworldwide/tmpworldwide.github.io/subscription) for this repository.
+Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/radancyco.github.io/subscription) for this repository.
 
 Help us make this document even better! [Contributions are encouraged!](#contributors)
 
@@ -22,7 +20,7 @@ Help us make this document even better! [Contributions are encouraged!](#contrib
 
 ## 1. General Concepts
 
-At TMP Worldwide, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving all users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [Resilient Design](https://resilientwebdesign.com/). In this endeavor, we use the following front-end languages in the majority of our work:
+At Radancy, we embrace web standards and keep up-to-date with the latest developments within the web industry. We are committed to giving all users the best experience possible by using the latest methods and techniques, while also sticking to core principles, such as [Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) and [Resilient Design](https://resilientwebdesign.com/). In this endeavor, we use the following front-end languages in the majority of our work:
 
 * HTML5
 * CSS3
@@ -40,15 +38,15 @@ All of your prospective job candidates, regardless of physical or technological 
 
 ### 1.2 Operating System Support
 
-TMP supports websites and applications on the following operating systems:
+Radancy supports websites and applications on the following operating systems:
 
-See [TMP Support](https://www.tmp.com/support/#operating-systems) for more details.
+See [Radancy Support](https://radancy.com/support/#operating-systems) for more details.
 
 ### 1.3 Browser Support
 
-TMP supports the **current** and **prior** major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
+Radancy supports the **current** and **prior** major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
-See [TMP Support](https://www.tmp.com/support/#browser) for more details.
+See [Radancy Support](https://radancy.com/support/#browser) for more details.
 
 ### 1.4 File Naming Conventions
 
@@ -355,7 +353,7 @@ display: block;
 
 ## 5. SASS
 
-SASS is the preprocessor of choice for TMP developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
+SASS is the preprocessor of choice for Radancy developers. All preprocessed CSS should be written in SASS to ensure the interoperability of the code.
 
 ### 5.1 SASS Coding Style
 

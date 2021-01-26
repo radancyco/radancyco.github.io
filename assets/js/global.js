@@ -1,4 +1,4 @@
-// Main Javscript file for the TMP UI Standards Guide
+// Main Javscript file for the Radancy UI Standards Guide
 
 $(document).ready(function(){
 

@@ -1,11 +1,11 @@
-// TMP Notice
+// Radancy Notice
 
 #page {
 position: relative;
 transition: all 0.3s ease-in-out;
 z-index: 2;
 
-  .tmp-notice-active & {
+  .rad-notice-active & {
 
     top: 0 !important;
 
@@ -17,7 +17,7 @@ z-index: 2;
 margin-bottom: -1px;
 }
 
-#tmp-notice {
+#rad-notice {
 background-color: #032439;
 color: #fff;
 display: block;
@@ -30,7 +30,7 @@ visibility: hidden;
 width: 100%;
 z-index: 1;
 
-    .tmp-notice-active & {
+    .rad-notice-active & {
     visibility: visible;
     }
 

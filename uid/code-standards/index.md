@@ -7,7 +7,7 @@ title: User Interface Standards and Guidelines
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by Radancy designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for Radancy.
 
-Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/radancyco/radancyco.github.io/subscription) for this repository.
+Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications](https://github.com/radancyco/radancyco.github.io//subscription) for this repository.
 
 Help us make this document even better! [Contributions are encouraged!](#contributors)
 

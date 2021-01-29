@@ -11,7 +11,7 @@ margin: 0;
 overflow-x: hidden;
 padding: 0;
 position: relative;
-width: 100%; 
+width: 100%;
 
 	@include breakpoint($breaksix) {
 
@@ -55,7 +55,7 @@ z-index: 2;
 	font-size: 1.4em;
 	line-height: .65em;
 	text-decoration: none;
-	
+
 		&[title] {
 		border-bottom: 0;
 		}
@@ -74,7 +74,7 @@ z-index: 2;
 	@include breakpoint(px(400)) {
 
 		font-size: 4em;
-	
+
 	}
 
 	@include breakpoint($breaksix) {
@@ -105,34 +105,31 @@ font-size: pem(28);
 
 			$brand-color: #333;
 
+			background-color: rgba(255, 255, 255, .8);
+			border-radius: 8px;
+			border: 4px $brand-color solid;
+			color: $brand-color;
 			display: inline-block;
 			font: 800 pem(25) "Coda", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
 			letter-spacing: 0;
 			line-height: normal;
-			text-transform: uppercase;
-			color: $brand-color;
 			margin: -10px 0 10px;
 			padding: 5px;
-			border: 4px $brand-color solid;
-			border-radius: 8px;
-			background-color: rgba(255, 255, 255, .8);
+			text-transform: uppercase;
 
 			@include breakpoint($breaksix) {
 
-				position: absolute;
+			  animation: branding-iron 1s forwards;
+				border-radius: 16px;
+				border-width: 8px;
+				font-size: pem(30);
 				left: 50%;
+				margin: -95px 0 0 0;
+				min-width: 275px;
+				padding: 10px;
+				position: absolute;
 				right: 50%;
 				z-index: 3;
-				min-width: 275px;
-				margin: -95px 0 0 0;
-				padding: 10px;
-				border-width: 8px;
-				border-radius: 16px;
-				font-size: pem(30);
-				-webkit-animation: branding-iron 1s forwards;
-			    -ms-animation: branding-iron 1s forwards;
-			    -moz-animation: branding-iron 1s forwards;
-			    -animation: branding-iron 1s forwards;
 
 			}
 
@@ -207,7 +204,7 @@ line-height: 1.25em;
 
 			display: table;
 			width: 100%;
-		
+
 		}
 
 		a {
@@ -220,14 +217,14 @@ line-height: 1.25em;
 
 			&:hover, &:focus {
 
-				color: $mdorange;	
+				color: $mdorange;
 
 			}
 
 			@include breakpoint($breaksix) {
-		
+
 				font-size: 1em;
-		
+
 			}
 
 		}
@@ -241,7 +238,7 @@ line-height: 1.25em;
 		text-align: center;
 
 			&:first-child img {
-		
+
 				max-width: 425px;
 
 			}
@@ -303,9 +300,9 @@ transition: all 100ms linear;
 	&.source {
 
 		font-size: .75em;
-		
+
 		@include breakpoint($breaksix) {
-		
+
 			font-size: .5em;
 
 		}
@@ -327,7 +324,7 @@ padding: .8em;
 blockquote {
 margin: 0;
 padding: 0;
-	
+
 	img {
 
 		@include breakpoint($breaksix) {
@@ -362,33 +359,33 @@ padding: 0;
 }
 
 .video-container {
-width: 100%;
-position: relative;
+height: 0;
 padding-bottom: 56.25%;
 padding-top: 25px;
-height: 0;
+position: relative;
+width: 100%;
 
 	iframe {
+	border: 0;
+	height: 100%;
+	left: 0;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-	border: 0;
 	}
 
 }
 
 hr {
 background: $mdorange;
-border: 1px solid $mdorange;
 border-radius: 5px 5px 5px 5px;
+border: 1px solid $mdorange;
 box-shadow: -2px 2px 0 0 #000000;
 height: 5px;
 margin: 3em 0;
 }
 
-figure { 
+figure {
 margin: 1em 0;
 padding: 1em;
 border: 1px #ccc solid;
@@ -417,15 +414,15 @@ border: 1px #ccc solid;
 
 figcaption {
 display: inline-block;
-margin: .5em 0;
 font-size: pem(14);
 font-style: italic;
 line-height: 1.4;
+margin: .5em 0;
 }
 
 table {
-border-top: 1px $ltorange solid;
 border-right: 1px $ltorange solid;
+border-top: 1px $ltorange solid;
 font-size: pem(12);
 
 	@include breakpoint($breaksix) {
@@ -435,11 +432,11 @@ font-size: pem(12);
 	}
 
 	td, th {
-	border-left: 1px $ltorange solid;
 	border-bottom: 1px $ltorange solid;
+	border-left: 1px $ltorange solid;
 	padding: .5em;
 	}
-	
+
 	caption {
 	margin: .8em 0;
 	font: pem(16) $secondary-font;
@@ -465,18 +462,18 @@ text-align: center;
 
 section {
 background: #fff;
-border-radius: 3px;
-border-width: 5px;
-border-style: solid;
 border-color: $mdorange;
+border-radius: 3px;
+border-style: solid;
+border-width: 5px;
 box-shadow: -5px 5px 0 #000;
 margin: 0 auto;
 max-width: 900px;
 padding: 20px;
 position: relative;
-z-index: 1;
-transition: all 200ms linear;
 text-align: left;
+transition: all 200ms linear;
+z-index: 1;
 
 	&:nth-child(even) {
 
@@ -523,16 +520,10 @@ text-align: left;
 
 		&:nth-child(even) {
 
-			 -moz-transform: skewX(0.075deg) rotate(-0.075deg);
-		    -ms-transform: skewX(0.075deg) rotate(-0.075deg);
-		    -webkit-transform: skewX(0.075deg) rotate(-0.075deg);
 		    transform: skewX(0.075deg) rotate(-0.075deg);
 
 			> div {
 
-				 -moz-transform: skewX(-0.075deg) rotate(0.075deg);
-			    -ms-transform: skewX(-0.075deg) rotate(0.075deg);
-			    -webkit-transform: skewX(-0.075deg) rotate(0.075deg);
 			    transform: skewX(-0.075deg) rotate(0.075deg);
 
 			}
@@ -541,16 +532,10 @@ text-align: left;
 
 		&:nth-child(odd) {
 
-			    -moz-transform: skewX(-0.075deg) rotate(0.075deg);
-			    -ms-transform: skewX(-0.075deg) rotate(0.075deg);
-			    -webkit-transform: skewX(-0.075deg) rotate(0.075deg);
 			    transform: skewX(-0.075deg) rotate(0.075deg);
 
 			> div {
 
-				-moz-transform: skewX(0.075deg) rotate(-0.075deg);
-			    -ms-transform: skewX(0.075deg) rotate(-0.075deg);
-			    -webkit-transform: skewX(0.075deg) rotate(-0.075deg);
 			    transform: skewX(0.075deg) rotate(-0.075deg);
 
 			}
@@ -613,7 +598,7 @@ text-align: center;
 	@include breakpoint(px(500)) {
 
 		li {
-		display: inline;	
+		display: inline;
 		}
 
 		.button.button-big {
@@ -643,19 +628,19 @@ cursor: default;
 display: block;
 margin: auto;
 max-width: 400px;
-position: relative;
 overflow: hidden;
+position: relative;
 
 	&:after {
-	background: url(../img/pointer.png) no-repeat top right;
 	background-size: 100% auto;
-	display: block;
+	background: url(../img/pointer.png) no-repeat top right;
+	bottom: -100%;
 	content: "";
+	display: block;
 	height: 57%;
 	left: -100%;
 	position: absolute;
 	transition: all 200ms linear;
-	bottom: -100%;
 	width: 59%;
 	}
 
@@ -697,7 +682,7 @@ overflow: hidden;
 		&.taller-smallscreen {
 
 			a:first-child {
-			
+
 				width: auto;
 
 			}
@@ -739,7 +724,6 @@ overflow: hidden;
 	}
 
 	.hp-smallscreen, .multi-smallscreen {
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	height: 0;
 	max-height: 533px;
@@ -776,8 +760,8 @@ width: 100%;
 
 input[type="button"], .button {
 background: $yellow;
-border: 1px solid #000;
 border-radius: 5px;
+border: 1px solid #000;
 box-shadow: -4px 4px 0 0 $mdorange, -3px 3px 0 0 $mdorange, -2px 2px 0 0 $mdorange, -1px 1px 0 0 $mdorange, -5px 5px 0 0 #000;
 color: #333;
 margin: 0 0 0 5px;
@@ -794,10 +778,10 @@ transition: all 100ms linear;
 
 	&.button-big {
 
+		display: inline-block;
 		font-size: 1.08em;
 		font-weight: bold;
 		margin: 1em auto;
-		display: inline-block;
 		padding: .5em 1em;
 
 	}
@@ -844,7 +828,7 @@ transition: all 100ms linear;
 			}
 
 			@include breakpoint($breaksix) {
-				
+
 				display: table;
 
 				li {
@@ -872,7 +856,7 @@ transition: all 100ms linear;
 			}
 
 			@include breakpoint($breaksix) {
-				
+
 				font-size: .7em;
 				padding: 10px 0;
 				text-align: center;
@@ -935,18 +919,17 @@ transition: all 100ms linear;
 
 			&:after {
 
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
 				background: url(../img/aia/hand.png) no-repeat top left/auto 100%;
 				bottom: -25%;
+				box-sizing: border-box;
 				content: "";
 				display: block;
 				height: 0;
-				right: -100%;
 				padding-bottom: 100%;
 				position: absolute;
-				width: 100%;
+				right: -100%;
 				transition: all 200ms ease;
+				width: 100%;
 
 			}
 
@@ -973,8 +956,8 @@ transition: all 100ms linear;
 
 	#skip-nav {
 	background: $yellow;
-	border: 1px solid #000;
 	border-radius: 3px;
+	border: 1px solid #000;
 	box-shadow: -4px 4px 0 0 $mdorange, -3px 3px 0 0 $mdorange, -2px 2px 0 0 $mdorange, -1px 1px 0 0 $mdorange, -5px 5px 0 0 #000;
 	display: block;
 	height: 50px;
@@ -982,8 +965,8 @@ transition: all 100ms linear;
 	position: absolute;
 	right: 10px;
 	text-indent: -9999em;
-	transition: all 100ms linear;
 	top: 10px;
+	transition: all 100ms linear;
 	width: 50px;
 	z-index: 3;
 
@@ -1002,7 +985,7 @@ transition: all 100ms linear;
 			text-indent: 0;
 			top: 50%;
 			width: 29px;
-			
+
 		}
 
 		&:hover, &:focus {
@@ -1043,8 +1026,8 @@ text-align: center;
 	}
 
 	li {
-	margin-right: 1em;
 	display: inline-block;
+	margin-right: 1em;
 
 		&:last-child {
 		margin-right: 0;
@@ -1053,4 +1036,3 @@ text-align: center;
 	}
 
 }
-

@@ -1,7 +1,7 @@
 
 (function() {
 
-  var pageElement = document.getElementById("tmp-syndicate");
+  var pageElement = document.getElementById("rad-syndicate");
   var pageElementHref = pageElement.children[0];
   var pageError = "<p>We're sorry, the content you are looking for can't be displayed right now. However, you can <a href='" + pageElementHref + "'>access it directly</a>.</p>";
   var request = new XMLHttpRequest();
@@ -52,12 +52,12 @@
     ViewBag.TertiaryLayout = "true";
 }
 
-<div id="tmp-syndicate">
+<div id="rad-syndicate">
 
-    <a href="https://tmpworldwide.dev/support/">View Support Guidelines</a>
+    <a href="https://radancy.dev/support/">View Support Guidelines</a>
 
 </div>
 
-<script id="tmp-syndicate-init" src="https://tmpworldwide.dev/syndicate/init.js"></script>
+<script id="rad-syndicate-init" src="https://tmpworldwide.dev/syndicate/init.js"></script>
 
 */

@@ -1,11 +1,12 @@
 ---
-layout: default
 title: Guidelines for Preparing Photoshop Files for Web Developers
 ---
 
 Last Updated: **12/31/2017**
 
-## 1.0 Introduction
+{% include toc.md %}
+
+## 1. Introduction
 
 This document gives general guidelines for art directors on setting up Photoshop files to hand off to web developers for programming web pages.
 
@@ -13,9 +14,9 @@ This document gives general guidelines for art directors on setting up Photoshop
 
 While the development process is generally very structured, by contrast, the design process is quite often spontaneous and full of experimentation. This can lead to a host of unused and unnamed layers that don’t end up as part of the final approved design. For developers, sifting through many unnamed layers (Layer 1, Layer 23 copy, etc.) can be confusing and time consuming.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 2.0 Prepping the File  
+## 2. Prepping the File  
 
 If possible, create separate Photoshop Document files for the homepage and each separate template page layout (example: secondary, tertiary, and specialized pages). As efficient as it may seem to use one PSD for all page layouts, it’s actually easier to work with multiple small PSD files, each containing a single template.
 
@@ -40,17 +41,17 @@ Also, if the client supplied brand specs for the development of their websites, 
 
 ![](img/ppdwf-palette.jpg)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 3.0 Common Elements
+## 3. Common Elements
 
 Common elements, such as images, which are placed in the same area on a page or are part of the navigation, should be the same width and height. For instance, an employee profile page will most likely have a large image of the employee. These images should be consistent in size, as well as thumbnail images used as navigation.
 
 Common elements, if **_possible_**, could have their own PSD file to the width and height of the element, instead of creating a PSD file for each page, especially when these pages have the same layout. If each page has been laid out for the client’s approval, this process is not necessary.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 4.0 Navigation and Button States
+## 4. Navigation and Button States
 
 Navigation elements sometimes get overlooked but should have at least two and maybe three states of user interaction that the developer will need to define in the style sheet. Place each state on its own layer name to correspond to its function, such as topnav, topnav:hover, etc.  This also should be done for any type of button. As mentioned later within this document, these elements should be grouped in their own folder.
 
@@ -58,9 +59,9 @@ This will allow the developer to easily create sprite groups of navigation or bu
 
 ![](img/ppdwf-sprite-groups.jpg)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 5.0 Flattening Artwork
+## 5. Flattening Artwork
 
 Sometimes, flattening layers, such as complex graphics, is necessary to preserve the approved design and to combine multiple layered elements into a single layer, so that the developer does not need to guess which layer goes with another. Examples of this would be a base layer which is being used as a clipping mask and secondary layers that are being clipped by the base layer; photomontages or a group of layers that comprise the background of the site; or even a photo used on the site.
 
@@ -114,9 +115,9 @@ If you're designing an icon create it in illustrator and embed as a smart object
 
 The web is a dynamic environment, so make sure that any complex background graphics fit. Check that the image or images extend beyond the right and bottom of the browser window so that the images are large enough to accommodate an expanded browser window. This is especially important now because responsive websites can be viewed on many devices.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 6.0 Organizing the Layers Panel
+## 6. Organizing the Layers Panel
 
 The first item is to delete all unnecessary layers, especially those duplicate layers, which were created to test ideas during the design process.
 
@@ -128,7 +129,7 @@ A suggested best practice would be to create a folder structure when creating th
 
 ![](img/name-all-layers.jpg)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ### 6.2 Basic Folder Structure
 
@@ -144,9 +145,9 @@ Within the navigation, layers or folders could have “hover,” “off,” and 
 
 ![](img/folder-states.jpg)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
-## 7.0 Finalizing Files
+## 7. Finalizing Files
 
 This process may be little too structured for most art directors, especially when the art director is caught in the throes of a great design, but it may make the art director’s life easier when they need to go in and make client changes.
 
@@ -154,7 +155,7 @@ As we all know, art directors and developers do not always think alike. Whereas 
 
 There is certainly no one right way to organize PSD files, so these are suggestions. The art directors may want to reach out to the developers, or the developers may reach out to the art directors.
 
-## 8.0 Checklist
+## 8. Checklist
 
 * Company’s branding specs
 * Make sure colors are consistent throughout all PSDs

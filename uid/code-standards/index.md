@@ -10,12 +10,7 @@ Please note that this is a living document that changes *frequently*. You may bo
 
 Help us make this document even better! [Contributions are encouraged!](#contributors)
 
-<section id="our-standards" markdown="block">
-
-<h3 id="table-of-contents">Table of Contents</h3>
-
-* TOC
-{:toc}
+{% include toc.md %}
 
 ## 1. General Concepts
 
@@ -67,7 +62,7 @@ logo-1.png
 doc-how-to-apply.pdf
 coffee-shop.jpg</code></pre>
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 2. Optimization
 
@@ -147,7 +142,7 @@ JavaScript should be minified if saving memory is worth sacrificing readability.
 
 All third-party libraries should be minified unless some sort of customization has been made to it and requires readability.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 3. Markup
 
@@ -210,7 +205,7 @@ padding: .5em;
 
 }</code></pre>
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 4. CSS
 
@@ -348,7 +343,7 @@ display: block;
   &lt;li&gt;&lt;a href="#link-4"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 5. SASS
 
@@ -390,7 +385,7 @@ It is very important that all UI Developers have a consistent and uniform struct
 ├── views/       Page-specific styles
 └── global.scss  Primary SASS file</code></pre>
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 6. JavaScript
 
@@ -417,7 +412,7 @@ It is very important that all UI Developers have a consistent and uniform struct
     * `CONSTANT_NAME` (UPPER_CASE)
 * End all variable assignments, function calls, and `return` statements with a `;`.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 7. Images
 
@@ -443,7 +438,7 @@ To aid in adhering to our [Performance Budget](#performance-budget), it's recomm
 
 If you're not using a build tool, such as [Grunt](https://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 8. Git
 
@@ -458,7 +453,7 @@ To configure Git to use the commit template:
 
 When you make a new commit, do not use the `-m` option. Instead just use `git commit` and let Git create a new commit message using the template.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 9. Patterns & Anti-patterns
 
@@ -472,7 +467,7 @@ If new windows must be opened, please ensure they are being implemented properly
 
 The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interacted with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 10. Recommended Tools
 
@@ -500,7 +495,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
     * [SublimeLinter-html-tidy](https://sublime.wbond.net/packages/SublimeLinter-html-tidy)
     * [SublimeLinter-jshint](https://sublime.wbond.net/packages/SublimeLinter-jshint)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 11. Publications
 
@@ -526,4 +521,4 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
 * [Anything written by Scott O'Hara](https://www.scottohara.me/writing/)
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }

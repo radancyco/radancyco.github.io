@@ -4,11 +4,13 @@ title: Code Review Process
 
 Last Updated: **12/31/2017**
 
+{% include toc.md %}
+
 ## 1. Overview
 
 Code reviews can be defined as the systematic review of code by peers which reduces defects, spreads code ownership, and mentors developers both experienced and new to the team. They must not be rigid or rigorous so that they encourage and make the team feel free to discuss best coding practices.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 2. Hurdles of Adoption
 
@@ -24,7 +26,7 @@ Defects found should be celebrated since it is a learning experience and proof t
 
 Code reviews are typically non-conforming. Depending on the level of detail the reviews are assessed, they can be molded to fit whatever current processes are already in place. For example, more detailed reviews could be implemented early on to bring the entire team to a more even level of style, correctness, and altruism. As the team starts to get on the same page, review times and detail can decrease.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 3. Code Review Process
 
@@ -34,7 +36,7 @@ Reviewers will be provided a spreadsheet that contains a list of items from the 
 
 After reviewing the code, the issue list created by the reviewer will be sent to the original developer. If it is required, the two can set a meeting to discuss the issues found either face-to-face or over the phone. Major issues flagged need to be fixed by the original developer if they can potentially lead to problems in the site. Other issues are up to the developer to decide based upon the time and weight of the issues. After completion, the issues document should then be sent to the standards mod in order to store and evaluate potential changes to the standards based on the findings. At this point the review process is complete and the developer should move the project into QA where it will continue on with the normal lifecycle.
 
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
+[Return to Table of Contents](#toc){: .back-to-toc }
 
 ## 4. Code Review Workflow
 

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">{% if page.noindex %}
 	  <meta name="robots" content="noindex, nofollow">{% endif %}
-    <link rel="shortcut icon" href="https://tmpworldwide.dev/tmp-styleguide/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://tmpworldwide.dev/tmp-styleguide/crossover/theme/css/global.min.css">{% if page.localcss %}
+    <link rel="shortcut icon" href={{ site.git-url }}/tmp-styleguide/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ site.git-url }}/tmp-styleguide/crossover/theme/css/global.min.css">{% if page.localcss %}
 	  <link rel="stylesheet" href="{{ page.localcss }}">{% endif %}
     <link href="https://indieauth.com/auth" rel="authorization_endpoint">
     <link href="https://tokens.indieauth.com/token" rel="token_endpoint">
@@ -24,7 +24,7 @@
 
 				<header id="primary-header">
 
-					<h1 id="primary-header-logo"><a href="https://radancy.com/"><img src="https://tmpworldwide.dev/tmp-styleguide/crossover/theme/img/global/tmp-logo.svg" alt="Radancy"></a></h1>
+					<h1 id="primary-header-logo"><a href="https://radancy.com/"><img src="{{ site.git-url }}/tmp-styleguide/crossover/theme/img/global/tmp-logo.svg" alt="Radancy"></a></h1>
 
 					<p id="btn-skip-nav"><a href="#primary-content"><b>Skip to Main Content</b></a></p>
 
@@ -77,15 +77,15 @@
 
 					<h2 id="contributors">Contributors</h2>
 
-					<p><a href="{{ site.repo }}graphs/contributors">The Radancy UID Team</a></p>
+					<p><a href="{{ site.repo }}graphs/contributors">The {{ site.company-name }} UID Team</a></p>
 
-					<p>If you wish to contribute, <a href="https://guides.github.com/activities/forking/">fork</a> this <a href="{{ site.repo }}">project</a>, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</p>
+					<p>If you wish to contribute, <a href="https://guides.github.com/activities/forking/">fork</a> this <a href="{{ site.repo }}">/project</a>, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</p>
 
 					<p>New to GitHub? <a href="https://guides.github.com/activities/hello-world/">Learn the basics with the guide</a> and <a href="https://guides.github.com/introduction/flow/">learn the GitHub flow</a>.</p>
 
 					<h2 id="qa-a11y">Quality Assurance and Accessibility</h2>
 
-		        	<p>All patterns, layouts, and functionality are tested against our <a href="https://radancy.com/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.0 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}issues">open up an issue</a> and let us know about it or contact <a rel="me" href="mailto:spell@spellacy.net">Michael Spellacy</a>.</p>
+		        	<p>All patterns, layouts, and functionality are tested against our <a href="{{site.company-url}}/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools and methods. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.1 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}/issues/">open up an issue</a> and let us know about it or contact <a href="mailto:{{site.owner-email}}">{{ site.owner-name }}</a>.</p>
 
 				</section>
 
@@ -97,7 +97,7 @@
 
 		<footer id="primary-footer">
 
-		    <h1 id="primary-footer-logo"><a href="/"><img src="https://tmpworldwide.dev/tmp-styleguide/crossover/theme/img/global/tmp-logo-drk.svg" alt="Radancy"></a></h1>
+		    <h1 id="primary-footer-logo"><a href="/"><img src="{{ site.git-url }}/tmp-styleguide/crossover/theme/img/global/tmp-logo-drk.svg" alt="Radancy"></a></h1>
 
 			<h2 id="primary-footer-subtitle">Build Your Talent</h2>
 
@@ -134,10 +134,10 @@
 
     <script src="/js/ga.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://tmpworldwide.dev/tmp-styleguide/crossover/theme/js/global.min.js"></script>{% if page.globaljs %}
+    <script src="{{ site.git-url }}/tmp-styleguide/crossover/theme/js/global.min.js"></script>{% if page.globaljs %}
 	<script src="{{ page.globaljs }}"></script>{% endif %}{% if page.localjs %}
 	<script src="{{ page.localjs }}"></script>{% endif %}
-  <script id="tmp-news" src="https://tmpworldwide.dev/news/init.js"></script>
+  <script id="tmp-news" src="{{ site.git-url }}/news/init.js"></script>
 
 </body>
 </html>

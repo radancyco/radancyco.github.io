@@ -1,7 +1,7 @@
 
 ## [User Interface Standards and Guidelines](/uid/code-standards/)
 
-Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by Radancy designers and developers. Standards rule!
+Best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by {{ site.company-name }} designers and developers. Standards rule!
 
 ## [Resource Library](/tmp-resource-library/)
 

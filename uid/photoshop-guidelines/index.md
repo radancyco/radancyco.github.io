@@ -86,7 +86,7 @@ Just because a font can be used on the web does not mean it should be used for a
 
 ### 5.3 Image Optimization
 
-**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also continue to adhering to our [Performance Budget](https://tmpworldwide.dev/uid/code-standards/#performance-budget). There are various tools for this including (but not limited to):
+**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also continue to adhering to our [Performance Budget]({{ site.git-url }}/uid/code-standards/#performance-budget). There are various tools for this including (but not limited to):
 
 * [Tiny PNG](https://tinypng.com/) (Online Tool, not only png)
 * [Compressor.io](https://compressor.io/) (Online Tool)

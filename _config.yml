@@ -1,11 +1,25 @@
-markdown: kramdown
-highlighter: rouge
-destination: _httpdocs
-url: tmpworldwide.dev
-repo: https://github.com/radancyco/radancyco.github.io/
-ghpage: https://tmpworldwide.dev/
-sass:
-    style: :compressed
+charset: utf-8
+company-name: Radancy
+company-url: https://radancy.com
+defaults:
+-
+  values:
+    layout: "default"
 exclude: [
-  README.md
+  README.md,
+  CNAME
 ]
+destination: _httpdocs
+git-name: Web Standards
+git-url: https://tmpworldwide.dev
+highlighter: rouge
+lang: en-US
+markdown: kramdown
+owner-name: Michael Spellacy
+owner-email: michael.spellacy@radancy.com
+owner-image: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+permalink: /:title/
+repo: https://github.com/radancyco/radancyco.github.io
+sass:
+  style: :compressed
+theme-color: "#6E00EE"

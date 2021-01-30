@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Development Standards, Guidelines, Tools and Best Practices
 ---
 

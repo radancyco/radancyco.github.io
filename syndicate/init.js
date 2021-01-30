@@ -1,3 +1,6 @@
+---
+layout: null
+---
 
 (function() {
 
@@ -54,10 +57,10 @@
 
 <div id="rad-syndicate">
 
-    <a href="https://radancy.dev/support/">View Support Guidelines</a>
+    <a href="{{ site.git-url }}/support/">View Support Guidelines</a>
 
 </div>
 
-<script id="rad-syndicate-init" src="https://tmpworldwide.dev/syndicate/init.js"></script>
+<script id="rad-syndicate-init" src="{{ site.git-url }}/syndicate/init.js"></script>
 
 */

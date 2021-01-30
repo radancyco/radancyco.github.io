@@ -1,3 +1,6 @@
+---
+layout: null
+---
 /*
 
   Radancy News
@@ -13,7 +16,7 @@
 
   tmpNewsCSS.setAttribute("id", "rad-news-css");
   tmpNewsCSS.setAttribute("rel", "stylesheet");
-  tmpNewsCSS.setAttribute("href", "https://tmpworldwide.dev/news/init.css");
+  tmpNewsCSS.setAttribute("href", "{{ site.git-url }}/news/init.css");
 
   // Append CSS to DOM.
 
@@ -38,32 +41,32 @@
 
   } else if (tmpNewsInstance === "canada-french") {
 
-    var tmpNewsMsg = "Radancy acquiert le leader britannique des médias sociaux Carve. <span class='learn-more'>En savoir plus.</span>";
+    var tmpNewsMsg = "{{ site.company-name }} acquiert le leader britannique des médias sociaux Carve. <span class='learn-more'>En savoir plus.</span>";
     var tmpNewsLink = "https://www.prnewswire.com/news-releases/tmp-worldwide-acquiert-le-leader-britannique-des-medias-sociaux-carve-800844547.html";
 
   } else if (tmpNewsInstance === "france") {
 
-    var tmpNewsMsg = "Radancy acquiert le leader britannique des médias sociaux Carve. <span class='learn-more'>En savoir plus.</span>";
+    var tmpNewsMsg = "{{ site.company-name }} acquiert le leader britannique des médias sociaux Carve. <span class='learn-more'>En savoir plus.</span>";
     var tmpNewsLink = "https://www.prnewswire.com/news-releases/tmp-worldwide-acquiert-le-leader-britannique-des-medias-sociaux-carve-800844547.html";
 
   } else if (tmpNewsInstance === "germany") {
 
-    tmpNewsMsg = "Radancy übernimmt den britischen Social Media-Marktführer Carve. <span class='learn-more'>Mehr erfahren.</span>";
+    tmpNewsMsg = "{{ site.company-name }} übernimmt den britischen Social Media-Marktführer Carve. <span class='learn-more'>Mehr erfahren.</span>";
     var tmpNewsLink = "https://www.finanzen.net/nachricht/aktien/tmp-worldwide-uebernimmt-den-britischen-social-media-marktfuehrer-carve-8101243";
 
   } else if (tmpNewsInstance === "brazil") {
 
-    tmpNewsMsg = "Radancy adquire a Carve, líder de mídia social do Reino Unido. <span class='learn-more'>Saber mais.</span>";
+    tmpNewsMsg = "{{ site.company-name }} adquire a Carve, líder de mídia social do Reino Unido. <span class='learn-more'>Saber mais.</span>";
     var tmpNewsLink = "https://www.infomoney.com.br/patrocinados/pr-newswire/tmp-worldwide-adquire-a-carve-lider-de-midia-social-do-reino-unido/";
 
   } else if (tmpNewsInstance === "brazil-latin-america") {
 
-    tmpNewsMsg = "Radancy adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
+    tmpNewsMsg = "{{ site.company-name }} adquiere Maximum: empresa de tecnología de marketing de reclutamiento con sede en Holanda. <span class='learn-more'>Saber mais.</span>";
     var tmpNewsLink = "https://blog.tmp.com/2019/10/03/think-globally-succeed-locally-what-tmp-worldwides-acquisition-of-netherlands-based-maximum-means-for-clients/";
 
   } else {
 
-    var tmpNewsMsg = "Radancy acquires Carve – a UK based social media leader. <span class='learn-more'>Learn more.</span>";
+    var tmpNewsMsg = "{{ site.company-name }} acquires Carve – a UK based social media leader. <span class='learn-more'>Learn more.</span>";
     var tmpNewsLink = "https://blog.tmp.com/2019/10/15/were-trending-on-social-tmp-worldwide-acquires-social-media-innovator-carve/";
 
   }

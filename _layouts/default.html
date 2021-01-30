@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="{{ site.lang }}" class="no-js">
 <head>
-    <meta charset="utf-8">
+    <meta charset="{{ site.charset }}">
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
 	  <meta content="noindex, nofollow" name="robots">{% endif %}
-    <link href="https://tmpworldwide.dev/rad-styleguide/favicon.png" rel="icon">
-    <link rel="stylesheet" href="https://tmpworldwide.dev/rad-styleguide/init.css">{% if page.localcss %}
-    <link rel="stylesheet" href="{{ page.localcss }}">{% endif %}
+    <link href="{{ site.git-url }}/rad-styleguide/favicon.png" rel="icon">
+    <link href="{{ site.git-url }}/rad-styleguide/init.css" rel="stylesheet">{% if page.localcss %}
+    <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
     <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
-    <title>{{ page.title }} - Radancy</title>
+    <title>{{ page.title }} - {{ site.company-name }}</title>
 </head>
 
 <body id="rad-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}">
 
   <div id="page">
 
-    <header>
+    <header id="banner">
 
-      <a href="https://www.radancy.com"><img src="https://tmpworldwide.dev/rad-styleguide/logo.svg" alt="Radancy"> <span>Web Standards</span></a>
+      <a href="{{ site.company-url }}"><img src="{{ site.git-url }}/rad-styleguide/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
 
     </header>
 
@@ -47,7 +47,7 @@
 
         <h2>Contribute</h2>
 
-        <p><a href="{{ site.repo }}graphs/contributors">The Radancy UID Team</a></p>
+        <p><a href="{{ site.sorce-code }}/graphs/contributors">The {{ site.company-name }} UID Team</a></p>
 
         <p>If you wish to contribute, <a href="https://guides.github.com/activities/forking/">fork</a> this <a href="{{ site.repo }}">project</a>, make some changes, and <a href="https://guides.github.com/activities/forking/#making-a-pull-request">create a pull request</a>.</p>
 
@@ -55,15 +55,15 @@
 
         <h2>Quality Assurance</h2>
 
-        <p>All patterns, layouts, and functionality are tested against our <a href="https://radancy.com/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools and methods. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.1 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}issues">open up an issue</a> and let us know about it or contact <a href="mailto:michael.spellacy@radancy.com">Michael Spellacy</a>.</p>
+        <p>All patterns, layouts, and functionality are tested against our <a href="{{site.company-url}}/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools and methods. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.1 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}/issues/">open up an issue</a> and let us know about it or contact <a href="mailto:{{site.owner-email}}">{{ site.owner-name }}</a>.</p>
 
       </section>
 
     </main><!--/#primary-content-->
 
-    <footer>
+    <footer id="contentinfo">
 
-      <p><small>&copy; {{ "now" | date: "%Y" }} Radancy. An equal opportunity employer.</small></p>
+      <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer.</small></p>
 
     </footer>
 

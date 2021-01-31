@@ -448,7 +448,7 @@ When committing changes to a repository, use the standardized commit message tem
 
 To configure Git to use the commit template:
 
-1. [Download the standardized commit message template](/docs/commit-template.txt) and place it in a permanent location on your local hard drive.
+1. [Download the standardized commit message template](../../docs/commit-template.txt) and place it in a permanent location on your local hard drive.
 1. From your shell, type `git config --global commit.template path/to/commit/message`. Be sure to replace `path/to/commit/message` with the actual path to the commit message template.
 
 When you make a new commit, do not use the `-m` option. Instead just use `git commit` and let Git create a new commit message using the template.
@@ -484,7 +484,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 
 * [Package Control](https://sublime.wbond.net/)
 * [EditorConfig](https://sublime.wbond.net/packages/EditorConfig)
-    * [Download our standard EditorConfig file](/docs/editorconfig.txt), rename it to `.editorconfig`, and place it in your project root.
+    * [Download our standard EditorConfig file](../../docs/editorconfig.txt), rename it to `.editorconfig`, and place it in your project root.
 * [Emmet](https://sublime.wbond.net/packages/Emmet)
 * [HTML-CSS-JS Prettify](https://sublime.wbond.net/packages/HTML-CSS-JS%20Prettify)
 * [Nettuts+ Fetch](https://sublime.wbond.net/packages/Nettuts%2B%20Fetch)
@@ -502,13 +502,14 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 ### 11.1 Required Reading
 
 * [A Dao of Web Design by John Allsopp](https://alistapart.com/article/dao)
-* [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
 * [Ethical Design Manifesto](https://2017.ind.ie/)
+* [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
 
 ### 11.2. (Highly) Recommended Reading
 
 * [Accessibility for Everyone by Laura Kalbag](https://abookapart.com/products/accessibility-for-everyone/)
 * [Adaptive Web Design (1st Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)
+* [Anything written by Scott O'Hara](https://www.scottohara.me/writing/)
 * [DOM Scripting: Web Design with JavaScript and the Document Object Model by Jeremy Keith and Jeffery Sambells](https://www.amazon.com/DOM-Scripting-Design-JavaScript-Document/dp/1430233893)
 * [Designing with Progressive Enhancement: Building the Web that Works for Everyone by Todd Parker, Scott Jehl, Maggie Costello Wachs, Patty Toland](https://www.amazon.com/Designing-Progressive-Enhancement-Building-Everyone/dp/0321658884/ref=sr_1_1?s=books&ie=UTF8&qid=1422386916&sr=1-1&keywords=progressive+enhancement)
 * [Designing with Web Standards (3rd Edition) by Jeffery Zeldman](https://www.amazon.com/Designing-Web-Standards-3rd-Edition/dp/0321616952)
@@ -519,6 +520,5 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Mobile First by Luke Wroblewski](https://www.abookapart.com/products/mobile-first)
 * [Responsive Web Design (2nd Edition) by Ethan Marcotte](https://www.abookapart.com/products/responsive-web-design)
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
-* [Anything written by Scott O'Hara](https://www.scottohara.me/writing/)
 
 [Return to Table of Contents](#toc){: .back-to-toc }

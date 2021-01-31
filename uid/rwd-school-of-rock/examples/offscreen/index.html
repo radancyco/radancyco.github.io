@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="css/menu.css">
+	<meta content="width=device-width" name="viewport">
+	<link href="css/menu.css" rel="stylesheet">
 	<script>document.getElementsByTagName('html')[0].className = "js";</script>
 </head>
 
@@ -68,7 +68,7 @@
 								<h1>Headline 4</h1>
 
 								<p>Cupcake ipsum dolor sit amet. Carrot cake apple pie candy canes sugar plum chocolate. Jelly brownie sweet roll gingerbread marzipan sesame snaps wafer pie. Cupcake dessert jelly beans cheesecake tiramisu topping fruitcake toffee. Muffin drag&eacute;e applicake pudding pie donut ice cream. Jujubes cotton candy caramels. Caramels danish biscuit powder. Marshmallow marshmallow pastry chocolate gummies brownie tiramisu chocolate bar pie. Cupcake chocolate cake ice cream tart jelly beans marzipan.</p>
-						
+
 							</div>
 
 						</li>
@@ -198,12 +198,12 @@ function moveSecondaryNav(position) {
 
 	switch (position) {
 
-		case 'header': 
+		case 'header':
 
 		if ($('nav #secondary-nav')) {
 
 			$('#secondary-nav').remove();
-			
+
 			$('header').append(secondarynav);
 		}
 
@@ -214,7 +214,7 @@ function moveSecondaryNav(position) {
 		if ($('header #secondary-nav')) {
 
 			$('#secondary-nav').remove();
-			
+
 			$('nav').append(secondarynav);
 
 		}
@@ -362,7 +362,7 @@ function openTabContent(elem) {
 
 				$(tabs[i]).parent('li').append(openpanel);
 
-			}			
+			}
 
 		}
 

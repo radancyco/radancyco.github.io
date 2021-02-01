@@ -74,13 +74,13 @@ Check each completed project using the [W3C Markup Validation Service](https://v
 
 Many browser add-ons and development tools have validation built right in, so be sure to use them.
 
-<div id="axe-core" class="callout accessibility" markdown="1">
+<section id="axe-core" class="callout-a11y" markdown="1">
 
 <h2>Accessibility Testing</h2>
 
 A really great tool to have at your disposal is Deque System's [aXe extension](https://www.deque.com/products/axe/). If you are interested in including aXe testing within your local development or build process, please see [Accessibility Testing with aXe-core](https://www.deque.com/products/axe-core).
 
-</div>
+</section>
 
 ### 2.2 Page Load Speed
 
@@ -112,13 +112,13 @@ Our performance budget is:
 
 Make all efforts to optimize video as much as possible—especially if it is being self-hosted. [Handbrake](https://handbrake.fr/) is a very useful tool for this task. There are lots of great tutorials on the web that can teach you how to use Handbrake and tighten up the screws for optimal video streaming and playback.
 
-<div id="video-captions" class="callout accessibility" markdown="1">
+<section id="video-captions" class="callout-a11y" markdown="1">
 
 <h2>Video Captions</h2>
 
 Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
 
-</div>
+</section>
 
 ### 2.6 Minify
 
@@ -424,13 +424,13 @@ While extracting images from a creative design, it's important to consider which
 * **.png** &mdash; PNG is a lossless format (larger file size) and is recommended in situations where the quality of the image is important, or where transparency is required. A possible use-case for a PNG image is a clients' logo, where the quality of the logo is important and may contain transparent sections around it.
 * **.svg** &mdash; SVG is an older vector image format that has recently become a more viable option for the web. SVG is recommended for more simple images that need to scale or retain sharpness on a number of different screen densities. SVG also supports transparency. A great use-case for the SVG format would be, again, a logo or icons.
 
-<div id="alternative-text" class="callout accessibility" markdown="1">
+<section id="alternative-text" class="callout-a11y" markdown="1">
 
 <h2>Alternative Text</h2>
 
 Alternative text is very important to assistive technology users. If an image has text in it or is relevant to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alternative Text Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
-</div>
+</section>
 
 ### 7.2 Image Sprites
 

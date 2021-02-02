@@ -1,0 +1,278 @@
+---
+layout: rwd-school-of-rock
+title: "Creative Session: Fall 2013 - Week 2"
+scripts: true
+section: creative-fall-2013-week-2
+---
+
+<h2 class="subtitle">Fall Semester: 2013</h2>
+
+<section id="dom">
+
+	<div>
+
+		<h2>The DOM</h2>
+
+		<p>Designers don't also need to be developers, but it never hurts to have a baseline understanding of how a PSD becomes HTML. While PSDs are strutured with layers, HTML is structured with the DOM.</p>
+
+		<ul class="dom-images" role="presentation">
+			<li><a href="http://www.imdb.com/title/tt0068646/">The Don<img src="../../../img/don.jpg" alt="Don Vito Corleone"></a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Document_Object_Model">The DOM<img src="../../../img/dom.jpg" alt="DOM diagram"></a></li>
+		</ul>
+
+		<h3>Document Object Model</h3>
+
+		<ul>
+			<li>Websites are ultimately text files (documents)</li>
+			<li>From a structural standpoint, content needs to maintain the same order on all devices - should not "cut and paste" or change module order as screen space expands</li>
+			<li>Having a good content strategy makes it easy to properly order items on a page - know what users want to access first</li>
+			<li><a href="http://nissan-jobs.tmpqa.com">View the source, Luke</a></li>
+		</ul>
+
+		<h3>Leave the DOM. Enhance the experience.</h3>
+
+		<ul>
+			<li>Developers see sites as one long document, but users don't have to</li>
+			<li>Help users avoid thumb fatigue - add helpers for easier navigation
+
+				<ul>
+					<li>Mobile menu buttons (more on that in a moment)</li>
+					<li>"Back to top" jump links</li>
+					<li><a href="http://nissan-jobs.tmpqa.com/locations.html">Expandable sections</a> (for both mobile and desktop)</li>
+				</ul>
+
+			</li>
+			<li>Do not be fooled by the mythical "fold"
+
+				<ul>
+					<li>Every piece of content on the site does not need to be visible on page load</li>
+					<li>Every page is different - longer pages may be necessary <a href="http://nissan-jobs.tmpqa.com/vision.html">in some cases</a></li>
+					<li>Use carousels <a href="http://shouldiuseacarousel.com/">sparingly</a></li>
+				</ul>
+
+			</li>
+		</ul>
+
+	</div>
+
+</section>
+
+<section id="media">
+
+	<div>
+
+		<h2><b>@</b>media</h2>
+
+		<ul>
+			<li><strong>Media queries</strong> translate mobile first design into mobile first development</li>
+			<li>Non-responsive websites have a single stylesheet (CSS) with a single set of rules for how the page should appear</li>
+			<li>Responsive sites still use one stylesheet, but rules are broken into sets by screen size</li>
+			<li>Use mobile as the base, add different styles on as layout requires - site will inherit base styles unless they are overridden by another style in a media query</li>
+			<li>"Breakpoints" come naturally - adjust the layout when the content starts "breaking" the layout</li>
+			<li>Example: four bottom modules on <a href="http://nissan-jobs.tmpqa.com/">nissan-jobs.tmpqa.com</a>
+
+				<ul>
+					<li>Smallest screens - modules stack on top of one another (1 x 4)
+
+<pre>
+li {
+margin: 0 10px 10px;
+width: 100%;
+}</pre>
+
+					</li>
+					<li>Larger screens - modules sit two per row (2 x 2)
+
+<pre>
+<strong>@media screen and (min-width: 500px)</strong> {
+
+	li {
+	float: left;
+	margin: 0 0 10px 2%;
+	width: 48%;
+	}
+
+}</pre>
+
+					</li>
+					<li>Largest - modules sit four across (4 x 1)
+
+<pre>
+<strong>@media screen and (min-width: 700px)</strong> {
+
+	li {
+	margin: 0 1.5% 10px 0;
+	width: 23.5%;
+	}
+
+}</pre>
+
+					</li>
+				</ul>
+
+			</li>
+		</ul>
+
+	</div>
+
+</section>
+
+<section id="navigation">
+
+	<div>
+
+		<h2>Getting Around</h2>
+
+		<h3>Navigation Patterns</h3>
+
+		<p>We are used to seeing navigation at the top of a page, style-wise, but DOM-wise navigation should actually sit at the <em>bottom</em> of the page. We want users to get to the page content as soon as possible, but still be able to easily access the page navigation. With clever design and the right media queries, we can have both.</p>
+
+		<p>Two possible patterns:</p>
+
+		<ol>
+			<li><a href="../../../examples/offscreen/index.html">Off-screen</a> or <a href="http://nissan-jobs.tmpqa.com">slide-out</a> menu
+
+				<ul>
+					<li>Accessed on tap of menu button on smaller screens, pushing main content off the screen or sitting on top of main content when open</li>
+					<li>Can be absolutely positioned to stay at the top of the page on larger screens</li>
+					<li>Avoid fixed positioning (always clinging to the top of the screen, as this site has on larger screens - browser support for fixed positioning is not ideal</li>
+				</ul>
+
+			</li>
+			<li>Jump link menu
+
+				<ul>
+					<li>This site is an example!</li>
+					<li>Menu "button" at the top of the page is just a jump link - throws user down to navigation at the bottom of the screen</li>
+					<li>Include a "back to top" link</li>
+					<li>Creates a cohesive user experience flow on mobile - when users scroll down to the end of the page content, they are presented with the link list to let them to decide where within the page they would like to go next</li>
+				</ul>
+
+			</li>
+		</ol>
+
+		<h3>A Touchy Subject</h3>
+
+		<p>When thinking about navigation on all screen sizes, keep <strong>ergonomics of use</strong> in mind - where can touch screen users easily tap with one finger?</p>
+
+		<p>These diagrams, lovingly <a href="http://www.lukew.com/ff/entry.asp?1649">stolen from Luke Wroblewski</a>, illustrate the easiest and most difficult screen spaces for touch screen users to reach.</p>
+
+		<a href="../../../img/touchpoints-enlarge.jpg"><img class="touchpoints" src="../../../img/touchpoints.jpg" alt="ergonomics of use for touch screen devices"></a>
+
+		<span class="small-caption">(click the image to open in a new window)</span>
+
+		<h3>Browse for Inspiration</h3>
+
+		<p>Pay attention to the mobile websites you visit every day. Which menus do you like? Which ones do you find frustrating? You may not be a member of the target audience for a particular site, but you are still a web user.</p>
+
+	</div>
+
+</section>
+
+<section id="accessibility">
+
+	<div>
+
+		<h2>Accessibility</h2>
+
+		<ul>
+			<li>Responsive design needs to respond to more than just screen size</li>
+			<li>Flexibility to accomodate different input types (mouse, keyboard, finger) as well as assistive technologies</li>
+			<li>Principles of accessibility apply to <em>all</em> sites, not just responsive ones</li>
+		</ul>
+
+		<div class="video-container">
+
+			<iframe src="https://www.youtube.com/embed/bLEo1H72i2Q?rel=0&showinfo=0" title="RWD School of Rock: Fall 2013 - Session 2 - Accessibility Example (4)" allowfullscreen></iframe>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section id="homework">
+
+	<div>
+
+		<h2>Homework</h2>
+
+		<p>This Responsive (Re)Design exercise will help hone your responsive-fu and give you the chance to collaborate one-on-one with members of the development team on the various challenges presented by mobile design/development.</p>
+
+		<p><em>(Don't worry, we have already scheduled with your traffic managers to make sure that you have time booked for this assignment. The job number is TMPW6496.)</em></p>
+
+		<h3>Specs:</h3>
+
+		<p>We have randomly assigned you to work on one of five different client pages. If you are currently working on a TalentBrew refresh, you may use that site's content as your starting point.</p>
+
+		<p>Your task is to (re)design a TalentBrew homepage (L1 page) for the assigned client according to the following specifications:</p>
+
+		<ul>
+			<li>The page <strong>must be fully responsive</strong>. Content should be structured in a way that it can flow naturally across the page, regardless of the size of the screen on which the site is being viewed.</li>
+			<li>You should only focus on the site content, features, and client branding/colors in your redesign. <strong>Ignore existing desktop layouts or known limitations of the TalentBrew platform.</strong> This is a hypothetical exercise, so feel free to break away from the TB norms a bit!</li>
+			<li><strong>The page should be designed with a mobile-first mindset.</strong> You should begin your design with mobile layout and styling, then expand to desktop layout. Your final submission should include mockups for both mobile and desktop views.</li>
+			<li>During the design process, you should also <strong>keep your workflow responsive</strong>. In addition to a client, you have also been assigned to a front end developer contact to work with as you flesh out your design concept. If there is anything in your site design that you are not sure of, or want to know the feasibility of from a functionality perspective, feel free to reach out to your contact at any time to discuss your ideas.</li>
+		</ul>
+
+		<h3>Deliverables:</h3>
+
+		<ul>
+			<li>Please submit your final mockup files to stephanie.plumeri@tmp.com by Tuesday, October 1. You should provide one mobile and one desktop PSD file.</li>
+			<li>For the purposes of this exercise, your designs do not have to be 100% polished. The focus here should be on content layout, navigation patterns, and usability of different site features - not pixel-perfection.</li>
+			<li>After you submit your files, your front end contact will review your designs and provide you with notes on the feasibility of your design in the responsive environment, and tips for how to make your design more responsive/mobile-friendly.
+
+				<ul>
+					<li>The developers went through a similar responsive site build exercise several months ago, which included a similar review process.</li>
+					<li>Remember that the point of this exercise is about improving site design and code, not stifling good design or being critical for criticism's sake. We want to create a positive, constructive, and open environment for discussion.</li>
+				</ul>
+
+			</li>
+		</ul>
+
+		<h3>On your mark... get set... respond!</h3>
+
+		<p>We will re-convene as a group (designers and developers both) during the second week of October to review designs and reflect on your experiences during the exercise. We will also discuss how we can better incorporate responsive thinking and collaboration into our regular workflow.</p>
+
+		<a href="https://docs.google.com/spreadsheet/ccc?key=0Am162c4LqyYRdDF2dkVzQ05OMXJSLXFycGJEMjYwbHc&usp=sharing" class="button button-big">Get your assignment</a>
+
+	</div>
+
+</section>
+
+<section id="refresher">
+
+	<div>
+
+		<h2>Need a refresher?</h2>
+
+		<h3>Session 2A</h3>
+
+		<div class="video-container">
+
+			<iframe src="https://www.youtube.com/embed/kOLOgYiWEzg?rel=0&showinfo=0" title="RWD School of Rock: Fall 2013 - Session 2a (5)" allowfullscreen></iframe>
+
+		</div>
+
+		<h3>Session 2B</h3>
+
+		<div class="video-container">
+
+			<iframe src="https://www.youtube.com/embed/59VTTPuOwtA?rel=0&showinfo=0" title="RWD School of Rock: Fall 2013 - Session 2b (6)" allowfullscreen></iframe>
+
+		</div>
+
+	</div>
+
+</section>
+
+<nav id="menu" aria-label="Page">
+
+	<ul class="nav">
+		<li><a href="#dom">The DOM</a></li>
+		<li><a href="#media"><b>@</b>media</a></li>
+		<li><a href="#navigation">Getting Around</a></li>
+		<li><a href="#accessibility">Accessibility</a></li>
+		<li><a href="#homework">Homework</a></li>
+	</ul>
+
+</nav>

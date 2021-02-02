@@ -2,8 +2,6 @@
 title: Guidelines for Preparing Photoshop Files for Web Developers
 ---
 
-Last Updated: **12/31/2017**
-
 {% include toc.md %}
 
 ## 1. Introduction

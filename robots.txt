@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /support/
+Disallow: /syndicate/
+Disallow: /pattern-library/

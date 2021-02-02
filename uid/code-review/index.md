@@ -2,8 +2,6 @@
 title: Code Review Process
 ---
 
-Last Updated: **12/31/2017**
-
 {% include toc.md %}
 
 ## 1. Overview

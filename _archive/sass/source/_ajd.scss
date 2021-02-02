@@ -1,0 +1,872 @@
+
+// Source: Advanced Job Descriptions 1.1
+
+// Local Variables
+
+$image-path: "../img/ajd";
+$page-max-width: 1280px;
+
+#advanced-job-details {
+
+  a {
+  transition: all 0.2s ease-in-out;
+  }
+
+  ::cue {
+  font-size: 1.6vmax;
+  }
+
+  // Content Brace - Used to center child element on block level parent.
+
+  .ajd-content-brace {
+  margin: 0 auto;
+  max-width: $page-max-width;
+  }
+
+  // Fixed Job Title and Apply Button Container
+
+  #ajd-banner {
+  top: -225px;
+  transition: top 500ms 300ms ease-in-out;
+
+    &.ajd-fixed-heading {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    }
+
+  }
+
+  // Animated Images
+
+  .ajd-hero {
+  display: block;
+  overflow: hidden;
+
+    img {
+    transform: scale(1.3);
+    transition: all 4s ease-in-out;
+    }
+
+     &.active img {
+     transform: scale(1);
+     }
+
+  }
+
+  .ajd-job-information {
+  background-color: #ccc;
+
+    .ajd-content-brace {
+    display: flex;
+    padding: 20px 1em;
+    }
+
+  }
+
+  .ajd-job-heading {
+  flex-grow: 1;
+  width: 75%;
+  }
+
+  .ajd-job-title {
+  margin: 0;
+  }
+
+  .ajd-job-location {
+  display: block;
+  margin: 0;
+  }
+
+  .ajd-job-button {
+  width: 25%;
+  }
+
+  .ajd-btn-apply {
+  background-color: #555;
+  color: #fff;
+  display: block;
+  margin-left: 1em;
+  min-width: 13vw;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+
+    @include localbreak(x-medium) {
+
+      padding: 1em;
+
+    }
+
+    &:focus, &:hover {
+
+      background-color: #000;
+
+    }
+
+  }
+
+  // Quick Link Callout
+
+  .ajd-navigation {
+  background-color: #555;
+  font-size: small;
+  padding: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+
+    // Hide navigation where viewport height is too small to accomodate it - this is intentional
+    // The navigation is an enhancment. Users can scroll if need be. Totally cool!
+
+    @media(max-height: 568px) {
+
+      display: none;
+
+    }
+
+    @include localbreak(x-medium) {
+
+      font-size: initial;
+
+    }
+
+    ul {
+    @extend .ajd-content-brace;
+
+      @include localbreak(x-medium) {
+
+        display: flex;
+        justify-content: space-around;
+
+      }
+
+    }
+
+    li {
+    display: inline-block;
+    }
+
+    a {
+    color: #fff;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+
+      @include localbreak(x-medium) {
+
+        padding: 1em;
+
+      }
+
+      &:focus .no-js &, &:hover, &.active {
+      color: #ccc;
+      white-space: nowrap;
+      }
+
+    }
+
+  }
+
+  // Section: Overview
+
+  #ajd-overview {
+  background-color: #eee;
+  padding: 1em;
+
+    .ajd-section-heading {
+    @extend %wai;
+    }
+
+  }
+
+  // Quick Facts
+
+  .ajd-quick-facts {
+  margin: 1em 0;
+  text-align: center;
+
+    &:empty {
+    display: none;
+    }
+
+    li {
+    display: inline-block;
+    margin: 1em;
+
+      @include localbreak(xx-small) {
+
+        margin: 1em 5%;
+
+      }
+
+      &:before {
+      background: url("#{$image-path}/ico-quick-facts.svg") left top / cover no-repeat; // SVG's coming soon.
+      content: "";
+      display: inline-block;
+      height: 28px;
+      margin-right: 7px;
+      vertical-align: middle;
+      width: 28px;
+
+        @include localbreak(xx-small) {
+
+          height: 38px;
+          margin-right: 14px;
+          width: 38px;
+
+        }
+
+      }
+
+      &.job-location {
+
+        &:before {
+        background-position: 6px 0;
+
+          @include localbreak(xx-small) {
+
+            background-position: 8px 0;
+
+          }
+
+        }      
+
+      }
+
+      &.job-type {
+
+        &:before {
+        background-position: -24px 0;
+
+          @include localbreak(xx-small) {
+
+            background-position: -33px 0;
+
+          }
+
+        }
+
+      }
+
+      &.job-level {
+
+        &:before {
+        background-position: -52px 0;
+
+          @include localbreak(xx-small) {
+
+            background-position: -71px 0;
+
+          }
+
+        }
+
+      }
+
+      &.job-travel {
+
+        &:before {
+        background-position: -84px 0;
+
+          @include localbreak(xx-small) {
+
+            background-position: -114px 0;
+
+          }
+
+        }
+
+      }
+
+      &.job-salary {
+
+        &:before {
+        background-position: -114px 0;
+
+          @include localbreak(xx-small) {
+
+            background-position: -153px 0;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  // Glassdoor Rating
+
+  .ajd-glassdoor-rating {
+  color: #1F9095;
+  display: block;
+  text-align: center;
+
+  .js & {
+
+    margin: 0 auto;
+    width: 246px;
+    text-decoration: none;
+
+      &:before {
+      background-image: url("#{$image-path}/logo-glassdoor.svg");
+      background-size: 104px 25px;
+      content: "";
+      display: block;
+      height: 25px;
+      margin: 0 auto 10px;
+      width: 104px;
+
+      @include localbreak(x-small) {
+
+          display: inline-block;
+          margin: 0;
+
+        }
+
+      }
+
+      b, i {
+      background-image: url("#{$image-path}/ico-glassdoor-rating.svg"); // No need for new image, just edit the SVG colors!
+      height: 24px;
+      }
+
+      b {
+      display: inline-block;
+      width: 137px;
+
+        i {
+        background-position: 0 -24px;
+        display: block;
+        overflow: hidden;
+        text-indent: -999em;
+        transition: all 1.8s ease-in-out;
+        width: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  // Section: Success Profile
+
+  #ajd-success {
+  text-align: center;
+
+    p {
+    margin: 10px auto 0;
+    max-width: 700px;
+    }
+
+  }
+
+  // Blockquote
+
+  .ajd-quote {
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 3em 0;
+  padding: 3em;
+  position: static;
+  text-align: center;
+
+    .ajd-employee-quote {
+    margin: 0 0 1em;
+    }
+
+    .ajd-employee-citation {
+
+      &:before {
+      content: "- ";
+      }
+
+    }
+
+  }
+
+  // Trending
+
+  #ajd-trending {
+
+    .ajd-content-brace {
+   
+      @include localbreak(x-medium) {
+
+        display: flex;
+
+      }
+
+    }
+
+    .ajd-story {
+    text-decoration: none;
+
+      @include localbreak(x-medium) {
+
+        display: flex;
+
+      }
+
+      &:focus, &:hover {
+
+        .ajd-btn-learn-more {
+        background-color: #555;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        }
+    
+     }
+
+    }
+
+    .ajd-story-media, .ajd-story-snippet {
+    margin-bottom: 1em;;
+
+    @include localbreak(x-medium) {
+
+        margin: 0 1.3em 1.3em 1.3em;
+
+      }
+
+    }
+
+    .ajd-story-media {
+    min-width: 40%;
+
+      img {
+      width: 100%;
+      }
+
+    }
+
+    h3 {
+    margin: 0;
+    }
+
+    .ajd-btn-learn-more {
+    border: 1px #555 solid;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    }
+
+  }
+
+  .ajd-related-media {
+  margin: 0 auto;
+
+
+
+  }
+
+  // Rewards
+
+  #ajd-rewards {
+
+    .ajd-reward-list {
+    margin: 0;
+
+      @include localbreak(x-small) {
+
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: 3%;
+
+      }
+
+    }
+
+    li {
+    border: 1px #ccc solid;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1.5em;
+
+      @include localbreak(x-small) {
+
+        margin-right: 1.5%;
+        width: 48%;
+
+      }
+
+      @include localbreak(xx-small) {
+
+        width: 31%;
+
+      }
+
+      &:before {
+      background-image: url("https://placehold.it/113x113");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 76px 76px;
+      content: "";
+      display: block;
+      height: 76px;
+      margin: 0 auto;
+      width: 76px;
+
+        @include localbreak(xx-medium) {
+
+          background-size: 113px 113px;
+          height: 113px;
+          width: 113px;
+
+        }
+
+      }
+
+      // No need for new images, just edit the SVG colors!
+
+      &.ajd-ico-healthcare:before {
+      background-image: url("#{$image-path}/ico-healthcare.svg");
+      }
+
+      &.ajd-ico-collaboration:before {
+      background-image: url("#{$image-path}/ico-collaboration.svg");
+      }
+
+      &.ajd-ico-freedom:before {
+      background-image: url("#{$image-path}/ico-freedom.svg");
+      }
+
+      &.ajd-ico-variety:before {
+      background-image: url("#{$image-path}/ico-variety.svg");
+      }
+
+      &.ajd-ico-compensation:before {
+      background-image: url("#{$image-path}/ico-compensation.svg");
+      }
+
+      &.ajd-ico-pto:before {
+      background-image: url("#{$image-path}/ico-pto.svg");
+      }
+
+      /* 
+
+      &.ajd-ico-401k:before {
+      background-image: url("#{$image-path}/ico-401k.svg");
+      }
+
+      &.ajd-ico-adoption-cost-benefit:before {
+      background-image: url("#{$image-path}/ico-adoption-cost-benefit.svg");
+      }
+
+      &.ajd-ico-amenities:before {
+      background-image: url("#{$image-path}/ico-amenities.svg");
+      }
+
+      &.ajd-ico-balance:before {
+      background-image: url("#{$image-path}/ico-balance.svg");
+      }
+
+      &.ajd-ico-cafeteria:before {
+      background-image: url("#{$image-path}/ico-cafeteria.svg");
+      }
+
+      &.ajd-ico-child-care-subsidy:before {
+      background-image: url("#{$image-path}/ico-child-care-subsidy.svg");
+      }
+
+      &.ajd-ico-company-store:before {
+      background-image: url("#{$image-path}/ico-company-store.svg");
+      }
+
+      &.ajd-ico-continuing-education:before {
+      background-image: url("#{$image-path}/ico-continuing-education.svg");
+      }
+
+      &.ajd-ico-dental:before {
+      background-image: url("#{$image-path}/ico-dental.svg");
+      }
+
+      &.ajd-ico-dependent-care:before {
+      background-image: url("#{$image-path}/ico-dependent-care.svg");
+      }
+
+      &.ajd-ico-flex-time:before {
+      background-image: url("#{$image-path}/ico-flex-time.svg");
+      }
+
+      &.ajd-ico-healthcare-fsa:before {
+      background-image: url("#{$image-path}/ico-healthcare-fsa.svg");
+      }
+
+      &.ajd-ico-life-disability-insurance:before {
+      background-image: url("#{$image-path}/ico-life-disability-insurance.svg");
+      }
+
+      &.ajd-ico-locations:before {
+      background-image: url("#{$image-path}/ico-locations.svg");
+      }
+
+      &.ajd-ico-management:before {
+      background-image: url("#{$image-path}/ico-management.svg");
+      }
+
+      &.ajd-ico-maternity-paternity-leave:before {
+      background-image: url("#{$image-path}/ico-maternity-paternity-leave.svg");
+      }
+
+      &.ajd-ico-medical:before {
+      background-image: url("#{$image-path}/ico-medical.svg");
+      }
+
+      &.ajd-ico-nursing-mother-rooms:before {
+      background-image: url("#{$image-path}/ico-nursing-mother-rooms.svg");
+      }
+
+      &.ajd-ico-onsite-child-care:before {
+      background-image: url("#{$image-path}/ico-onsite-child-care.svg");
+      }
+
+      &.ajd-ico-onsite-fitness:before {
+      background-image: url("#{$image-path}/ico-onsite-fitness.svg");
+      }
+
+      &.ajd-ico-onsite-post-office:before {
+      background-image: url("#{$image-path}/ico-onsite-post-office.svg");
+      }
+
+      &.ajd-ico-onsite-salon-barber:before {
+      background-image: url("#{$image-path}/ico-onsite-salon-barber.svg");
+      }
+
+      &.ajd-ico-paid-vacation:before {
+      background-image: url("#{$image-path}/ico-paid-vacation.svg");
+      }
+
+      &.ajd-ico-relocation-reimbursement:before {
+      background-image: url("#{$image-path}/ico-relocation-reimbursement.svg");
+      }
+
+      &.ajd-ico-tuition:before {
+      background-image: url("#{$image-path}/ico-tuition.svg");
+      }
+
+      &.ajd-ico-vision:before {
+      background-image: url("#{$image-path}/ico-vision.svg");
+      }
+
+      */
+
+    }
+
+  }
+
+  // Section: Responsibilities
+
+  #ajd-responsibilties { 
+
+    .ats-description {
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 1em;
+
+       @include localbreak(x-medium) {
+
+          padding: 1em 1.8em;
+
+       }
+
+    }
+
+  }
+
+  // Section: Map
+
+  #ajd-map {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  padding: 30px 1em;
+  position: relative;
+
+    @include localbreak(xx-small) {
+ 
+        padding: 60px 2em 60px 2em;
+
+    }
+
+    // Animated Map
+
+    &:after {
+    display: none;
+
+      @include localbreak(xx-small ) {
+
+        background-image: url("#{$image-path}/map.svg");
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: 130% 130%;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background-size 2.5s ease-in-out;
+        width: 50%;
+
+      }
+
+    }
+
+    &.active {
+
+      &:after {
+
+        background-size: 100% 100%;
+
+      }
+
+    }
+
+    @include localbreak(xx-small ) {
+
+		  padding-left: 15%;
+
+    }
+
+    .btn-view-more {
+    border: 1px #fff solid;
+    color: #fff;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+  	
+		  @include localbreak(xx-small ) {
+			
+			 display: inline-block;
+			 min-width: 220px;
+
+		  }
+
+      &:focus, &:hover {
+
+        background-color: #fff;
+        color: #555;
+
+      }
+
+    }
+
+  }
+
+  // Section: Recent Jobs
+
+  #ajd-jobs {
+
+    .ajd-col {
+
+      background-color: #ccc;
+      border-radius: 3px;
+
+    }
+
+  }
+
+  // Shared
+
+  #ajd-success, #ajd-trending, #ajd-rewards, #ajd-responsibilties, #ajd-jobs, .ajd-quote {
+  margin: 1em;
+  max-width: $page-max-width;
+
+   @include localbreak(xx-large) {
+
+      margin: 60px auto;
+
+    }
+
+   }
+
+   #ajd-trending, #ajd-rewards, #ajd-responsibilties, #ajd-jobs {
+
+    .ajd-section-heading {
+    text-align: center;
+
+      @include localbreak(x-medium) {
+
+        margin-bottom: 40px;
+
+      }
+
+    }
+
+  }
+
+  .ajd-navigation ul, .ajd-quick-facts, .ajd-reward-list {
+  list-style: none;
+  padding: 0;
+  }
+
+  // Shared Grid
+
+  .ajd-grid {
+
+    @include localbreak(xx-medium) {
+ 
+      display: flex;
+
+    }
+
+  }
+
+  .ajd-col {
+  margin: 1em;
+  padding: 1em;
+  background-color: red;
+
+    @include localbreak(xx-medium) {
+
+      width: 50%;
+      margin: 0 1%;
+
+    }
+
+  }
+
+  // All Sections
+
+  .ajd-section {
+
+    .ajd-btn-nav {
+
+      a {
+      background: #666 url("#{$image-path}/btn-arrow-up.png") center / 25px no-repeat;
+      border-radius: 50%;
+      bottom: -1em;
+      display: block;
+      height: 50px;
+      left: 50%;
+      margin-left: -25px;
+      opacity: 0;
+      overflow: hidden;
+      position: fixed;
+      right: 50%;
+      text-indent: -999em;
+      width: 50px;
+      z-index: 10;
+
+        &:focus {
+        background-color: rgba(#666, 0.7);
+        bottom: 1em;
+        opacity: 1;
+        }
+
+      }
+
+    }
+
+  }
+
+}

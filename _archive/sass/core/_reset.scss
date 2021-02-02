@@ -1,0 +1,19 @@
+
+// Basic Reset: All of these rules are required. You may even have them in your theme CSS already!
+
+html{
+box-sizing:border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+img, video {
+display: block;
+max-width: 100%;
+}
+
+#page {
+min-width: 320px;
+}

@@ -1,0 +1,195 @@
+
+// Tab UI 2.0 (jQuery)
+// Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy
+
+// Begin: Global Styles (No need to pull these into TB)
+
+body {
+background-color: #eee;
+}
+
+img {
+display: block;
+max-width: 100%;
+}
+
+// End: Global Styles
+
+@function url-friendly-color($color) {
+
+  @return '%23' + str-slice('#{$color}', 2, -1)
+
+}
+
+$tab-ui-accent: #07587D;
+$tab-ui-breakpoint: 500px;
+
+// Tab List (ul)
+
+.tab-list {
+display: none;
+list-style: none;
+margin: 0;
+padding: 0;
+text-align: center;
+position: relative;
+
+  @media(min-width: $tab-ui-breakpoint) {
+
+    display: block;
+
+  }
+
+  li {
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: inline-block;
+
+    }
+
+  }
+
+}
+
+// Tab Button (button)
+
+.tab-button {
+background-color: #fff;
+border: 0;
+border-top: 4px #ccc solid;
+cursor: pointer;
+display: block;
+font-weight: 600;
+margin-top: 2em;
+padding: 1.5em 3.5em 1.5em 1.5em;
+position: relative;
+text-align: left;
+width: 100%;
+
+  @media(min-width: $tab-ui-breakpoint) {
+
+    display: none;
+
+  }
+
+  // Arrow (Just change tab-ui-accent color)
+
+  &::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 15'><path d='M21 0l3 3.06L12 15 0 3.06 3 0l9 9z' fill='#{url-friendly-color($tab-ui-accent)}'/></svg>");
+  background-size: 100%;
+  content: "";
+  display: block;
+  height: 15px;
+  position: absolute;
+  right: 1em;
+  top: 1.5em;
+  width: 25px;
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: none;
+
+    }
+
+  }
+
+  &[aria-expanded="true"] {
+
+    &::after {
+    transform: rotate(180deg);
+    }
+
+  }
+
+}
+
+// Tab item (a)
+
+.tab-link {
+color: inherit;
+display: block;
+font-weight: 600;
+padding: 1em;
+position: relative;
+text-align: center;
+text-decoration: none;
+
+  &:not([aria-describedby]) {
+  display: none;
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: block;
+
+    }
+
+  }
+
+  // Accent
+
+  &::before {
+  background-color: $tab-ui-accent;
+  content: "";
+  display: none;
+  height: 4px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  }
+
+  &:focus, &:hover, &[aria-describedby="current-selection"] {
+  color: $tab-ui-accent;
+
+    &::before {
+
+      @media(min-width: $tab-ui-breakpoint) {
+
+        display: block;
+
+      }
+
+    }
+
+  }
+
+}
+
+// Tab Panel
+
+.tab-panel {
+background-color: #fff;
+margin: 0 auto;
+max-width: 1280px;
+padding: 1em;
+
+  @media(min-width: $tab-ui-breakpoint) {
+
+    border-top: 4px #ccc solid;
+
+  }
+
+  // Panel: Hide
+
+  .js & {
+  display: none;
+  }
+
+  // Panel: Show
+
+  &[aria-hidden="false"] {
+  display: block;
+  }
+
+}
+
+.tab-heading {
+
+  &:focus {
+  outline: 0;
+  }
+
+}

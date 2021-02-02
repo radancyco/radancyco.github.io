@@ -1,0 +1,33 @@
+@keyframes flipInY {
+
+    0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    }
+
+    40% {
+    animation-timing-function: ease-in;
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    }
+
+    60% {
+    opacity: 1;
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    }
+
+    80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    100% {
+    transform: perspective(400px);
+    }
+
+}
+
+.flipInY {
+animation-duration: 0.75s;
+animation-name: flipInY;
+backface-visibility: visible;
+}

@@ -1,0 +1,21 @@
+@keyframes floating {
+
+    0% {
+    transform: translateY(0%);
+    }
+
+    50% {
+    transform: translateY(8%);
+    }
+
+    100% {
+    transform: translateY(0%);
+    }
+
+}
+
+.floating {
+animation-duration: 1.5s;
+animation-iteration-count: infinite;
+animation-name: floating;
+}

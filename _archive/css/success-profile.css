@@ -1,0 +1,173 @@
+/*! 
+
+  TalentBrew: Success Profile 1.0
+
+  Michael "Spell" Spellacy (michael.spellacy[at]tmp.com)
+  Joshua Mahoney (joshua.mahoney[at]tmp.com)
+  Brock Barnett (brock.barnett[at]tmp.com)
+
+*/
+.wai, .success-profile-secondary-heading {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img, video {
+  display: block;
+  max-width: 100%; }
+
+#page {
+  min-width: 320px; }
+
+body {
+  font: 100%/1.6 "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #000; }
+
+a.external {
+  background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==) center right no-repeat;
+  padding-right: 14px; }
+  a.external:focus, a.external:hover {
+    background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///2eIpAAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==) center right no-repeat; }
+
+body.pattern-message:before {
+  background-color: #0895d3;
+  background-image: linear-gradient(130deg, #0895d3 0%, #0895d3 21%, #2573ba 68%, #2573ba 100%);
+  color: #fff;
+  display: block;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+body#success-profile.pattern-message {
+  margin: 75em 1em 1em; }
+  body#success-profile.pattern-message:before {
+    content: "To view this pattern's functionality, please scroll down."; }
+
+#pattern-helper {
+  background-image: linear-gradient(130deg, #263343 0%, #263343 21%, #151d27 68%, #151d27 100%);
+  border-radius: 5px;
+  clear: both;
+  color: #fff;
+  margin: 1em;
+  padding: 1em; }
+  #pattern-helper a {
+    color: inherit; }
+  #pattern-helper h2 {
+    margin: 0; }
+  #pattern-helper ul {
+    list-style: none;
+    margin: 0.8em;
+    padding: 0; }
+  #pattern-helper li {
+    margin-bottom: 0.8em; }
+
+.success-profile {
+  margin: 0 auto;
+  max-width: 540px;
+  transition: all 0.8s ease-in-out; }
+  .success-profile ul {
+    list-style: none;
+    padding: 0; }
+
+.success-profile-primary-traits {
+  margin: 40px 0 60px;
+  position: relative;
+  text-align: left; }
+  .success-profile-primary-traits li {
+    position: relative; }
+    @media (min-width: 48.75em) {
+      .success-profile-primary-traits li {
+        margin-top: 15px; } }
+  .success-profile-primary-traits:before, .success-profile-primary-traits:after {
+    bottom: -40px;
+    color: #0895d3;
+    display: block;
+    font-weight: bold;
+    position: absolute; }
+  .success-profile-primary-traits:before {
+    content: "0";
+    left: 0; }
+  .success-profile-primary-traits:after {
+    content: "10";
+    right: 0; }
+
+.success-profile-label {
+  color: #666;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 35px;
+  transition: all 0.6s ease-in-out; }
+  @media (min-width: 48.75em) {
+    .js .success-profile-label {
+      left: 10px;
+      position: absolute;
+      z-index: 2; }
+    .active .success-profile-label {
+      color: #fff; } }
+
+.success-profile-percent {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 35px; }
+  .js .success-profile-percent {
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 2; }
+  @media (min-width: 48.75em) {
+    .success-profile-percent {
+      top: 0; } }
+
+.success-profile-level {
+  height: 35px;
+  position: relative; }
+  .success-profile-level:before {
+    background-image: linear-gradient(130deg, #0895d3 0%, #0895d3 21%, #2573ba 68%, #2573ba 100%);
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 35px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1.2s ease-in-out;
+    width: 0; }
+    .active .success-profile-level:before {
+      opacity: 1;
+      width: 100%; }
+
+.success-profile-secondary-traits {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+  text-align: center; }
+  .success-profile-secondary-traits li {
+    background-color: #ccc;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 3px;
+    padding: 4px 8px;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+    transition: all 0.2s ease-in-out; }
+
+/*# sourceMappingURL=success-profile.css.map */

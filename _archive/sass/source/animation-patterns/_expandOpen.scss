@@ -1,0 +1,29 @@
+@keyframes expandOpen {
+
+    0% {
+    transform: scale(1.8);
+    }
+
+    50% {
+    transform: scale(0.95);
+    }
+
+    80% {
+    transform: scale(1.05);
+    }
+
+    90% {
+    transform: scale(0.98);
+    }
+
+    100% {
+    transform: scale(1);
+    }
+
+}
+
+.expandOpen {
+animation-duration: 1.2s;
+animation-timing-function: ease-out;
+animation-name: expandOpen;
+}

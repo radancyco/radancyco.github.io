@@ -1,0 +1,190 @@
+
+// Tab UI 1.0 (jQuery)
+// Developer: Michael "Spell" Spellacy, Developer: Michael "Spell" Spellacy. Twitter: @spellacy, GitHub: michaelspellacy
+
+// Begin: Global Styles (No need to pull these into TB)
+
+body {
+background-color: #eee;
+}
+
+img {
+display: block;
+max-width: 100%;
+}
+
+// End: Global Styles
+
+@function url-friendly-color($color) {
+
+  @return '%23' + str-slice('#{$color}', 2, -1)
+
+}
+
+$tab-ui-accent: #07587D;
+$tab-ui-breakpoint: 500px;
+
+.tab-ui {
+border-top: 3px solid $tab-ui-accent;
+position: relative;
+
+  @media(min-width: $tab-ui-breakpoint) {
+
+    border-top: 0;
+
+  }
+
+}
+
+// Tab List (ul)
+
+.tab-list {
+list-style: none;
+margin: 0 0 1em;
+padding: 0;
+text-align: center;
+position: relative;
+
+  li {
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: inline-block;
+      margin-bottom: 0;
+
+    }
+
+  }
+
+}
+
+// Tab Link (a)
+
+.tab-link {
+background-color: #fff;
+color: inherit;
+display: block;
+font-weight: 600;
+padding: 1em 3.5em 1em 1em;
+position: relative;
+text-align: center;
+text-decoration: none;
+
+  @media(min-width: $tab-ui-breakpoint) {
+
+    background-color: transparent;
+    padding-right: 1em;
+
+  }
+
+  &:not([aria-describedby]) {
+  display: none;
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: block;
+
+    }
+
+  }
+
+  // Accent & Arrow
+
+  &::before, &::after {
+  content: "";
+  position: absolute;
+  }
+
+  // Accent
+
+  &::before {
+  background-color: $tab-ui-accent;
+  display: none;
+  height: 4px;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 0;
+  width: 50%;
+  }
+
+  // Arrow (Just change fill color in SVG)
+
+  &::after {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 15'><path d='M21 0l3 3.06L12 15 0 3.06 3 0l9 9z' fill='#{url-friendly-color($tab-ui-accent)}'/></svg>");
+  display: block;
+  height: 20px;
+  right: 1em;
+  top: 1em;
+  width: 30px;
+
+    @media(min-width: $tab-ui-breakpoint) {
+
+      display: none;
+
+    }
+
+  }
+
+  .active & {
+  display: block;
+
+    // TODO: Make independent of a list link, can sit in ul, instead.
+
+    &#tab-1-item::after {
+    transform: rotate(180deg);
+    }
+
+    &:not(#tab-1-item)::after {
+    display: none;
+    }
+
+  }
+
+  &:focus, &:hover, &[aria-describedby="current-selection"] {
+  color: $tab-ui-accent;
+
+    &::before {
+
+      @media(min-width: $tab-ui-breakpoint) {
+
+        display: block;
+
+      }
+
+    }
+
+  }
+
+}
+
+// Tab Panel
+
+.tab-panel {
+background-color: #fff;
+border-top: 4px #ccc solid;
+margin: 0 auto;
+max-width: 1280px;
+padding: 1em;
+
+  // Panel: Hide
+
+  .js & {
+  display: none;
+  }
+
+  // Panel: Show
+
+  &[aria-hidden="false"] {
+  display: block;
+  }
+
+}
+
+.tab-heading {
+
+  &:focus {
+  outline: 0;
+  }
+
+}

@@ -1,0 +1,38 @@
+@keyframes pullUp {
+
+    0% {
+    transform: scaleY(0.1);
+    }
+
+    40% {
+    transform: scaleY(1.02);
+    }
+
+    60% {
+    transform: scaleY(0.98);
+    }
+
+    80% {
+    transform: scaleY(1.01);
+    }
+
+    100% {
+    transform: scaleY(0.98);
+    }
+
+    80% {
+    transform: scaleY(1.01);
+    }
+
+    100% {
+    transform: scaleY(1);
+    }
+
+}
+
+.pullUp {
+animation-duration: 1.1s;
+animation-name: pullUp;
+animation-timing-function: ease-out;
+transform-origin: 50% 100%;
+}

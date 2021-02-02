@@ -1,0 +1,66 @@
+
+// ******************** Basic Breakpoints ********************
+
+@mixin localbreak($point) {
+
+  @if $point == xx-large {
+
+    @media (min-width: mq(1280)) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $point == x-large {
+
+    @media (min-width: mq(1140)) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $point == xx-medium {
+
+    @media (min-width: mq(980)) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $point == x-medium {
+
+    @media (min-width: mq(860)) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $point == xx-small {
+
+    @media (min-width: mq(780)) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $point == x-small {
+
+    @media (min-width: mq(560)) {
+
+      @content;
+
+    }
+
+  }
+
+}

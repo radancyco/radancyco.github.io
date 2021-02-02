@@ -1,0 +1,50 @@
+@keyframes revealLeft {
+
+    0% {
+    left: 0;
+    }
+
+    100% {
+    left: -100%;
+    }
+
+}
+
+@keyframes revealRight {
+
+    0% {
+    right: 0;
+    }
+
+    100% {
+    right: -100%;
+    }
+
+}
+
+.reveal {
+overflow: hidden;
+position: relative;
+
+    &:after, &:before {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    }
+
+    &:after {
+    animation-name: revealRight;
+    }
+
+    &:before {
+    animation-name: revealLeft;
+    } 
+
+}

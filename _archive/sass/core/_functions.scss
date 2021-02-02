@@ -1,0 +1,9 @@
+
+
+// ******************** Function: Width to EM (Media Queries) ********************
+
+@function mq($width) {
+
+  @return #{$width/16.0}em
+
+}

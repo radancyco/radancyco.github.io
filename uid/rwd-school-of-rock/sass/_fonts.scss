@@ -1,0 +1,15 @@
+/* Web fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Sigmar+One);
+
+@import url(https://fonts.googleapis.com/css?family=Coda:400,800);
+
+// Typography
+
+$base-font: 'Open Sans', Arial, Helvetica, sans-serif;
+
+$secondary-font: 'Sigmar One', Arial, Helvetica, sans-serif;
+
+// Set Local Web Font
+
+// Example: @include declare-font-face("Playoff Serif Bold", "playoff-serif-bold");

@@ -1,0 +1,21 @@
+@keyframes tossing {
+
+    0% {
+    transform: rotate(-4deg);
+    }
+
+    50% {
+    transform: rotate(4deg);
+    }
+
+    100% {
+    transform: rotate(-4deg);
+    }
+
+}
+
+.tossing {
+animation-name: tossing;
+animation-duration: 2.5s;
+animation-iteration-count: infinite;
+}

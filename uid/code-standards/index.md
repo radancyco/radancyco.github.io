@@ -74,7 +74,7 @@ Check each completed project using the [W3C Markup Validation Service](https://v
 
 Many browser add-ons and development tools have validation built right in, so be sure to use them.
 
-<section id="axe-core" class="callout-a11y" markdown="1">
+<section id="axe-core" class="a11y-info" markdown="1">
 
 <h2>Accessibility Testing</h2>
 
@@ -112,7 +112,7 @@ Our performance budget is:
 
 Make all efforts to optimize video as much as possible—especially if it is being self-hosted. [Handbrake](https://handbrake.fr/) is a very useful tool for this task. There are lots of great tutorials on the web that can teach you how to use Handbrake and tighten up the screws for optimal video streaming and playback.
 
-<section id="video-captions" class="callout-a11y" markdown="1">
+<section id="video-captions" class="a11y-info" markdown="1">
 
 <h2>Video Captions</h2>
 
@@ -424,7 +424,7 @@ While extracting images from a creative design, it's important to consider which
 * **.png** &mdash; PNG is a lossless format (larger file size) and is recommended in situations where the quality of the image is important, or where transparency is required. A possible use-case for a PNG image is a clients' logo, where the quality of the logo is important and may contain transparent sections around it.
 * **.svg** &mdash; SVG is an older vector image format that has recently become a more viable option for the web. SVG is recommended for more simple images that need to scale or retain sharpness on a number of different screen densities. SVG also supports transparency. A great use-case for the SVG format would be, again, a logo or icons.
 
-<section id="alternative-text" class="callout-a11y" markdown="1">
+<section id="alternative-text" class="a11y-info" markdown="1">
 
 <h2>Alternative Text</h2>
 

@@ -1,0 +1,25 @@
+@keyframes spin {
+
+    0% {
+    height: 185px;
+    width: 0;
+    }
+
+    50% {
+    height: 185px;
+    width: 185px;
+    }
+
+    100% {
+    height: 185px;
+    width: 0;
+    }
+
+}
+
+.spin img {
+animation-duration: 1s;
+animation-iteration-count: infinite;
+animation-name: spin;
+margin: 0 auto;
+}

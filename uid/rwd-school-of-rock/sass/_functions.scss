@@ -1,0 +1,17 @@
+// Global Functions
+
+// Relative Media Queries
+
+@function pem($pixels) {
+
+  @return #{$pixels/16}em
+
+}
+
+// Divide font size value by base font size of 16
+
+@function px($target) {
+
+	@return #{$target/16}rem
+
+}

@@ -1,0 +1,337 @@
+
+.animation-container {
+margin: 1.5em 0;
+overflow: hidden;
+
+    .js & {
+
+        @include localbreak(x-medium) {
+
+            display: flex;
+
+        }
+
+    }
+
+}
+
+.animation-canvas {
+background: #fff url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADVJREFUeNpi/P//PwMtwfv37/8zMdABjFoyasmoJaOWjFoyasmoJaOWDG5LWEDtIlpbAhBgAOuECskQ4GEAAAAAAElFTkSuQmCC");
+border: 1px #ccc solid;
+box-shadow: inset 0 0 15px #ccc;
+
+    .active & {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+        @include localbreak(x-medium) {
+
+            position: static;
+
+        }
+
+    }
+
+    img {
+    margin: 0 auto;
+    max-width: 50%;
+
+        @include localbreak(x-medium) {
+
+            max-width: 100%;
+
+        }
+
+    }
+
+}
+
+.btn-code {
+margin: 1em 0 0;
+
+    @include localbreak(x-medium) {
+
+        display: none;
+
+    }
+
+}
+
+.animation-code {
+background-color: #263343;
+color: #fff;
+display: none;
+margin-top: 1em;
+outline: 0;
+
+    &.active {
+    display: block;
+    }
+
+    @include localbreak(x-medium) {
+
+        display: block !important;
+        margin-top: 0;
+
+    }
+
+    pre, p {
+    margin: 0;
+    }
+
+    code {
+    padding: 0;
+
+        @include localbreak(x-medium) {
+
+            max-height: 255px;
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+        }
+
+    }
+
+    &:focus, &:hover {
+    
+        code {
+
+            @include localbreak(x-medium) {
+
+                overflow-y: scroll;
+
+            }
+
+        }
+
+    }
+
+}
+
+.animation-canvas, .animation-code {
+overflow: hidden;
+padding: 1.5em;
+position: relative;
+
+    .js & {
+
+        @include localbreak(x-medium) {
+
+            width: 50%;
+    
+        }
+
+    }
+
+}
+
+#object {
+margin: 0 auto;
+width: 200px;
+}
+
+.code {
+
+    .js & {
+    display: none;
+    }
+
+}
+
+.container {
+margin-bottom: 1em;
+
+    .js & {
+
+        @include localbreak(x-medium) {
+
+            height: 300px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+        }
+
+    }
+
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    li {
+    display: inline;
+    }
+
+}
+
+a.button, button.button {
+background-color: #003a6a;
+border: 0;
+border-radius: 3px;
+color: #fff;
+display: inline-block;
+line-height: normal;
+margin: 0px 6px 6px 0px;
+min-width: 100%;
+padding: 8px 10px;
+text-align: center;
+transition: background-color 0.2s ease;
+
+    @include localbreak(x-small) {
+
+        min-width: 47.5%;
+
+    }
+
+    @include localbreak(x-medium) {
+
+        min-width: 18.7%;
+
+    }
+
+    &.style-1 {
+    background-color: #015b85;
+    }
+
+    &.style-2 {
+    background-color: #006a02;
+    }
+
+    &.style-3 {
+    background-color: #861b01;
+    }
+
+    &.style-4 {
+    background-color: #6c4000;
+    }
+
+    &.style-5 {
+    background-color: #713186;
+    }
+
+    &.style-6 {
+    background-color: #454545;
+    }
+
+    &:hover, &.active {
+
+        background-color: #0895d3;
+        transition: background-color 0.2s ease;
+        outline: 0;
+
+    }
+
+}
+
+@keyframes rollOut {
+
+    0% {
+    left: -120px;
+    }
+
+    50% {
+    transform: rotate(-75deg);
+    }
+
+    100% {
+    left: 0;
+    transform: rotate(0);
+    }
+
+}
+
+.callout.accessibility.active {
+overflow: hidden;
+
+    h2:first-of-type {
+
+        &:before {
+        animation-duration: 0.5s;
+        animation-name: rollOut;
+        animation-timing-function: ease-in;
+        position: relative;
+        }
+
+    }
+
+}
+
+/* ====== Overwrite Animations ====== */
+
+.pullUp, .pullDown, .stretchLeft, .stretchRight, .reveal {
+background-color: #fff;
+border: 1px #036 solid;
+border-radius: 5px;
+}
+
+@import "animation-patterns/bigEntrance";
+@import "animation-patterns/bounce";
+@import "animation-patterns/bounce1";
+@import "animation-patterns/bounceOut";
+@import "animation-patterns/bounceOutDown";
+@import "animation-patterns/bounceOutLeft";
+@import "animation-patterns/bounceOutRight";
+@import "animation-patterns/bounceOutUp";
+@import "animation-patterns/expandOpen";
+@import "animation-patterns/expandUp";
+@import "animation-patterns/flash";
+@import "animation-patterns/flip";
+@import "animation-patterns/flipInX";
+@import "animation-patterns/flipInY";
+@import "animation-patterns/flipOutX";
+@import "animation-patterns/flipOutY";
+@import "animation-patterns/floating";
+@import "animation-patterns/hinge";
+@import "animation-patterns/jello";
+@import "animation-patterns/lightSpeedIn";
+@import "animation-patterns/lightSpeedOut";
+@import "animation-patterns/pullDown";
+@import "animation-patterns/pullUp";
+@import "animation-patterns/pulse";
+@import "animation-patterns/reveal";
+@import "animation-patterns/rotateIn";
+@import "animation-patterns/rotateInDownLeft";
+@import "animation-patterns/rotateInDownRight";
+@import "animation-patterns/rotateInUpLeft";
+@import "animation-patterns/rotateInUpRight";
+@import "animation-patterns/rotateOut";
+@import "animation-patterns/rotateOutDownLeft";
+@import "animation-patterns/rotateOutDownRight";
+@import "animation-patterns/rotateOutUpLeft";
+@import "animation-patterns/rotateOutUpRight";
+@import "animation-patterns/rubberBand";
+@import "animation-patterns/shake";
+@import "animation-patterns/slideDown";
+@import "animation-patterns/slideExpandUp";
+@import "animation-patterns/slideLeft";
+@import "animation-patterns/slideRight";
+@import "animation-patterns/slideUp";
+@import "animation-patterns/spin";
+@import "animation-patterns/stretchLeft";
+@import "animation-patterns/stretchRight";
+@import "animation-patterns/swing";
+@import "animation-patterns/tada";
+@import "animation-patterns/tinDownIn";
+@import "animation-patterns/tinDownOut";
+@import "animation-patterns/tinLeftIn";
+@import "animation-patterns/tinLeftOut";
+@import "animation-patterns/tinRightIn";
+@import "animation-patterns/tinRightOut";
+@import "animation-patterns/tinUpIn";
+@import "animation-patterns/tinUpOut";
+@import "animation-patterns/tossing";
+@import "animation-patterns/wobble";
+@import "animation-patterns/zoomIn";
+@import "animation-patterns/zoomInDown";
+@import "animation-patterns/zoomInLeft";
+@import "animation-patterns/zoomInRight";
+@import "animation-patterns/zoomInUp";
+@import "animation-patterns/zoomOut";
+@import "animation-patterns/zoomOutDown";
+@import "animation-patterns/zoomOutLeft";
+@import "animation-patterns/zoomOutRight";
+@import "animation-patterns/zoomOutUp";

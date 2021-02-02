@@ -1,0 +1,18 @@
+@keyframes lightSpeedOut {
+
+    0% {
+    opacity: 1;
+    }
+
+    100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    }
+
+}
+
+.lightSpeedOut {
+animation-duration: 0.5s;
+animation-name: lightSpeedOut;
+animation-timing-function: ease-in;
+}

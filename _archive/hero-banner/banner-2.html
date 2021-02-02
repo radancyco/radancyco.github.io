@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.getElementsByTagName("html")[0].className = "js";</script>
+  <title>Tab UI 2.0 (jQuery)</title>
+
+
+
+<style>
+
+
+*[aria-pressed=true] {
+font-weight: bold;
+}
+
+img {
+display: block;
+width: 100%;
+max-width: 100%;
+}
+
+.hero-banner {
+
+}
+
+.hero-banner-panel {
+
+}
+
+.hero-banner-panel:not([hidden]) {
+transition: all 300ms ease-in-out;
+opacity: 1;
+}
+
+.hero-banner-panel[hidden] {
+opacity: 0;
+}
+
+</style>
+
+</head>
+<body>
+
+  <main>
+
+    <h1>Hero Banner (Random with Navigation)</h1>
+
+    <div class="hero-banner">
+
+      <div class="hero-banner-panel">
+
+          <img src="https://via.placeholder.com/900x250" alt="Hello World">
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 2</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 3</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 4</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 5</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 6</h1>
+
+      </div>
+
+    </div>
+
+    <div class="hero-banner">
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 1</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 2</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 3</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 4</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 5</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 6</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 7</h1>
+
+      </div>
+
+      <div class="hero-banner-panel">
+
+        <h1>Content 8 (Default)</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 9</h1>
+
+      </div>
+
+    </div>
+
+    <div class="hero-banner">
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 1</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 2</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 3</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 4</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 5</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 6</h1>
+
+      </div>
+
+      <div class="hero-banner-panel">
+
+        <h1>Content 7 (Default)</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 8</h1>
+
+      </div>
+
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 9</h1>
+
+      </div>
+
+    </div>
+
+    <div class="hero-banner">
+
+      <div class="hero-banner-panel" hidden>
+
+          <h1>Content 1</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 2</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 3</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 4</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 5</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 6</h1>
+
+      </div>
+
+      <div class="hero-banner-panel">
+
+        <h1>Content 7 (Default)</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 8</h1>
+
+      </div>
+
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 9</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 10</h1>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+
+  var itemParent = $(".hero-banner");
+  var itemPanel = $(".hero-banner-panel");
+
+  itemParent.each(function(index) {
+
+
+
+  //  alert(random);
+
+    var $this = $(this);
+    var parentIndex = index + 1;
+
+    var random = Math.floor(Math.random() * $this.find(itemPanel).length);
+
+    $this.append('<nav class="hero-banner-navigation" aria-label="banner ' + parentIndex + '"><ul></ul></nav>');
+
+    var itemNav = $(".hero-banner-navigation");
+
+      $this.find(itemPanel).each(function(index) {
+
+        var panelIndex = index + 1;
+
+        $(this).attr("id", "hero-banner-" + parentIndex + "-" + panelIndex).append('<button aria-pressed="false" class="hero-return-button" data-panel=' + parentIndex + "-" + panelIndex + '>Return to Selection ' + panelIndex + '</button>');
+
+        $(this).parent().find("ul").append('<li><button aria-pressed="false" class="hero-banner-button" data-panel=' + parentIndex + "-" + panelIndex + '>Selection ' + panelIndex + '</button></li>');
+
+
+
+      });
+
+
+
+    // We inline hidden above, so divs are never shown if JavaScript fails/breaks.
+
+    var itemNavButton = $(".hero-banner-button");
+
+    var itemReturnButton = $(".hero-return-button");
+
+    //setTimeout(function(){
+
+$this.find(itemPanel).prop("hidden", true).eq(random).removeAttr("hidden");
+    $this.find(itemNavButton).eq(random).attr("aria-pressed", "true");
+
+  //}, 2000);
+
+  itemNavButton.on("click", function() {
+
+    $(this).closest(itemParent).find(itemPanel).prop("hidden", true);
+    $("#hero-banner-" + $(this).data("panel")).removeAttr("hidden").attr("tabindex", 0).focus();
+
+    $(this).parent().parent().find(itemNavButton).attr("aria-pressed", "false");
+    $(this).attr("aria-pressed", "true");
+
+  });
+
+  itemReturnButton.on("click", function() {
+
+    $(this).closest(itemParent).find("[aria-pressed=true]").focus();
+
+  });
+
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

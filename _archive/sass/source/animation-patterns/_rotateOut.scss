@@ -1,0 +1,19 @@
+@keyframes rotateOut {
+
+    0% {
+    opacity: 1;
+    transform-origin: center;
+    }
+
+    100% {
+    opacity: 0;
+    transform: rotate3d(0, 0, 1, 200deg);
+    transform-origin: center;
+    }
+
+}
+
+.rotateOut {
+animation-duration: 0.75s;
+animation-name: rotateOut;
+}

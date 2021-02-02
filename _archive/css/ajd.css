@@ -1,0 +1,640 @@
+/*! 
+
+  TalentBrew: Advanced Job Descriptons 1.0
+
+  Michael "Spell" Spellacy (michael.spellacy[at]tmp.com)
+  Joshua Mahoney (joshua.mahoney[at]tmp.com)
+  Brock Barnett (brock.barnett[at]tmp.com)
+
+*/
+.wai, #advanced-job-details #ajd-overview .ajd-section-heading, .success-profile-secondary-heading {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img, video {
+  display: block;
+  max-width: 100%; }
+
+#page {
+  min-width: 320px; }
+
+body {
+  font: 100%/1.6 "HelveticaNeue-Light", "Helvetica Neue Light","Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #000; }
+
+a.external {
+  background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==) center right no-repeat;
+  padding-right: 14px; }
+  a.external:focus, a.external:hover {
+    background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///2eIpAAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==) center right no-repeat; }
+
+body.pattern-message:before {
+  background-color: #0895d3;
+  background-image: linear-gradient(130deg, #0895d3 0%, #0895d3 21%, #2573ba 68%, #2573ba 100%);
+  color: #fff;
+  display: block;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+body#success-profile.pattern-message {
+  margin: 75em 1em 1em; }
+  body#success-profile.pattern-message:before {
+    content: "To view this pattern's functionality, please scroll down."; }
+
+#pattern-helper {
+  background-image: linear-gradient(130deg, #263343 0%, #263343 21%, #151d27 68%, #151d27 100%);
+  border-radius: 5px;
+  clear: both;
+  color: #fff;
+  margin: 1em;
+  padding: 1em; }
+  #pattern-helper a {
+    color: inherit; }
+  #pattern-helper h2 {
+    margin: 0; }
+  #pattern-helper ul {
+    list-style: none;
+    margin: 0.8em;
+    padding: 0; }
+  #pattern-helper li {
+    margin-bottom: 0.8em; }
+
+#advanced-job-details a {
+  transition: all 0.2s ease-in-out; }
+#advanced-job-details ::cue {
+  font-size: 1.6vmax; }
+#advanced-job-details .ajd-content-brace, #advanced-job-details .ajd-navigation ul {
+  margin: 0 auto;
+  max-width: 1280px; }
+#advanced-job-details #ajd-banner {
+  top: -225px;
+  transition: top 500ms 300ms ease-in-out; }
+  #advanced-job-details #ajd-banner.ajd-fixed-heading {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100; }
+#advanced-job-details .ajd-hero {
+  display: block;
+  overflow: hidden; }
+  #advanced-job-details .ajd-hero img {
+    transform: scale(1.3);
+    transition: all 4s ease-in-out; }
+  #advanced-job-details .ajd-hero.active img {
+    transform: scale(1); }
+#advanced-job-details .ajd-job-information {
+  background-color: #ccc; }
+  #advanced-job-details .ajd-job-information .ajd-content-brace, #advanced-job-details .ajd-job-information .ajd-navigation ul, #advanced-job-details .ajd-navigation .ajd-job-information ul {
+    display: flex;
+    padding: 20px 1em; }
+#advanced-job-details .ajd-job-heading {
+  flex-grow: 1;
+  width: 75%; }
+#advanced-job-details .ajd-job-title {
+  margin: 0; }
+#advanced-job-details .ajd-job-location {
+  display: block;
+  margin: 0; }
+#advanced-job-details .ajd-job-button {
+  width: 25%; }
+#advanced-job-details .ajd-btn-apply {
+  background-color: #555;
+  color: #fff;
+  display: block;
+  margin-left: 1em;
+  min-width: 13vw;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none; }
+  @media (min-width: 53.75em) {
+    #advanced-job-details .ajd-btn-apply {
+      padding: 1em; } }
+  #advanced-job-details .ajd-btn-apply:focus, #advanced-job-details .ajd-btn-apply:hover {
+    background-color: #000; }
+#advanced-job-details .ajd-navigation {
+  background-color: #555;
+  font-size: small;
+  padding: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase; }
+  @media (max-height: 568px) {
+    #advanced-job-details .ajd-navigation {
+      display: none; } }
+  @media (min-width: 53.75em) {
+    #advanced-job-details .ajd-navigation {
+      font-size: initial; } }
+  @media (min-width: 53.75em) {
+    #advanced-job-details .ajd-navigation ul {
+      display: flex;
+      justify-content: space-around; } }
+  #advanced-job-details .ajd-navigation li {
+    display: inline-block; }
+  #advanced-job-details .ajd-navigation a {
+    color: #fff;
+    display: block;
+    padding: 0.5em;
+    text-decoration: none; }
+    @media (min-width: 53.75em) {
+      #advanced-job-details .ajd-navigation a {
+        padding: 1em; } }
+    #advanced-job-details .ajd-navigation a:focus .no-js #advanced-job-details .ajd-navigation a, #advanced-job-details .ajd-navigation a:hover, #advanced-job-details .ajd-navigation a.active {
+      color: #ccc;
+      white-space: nowrap; }
+#advanced-job-details #ajd-overview {
+  background-color: #eee;
+  padding: 1em; }
+#advanced-job-details .ajd-quick-facts {
+  margin: 1em 0;
+  text-align: center; }
+  #advanced-job-details .ajd-quick-facts:empty {
+    display: none; }
+  #advanced-job-details .ajd-quick-facts li {
+    display: inline-block;
+    margin: 1em; }
+    @media (min-width: 48.75em) {
+      #advanced-job-details .ajd-quick-facts li {
+        margin: 1em 5%; } }
+    #advanced-job-details .ajd-quick-facts li:before {
+      background: url("../img/ajd/ico-quick-facts.svg") left top/cover no-repeat;
+      content: "";
+      display: inline-block;
+      height: 28px;
+      margin-right: 7px;
+      vertical-align: middle;
+      width: 28px; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li:before {
+          height: 38px;
+          margin-right: 14px;
+          width: 38px; } }
+    #advanced-job-details .ajd-quick-facts li.job-location:before {
+      background-position: 6px 0; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li.job-location:before {
+          background-position: 8px 0; } }
+    #advanced-job-details .ajd-quick-facts li.job-type:before {
+      background-position: -24px 0; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li.job-type:before {
+          background-position: -33px 0; } }
+    #advanced-job-details .ajd-quick-facts li.job-level:before {
+      background-position: -52px 0; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li.job-level:before {
+          background-position: -71px 0; } }
+    #advanced-job-details .ajd-quick-facts li.job-travel:before {
+      background-position: -84px 0; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li.job-travel:before {
+          background-position: -114px 0; } }
+    #advanced-job-details .ajd-quick-facts li.job-salary:before {
+      background-position: -114px 0; }
+      @media (min-width: 48.75em) {
+        #advanced-job-details .ajd-quick-facts li.job-salary:before {
+          background-position: -153px 0; } }
+#advanced-job-details .ajd-glassdoor-rating {
+  color: #1F9095;
+  display: block;
+  text-align: center; }
+  .js #advanced-job-details .ajd-glassdoor-rating {
+    margin: 0 auto;
+    width: 246px;
+    text-decoration: none; }
+    .js #advanced-job-details .ajd-glassdoor-rating:before {
+      background-image: url("../img/ajd/logo-glassdoor.svg");
+      background-size: 104px 25px;
+      content: "";
+      display: block;
+      height: 25px;
+      margin: 0 auto 10px;
+      width: 104px; }
+      @media (min-width: 35em) {
+        .js #advanced-job-details .ajd-glassdoor-rating:before {
+          display: inline-block;
+          margin: 0; } }
+    .js #advanced-job-details .ajd-glassdoor-rating b, .js #advanced-job-details .ajd-glassdoor-rating i {
+      background-image: url("../img/ajd/ico-glassdoor-rating.svg");
+      height: 24px; }
+    .js #advanced-job-details .ajd-glassdoor-rating b {
+      display: inline-block;
+      width: 137px; }
+      .js #advanced-job-details .ajd-glassdoor-rating b i {
+        background-position: 0 -24px;
+        display: block;
+        overflow: hidden;
+        text-indent: -999em;
+        transition: all 1.8s ease-in-out;
+        width: 0; }
+#advanced-job-details #ajd-success {
+  text-align: center; }
+  #advanced-job-details #ajd-success p {
+    margin: 10px auto 0;
+    max-width: 700px; }
+#advanced-job-details .ajd-quote {
+  background-color: #ccc;
+  border-radius: 5px;
+  margin: 3em 0;
+  padding: 3em;
+  position: static;
+  text-align: center; }
+  #advanced-job-details .ajd-quote .ajd-employee-quote {
+    margin: 0 0 1em; }
+  #advanced-job-details .ajd-quote .ajd-employee-citation:before {
+    content: "- "; }
+@media (min-width: 53.75em) {
+  #advanced-job-details #ajd-trending .ajd-content-brace, #advanced-job-details #ajd-trending .ajd-navigation ul, #advanced-job-details .ajd-navigation #ajd-trending ul {
+    display: flex; } }
+#advanced-job-details #ajd-trending .ajd-story {
+  text-decoration: none; }
+  @media (min-width: 53.75em) {
+    #advanced-job-details #ajd-trending .ajd-story {
+      display: flex; } }
+  #advanced-job-details #ajd-trending .ajd-story:focus .ajd-btn-learn-more, #advanced-job-details #ajd-trending .ajd-story:hover .ajd-btn-learn-more {
+    background-color: #555;
+    color: #fff;
+    transition: all 0.2s ease-in-out; }
+#advanced-job-details #ajd-trending .ajd-story-media, #advanced-job-details #ajd-trending .ajd-story-snippet {
+  margin-bottom: 1em; }
+  @media (min-width: 53.75em) {
+    #advanced-job-details #ajd-trending .ajd-story-media, #advanced-job-details #ajd-trending .ajd-story-snippet {
+      margin: 0 1.3em 1.3em 1.3em; } }
+#advanced-job-details #ajd-trending .ajd-story-media {
+  min-width: 40%; }
+  #advanced-job-details #ajd-trending .ajd-story-media img {
+    width: 100%; }
+#advanced-job-details #ajd-trending h3 {
+  margin: 0; }
+#advanced-job-details #ajd-trending .ajd-btn-learn-more {
+  border: 1px #555 solid;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none; }
+#advanced-job-details .ajd-related-media {
+  margin: 0 auto; }
+#advanced-job-details #ajd-rewards .ajd-reward-list {
+  margin: 0; }
+  @media (min-width: 35em) {
+    #advanced-job-details #ajd-rewards .ajd-reward-list {
+      display: flex;
+      flex-flow: row wrap;
+      margin-left: 3%; } }
+#advanced-job-details #ajd-rewards li {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  padding: 1.5em;
+      /* 
+
+      &.ajd-ico-401k:before {
+      background-image: url("../img/ajd/ico-401k.svg");
+      }
+
+      &.ajd-ico-adoption-cost-benefit:before {
+      background-image: url("../img/ajd/ico-adoption-cost-benefit.svg");
+      }
+
+      &.ajd-ico-amenities:before {
+      background-image: url("../img/ajd/ico-amenities.svg");
+      }
+
+      &.ajd-ico-balance:before {
+      background-image: url("../img/ajd/ico-balance.svg");
+      }
+
+      &.ajd-ico-cafeteria:before {
+      background-image: url("../img/ajd/ico-cafeteria.svg");
+      }
+
+      &.ajd-ico-child-care-subsidy:before {
+      background-image: url("../img/ajd/ico-child-care-subsidy.svg");
+      }
+
+      &.ajd-ico-company-store:before {
+      background-image: url("../img/ajd/ico-company-store.svg");
+      }
+
+      &.ajd-ico-continuing-education:before {
+      background-image: url("../img/ajd/ico-continuing-education.svg");
+      }
+
+      &.ajd-ico-dental:before {
+      background-image: url("../img/ajd/ico-dental.svg");
+      }
+
+      &.ajd-ico-dependent-care:before {
+      background-image: url("../img/ajd/ico-dependent-care.svg");
+      }
+
+      &.ajd-ico-flex-time:before {
+      background-image: url("../img/ajd/ico-flex-time.svg");
+      }
+
+      &.ajd-ico-healthcare-fsa:before {
+      background-image: url("../img/ajd/ico-healthcare-fsa.svg");
+      }
+
+      &.ajd-ico-life-disability-insurance:before {
+      background-image: url("../img/ajd/ico-life-disability-insurance.svg");
+      }
+
+      &.ajd-ico-locations:before {
+      background-image: url("../img/ajd/ico-locations.svg");
+      }
+
+      &.ajd-ico-management:before {
+      background-image: url("../img/ajd/ico-management.svg");
+      }
+
+      &.ajd-ico-maternity-paternity-leave:before {
+      background-image: url("../img/ajd/ico-maternity-paternity-leave.svg");
+      }
+
+      &.ajd-ico-medical:before {
+      background-image: url("../img/ajd/ico-medical.svg");
+      }
+
+      &.ajd-ico-nursing-mother-rooms:before {
+      background-image: url("../img/ajd/ico-nursing-mother-rooms.svg");
+      }
+
+      &.ajd-ico-onsite-child-care:before {
+      background-image: url("../img/ajd/ico-onsite-child-care.svg");
+      }
+
+      &.ajd-ico-onsite-fitness:before {
+      background-image: url("../img/ajd/ico-onsite-fitness.svg");
+      }
+
+      &.ajd-ico-onsite-post-office:before {
+      background-image: url("../img/ajd/ico-onsite-post-office.svg");
+      }
+
+      &.ajd-ico-onsite-salon-barber:before {
+      background-image: url("../img/ajd/ico-onsite-salon-barber.svg");
+      }
+
+      &.ajd-ico-paid-vacation:before {
+      background-image: url("../img/ajd/ico-paid-vacation.svg");
+      }
+
+      &.ajd-ico-relocation-reimbursement:before {
+      background-image: url("../img/ajd/ico-relocation-reimbursement.svg");
+      }
+
+      &.ajd-ico-tuition:before {
+      background-image: url("../img/ajd/ico-tuition.svg");
+      }
+
+      &.ajd-ico-vision:before {
+      background-image: url("../img/ajd/ico-vision.svg");
+      }
+
+      */ }
+  @media (min-width: 35em) {
+    #advanced-job-details #ajd-rewards li {
+      margin-right: 1.5%;
+      width: 48%; } }
+  @media (min-width: 48.75em) {
+    #advanced-job-details #ajd-rewards li {
+      width: 31%; } }
+  #advanced-job-details #ajd-rewards li:before {
+    background-image: url("https://placehold.it/113x113");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 76px 76px;
+    content: "";
+    display: block;
+    height: 76px;
+    margin: 0 auto;
+    width: 76px; }
+    @media (min-width: 61.25em) {
+      #advanced-job-details #ajd-rewards li:before {
+        background-size: 113px 113px;
+        height: 113px;
+        width: 113px; } }
+  #advanced-job-details #ajd-rewards li.ajd-ico-healthcare:before {
+    background-image: url("../img/ajd/ico-healthcare.svg"); }
+  #advanced-job-details #ajd-rewards li.ajd-ico-collaboration:before {
+    background-image: url("../img/ajd/ico-collaboration.svg"); }
+  #advanced-job-details #ajd-rewards li.ajd-ico-freedom:before {
+    background-image: url("../img/ajd/ico-freedom.svg"); }
+  #advanced-job-details #ajd-rewards li.ajd-ico-variety:before {
+    background-image: url("../img/ajd/ico-variety.svg"); }
+  #advanced-job-details #ajd-rewards li.ajd-ico-compensation:before {
+    background-image: url("../img/ajd/ico-compensation.svg"); }
+  #advanced-job-details #ajd-rewards li.ajd-ico-pto:before {
+    background-image: url("../img/ajd/ico-pto.svg"); }
+#advanced-job-details #ajd-responsibilties .ats-description {
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 1em; }
+  @media (min-width: 53.75em) {
+    #advanced-job-details #ajd-responsibilties .ats-description {
+      padding: 1em 1.8em; } }
+#advanced-job-details #ajd-map {
+  background-color: #555;
+  color: #fff;
+  margin: 0;
+  padding: 30px 1em;
+  position: relative; }
+  @media (min-width: 48.75em) {
+    #advanced-job-details #ajd-map {
+      padding: 60px 2em 60px 2em; } }
+  #advanced-job-details #ajd-map:after {
+    display: none; }
+    @media (min-width: 48.75em) {
+      #advanced-job-details #ajd-map:after {
+        background-image: url("../img/ajd/map.svg");
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: 130% 130%;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background-size 2.5s ease-in-out;
+        width: 50%; } }
+  #advanced-job-details #ajd-map.active:after {
+    background-size: 100% 100%; }
+  @media (min-width: 48.75em) {
+    #advanced-job-details #ajd-map {
+      padding-left: 15%; } }
+  #advanced-job-details #ajd-map .btn-view-more {
+    border: 1px #fff solid;
+    color: #fff;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none; }
+    @media (min-width: 48.75em) {
+      #advanced-job-details #ajd-map .btn-view-more {
+        display: inline-block;
+        min-width: 220px; } }
+    #advanced-job-details #ajd-map .btn-view-more:focus, #advanced-job-details #ajd-map .btn-view-more:hover {
+      background-color: #fff;
+      color: #555; }
+#advanced-job-details #ajd-jobs .ajd-col {
+  background-color: #ccc;
+  border-radius: 3px; }
+#advanced-job-details #ajd-success, #advanced-job-details #ajd-trending, #advanced-job-details #ajd-rewards, #advanced-job-details #ajd-responsibilties, #advanced-job-details #ajd-jobs, #advanced-job-details .ajd-quote {
+  margin: 1em;
+  max-width: 1280px; }
+  @media (min-width: 80em) {
+    #advanced-job-details #ajd-success, #advanced-job-details #ajd-trending, #advanced-job-details #ajd-rewards, #advanced-job-details #ajd-responsibilties, #advanced-job-details #ajd-jobs, #advanced-job-details .ajd-quote {
+      margin: 60px auto; } }
+#advanced-job-details #ajd-trending .ajd-section-heading, #advanced-job-details #ajd-rewards .ajd-section-heading, #advanced-job-details #ajd-responsibilties .ajd-section-heading, #advanced-job-details #ajd-jobs .ajd-section-heading {
+  text-align: center; }
+  @media (min-width: 53.75em) {
+    #advanced-job-details #ajd-trending .ajd-section-heading, #advanced-job-details #ajd-rewards .ajd-section-heading, #advanced-job-details #ajd-responsibilties .ajd-section-heading, #advanced-job-details #ajd-jobs .ajd-section-heading {
+      margin-bottom: 40px; } }
+#advanced-job-details .ajd-navigation ul, #advanced-job-details .ajd-quick-facts, #advanced-job-details .ajd-reward-list {
+  list-style: none;
+  padding: 0; }
+@media (min-width: 61.25em) {
+  #advanced-job-details .ajd-grid {
+    display: flex; } }
+#advanced-job-details .ajd-col {
+  margin: 1em;
+  padding: 1em;
+  background-color: red; }
+  @media (min-width: 61.25em) {
+    #advanced-job-details .ajd-col {
+      width: 50%;
+      margin: 0 1%; } }
+#advanced-job-details .ajd-section .ajd-btn-nav a {
+  background: #666 url("../img/ajd/btn-arrow-up.png") center/25px no-repeat;
+  border-radius: 50%;
+  bottom: -1em;
+  display: block;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 50%;
+  text-indent: -999em;
+  width: 50px;
+  z-index: 10; }
+  #advanced-job-details .ajd-section .ajd-btn-nav a:focus {
+    background-color: rgba(102, 102, 102, 0.7);
+    bottom: 1em;
+    opacity: 1; }
+
+.success-profile {
+  margin: 0 auto;
+  max-width: 540px;
+  transition: all 0.8s ease-in-out; }
+  .success-profile ul {
+    list-style: none;
+    padding: 0; }
+
+.success-profile-primary-traits {
+  margin: 40px 0 60px;
+  position: relative;
+  text-align: left; }
+  .success-profile-primary-traits li {
+    position: relative; }
+    @media (min-width: 48.75em) {
+      .success-profile-primary-traits li {
+        margin-top: 15px; } }
+  .success-profile-primary-traits:before, .success-profile-primary-traits:after {
+    bottom: -40px;
+    color: #0895d3;
+    display: block;
+    font-weight: bold;
+    position: absolute; }
+  .success-profile-primary-traits:before {
+    content: "0";
+    left: 0; }
+  .success-profile-primary-traits:after {
+    content: "10";
+    right: 0; }
+
+.success-profile-label {
+  color: #666;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 35px;
+  transition: all 0.6s ease-in-out; }
+  @media (min-width: 48.75em) {
+    .js .success-profile-label {
+      left: 10px;
+      position: absolute;
+      z-index: 2; }
+    .active .success-profile-label {
+      color: #fff; } }
+
+.success-profile-percent {
+  font-style: normal;
+  font-weight: bold;
+  line-height: 35px; }
+  .js .success-profile-percent {
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    right: 20px;
+    z-index: 2; }
+  @media (min-width: 48.75em) {
+    .success-profile-percent {
+      top: 0; } }
+
+.success-profile-level {
+  height: 35px;
+  position: relative; }
+  .success-profile-level:before {
+    background-image: linear-gradient(130deg, #0895d3 0%, #0895d3 21%, #2573ba 68%, #2573ba 100%);
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 35px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all 1.2s ease-in-out;
+    width: 0; }
+    .active .success-profile-level:before {
+      opacity: 1;
+      width: 100%; }
+
+.success-profile-secondary-traits {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0;
+  text-align: center; }
+  .success-profile-secondary-traits li {
+    background-color: #ccc;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 3px;
+    padding: 4px 8px;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+    transition: all 0.2s ease-in-out; }
+
+/*# sourceMappingURL=ajd.css.map */

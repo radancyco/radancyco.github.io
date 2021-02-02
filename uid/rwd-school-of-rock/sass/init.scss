@@ -1,0 +1,37 @@
+/*! RWD Schoold of Rock - Global CSS, Developers: Stephanie "Plum" Plumeri (@s_plum) and Michael "Spell" Spellacy (@spellacy) */
+
+// Variables (Mandatory): Global variables used within this project.
+
+	@import "variables";
+
+// Functions (Mandatory): Global functions used within this project.
+
+	@import "functions";
+
+// Mixins (Mandatory): Global mixins used within this project.
+
+	@import "mixins";
+
+// Web Fonts (Mandatory): Web fonts used by the project.
+
+	@import "fonts";
+
+// Animations (Optional): Keyframe animations used within the project.
+
+	@import "animation";
+
+// Reset (Optional): A CSS reset which levels out many cross-browser inconsistiences.
+
+	@import "reset";
+
+// Theme (Mandatory): Main layout of site. This file contains imports to other partials that help build the layout.
+
+	@import "theme";
+
+// Placeholder (Optional): Placeholder patterns used withn this project
+
+	@import "/placeholders";
+
+// Shame (Optional): Cross-browser CSS hacks may be added here. For shame! For shame!
+
+	@import "shame";

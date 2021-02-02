@@ -1,0 +1,18 @@
+
+/* Live Development Page Message */
+
+html {
+
+	&:before {
+	background-color: #a90329; // Old browsers
+	@include background-image(linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%));
+	@include filter-gradient(#a90329, #6d0019, vertical);
+	color: #fff;
+	content: "This site is currently under live development. Objects in mirror may be closer than they appear.";
+	display: block;
+	padding: .8em 4%;
+	text-align: center;
+	width: 92%;
+	}
+
+}

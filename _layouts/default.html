@@ -4,8 +4,8 @@
     <meta charset="{{ site.charset }}">
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
 	  <meta content="noindex, nofollow" name="robots">{% endif %}
-    <link href="{{ site.git-url }}/styleguide/favicon.png" rel="icon">
-    <link href="{{ site.git-url }}/styleguide/init.css" rel="stylesheet">{% if page.localcss %}
+    <link href="{{ site.git-url }}/favicon.png" rel="icon">
+    <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
     <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
     <title>{{ page.title }} - {{ site.company-name }}</title>
@@ -17,7 +17,7 @@
 
     <header id="banner">
 
-      <a href="{{ site.company-url }}"><img src="{{ site.git-url }}/styleguide/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
+      <a href="{{ site.company-url }}"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
 
     </header>
 

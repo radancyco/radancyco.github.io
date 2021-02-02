@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.getElementsByTagName("html")[0].className = "js";</script>
+  <link rel="stylesheet" href="hero-banner-1.0-jquery.css">
+  <title>Tab UI 2.0 (jQuery)</title>
+</head>
+<body>
+
+  <h1>Hero Banner (Random)</h1>
+
+  <main>
+
+    <div class="hero-banner">
+
+      <div class="hero-banner-panel">
+
+          <h1>Content 1 (Default)</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 2</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 3</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 4</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 5</h1>
+
+      </div>
+
+      <div class="hero-banner-panel" hidden>
+
+        <h1>Content 6</h1>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>
+
+  var itemPanel = $(".hero-banner-panel");
+  var random = Math.floor(Math.random() * itemPanel.length);
+
+  itemPanel.each(function(index) {
+
+    $(this).attr("id", "hero-banner-" + (index + 1));
+
+  });
+
+  // We inline hidden above, so divs are never shown if JavaScript fails/breaks.
+
+  itemPanel.prop("hidden", true).eq(random).removeAttr("hidden");
+
+  </script>
+
+</body>
+</html>

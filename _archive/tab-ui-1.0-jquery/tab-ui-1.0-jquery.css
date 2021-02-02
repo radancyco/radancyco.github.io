@@ -1,0 +1,92 @@
+body {
+  background-color: #eee; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.tab-ui {
+  border-top: 3px solid #07587D;
+  position: relative; }
+  @media (min-width: 500px) {
+    .tab-ui {
+      border-top: 0; } }
+
+.tab-list {
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+  text-align: center;
+  position: relative; }
+  @media (min-width: 500px) {
+    .tab-list li {
+      display: inline-block;
+      margin-bottom: 0; } }
+
+.tab-link {
+  background-color: #fff;
+  color: inherit;
+  display: block;
+  font-weight: 600;
+  padding: 1em 3.5em 1em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none; }
+  @media (min-width: 500px) {
+    .tab-link {
+      background-color: transparent;
+      padding-right: 1em; } }
+  .tab-link:not([aria-describedby]) {
+    display: none; }
+    @media (min-width: 500px) {
+      .tab-link:not([aria-describedby]) {
+        display: block; } }
+  .tab-link::before, .tab-link::after {
+    content: "";
+    position: absolute; }
+  .tab-link::before {
+    background-color: #07587D;
+    display: none;
+    height: 4px;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    top: 0;
+    width: 50%; }
+  .tab-link::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 15'><path d='M21 0l3 3.06L12 15 0 3.06 3 0l9 9z' fill='%2307587D'/></svg>");
+    display: block;
+    height: 20px;
+    right: 1em;
+    top: 1em;
+    width: 30px; }
+    @media (min-width: 500px) {
+      .tab-link::after {
+        display: none; } }
+  .active .tab-link {
+    display: block; }
+    .active .tab-link#tab-1-item::after {
+      transform: rotate(180deg); }
+    .active .tab-link:not(#tab-1-item)::after {
+      display: none; }
+  .tab-link:focus, .tab-link:hover, .tab-link[aria-describedby="current-selection"] {
+    color: #07587D; }
+    @media (min-width: 500px) {
+      .tab-link:focus::before, .tab-link:hover::before, .tab-link[aria-describedby="current-selection"]::before {
+        display: block; } }
+
+.tab-panel {
+  background-color: #fff;
+  border-top: 4px #ccc solid;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 1em; }
+  .js .tab-panel {
+    display: none; }
+  .tab-panel[aria-hidden="false"] {
+    display: block; }
+
+.tab-heading:focus {
+  outline: 0; }
+
+/*# sourceMappingURL=tab-ui-1.0-jquery.css.map */

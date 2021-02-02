@@ -1,0 +1,31 @@
+@keyframes hinge {
+
+    0% {
+    animation-timing-function: ease-in-out;
+    transform-origin: top left;
+    }
+
+    20%, 60% {
+    animation-timing-function: ease-in-out;
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    }
+
+    40%, 80% {
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    }
+
+    100% {
+    opacity: 0;
+    transform: translate3d(0, 700px, 0);
+    }
+
+}
+
+.hinge {
+animation-duration: 1.5s;
+animation-name: hinge;
+}

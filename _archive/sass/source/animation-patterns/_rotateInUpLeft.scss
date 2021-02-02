@@ -1,0 +1,20 @@
+@keyframes rotateInUpLeft {
+
+    0% {
+    opacity: 0;
+    transform: rotate3d(0, 0, 1, 45deg);
+    transform-origin: left bottom;
+    }
+
+    100% {
+    opacity: 1;
+    transform: none;
+    transform-origin: left bottom;
+    }
+
+}
+
+.rotateInUpLeft {
+animation-duration: 0.75s;
+animation-name: rotateInUpLeft;
+}

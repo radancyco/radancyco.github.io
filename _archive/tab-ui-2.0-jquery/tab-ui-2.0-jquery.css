@@ -1,0 +1,99 @@
+body {
+  background-color: #eee; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+.tab-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative; }
+  @media (min-width: 500px) {
+    .tab-list {
+      display: block; } }
+  @media (min-width: 500px) {
+    .tab-list li {
+      display: inline-block; } }
+
+.tab-button {
+  background-color: #fff;
+  border: 0;
+  border-top: 4px #ccc solid;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  margin-top: 2em;
+  padding: 1.5em 3.5em 1.5em 1.5em;
+  position: relative;
+  text-align: left;
+  width: 100%; }
+  @media (min-width: 500px) {
+    .tab-button {
+      display: none; } }
+  .tab-button::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 15'><path d='M21 0l3 3.06L12 15 0 3.06 3 0l9 9z' fill='%2307587D'/></svg>");
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    width: 25px; }
+    @media (min-width: 500px) {
+      .tab-button::after {
+        display: none; } }
+  .tab-button[aria-expanded="true"]::after {
+    transform: rotate(180deg); }
+
+.tab-link {
+  color: inherit;
+  display: block;
+  font-weight: 600;
+  padding: 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none; }
+  .tab-link:not([aria-describedby]) {
+    display: none; }
+    @media (min-width: 500px) {
+      .tab-link:not([aria-describedby]) {
+        display: block; } }
+  .tab-link::before {
+    background-color: #07587D;
+    content: "";
+    display: none;
+    height: 4px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%; }
+  .tab-link:focus, .tab-link:hover, .tab-link[aria-describedby="current-selection"] {
+    color: #07587D; }
+    @media (min-width: 500px) {
+      .tab-link:focus::before, .tab-link:hover::before, .tab-link[aria-describedby="current-selection"]::before {
+        display: block; } }
+
+.tab-panel {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 1em; }
+  @media (min-width: 500px) {
+    .tab-panel {
+      border-top: 4px #ccc solid; } }
+  .js .tab-panel {
+    display: none; }
+  .tab-panel[aria-hidden="false"] {
+    display: block; }
+
+.tab-heading:focus {
+  outline: 0; }
+
+/*# sourceMappingURL=tab-ui-2.0-jquery.css.map */

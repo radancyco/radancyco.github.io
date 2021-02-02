@@ -10,7 +10,6 @@ exclude: [
   CNAME
 ]
 destination: _httpdocs
-git-url: https://tmpworldwide.dev
 highlighter: rouge
 lang: en-US
 markdown: kramdown

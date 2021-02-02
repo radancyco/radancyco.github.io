@@ -4,20 +4,20 @@
     <meta charset="{{ site.charset }}">
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
 	  <meta content="noindex, nofollow" name="robots">{% endif %}
-    <link href="{{ site.git-url }}/rad-styleguide/favicon.png" rel="icon">
-    <link href="{{ site.git-url }}/rad-styleguide/init.css" rel="stylesheet">{% if page.localcss %}
+    <link href="{{ site.git-url }}/styleguide/favicon.png" rel="icon">
+    <link href="{{ site.git-url }}/styleguide/init.css" rel="stylesheet">{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
     <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
     <title>{{ page.title }} - {{ site.company-name }}</title>
 </head>
 
-<body id="rad-{{page.path | replace:'.html',''| replace: '/', '-' | replace: '.md', ''}}">
+<body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
 
   <div id="page">
 
     <header id="banner">
 
-      <a href="{{ site.company-url }}"><img src="{{ site.git-url }}/rad-styleguide/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
+      <a href="{{ site.company-url }}"><img src="{{ site.git-url }}/styleguide/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
 
     </header>
 
@@ -47,7 +47,7 @@
 
       {{ content }}
 
-      <section>
+      <section id="contribute">
 
         <h2>Contribute</h2>
 
@@ -59,7 +59,7 @@
 
         <h2>Quality Assurance</h2>
 
-        <p>All patterns, layouts, and functionality are tested against our <a href="{{site.company-url}}/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools and methods. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.1 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}/issues/">open up an issue</a> and let us know about it or contact <a href="mailto:{{site.owner-email}}">{{ site.owner-name }}</a>.</p>
+        <p>All patterns, layouts, and functionality are tested against our <a href="{{ site.company-url }}/support/">supported browsers</a>. We also look for accessibility issues via automated and manual testing tools and methods. Radancy is committed to the accessibility of its websites and products and strives to meet as much of WCAG 2.1 Level AA as possible. If you discover any problems with our work, please <a href="{{ site.repo }}/issues/">open up an issue</a> and let us know about it or contact <a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a>.</p>
 
       </section>
 

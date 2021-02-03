@@ -505,7 +505,7 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Ethical Design Manifesto](https://2017.ind.ie/)
 * [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
 
-### 11.2. (Highly) Recommended Reading
+### 11.2 (Highly) Recommended Reading
 
 * [Accessibility for Everyone by Laura Kalbag](https://abookapart.com/products/accessibility-for-everyone/)
 * [Adaptive Web Design (1st Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)

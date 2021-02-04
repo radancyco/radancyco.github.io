@@ -20,13 +20,13 @@ box-sizing: inherit;
 }
 
 ::cue {
-background-color: $highlight-color:;
+background-color: $highlight-color;
 color: #fff;
 font-size: 1.2em;
 }
 
 a {
-color: $highlight-color:;
+color: $highlight-color;
 
   &.external {
   background: transparent url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
@@ -51,7 +51,7 @@ padding: 1em;
 }
 
 code {
-background-color: $highlight-color:;
+background-color: $highlight-color;
 border-radius: 4px;
 color: white;
 display: inline-block;
@@ -67,7 +67,7 @@ line-height: normal;
 
 hr {
 border: 0;
-border-bottom: 1px dashed $highlight-color:;
+border-bottom: 1px dashed $highlight-color;
 margin: 3em 0 2em;
 }
 
@@ -256,7 +256,7 @@ width: 100%;
 }
 
 #banner {
-background-color: $highlight-color:;
+background-color: $highlight-color;
 margin: -1em -1em 0;
 padding: .8em 8% .4em;
 

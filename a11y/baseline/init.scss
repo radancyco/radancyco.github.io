@@ -12,7 +12,7 @@
 
 */
 
-$highlight-color: #6E00EE;
+$highlight-color: #0025ff;
 
 .section {
 border-radius: 10px;
@@ -33,6 +33,13 @@ margin-bottom: 2em;
 overflow-X: auto;
 
   table {
+
+    caption {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1em;
+    }
 
     tr {
 

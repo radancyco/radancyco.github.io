@@ -3,14 +3,14 @@ title: Accessibility Testing Baselines
 localcss: init.css
 ---
 
-<p>The following WCAG 2.1 Success Criterion make up the baseline of accessibility issues we strive to test against in our products and websites on a day to day basis. If there is a need to fully support WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
+<p>The following WCAG 2.1 Success Criteria make up the baseline of accessibility issues we strive to test against in our products and websites. These issues are representative of the most common accessibility barriers we encounter on a day to day basis. If there is a need to fully support WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
 
 <p>Please note that these baselines are subject to change as guidelines and our understanding of accessibility continue to evolve.</p>
 
 <div class="table-container">
 
   <table>
-    <caption></caption>
+    <caption>Common Accessibility Issues</caption>
   	<tr>
   		<th>Success Criterion</th>
   		<th>Level</th>
@@ -40,6 +40,12 @@ localcss: init.css
       <td>A</td>
       <td>Don't use presentation that relies solely on color.</td>
       <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank" rel="noopener">Understanding SC 1.4.1 <span class="sr-only">(opens in new window)</span></a></td>
+    </tr>
+    <tr>
+      <td><a href="#resize-text">1.4.4: Resize Text</a></td>
+      <td>AA</td>
+      <td>Text can be resized to 200% without loss of content or function.</td>
+      <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text" target="_blank" rel="noopener">Understanding SC 1.4.4 <span class="sr-only">(opens in new window)</span></a></td>
     </tr>
   	<tr>
       <td><a href="#keyboard">2.1.1: Keyboard</a></td>
@@ -133,7 +139,7 @@ localcss: init.css
     <li>Synchronized captions are provided for non-live video (YouTube videos, etc.).</li>
   </ul>
 
-  <p><strong>Tip:</strong> Watch videos. Are they accurate? If videos are missing captions, then reach out to <a href="mailto:michael.spellacy@tmp.com">Michael Spellacy</a>.</p>
+  <p><strong>Tip:</strong> Watch videos. Are they accurate? If videos are missing captions, then reach out to <a href="mailto:{{ site.owner-email }}">Michael Spellacy</a>.</p>
 
   <p><a href="#content">Back to top</a></p>
 
@@ -162,6 +168,18 @@ localcss: init.css
   <ul>
     <li>Color is not used as the sole method of conveying content or distinguishing visual elements.</li>
     <li>Color alone is not used to distinguish links from surrounding text unless the contrast ratio between the link and the surrounding text is at least 3:1 and an additional distinction (e.g., it becomes underlined) is provided when the link is hovered over and receives focus.</li>
+  </ul>
+
+  <p><a href="#content">Back to top</a></p>
+
+</div>
+
+<div id="resize-text" class="section">
+
+  <h2>1.4.1 Resize Text</h2>
+
+  <ul>
+    <li>The page is readable and functional when the page is zoomed to 200%.</li>
   </ul>
 
   <p><a href="#content">Back to top</a></p>

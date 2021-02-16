@@ -175,8 +175,10 @@ text-decoration: none;
 
 .a11y-info {
 background-color: #40E8D4;
+border-radius: 5px;
+border: 1px black solid;
 color: #000;
-padding: 1px 1em;
+padding: .5em 1em;
 
   a {
   color: inherit;

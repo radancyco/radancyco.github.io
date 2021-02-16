@@ -174,8 +174,8 @@ text-decoration: none;
 }
 
 .a11y-info {
-background-color: #0025ff;
-color: #fff;
+background-color: #40E8D4;
+color: #000;
 padding: 1px 1em;
 
   a {
@@ -185,12 +185,13 @@ padding: 1px 1em;
   h2 {
 
     &::before {
-    background-image: url(/img/a11y-white.png);
+    background-image: url(/img/a11y-white-alt.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
     display: inline-block;
+    filter: brightness(0);
     height: 50px;
     margin-right: .5em;
     vertical-align: middle;

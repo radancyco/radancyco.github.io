@@ -254,6 +254,16 @@ width: 100%;
 
 }
 
+#author {
+
+  img {
+  border-radius: 50%;
+  border: 4px $highlight-color solid;
+  width: 180px;
+  }
+
+}
+
 #banner {
 background-color: $highlight-color;
 margin: -1em -1em 0;

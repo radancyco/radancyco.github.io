@@ -522,3 +522,5 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
 
 [Return to Table of Contents](#toc){: .back-to-toc }
+
+{% include bio-spell.html %}

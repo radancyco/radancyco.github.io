@@ -59,6 +59,7 @@ word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
+color: $highlight-color;
 margin: 1em 0;
 line-height: normal;
 }

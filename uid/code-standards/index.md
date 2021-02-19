@@ -40,7 +40,7 @@ See [{{ site.company-name }} Support]({{ site.company-url }}/support/#operating-
 
 {{ site.company-name }} supports the **current** and **prior** major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
 
-See [{{ site.company-name }} Support]({{ site.company-url }}/support/#browser) for more details.
+See [{{ site.company-name }} Support]({{ site.company-url }}/support/#browser-support) for more details.
 
 ### 1.4 File Naming Conventions
 

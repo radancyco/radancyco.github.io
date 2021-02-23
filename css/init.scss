@@ -73,9 +73,13 @@ margin: 3em 0 2em;
 html {
 box-sizing: border-box;
 
-  @media (prefers-reduced-motion: no-preference) {
+  &:focus-within {
 
-    scroll-behavior: smooth;
+    @media (prefers-reduced-motion: no-preference) {
+
+      scroll-behavior: smooth;
+
+    }
 
   }
 

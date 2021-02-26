@@ -7,10 +7,6 @@ Common accessibility barriers we seek to address in our every day work.
 
 Provides a record of the different resources used to create the code standards guide.
 
-## [Pattern Library](/pattern-library/)
-
-A library of common design patterns, resources, and functional code for use on your next project.
-
 ## [Photoshop Guidelines](/uid/photoshop-guidelines/)
 
 Guidelines for preparing a photoshop file to be handed off to development teams. Educate Yourself.

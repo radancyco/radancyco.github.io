@@ -19,6 +19,13 @@ layout: null
   "theme_color": "{{ site.theme-color }}",
   "icons": [{
 
+     "src": "{{ site.url }}/img/app/logo-48.png",
+     "sizes": "48x48",
+     "type": "image/png"
+
+   },
+   {
+
      "src": "{{ site.url }}/img/app/logo-72.png",
      "sizes": "72x72",
      "type": "image/png"

@@ -13,6 +13,8 @@
 
 */
 
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
 $highlight-color: #6F00EF;
 
 *, *::before, *::after {
@@ -76,7 +78,7 @@ box-sizing: border-box;
 
   @media (prefers-reduced-motion: no-preference) {
 
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 
   }
 
@@ -276,4 +278,32 @@ padding: .8em 8% .4em;
 font-size: 1.05rem;
 margin: 0 auto;
 max-width: 1600px;
+}
+
+#share-button {
+background-color: $highlight-color;
+border-radius: 5px;
+border: 0;
+color: #fff;
+display: none;
+font-size: 1em;
+padding: 1em;
+
+	@media(display-mode: minimal-ui) {
+
+		display: block;
+
+	}
+
+	&::before {
+	content: "\f064";
+	display: inline-block;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+	margin-right: 5px;
+	}
+
 }

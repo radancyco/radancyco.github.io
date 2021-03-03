@@ -1,3 +1,4 @@
+app: Radancy.Dev
 charset: utf-8
 company-name: Radancy
 company-url: https://radancy.com
@@ -9,6 +10,7 @@ exclude: [
   README.md,
   CNAME
 ]
+description: Our open design and development resource! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us!
 destination: _httpdocs
 highlighter: rouge
 lang: en-US
@@ -22,3 +24,4 @@ repo: https://github.com/radancyco/radancyco.github.io
 sass:
   style: :compressed
 theme-color: "#6E00EE"
+url: https://radancy.dev

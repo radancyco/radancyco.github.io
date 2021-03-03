@@ -1,0 +1,76 @@
+---
+layout: null
+---
+
+{
+  "background_color": "{{ site.theme-color }}",
+  "categories": ["web", "accessibility", "blog"],
+  "description": "{{ site.description }}",
+  "dir": "ltr",
+  "display": "minimal-ui",
+  "lang": "{{ site.lang }}",
+  "name": "{{ site.app }}",
+  "orientation": "any",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "short_name": "RadDev",
+  "start_url": "/",
+  "theme_color": "{{ site.theme-color }}",
+  "icons": [{
+
+     "src": "{{ site.url }}/img/app/logo-72.png",
+     "sizes": "72x72",
+     "type": "image/png"
+
+   },
+   {
+
+     "src": "{{ site.url }}/img/app/logo-96.png",
+     "sizes": "96x96",
+     "type": "image/png"
+
+   },
+   {
+
+     "src": "{{ site.url }}/img/app/logo-128.png",
+     "sizes": "128x128",
+     "type": "image/png"
+
+   },
+   {
+
+     "src": "{{ site.url }}/img/app/logo-144.png",
+     "sizes": "144x144",
+     "type": "image/png"
+
+   },
+   {
+
+     "src": "{{ site.url }}/img/app/logo-152.png",
+     "sizes": "152x152",
+     "type": "image/png"
+
+   },
+   {
+
+     "src": "{{ site.url }}/img/app/logo-192.png",
+     "sizes": "192x192",
+     "type": "image/png"
+
+   },
+   {
+     "src": "{{ site.url }}/img/app/logo-384.png",
+     "sizes": "384x384",
+     "type": "image/png"
+
+   },
+   {
+     "src": "{{ site.url }}/img/app/logo-512.png",
+     "sizes": "512x512",
+     "type": "image/png"
+   }
+
+ ]
+
+}

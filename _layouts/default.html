@@ -4,10 +4,11 @@
     <meta charset="{{ site.charset }}">
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
     <meta content="noindex, nofollow" name="robots">{% endif %}
-    <script src="https://cdn.levelaccess.net/accessjs/YW1wNDE5/access.js"></script>
-    <link href="{{ site.git-url }}/favicon.ico" rel="icon">
+    <meta content="#6e00ee" name="{{site.theme-color}}">
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
+    <link href="{{ site.git-url }}/favicon.ico" rel="icon">
+    <link href="{{ site.git-url }}/manifest.json" rel="manifest">
     <script>document.getElementsByTagName("html")[0].className = document.getElementsByTagName("html")[0].className.replace("no-js", "js");</script>
     <title>{{ page.title }} - {{ site.company-name }}</title>
 </head>
@@ -72,8 +73,8 @@
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>{% if page.globaljs %}
-  <script src="{{ page.globaljs }}"></script>{% endif %}{% if page.localjs %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{{ site.git-url }}/global.js"></script>{% if page.localjs %}
   <script src="{{ page.localjs }}"></script>{% endif %}
 
 </body>

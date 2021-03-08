@@ -14,7 +14,7 @@ layout: null
   "prefer_related_applications": false,
   "related_applications": [],
   "scope": "/",
-  "short_name": "RadDev",
+  "short_name": "{{ site.nickname }}",
   "start_url": "/",
   "theme_color": "{{ site.theme-color }}",
   "icons": [{

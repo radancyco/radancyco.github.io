@@ -107,6 +107,7 @@ layout: null
 	// <button id="share-button"><i class="fas fa-share"></i> Share this content</button> <!-- TODO: Script this in -->
 
 	var shareButtonElm = document.createElement("button");
+	shareButtonElm.classList.add("app-only");
 	shareButtonElm.id = "share-button";
 	shareButtonElm.textContent = "Share";
 

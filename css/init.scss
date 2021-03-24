@@ -149,12 +149,6 @@ height: auto;
 width: 100%;
 }
 
-.alert {
-color: #d20000;
-font-style: italic;
-text-decoration: none;
-}
-
 .a11y-info {
 background-color: #40E8D4;
 border-radius: 5px;
@@ -191,6 +185,23 @@ padding: .5em 1em;
   .alert {
   color: inherit;
   }
+
+}
+
+.alert {
+color: #d20000;
+font-style: italic;
+text-decoration: none;
+}
+
+.app-only {
+display: none;
+
+	@media(display-mode: minimal-ui) {
+
+		display: block;
+
+	}
 
 }
 
@@ -285,15 +296,8 @@ background-color: $highlight-color;
 border-radius: 5px;
 border: 0;
 color: #fff;
-display: none;
 font-size: 1em;
 padding: 1em;
-
-	@media(display-mode: minimal-ui) {
-
-		display: block;
-
-	}
 
 	&::before {
 	content: "\f064";

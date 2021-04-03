@@ -1,21 +1,37 @@
 
 body {
-width: 720px;
+width: 600px;
 }
 
-main {
-padding: 1em;
+h1 {
+margin: 0;
 }
 
-label {
-display: block;
+ul, ol {
+list-style: none;
+padding: 0;
 }
 
-button {
-background-color: #6F00EF;
-border: 0;
-color: #fff;
-margin-bottom: 1em;
-padding: 1em;
-text-align: left;
+ol li {
+display: inline-block;
+margin: 0 1em 1em 0;
+}
+
+.btn {
+min-width: 265px;
+display: inline-block;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 20px;
+}
+
+.reset {
+position: absolute;
+top: 1em;
+right: 1em;
+min-width: 0;
+width: 40px;
+height: 40px;
+padding: 0;
+background-image: url("img/btn-reset.png");
 }

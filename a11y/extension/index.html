@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-US">
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
   <base target="_blank">
+  <link href="https://radancy.dev/css/init.css" rel="stylesheet">
   <link href="https://radancy.dev/pattern-library/disclosure-multiple/init.css" rel="stylesheet">
   <link href="init.css" rel="stylesheet">
-  <title>A11y Smoke Test</title>
+  <title>Accessibility Smoke Test Extention</title>
 </head>
 <body>
 
 <main>
 
-  <img src="img/logo.png" alt="Radancy Logo with Universal Access Icon.">
+  <h1><img src="img/logo.png" alt="Accessibility Smoke Test"></h1>
 
-  <h1>A11y Smoke Test</h1>
-
-  <button data-script="https://rawgit.com/pauljadam/bookmarklets/master/reset.js">Reset Page</button>
+  <button aria-label="Reset Page" class="btn reset" data-script="https://rawgit.com/pauljadam/bookmarklets/master/reset.js"></button>
 
   <div class="disclosure-multiple">
 
@@ -36,6 +37,7 @@
             <li><a href="https://wave.webaim.org/" id="wave-validation">WAVE</a></li>
             <li><a href="https://validator.w3.org/" id="html-validation">HTML Validation</a></li>
             <li><a href="http://jigsaw.w3.org/css-validator/" id="css-validation">CSS Validation</a></li>
+            <li><a href="http://checkers.eiii.eu/en/pdfcheck/" id="pdf-validation">PDF Validation</a></li>
           </ul>
 
         </div>
@@ -50,9 +52,9 @@
 
           <h2>Test</h2>
 
-          <ul>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
-          </ul>
+          <ol>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+          </ol>
 
           <h2>Resources</h2>
 
@@ -90,18 +92,18 @@
 
           <h2>Test</h2>
 
-          <ul>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
-          </ul>
+          <ol>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+          </ol>
 
         </div>
 
@@ -135,7 +137,7 @@
 
             </fieldset>
 
-            <button>Submit</button>
+            <button class="btn">Submit</button>
 
           </form>
 
@@ -161,11 +163,11 @@
 
           <h2>Test</h2>
 
-          <ul>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
-            <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-          </ul>
+          <ol>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+            <li><button class="btn" data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+          </ol>
 
         </div>
 
@@ -229,10 +231,10 @@
 
           <h2>Test</h2>
 
-          <ul>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-          </ul>
+          <ol>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+          </ol>
 
         </div>
 
@@ -262,7 +264,7 @@
 
             </fieldset>
 
-            <button>Submit</button>
+            <button class="btn">Submit</button>
 
           </form>
 
@@ -294,7 +296,7 @@
 
             </fieldset>
 
-            <button>Submit</button>
+            <button class="btn">Submit</button>
 
           </form>
 
@@ -311,7 +313,7 @@
           <h2>Test</h2>
 
           <ul>
-            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+            <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
           </ul>
 
         </div>
@@ -320,10 +322,10 @@
 
         <div class="disclosure-multiple__content">
 
-          <ul>
-            <li><button data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
-            <li><button data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
-          </ul>
+          <ol>
+            <li><button class="btn" data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
+            <li><button class="btn" data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
+          </ol>
 
         </div>
 
@@ -334,7 +336,7 @@
           <ul>
             <li><a href="https://amp.levelaccess.net/login.php">Level Access AMP</a></li>
             <li><a href="https://radancy.dev/a11y/baseline/">Radancy Accessibility Testing Baselines</a></li>
-            <li><a href="https://radancy.dev/a11y/testing/boilerplate/">Radancy Testing Sheet</a></li>
+            <li><a href="https://radancy.dev/a11y/testing/boilerplate/">Radancy Testing Boilerplate</a></li>
             <li><a href="https://radancy.dev/uid/code-standards/">Radancy User Interface Standards and Guidelines</a></li>
           </ul>
 
@@ -349,19 +351,19 @@
   <!-- h2>Bookmarklets</h2>
 
   <ul>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
-    <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
-    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+    <li><button class="btn" data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+    <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
   </ul -->
 
 </main>

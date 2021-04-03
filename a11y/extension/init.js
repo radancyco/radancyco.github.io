@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
     var CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
     CSSLink.setAttribute("href", CSSHref + url);
 
+    var PDFLink = document.getElementById("pdf-validation");
+    var PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
+    PDFLink.setAttribute("href", PDFHref + url);
+
   });
 
   function exampleFunction(scriptName) {

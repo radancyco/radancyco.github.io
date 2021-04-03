@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+  <base target="_blank">
+  <link href="https://radancy.dev/pattern-library/disclosure-multiple/init.css" rel="stylesheet">
+  <link href="init.css" rel="stylesheet">
+  <title>Accessibility Check</title>
+<head>
+<body>
+
+<main>
+
+  <h1>Accessibility Check</h1>
+
+  <button data-script="https://rawgit.com/pauljadam/bookmarklets/master/reset.js">Reset Page</button>
+
+  <div class="disclosure-multiple">
+
+    <div class="disclosure-multiple__navigation">
+
+      <button class="disclosure-multiple__navigation__button">Toggle All</button>
+
+    </div>
+
+    <div class="disclosure-multiple__list">
+
+      <div class="disclosure-multiple__list__item">
+
+        <button class="disclosure-multiple__button">Page Tests</button>
+
+        <div class="disclosure-multiple__content">
+
+          <ul>
+            <li><a href="https://wave.webaim.org/" id="wave-validation">WAVE</a></li>
+            <li><a href="https://validator.w3.org/" id="html-validation">HTML Validation</a></li>
+            <li><a href="http://jigsaw.w3.org/css-validator/" id="css-validation">CSS Validation</a></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.1.1: Non-text Content (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Provide text alternatives for non-text content. <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Understanding 1.1.1</a></p>
+
+          <h2>Test</h2>
+
+          <ul>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+          </ul>
+
+          <h2>Resources</h2>
+
+          <ul>
+            <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree</a></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.2.2: Captions (Prerecorded) (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Provide captions for videos with audio	<a href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded">Understanding 1.2.2</a></p>
+
+          <h2>Test</h2>
+
+          <p>TBD</p>
+
+          <h2>Resources</h2>
+
+          <p>Meryl's Work</p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.3.1: Info and Relationships (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Semantic markup is used appropriately. Logical structure, etc.	<a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships">Understanding 1.3.1</a></p>
+
+          <h2>Test</h2>
+
+          <ul>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.4.1: Use of Color (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Don't use presentation that relies solely on color. <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color">Understanding 1.4.1</a></p>
+
+          <h2>Test</h2>
+
+          <form action="https://webaim.org/resources/linkcontrastchecker/">
+
+            <fieldset>
+
+              <legend>Link Contrast Checker</legend>
+
+              <label>Link Color</label>
+
+              <input type="color" name="lcolor" id="lcolor">
+
+              <label>Background Color</label>
+
+              <input type="color" name="fcolor" value="#cccccc" id="fcolor">
+
+              <label>Body Text Color</label>
+
+              <input type="color" name="bcolor" id="bcolor">
+
+            </fieldset>
+
+            <button>Submit</button>
+
+          </form>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.4.4: Resize Text (Level AA)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Text can be resized to 200% without loss of content or function.	<a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text">Understanding 1.4.4</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.1.1: Keyboard (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Accessible by keyboard only.	<a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard">Understanding 2.1.1</a></p>
+
+          <h2>Test</h2>
+
+          <ul>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+            <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.2.2: Pause, Stop, Hide (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Provide user controls for moving content. <a href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide">Understanding 2.2.2</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.3.1: Three Flashes or Below Threshold (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>No content flashes more than three times per second.	<a href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold">Understanding 2.3.1</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.4.1: Bypass Blocks (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Provide a 'Skip to Content' link. <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">Understanding 2.4.1</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.4.2: Page Titled (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Use helpful and clear page titles.	<a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled">Understanding 2.4.2</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">4.1.1: Parsing (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>No major code errors. <a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing">Understanding 4.1.1</a></p>
+
+        </div>
+
+        <button class="disclosure-multiple__button">4.1.2: Name, Role, Value (Level A)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Build all elements for accessibility. <a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value">Understanding 4.1.2</a></p>
+
+          <h2>Test</h2>
+
+          <ul>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.4.11: Non-text Contrast (Level AA)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Ensure important visual information such as graphics and icons meets the same minimum contrast that is required for larger text (3:1).	<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast">Understanding 1.4.11</a></p>
+
+          <h2>Test</h2>
+
+          <form action="https://webaim.org/resources/contrastchecker/">
+
+            <fieldset>
+
+              <legend>Contrast Checker</legend>
+
+              <label>Foreground Color</label>
+
+              <input type="color" name="fcolor" id="fcolor">
+
+              <label>Background Color</label>
+
+              <input type="color" name="bcolor" id="bcolor">
+
+            </fieldset>
+
+            <button>Submit</button>
+
+          </form>
+
+        </div>
+
+        <button class="disclosure-multiple__button">1.4.3: Contrast (Minimum) (Level AA)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Contrast ratio between text and background is at least 4.5:1. <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum">Understanding 1.4.3</a></p>
+
+          <h2>Test</h2>
+
+          <form action="https://webaim.org/resources/contrastchecker/">
+
+            <fieldset>
+
+              <legend>Contrast Checker</legend>
+
+              <label>Foreground Color</label>
+
+              <input type="color" name="fcolor" id="fcolor">
+
+              <label>Background Color</label>
+
+              <input type="color" name="bcolor" id="bcolor">
+
+            </fieldset>
+
+            <button>Submit</button>
+
+          </form>
+
+        </div>
+
+        <button class="disclosure-multiple__button">2.4.7: Focus Visible (Level AA)</button>
+
+        <div class="disclosure-multiple__content">
+
+          <h2>Overview</h2>
+
+          <p>Ensure keyboard focus is visible and clear. <a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible">Understanding 2.4.7</a></p>
+
+          <h2>Test</h2>
+
+          <ul>
+            <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">Other Tools</button>
+
+        <div class="disclosure-multiple__content">
+
+          <ul>
+            <li><button data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
+            <li><button data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
+          </ul>
+
+        </div>
+
+        <button class="disclosure-multiple__button">Quick Links</button>
+
+        <div class="disclosure-multiple__content">
+
+          <ul>
+            <li><a href="https://amp.levelaccess.net/login.php">Level Access AMP</a></li>
+            <li><a href="https://radancy.dev/a11y/baseline/">Radancy Accessibility Testing Baselines</a></li>
+            <li><a href="https://radancy.dev/a11y/testing/boilerplate/">Radancy Testing Sheet</a></li>
+            <li><a href="https://radancy.dev/uid/code-standards/">Radancy User Interface Standards and Guidelines</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- h2>Bookmarklets</h2>
+
+  <ul>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+    <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+    <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+  </ul -->
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://radancy.dev/pattern-library/disclosure-multiple/init.js"></script>
+
+<script src="init.js"></script>
+
+</body>
+<html>

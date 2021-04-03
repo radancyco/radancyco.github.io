@@ -1,0 +1,21 @@
+
+body {
+width: 720px;
+}
+
+main {
+padding: 1em;
+}
+
+label {
+display: block;
+}
+
+button {
+background-color: #6F00EF;
+border: 0;
+color: #fff;
+margin-bottom: 1em;
+padding: 1em;
+text-align: left;
+}

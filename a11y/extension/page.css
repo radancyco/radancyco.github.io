@@ -1,0 +1,4 @@
+.focus-state a:focus, .focus-state *:focus {
+outline: 4px solid orange !important;
+outline-offset: 3px !important;
+}

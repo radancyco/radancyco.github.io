@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     active: true, lastFocusedWindow: true}, tabs => {
 
+    document.body.classList.add("extension-active");
+
     let url = tabs[0].url;
 
     var A11yLink = document.getElementById("wave-validation");

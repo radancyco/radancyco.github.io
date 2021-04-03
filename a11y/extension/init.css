@@ -1,6 +1,6 @@
 
-body {
-width: 600px;
+.extension-active {
+min-width: 600px;
 }
 
 h1 {

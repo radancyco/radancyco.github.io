@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     A11yLink.setAttribute("href", A11yHref + url)
 
     var HTMLLink = document.getElementById("html-validation");
-    var HTMLHref = "https://validator.w3.org/nu/?doc=";
+    var HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
     HTMLLink.setAttribute("href", HTMLHref + url);
 
     var CSSLink = document.getElementById("css-validation");

@@ -14,6 +14,20 @@
 @import url("https://radancy.dev/css/init.css");
 @import url("https://radancy.dev/pattern-library/disclosure-multiple/init.css");
 
+a {
+
+  &[rel="noopener"] {
+  background: transparent url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
+  padding-right: 14px;
+
+    &:focus, &:hover {
+    background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///2eIpAAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
+    }
+
+  }
+
+}
+
 h1 {
 margin: 0 0 .5em;
 }
@@ -22,15 +36,27 @@ h2 {
 font-size: 1em;
 }
 
-ul, ol {
+ul {
 list-style: none;
 margin-top: 0;
 padding: 0;
-}
 
-ol li {
-display: inline-block;
-margin: 0 1em 1em 0;
+  button {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: underline;
+  color: blue;
+  outline: 0;
+
+    &:focus {
+    color: red;
+    }
+
+  }
+
 }
 
 .btn {

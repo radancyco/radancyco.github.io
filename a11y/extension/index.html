@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <header id="banner">
+  <header>
 
     <h1><img alt="Radancy: Accessibility Smoke Test" height="47" src="img/logo.png" width="200"></h1>
 
@@ -18,7 +18,7 @@
 
   </header>
 
-  <main id="content">
+  <main>
 
     <div class="disclosure-multiple">
 
@@ -39,10 +39,10 @@
             <p>Pages must always be validated. Errors in WAVE and HTML are the most critical issues to address. QA engineers should link directly to validation reports when logging issues.</p>
 
             <ul>
-              <li><a aria-label="WAVE (Opens in new tab)" href="https://wave.webaim.org/" id="wave-validation" rel="noopener">WAVE</a></li>
-              <li><a aria-label="HTML Validation (Opens in new tab)" href="https://validator.w3.org/" id="html-validation" rel="noopener">HTML Validation</a></li>
-              <li><a aria-label="CSS Validation (Opens in new tab)" href="http://jigsaw.w3.org/css-validator/" id="css-validation" rel="noopener">CSS Validation</a></li>
-              <li><a aria-label="PDF Validation (Opens in new tab)" href="http://checkers.eiii.eu/en/pdfcheck/" id="pdf-validation" rel="noopener">PDF Validation</a></li>
+              <li><a aria-label="WAVE (Opens in new tab)" href="https://wave.webaim.org/" id="validate-a11y" rel="noopener">Validate Accessibility</a></li>
+              <li><a aria-label="HTML Validation (Opens in new tab)" href="https://validator.w3.org/" id="validate-html" rel="noopener">Validate HTML</a></li>
+              <li><a aria-label="CSS Validation (Opens in new tab)" href="http://jigsaw.w3.org/css-validator/" id="validate-css" rel="noopener">Validate CSS</a></li>
+              <li><a aria-label="PDF Validation (Opens in new tab)" href="http://checkers.eiii.eu/en/pdfcheck/" id="validate-pdf" rel="noopener">Validate PDF</a></li>
             </ul>
 
           </div>
@@ -57,12 +57,12 @@
 
             <h2>Test</h2>
 
-            <ol>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
-              <li><button class="btn" data-script="a11y-smoketest-grayscale">Grayscale</button></li>
-              <li><button class="btn" data-script="a11y-smoketest-textspace">Text Space</button></li>
-              <li><button class="btn" data-script="https://mraccess77.github.io/favlets/duplicateIds.js">Duplicate ID</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+              <li><button data-script="a11y-smoketest-grayscale">Grayscale</button></li>
+              <li><button data-script="a11y-smoketest-textspace">Text Space</button></li>
+              <li><button data-script="https://mraccess77.github.io/favlets/duplicateIds.js">Duplicate ID</button></li>
+            </ul>
 
             <h2>Resources</h2>
 
@@ -100,18 +100,18 @@
 
             <h2>Test</h2>
 
-            <ol>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+            </ul>
 
           </div>
 
@@ -171,11 +171,11 @@
 
             <h2>Test</h2>
 
-            <ol>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
-              <li><button class="btn" data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+              <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+            </ul>
 
           </div>
 
@@ -239,10 +239,10 @@
 
             <h2>Test</h2>
 
-            <ol>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+            </ul>
 
           </div>
 
@@ -320,9 +320,9 @@
 
             <h2>Test</h2>
 
-            <ol>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+            </ul>
 
           </div>
 
@@ -330,11 +330,11 @@
 
           <div class="disclosure-multiple__content">
 
-            <ol>
-              <li><button class="btn" data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
-              <li><button class="btn" data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
-              <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/axe.js">aXe Results</button></li>
-            </ol>
+            <ul>
+              <li><button data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
+              <li><button data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
+              <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/axe.js">aXe Results</button></li>
+            </ul>
 
           </div>
 
@@ -359,30 +359,30 @@
 
     <!-- h2>Bookmarklets</h2>
 
-    <ol>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
-      <li><button class="btn" data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
-      <li><button class="btn" data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
-      <li><button class="btn" data-script="grayscale">Grayscale</button></li>
+    <ul>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
+      <li><button data-script="https://mraccess77.github.io/favlets/focusOrder.js">Focus Order</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/forms.js">Forms</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/headings.js">Headings</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/iframes.js">Iframes</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/landmarks.js">Landmarks</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lang.js">Language Attributes</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/lists.js">Lists</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
+      <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
+      <li><button data-script="grayscale">Grayscale</button></li>
     </ol -->
 
   </main>
 
-  <footer id="contentinfo">
+  <footer>
 
     <p><small>Special thanks to <a href="https://pauljadam.com/bookmarklets/index.html">Paul J. Adams</a> and <a href="https://github.com/mraccess77/mraccess77.github.io/tree/master/favlets">Jonathan Avila</a>, whose bookmarklets contributed to this extension.</small></p>
 
-    <p><small>Radancy. An equal opportunity employer.</small></p>
+    <p><small>&copy; 2021 Radancy. An equal opportunity employer.</small></p>
 
   </footer>
 

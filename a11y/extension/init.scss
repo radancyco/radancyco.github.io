@@ -1,0 +1,61 @@
+/*!
+
+  Radancy Smoke Test Extension
+
+  Contributor(s):
+  Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
+
+  Dependencies: Sass
+  Instructions: To run locally, install Sass (https://sass-lang.com/install), CL to directory this file in and run:
+  sass --watch init.scss:init.css --style compressed
+
+*/
+
+@import url("https://radancy.dev/css/init.css");
+@import url("https://radancy.dev/pattern-library/disclosure-multiple/init.css");
+
+h1 {
+margin: 0 0 .5em;
+}
+
+h2 {
+font-size: 1em;
+}
+
+ul, ol {
+list-style: none;
+margin-top: 0;
+padding: 0;
+}
+
+ol li {
+display: inline-block;
+margin: 0 1em 1em 0;
+}
+
+.btn {
+background-position: center;
+background-repeat: no-repeat;
+background-size: 20px;
+display: inline-block;
+min-width: 265px;
+}
+
+.extension-active {
+min-width: 600px;
+}
+
+.reset {
+background-image: url("img/btn-reset.png");
+height: 40px;
+min-width: 0;
+padding: 0;
+position: absolute;
+right: 1.3em;
+top: 1em;
+width: 40px;
+}
+
+.disclosure-multiple__list__item .disclosure-multiple__content {
+padding: 0 1em;
+}

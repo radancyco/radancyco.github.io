@@ -1,16 +1,24 @@
 
-// document.body.classList.add(className);
+// Append Bookmarklet
 
-document.body.appendChild(document.createElement("script")).src=scriptName;
+if (scriptName === "a11y-smoketest-grayscale" || scriptName === "a11y-smoketest-textspace") {
 
-/* if(scriptName == "iframes") {
+document.body.classList.add(scriptName);
 
-  var iframes=document.getElementsByTagName("iframe");
+} else {
 
-  for(i=0;i<iframes.length;i++) {
+  document.body.appendChild(document.createElement("script")).src=scriptName;
 
-    iframes[i].contentDocument.body.appendChild(document.createElement("script")).src=scriptName;
+  /* if(scriptName == "iframes") {
 
-  }
+    var iframes=document.getElementsByTagName("iframe");
 
-} */
+    for(i=0;i<iframes.length;i++) {
+
+      iframes[i].contentDocument.body.appendChild(document.createElement("script")).src=scriptName;
+
+    }
+
+  } */
+
+}

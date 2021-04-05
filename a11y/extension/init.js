@@ -28,34 +28,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  function exampleFunction(scriptName) {
+  function runBookmarklet(scriptName) {
 
     chrome.tabs.executeScript({
 
-      code: "var scriptName = " + JSON.stringify(scriptName) },
+      code: "var scriptName = " + JSON.stringify(scriptName)
 
-      function() {
+    },
 
-        chrome.tabs.executeScript({ file: "page.js" }); // this is key
-        // chrome.tabs.insertCSS({ file: "page.css" });
+    function() {
 
-      }
+      chrome.tabs.executeScript({
 
-    )
+        file: "page.js"
 
-  }
+      });
+
+      chrome.tabs.insertCSS({
+
+        file: "page.css"
+
+      });
+
+    }
+
+  )};
 
   var a11yButtons = document.querySelectorAll("button[data-script]");
 
   a11yButtons.forEach(function(button, j){
 
-    button.addEventListener("click", (e) => {
+    button.addEventListener("click", () => {
 
       let dataScript = button.getAttribute("data-script");
 
-      exampleFunction(dataScript);
+      runBookmarklet(dataScript);
 
     });
+
+  });
+
+  // Reset Tab
+
+  function resetPage() {
+
+    chrome.tabs.executeScript({
+
+      code: "window.location.reload();"
+
+    });
+
+  }
+
+  var resetButton = document.getElementById("btn-reset");
+
+  resetButton.addEventListener("click", () => {
+
+    resetPage();
 
   });
 

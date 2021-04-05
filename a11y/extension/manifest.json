@@ -1,21 +1,39 @@
 {
- "manifest_version": 2,
- "name": "A11y Smoke Test",
- "version": "1.0.0",
- "description": "A tool to help developers and QA engineers quickly find and fix baseline accessibility issues.",
- "permissions": [
-   "activeTab",
-   "declarativeContent"
- ],
- "content_scripts": [
-   {
-      "matches": ["<all_urls>"],
-     "js": ["init.js"]
-   }
- ],
- "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://radancy.dev; object-src 'self'",
- "browser_action": {
-   "default_title": "A11y Smoke Test",
-   "default_popup": "index.html"
- }
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+
+      "16": "img/icon-16.png",
+      "32": "img/icon-32.png"
+
+    },
+    "default_popup": "index.html",
+    "default_title": "Radancy: A11y Smoke Test"
+
+  },
+  "content_scripts": [{
+
+    "css": ["init.css"],
+    "js": ["init.js"],
+    "matches": ["<all_urls>"]
+
+  }],
+
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://radancy.dev; object-src 'self'",
+
+  "description": "A tool to help developers and QA engineers quickly find and fix baseline accessibility issues.",
+
+  "manifest_version": 2,
+
+  "name": "A11y Smoke Test",
+
+  "permissions": [
+
+    "activeTab"
+
+  ],
+
+  "version": "1.0.0"
+
 }

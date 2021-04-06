@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let dataScript = button.getAttribute("data-script");
 
       runBookmarklet(dataScript);
-      button.setAttribute("disabled", "");
+      button.setAttribute("disabled", true);
 
     });
 
@@ -86,6 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
   resetButton.addEventListener("click", () => {
 
     resetPage();
+
+    let a11yButtons = document.querySelectorAll("button[data-script]");
+
+    a11yButtons.forEach(function(button, j){
+
+      button.removeAttribute("disabled");
+
+    });
 
   });
 

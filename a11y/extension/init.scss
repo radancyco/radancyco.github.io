@@ -14,16 +14,14 @@
 @import url("https://radancy.dev/css/init.css");
 @import url("https://radancy.dev/pattern-library/disclosure-multiple/init.css");
 
-a {
+a, button {
 
-  &[rel="noopener"] {
-  background: transparent url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
-  padding-right: 14px;
-
-    &:focus, &:hover {
-    background: url(data:image/gif;base64,R0lGODlhCgAKAJECAP///2eIpAAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
-    }
-
+  &[rel="noopener"], &.alert-dialoge {
+  background-image: url("img/new-window.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-right: 18px;
   }
 
 }
@@ -33,7 +31,11 @@ margin: 0 0 .5em;
 }
 
 h2 {
-font-size: 1em;
+font-size: 1.1em;
+}
+
+main {
+font-size: .9em;
 }
 
 ul {
@@ -51,8 +53,14 @@ padding: 0;
   color: blue;
   outline: 0;
 
-    &:focus {
-    color: red;
+    &[disabled] {
+    text-decoration: none;
+    color: #000;
+
+      &::after {
+      content: "✔️";
+      }
+
     }
 
   }

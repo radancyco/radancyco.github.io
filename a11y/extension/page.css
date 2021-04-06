@@ -12,3 +12,43 @@ word-spacing: 0.16em !important;
 .a11y-smoketest-textspace p {
 margin-bottom: 2em !important;
 }
+
+.protanopia {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#protanopia");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#protanopia");
+}
+
+.protanomaly {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#protanomaly");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#protanomaly");
+}
+
+.deuteranopia {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#deuteranopia");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#deuteranopia");
+}
+
+.deuteranomaly {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#deuteranomaly");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#deuteranomaly");
+}
+
+.tritanopia {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#tritanopia");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#tritanopia");
+}
+
+.tritanomaly {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#tritanomaly");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#tritanomaly");
+}
+
+.achromatopsia {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#achromatopsia");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#achromatopsia");
+}
+
+.achromatomaly {
+-webkit-filter: url("https://radancy.dev/a11y/extension/filters.svg#achromatomaly");
+filter: url("https://radancy.dev/a11y/extension/filters.svg#achromatomaly");
+}

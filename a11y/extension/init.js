@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let url = tabs[0].url;
 
-    let A11yLink = document.getElementById("validate-a11y");
-    let A11yHref = "https://wave.webaim.org/report#/";
+    const A11yLink = document.getElementById("validate-a11y");
+    const A11yHref = "https://wave.webaim.org/report#/";
     A11yLink.setAttribute("href", A11yHref + url)
 
-    let HTMLLink = document.getElementById("validate-html");
-    let HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
+    const HTMLLink = document.getElementById("validate-html");
+    const HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
     HTMLLink.setAttribute("href", HTMLHref + url);
 
-    let CSSLink = document.getElementById("validate-css");
-    let CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
+    const CSSLink = document.getElementById("validate-css");
+    const CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
     CSSLink.setAttribute("href", CSSHref + url);
 
-    let PDFLink = document.getElementById("validate-pdf");
-    let PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
+    const PDFLink = document.getElementById("validate-pdf");
+    const PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
     PDFLink.setAttribute("href", PDFHref + url);
 
   });
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let dataScript = button.getAttribute("data-script");
 
       runBookmarklet(dataScript);
+      button.setAttribute("disabled", "");
 
     });
 

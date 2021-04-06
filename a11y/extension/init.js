@@ -11,20 +11,49 @@ document.addEventListener("DOMContentLoaded", () => {
     let url = tabs[0].url;
 
     const A11yLink = document.getElementById("validate-a11y");
-    const A11yHref = "https://wave.webaim.org/report#/";
-    A11yLink.setAttribute("href", A11yHref + url)
+
+    if(A11yLink){
+
+      const A11yHref = "https://wave.webaim.org/report#/";
+      A11yLink.setAttribute("href", A11yHref + url)
+
+    }
 
     const HTMLLink = document.getElementById("validate-html");
-    const HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
-    HTMLLink.setAttribute("href", HTMLHref + url);
+
+    if(HTMLLink){
+
+      const HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
+      HTMLLink.setAttribute("href", HTMLHref + url);
+
+    }
 
     const CSSLink = document.getElementById("validate-css");
-    const CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
-    CSSLink.setAttribute("href", CSSHref + url);
+
+    if(CSSLink){
+
+      const CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
+      CSSLink.setAttribute("href", CSSHref + url);
+
+    }
 
     const PDFLink = document.getElementById("validate-pdf");
-    const PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
-    PDFLink.setAttribute("href", PDFHref + url);
+
+    if(PDFLink){
+
+      const PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
+      PDFLink.setAttribute("href", PDFHref + url);
+
+    }
+
+    const HeadingOutlineLink = document.getElementById("view-heading-outline");
+
+    if(HeadingOutlineLink){
+
+      const HeadingOutlineHref = "outline.html?url=";
+      HeadingOutlineLink.setAttribute("href", HeadingOutlineHref + url);
+
+    }
 
   });
 
@@ -56,18 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let a11yButtons = document.querySelectorAll("button[data-script]");
 
-  a11yButtons.forEach(function(button, j){
+  if(a11yButtons) {
 
-    button.addEventListener("click", () => {
+    a11yButtons.forEach(function(button, j){
 
-      let dataScript = button.getAttribute("data-script");
+      button.addEventListener("click", () => {
 
-      runBookmarklet(dataScript);
-      button.setAttribute("disabled", true);
+        let dataScript = button.getAttribute("data-script");
+
+        runBookmarklet(dataScript);
+        button.setAttribute("disabled", true);
+
+      });
 
     });
 
-  });
+  }
 
   // Reset Tab
 
@@ -83,18 +116,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let resetButton = document.getElementById("btn-reset");
 
-  resetButton.addEventListener("click", () => {
+  if(resetButton) {
 
-    resetPage();
+    resetButton.addEventListener("click", () => {
 
-    let a11yButtons = document.querySelectorAll("button[data-script]");
+      resetPage();
 
-    a11yButtons.forEach(function(button, j){
+      let a11yButtons = document.querySelectorAll("button[data-script]");
 
-      button.removeAttribute("disabled");
+      a11yButtons.forEach(function(button, j){
+
+        button.removeAttribute("disabled");
+
+      });
 
     });
 
-  });
+  }
+
+  // Get Page Outline
+
+  var urlParam = new URLSearchParams(window.location.search);
+  var pageTest = urlParam.get("url");
+  var pageElement = document.getElementById("inner-content");
+  var pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
+  var pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
+  var request = new XMLHttpRequest();
+
+  request.open("GET", pageElementHref, true);
+
+  request.onload = function() {
+
+    if (request.status >= 200 && request.status < 400) {
+
+      // Success!
+
+      var parser = new DOMParser();
+      var response = parser.parseFromString(request.responseText, "text/html");
+      var fragment = response.getElementById("headingoutline");
+
+      pageElement.innerHTML = "";
+      pageElement.appendChild(fragment);
+
+    } else {
+
+      // We reached our target server, but it returned an error
+
+      pageElement.innerHTML = pageError;
+
+    }
+
+  };
+
+  request.onerror = function() {
+
+    // There was a connection error of some sort
+
+    pageElement.innerHTML = pageError;
+
+  };
+
+  request.send();
 
 });

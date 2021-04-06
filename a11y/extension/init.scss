@@ -26,8 +26,18 @@ a, button {
 
 }
 
-h1 {
-margin: 0 0 .5em;
+figure {
+margin: 1em 0;
+}
+
+figcaption {
+color: #666;
+margin: 1em 0 0;
+font-size: .85em
+}
+
+h1.heading-small {
+font-size: inherit;
 }
 
 h2 {
@@ -42,7 +52,6 @@ ul {
 list-style: none;
 margin-top: 0;
 padding: 0;
-
   button {
   background-color: transparent;
   border: 0;
@@ -52,11 +61,9 @@ padding: 0;
   text-decoration: underline;
   color: blue;
   outline: 0;
-
     &[disabled] {
     text-decoration: none;
     color: #000;
-
       &::after {
       content: "✔️";
       }
@@ -64,6 +71,9 @@ padding: 0;
     }
 
   }
+
+
+
 
 }
 
@@ -92,4 +102,61 @@ width: 40px;
 
 .disclosure-multiple__list__item .disclosure-multiple__content {
 padding: 0 1em;
+}
+
+#outline {
+
+  #content {
+  max-width: none;
+  font-size: .9em;
+
+    h2 {
+    display: none;
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+    color: #000;
+    }
+
+    .headinglevel, .missingheadinglevel {
+    color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: .5em;
+    line-height: normal;
+    margin-right: .5em;
+    }
+
+    .headinglevel {
+    background-color: darkgreen;
+    }
+
+    .missingheadinglevel {
+    background-color: tomato;
+    }
+
+    .h2 {
+    margin-left: 2em;
+    }
+
+    .h3 {
+    margin-left: 4em;
+    }
+
+    .h4 {
+    margin-left: 6em;
+    }
+
+    .h5 {
+    margin-left: 8em;
+    }
+
+    .h6 {
+    margin-left: 10em;
+    }
+
+
+  }
+
 }

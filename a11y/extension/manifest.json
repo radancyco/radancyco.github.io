@@ -15,7 +15,7 @@
   "content_scripts": [{
 
     "css": ["init.css"],
-    "js": ["init.js"],
+    "js": ["init.js", "outline.js"],
     "matches": ["<all_urls>"]
 
   }],

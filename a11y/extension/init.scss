@@ -12,16 +12,30 @@
 */
 
 @import url("https://radancy.dev/css/init.css");
-@import url("https://radancy.dev/pattern-library/disclosure-multiple/init.css");
+@import url("https://radancy.dev/pattern-library/disclosure/init.css");
 
 a, button {
 
-  &[rel="noopener"], &.alert-dialoge {
-  background-image: url("img/new-window.png");
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 12px;
-  padding-right: 18px;
+  &.new-tab {
+  word-wrap: break-word;
+
+    .disclosure--content & {
+    white-space: nowrap;
+    }
+
+    &::after {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("img/new-tab.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 11px;
+    vertical-align: middle;
+    margin-left: 5px;
+    }
+
   }
 
 }
@@ -39,7 +53,7 @@ font-size: .85em
 .heading-small {
 color: rebeccapurple;
 text-indent: 52px;
-margin: 0;
+margin: 0 0 2em;
 font-size: .8em;
 padding: 0;
 }
@@ -77,6 +91,65 @@ ul {
 
 }
 
+form {
+margin: 0 0 1em;
+
+  fieldset {
+  border: 0;
+  padding: 0;
+    margin: 0;
+
+    legend, label {
+    font-weight: bold;
+    }
+
+    legend {
+    margin: 0;
+    padding: 0;
+    }
+
+    label, input {
+    display: block;
+    }
+
+    input {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    height: 45px;
+    padding: 0;
+    }
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: 0;
+}
+
+    .btn, input {
+    width: 100%;
+    min-width: 0;
+    }
+
+    .form-fields {
+    display: flex;
+    flex-wrap: wrap;
+        align-items: flex-end;
+
+      div {
+        flex-grow: 1;
+  flex-basis: 25%;
+  padding: 0 5px 5px 0;
+
+      }
+
+    }
+
+  }
+
+}
+
 .btn {
 background-position: center;
 background-repeat: no-repeat;
@@ -100,13 +173,18 @@ top: 18px;
 width: 40px;
 }
 
-.disclosure-multiple__list__item .disclosure-multiple__content {
-padding: 0 1em;
+.disclosure--btn {
+margin: 4px 0;
+outline: 0;
 }
 
-.disclosure-multiple__list__item .disclosure-multiple__button {
-margin-bottom: 2px;
-outline: 0;
+.disclosure--icon {
+float: right;
+}
+
+.disclosure--content {
+padding: 0 1em;
+border: 1px #cccccc solid;
 }
 
 #outline {
@@ -138,7 +216,7 @@ outline: 0;
     }
 
     .missingheadinglevel {
-    background-color: tomato;
+    background-color: #d20000;
     }
 
     .h2 {

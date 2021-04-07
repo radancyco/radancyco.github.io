@@ -23,6 +23,8 @@ if (scriptName === "a11y-smoketest-grayscale" || scriptName === "a11y-smoketest-
 
   document.body.appendChild(document.createElement("script")).src=scriptName;
 
+  // TODO: Chrome Extension deoug panel throwing error about iframes. Remiving for now. 
+
   /* if(scriptName == "iframes") {
 
     var iframes=document.getElementsByTagName("iframe");

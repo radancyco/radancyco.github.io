@@ -8,10 +8,12 @@
       "32": "img/icon-32.png"
 
     },
+
     "default_popup": "index.html",
-    "default_title": "Radancy: A11y Smoke Test"
+    "default_title": "Radancy: Accessibility Smoke Test"
 
   },
+
   "content_scripts": [{
 
     "css": ["init.css"],
@@ -21,20 +23,15 @@
   }],
 
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com https://radancy.dev; object-src 'self'",
-
   "description": "A tool to help developers and QA engineers quickly find and fix baseline accessibility issues.",
-
   "manifest_version": 2,
-
   "name": "A11y Smoke Test",
-
   "permissions": [
 
     "activeTab",
     "storage"
 
   ],
-
   "version": "1.0.0"
 
 }

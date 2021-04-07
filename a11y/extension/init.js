@@ -2,56 +2,103 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  // New Tab Buttons and Links
+
+  function openNewTab() {
+
+    let newTab = document.querySelectorAll(".new-tab");
+
+    if(newTab) {
+
+      newTab.forEach(function(tab, e){
+
+        tab.setAttribute("rel", "noopener");
+        tab.setAttribute("target", "_blank");
+
+        let srOnly = document.createElement("span");
+
+        srOnly.classList.add("sr-only");
+        srOnly.textContent = "(Opens in new tab)";
+        tab.appendChild(srOnly);
+
+      });
+
+    }
+
+  }
+
+  // Tab Related Stuff
+
   chrome.tabs.query({
 
     active: true, lastFocusedWindow: true}, tabs => {
 
-    document.body.classList.add("extension-active");
+    document.body.classList.add("extension-active"); // Only add this class when extension active.
 
-    let url = tabs[0].url;
+    let url = tabs[0].url; // URL of active tab
 
-    const A11yLink = document.getElementById("validate-a11y");
+    let A11yLink = document.querySelectorAll(".validate-a11y");
 
     if(A11yLink){
 
-      const A11yHref = "https://wave.webaim.org/report#/";
-      A11yLink.setAttribute("href", A11yHref + url)
+      A11yLink.forEach(function(link, e){
+
+        let A11yHref = link.href;
+        link.setAttribute("href", A11yHref + "report#/" + url);
+
+      });
 
     }
 
-    const HTMLLink = document.getElementById("validate-html");
+    let HTMLLink = document.querySelectorAll(".validate-html");
 
     if(HTMLLink){
 
-      const HTMLHref = "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=";
-      HTMLLink.setAttribute("href", HTMLHref + url);
+      HTMLLink.forEach(function(link, e){
+
+        let HTMLHref = link.href;
+        link.setAttribute("href", HTMLHref + "nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=" + url);
+
+      });
 
     }
 
-    const CSSLink = document.getElementById("validate-css");
+    let CSSLink = document.querySelectorAll(".validate-css");
 
     if(CSSLink){
 
-      const CSSHref = "https://jigsaw.w3.org/css-validator/validator?profile=css3&warning=0&uri=";
-      CSSLink.setAttribute("href", CSSHref + url);
+      CSSLink.forEach(function(link, e){
+
+        let CSSHref = link.href;
+        link.setAttribute("href", CSSHref + "validator?profile=css3&warning=0&uri=" + url);
+
+      });
 
     }
 
-    const PDFLink = document.getElementById("validate-pdf");
+    let PDFLink = document.querySelectorAll(".validate-pdf");
 
     if(PDFLink){
 
-      const PDFHref = "http://checkers.eiii.eu/en/pdfcheck/?url=";
-      PDFLink.setAttribute("href", PDFHref + url);
+      PDFLink.forEach(function(link, e){
+
+        let PDFHref = link.href;
+        link.setAttribute("href", PDFHref + "?url=" + url);
+
+      });
 
     }
 
-    const HeadingOutlineLink = document.getElementById("view-heading-outline");
+    let HeadingOutlineLink = document.querySelectorAll(".validate-heading");
 
     if(HeadingOutlineLink){
 
-      const HeadingOutlineHref = "outline.html?url=";
-      HeadingOutlineLink.setAttribute("href", HeadingOutlineHref + url);
+      HeadingOutlineLink.forEach(function(link, e){
+
+        const HeadingOutlineHref = link.href;
+        link.setAttribute("href", HeadingOutlineHref + "?url=" + url);
+
+      });
 
     }
 
@@ -87,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if(a11yButtons) {
 
-    a11yButtons.forEach(function(button, j){
+    a11yButtons.forEach(function(button, e){
 
       button.addEventListener("click", () => {
 
@@ -124,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let a11yButtons = document.querySelectorAll("button[data-script]");
 
-      a11yButtons.forEach(function(button, j){
+      a11yButtons.forEach(function(button, e){
 
         button.removeAttribute("disabled");
 
@@ -134,18 +181,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  // Get Page Outline
+  // Get Heading Outline
 
-  var pageElement = document.getElementById("inner-content");
+  let pageElement = document.getElementById("inner-content");
 
   if(pageElement) {
 
-    var urlParam = new URLSearchParams(window.location.search);
-    var pageTest = urlParam.get("url");
+    let urlParam = new URLSearchParams(window.location.search);
+    let pageTest = urlParam.get("url");
 
-    var pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
-    var pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
-    var request = new XMLHttpRequest();
+    let pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
+    let pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
+    let request = new XMLHttpRequest();
 
     request.open("GET", pageElementHref, true);
 
@@ -155,9 +202,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Success!
 
-        var parser = new DOMParser();
-        var response = parser.parseFromString(request.responseText, "text/html");
-        var fragment = response.getElementById("headingoutline");
+        let primaryHeading = document.getElementById("primary-heading");
+        primaryHeading.innerHTML += ": <a class='new-tab' href=" + pageTest + ">" + pageTest + "</a>";
+
+        openNewTab();
+
+        let parser = new DOMParser();
+        let response = parser.parseFromString(request.responseText, "text/html");
+        let fragment = response.getElementById("headingoutline");
 
         pageElement.innerHTML = "";
         pageElement.appendChild(fragment);
@@ -183,5 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     request.send();
 
   }
+
+  openNewTab();
 
 });

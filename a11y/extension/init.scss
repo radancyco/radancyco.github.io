@@ -36,8 +36,12 @@ margin: 1em 0 0;
 font-size: .85em
 }
 
-h1.heading-small {
-font-size: inherit;
+.heading-small {
+color: rebeccapurple;
+text-indent: 52px;
+margin: 0;
+font-size: .8em;
+padding: 0;
 }
 
 h2 {
@@ -59,6 +63,7 @@ ul {
   text-decoration: underline;
   color: blue;
   outline: 0;
+
     &[disabled] {
     text-decoration: none;
     color: #000;
@@ -69,9 +74,6 @@ ul {
     }
 
   }
-
-
-
 
 }
 
@@ -104,6 +106,7 @@ padding: 0 1em;
 
 .disclosure-multiple__list__item .disclosure-multiple__button {
 margin-bottom: 2px;
+outline: 0;
 }
 
 #outline {

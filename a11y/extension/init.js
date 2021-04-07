@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  function runBookmarklet(scriptName) {
+  function runBookmarklet(scriptName, scriptType) {
 
     chrome.tabs.executeScript({
 

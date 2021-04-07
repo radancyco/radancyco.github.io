@@ -28,8 +28,7 @@
   "name": "A11y Smoke Test",
   "permissions": [
 
-    "activeTab",
-    "storage"
+    "activeTab"
 
   ],
   "version": "1.0.0"

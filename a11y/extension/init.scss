@@ -49,9 +49,7 @@ font-size: .9em;
 }
 
 ul {
-list-style: none;
-margin-top: 0;
-padding: 0;
+
   button {
   background-color: transparent;
   border: 0;
@@ -96,12 +94,16 @@ min-width: 0;
 padding: 0;
 position: absolute;
 right: 1.3em;
-top: 1em;
+top: 18px;
 width: 40px;
 }
 
 .disclosure-multiple__list__item .disclosure-multiple__content {
 padding: 0 1em;
+}
+
+.disclosure-multiple__list__item .disclosure-multiple__button {
+margin-bottom: 2px;
 }
 
 #outline {

@@ -15,7 +15,7 @@
   "content_scripts": [{
 
     "css": ["init.css"],
-    "js": ["init.js", "outline.js"],
+    "js": ["init.js"],
     "matches": ["<all_urls>"]
 
   }],
@@ -30,7 +30,8 @@
 
   "permissions": [
 
-    "activeTab"
+    "activeTab",
+    "storage"
 
   ],
 

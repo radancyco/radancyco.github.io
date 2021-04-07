@@ -136,46 +136,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get Page Outline
 
-  var urlParam = new URLSearchParams(window.location.search);
-  var pageTest = urlParam.get("url");
   var pageElement = document.getElementById("inner-content");
-  var pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
-  var pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
-  var request = new XMLHttpRequest();
 
-  request.open("GET", pageElementHref, true);
+  if(pageElement) {
 
-  request.onload = function() {
+    var urlParam = new URLSearchParams(window.location.search);
+    var pageTest = urlParam.get("url");
 
-    if (request.status >= 200 && request.status < 400) {
+    var pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
+    var pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
+    var request = new XMLHttpRequest();
 
-      // Success!
+    request.open("GET", pageElementHref, true);
 
-      var parser = new DOMParser();
-      var response = parser.parseFromString(request.responseText, "text/html");
-      var fragment = response.getElementById("headingoutline");
+    request.onload = function() {
 
-      pageElement.innerHTML = "";
-      pageElement.appendChild(fragment);
+      if (request.status >= 200 && request.status < 400) {
 
-    } else {
+        // Success!
 
-      // We reached our target server, but it returned an error
+        var parser = new DOMParser();
+        var response = parser.parseFromString(request.responseText, "text/html");
+        var fragment = response.getElementById("headingoutline");
+
+        pageElement.innerHTML = "";
+        pageElement.appendChild(fragment);
+
+      } else {
+
+        // We reached our target server, but it returned an error
+
+        pageElement.innerHTML = pageError;
+
+      }
+
+    };
+
+    request.onerror = function() {
+
+      // There was a connection error of some sort
 
       pageElement.innerHTML = pageError;
 
-    }
+    };
 
-  };
+    request.send();
 
-  request.onerror = function() {
-
-    // There was a connection error of some sort
-
-    pageElement.innerHTML = pageError;
-
-  };
-
-  request.send();
+  }
 
 });

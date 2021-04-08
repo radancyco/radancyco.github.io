@@ -202,11 +202,18 @@ top: 22px;
 width: 40px;
 }
 
-#outline {
+#outline, #thanks {
 
   #content {
   font-size: .9em;
   max-width: none;
+  }
+
+}
+
+#outline {
+
+  #content {
 
     h2 {
     display: none;

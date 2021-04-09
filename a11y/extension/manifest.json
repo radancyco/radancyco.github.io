@@ -18,10 +18,8 @@
   "manifest_version": 2,
   "name": "A11y Smoke Test",
   "permissions": [
-    "tabs",
-    "storage",
-    "clipboardWrite",
-    "contextMenus"
+    "activeTab",
+    "storage"
   ],
   "version": "1.0.0"
 }

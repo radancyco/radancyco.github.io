@@ -47,7 +47,7 @@
 
       <p>Provide text alternatives for non-text content. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Understanding 1.1.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
@@ -69,13 +69,16 @@
 
       <p>Provide captions for videos with audio	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded">Understanding 1.2.2</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
-      <p>Multimedia on a page should be reviewed carefully.</p>
+      <p>Video on a page should be manually reviewed. If the video includes dialogue or important information, then it must contain captions or an audio description. Accuracy is also important. If a video is found to have inaccurate captions, new captions must be produced.</p>
 
       <h2>Resources</h2>
 
-      <p>Meryl's Work</p>
+      <ul>
+        <li><a class="new-tab" href="https://radancy.dev/a11y/caption/">Creating Accessible Multimedia</a></li>
+        <li><a class="new-tab" href="https://meryl.net/captioned-videos-complete-guide/">The Complete Guide to Captioned Videos by Meryl Evans (April 9, 2019)</a></li>
+      </ul>
 
     </div>
 
@@ -87,7 +90,7 @@
 
       <p>Semantic markup is used appropriately. Logical structure, etc.	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships">Understanding 1.3.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
@@ -112,7 +115,9 @@
 
       <p>Don't use presentation that relies solely on color. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color">Understanding 1.4.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
+
+      <p>Simulate various types of color blindness. If text or other elements are difficut to read, then there is a good chance that contrast should be revisited.</p>
 
       <ul>
         <li><button data-script="a11y-smoketest-protanopia" data-script-color>Protanopia (No Red)</button></li>
@@ -168,6 +173,8 @@
 
       </form>
 
+      <p>Go to <a class="new-tab" href="https://webaim.org/resources/linkcontrastchecker/">Link Contrast Checker</a>.
+
     </div>
 
     <button class="disclosure--btn" data-disclosure-icon>1.4.4: Resize Text (Level AA)</button>
@@ -188,7 +195,7 @@
 
       <p>Accessible by keyboard only.	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard">Understanding 2.1.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <p>Tab through and engage with interactive components on the page. In short, anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard. If focus outlines have been supressed, you can force them with:</p>
 
@@ -206,7 +213,7 @@
 
       <p>Provide user controls for moving content. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide">Understanding 2.2.2</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <p>Anthing that automatically moves on a web page, such as a carousel or video, must have a pause button. Web animation is exempt from this rule, but it is strongly reccomended that development leverage <a class="new-tab" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a> in their work.</p>
 
@@ -220,9 +227,9 @@
 
       <p>No content flashes more than three times per second.	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold">Understanding 2.3.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
-      <p>A high rate of flashing can cause potential harm, or even death, in individuals with epilepsy. If you suspect that an element on a page may be harmful, you can reach out to <a href="mailto:michael.spellacy@radancy.com">Michael Spellacy</a> or run the following app on a web page yourself:</p>
+      <p>A high rate of flashing can cause potential harm, or even death, in individuals with epilepsy. If you suspect that an element on a page may be harmful, you can reach out to the <a href="mailto:a11y@radancy.com">Accessibility Team</a> or run the following app on a web page yourself:</p>
 
       <ul>
         <li><a class="new-tab" href="https://trace.umd.edu/peat/">Download PEAT</a></li>
@@ -238,7 +245,7 @@
 
       <p>Provide a 'Skip to Content' link. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks">Understanding 2.4.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <p>Areas of a web page that may be cumbersome to navigate through via keyboard or assistive technology, must provide a mechanisim to skip over that content. These "Skip" links should be available to all users when needed and not obscure other content on the page when visible. You will often find these links placed before a websites primary navigation.</p>
 
@@ -260,7 +267,7 @@
 
       <p>Use helpful and clear page titles.	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled">Understanding 2.4.2</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <p>Ensure that all pages have a title and that it is useful and adequetly describes the page at hand:</p>
 
@@ -278,7 +285,7 @@
 
       <p>No major code errors. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/parsing">Understanding 4.1.1</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><a class="validate-html new-tab" href="https://validator.w3.org/">Validate HTML</a></li>
@@ -294,7 +301,7 @@
 
       <p>Build all elements for accessibility. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value">Understanding 4.1.2</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
@@ -311,7 +318,7 @@
 
       <p>Ensure important visual information such as graphics and icons meets the same minimum contrast that is required for larger text (3:1).	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast">Understanding 1.4.11</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><button data-script="a11y-smoketest-protanopia">Protanopia (No Red)</button></li>
@@ -369,7 +376,7 @@
 
       <p>Contrast ratio between text and background is at least 4.5:1. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum">Understanding 1.4.3</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <ul>
         <li><button data-script="a11y-smoketest-protanopia">Protanopia (No Red)</button></li>
@@ -427,7 +434,7 @@
 
       <p>Ensure keyboard focus is visible and clear. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible">Understanding 2.4.7</a></p>
 
-      <h2>Test</h2>
+      <h2>Test Procedure</h2>
 
       <p>Tab through and engage with interactive components on the page to review their focus states. Default focus outlines are a browser feature, meant to aid those with low vision, and should <em>never</em> be removed without an adequate replacement. Outlines can be redesigned or an alternative focus state can be used. Any redesigned outline and all focus state must meet a 3:1 contrast ratio.</p>
 
@@ -502,6 +509,7 @@
       <ul>
         <li><a class="new-tab" href="https://radancy.dev/a11y/baseline/">Accessibility Testing Baselines</a></li>
         <li><a class="new-tab" href="https://radancy.dev/a11y/testing/boilerplate/">Testing Boilerplate</a></li>
+        <li><a class="new-tab" href="https://radancy.dev/a11y/audit/">Testing/Audit Process</a></li>
         <li><a class="new-tab" href="https://radancy.dev/uid/code-standards/">User Interface Standards and Guidelines</a></li>
       </ul>
 
@@ -546,6 +554,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://radancy.dev/pattern-library/disclosure/init.js"></script>
+  <script src="tab.js"></script>
   <script src="init.js"></script>
 
 </body>

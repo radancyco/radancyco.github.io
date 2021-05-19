@@ -1,8 +1,3 @@
-.a11y-smoketest-grayscale {
-filter: grayscale(100%) !important;
--webkit-filter: grayscale(1) !important;
-}
-
 .a11y-smoketest-textspace * {
 line-height:1.5 !important;
 letter-spacing: 0.12em !important;
@@ -13,34 +8,39 @@ word-spacing: 0.16em !important;
 margin-bottom: 2em !important;
 }
 
-.a11y-smoketest-protanopia {
-filter: url("#protanopia");
+body[data-color-blindness="grayscale"] {
+filter: grayscale(100%) !important;
+-webkit-filter: grayscale(1) !important;
 }
 
-.a11y-smoketest-protanomaly {
-filter: url("#protanomaly");
+body[data-color-blindness="achromatomaly"] {
+filter: url("#achromatomaly");
 }
 
-.a11y-smoketest-deuteranopia {
-filter: url("#deuteranopia");
-}
-
-.a11y-smoketest-deuteranomaly {
-filter: url("#deuteranomaly");
-}
-
-.a11y-smoketest-tritanopia {
-filter: url("#tritanopia");
-}
-
-.a11y-smoketest-tritanomaly {
-filter: url("#tritanomaly");
-}
-
-.a11y-smoketest-achromatopsia {
+body[data-color-blindness="achromatopsia"] {
 filter: url("#achromatopsia");
 }
 
-.a11y-smoketest-achromatomaly {
-filter: url("#achromatomaly");
+body[data-color-blindness="deuteranomaly"] {
+filter: url("#deuteranomaly");
+}
+
+body[data-color-blindness="deuteranopia"] {
+filter: url("#deuteranopia");
+}
+
+body[data-color-blindness="protanomaly"] {
+filter: url("#protanomaly");
+}
+
+body[data-color-blindness="protanopia"] {
+filter: url("#protanopia");
+}
+
+body[data-color-blindness="tritanopia"] {
+filter: url("#tritanopia");
+}
+
+body[data-color-blindness="tritanomaly"] {
+filter: url("#tritanomaly");
 }

@@ -1,4 +1,11 @@
-// Accessibility Checklist
+/*!
+
+  Radancy: Smoke Test Extension - Extension Functionality
+
+  Contributor(s):
+  Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
+
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -102,52 +109,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-  });
 
-  function runBookmarklet(scriptName, scriptType) {
-
-    chrome.tabs.executeScript({
-
-      code: "var scriptName = " + JSON.stringify(scriptName)
-
-    },
-
-    function() {
+    function runBookmarklet(scriptName, scriptType) {
 
       chrome.tabs.executeScript({
 
-        file: "page.js"
+        code: "var scriptName = " + JSON.stringify(scriptName)
 
-      });
+      },
 
-      chrome.tabs.insertCSS({
+      function() {
 
-        file: "page.css"
+        chrome.tabs.executeScript({
+
+          file: "page.js"
+
+        });
+
+        chrome.tabs.insertCSS({
+
+          file: "page.css"
+
+        });
+
+      }
+
+    )};
+
+    let a11yButtons = document.querySelectorAll("button[data-script]");
+
+    if(a11yButtons) {
+
+      // If current URL does not match stored URL, then clear all session keys.
+
+      let currentURL = tabs[0].url;
+      let storedURL = window.localStorage.getItem("extensionURL");
+
+      if(currentURL !== storedURL) {
+
+        window.localStorage.clear();
+        window.localStorage.setItem("extensionURL", currentURL);
+
+      }
+
+      a11yButtons.forEach(function(button, e){
+
+        button.setAttribute ("id", "btn-script-" + (e + 1));
+        button.addEventListener("click", () => {
+
+          let dataScript = button.getAttribute("data-script");
+
+          runBookmarklet(dataScript);
+          button.setAttribute("disabled", true);
+          window.localStorage.setItem(button.id, dataScript);
+
+        });
 
       });
 
     }
 
-  )};
+    // Let's loop through storage and append disabled to match we find...
 
-  let a11yButtons = document.querySelectorAll("button[data-script]");
+    Object.keys(localStorage).forEach(function(key, i){
 
-  if(a11yButtons) {
+      var dataScriptID = localStorage.key(i);
 
-    a11yButtons.forEach(function(button, e){
+      if(dataScriptID !== "extensionURL") {
 
-      button.addEventListener("click", () => {
+        console.log(dataScriptID);
 
-        let dataScript = button.getAttribute("data-script");
+        document.getElementById(dataScriptID).setAttribute("disabled", true)
 
-        runBookmarklet(dataScript);
-        button.setAttribute("disabled", true);
-
-      });
+      }
 
     });
 
-  }
+  });
 
   // Reset Tab
 
@@ -176,6 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
         button.removeAttribute("disabled");
 
       });
+
+      window.localStorage.clear();
 
     });
 

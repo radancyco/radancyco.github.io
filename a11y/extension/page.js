@@ -1,11 +1,17 @@
+/*!
+
+  Radancy: Smoke Test Extension - Page (Tab) Functionality
+
+  Contributor(s):
+  Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
+
+*/
 
 // Append Bookmarklet
 
-if (scriptName === "a11y-smoketest-grayscale" || scriptName === "a11y-smoketest-textspace" || scriptName === "a11y-smoketest-protanopia" || scriptName === "a11y-smoketest-protanomaly" || scriptName === "a11y-smoketest-deuteranopia" || scriptName === "a11y-smoketest-deuteranomaly" || scriptName === "a11y-smoketest-tritanopia" || scriptName === "a11y-smoketest-tritanomaly" || scriptName === "a11y-smoketest-achromatopsia" || scriptName === "a11y-smoketest-achromatomaly") {
+if (scriptName === "grayscale" || scriptName === "textspace" || scriptName === "protanopia" || scriptName === "protanomaly" || scriptName === "deuteranopia" || scriptName === "deuteranomaly" || scriptName === "tritanopia" || scriptName === "tritanomaly" || scriptName === "achromatopsia" || scriptName === "achromatomaly") {
 
   // Color Blindness
-
-  // TODO, Only load one if loaded.
 
   var colorBlindnessFilter = document.getElementById("color-blindness-filter");
 
@@ -17,13 +23,14 @@ if (scriptName === "a11y-smoketest-grayscale" || scriptName === "a11y-smoketest-
 
   }
 
-  document.body.classList.add(scriptName);
+  document.body.removeAttribute("data-color-blindness");
+  document.body.setAttribute("data-color-blindness", scriptName);
 
 } else {
 
   document.body.appendChild(document.createElement("script")).src=scriptName;
 
-  // TODO: Chrome Extension deoug panel throwing error about iframes. Remiving for now. 
+  // TODO: Chrome Extension deoug panel throwing error about iframes. Removing for now.
 
   /* if(scriptName == "iframes") {
 

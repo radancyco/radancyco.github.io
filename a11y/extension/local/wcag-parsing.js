@@ -1,4 +1,3 @@
-
 javascript: (function () {
 
   var removeNg = true;

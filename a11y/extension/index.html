@@ -19,7 +19,7 @@
 
   <main>
 
-    <h1 class="heading-small">Accessibility Smoke Test</h1>
+    <h1 class="heading-small">Accessibility Smoke Test v1.0</h1>
 
     <button class="disclosure--btn" data-disclosure-icon>Page Validation</button>
 
@@ -35,6 +35,23 @@
         <li><a class="validate-css new-tab" href="http://jigsaw.w3.org/css-validator/">Validate CSS</a></li>
         <li><a class="validate-pdf new-tab" href="http://checkers.eiii.eu/en/pdfcheck/">Validate PDF</a></li>
         <li><a class="validate-heading new-tab" href="heading.html">Validate Heading-Level Outline</a></li>
+      </ul>
+
+      <h3>Advanced</h3>
+
+      <ul>
+        <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">Validate Serialized DOM</button>
+
+          <span id="validate-dom">Runs validation on entire DOM, including script based content and features.</span>
+
+        </li>
+        <li>
+
+          <button aria-describedby="wcag-parsing" data-script="https://radancy.dev/a11y/extension/local/wcag-parsing.js">WCAG Parsing</button>
+
+          <span id="wcag-parsing">Run on W3C validator results page to remove non-WCAG issues.</span>
+
+        </li>
       </ul>
 
     </div>
@@ -71,7 +88,7 @@
 
       <h2>Test Procedure</h2>
 
-      <p>Video on a page should be manually reviewed. If the video includes dialogue or important information, then it must contain captions or an audio description. Accuracy is also important. If a video is found to have inaccurate captions, new captions must be produced.</p>
+      <p>Video on a page should be manually reviewed. If the video includes dialogue or important information, then it must contain captions or an audio description. Accuracy is also critical. If a video is found to have inaccurate captions, new captions must be produced.</p>
 
       <h2>Resources</h2>
 
@@ -120,13 +137,13 @@
       <p>Simulate various types of color blindness. If text or other elements are difficut to read, then there is a good chance that contrast should be revisited.</p>
 
       <ul>
-        <li><button data-script="a11y-smoketest-protanopia" data-script-color>Protanopia (No Red)</button></li>
-        <li><button data-script="a11y-smoketest-protanomaly" data-script-color>Protanomaly</button></li>
-        <li><button data-script="a11y-smoketest-deuteranopia" data-script-color>Deuteranopia (No Green)</button></li>
-        <li><button data-script="a11y-smoketest-deuteranomaly" data-script-color>Deuteranomaly</button></li>
-        <li><button data-script="a11y-smoketest-tritanopia" data-script-color>Tritanopia (No Blue)</button></li>
-        <li><button data-script="a11y-smoketest-achromatopsia" data-script-color>Achromatopsia</button></li>
-        <li><button data-script="a11y-smoketest-achromatomaly" data-script-color>Achromatomaly</button></li>
+        <li><button data-script="achromatomaly">Achromatomaly</button></li>
+        <li><button data-script="achromatopsia">Achromatopsia (Grayscale)</button></li>
+        <li><button data-script="deuteranomaly">Deuteranomaly</button></li>
+        <li><button data-script="deuteranopia">Deuteranopia (Green-Blind, Most Common)</button></li>
+        <li><button data-script="protanomaly">Protanomaly</button></li>
+        <li><button data-script="protanopia">Protanopia (Red-Blind, Most Common)</button></li>
+        <li><button data-script="tritanopia">Tritanopia (Blue-Blind)</button></li>
       </ul>
 
       <form action="https://webaim.org/resources/linkcontrastchecker/" target="_blank">
@@ -141,7 +158,7 @@
 
               <label for="lcolor-1">Link:</label>
 
-              <input id="lcolor-1" name="lcolor" type="color" value="#666666">
+              <input id="lcolor-1" name="lcolor" type="color" value="#3333FF">
 
             </div>
 
@@ -149,7 +166,7 @@
 
               <label for="fcolor-1">Body Text:</label>
 
-              <input id="fcolor-1" name="fcolor" type="color" value="#666666">
+              <input id="fcolor-1" name="fcolor" type="color" value="#000000">
 
             </div>
 
@@ -157,7 +174,7 @@
 
               <label for="bcolor-1">Background:</label>
 
-              <input id="bcolor-1" name="bcolor" type="color" value="#666666">
+              <input id="bcolor-1" name="bcolor" type="color" value="#FFFFFF">
 
             </div>
 
@@ -185,6 +202,10 @@
 
       <p>Text can be resized to 200% without loss of content or function.	<a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text">Understanding 1.4.4</a></p>
 
+      <h2>Test Procedure</h2>
+
+      <p>Use Control or Command and Plus (+) keys to increase zoom level of viewport window. When 200% is reached, test to see if page content can still be accessed and is operabable. If zoom is disabled on a page, it is an immediated failure.</p>
+
     </div>
 
     <button class="disclosure--btn" data-disclosure-icon>2.1.1: Keyboard (Level A)</button>
@@ -197,7 +218,7 @@
 
       <h2>Test Procedure</h2>
 
-      <p>Tab through and engage with interactive components on the page. In short, anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard. If focus outlines have been supressed, you can force them with:</p>
+      <p>Tab through and engage with interactive components on the page. In short, anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard. If focus outlines have been supressed (which is a failure), you can enable them via:</p>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">Force Focus</button></li>
@@ -272,7 +293,7 @@
       <p>Ensure that all pages have a title and that it is useful and adequetly describes the page at hand:</p>
 
       <ul>
-        <li><button data-script="js/page-title.js">Show Title</button></li>
+        <li><button data-script="https://radancy.dev/a11y/extension/local/page-title.js">Show Title</button></li>
       </ul>
 
     </div>
@@ -321,13 +342,13 @@
       <h2>Test Procedure</h2>
 
       <ul>
-        <li><button data-script="a11y-smoketest-protanopia">Protanopia (No Red)</button></li>
-        <li><button data-script="a11y-smoketest-protanomaly">Protanomaly</button></li>
-        <li><button data-script="a11y-smoketest-deuteranopia">Deuteranopia (No Green)</button></li>
-        <li><button data-script="a11y-smoketest-deuteranomaly">Deuteranomaly</button></li>
-        <li><button data-script="a11y-smoketest-tritanopia">Tritanopia (No Blue)</button></li>
-        <li><button data-script="a11y-smoketest-achromatopsia">Achromatopsia</button></li>
-        <li><button data-script="a11y-smoketest-achromatomaly">Achromatomaly</button></li>
+        <li><button data-script="achromatomaly">Achromatomaly</button></li>
+        <li><button data-script="achromatopsia">Achromatopsia (Grayscale)</button></li>
+        <li><button data-script="deuteranomaly">Deuteranomaly</button></li>
+        <li><button data-script="deuteranopia">Deuteranopia (Green-Blind, Most Common)</button></li>
+        <li><button data-script="protanomaly">Protanomaly</button></li>
+        <li><button data-script="protanopia">Protanopia (Red-Blind, Most Common)</button></li>
+        <li><button data-script="tritanopia">Tritanopia (Blue-Blind)</button></li>
       </ul>
 
       <form action="https://webaim.org/resources/contrastchecker/" target="_blank">
@@ -342,7 +363,7 @@
 
               <label for="fcolor-2">Foreground:</label>
 
-              <input id="fcolor-2" name="fcolor" type="color" value="#666666">
+              <input id="fcolor-2" name="fcolor" type="color" value="#0000FF">
 
             </div>
 
@@ -350,7 +371,7 @@
 
               <label for="bcolor-2">Background:</label>
 
-              <input id="bcolor-2" name="bcolor" type="color" value="#666666">
+              <input id="bcolor-2" name="bcolor" type="color" value="#FFFFFF">
 
             </div>
 
@@ -365,6 +386,8 @@
         </fieldset>
 
       </form>
+
+      <p>Go to <a class="new-tab" href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a>.
 
     </div>
 
@@ -379,13 +402,13 @@
       <h2>Test Procedure</h2>
 
       <ul>
-        <li><button data-script="a11y-smoketest-protanopia">Protanopia (No Red)</button></li>
-        <li><button data-script="a11y-smoketest-protanomaly">Protanomaly</button></li>
-        <li><button data-script="a11y-smoketest-deuteranopia">Deuteranopia (No Green)</button></li>
-        <li><button data-script="a11y-smoketest-deuteranomaly">Deuteranomaly</button></li>
-        <li><button data-script="a11y-smoketest-tritanopia">Tritanopia (No Blue)</button></li>
-        <li><button data-script="a11y-smoketest-achromatopsia">Achromatopsia</button></li>
-        <li><button data-script="a11y-smoketest-achromatomaly">Achromatomaly</button></li>
+        <li><button data-script="achromatomaly">Achromatomaly</button></li>
+        <li><button data-script="achromatopsia">Achromatopsia (Grayscale)</button></li>
+        <li><button data-script="deuteranomaly">Deuteranomaly</button></li>
+        <li><button data-script="deuteranopia">Deuteranopia (Green-Blind, Most Common)</button></li>
+        <li><button data-script="protanomaly">Protanomaly</button></li>
+        <li><button data-script="protanopia">Protanopia (Red-Blind, Most Common)</button></li>
+        <li><button data-script="tritanopia">Tritanopia (Blue-Blind)</button></li>
       </ul>
 
       <form action="https://webaim.org/resources/contrastchecker/" target="_blank">
@@ -400,7 +423,7 @@
 
               <label for="fcolor-3">Foreground:</label>
 
-              <input id="fcolor-3" name="fcolor" type="color" value="#666666">
+              <input id="fcolor-3" name="fcolor" type="color" value="#0000FF">
 
             </div>
 
@@ -408,7 +431,7 @@
 
               <label for="bcolor-3">Background:</label>
 
-              <input id="bcolor-3" name="bcolor" type="color" value="#666666">
+              <input id="bcolor-3" name="bcolor" type="color" value="#FFFFFF">
 
             </div>
 
@@ -423,6 +446,8 @@
         </fieldset>
 
       </form>
+
+      <p>Go to <a class="new-tab" href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a>.
 
     </div>
 
@@ -453,7 +478,7 @@
 
       <h2>Browser Plugins</h2>
 
-      <p>More advanced testing can be performed with the following tools:</p>
+      <p>More advanced automated testing can be performed with the following tools:</p>
 
       <ul>
         <li><button data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
@@ -466,8 +491,20 @@
       <p>Good testers listen to and engage with an interface via assistive technology.</p>
 
       <ul>
-        <li><a class="new-tab" href="https://www.nvaccess.org/download/">NVDA (Free)</a></li>
-        <li><a class="new-tab" href="https://support.freedomscientific.com/Downloads/JAWS">JAWS (Paid, 30 Minute Mode)</a></li>
+        <li><a class="new-tab" href="https://www.nvaccess.org/download/">NVDA (Free)</a>
+
+          <ul>
+            <li><a href="https://webaim.org/resources/shortcuts/nvda">Keyboard Shortcuts for NVDA</a></li>
+          </ul>
+
+        </li>
+        <li><a class="new-tab" href="https://support.freedomscientific.com/Downloads/JAWS">JAWS (Paid, 30 Minute Mode)</a>
+
+          <ul>
+            <li><a href="https://webaim.org/resources/shortcuts/jaws">Keyboard Shortcuts for JAWS</a></li>
+          </ul>
+
+        </li>
         <li><a class="new-tab" href="https://support.microsoft.com/en-us/windows/hear-text-read-aloud-with-narrator-040f16c1-4632-b64e-110a-da4a0ac56917">Windows Narrator</a></li>
         <li><a class="new-tab" href="https://support.apple.com/guide/mac-help/change-voiceover-preferences-accessibility-mh40578/mac">VoiceOver for Mac</a></li>
       </ul>
@@ -506,6 +543,8 @@
 
       <h2>Radancy</h2>
 
+      <p>Common information for employees of Radancy. Please note that some links will redirect to our intranet.</p>
+
       <ul>
         <li><a class="new-tab" href="https://radancy.dev/a11y/baseline/">Accessibility Testing Baselines</a></li>
         <li><a class="new-tab" href="https://radancy.dev/a11y/testing/boilerplate/">Testing Boilerplate</a></li>
@@ -513,12 +552,21 @@
         <li><a class="new-tab" href="https://radancy.dev/uid/code-standards/">User Interface Standards and Guidelines</a></li>
       </ul>
 
+      <h2>Resources</h2>
+
+      <p>Fantastic resources from across the web!</p>
+
+      <ul>
+        <li><a class="new-tab" href="https://www.w3.org/WAI/">Web Accessibility Initiative (WAI)</a></li>
+        <li><a class="new-tab" href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG (Quick Reference)</a></li>
+      </ul>
+
     </div>
 
     <!-- h2>Bookmarklets</h2>
 
     <ul>
-      <li><button class="alert-dialoge" data-script="a11y-smoketest-textspace">Text Space</button></li>
+      <li><button class="alert-dialoge" data-script="textspace">Text Space</button></li>
       <li><button data-script="https://mraccess77.github.io/favlets/duplicateIds.js">Duplicate ID</button></li>
     </ul>
 
@@ -536,7 +584,6 @@
       <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tabindex.js">Tabindex</button></li>
       <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/tables.js">Tables</button></li>
       <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/title.js">Title Attributes</button></li>
-      <li><button data-script="grayscale">Grayscale</button></li>
     </ol -->
 
   </main>

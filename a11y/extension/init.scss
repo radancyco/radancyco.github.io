@@ -1,13 +1,13 @@
 /*!
 
-  Radancy Smoke Test Extension
+  Radancy: Smoke Test Extension - Extension Styles
 
   Contributor(s):
   Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
 
   Dependencies: Sass
   Instructions: To run locally, install Sass (https://sass-lang.com/install), CL to directory this file in and run:
-  sass --watch init.scss:init.css --style compressed
+  sass --watch init.scss:init.css page.scss:page.css --style compressed
 
 */
 
@@ -45,7 +45,7 @@ figure {
 margin: 1em 0;
 
   figcaption {
-  color: #666;
+  color: #333;
   font-size: .85em;
   margin: 1em 0 0;
   }
@@ -53,6 +53,8 @@ margin: 1em 0;
 }
 
 footer {
+font-size: .9em;
+margin-top: 2em;
 
   ul {
   padding-left: 0;
@@ -88,7 +90,7 @@ margin: 0 0 1em;
 
     input {
     background-color: transparent;
-    border: 0;
+    border: 1px #ccc solid;
     cursor: pointer;
     height: 45px;
     padding: 0;
@@ -193,11 +195,12 @@ text-indent: 52px;
 
 .reset {
 background-image: url("img/btn-reset.png");
+border-radius: 5px;
 height: 40px;
 min-width: 0;
 padding: 0;
-position: absolute;
-right: 1.3em;
+position: fixed;
+right: 1.4em;
 top: 22px;
 width: 40px;
 }

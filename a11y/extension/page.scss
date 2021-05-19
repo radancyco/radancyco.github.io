@@ -1,0 +1,62 @@
+/*!
+
+  Radancy: Smoke Test Extension - Page Styles
+
+  Contributor(s):
+  Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
+
+  Dependencies: Sass
+  Instructions: To run locally, install Sass (https://sass-lang.com/install), CL to directory this file in and run:
+  sass --watch init.scss:init.css page.scss:page.css --style compressed
+
+*/
+
+body {
+
+  &[data-color-blindness="achromatomaly"] {
+  filter: url("#achromatomaly");
+  }
+
+  &[data-color-blindness="achromatopsia"] {
+  filter: url("#achromatopsia");
+  }
+
+  &[data-color-blindness="deuteranomaly"] {
+  filter: url("#deuteranomaly");
+  }
+
+  &[data-color-blindness="deuteranopia"] {
+  filter: url("#deuteranopia");
+  }
+
+  &[data-color-blindness="protanomaly"] {
+  filter: url("#protanomaly");
+  }
+
+  &[data-color-blindness="protanopia"] {
+  filter: url("#protanopia");
+  }
+
+  &[data-color-blindness="tritanopia"] {
+  filter: url("#tritanopia");
+  }
+
+  &[data-color-blindness="tritanomaly"] {
+  filter: url("#tritanomaly");
+  }
+
+}
+
+.a11y-smoketest-textspace {
+
+  * {
+  line-height:1.5 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+  }
+
+  p {
+  margin-bottom: 2em !important;
+  }
+
+}

@@ -72,7 +72,6 @@ border-bottom: 1px dashed $highlight-color;
 margin: 3em 0 2em;
 }
 
-
 html {
 box-sizing: border-box;
 
@@ -221,6 +220,10 @@ text-transform: uppercase;
 .new-window {
 display: block;
 text-align: right;
+}
+
+.param {
+margin-bottom: 3em;
 }
 
 .sr-only:not(:focus):not(:active) {

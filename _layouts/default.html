@@ -5,7 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
     <meta content="noindex, nofollow" name="robots">{% endif %}
     <meta content="{{ site.theme-color }}" name="theme-color">
-    <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.localcss %}
+    <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.slick %}
+    <link href="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">{% endif %}{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
     <link href="{{ site.git-url }}/favicon.ico" rel="icon">
     <link href="{{ site.git-url }}/manifest.json" rel="manifest">
@@ -71,8 +72,9 @@
     </footer>
 
   </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  {% if page.jquery != false %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>{% endif %}{% if page.slick %}
+  <script src="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.js"></script>{% endif %}
   <script src="{{ site.git-url }}/js/init.js"></script>{% if page.localjs %}
   <script src="{{ page.localjs }}"></script>{% endif %}
 

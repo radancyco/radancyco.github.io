@@ -52,12 +52,12 @@ padding: 1em;
 }
 
 code {
-background-color: $highlight-color;
+background-color: #666;
 border-radius: 4px;
 color: white;
 display: inline-block;
 padding: .2em 1em;
-margin: 1px;
+f60
 word-wrap: break-word;
 }
 
@@ -224,6 +224,18 @@ text-align: right;
 
 .param {
 margin-bottom: 3em;
+
+  code {
+  display: block;
+  margin: 5px 0;
+
+    @media(min-width: 680px) {
+
+      display: inline-block;
+      margin: 1px;
+
+    }
+
 }
 
 .sr-only:not(:focus):not(:active) {

@@ -235,6 +235,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get Heading Outline
 
+  let bodyID = document.body.id;
+
+  alert(bodyID);
+
   let pageElement = document.getElementById("inner-content");
 
   if(pageElement) {

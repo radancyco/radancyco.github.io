@@ -27,31 +27,31 @@
 
       <h2>Overview</h2>
 
-      <p>Web pages must always be validated. Errors presented in WAVE and in HTML are the most critical issues to address. QA engineers should link directly to validation reports when logging issues.</p>
+      <p>Web pages must always be validated. Errors presented in WAVE and in HTML are the most critical issues to address. Accessibility and QA engineers should link directly to validation reports when logging issues.</p>
 
       <ul>
         <li><a class="validate-a11y new-tab" href="https://wave.webaim.org/">Validate Accessibility</a></li>
-        <li><a class="validate-html new-tab" href="https://validator.w3.org/">Validate HTML</a></li>
+        <li><a class="validate-html new-tab" href="https://validator.w3.org/">Validate HTML</a>
+
+          <ul>
+            <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">Validate Serialized DOM</button>
+
+              <span id="validate-dom">Runs validation on entire DOM, including script based content and features.</span>
+
+            </li>
+            <li>
+
+              <button aria-describedby="wcag-parsing" data-script="https://radancy.dev/a11y/extension/local/wcag-parsing.js">WCAG Parsing</button>
+
+              <span id="wcag-parsing">Run on W3C validator results page to remove non-WCAG issues.</span>
+
+            </li>
+          </ul>
+
+        </li>
         <li><a class="validate-css new-tab" href="http://jigsaw.w3.org/css-validator/">Validate CSS</a></li>
         <li><a class="validate-pdf new-tab" href="http://checkers.eiii.eu/en/pdfcheck/">Validate PDF</a></li>
         <li><a class="validate-heading new-tab" href="heading.html">Validate Heading-Level Outline</a></li>
-      </ul>
-
-      <h3>Advanced</h3>
-
-      <ul>
-        <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">Validate Serialized DOM</button>
-
-          <span id="validate-dom">Runs validation on entire DOM, including script based content and features.</span>
-
-        </li>
-        <li>
-
-          <button aria-describedby="wcag-parsing" data-script="https://radancy.dev/a11y/extension/local/wcag-parsing.js">WCAG Parsing</button>
-
-          <span id="wcag-parsing">Run on W3C validator results page to remove non-WCAG issues.</span>
-
-        </li>
       </ul>
 
     </div>
@@ -64,16 +64,30 @@
 
       <p>Provide text alternatives for non-text content. <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Understanding 1.1.1</a></p>
 
+      <h2>Basic Rules</h2>
+
+      <ol>
+        <li>All images require an alt attribute, whether they are informative or decorative.</li>
+        <li>If image is informative or contextually important to surrounding content, then it should have an alternative text value.</li>
+        <li>If image is purely decorative, then it rquires no alternative text value.</li>
+        <li>If image is contained within a hyperlink, then it <em>must</em> contain functional alternative text (e.g, My Awesome Vacation (Video))</li>
+      </ol>
+
+      <p><strong>Tip:</strong> Alternative text should be written in a descriptive, but succinct manner. Think of how you might describe the image to a friend who is blind.</p>
+
+      <p><strong>Note:</strong> Unless it is relevant to the image, it is forbidden to intentionally include keywords in alternative text descriptions for the benefit of SEO. Websites are for people; not machines.</p>
+
       <h2>Test Procedure</h2>
 
       <ul>
-        <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">Images</button></li>
+        <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">View Alternative Text</button></li>
       </ul>
 
       <h2>Resources</h2>
 
       <ul>
         <li><a class="new-tab" href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree</a></li>
+        <li><a class="new-tab" href="https://www.smashingmagazine.com/2021/06/img-alt-attribute-alternate-description-decorative/">Your Image Is Probably Not Decorative</a></li>
       </ul>
 
     </div>
@@ -560,6 +574,7 @@
       <ul>
         <li><a class="new-tab" href="https://a11ysupport.io/">ARIA Support Check</a></li>
         <li><a class="new-tab" href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG (Quick Reference)</a></li>
+        <li><a class="new-tab" href="https://www.powermapper.com/tests/screen-readers/">PowerMapper - Screen Reader Reliability</a></li>
         <li><a class="new-tab" href="https://www.w3.org/WAI/">Web Accessibility Initiative (WAI)</a></li>
         <li><a class="new-tab" href="https://www.w3.org/WAI/policies/">Web Accessibility Laws & Policie</a></li>
       </ul>

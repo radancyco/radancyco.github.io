@@ -109,6 +109,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    let ImageValidationLink = document.querySelectorAll(".validate-images");
+
+    if(ImageValidationLink){
+
+      ImageValidationLink.forEach(function(link, e){
+
+        const ImageValidationHref = link.href;
+        link.setAttribute("href", ImageValidationHref + "?url=" + url);
+
+      });
+
+    }
 
     function runBookmarklet(scriptName, scriptType) {
 

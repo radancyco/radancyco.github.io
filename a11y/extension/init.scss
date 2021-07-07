@@ -207,7 +207,7 @@ top: 22px;
 width: 40px;
 }
 
-#outline, #thanks {
+#images, #outline, #thanks {
 
   #content {
   font-size: .9em;
@@ -216,7 +216,7 @@ width: 40px;
 
 }
 
-#outline {
+#images, #outline {
 
   #content {
 
@@ -228,13 +228,37 @@ width: 40px;
     color: rebeccapurple;
     }
 
-    h2 {
+    h2, ol, .failure, .details {
     display: none;
     }
 
     .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #000;
     font-weight: bold;
+    }
+
+    table {
+    width: 50%;
+    }
+
+    th {
+    background-color: #40e8d4;
+    color: #000;
+    text-align: center;
+    width: 25%;
+    }
+
+    th, td {
+    border: 1px #00008b solid;
+    padding: .5em;
+    }
+
+    td {
+
+      img {
+      width: 100%;
+      }
+
     }
 
     .headinglevel, .missingheadinglevel {

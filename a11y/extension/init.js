@@ -237,8 +237,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let bodyID = document.body.id;
 
-  alert(bodyID);
-
   let pageElement = document.getElementById("inner-content");
 
   if(pageElement) {
@@ -246,7 +244,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let urlParam = new URLSearchParams(window.location.search);
     let pageTest = urlParam.get("url");
 
-    let pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
+    if (bodyID === "images") {
+
+      var pageElementHref = "https://validator.w3.org/nu/?showimagereport=yes&doc=" + pageTest;
+
+    } else {
+
+      var pageElementHref = "https://validator.w3.org/nu/?showoutline=yes&doc=" + pageTest;
+
+    }
+
     let pageError = "<p class='alert'>We're sorry, the content you are looking for can't be displayed right now. Try refreshing your page. If there is still an issue, you can <a href='" + pageElementHref + "'>access the page directly</a>.</p>";
     let request = new XMLHttpRequest();
 
@@ -265,7 +272,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let parser = new DOMParser();
         let response = parser.parseFromString(request.responseText, "text/html");
-        let fragment = response.getElementById("headingoutline");
+
+        if (bodyID === "images") {
+
+          var fragment = response.getElementById("results");
+
+        } else {
+
+          var fragment = response.getElementById("headingoutline");
+
+        }
 
         pageElement.innerHTML = "";
         pageElement.appendChild(fragment);

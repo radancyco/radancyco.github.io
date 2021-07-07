@@ -32,7 +32,7 @@ a, button {
     content: "";
     display: inline-block;
     height: 16px;
-    margin-left: 5px;
+    margin: 0 5px;
     vertical-align: middle;
     width: 16px;
     }
@@ -153,6 +153,7 @@ ul {
       &::after {
       background-image: none;
       content: "✔️";
+      height: auto;
       }
 
     }

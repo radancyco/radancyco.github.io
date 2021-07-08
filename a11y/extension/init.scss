@@ -134,7 +134,7 @@ main {
 font-size: .9em;
 }
 
-ul {
+ul, p {
 
   button {
   background-color: transparent;
@@ -228,7 +228,7 @@ width: 40px;
     color: rebeccapurple;
     }
 
-    h2, ol, .failure, .details {
+    h2, ol, .failure, .details, .stats {
     display: none;
     }
 
@@ -250,15 +250,11 @@ width: 40px;
 
     th, td {
     border: 1px #00008b solid;
-    padding: .5em;
+    padding: 1em;
     }
 
     td {
-
-      img {
-      width: 100%;
-      }
-
+    background-color: #ccc;
     }
 
     .headinglevel, .missingheadinglevel {

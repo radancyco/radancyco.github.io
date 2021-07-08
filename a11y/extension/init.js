@@ -83,6 +83,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    let HyperLink = document.querySelectorAll(".validate-links");
+
+    if(HyperLink){
+
+      HyperLink.forEach(function(link, e){
+
+        let HyperHref = link.href;
+        link.setAttribute("href", HyperHref + "?uri=" + url + "&hide_type=all&depth=&check=Check");
+
+      });
+
+    }
+
     let PDFLink = document.querySelectorAll(".validate-pdf");
 
     if(PDFLink){

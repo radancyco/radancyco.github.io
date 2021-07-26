@@ -42,6 +42,7 @@ $weight-black: 900 !default; // Black (Heavy)
 // Common variables
 
 $highlight-color: #6F00EF;
+$fallback-font: Arial, Helvetica, sans-serif;
 
 // Other font variables
 
@@ -96,7 +97,7 @@ a {
 }
 
 body {
-font-family: "Graphik", Arial, Helvetica, sans-serif;
+font-family: "Graphik", $fallback-font;
 font-size: 100%;
 font-style: normal;
 font-variant: normal;
@@ -115,7 +116,7 @@ word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6, caption {
-font-family: "Campton", inherit;
+font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
 margin: 1em 0;

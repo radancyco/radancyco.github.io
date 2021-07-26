@@ -15,7 +15,61 @@
 
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
 
+$weight-thin: 100 !default; // Thin (Hairline)
+$weight-extra-thin: 200 !default; // Extra Light (Ultra Light)
+$weight-light: 300 !default; // Light
+$weight-normal: 400 !default; // Normal (Often used as 'normal' instead of a number)
+$weight-medium: 500 !default; // Medium
+$weight-semi-bold: 600 !default; // Semi Bold (Demi Bold)
+$weight-bold: 700 !default; // Bold (Often used as 'bold' instead of a number)
+$weight-extra-bold: 800 !default; // Extra Bold (Ultra Bold)
+$weight-black: 900 !default; // Black (Heavy)
+
+@mixin fontface($font-path, $fileName, $fontName, $weight: normal, $style: normal, $display: swap) {
+
+  @font-face {
+
+    font-family: "#{$fontName}";
+    src:local("#{$fontName}"),url("#{$font-path}#{$fileName}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    font-display: #{$display};
+
+  }
+
+}
+
+// Common variables
+
 $highlight-color: #6F00EF;
+
+// Other font variables
+
+$font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
+
+// Maax Mono
+
+@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-regular-205tf", "Maax-Mono", $weight-normal);
+@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-italic-205tf", "Maax-Mono", $weight-normal, "italic");
+@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-bold-205tf", "Maax-Mono", $weight-bold);
+@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-bold-italic-205tf", "Maax-Mono", $weight-bold, "italic");
+
+// Campton
+
+@include fontface("#{$font-file-path}/campton/", "campton-book", "Campton", $weight-normal);
+@include fontface("#{$font-file-path}/campton/", "campton-book-italic", "Campton", $weight-normal, "italic");
+@include fontface("#{$font-file-path}/campton/", "campton-light", "Campton", $weight-light);
+@include fontface("#{$font-file-path}/campton/", "Campton", "campton-light-italic", "Campton", $weight-light, "italic");
+
+// Graphik
+
+@include fontface("#{$font-file-path}/graphik/", "graphik-regular", "Graphik", $weight-normal);
+@include fontface("#{$font-file-path}/graphik/", "graphik-regularitalic", "Graphik", $weight-normal, "italic");
+@include fontface("#{$font-file-path}/graphik/", "graphik-semibolditalic", "Graphik", $weight-light, "italic");
+@include fontface("#{$font-file-path}/graphik/", "graphik-semibold", "Graphik", $weight-bold); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
+@include fontface("#{$font-file-path}/graphik/", "graphik-semibolditalic", "Graphik", $weight-bold, "italic"); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
+
+// Global CSS
 
 *, *::before, *::after {
 box-sizing: inherit;
@@ -42,7 +96,7 @@ a {
 }
 
 body {
-font-family: Arial, Helvetica, sans-serif;
+font-family: "Graphik", Arial, Helvetica, sans-serif;
 font-size: 100%;
 font-style: normal;
 font-variant: normal;
@@ -60,9 +114,11 @@ padding: .2em 1em;
 word-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-margin: 1em 0;
+h1, h2, h3, h4, h5, h6, caption {
+font-family: "Campton", inherit;
+font-weight: 400;
 line-height: normal;
+margin: 1em 0;
 }
 
 hr[aria-hidden="true"] {

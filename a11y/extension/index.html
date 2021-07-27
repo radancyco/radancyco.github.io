@@ -27,16 +27,16 @@
 
       <h2>Overview</h2>
 
-      <p>Web pages must always be validated. Errors presented in WAVE and the W3C Validator are the most critical, automated issues to address. Accessibility and QA (Quality Assurance) engineers should link directly to validation reports when logging issues.</p>
+      <p>Web pages must always be validated. Errors presented in WAVE and the W3C (World Wide Web Consortium) Validator are the most critical issues to address. Accessibility and QA (Quality Assurance) engineers should link directly to validation reports when logging issues. You can run the following tests to validate this page:</p>
 
       <ul>
-        <li><a class="validate-a11y new-tab" href="https://wave.webaim.org/">Validate Accessibility</a></li>
-        <li><a class="validate-html new-tab" href="https://validator.w3.org/">Validate HTML</a>
+        <li><a class="validate-a11y new-tab" href="https://wave.webaim.org/">WAVE Validation</a></li>
+        <li><a class="validate-html new-tab" href="https://validator.w3.org/">W3C Validation</a>
 
           <ul>
-            <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">Validate Serialized DOM</button>
+            <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">W3C Validation (Serialized DOM)</button>
 
-              - <span id="validate-dom">Runs validation on entire DOM, including script based content and features.</span>
+              - <span id="validate-dom">Runs validation on entire DOM (Document Object Model), including script generated content and enhancements.</span>
 
             </li>
             <li>
@@ -72,11 +72,11 @@
 
       <h3>Images: Know the Differnce</h2>
 
-      <p>Images typically fall into one of two categories: Decorative and Informative. It is very important to understand the difference between these two image types in order to make a more informed decision.</p>
+      <p>Images fall into one of two categories: Decorative and Informative. It is very important to understand the difference between these two image types in order to make a more informed decision.</p>
 
       <ul>
         <li><strong>Decorative:</strong> Images of a non-important nature. For example, icons or other visual embellishments. If a page can be understood without these images, then an alternative text value is not required.</li>
-        <li><strong>Informative:</strong> Images of an important nature. These are often images that provide value to the surrounding content. If a page can't be understood or experienced in a similar way to the visual experience, then an alternative text value is required.</li>
+        <li><strong>Informative:</strong> Images of an important nature. These are often images that provide <em>value</em> to the surrounding content. If a page can't be understood or <em>experienced</em> in a similar way to the visual experience, then an alternative text value is required.</li>
       </ul>
 
       <h3>Images: Basic Rules</h3>
@@ -85,17 +85,17 @@
         <li>All images require an alt attribute, whether they are informative or decorative. For example: <code>&lt;img alt="" src="..."&gt;</code>. An image with no alt attribute value is known as a "null alt".</li>
         <li>If image is informative or contextually important to surrounding content, then it must include an alternative text value.</li>
         <li>If image is meant to invoke a feeling or emotion, then it should contain an alternative text value.</li>
-        <li>If image contains text, then it must include an alternative text value. Typically verbatim, to match what is embedded in image.</li>
+        <li>If image contains text, then it must include an alternative text value. Typically verbatim, to match what is embedded in the image.</li>
         <li>If image is purely decorative, then it requires no alternative text value.</li>
         <li>If image is contained within a hyperlink or button, then it <em>must</em> contain <em>functional</em> alternative text. For example: <code>&lt;a href="..."&gt;&lt;img alt="My Awesome Vacation (Video)" src="..."&gt;&lt;/a&gt;</code>.</li>
-        <li>If image within hyperlink or button contains adjacent or nearby text, then the previous rule can be ignored. For example: <code>&lt;a href="..."&gt;&lt;img alt="" src="..."&gt; &lt;span&gt;My Awesome Vacation (Video)&lt;/span&gt;&lt;/a&gt;</code></li>
+        <li>If image within hyperlink or button contains adjacent or nearby text, then the previous rule can be ignored. For example: <code>&lt;a href="..."&gt;&lt;img alt="" src="..."&gt; &lt;span&gt;My Awesome Vacation&lt;/span&gt;&lt;/a&gt;</code></li>
         <li>In all cases where an alternative text description is deemed necessary, avoid phrases like "Image of ..." or "Picture of ..." as these are redundant to assistive technology (AT) users.</li>
         <li>If image is deemed informative and is found to be a background image, alternaive techniques must be taken to ensure that this information is conveyed to AT users. Here it may be easier to simply use an inline image instead.</li>
       </ol>
 
       <h2>Test Procedure(s)</h2>
 
-      <p>Review images and ensure that the aforementioned rules are met. You can use the following tools to review page images in more depth:</p>
+      <p>Review images and ensure that the aforementioned rules are met. You can run the following tests to review page images in more depth:</p>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/images.js">View Alternative Text</button></li>
@@ -106,16 +106,24 @@
 
         <h2>Accessibility Tip</h2>
 
-        <p>Alternative text should be written in a descriptive, yet succinct manner. Think of how you might describe the image to a friend who is blind.</p>
+        <p>Alternative text should be written in a descriptive, yet succinct manner. Think of how you might describe an image to a friend who is blind. For example:</p>
 
-        <p><strong>Note:</strong> Unless it is relevant to the image, intentionally including keywords in alternative text descriptions, for the sole benefit of SEO, is strongly discouraged. Websites are for people; not machines.</p>
+        <figure>
+
+          <img alt="" src="img/example-alt.jpg">
+
+          <figcaption>A little boy sitting on mother's lap. Both are smiling and wearing American paraphernalia.</figcaption>
+
+        </figure>
+
+        <p><strong>Note:</strong> Unless it is relevant to the image, intentionally including keywords in alternative text descriptions, for the sole benefit of SEO (Search Engine Optimization), is strongly discouraged. Websites are for people; not machines.</p>
 
       </div>
 
       <h3>Components and Multimedia: Basic Rules</h3>
 
       <ol>
-        <li>All form and interactive buttons must have a descriptive value. If text is not explicit in the design of such components, then you may use various methods to provide this information. For example, if a menu or search button has no visual value, you might need to do something like this: <code>&lt;button aria-label="Menu"&gt;&lt;/button&gt;</code></li>
+        <li>All web form and interactive buttons must have a descriptive value. If text is not explicit in the design of such components, then you may use various methods to provide this information. For example, if a menu or search button has no visual value, you might need to do the following to better describe the control: <code>&lt;button aria-label="Menu"&gt;&lt;/button&gt;</code></li>
         <li>Form inputs have associated text labels. Placeholder values <a class="new-tab" href="https://www.deque.com/blog/accessible-forms-the-problem-with-placeholders/">should not be used as a stand-in</a> for a proper label.</li>
         <li>Multimedia is identified via accessible text. For example: <code>&lt;video src="..." title="My Summer Vacation"&gt;...&lt;/video&gt;</code></li>
         <li>Inline frames (iframe) are appropriately titled and describe contents of frame. For example: <code>&lt;iframe src="..." title="Job Application Form"&gt;...&lt;/iframe&gt;</code></li>
@@ -123,7 +131,7 @@
 
       <h2>Test Procedure(s)</h2>
 
-      <p>Review page components and ensure that the aforementioned rules are met. You can use the following tools to review components in more depth:</p>
+      <p>Review page components and ensure that the aforementioned rules are met. You can run the following tests to review components in more depth:</p>
 
       <ul>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/aria.js">ARIA</button></li>
@@ -205,7 +213,7 @@
 
       <ul>
         <li>Manually ensure that color is not used as the sole method of conveying content or distinguishing visual elements. For example, saying "Please correct all text highlighted in red", would be a failure.</li>
-        <li>Ensure that hyperlinks meet a <strong>3:1</strong> color contrast ratio between its own color and surrounding text, particularly if no underline is present. If no underline is present, an additional distinction must be provided when the link is hovered on or receives focus.</li>
+        <li>Ensure that hyperlinks meet a <strong>3:1</strong> color contrast ratio between its own color and surrounding text color and background color, particularly if no underline is present. If no underline is present, an additional distinction must be provided when the link is hovered on or receives focus.</li>
         <li>Test the interface under various color-blindness simulations to see if there are any potential contrast issue:
 
           <ul>
@@ -299,7 +307,7 @@
         <li>Tab through and engage with interactive components on the page. Anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard.</li>
         <li>Ensure that interactive components  on the page, such as buttons, can be used with both the Enter and Spacebar keys.</li>
         <li>See where focus is brought when certain components are engaged with. For example, what happens when a button is clicked on and a modal window is shown? Will continuing to tab take you behind the modal or within the modal itself?</li>
-        <li>Does keyboard focus become trapped within any portion of the interface? On modals, this may be acceptable behavior, but in other scenarios it could be a keyboard trap.</li>
+        <li>Does keyboard focus become trapped within any portion of the interface? On modals, this is acceptable behavior, but in other scenarios it could be a keyboard trap.</li>
       </ul>
 
       <p><strong>Note:</strong> If focus outlines have been suppressed (which is also a failure), you can <button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">force focus</button> on the page to see where you are navigating.</p>
@@ -407,14 +415,14 @@
               <ul>
                 <li><button aria-describedby="validate-dom" class="new-tab" data-script="https://radancy.dev/a11y/extension/local/dom-validate.js">Validate Serialized DOM</button>
 
-                  - <span id="validate-dom">Runs validation on entire DOM, including script based content and features.</span>
+                  - <span id="validate-dom">Runs validation on entire DOM, including script generated content and enhancements.</span>
 
                 </li>
                 <li>
 
                   <button aria-describedby="wcag-parsing" data-script="https://radancy.dev/a11y/extension/local/wcag-parsing.js">WCAG Parsing</button>
 
-                  - <span id="wcag-parsing">Not all errors may affect accessibility. Run on W3C Validator results page to remove non-WCAG issues.</span>
+                  - <span id="wcag-parsing">Not all errors may affect accessibility. Run this on the W3C Validator results page to remove non-WCAG issues.</span>
 
                 </li>
               </ul>
@@ -617,8 +625,8 @@
 
       <ul>
         <li><button data-script="https://www.ssa.gov/accessibility/andi/andi.js">ANDI</button></li>
-        <li><button data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
         <li><button data-script="https://rawgit.com/pauljadam/bookmarklets/master/axe.js">aXe Results</button></li>
+        <li><button data-script="https://khan.github.io/tota11y/dist/tota11y.min.js">Tota11y</button></li>
       </ul>
 
       <h2>Screen Readers</h2>

@@ -16,9 +16,10 @@
 
 // Variables
 
-$primary-color: #6F00EF;
+$highlight-color: #6F00EF;
 
 a, button {
+font: inherit;
 
   &.new-tab {
   word-wrap: break-word;
@@ -130,19 +131,23 @@ margin: 0 0 1em;
 
 }
 
+h3 {
+color: $highlight-color;
+}
+
 h2 {
 font-size: 1.2rem;
 }
 
 h3 {
-font-size: 1.1rem;
+font-size: 1rem;
 }
 
 main {
 font-size: .9rem;
 }
 
-ul, p {
+p, ul {
 
   button {
   background-color: transparent;
@@ -170,6 +175,24 @@ ul, p {
 
 }
 
+ul, ol {
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+.a11y-info {
+margin-bottom: 2em;
+
+  figcaption {
+  color: #000;
+  }
+
+  img {
+  border: 1px #000 solid;
+  }
+
+}
+
 .btn {
 background-position: center;
 background-repeat: no-repeat;
@@ -179,7 +202,6 @@ min-width: 265px;
 }
 
 .disclosure--btn {
-font-family: inherit;
 margin: 4px 0;
 }
 
@@ -193,11 +215,10 @@ min-width: 600px;
 }
 
 .heading-small {
-color: $primary-color;
+color: $highlight-color;
 font-size: .9rem;
-margin: 0 0 1em;
+margin: 0 0 2em;
 padding: 0;
-text-indent: 52px;
 }
 
 .reset {
@@ -230,7 +251,7 @@ width: 40px;
     }
 
     .loading {
-    color: $primary-color;
+    color: $highlight-color;
     }
 
     h2, ol, .failure, .details, .stats {

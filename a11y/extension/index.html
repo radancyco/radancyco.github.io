@@ -70,16 +70,27 @@
 
       <p>Provide text alternatives for non-text content. Typically, this involves multimedia (images, video), and interactive components (controls, inputs). <a class="new-tab" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content">Understanding 1.1.1</a></p>
 
+      <h3>Images: Know the Differnce</h2>
+
+      <p>Images typically fall into one of two categories: Decorative and Informative. It is very important to understand the difference between these two image types in order to make a more informed decision.</p>
+
+      <ul>
+        <li><strong>Decorative:</strong> Images of a non-important nature. For example, icons or other visual embellishments. If a page can be understood without these images, then an alternative text value is not required.</li>
+        <li><strong>Informative:</strong> Images of an important nature. These are often images that provide value to the surrounding content. If a page can't be understood or experienced in a similar way to the visual experience, then an alternative text value is required.</li>
+      </ul>
+
       <h3>Images: Basic Rules</h3>
 
       <ol>
-        <li>All images require an alt attribute, whether they are informative or decorative. For example: <code>&lt;img alt="" src="..."&gt;</code></li>
-        <li>If image is informative or contextually important to surrounding content, then it should include an alternative text value.</li>
-        <li>If image contains text, then it must include an alternative text value. Typically verbatim, to match what is presented in image.</li>
-        <li>If image is purely decorative, then it rquires no alternative text value.</li>
+        <li>All images require an alt attribute, whether they are informative or decorative. For example: <code>&lt;img alt="" src="..."&gt;</code>. An image with no alt attribute value is known as a "null alt".</li>
+        <li>If image is informative or contextually important to surrounding content, then it must include an alternative text value.</li>
+        <li>If image is meant to invoke a feeling or emotion, then it should contain an alternative text value.</li>
+        <li>If image contains text, then it must include an alternative text value. Typically verbatim, to match what is embedded in image.</li>
+        <li>If image is purely decorative, then it requires no alternative text value.</li>
         <li>If image is contained within a hyperlink or button, then it <em>must</em> contain <em>functional</em> alternative text. For example: <code>&lt;a href="..."&gt;&lt;img alt="My Awesome Vacation (Video)" src="..."&gt;&lt;/a&gt;</code>.</li>
-        <li>If image within hyperlink or button contains adjacent or nearby text, then the previous rule can often be ignored. For example: <code>&lt;a href="..."&gt;&lt;img alt="" src="..."&gt; &lt;span&gt;My Awesome Vacation (Video)&lt;/span&gt;&lt;/a&gt;</code></li>
+        <li>If image within hyperlink or button contains adjacent or nearby text, then the previous rule can be ignored. For example: <code>&lt;a href="..."&gt;&lt;img alt="" src="..."&gt; &lt;span&gt;My Awesome Vacation (Video)&lt;/span&gt;&lt;/a&gt;</code></li>
         <li>In all cases where an alternative text description is deemed necessary, avoid phrases like "Image of ..." or "Picture of ..." as these are redundant to assistive technology (AT) users.</li>
+        <li>If image is deemed informative and is found to be a background image, alternaive techniques must be taken to ensure that this information is conveyed to AT users. Here it may be easier to simply use an inline image instead.</li>
       </ol>
 
       <h2>Test Procedure(s)</h2>
@@ -95,16 +106,16 @@
 
         <h2>Accessibility Tip</h2>
 
-        <p>Alternative text should be written in a descriptive, but succinct manner. Think of how you might describe the image to a friend who is blind.</p>
+        <p>Alternative text should be written in a descriptive, yet succinct manner. Think of how you might describe the image to a friend who is blind.</p>
 
-        <p><strong>Note:</strong> Unless it is relevant to the image, intentionally including keywords in alternative text descriptions, for the benefit of SEO, is strongly discouraged. Websites are for people; not machines.</p>
+        <p><strong>Note:</strong> Unless it is relevant to the image, intentionally including keywords in alternative text descriptions, for the sole benefit of SEO, is strongly discouraged. Websites are for people; not machines.</p>
 
       </div>
 
       <h3>Components and Multimedia: Basic Rules</h3>
 
       <ol>
-        <li>All form and interactive buttons must have a descriptive value. If text is not explicit in the design of such components, then you may use various methods to provide this information. For example: <code>&lt;button aria-label="Menu"&gt;&lt;/button&gt;</code></li>
+        <li>All form and interactive buttons must have a descriptive value. If text is not explicit in the design of such components, then you may use various methods to provide this information. For example, if a menu or search button has no visual value, you might need to do something like this: <code>&lt;button aria-label="Menu"&gt;&lt;/button&gt;</code></li>
         <li>Form inputs have associated text labels. Placeholder values <a class="new-tab" href="https://www.deque.com/blog/accessible-forms-the-problem-with-placeholders/">should not be used as a stand-in</a> for a proper label.</li>
         <li>Multimedia is identified via accessible text. For example: <code>&lt;video src="..." title="My Summer Vacation"&gt;...&lt;/video&gt;</code></li>
         <li>Inline frames (iframe) are appropriately titled and describe contents of frame. For example: <code>&lt;iframe src="..." title="Job Application Form"&gt;...&lt;/iframe&gt;</code></li>

@@ -213,7 +213,7 @@
 
       <ul>
         <li>Manually ensure that color is not used as the sole method of conveying content or distinguishing visual elements. For example, saying "Please correct all text highlighted in red", would be a failure.</li>
-        <li>Ensure that hyperlinks meet a <strong>3:1</strong> color contrast ratio between its own color and surrounding text color and background color, particularly if no underline is present. If no underline is present, an additional distinction must be provided when the link is hovered on or receives focus.</li>
+        <li>Ensure that hyperlinks meet a <strong>3:1</strong> color contrast ratio between its own color and surrounding text color and background color, particularly if no underline is present. If no underline is present, an additional distinction must be provided when the link is hovered on or receives focus. Hyperlinks in the header and footer are typically distinct enough for this rule to be ignored here and generally only applies to links in blocks of text within the main content, but be mindful.</li>
         <li>Test the interface under various color-blindness simulations to see if there are any potential contrast issue:
 
           <ul>
@@ -305,9 +305,10 @@
 
       <ul>
         <li>Tab through and engage with interactive components on the page. Anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard.</li>
-        <li>Ensure that interactive components  on the page, such as buttons, can be used with both the Enter and Spacebar keys.</li>
-        <li>See where focus is brought when certain components are engaged with. For example, what happens when a button is clicked on and a modal window is shown? Will continuing to tab take you behind the modal or within the modal itself?</li>
-        <li>Does keyboard focus become trapped within any portion of the interface? On modals, this is acceptable behavior, but in other scenarios it could be a keyboard trap.</li>
+        <li>Ensure that interactive components on the page work when accessed with Enter key. Buttons will be expected to work with both the Enter and Spacebar keys.</li>
+        <li>See where focus is brought when certain components are engaged with. For example, what happens when a button is accessed and a modal window is shown? Will continuing to tab take you behind the modal or within the modal itself?</li>
+        <li>Does keyboard focus become trapped within any portion of the interface while tabbing? In modal windows, this is acceptable behavior, but in other scenarios it could be a keyboard trap.</li>
+        <li>Non-interactive elements, such as a <code>div</code>, should not receive keyboard focus while tabbing.<li>
       </ul>
 
       <p><strong>Note:</strong> If focus outlines have been suppressed (which is also a failure), you can <button data-script="https://rawgit.com/pauljadam/bookmarklets/master/focus.js">force focus</button> on the page to see where you are navigating.</p>

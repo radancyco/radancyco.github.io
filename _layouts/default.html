@@ -6,7 +6,8 @@
     <meta content="noindex, nofollow" name="robots">{% endif %}
     <meta content="{{ site.theme-color }}" name="theme-color">
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.slick %}
-    <link href="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">{% endif %}{% if page.localcss %}
+    <link href="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">{% endif %}{% if page.externalcss %}
+    <link href="{{ page.externalcss }}" rel="stylesheet">{% endif %}{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}
     <link href="{{ site.git-url }}/favicon.ico" rel="icon">
     <link href="{{ site.git-url }}/manifest.json" rel="manifest">
@@ -28,6 +29,8 @@
       {% if page.title %}
 
       <h1 class="primary-heading">{{ page.title }}</h1>
+
+      <p class="alert"><strong>Warning:</strong> Circumventing limitations present within a pattern is strongly discouraged. If you run into any issues or require a new feature, please <a href="http://jira.tmp.com/browse/TCDQ-62785">add a comment</a> to already opened ticket. The Pattern Library Team (PLT) will not be responsible for any issues that are created due to workarounds during implementation.</p>
 
       {% endif %}
 
@@ -75,7 +78,8 @@
   {% if page.jquery != false %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>{% endif %}{% if page.slick %}
   <script src="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.js"></script>{% endif %}
-  <script src="{{ site.git-url }}/js/init.js"></script>{% if page.localjs %}
+  <script src="{{ site.git-url }}/js/init.js"></script>{% if page.externaljs %}
+  <script src="{{ page.externaljs }}"></script>{% endif %}{% if page.localjs %}
   <script src="{{ page.localjs }}"></script>{% endif %}
 
 </body>

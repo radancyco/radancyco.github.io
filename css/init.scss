@@ -274,6 +274,28 @@ text-decoration: none;
 text-transform: uppercase;
 }
 
+.inline-list {
+list-style: none;
+margin: 0;
+padding: 0;
+
+  li {
+
+    @media(min-width: 680px) {
+
+      display: inline-block;
+
+    }
+
+    .btn {
+    width: 100%;
+    margin: 0 1em 1em 0;
+    }
+
+  }
+
+}
+
 .new-window {
 display: block;
 text-align: right;

@@ -207,6 +207,31 @@ width: 100%;
 
 .a11y-info {
 background-color: #40E8D4;
+
+  h2 {
+
+    &::before {
+    background-image: url(/img/a11y-white-alt.png);
+    }
+
+  }
+
+}
+
+.qa-info {
+background-color: #02cbff;
+
+  h2 {
+
+    &::before {
+    background-image: url(/img/qa-chart.png);
+    }
+
+  }
+
+}
+
+.a11y-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;
 color: #000;
@@ -220,7 +245,6 @@ padding: .5em 1em;
   h2 {
 
     &::before {
-    background-image: url(/img/a11y-white-alt.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

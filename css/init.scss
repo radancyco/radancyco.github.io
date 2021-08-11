@@ -218,6 +218,19 @@ background-color: #40E8D4;
 
 }
 
+.resource-info {
+background-color: #ff6600;
+
+  h2 {
+
+    &::before {
+    background-image: url(/img/resource-info.png);
+    }
+
+  }
+
+}
+
 .qa-info {
 background-color: #02cbff;
 
@@ -231,14 +244,14 @@ background-color: #02cbff;
 
 }
 
-.a11y-info, .qa-info {
+.a11y-info, .resource-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;
 color: #000;
 margin: 1em 0;
 padding: .5em 1em;
 
-  a {
+  a, button, h3 {
   color: inherit;
   }
 

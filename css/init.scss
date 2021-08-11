@@ -213,6 +213,7 @@ color: #000;
 
     &::before {
     background-image: url(/img/a11y-white-alt.png);
+    filter: brightness(0);
     }
 
   }
@@ -273,7 +274,6 @@ padding: .5em 1em;
     background-size: contain;
     content: "";
     display: inline-block;
-    filter: brightness(0);
     height: 50px;
     margin-right: .5em;
     vertical-align: middle;

@@ -207,6 +207,7 @@ width: 100%;
 
 .a11y-info {
 background-color: #40E8D4;
+color: #000;
 
   h2 {
 
@@ -220,11 +221,20 @@ background-color: #40E8D4;
 
 .resource-info {
 background-color: #ff6600;
+color: #fff
 
   h2 {
 
     &::before {
-    background-image: url(/img/resource-info.png);
+    background-image: url(/img/resource-info-alt.png);
+    }
+
+  }
+
+  .new-tab {
+
+    &:after {
+    filter: brightness(100);
     }
 
   }
@@ -233,6 +243,7 @@ background-color: #ff6600;
 
 .qa-info {
 background-color: #02cbff;
+color: #000;
 
   h2 {
 
@@ -247,7 +258,6 @@ background-color: #02cbff;
 .a11y-info, .resource-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;
-color: #000;
 margin: 1em 0;
 padding: .5em 1em;
 

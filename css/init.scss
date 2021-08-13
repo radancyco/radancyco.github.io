@@ -220,7 +220,7 @@ width: 100%;
 background-color: #40E8D4;
 color: #000;
 
-  h2 {
+  h2:first-child {
 
     &::before {
     background-image: url(/img/a11y-white-alt.png);
@@ -234,7 +234,7 @@ color: #000;
 .resource-info {
 background-color: #f8924d;
 
-  h2 {
+  h2:first-child {
 
     &::before {
     background-image: url(/img/resource-info.png);
@@ -247,7 +247,7 @@ background-color: #f8924d;
 .qa-info {
 background-color: #73e0fc;
 
-  h2 {
+  h2:first-child {
 
     &::before {
     background-image: url(/img/qa-chart.png);
@@ -264,11 +264,11 @@ color: #000;
 margin: 1em 0;
 padding: .5em 1em;
 
-  a, button, h3 {
+  a, button {
   color: inherit;
   }
 
-  h2 {
+  h2:first-child {
 
     &::before {
     background-position: center;

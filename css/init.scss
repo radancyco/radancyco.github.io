@@ -107,14 +107,23 @@ margin: 0;
 padding: 1em;
 }
 
-code {
-background-color: #666;
+code, kbd {
 border-radius: 4px;
-color: white;
 display: inline-block;
 margin: 2px;
 padding: .2em 1em;
 word-wrap: break-word;
+}
+
+code {
+background-color: #666;
+color: #fff;
+}
+
+kbd {
+background-color: #ccc;
+color: #000;
+outline: 1px dotted black
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {

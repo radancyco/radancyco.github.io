@@ -231,6 +231,19 @@ color: #000;
 
 }
 
+.reminder-info {
+background-color: ##f3b912;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url(/img/reminder-info.png);
+    }
+
+  }
+
+}
+
 .resource-info {
 background-color: #f8924d;
 

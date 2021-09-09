@@ -84,7 +84,7 @@ font-size: 1.2rem;
 
 a {
 
-  &.external {
+  &.external, &[target="_blank"] {
   background: transparent url(data:image/gif;base64,R0lGODlhCgAKAJECAP///5mZmQAAAAAAACH5BAEAAAIALAAAAAAKAAoAAAIalIMZJgH/1gGJqugQpFzH7TlWJVJMGZ0KwhQAOw==)center right no-repeat;
   padding-right: 14px;
 

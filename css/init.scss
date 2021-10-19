@@ -14,6 +14,7 @@
 */
 
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+@import url("https://radancy.dev/pattern-library/disclosure/init.css");
 
 $weight-thin: 100 !default; // Thin (Hairline)
 $weight-extra-thin: 200 !default; // Extra Light (Ultra Light)
@@ -252,6 +253,23 @@ color: #000;
 
   }
 
+}
+
+.disclosure--btn {
+border-radius: 5px;
+margin: 4px 0;
+
+  &[aria-expanded="true"] {
+  background-color: lightslategray;
+  }
+
+}
+
+.disclosure--content {
+border: 1px #cccccc solid;
+border-radius: 5px;
+margin: 4px 0;
+padding: 0 1em;
 }
 
 .reminder-info {

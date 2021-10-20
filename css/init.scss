@@ -159,6 +159,10 @@ h3 {
 color: $highlight-color;
 }
 
+h4 {
+font-weight: bold;
+}
+
 hr[aria-hidden="true"] {
 border: 0;
 border-bottom: 1px dashed $highlight-color;

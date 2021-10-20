@@ -470,9 +470,17 @@ width: 100%;
 #author {
 
   img {
-  border-radius: 50%;
-  border: 4px $highlight-color solid;
+  display: inline-block;
   width: 180px;
+  width: 90px;
+  margin: 0 1em 0 0;
+  vertical-align: middle;
+  border: 4px $highlight-color solid;
+  border-radius: 50%;
+  }
+
+  p {
+  display: inline-block;
   }
 
 }

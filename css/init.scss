@@ -254,6 +254,27 @@ sup {
 font-size: 8px;
 }
 
+table {
+
+  caption {
+  font-size: 1.6rem;
+  text-align: left;
+  margin-bottom: 1em;
+  }
+
+  th, td {
+  border: 1px darkblue solid;
+  padding: .8em;
+  }
+
+  th {
+  background-color: $highlight-color;
+  color: #000;
+  text-align: center;
+  }
+
+}
+
 video {
 height: auto;
 width: 100%;
@@ -450,6 +471,11 @@ overflow: hidden;
 position: absolute;
 white-space: nowrap;
 width: 1px;
+}
+
+.table-container {
+margin-bottom: 2em;
+overflow-X: auto;
 }
 
 .video-container {

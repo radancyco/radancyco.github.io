@@ -269,8 +269,12 @@ table {
 
   th {
   background-color: $highlight-color;
-  color: #000;
+  color: #fff;
   text-align: center;
+  }
+
+  td:first-child {
+  font-weight: bold;
   }
 
 }

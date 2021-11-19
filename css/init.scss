@@ -429,6 +429,11 @@ padding: .5em 1em;
 color: #d20000;
 font-style: italic;
 text-decoration: none;
+
+  a {
+  color: inherit;
+  }
+
 }
 
 .app-only {

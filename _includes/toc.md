@@ -1,4 +1,4 @@
-<details class="nav">
+<details id="toc" class="nav">
 
   <summary class="btn">Table of Contents</summary>
 

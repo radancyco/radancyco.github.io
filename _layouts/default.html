@@ -69,7 +69,8 @@
 
   </div>
   {% if page.jquery != false %}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>{% endif %}{% if page.slick %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>{% if page.disclosure %}
+  <script src="https://radancy.dev/pattern-library/disclosure/init.js"></script>{% endif %}{% if page.slick %}
   <script src="https://radancy.dev/lib/a11y-slick-1.0.1/slick.min.js"></script>{% endif %}
   <script src="{{ site.git-url }}/js/init.js"></script>{% if page.localjs %}
   <script src="{{ page.localjs }}"></script>{% endif %}

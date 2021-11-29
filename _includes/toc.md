@@ -1,8 +1,6 @@
-<nav id="toc">
+<details class="nav">
 
-  <details open>
-
-    <summary>Table of Contents</summary>
+  <summary class="btn">Table of Contents</summary>
 
 <div markdown="block">
 
@@ -11,6 +9,4 @@
 
 </div>
 
-  </details>
-
-</nav>
+</details>

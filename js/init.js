@@ -6,6 +6,8 @@ layout: null
 
 	document.getElementsByTagName("html")[0].className = "js";
 
+	var bodyId = document.getElementsByTagName("body")[0].id;
+
 	var sectionName = document.getElementsByTagName("body")[0].getAttribute("class");
 
 	var mainContent = document.getElementById("content");
@@ -149,22 +151,26 @@ layout: null
 
 	// Scroll Button
 
-	var disclosureButton = document.querySelectorAll(".disclosure--btn");
+	if(bodyId === "rad-baseline-index"){
 
-	disclosureButton.forEach(function(button, e){
+		var disclosureButton = document.querySelectorAll(".disclosure--btn");
 
-		button.addEventListener("click", function () {
+		disclosureButton.forEach(function(button, e){
 
-			window.scrollTo({
+			button.addEventListener("click", function () {
 
-				top: getOffset(this).top - 8
+				window.scrollTo({
+
+					top: getOffset(this).top - 8
+
+				});
+
+				window.location = "#" + this.id;
 
 			});
 
-			window.location = "#" + this.id;
-
 		});
 
-	});
+	}
 
 })();

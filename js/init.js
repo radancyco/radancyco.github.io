@@ -161,6 +161,10 @@ layout: null
 
 			});
 
+			//window.location = '#';
+
+			console.log(this.id);
+
 		});
 
 	});

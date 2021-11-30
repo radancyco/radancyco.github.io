@@ -224,8 +224,8 @@ display: none !important;
 textarea {
 display: block;
 margin: 0 auto 1em;
-padding: 1em;
-width: 100%;
+padding: 1em 2%;
+width: 96%;
 }
 
 pre {
@@ -537,6 +537,7 @@ width: 100%;
 
 #author {
 background-color: #eee;
+border: 1px #666 solid;
 border-radius: 10px;
 margin-top: 1em;
 padding: 1em;

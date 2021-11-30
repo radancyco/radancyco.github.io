@@ -161,7 +161,7 @@ layout: null
 
 				window.scrollTo({
 
-					top: getOffset(this).top - 8
+					top: getOffset(this).top - 16
 
 				});
 

@@ -124,6 +124,11 @@ color: #fff;
 details {
 margin: .5em 0;
 
+  summary:not(.btn) {
+  color: $highlight-color;
+  text-decoration: underline;
+  }
+
   nav {
   background-color: #efefef;
   border-radius: 10px;

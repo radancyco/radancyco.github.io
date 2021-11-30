@@ -161,9 +161,7 @@ layout: null
 
 			});
 
-			//window.location = '#';
-
-			console.log(this.id);
+			window.location = "#" + this.id;
 
 		});
 

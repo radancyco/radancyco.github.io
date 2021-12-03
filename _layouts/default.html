@@ -31,6 +31,12 @@
 
       {% endif %}
 
+      {% if page.warning %}
+
+      <p class="alert"><strong>Warning:</strong> Circumventing limitations present within a pattern is strongly discouraged. If you run into any issues or require a new feature, please <a href="http://jira.tmp.com/browse/TCDQ-62785">add a comment</a> to already opened ticket. The Pattern Library Team (PLT) will not be responsible for any issues that are created due to workarounds during implementation.</p>
+
+      {% endif %}
+
       {% if page.toc %}
 
       <details class="nav">

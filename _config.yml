@@ -13,7 +13,7 @@ exclude: [
 description: Our open design and development resource! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us!
 destination: _httpdocs
 highlighter: rouge
-lang: en-US
+lang: en
 markdown: kramdown
 name: Web Standards
 nickname: RadDev

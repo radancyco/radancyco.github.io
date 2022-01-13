@@ -353,46 +353,7 @@ margin: 4px 0;
 padding: 0 1em;
 }
 
-.reminder-info {
-background-color: #f5cd01;
-
-  h2:first-child {
-
-    &::before {
-    background-image: url(/img/reminder-info.png);
-    }
-
-  }
-
-}
-
-.resource-info {
-background-color: #f8924d;
-
-  h2:first-child {
-
-    &::before {
-    background-image: url(/img/resource-info.png);
-    }
-
-  }
-
-}
-
-.qa-info {
-background-color: #dfc9f8;
-
-  h2:first-child {
-
-    &::before {
-    background-image: url(/img/qa-chart.png);
-    }
-
-  }
-
-}
-
-.a11y-info, .resource-info, .qa-info, .reminder-info {
+.a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;
 color: #000;
@@ -425,6 +386,59 @@ padding: .5em 1em;
 
   .alert {
   color: inherit;
+  }
+
+}
+
+.reminder-info {
+background-color: #f5cd01;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url(/img/reminder-info.png);
+    }
+
+  }
+
+}
+
+.resource-info {
+background-color: #f8924d;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url(/img/resource-info.png);
+    }
+
+  }
+
+}
+
+.warning-info {
+background-color: ##dda1a1;
+border-color: red;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url(/img/warning-info.png);
+    }
+
+  }
+
+}
+
+.qa-info {
+background-color: #dfc9f8;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url(/img/qa-chart.png);
+    }
+
   }
 
 }

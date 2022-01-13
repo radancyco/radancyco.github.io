@@ -288,21 +288,6 @@ height: auto;
 width: 100%;
 }
 
-.a11y-info {
-background-color: #40E8D4;
-color: #000;
-
-  h2:first-child {
-
-    &::before {
-    background-image: url(/img/a11y-white-alt.png);
-    filter: brightness(0);
-    }
-
-  }
-
-}
-
 .bug {
 border-radius: 5px;
 border: 1px #000 solid;
@@ -390,13 +375,28 @@ padding: .5em 1em;
 
 }
 
+.a11y-info {
+background-color: #40E8D4;
+color: #000;
+
+  h2:first-child {
+
+    &::before {
+    background-image: url("/img/a11y-white-alt.png");
+    filter: brightness(0);
+    }
+
+  }
+
+}
+
 .reminder-info {
 background-color: #f5cd01;
 
   h2:first-child {
 
     &::before {
-    background-image: url(/img/reminder-info.png);
+    background-image: url("/img/reminder-info.png");
     }
 
   }
@@ -409,7 +409,7 @@ background-color: #f8924d;
   h2:first-child {
 
     &::before {
-    background-image: url(/img/resource-info.png);
+    background-image: url("/img/resource-info.png");
     }
 
   }
@@ -423,7 +423,7 @@ border-color: red;
   h2:first-child {
 
     &::before {
-    background-image: url(/img/warning-info.png);
+    background-image: url("/img/warning-info.png");
     }
 
   }
@@ -436,7 +436,7 @@ background-color: #dfc9f8;
   h2:first-child {
 
     &::before {
-    background-image: url(/img/qa-chart.png);
+    background-image: url("/img/qa-chart.png");
     }
 
   }

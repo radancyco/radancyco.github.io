@@ -191,7 +191,7 @@ max-width: 100%;
 height: auto;
 }
 
-input, select, textarea, button {
+input, textarea, button {
 -webkit-appearance: none;
 -moz-appearance: none;
 appearnace: none;
@@ -201,7 +201,7 @@ input, button {
 transition: all 0.1s linear;
 }
 
-input:not([type="checkbox"]), select, button {
+input:not([type="checkbox"]), button {
 border-radius: 0;
 box-sizing: border-box;
 line-height: normal;

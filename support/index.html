@@ -10,8 +10,34 @@ layout: null
 color: #000;
 }
 
+#rad-syndicate .visually-hidden:not(:focus):not(:active) {
+clip: rect(0 0 0 0);
+clip-path: inset(50%);
+height: 1px;
+overflow: hidden;
+position: absolute;
+white-space: nowrap;
+width: 1px;
+}
+
 #rad-syndicate h2, #rad-syndicate h3 {
 font-weight: 600;
+position: relative;
+padding-left: 1em;
+}
+
+#rad-syndicate h2 a, #rad-syndicate h3 a {
+position: absolute;
+left: 0;
+color: #000;
+}
+
+#rad-syndicate h2 a:hover, #rad-syndicate h3 a:hover, #rad-syndicate h2 a:focus, #rad-syndicate h3 a:focus {
+text-decoration: underlined
+}
+
+#rad-syndicate h2 span[aria-hidden], #rad-syndicate h3 span[aria-hidden] {
+display: inline-block;
 }
 
 #rad-syndicate a {
@@ -30,19 +56,25 @@ margin-bottom: 3em;
 
 </style>
 
-<p class="effective-date">Last updated <time>November 4, 2021</time></p>
+<p class="effective-date">Last updated <time>April 1, 2022</time></p>
 
-<h2 id="web-standards">Web Standards</h2>
+<h2 id="web-standards">Web Standards <a href="#web-standards"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>Our design and development methodologies adhere to standards and guidelines proposed by the <a href="https://www.w3c.org/" data-custom-event="true" data-custom-category="custom event" data-custom-label="W3C">W3C (World Wide Web Consortium)</a> and best practices found within the design and development community. By using the most modern and inclusive techniques available, {{ site.company-name }} can craft an experience that is both engaging and accessible to all users.</p>
 
 <p>To learn more about our <a href="https://radancy.dev">design and development standards</a>, please visit us on GitHub.</p>
 
-<h2 id="accessibility">Accessibility</h2>
+<h2 id="accessibility">Accessibility <a href="#accessibility"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>At {{ site.company-name }}, we believe that all of your prospective job candidates, regardless of physical, mental or technological capabilities, have a right to learn more about your company and access all job listings. To preserve an individual’s right to universal access, <a href="https://radancy.dev/a11y/baseline/">we attempt to meet</a> as much of <strong>WCAG (Web Content and Accessibility Guidelines) 2.1 Level A and AA</strong> as possible, within our everyday process. However, if there is a need to fully support a specific level of WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
 
-<h2 id="operating-system-support">Operating System Support</h2>
+<h3 id="accessibility-overlay">A Note on Accessibility Overlays <a href="#accessibility-overlays"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h3>
+
+<p>Accessibility overlays are <em>strongly discouraged</em> and not in line with Radancy's vision on how best to support people with disabilities in our digital offerings. In our experience, use of these tools may promote ableism, reinforce discrimination and are often perceived, particularly among the disabled and advocacy communities, as a performative commitment to accessibility. Companies using overlays have frequently been subjected to legal actions based on non-compliance with accessibility laws and principles. Upon request, we are happy to share materials addressing the challenges faced by users of overlays.</p>
+
+<p>If you would like to discuss this issue, along with more proactive, friendly, and sustainable ways to make your careers site accessible to everybody, please reach out to your account representative.</p>
+
+<h2 id="operating-system-support">Operating System Support <a href="#operating-system-support"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>{{ site.company-name }} supports applications on the following operating systems only:</p>
 
@@ -57,7 +89,7 @@ margin-bottom: 3em;
   <li>Android 9.x</li>
 </ul>
 
-<h2 id="browser-support">Browser Support</h2>
+<h2 id="browser-support">Browser Support <a href="#browser-support"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>{{ site.company-name }} supports the <strong>current</strong> and <strong>prior major</strong> release versions of all major browsers. Corresponding to the date on which your project has launched, we test all work in the following:</p>
 
@@ -72,7 +104,7 @@ margin-bottom: 3em;
 
 <p>We do not, as a matter of course, support browsers that are not listed within this document. Should your users or company's browser needs differ, please consult your account representative immediately.</p>
 
-<h2 id="email-support">Email Support</h2>
+<h2 id="email-support">Email Support <a href="#email-support"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>Corresponding to the date on which your project has launched and due to the vast technical differences in email client software, we test all text and HTML based emails in the following primary email client:</p>
 
@@ -88,13 +120,14 @@ margin-bottom: 3em;
   <li><strong>Gmail Android</strong> (Upon Request Only) [Not all designs can be built responsively]</li>
 </ul>
 
-<h2 id="modified-browsers">Modified Browsers</h2>
+<h2 id="modified-browsers">Modified Browsers <a href="#modified-browsers"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h2>
 
 <p>Please note that we do not support browsers that have been modified, run in compatibility mode, or remove code via proxy filtering that is required for the normal operation of your site.</p>
 
-<h3 id="update-log">Update Log</h3>
+<h3 id="update-log">Update Log <a href="#update-log"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h3>
 
 <ul>
+  <li><b>April 1, 2022</b> - Added note on Accessibility Overlays.</li>
   <li><b>November 4, 2021</b> - Internet Explorer 11 removed from support.</li>
   <li><b>April 21, 2021</b> - Windows 8/8.1 now only supported by request.</li>
   <li><b>March 1, 2021</b> - iOS 14.x added and iOS 12.x removed from <a href="#operating-system-support">Operating System Support</a>.</li>

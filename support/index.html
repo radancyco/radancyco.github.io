@@ -20,24 +20,31 @@ white-space: nowrap;
 width: 1px;
 }
 
-#rad-syndicate section {
+#rad-syndicate sectionm #rad-syndicate aside {
 border-radius: 10px;
 padding: 1em;
+border: 2px transparent solid;
 }
 
-#rad-syndicate section:target {
+#rad-syndicate section:target, #rad-syndicate aside:target {
 background-color: #eee;
 }
 
 #rad-syndicate aside {
-padding-left: 2em;
+margin-left: 1em;
+}
+
+#rad-syndicate aside.warning:target {
+background-color: #dda1a1;
+border-color: red;
 }
 
 #rad-syndicate h2, #rad-syndicate h3 {
 font-weight: 600;
 position: relative;
 padding-left: 1em;
-margin: 1em 0 1em;
+margin: 0 0 1em;
+line-height: normal;
 }
 
 #rad-syndicate h2 a, #rad-syndicate h3 a {
@@ -88,7 +95,7 @@ margin-bottom: 3em;
 
   <p>At {{ site.company-name }}, we believe that all of your prospective job candidates, regardless of physical, mental or technological capabilities, have a right to learn more about your company and access all job listings. To preserve an individual’s right to universal access, <a href="https://radancy.dev/a11y/baseline/">we attempt to meet</a> as much of <strong>WCAG (Web Content and Accessibility Guidelines) 2.1 Level A and AA</strong> as possible, within our everyday process. However, if there is a need to fully support a specific level of WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
 
-  <aside id="accessibility-overlay">
+  <aside id="accessibility-overlay" class="warning">
 
     <h3>A Note on Accessibility Overlays <a href="#accessibility-overlays"><span aria-hidden="true">#</span><span class="visually-hidden">Anchor</span></a></h3>
 
@@ -98,7 +105,7 @@ margin-bottom: 3em;
 
   </aside>
 
-<section>
+</section>
 
 <section id="operating-system-support">
 

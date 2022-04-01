@@ -51,7 +51,9 @@ layout: null
 
       var hash = location.hash;
 
-      hash.scrollIntoView({
+      console.log(hash);
+
+      document.getElementById(hash).scrollIntoView({
 
         behavior: "smooth"
 

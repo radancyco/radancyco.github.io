@@ -41,6 +41,14 @@ layout: null
 
   request.send();
 
+  if(window.location.hash) {
+
+    var hash = window.location.hash;
+
+    hash.scrollIntoView();
+
+  }
+
 })();
 
 // Example Usage

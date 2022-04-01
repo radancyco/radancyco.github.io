@@ -53,7 +53,7 @@ layout: null
 
       document.getElementById(hash).scrollIntoView();
 
-    }, 250);
+    }, 300);
 
   }
 

@@ -41,11 +41,23 @@ layout: null
 
   request.send();
 
-  if(window.location.hash) {
+  // Scroll to ID
 
-    var hash = window.location.hash;
+  if (location.hash) {
 
-    hash.scrollIntoView();
+    setTimeout(function() {
+
+      window.scrollTo(0, 0);
+
+      var hash = location.hash;
+
+      hash.scrollIntoView({
+
+        behavior: "smooth"
+
+      });
+
+    }, 300);
 
   }
 

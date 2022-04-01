@@ -47,19 +47,13 @@ layout: null
 
     setTimeout(function() {
 
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0); // Kill default scroll
 
       var hash = location.hash.replace("#", "");
 
-      console.log(hash)
+      document.getElementById(hash).scrollIntoView();
 
-      document.getElementById(hash).scrollIntoView({
-
-        behavior: "smooth"
-
-      });
-
-    }, 300);
+    }, 250);
 
   }
 

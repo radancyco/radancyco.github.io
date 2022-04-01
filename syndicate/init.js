@@ -49,9 +49,9 @@ layout: null
 
       window.scrollTo(0, 0);
 
-      var hash = location.hash;
+      var hash = location.hash.replace("#", "");
 
-      console.log(hash);
+      console.log(hash)
 
       document.getElementById(hash).scrollIntoView({
 

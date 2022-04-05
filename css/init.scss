@@ -522,6 +522,17 @@ margin-bottom: 3em;
 
 }
 
+.pass {
+color: green;
+font-style: italic;
+text-decoration: none;
+
+  a {
+  color: inherit;
+  }
+
+}
+
 .sr-only:not(:focus):not(:active) {
 clip-path: inset(100%);
 clip: rect(0 0 0 0);

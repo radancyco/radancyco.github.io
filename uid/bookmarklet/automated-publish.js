@@ -4,7 +4,9 @@ function submitPage() {
 
   if($('.publish-table :checkbox').length) {
 
-    console.log('%c Publishing Pages...', 'background: #6e00ee; color: #fff');
+    var n = $('.publish-table :checkbox').length;
+
+    console.log('%c Publishing. There are ' + n + ' pages to go.', 'background: #6e00ee; color: #fff');
 
     $('.publish-table :checkbox:lt(10)').prop('checked', true);
     $('.admin-ajax-submit').removeAttr('disabled').submit();

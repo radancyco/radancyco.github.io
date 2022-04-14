@@ -15,6 +15,8 @@ function submitPage() {
 
     console.log('%c Finished publishing! Be sure to publish Sass and JavaScript manually.', 'background: #009e60; color: #fff');
 
+    return;
+
   }
 
 }

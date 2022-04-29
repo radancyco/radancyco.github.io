@@ -160,7 +160,7 @@ All third-party libraries should be minified unless some sort of customization h
 * Place the `id` and `class` attributes first, respectively, within an opening tag.
     * E.g. `<a id="foo" class="bar baz" href="#quux" ...>...</a>`.
 * Do not use trailing slashes in self-closing elements.
-    * E.g. `<img src="...">` instead of `<img src="..." >`, `<br>` rather than `<br>`, and `<hr>` instead of `<hr>`.
+    * E.g. `<img src="...">` instead of `<img src="..." />`, `<br>` rather than `<br />`, and `<hr>` instead of `<hr />`.
 * Boolean attributes don't require a value, so don't set one.
     * E.g. `<input type="text" required>`.
 * Avoid writing closing tag comments.

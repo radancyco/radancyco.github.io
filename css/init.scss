@@ -458,7 +458,7 @@ text-decoration: none;
 }
 
 .app-only {
-display: none;
+display: none !important;
 
   @media(display-mode: minimal-ui) {
 

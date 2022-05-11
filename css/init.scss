@@ -323,56 +323,6 @@ padding: .5em 2em;
 
 }
 
-.carousel-scroll {
-position: relative;
-border-right: 4px $highlight-color solid;
-
-  &__container {
-  display: flex;
-  overflow-x: scroll;
-  padding: 2em 0;
-  scrollbar-color: $highlight-color #fff;
-  scrollbar-gutter: always;
-  -webkit-overflow-scrolling: touch;
-
-      &::-webkit-scrollbar {
-      height: 4px;
-      }
-
-      /* Track */
-      &::-webkit-scrollbar-track {
-      background-color: #fff;
-      }
-
-      &::-webkit-scrollbar-thumb {
-      background-color: highlight-color;
-      }
-
-  }
-
-  &__card {
-  background-color: #fff;
-  border: 1px #eee solid;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  min-height: 350px;
-  min-width: 300px;
-  padding: 1em;
-  position: relative;
-  transition: .6s;
-
-    &:not(:first-child) {
-    box-shadow: -2rem 0 3rem -2rem #000;
-    margin-left: -100px;
-    }
-
-    &:hover, &:focus, &:focus-within {
-    margin-right: 110px;
-    }
-
-  }
-
 .disclosure--btn {
 border-radius: 5px;
 font-size: inherit;

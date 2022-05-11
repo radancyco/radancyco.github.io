@@ -23,17 +23,21 @@
 
     </header>
 
-    <main id="content">
+    <main{% if page.constrain != false %} id="content"{% endif %}>
 
       {% if page.title %}
+
+      {% if page.heading != false %}
 
       <h1 class="primary-heading">{{ page.title }}</h1>
 
       {% endif %}
 
+      {% endif %}
+
       {% if page.warning %}
 
-      <p class="alert"><strong>Warning:</strong> Circumventing limitations present within a pattern is strongly discouraged. If you run into any issues or require a new feature, please <a href="http://jira.tmp.com/browse/TCDQ-62785">add a comment</a> to already opened ticket. The Pattern Library Team (PLT) will not be responsible for any issues that are created due to workarounds during implementation.</p>
+      <p class="alert"><strong>Warning:</strong> Circumventing limitations present within a pattern is strongly discouraged. If you run into any issues or require a new feature, please <a href="http://jira.tmp.com/browse/{{ page.jira }}">add a comment</a> to already opened ticket. The Pattern Library Team (PLT) will not be responsible for any issues that are created due to workarounds during implementation.</p>
 
       {% endif %}
 
@@ -53,7 +57,7 @@
 
     </main>
 
-    <aside id="contribute">
+    <aside{% if page.constrain != false %} id="contribute"{% endif %}>
 
       <h2>Contribute</h2>
 
@@ -67,7 +71,7 @@
 
     </aside>
 
-    <footer id="contentinfo">
+    <footer{% if page.constrain != false %} id="contentinfo"{% endif %}>
 
       <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer.</small></p>
 

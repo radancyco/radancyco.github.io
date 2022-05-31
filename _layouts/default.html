@@ -21,6 +21,12 @@
 
       <a href="/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
 
+      {% if page.navigation %}
+
+      {% include navigation.html %}
+
+      {% endif %}
+
     </header>
 
     <main{% if page.constrain != false %} id="content"{% endif %}>

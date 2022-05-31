@@ -34,27 +34,11 @@ layout: null
 
 	}
 
-	// Helper Functions
-
-	function insertAfter(el, referenceNode) {
-
-		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
-
-	}
-
-	function insertBefore(el, referenceNode) {
-
-			referenceNode.parentNode.insertBefore(el, referenceNode);
-
-	}
-
 	// Get Navigation
 
-	// var primaryNavigation = document.getElementById("primary-navigation");
+	var primaryNavigation = document.getElementById("primary-navigation");
 
 	// Make Mobile Button
-
-	var primaryNavigation = document.getElementById("primary-navigation");
 
 	var primaryNavigationBtn = document.createElement("button");
 
@@ -75,11 +59,9 @@ layout: null
 
 	});
 
-	if(document.getElementById(primaryNavigation)) {
+	var primaryNavigationContent = primaryNavigation.getElementsByTagName("ul")[0];
 
-		primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
-
-	}
+	primaryNavigationContent.prepend(primaryNavigationBtn);
 
 	// Highlight Navigation
 

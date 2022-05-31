@@ -73,13 +73,16 @@ layout: null
 
 	if(document.getElementById("nav-" + documentID)) {
 
-		document.getElementById("nav-" + documentID).getElementsByTagName("a")[0].setAttribute("aria-current", "page");
+		var selectedNav = document.getElementById("nav-" + documentID).getElementsByTagName("a")[0];
+
+		selectedNav.setAttribute("aria-current", "page");
+		selectedNav.setAttribute("href", "#content");
 
 	}
 
 	// Escape Key event(s) here
 
-	document.onkeydown = function(e) {
+	document.addEventListener("keydown", function () {
 
 		if (e.which === 27) {
 
@@ -87,7 +90,7 @@ layout: null
 
 		}
 
-	};
+	});
 
 	// Add share button
 

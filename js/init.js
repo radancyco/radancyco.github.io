@@ -63,7 +63,7 @@ layout: null
 
 	// Highlight Navigation
 
-	var documentID = document.body.id.replace("rad-", "", "-index", "");
+	var documentID = document.body.id.replace("rad-", "").replace("-index", "");
 
 	if(document.getElementById("nav-" + documentID)) {
 

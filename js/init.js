@@ -61,23 +61,21 @@ layout: null
 
 	});
 
-	primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
+	if(document.getElementById(primaryNavigation)) {
 
-	// Highlight Navigation
-
-	/* var documentID = document.body.id;
-
-	if(document.getElementById("nav-" + documentID)) {
-
-		document.getElementById("nav-" + documentID).getElementsByTagName("a")[0].classList.add("active");
+		primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
 
 	}
 
-	if(document.body.classList.contains("news")) {
+	// Highlight Navigation
 
-		document.getElementById("nav-news-index").getElementsByTagName("a")[0].classList.add("active");
+	var documentID = document.body.id.replace("-index", "");
 
-	} */
+	if(document.getElementById("nav-" + documentID)) {
+
+		document.getElementById("nav-" + documentID).getElementsByTagName("a")[0].setAttribute("aria-current", "page");
+
+	}
 
 	// Escape Key event(s) here
 

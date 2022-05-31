@@ -34,6 +34,20 @@ layout: null
 
 	}
 
+	// Helper Functions
+
+	function insertAfter(el, referenceNode) {
+
+		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+
+	}
+
+	function insertBefore(el, referenceNode) {
+
+			referenceNode.parentNode.insertBefore(el, referenceNode);
+
+	}
+
 	// Get Navigation
 
 	// var primaryNavigation = document.getElementById("primary-navigation");
@@ -61,7 +75,11 @@ layout: null
 
 	});
 
-	primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
+	if(document.getElementById(primaryNavigation)) {
+
+		primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
+
+	}
 
 	// Highlight Navigation
 

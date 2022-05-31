@@ -61,11 +61,7 @@ layout: null
 
 	});
 
-	if(document.getElementById(primaryNavigation)) {
-
-		primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
-
-	}
+	primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
 
 	// Highlight Navigation
 

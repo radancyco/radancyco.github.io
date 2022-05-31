@@ -80,7 +80,7 @@ layout: null
 
 	// Escape Key event(s) here
 
-	document.addEventListener("keydown", function () {
+	document.addEventListener("keydown", function (e) {
 
 		if (e.which === 27) {
 

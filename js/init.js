@@ -59,7 +59,11 @@ layout: null
 
 	});
 
-	primaryNavigation.prepend(primaryNavigationBtn);
+	if(document.getElementById(primaryNavigation) {
+
+		primaryNavigation.prepend(primaryNavigationBtn);
+
+	}
 
 	// Highlight Navigation
 
@@ -67,7 +71,7 @@ layout: null
 
 	if(document.getElementById("nav-" + documentID)) {
 
-		var selectedNav = document.getElementById("nav-" + documentID).getElementsByTagName("a")[0];
+		var selectedNav = document.getElementById("nav-" + documentID);
 
 		selectedNav.setAttribute("aria-current", "page");
 		selectedNav.setAttribute("href", "#content");

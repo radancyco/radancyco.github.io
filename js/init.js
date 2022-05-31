@@ -34,47 +34,34 @@ layout: null
 
 	}
 
-	// Helper Functions
-
-	function insertAfter(el, referenceNode) {
-
-		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
-
-	}
-
-	function insertBefore(el, referenceNode) {
-
-	    referenceNode.parentNode.insertBefore(el, referenceNode);
-
-	}
-
 	// Get Navigation
 
 	// var primaryNavigation = document.getElementById("primary-navigation");
 
 	// Make Mobile Button
 
-	/* var menuButton = document.createElement("button");
+	var primaryNavigation = document.getElementById("primary-navigation");
 
-	menuButton.setAttribute("id", "menu-button");
-	menuButton.setAttribute("aria-expanded", "false");
-	menuButton.textContent = "Menu";
+	var primaryNavigationBtn = document.createElement("button");
 
-	menuButton.onclick = function(){
+	primaryNavigationBtn.setAttribute("aria-expanded", "false");
+	primaryNavigationBtn.setAttribute("aria-label", "Menu");
 
-		if(this.getAttribute("aria-expanded") === "true") {
+	primaryNavigationBtn.addEventListener("click", function () {
 
-			this.setAttribute("aria-expanded", "false");
+	  if(this.getAttribute("aria-expanded") === "true") {
 
-		} else {
+	    this.setAttribute("aria-expanded", "false");
 
-			this.setAttribute("aria-expanded", "true");
+	  } else {
 
-		}
+	    this.setAttribute("aria-expanded", "true");
 
-	};
+	  }
 
-	insertBefore(menuButton, primaryNavigation); */
+	});
+
+	primaryNavigation.insertBefore(primaryNavigationBtn, primaryNavigation.firstChild);
 
 	// Highlight Navigation
 

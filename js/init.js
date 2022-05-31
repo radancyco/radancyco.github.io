@@ -59,7 +59,7 @@ layout: null
 
 	});
 
-	if(document.getElementById(primaryNavigation)) {
+	if(primaryNavigation) {
 
 		primaryNavigation.prepend(primaryNavigationBtn);
 

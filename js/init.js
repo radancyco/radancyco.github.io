@@ -59,9 +59,7 @@ layout: null
 
 	});
 
-	var primaryNavigationContent = primaryNavigation.getElementsByTagName("ul")[0];
-
-	primaryNavigationContent.prepend(primaryNavigationBtn);
+	primaryNavigation.prepend(primaryNavigationBtn);
 
 	// Highlight Navigation
 

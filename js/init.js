@@ -34,20 +34,6 @@ layout: null
 
 	}
 
-	// Helper Functions
-
-	function insertAfter(el, referenceNode) {
-
-		referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
-
-	}
-
-	function insertBefore(el, referenceNode) {
-
-	    referenceNode.parentNode.insertBefore(el, referenceNode);
-
-	}
-
 	// Get Navigation
 
 	// var primaryNavigation = document.getElementById("primary-navigation");
@@ -95,15 +81,15 @@ layout: null
 
 	// Escape Key event(s) here
 
-	/* document.onkeydown = function(e) {
+	document.onkeydown = function(e) {
 
 		if (e.which === 27) {
 
-	  		menuButton.setAttribute("aria-expanded", "false");
+	  		primaryNavigationBtn.setAttribute("aria-expanded", "false");
 
 		}
 
-	}; */
+	};
 
 	// Add share button
 

@@ -1,5 +1,4 @@
 ---
-localcss: /pattern-library/carousel-scroll/init.css
 title: Development Standards, Guidelines, Tools and Best Practices
 ---
 

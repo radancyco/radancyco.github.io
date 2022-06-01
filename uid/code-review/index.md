@@ -1,5 +1,4 @@
 ---
-navigation: true
 title: Code Review Process
 ---
 

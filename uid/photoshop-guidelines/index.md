@@ -1,5 +1,4 @@
 ---
-navigation: true
 title: Guidelines for Preparing Photoshop Files for Web Developers
 ---
 

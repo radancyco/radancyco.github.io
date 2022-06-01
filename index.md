@@ -1,4 +1,5 @@
 ---
+navigation: true
 title: Development Standards, Guidelines, Tools and Best Practices
 ---
 

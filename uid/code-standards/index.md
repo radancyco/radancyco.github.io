@@ -1,4 +1,5 @@
 ---
+navigation: true
 title: User Interface Standards and Guidelines
 ---
 

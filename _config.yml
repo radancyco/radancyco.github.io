@@ -16,6 +16,7 @@ highlighter: rouge
 lang: en
 markdown: kramdown
 name: Web Standards
+navigation: true
 nickname: RadDev
 owner-name: Michael Spellacy
 owner-email: michael.spellacy@radancy.com

@@ -36,7 +36,7 @@ layout: null
 
 	// Get Navigation
 
-	var primaryNavigation = document.getElementById("primary-navigation");
+	var primaryNavigation = document.getElementById("main-navigation");
 
 	// Make Mobile Button
 

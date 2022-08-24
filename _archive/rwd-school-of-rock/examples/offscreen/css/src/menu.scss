@@ -30,12 +30,12 @@ $header: 2.5em;
 $navwidth: 210px;
 
 /* =================================================================
-style reset - https://github.com/necolas/normalize.css 
+style reset - https://github.com/necolas/normalize.css
 ================================================================= */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
 a:active, a:focus, a:hover { outline: 0; }
-abbr[title] { border-bottom: 1px dotted; }
+abbr { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
 button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
@@ -166,7 +166,7 @@ aside {
 	@include borderbox;
 	margin: 1.5em 0 0;
 	overflow: hidden;
-	
+
 	section {
 		background: #fff;
 		margin-bottom: 1em;
@@ -205,17 +205,17 @@ aside {
 			}
 		}
 	}
-	
+
 	h2, h3, p {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	
+
 	p {
 		margin: 0;
 		min-height: 4em;
 	}
-	
+
 	img {
 		width: 100%;
 	}
@@ -246,7 +246,7 @@ aside {
 		width: 100%;
 		z-index: 1;
 	}
-	
+
 }
 
 /* =================================================================
@@ -472,7 +472,7 @@ tab content
 	padding: 1em 10px;
 	outline: none;
 	overflow: hidden;
-	
+
 	h1 {
 		font-size: 1.25em;
 		margin: 0 0 .5em;

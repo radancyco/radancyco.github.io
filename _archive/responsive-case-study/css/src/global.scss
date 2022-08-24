@@ -22,12 +22,12 @@ $nissan: #c71444;
 }
 
 /* =================================================================
-style reset - https://github.com/necolas/normalize.css 
+style reset - https://github.com/necolas/normalize.css
 ================================================================= */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
 a:active, a:focus, a:hover { outline: 0; }
-abbr[title] { border-bottom: 1px dotted; }
+abbr { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
 button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
 button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
@@ -76,20 +76,20 @@ h1 {
 	line-height: 1em;
 	color: #fff;
 	text-align: center;
-	
+
 	@include breakpoint($breakFive) {
 		margin: 0 -30px 1em;
 		font-size: 2em;
 		line-height: 1em;
 	}
-	
+
 	span {
 		display: block;
 		margin-top: .25em;
 		color: #bbb;
 		font-size: .75em;
 		@include breakpoint($breakFive) {
-			font-size: .75em;	
+			font-size: .75em;
 		}
 	}
 }
@@ -98,7 +98,7 @@ h2 {
 	padding: 10px 20px;
 	background: $nissan;
 	color: #fff;
-	
+
 	@include breakpoint($breakFive) { margin: 1em -30px; padding: 10px 30px}
 }
 h3 { margin-bottom: .5em; }
@@ -128,7 +128,7 @@ header {
 	z-index: 9999;
 	@include background(linear-gradient(top, #ffffff, #eeeeee));
 	@include box-shadow(0 2px 4px 0 rgba(0,0,0,.3));
-	
+
 	&.empty {
 		min-height: 32px;
 	}
@@ -142,13 +142,13 @@ nav {
 	width: 100%;
 	margin: auto;
 	max-width: $breakEnd;
-	
+
 	li {
 		list-style: none;
 		@include breakpoint($breakSix) {
 			float: left;
 			width: 20%;
-			&:first-child { 
+			&:first-child {
 				display: block;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
@@ -167,7 +167,7 @@ nav {
 				@include transition(all 200ms linear);
 				&:hover { opacity: .8; }
 				&.active { opacity: 0; }
-				
+
 				@include breakpoint(71.875em) {
 					right: 50%;
 					bottom: 20px;
@@ -176,8 +176,8 @@ nav {
 			}
 		}
 	}
-	
-	
+
+
 	a {
 		display: block;
 		padding: 5px;
@@ -188,10 +188,10 @@ nav {
 		@include transition-duration(100ms);
 		@include transition-timing-function(ease-in-out);
 		&:hover { color: #666; text-decoration: none; }
-		
+
 		@include breakpoint($breakSix) { text-align: center; color: #aaa;}
 	}
-	
+
 	.active a {
 		color: $nissan;
 	}
@@ -199,7 +199,7 @@ nav {
 
 .js nav {
 	display: none;
-	
+
 	@include breakpoint($breakSix) { display: block; }
 }
 
@@ -209,16 +209,16 @@ nav {
 	padding-right: 5px;
 	color: #333;
 	cursor: pointer;
-	
+
 	&:hover { text-decoration: none; }
 }
 
 section {
 	padding: 50px 20px 20px;
-	
+
 	@include breakpoint($breakFive) { padding: 75px 30px 30px; }
-	
-	ul { 
+
+	ul {
 		margin-left: 20px;
 		&.email {
 			margin: 0 0 1em;
@@ -230,7 +230,7 @@ section {
 			max-width: 600px;
 		}
 	}
-	
+
 	dl {
 		margin-bottom: 2em;
 		padding: 1em 1em 0;
@@ -258,9 +258,9 @@ section {
 			margin: 0 4% 0 0;
 			padding: 10px 0;
 			text-align: center;
-			&:last-child { margin-right: 0; }	
+			&:last-child { margin-right: 0; }
 		}
-		
+
 		&:after {
 			content: '';
 			display: block;
@@ -274,11 +274,11 @@ section {
 			border-style: solid;
 			border-color: transparent transparent transparent #d83154;
 		}
-		
+
 		&:last-child:after {
 			display: none;
 		}
-		
+
 	}
 }
 
@@ -296,9 +296,9 @@ section {
 		display: table;
 		margin: 0 auto 1em;
 	}
-	
+
 	img { max-width: 100%; }
-	
+
 	li {
 		margin-bottom: 10px;
 		@include breakpoint($breakFive) {
@@ -316,7 +316,7 @@ section {
 	overflow: visible;
 	text-align: center;
 	list-style: none;
-	
+
 	li {
 		display: inline-block;
 		-moz-box-sizing: border-box;
@@ -327,16 +327,16 @@ section {
 		border-radius: 10px;
 		color: #fff;
 		text-align: center;
-		
+
 		&:first-child { margin-bottom: 1em; @include breakpoint($breakFive) { right: 10px; margin: 0; } }
 		&:last-child { @include breakpoint($breakFive) { left: 10px; } }
-		
+
 		strong {
 			display: block;
 			font-size: 5em;
 			line-height: 1em;
 		}
-		
+
 		span {
 			display: block;
 			font-size: 1.75em;
@@ -351,7 +351,7 @@ footer {
 	width: 100%;
 	position: absolute;
 	color: #999;
-	
+
 	p {
 		margin: 0 auto;
 		padding: 10px;
@@ -364,15 +364,15 @@ footer {
 .breathe {
   @include transition(all 1s ease-in-out);
   cursor: pointer;
-  
+
   &:hover { font-size: 1.2em; }
  }
- 
+
  #mobile li {
 	padding-bottom: .5em;
 	.sub li { padding: 0; font-size: .92em; }
  }
- 
+
  #sitelink {
 	display: block;
 	margin: 0 auto 2em;
@@ -385,15 +385,15 @@ footer {
 	@include box-shadow(inset 3px -3px 5px 0 rgba(0,0,0,.2), inset -3px 3px 5px 0 rgba(255,255,255,.5));
 	@include text-shadow(1px 1px 1px #bbb);
 	@include transition(box-shadow 200ms linear);
-	
-	&:hover { 
+
+	&:hover {
 		text-decoration: none;
 		@include box-shadow(inset 2px -2px 5px 0 rgba(0,0,0,.2), inset -2px 2px 5px 0 rgba(255,255,255,.5));
 		@include text-shadow(1px 1px 1px #ccc);
 	}
-	
-	&:active { 
-		@include box-shadow(inset -3px 3px 5px 0 rgba(0,0,0,.1), inset 3px -3px 5px 0 rgba(255,255,255,.3)); 
+
+	&:active {
+		@include box-shadow(inset -3px 3px 5px 0 rgba(0,0,0,.1), inset 3px -3px 5px 0 rgba(255,255,255,.3));
 		@include text-shadow(1px 1px 1px #ccc);
 		@include transition(none);
 	}

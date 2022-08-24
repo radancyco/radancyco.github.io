@@ -1,6 +1,6 @@
 /* avast, matey, acquire ye compass */
 /* =================================================================
-style reset - https://github.com/necolas/normalize.css 
+style reset - https://github.com/necolas/normalize.css
 ================================================================= */
 /* line 35, src/menu.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
@@ -13,7 +13,7 @@ a:active, a:focus, a:hover {
 }
 
 /* line 38, src/menu.scss */
-abbr[title] {
+abbr {
   border-bottom: 1px dotted;
 }
 

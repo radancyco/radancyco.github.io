@@ -8,7 +8,9 @@ defaults:
     layout: "default"
 exclude: [
   README.md,
-  CNAME
+  CNAME,
+  _config.yml,
+  _template.bat
 ]
 description: Our open design and development resource! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us!
 destination: _httpdocs
@@ -22,6 +24,7 @@ owner-name: Michael Spellacy
 owner-email: michael.spellacy@radancy.com
 owner-image: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
 permalink: /:title/
+port: 4005
 repo: https://github.com/radancyco/radancyco.github.io
 sass:
   style: :compressed

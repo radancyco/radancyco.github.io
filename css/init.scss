@@ -319,18 +319,18 @@ padding: .5em 2em;
 
 }
 
-.disclosure--btn {
+body:not(.rad-disclosure-index) .disclosure--btn {
 border-radius: 5px;
 font-size: inherit;
 margin: 4px 0;
 
-  &[aria-expanded="true"] {
+  .open {
   background-color: #69788C;
   }
 
 }
 
-.disclosure--content {
+body:not(.rad-disclosure-index) .disclosure--content {
 border: 1px #cccccc solid;
 border-radius: 5px;
 margin: 4px 0;

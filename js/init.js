@@ -145,6 +145,12 @@ layout: null
 
 			button.addEventListener("click", function () {
 
+				window.scrollTo({
+
+					top: getOffset(this).top
+
+				});
+
 				window.location = "#" + this.id;
 
 			});

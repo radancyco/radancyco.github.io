@@ -331,10 +331,16 @@ margin: 4px 0;
 }
 
 body:not(#rad-disclosure-index) .disclosure--content {
-border: 1px #cccccc solid;
+background-color: transparent;
 border-radius: 5px;
+border: 1px #cccccc solid;
 margin: 4px 0;
 padding: 0 1em;
+
+  * {
+  margin: auto;
+  }
+
 }
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {

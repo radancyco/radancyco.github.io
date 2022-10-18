@@ -477,6 +477,19 @@ text-decoration: none;
 text-transform: uppercase;
 }
 
+.experimental {
+background-color: $highlight-color;
+color: #fff;
+display: inline-block;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+padding: 0.5em 1em;
+position: relative;
+text-transform: uppercase;
+top: -0.5em;
+}
+
 .inline-list {
 list-style: none;
 margin: 0;

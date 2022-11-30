@@ -76,7 +76,6 @@ box-sizing: inherit;
 ::cue {
 background-color: $highlight-color;
 color: #fff;
-font-size: 1.2rem;
 }
 
 a {
@@ -96,9 +95,6 @@ a {
 body {
 background-color: #fff;
 font-family: "Graphik", $fallback-font;
-font-size: 100%;
-font-style: normal;
-font-variant: normal;
 line-height: 2;
 margin: 0;
 padding: 1em;
@@ -138,7 +134,7 @@ figure {
 margin: 1em 0;
 
   figcaption {
-  font-size: 13px;
+  font-size: 1.3rem;
   margin: 1em 0 0;
   }
 
@@ -238,7 +234,7 @@ word-wrap: break-word;
   display: block;
   margin: 0;
   padding: 1em;
-  font-size: 1.4em;
+  font-size: 1.1rem;
   line-height: 1.8;
 
     strong {
@@ -635,7 +631,6 @@ padding: .8em 8% .4em;
 #content, #contentinfo, #contribute {
 display: block;
 color: inherit;
-font-size: 1em;
 margin: 0 auto;
 max-width: 1600px;
 }
@@ -689,7 +684,7 @@ z-index: 2;
   }
 
   h2 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   }
 
 }

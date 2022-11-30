@@ -476,8 +476,7 @@ text-decoration: none;
 text-transform: uppercase;
 }
 
-.experimental {
-background-color: $highlight-color;
+.anti-pattern, .experimental {
 color: #fff;
 display: inline-block;
 font-weight: 700;
@@ -487,6 +486,14 @@ padding: 0.5em 1em;
 position: relative;
 text-transform: uppercase;
 top: -0.5em;
+}
+
+.anti-pattern {
+background-color: #d20000;
+}
+
+.experimental {
+background-color: $highlight-color;
 }
 
 .inline-list {

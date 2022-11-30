@@ -350,6 +350,7 @@ padding: .5em 1em;
   }
 
   h2:first-child {
+  display: flex;
 
     &::before {
     background-position: center;
@@ -359,6 +360,7 @@ padding: .5em 1em;
     display: inline-block;
     height: 50px;
     margin-right: .5em;
+    min-width: 50px;
     vertical-align: middle;
     width: 50px;
     }

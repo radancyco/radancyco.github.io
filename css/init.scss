@@ -98,6 +98,7 @@ font-family: "Graphik", $fallback-font;
 line-height: 2;
 margin: 0;
 padding: 1em;
+text-rendering: optimizeLegibility;
 }
 
 code, kbd {

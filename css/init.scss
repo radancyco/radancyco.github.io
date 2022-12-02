@@ -353,6 +353,7 @@ padding: .5em 1em;
 
   h2:first-child {
   display: flex;
+  align-items: center;
 
     &::before {
     background-position: center;

@@ -1,4 +1,5 @@
 ---
+noindex: false
 title: Development Standards, Guidelines, Tools and Best Practices
 ---
 

@@ -2,7 +2,7 @@
 <html lang="{{ site.lang }}" class="no-js">
 <head>
     <meta charset="{{ site.charset }}">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex %}
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">{% if page.noindex != false %}
     <meta content="noindex, nofollow" name="robots">{% endif %}
     <meta content="{{ site.theme-color }}" name="theme-color">
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.slick %}

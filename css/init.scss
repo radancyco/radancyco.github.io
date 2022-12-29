@@ -221,10 +221,6 @@ display: inline-block;
 margin-bottom: .5em;
 }
 
-select::-ms-expand {
-display: none !important;
-}
-
 textarea {
 display: block;
 margin: 0 auto 1em;
@@ -529,7 +525,7 @@ padding: 0;
 
 .new-window {
 display: block;
-text-align: right;
+text-align: end;
 }
 
 .param {
@@ -629,7 +625,7 @@ padding: .8em 8% .4em;
   font-size: .8rem;
   letter-spacing: 1px;
   line-height: normal;
-  text-align: right;
+  text-align: end;
   text-decoration: none;
 
     img {
@@ -655,8 +651,8 @@ max-width: 1600px;
 #main-navigation {
 margin-left: 1em;
 position: absolute;
-right: 1em;
-top: .8em;
+inset-inline-end: 1em;
+inset-block-start: .8em;
 z-index: 2;
 
   button {
@@ -672,8 +668,8 @@ z-index: 2;
   margin: 0;
   padding: 0;
   position: inherit;
-  right: inherit;
-  top: inherit;
+  inset-inline-end: inherit;
+  inset-block-start: inherit;
   width: 45px;
 
     &[aria-expanded="true"] + ul {

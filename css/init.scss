@@ -383,7 +383,7 @@ padding: .5em 1em;
 background-color: #40E8D4;
 color: #000;
 
-  h2:first-child {
+  h2:first-child, .info-heading {
 
     &::before {
     background-image: url("/img/a11y-white-alt.png");
@@ -397,7 +397,7 @@ color: #000;
 .reminder-info {
 background-color: #f5cd01;
 
-  h2:first-child {
+  h2:first-child, .info-heading {
 
     &::before {
     background-image: url("/img/reminder-info.png");
@@ -410,7 +410,7 @@ background-color: #f5cd01;
 .resource-info {
 background-color: #f8924d;
 
-  h2:first-child {
+  h2:first-child, .info-heading {
 
     &::before {
     background-image: url("/img/resource-info.png");
@@ -424,7 +424,7 @@ background-color: #f8924d;
 background-color: #dda1a1;
 border-color: red;
 
-  h2:first-child {
+  h2:first-child, .info-heading {
 
     &::before {
     background-image: url("/img/warning-info.png");
@@ -437,7 +437,7 @@ border-color: red;
 .qa-info {
 background-color: #dfc9f8;
 
-  h2:first-child {
+  h2:first-child, .info-heading {
 
     &::before {
     background-image: url("/img/qa-chart.png");
@@ -557,7 +557,7 @@ text-decoration: none;
 
 }
 
-.sr-only:not(:focus):not(:active) {
+.sr-only:not(:focus):not(:active), .visually-hidden:not(:focus):not(:active) {
 clip-path: inset(100%);
 clip: rect(0 0 0 0);
 height: 1px;

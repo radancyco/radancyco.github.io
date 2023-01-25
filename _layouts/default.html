@@ -23,7 +23,11 @@
 
       {% if site.navigation %}
 
-      {% include navigation.html %}
+        {% if page.navigation != false %}
+
+          {% include navigation.html %}
+
+        {% endif %}
 
       {% endif %}
 

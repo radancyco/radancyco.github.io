@@ -566,6 +566,28 @@ padding: 0;
   
 }
 
+.jump-nav {
+padding: 1em 0;
+  
+  ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  a {
+  background-color: $highlight-color;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  line-height: normal;
+  margin-inline-end: 5px;
+  padding: .8em;
+  }
+
+}
+
 .new-window {
 display: block;
 text-align: end;

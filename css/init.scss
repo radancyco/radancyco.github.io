@@ -604,7 +604,8 @@ text-decoration: none;
 
 .read-more__content {
 border: 0;
-padding: 1em;
+padding: 0;
+max-height: 600px;
 }
 
 .sr-only:not(:focus):not(:active), .visually-hidden:not(:focus):not(:active) {

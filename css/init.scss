@@ -260,15 +260,16 @@ font-size: 8px;
 
 table {
 width: 100%;
+border-collapse: collapse;
 
   caption {
   font-size: 1.6rem;
-  text-align: left;
+  text-align: start;
   margin-bottom: 1em;
   }
 
   th, td {
-  border: 1px darkblue solid;
+  border: 1px $highlight-color solid;
   padding: .8em;
   }
 

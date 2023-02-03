@@ -271,6 +271,14 @@ border-collapse: collapse;
   th, td {
   border: 1px $highlight-color solid;
   padding: .8em;
+
+    code {
+    background-color: transparent;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    }
+
   }
 
   th {

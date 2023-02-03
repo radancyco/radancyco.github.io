@@ -600,6 +600,13 @@ text-decoration: none;
 
 }
 
+// Read More Override
+
+.read-more__content {
+border: 0;
+padding: 1em;
+}
+
 .sr-only:not(:focus):not(:active), .visually-hidden:not(:focus):not(:active) {
 clip-path: inset(100%);
 clip: rect(0 0 0 0);

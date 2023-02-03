@@ -241,10 +241,6 @@ word-wrap: break-word;
   font-size: 1.1rem;
   line-height: 1.8;
 
-    &:empty {
-    display: none;
-    }
-
     strong, span {
     color: #b4dcf6;
     font-weight: bold;
@@ -267,9 +263,10 @@ width: 100%;
 border-collapse: collapse;
 
   caption {
+  color: $highlight-color;
   font-size: 1.6rem;
   text-align: start;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   }
 
   th, td {
@@ -288,7 +285,7 @@ border-collapse: collapse;
   th {
   background-color: $highlight-color;
   color: #fff;
-  text-align: center;
+  text-align: start;
   }
 
   td:first-child {

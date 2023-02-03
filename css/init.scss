@@ -10,7 +10,7 @@
 */
 
 @import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
-@import url("https://radancy.dev/pattern-library/disclosure/init.css");
+@import url("https://radancy.dev/pattern-library/disclosure/init.css"); // TODO: Add link to a11y-smoke-test and other layout templates, then remove this call.
 @import url("zenburn.css");
 
 $weight-thin: 100 !default; // Thin (Hairline)
@@ -531,6 +531,27 @@ padding: 0;
 
   }
 
+}
+
+// In-Page Override 
+
+.in-page {
+background-color: transparent;
+border-radius: 0;
+font-size: inherit;
+margin: 0;
+padding: 0;
+  
+  &__label {
+  
+    @media(min-width: 48.625em) {
+  
+      display: block;
+  
+    }
+  
+  }
+  
 }
 
 .new-window {

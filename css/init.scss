@@ -544,13 +544,11 @@ margin: 0;
 padding: 0;
 
   &__nav {
-  background-color: #eee;
-  border-radius: 5px;
-  margin: 1em 0;
-  padding: 1em;
+  margin: 0 0 1em;
   }
   
   &__label {
+  font-weight: normal;
   
     @media(min-width: 48.625em) {
   

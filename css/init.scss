@@ -331,25 +331,6 @@ padding: .5em 2em;
 
 }
 
-body:not(#rad-disclosure-index) .disclosure--btn {
-border-radius: 5px;
-font-size: inherit;
-margin: 4px 0;
-
-  .open {
-  background-color: #69788C;
-  }
-
-}
-
-body:not(#rad-disclosure-index) .disclosure--content {
-background-color: transparent;
-border-radius: 5px;
-border: 1px #cccccc solid;
-margin: 4px 0;
-padding: 0 1em;
-}
-
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;
@@ -530,58 +511,6 @@ padding: 0;
     margin: 0 1em 1em 0;
     }
 
-  }
-
-}
-
-// In-Page Override 
-
-.in-page {
-background-color: transparent;
-border-radius: 0;
-font-size: inherit;
-margin: 0;
-padding: 0;
-
-  &__nav {
-  margin: 0 0 1em;
-  }
-  
-  &__label {
-  font-weight: normal;
-  
-    @media(min-width: 48.625em) {
-  
-      display: block;
-  
-    }
-  
-  }
-
-  &__select {
-  min-width: 320px;
-  }
-  
-}
-
-.jump-nav {
-padding: 1em 0;
-  
-  ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  }
-  
-  a {
-  background-color: $highlight-color;
-  border-radius: 5px;
-  color: white;
-  display: block;
-  line-height: normal;
-  margin-inline-end: 5px;
-  padding: .8em;
   }
 
 }
@@ -791,5 +720,62 @@ padding: 1em;
   text-rendering: auto;
 	margin-right: 5px;
 	}
+
+}
+
+// Component Library Overrides 
+
+body:not(#rad-disclosure-index) { 
+  
+  .disclosure--btn {
+  border-radius: 5px;
+  font-size: inherit;
+  margin: 4px 0;
+  
+    .open {
+    background-color: #69788C;
+    }
+
+  }
+
+  .disclosure--content {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px #cccccc solid;
+  margin: 4px 0;
+  padding: 0 1em;
+  }
+  
+}
+  
+body:not(#rad-in-page-index) {
+  
+  .in-page {
+  background-color: transparent;
+  border-radius: 0;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+
+    &__nav {
+    margin: 0 0 1em;
+    }
+  
+    &__label {
+    font-weight: normal;
+  
+      @media(min-width: 48.625em) {
+  
+        display: block;
+  
+      }
+  
+    }
+
+    &__select {
+    min-width: 320px;
+    }
+  
+  }
 
 }

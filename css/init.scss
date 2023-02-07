@@ -725,7 +725,7 @@ padding: 1em;
 
 // Component Library Overrides 
 
-body:not(#rad-disclosure-index) { 
+body:not(.component-library-disclosure) { 
   
   .disclosure--btn {
   border-radius: 5px;

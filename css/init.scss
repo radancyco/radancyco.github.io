@@ -463,7 +463,7 @@ display: none !important;
 
 .btn, input[type="file"]::file-selector-button {
 background-color: #ffcc36;
-border: 0;
+border: 1px #000 solid;
 color: #000;
 display: inline-block;
 line-height: normal;

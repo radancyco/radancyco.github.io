@@ -331,6 +331,26 @@ padding: .5em 2em;
 
 }
 
+.access-link {
+background-color: #777;
+border-radius: 5px;
+border: 1px white solid;
+color: #fff;
+inset-block-start: -100px;
+inset-inline-start: 5px;
+line-height: normal;
+padding: 1em;
+position: absolute;
+text-decoration: none;
+transition: inset-block-start 1s ease-out;
+z-index: 100;
+
+  &:focus {
+  inset-block-start: 5px;
+  }
+
+}
+
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
 border-radius: 5px;
 border: 1px black solid;

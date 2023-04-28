@@ -342,7 +342,7 @@ line-height: normal;
 padding: 1em;
 position: absolute;
 text-decoration: none;
-transition: inset-block-start 1s ease-out;
+transition: inset-block-start 300ms ease-out;
 z-index: 100;
 
   &:focus {

@@ -136,6 +136,7 @@ layout: null
 	};
 
 	// Scroll Button
+	// Note: This is a temporary fix until we can update the buttons to use data-disclosure-enable-url 
 
 	if(bodyId === "rad-baseline-index"){
 
@@ -145,13 +146,7 @@ layout: null
 
 			button.addEventListener("click", function () {
 
-			/* 	window.scrollTo({
-
-					top: getOffset(this).top
-
-				}); */
-
-				window.location = "#" + this.id;
+				history.pushState(null, null, "#" + this.id);
 
 			});
 

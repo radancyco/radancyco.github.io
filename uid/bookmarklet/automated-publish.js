@@ -10,6 +10,8 @@ function submitPage() {
 
     console.log('%c Publishing. There are ' + n + ' assets to go...', 'background: #6e00ee; color: #fff');
 
+    $(".loadingoverlay_text").text("Publishing. Open console to see queue.");
+
     $('.publish-table :checkbox:lt(10)').prop('checked', true);
     $('.admin-ajax-submit').removeAttr('disabled').submit();
 

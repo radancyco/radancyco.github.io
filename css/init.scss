@@ -262,6 +262,12 @@ table {
 width: 100%;
 border-collapse: collapse;
 
+  &:target {
+  background-color: #eee;
+  color: #000;
+  transition: background-color 300ms 1.2s ease-in-out;
+  }
+
   caption {
   color: $highlight-color;
   font-size: 1.6rem;

@@ -12,7 +12,7 @@ layout: null
 
 	var mainContent = document.getElementById("content");
 
-	if (sectionName !== "video-hero-banner") {
+	if (sectionName !== "video-hero-banner" || sectionName !== "component-library-animation-toggle") {
 
 		// PWA Register
 

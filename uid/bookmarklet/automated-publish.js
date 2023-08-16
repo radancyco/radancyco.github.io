@@ -12,7 +12,7 @@ function submitPage() {
 
     $(".loadingoverlay_text").text("Publishing. Open console to see queue.");
 
-    $('.publish-table :checkbox:lt(10)').prop('checked', true);
+    $('.publish-table :checkbox:lt(20)').prop('checked', true);
     $('.admin-ajax-submit').removeAttr('disabled').submit();
 
   } else {

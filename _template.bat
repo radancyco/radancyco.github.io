@@ -1,6 +1,6 @@
 xcopy /y _layouts\default.html ..\a11y\_layouts\
 xcopy /y _layouts\default.html ..\a11y-bookmarklets\_layouts\
-xcopy /y _layouts\default.html ..\pattern-library\_layouts\
+xcopy /y _layouts\default.html ..\component-library\_layouts\
 xcopy /y _layouts\default.html ..\playground\_layouts\
 xcopy /y _layouts\default.html ..\radancyco.github.io\_layouts\
 xcopy /y _layouts\default.html ..\career-path-generator\_layouts\

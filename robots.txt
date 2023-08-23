@@ -1,9 +1,2 @@
 User-agent: *
-Disallow: /career-path-generator/
-Disallow: /magic-bullet/
-Disallow: /component-library/
-Disallow: /playground/
-Disallow: /support/
-Disallow: /syndicate/
-Disallow: /tb-ajd-template/
-Disallow: /tmp-custom-imports/
+Disallow: /

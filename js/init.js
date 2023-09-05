@@ -67,16 +67,29 @@ layout: null
 
 	// Highlight Navigation
 
-	var documentID = document.body.id.replace("rad-", "").replace("-index", "");
+	var navigationLink = document.querySelectorAll("#main-navigation a");
 
-	if(document.getElementById("nav-" + documentID)) {
+	navigationLink.forEach(function(link, e){
 
-		var selectedNav = document.getElementById("nav-" + documentID);
+		var navigationId = link.getAttribute("data-nav-id");
 
-		selectedNav.setAttribute("aria-current", "page");
-		selectedNav.setAttribute("href", "#content");
+		if(navigationId === bodyId) {
 
-	}
+			link.setAttribute("aria-current", "page");
+
+			if (link.hasAttribute("data-nav-anchor")) {
+
+				link.setAttribute("href", location.hash);
+
+			} else {
+
+				link.setAttribute("href", "#content");
+
+			}
+
+		}
+
+	});
 
 	// Escape Key event(s) here
 

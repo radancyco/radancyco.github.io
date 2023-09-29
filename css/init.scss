@@ -5,7 +5,7 @@
 
   Radancy.dev Styeguide
 
-  Author: Michael "Spell" Spellacy, Email: michael.spellacy@radancy.com, Twitter: @spellacy, GitHub: michaelspellacy
+  Author: Michael "Spell" Spellacy
 
 */
 
@@ -34,7 +34,7 @@ $weight-black: 900 !default; // Black (Heavy)
   @font-face {
 
     font-family: "#{$fontName}";
-    src:local("#{$fontName}"),url("#{$font-path}#{$fileName}.woff2") format("woff2");
+    src: local("#{$fontName}"),url("#{$font-path}#{$fileName}.woff2") format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};
     font-display: #{$display};
@@ -85,16 +85,17 @@ a {
   &[target="_blank"] {
 
     &::after {
-    display: inline-block;
-    content: "";
-    width: px(16);
-    height: px(16);
     background-color: transparent;
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE7mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDAgNzkuMTcxYzI3ZiwgMjAyMi8wOC8xNi0xODowMjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMy0wOS0yOVQxOToyOToxNS0wNDowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjMtMDktMjlUMTk6MzA6MDgtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjMtMDktMjlUMTk6MzA6MDgtMDQ6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVkMjZhMDJmLTY5MjgtMTM0ZS1iYzA2LWJlMmZjNTkyOWJmYiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1ZDI2YTAyZi02OTI4LTEzNGUtYmMwNi1iZTJmYzU5MjliZmIiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZDI2YTAyZi02OTI4LTEzNGUtYmMwNi1iZTJmYzU5MjliZmIiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjVkMjZhMDJmLTY5MjgtMTM0ZS1iYzA2LWJlMmZjNTkyOWJmYiIgc3RFdnQ6d2hlbj0iMjAyMy0wOS0yOVQxOToyOToxNS0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj902TsAAAEiSURBVDjLrdS7SgNREIDhrxGbpDJESRWFiDdIE7GwthI7X8/WwgfwAbSNnTY2RhTFJok38B6biR5CYnbVgeHszpn5z87OnIFjXKKNDrqx7viWXTzheYjeRUwX59AboUcJ8OQHv0H1Fg8bWMRSrKlMooHVWBuoYgu3CayTfuGE/HKYxL9G+j7CUM0BKuEs4k6xiZeA5gZWcBExbRTD3ovflwtYwlX432Mu7PUk7czAKbQSWFq45bzASvRYP83awP5KnpRncJ20xdwQn3rahz8B13AT+w+YH3FoAU3sjwNuJScvZO2pcSlvYz1Pt/+msYcVrYmD/wLWshYlq8wmhfsiF/4ALAbjEd7jpYEypnNqOcZa/wZlHpyZB2wrxvdfQV3sfQK8WKcmeejjOQAAAABJRU5ErkJggg==");
-    background-position: right center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: px(16);
+    content: "";
+    display: inline-block;
+    height: px(14);
     vertical-align: middle;
+    width: px(14);
+    margin-inline-start: px(5);
     }
 
   }

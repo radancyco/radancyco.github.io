@@ -15,7 +15,7 @@
 
 @function px($target) {
 
-  @return calc($target/16) + rem;
+  @return #{$target/16.0}rem;
 
 }
 

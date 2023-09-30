@@ -660,7 +660,7 @@ padding: px(16);
 
 #banner {
 background-color: $highlight-color;
-margin: -px(16) -px(16) 0;
+margin: -#{px(16)} -#{px(16)} 0;
 padding: px(12.8) 8% px(6.4);
 
   > a {

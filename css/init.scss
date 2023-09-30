@@ -109,11 +109,11 @@ text-rendering: optimizeLegibility;
 }
 
 code, kbd {
-border-radius: 4px;
+border-radius: px(4);
 display: inline-block;
 font: inherit;
-margin: 2px;
-padding: .2em 1em;
+margin: px(2);
+padding: px(3.2) px(16);
 word-wrap: break-word;
 }
 
@@ -128,7 +128,7 @@ color: #fff;
 }
 
 details {
-margin: .5em 0;
+margin: px(8) 0;
 
   summary:not(.btn) {
   text-decoration: underline;
@@ -136,19 +136,19 @@ margin: .5em 0;
 
   nav {
   background-color: #efefef;
-  border-radius: 10px;
-  margin: 1em 0;
-  padding: 1em;
+  border-radius: px(10);
+  margin: px(16) 0;
+  padding: px(16);
   }
 
 }
 
 figure {
-margin: 1em 0;
+margin: px(16) 0;
 
   figcaption {
-  font-size: .9rem;
-  margin: 1em 0 0;
+  font-size: px(14.4);
+  margin: px(16) 0 0;
   }
 
 }
@@ -156,14 +156,14 @@ margin: 1em 0;
 kbd {
 background-color: #ccc;
 color: #000;
-border: 1px dotted black
+border: px(1) dotted black
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
 font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
-margin: 1em 0;
+margin: px(16) 0;
 }
 
 h3 {
@@ -176,8 +176,8 @@ font-weight: bold;
 
 hr[aria-hidden="true"] {
 border: 0;
-border-bottom: 1px dashed $highlight-color;
-margin: 2em 0;
+border-bottom: px(1) dashed $highlight-color;
+margin: px(32) 0;
 }
 
 html {
@@ -224,18 +224,18 @@ appearnace: checkbox;
 
 label {
 display: inline-block;
-margin-bottom: .5em;
+margin-bottom: px(8);
 }
 
 textarea {
 display: block;
-margin: 0 auto 1em;
-padding: 1em 2%;
+margin: 0 auto px(16);
+padding: px(16) 2%;
 width: 96%;
 }
 
 pre {
-border-radius: 4px;
+border-radius: px(4);
 white-space: pre;
 white-space: pre-wrap;
 word-wrap: break-word;
@@ -243,8 +243,8 @@ word-wrap: break-word;
   code {
   display: block;
   margin: 0;
-  padding: 1em;
-  font-size: 1.1rem;
+  padding: px(16);
+  font-size: px(17.6);
   line-height: 1.5;
 
     strong, span {
@@ -261,7 +261,7 @@ word-wrap: break-word;
 }
 
 sup {
-font-size: 8px;
+font-size: px(8);
 }
 
 table {
@@ -612,7 +612,7 @@ width: 1px;
 }
 
 .table-container {
-margin-bottom: 2em;
+margin-bottom: px(32);
 overflow-X: auto;
 }
 
@@ -634,21 +634,21 @@ width: 100%;
 
 #author {
 background-color: #eee;
-border: 1px #666 solid;
-border-radius: 10px;
-margin-top: 1em;
-padding: 1em;
+border: px(1) #666 solid;
+border-radius: px(10);
+margin-top: px(16);
+padding: px(16);
 
   h2 {
-  margin: 0 0 .5em 0;
+  margin: 0 0 px(8) 0;
   }
 
   img {
   display: inline-block;
-  width: 90px;
-  margin: 0 1em 0 0;
+  width: px(90);
+  margin: 0 px(16) 0 0;
   vertical-align: middle;
-  border: 4px $highlight-color solid;
+  border: px(4) $highlight-color solid;
   border-radius: 50%;
   }
 
@@ -660,25 +660,25 @@ padding: 1em;
 
 #banner {
 background-color: $highlight-color;
-margin: -1em -1em 0;
-padding: .8em 8% .4em;
+margin: -px(16) -px(16) 0;
+padding: px(12.8) 8% px(6.4);
 
   > a {
   color: white;
   display: inline-block;
-  font-size: .8rem;
-  letter-spacing: 1px;
+  font-size: px(12.8);
+  letter-spacing: px(1);
   line-height: normal;
   text-align: end;
   text-decoration: none;
 
     img {
-    width: 220px;
+    width: px(220);
     }
 
     span {
     display: block;
-    margin-top: 7px;
+    margin-top: px(7);
     }
 
   }
@@ -689,32 +689,31 @@ padding: .8em 8% .4em;
 display: block;
 color: inherit;
 margin: 0 auto;
-max-width: 1600px;
+max-width: px(1600);
 }
 
 #main-navigation {
-margin-left: 1em;
+margin-left: px(16);
 position: absolute;
-inset-inline-end: .5em;
-inset-block-start: .8em;
+inset-inline-end: px(8);
+inset-block-start: px(12.8);
 z-index: 2;
 
   button {
   background-color: #fff;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFODkzREQwRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFODkzREQxRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkU4OTNEQ0VFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkU4OTNEQ0ZFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7a+7OAAAABoklEQVR42mL8//8/w1ADTAxDEIw6etTRw83RLNQ2sIDxA8jMYCBWB+L7QLxhwn+Bz4Pa0UCQAMXKQPwYiIWBeAI1LWCkZjkNDOWpQCoLi9QqYGiHDzpHAx3sCKT24VESAXT4ysGWERMJyMcMxtJDjIA8/2B09EkC8tcGo6MnE5DvHnSOBmayN0DKCohfo0l9A2IfoPzdQVnkQUsRNiAVDcTyQPwMiFcCHfxx0JbTo20POrc91KFltgI0eSwFJo+zg7kajwVSi7BIFQEd3j8Yq3EVIHUbjxILoMNPDrY0nUtAPm8wZkQNAvJyg9HR9wjIPx+Mjp5OQH7GYKzGLwGpQhzSbUD5fYO5GrcGUklI1fgyoIN3jFbjo9U4Ion4QpPHc2DSWEtt86ldjYPK6vVoZfYTIA4DOv74YKzGeaFlMTcOJVJAhz8fbGk6F4+DQaBiMGZEWwLyhoPR0R8IyH8ZjI5eQkB+zWAtPVYAKWxjdnuBmdBlMFfjlQyQITBpIH4FCmGgg6sGe+UyG5q+5aFF4LpBXbmMtj1GHT3q6BHkaIAAAwBX35BOYMGHPwAAAABJRU5ErkJggg==");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 35px;
-  border-radius: 5px;
+  background-size: px(35);
+  border-radius: px(5);
   border: 0;
-  border: 1px $highlight-color solid;
-  height: 45px;
+  border: px(1) $highlight-color solid;
+  height: px(45);
   margin: 0;
   padding: 0;
   position: inherit;
   inset-inline-end: inherit;
   inset-block-start: inherit;
-  width: 45px;
+  width: px(45);
 
     &[aria-expanded="true"] + ul {
     display: block;
@@ -724,12 +723,12 @@ z-index: 2;
 
   > ul {
   background-color: #fff;
-  border-radius: 5px;
-  border: 1px $highlight-color solid;
+  border-radius: px(5);
+  border: px(1) $highlight-color solid;
   display: none;
   list-style: none;
   margin: 0;
-  padding: 1em;
+  padding: px(16);
   }
 
   a {
@@ -741,7 +740,7 @@ z-index: 2;
   }
 
   h2 {
-  font-size: 1.1rem;
+  font-size: px(17.6);
   }
 
   p {

@@ -19,6 +19,12 @@
 
 }
 
+@function bp($target) {
+
+  @return #{$target/16.0}em;
+
+}
+
 $weight-thin: 100 !default; // Thin (Hairline)
 $weight-extra-thin: 200 !default; // Extra Light (Ultra Light)
 $weight-light: 300 !default; // Light
@@ -544,7 +550,7 @@ padding: 0;
 
   li {
 
-    @media(min-width:px(680)) {
+    @media(min-width: bp(680)) {
 
       display: inline-block;
 
@@ -571,7 +577,7 @@ margin-bottom: px(48);
   display: block;
   margin: px(5) 0;
 
-    @media(min-width: px(680)) {
+    @media(min-width: bp(680)) {
 
       display: inline-block;
       margin: px(5) px(2.5);
@@ -811,7 +817,7 @@ body:not(#rad-in-page-index) {
     &__label {
     font-weight: normal;
     
-      @media(min-width: px(778)) {
+      @media(min-width: bp(778)) {
   
         display: block;
   

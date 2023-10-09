@@ -13,13 +13,13 @@
 @import url("https://radancy.dev/component-library/disclosure/init.css"); // TODO: Add link to a11y-smoke-test and other layout templates, then remove this call.
 @import url("zenburn.css");
 
-@function px($target) {
+@function rem($target) {
 
   @return #{$target/16.0}rem;
 
 }
 
-@function bp($target) {
+@function em($target) {
 
   @return #{$target/16.0}em;
 
@@ -92,13 +92,13 @@ a {
 
     &::after {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE7mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDAgNzkuMTcxYzI3ZiwgMjAyMi8wOC8xNi0xODowMjo0MyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMy0wOS0yOVQxOToyOToxNS0wNDowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjMtMDktMjlUMTk6MzA6MDgtMDQ6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjMtMDktMjlUMTk6MzA6MDgtMDQ6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVkMjZhMDJmLTY5MjgtMTM0ZS1iYzA2LWJlMmZjNTkyOWJmYiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1ZDI2YTAyZi02OTI4LTEzNGUtYmMwNi1iZTJmYzU5MjliZmIiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1ZDI2YTAyZi02OTI4LTEzNGUtYmMwNi1iZTJmYzU5MjliZmIiPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjVkMjZhMDJmLTY5MjgtMTM0ZS1iYzA2LWJlMmZjNTkyOWJmYiIgc3RFdnQ6d2hlbj0iMjAyMy0wOS0yOVQxOToyOToxNS0wNDowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj902TsAAAEiSURBVDjLrdS7SgNREIDhrxGbpDJESRWFiDdIE7GwthI7X8/WwgfwAbSNnTY2RhTFJok38B6biR5CYnbVgeHszpn5z87OnIFjXKKNDrqx7viWXTzheYjeRUwX59AboUcJ8OQHv0H1Fg8bWMRSrKlMooHVWBuoYgu3CayTfuGE/HKYxL9G+j7CUM0BKuEs4k6xiZeA5gZWcBExbRTD3ovflwtYwlX432Mu7PUk7czAKbQSWFq45bzASvRYP83awP5KnpRncJ20xdwQn3rahz8B13AT+w+YH3FoAU3sjwNuJScvZO2pcSlvYz1Pt/+msYcVrYmD/wLWshYlq8wmhfsiF/4ALAbjEd7jpYEypnNqOcZa/wZlHpyZB2wrxvdfQV3sfQK8WKcmeejjOQAAAABJRU5ErkJggg==");
-    background-size: px(14);
+    background-size: rem(14);
     content: "";
     display: inline-block;
-    height: px(14);
-    margin-inline-start: px(5);
+    height: rem(14);
+    margin-inline-start: em(5);
     vertical-align: middle;
-    width: px(14);
+    width: rem(14);
     }
 
   }
@@ -110,16 +110,16 @@ background-color: #fff;
 font-family: "Graphik", $fallback-font;
 line-height: 2;
 margin: 0;
-padding: px(16);
+padding: em(16);
 text-rendering: optimizeLegibility;
 }
 
 code, kbd {
-border-radius: px(4);
+border-radius: rem(4);
 display: inline-block;
 font: inherit;
-margin: px(2);
-padding: px(3.2) px(16);
+margin: em(2);
+padding: em(3.2) em(16);
 word-wrap: break-word;
 }
 
@@ -134,7 +134,7 @@ color: #fff;
 }
 
 details {
-margin: px(8) 0;
+margin: em(8) 0;
 
   summary:not(.btn) {
   text-decoration: underline;
@@ -142,19 +142,19 @@ margin: px(8) 0;
 
   nav {
   background-color: #efefef;
-  border-radius: px(10);
-  margin: px(16) 0;
-  padding: px(16);
+  border-radius: rem(10);
+  margin: em(16) 0;
+  padding: em(16);
   }
 
 }
 
 figure {
-margin: px(16) 0;
+margin: em(16) 0;
 
   figcaption {
-  font-size: px(14.4);
-  margin: px(16) 0 0;
+  font-size: rem(14.4);
+  margin: em(16) 0 0;
   }
 
 }
@@ -162,14 +162,14 @@ margin: px(16) 0;
 kbd {
 background-color: #ccc;
 color: #000;
-border: px(1) dotted black
+border: rem(1) dotted black
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
 font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
-margin: px(16) 0;
+margin: em(16) 0;
 }
 
 h3 {
@@ -182,8 +182,8 @@ font-weight: bold;
 
 hr[aria-hidden="true"] {
 border: 0;
-border-bottom: px(1) dashed $highlight-color;
-margin: px(32) 0;
+border-bottom: rem(1) dashed $highlight-color;
+margin: em(32) 0;
 }
 
 html {
@@ -230,18 +230,18 @@ appearnace: checkbox;
 
 label {
 display: inline-block;
-margin-bottom: px(8);
+margin-bottom: em(8);
 }
 
 textarea {
 display: block;
-margin: 0 auto px(16);
-padding: px(16) 2%;
+margin: 0 auto em(16);
+padding: em(16) 2%;
 width: 96%;
 }
 
 pre {
-border-radius: px(4);
+border-radius: rem(4);
 white-space: pre;
 white-space: pre-wrap;
 word-wrap: break-word;
@@ -249,8 +249,8 @@ word-wrap: break-word;
   code {
   display: block;
   margin: 0;
-  padding: px(16);
-  font-size: px(17.6);
+  padding: em(16);
+  font-size: rem(17.6);
   line-height: 1.5;
 
     strong, span {
@@ -267,7 +267,7 @@ word-wrap: break-word;
 }
 
 sup {
-font-size: px(8);
+font-size: rem(8);
 }
 
 table {
@@ -282,14 +282,14 @@ border-collapse: collapse;
 
   caption {
   color: $highlight-color;
-  font-size: px(25.6);
+  font-size: premx(25.6);
   text-align: start;
-  margin-bottom: px(8);
+  margin-bottom: em(8);
   }
 
   th, td {
-  border-bottom: px(1) $highlight-color solid;
-  padding: px(16);
+  border-bottom: rem(1) $highlight-color solid;
+  padding: em(16);
 
     code {
     background-color: transparent;
@@ -320,10 +320,10 @@ width: 100%;
 }
 
 .bug {
-border-radius: px(5);
-border: px(1) #000 solid;
-margin: px(16) 0;
-padding: px(8) px(32);
+border-radius: rem(5);
+border: rem(1) #000 solid;
+margin: em(16) 0;
+padding: em(8) em(32);
 
   ul {
   padding: 0;
@@ -353,30 +353,30 @@ padding: px(8) px(32);
 
 .access-link {
 background-color: #777;
-border-radius: px(5);
-border: px(1) white solid;
+border-radius: rem(5);
+border: rem(1) white solid;
 color: #fff;
 inset-block-start: -999rem;
-inset-inline-start: px(5);
+inset-inline-start: rem(5);
 line-height: normal;
-padding: px(16);
+padding: em(16);
 position: absolute;
 text-decoration: none;
 transition: inset-block-start 300ms ease-out;
 z-index: 100;
 
   &:focus {
-  inset-block-start: px(5);
+  inset-block-start: rem(5);
   }
 
 }
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
-border-radius: px(5);
-border: 1px black solid;
+border-radius: rem(5);
+border: rem(1) black solid;
 color: #000;
-margin: px(16) 0;
-padding: px(8) px(16);
+margin: em(16) 0;
+padding: em(8) em(16);
 
   a, button, h3 {
   color: inherit;
@@ -392,17 +392,17 @@ padding: px(8) px(16);
     background-size: contain;
     content: "";
     display: inline-block;
-    height: px(50);
-    margin-inline-end: px(8);
-    min-width: px(50);
+    height: rem(50);
+    margin-inline-end: em(8);
+    min-width: rem(50);
     vertical-align: middle;
-    width: px(50);
+    width: rem(50);
     }
 
   }
 
   img {
-  border: px(1) #000 solid;
+  border: rem(1) #000 solid;
   }
 
   .alert {
@@ -454,8 +454,8 @@ background-color: #f8924d;
 
 .warning {
 background-color: pink;
-border-left: px(4) red solid;
-padding: px(16);
+border-left: rem(4) red solid;
+padding: em(16);
 
   p {
   margin: 0;
@@ -514,11 +514,11 @@ display: none !important;
 
 .btn, input[type="file"]::file-selector-button {
 background-color: #ffcc36;
-border: px(1) #000 solid;
+border: rem(1) #000 solid;
 color: #000;
 display: inline-block;
 line-height: normal;
-padding: px(15) px(25);
+padding: em(15) em(25);
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
@@ -530,10 +530,10 @@ display: inline-block;
 font-weight: 700;
 line-height: normal;
 margin: 0;
-padding: px(8) px(16);
+padding: em(8) em(16);
 position: relative;
 text-transform: uppercase;
-top: -#{px(8)};
+top: -#{rem(8)};
 }
 
 .anti-pattern {
@@ -559,7 +559,7 @@ padding: 0;
 
     .btn {
     display: block;
-    margin: 0 px(16) px(16) 0;
+    margin: 0 em(16) em(16) 0;
     }
 
   }
@@ -572,16 +572,16 @@ text-align: end;
 }
 
 .param {
-margin-bottom: px(48);
+margin-bottom: em(48);
 
   code {
   display: block;
-  margin: px(5) 0;
+  margin: em(5) 0;
 
     @media(min-width: bp(680)) {
 
       display: inline-block;
-      margin: px(5) px(2.5);
+      margin: em(5) em(2.5);
 
     }
 
@@ -605,7 +605,7 @@ text-decoration: none;
 .read-more__content {
 border: 0;
 padding: 0;
-max-height: px(600);
+max-height: rem(600);
 }
 
 .sr-only:not(:focus):not(:active), .visually-hidden:not(:focus):not(:active) {
@@ -619,7 +619,7 @@ width: 1px;
 }
 
 .table-container {
-margin-bottom: px(32);
+margin-bottom: em(32);
 overflow-X: auto;
 }
 
@@ -641,21 +641,21 @@ width: 100%;
 
 #author {
 background-color: #eee;
-border: px(1) #666 solid;
-border-radius: px(10);
-margin-top: px(16);
-padding: px(16);
+border: rem(1) #666 solid;
+border-radius: rem(10);
+margin-top: em(16);
+padding: em(16);
 
   h2 {
-  margin: 0 0 px(8) 0;
+  margin: 0 0 em(8) 0;
   }
 
   img {
   display: inline-block;
-  width: px(90);
-  margin: 0 px(16) 0 0;
+  width: rem(90);
+  margin: 0 em(16) 0 0;
   vertical-align: middle;
-  border: px(4) $highlight-color solid;
+  border: rem(4) $highlight-color solid;
   border-radius: 50%;
   }
 
@@ -667,25 +667,25 @@ padding: px(16);
 
 #banner {
 background-color: $highlight-color;
-margin: -#{px(16)} -#{px(16)} 0;
-padding: px(12.8) 8% px(6.4);
+margin: -#{em(16)} -#{em(16)} 0;
+padding: em(12.8) 8% em(6.4);
 
   > a {
   color: white;
   display: inline-block;
-  font-size: px(12.8);
-  letter-spacing: px(1);
+  font-size: rem(12.8);
+  letter-spacing: rem(1);
   line-height: normal;
   text-align: end;
   text-decoration: none;
 
     img {
-    width: px(220);
+    width: rem(220);
     }
 
     span {
     display: block;
-    margin-top: px(7);
+    margin-top: rem(7);
     }
 
   }
@@ -695,32 +695,32 @@ padding: px(12.8) 8% px(6.4);
 #content, #contentinfo, #contribute {
 display: block;
 color: inherit;
-margin: px(32) auto 0;
-max-width: px(1600);
+margin: em(32) auto 0;
+max-width: rem(1600);
 }
 
 #main-navigation {
-margin-left: px(16);
+margin-left: em(16);
 position: absolute;
-inset-inline-end: px(8);
-inset-block-start: px(12.8);
+inset-inline-end: rem(8);
+inset-block-start: rem(12.8);
 z-index: 2;
 
   button {
   background-color: #fff;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFODkzREQwRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFODkzREQxRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkU4OTNEQ0VFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkU4OTNEQ0ZFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7a+7OAAAABoklEQVR42mL8//8/w1ADTAxDEIw6etTRw83RLNQ2sIDxA8jMYCBWB+L7QLxhwn+Bz4Pa0UCQAMXKQPwYiIWBeAI1LWCkZjkNDOWpQCoLi9QqYGiHDzpHAx3sCKT24VESAXT4ysGWERMJyMcMxtJDjIA8/2B09EkC8tcGo6MnE5DvHnSOBmayN0DKCohfo0l9A2IfoPzdQVnkQUsRNiAVDcTyQPwMiFcCHfxx0JbTo20POrc91KFltgI0eSwFJo+zg7kajwVSi7BIFQEd3j8Yq3EVIHUbjxILoMNPDrY0nUtAPm8wZkQNAvJyg9HR9wjIPx+Mjp5OQH7GYKzGLwGpQhzSbUD5fYO5GrcGUklI1fgyoIN3jFbjo9U4Ion4QpPHc2DSWEtt86ldjYPK6vVoZfYTIA4DOv74YKzGeaFlMTcOJVJAhz8fbGk6F4+DQaBiMGZEWwLyhoPR0R8IyH8ZjI5eQkB+zWAtPVYAKWxjdnuBmdBlMFfjlQyQITBpIH4FCmGgg6sGe+UyG5q+5aFF4LpBXbmMtj1GHT3q6BHkaIAAAwBX35BOYMGHPwAAAABJRU5ErkJggg==");
   background-position: center;
-  background-size: px(35);
-  border-radius: px(5);
+  background-size: rem(35);
+  border-radius: rem(5);
   border: 0;
-  border: px(1) $highlight-color solid;
-  height: px(45);
+  border: rem(1) $highlight-color solid;
+  height: rem(45);
   margin: 0;
   padding: 0;
   position: inherit;
   inset-inline-end: inherit;
   inset-block-start: inherit;
-  width: px(45);
+  width: rem(45);
 
     &[aria-expanded="true"] + ul {
     display: block;
@@ -730,12 +730,12 @@ z-index: 2;
 
   > ul {
   background-color: #fff;
-  border-radius: px(5);
-  border: px(1) $highlight-color solid;
+  border-radius: rem(5);
+  border: rem(1) $highlight-color solid;
   display: none;
   list-style: none;
   margin: 0;
-  padding: px(16);
+  padding: em(16);
   }
 
   a {
@@ -747,7 +747,7 @@ z-index: 2;
   }
 
   h2 {
-  font-size: px(17.6);
+  font-size: rem(17.6);
   }
 
   p {
@@ -758,11 +758,11 @@ z-index: 2;
 
 #share-button {
 background-color: $highlight-color;
-border-radius: px(5);
+border-radius: rem(5);
 border: 0;
 color: #fff;
-font-size: px(16);
-padding: px(16);
+font-size: remx(16);
+padding: em(16);
 
 	&::before {
 	content: "\f064";
@@ -772,7 +772,7 @@ padding: px(16);
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-	margin-right: px(5);
+	margin-right: em(5);
 	}
 
 }
@@ -782,9 +782,9 @@ padding: px(16);
 body:not(.component-library-disclosure) { 
   
   .disclosure--btn {
-  border-radius: px(5);
+  border-radius: rem(5);
   font-size: inherit;
-  margin: px(4) 0;
+  margin: em(4) 0;
   
     .open {
     background-color: #69788C;
@@ -794,10 +794,10 @@ body:not(.component-library-disclosure) {
 
   .disclosure--content {
   background-color: transparent;
-  border-radius: px(5);
-  border: px(1) #cccccc solid;
-  margin: px(4) 0;
-  padding: 0 px(16);
+  border-radius: rem(5);
+  border: rem(1) #cccccc solid;
+  margin: em(4) 0;
+  padding: 0 em(16);
   }
   
 }
@@ -812,7 +812,7 @@ body:not(#rad-in-page-index) {
   padding: 0;
 
     &__nav {
-    margin: 0 0 px(32);
+    margin: 0 0 em(32);
     }
   
     &__label {
@@ -827,7 +827,7 @@ body:not(#rad-in-page-index) {
     }
 
     &__select {
-    min-width: px(320);
+    min-width: rem(320);
     }
   
   }

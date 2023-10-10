@@ -115,7 +115,7 @@ text-rendering: optimizeLegibility;
 }
 
 code, kbd {
-border-radius: rem(4);
+border-radius: em(4);
 display: inline-block;
 font: inherit;
 margin: em(2);
@@ -142,7 +142,7 @@ margin: em(8) 0;
 
   nav {
   background-color: #efefef;
-  border-radius: rem(10);
+  border-radius: em(10);
   margin: em(16) 0;
   padding: em(16);
   }
@@ -162,7 +162,7 @@ margin: em(16) 0;
 kbd {
 background-color: #ccc;
 color: #000;
-border: rem(1) dotted black
+border: em(1) dotted black
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
@@ -182,7 +182,7 @@ font-weight: bold;
 
 hr[aria-hidden="true"] {
 border: 0;
-border-bottom: rem(1) dashed $highlight-color;
+border-bottom: em(1) dashed $highlight-color;
 margin: em(32) 0;
 }
 
@@ -241,7 +241,7 @@ width: 96%;
 }
 
 pre {
-border-radius: rem(4);
+border-radius: em(4);
 white-space: pre;
 white-space: pre-wrap;
 word-wrap: break-word;
@@ -288,7 +288,7 @@ border-collapse: collapse;
   }
 
   th, td {
-  border-bottom: rem(1) $highlight-color solid;
+  border-bottom: em(1) $highlight-color solid;
   padding: em(16);
 
     code {
@@ -321,7 +321,7 @@ width: 100%;
 
 .bug {
 border-radius: rem(5);
-border: rem(1) #000 solid;
+border: em(1) #000 solid;
 margin: em(16) 0;
 padding: em(8) em(32);
 
@@ -353,11 +353,11 @@ padding: em(8) em(32);
 
 .access-link {
 background-color: #777;
-border-radius: rem(5);
-border: rem(1) white solid;
+border-radius: em(5);
+border: em(1) white solid;
 color: #fff;
 inset-block-start: -999rem;
-inset-inline-start: rem(5);
+inset-inline-start: em(5);
 line-height: normal;
 padding: em(16);
 position: absolute;
@@ -366,14 +366,14 @@ transition: inset-block-start 300ms ease-out;
 z-index: 100;
 
   &:focus {
-  inset-block-start: rem(5);
+  inset-block-start: em(5);
   }
 
 }
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
-border-radius: rem(5);
-border: rem(1) black solid;
+border-radius: em(5);
+border: em(1) black solid;
 color: #000;
 margin: em(16) 0;
 padding: em(8) em(16);
@@ -402,7 +402,7 @@ padding: em(8) em(16);
   }
 
   img {
-  border: rem(1) #000 solid;
+  border: em(1) #000 solid;
   }
 
   .alert {
@@ -454,7 +454,7 @@ background-color: #f8924d;
 
 .warning {
 background-color: pink;
-border-left: rem(4) red solid;
+border-left: em(4) red solid;
 padding: em(16);
 
   p {
@@ -514,7 +514,7 @@ display: none !important;
 
 .btn, input[type="file"]::file-selector-button {
 background-color: #ffcc36;
-border: rem(1) #000 solid;
+border: em(1) #000 solid;
 color: #000;
 display: inline-block;
 line-height: normal;
@@ -533,7 +533,7 @@ margin: 0;
 padding: em(8) em(16);
 position: relative;
 text-transform: uppercase;
-top: -#{rem(8)};
+top: -#{em(8)};
 }
 
 .anti-pattern {
@@ -641,8 +641,8 @@ width: 100%;
 
 #author {
 background-color: #eee;
-border: rem(1) #666 solid;
-border-radius: rem(10);
+border: em(1) #666 solid;
+border-radius: em(10);
 margin-top: em(16);
 padding: em(16);
 
@@ -655,7 +655,7 @@ padding: em(16);
   width: rem(90);
   margin: 0 em(16) 0 0;
   vertical-align: middle;
-  border: rem(4) $highlight-color solid;
+  border: em(4) $highlight-color solid;
   border-radius: 50%;
   }
 
@@ -685,7 +685,7 @@ padding: em(12.8) 8% em(6.4);
 
     span {
     display: block;
-    margin-top: rem(7);
+    margin-top: em(7);
     }
 
   }
@@ -702,8 +702,8 @@ max-width: rem(1600);
 #main-navigation {
 margin-left: em(16);
 position: absolute;
-inset-inline-end: rem(8);
-inset-block-start: rem(12.8);
+inset-inline-end: em(8);
+inset-block-start: em(12.8);
 z-index: 2;
 
   button {
@@ -711,9 +711,9 @@ z-index: 2;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LjljY2M0ZGU5MywgMjAyMi8wMy8xNC0xNDowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjMgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZFODkzREQwRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZFODkzREQxRTEzMTExRUM4MzY3Q0M2MDczRDQyNzhFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NkU4OTNEQ0VFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkU4OTNEQ0ZFMTMxMTFFQzgzNjdDQzYwNzNENDI3OEUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7a+7OAAAABoklEQVR42mL8//8/w1ADTAxDEIw6etTRw83RLNQ2sIDxA8jMYCBWB+L7QLxhwn+Bz4Pa0UCQAMXKQPwYiIWBeAI1LWCkZjkNDOWpQCoLi9QqYGiHDzpHAx3sCKT24VESAXT4ysGWERMJyMcMxtJDjIA8/2B09EkC8tcGo6MnE5DvHnSOBmayN0DKCohfo0l9A2IfoPzdQVnkQUsRNiAVDcTyQPwMiFcCHfxx0JbTo20POrc91KFltgI0eSwFJo+zg7kajwVSi7BIFQEd3j8Yq3EVIHUbjxILoMNPDrY0nUtAPm8wZkQNAvJyg9HR9wjIPx+Mjp5OQH7GYKzGLwGpQhzSbUD5fYO5GrcGUklI1fgyoIN3jFbjo9U4Ion4QpPHc2DSWEtt86ldjYPK6vVoZfYTIA4DOv74YKzGeaFlMTcOJVJAhz8fbGk6F4+DQaBiMGZEWwLyhoPR0R8IyH8ZjI5eQkB+zWAtPVYAKWxjdnuBmdBlMFfjlQyQITBpIH4FCmGgg6sGe+UyG5q+5aFF4LpBXbmMtj1GHT3q6BHkaIAAAwBX35BOYMGHPwAAAABJRU5ErkJggg==");
   background-position: center;
   background-size: rem(35);
-  border-radius: rem(5);
+  border-radius: em(5);
   border: 0;
-  border: rem(1) $highlight-color solid;
+  border: em(1) $highlight-color solid;
   height: rem(45);
   margin: 0;
   padding: 0;
@@ -730,8 +730,8 @@ z-index: 2;
 
   > ul {
   background-color: #fff;
-  border-radius: rem(5);
-  border: rem(1) $highlight-color solid;
+  border-radius: em(5);
+  border: em(1) $highlight-color solid;
   display: none;
   list-style: none;
   margin: 0;
@@ -758,7 +758,7 @@ z-index: 2;
 
 #share-button {
 background-color: $highlight-color;
-border-radius: rem(5);
+border-radius: em(5);
 border: 0;
 color: #fff;
 font-size: remx(16);
@@ -782,7 +782,7 @@ padding: em(16);
 body:not(.component-library-disclosure) { 
   
   .disclosure--btn {
-  border-radius: rem(5);
+  border-radius: em(5);
   font-size: inherit;
   margin: em(4) 0;
   
@@ -794,8 +794,8 @@ body:not(.component-library-disclosure) {
 
   .disclosure--content {
   background-color: transparent;
-  border-radius: rem(5);
-  border: rem(1) #cccccc solid;
+  border-radius: em(5);
+  border: em(1) #cccccc solid;
   margin: em(4) 0;
   padding: 0 em(16);
   }

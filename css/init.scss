@@ -426,6 +426,17 @@ color: #000;
 
 }
 
+.experimental {
+background-color: plum;
+border-left: em(4) $highlight-color solid;
+padding: em(16);
+    
+  p {
+  margin: 0;
+  }
+    
+}
+
 .reminder-info {
 background-color: #f5cd01;
 
@@ -524,25 +535,6 @@ text-decoration: none;
 text-transform: uppercase;
 }
 
-.anti-pattern, .experimental {
-color: #fff;
-display: inline-block;
-font-weight: 700;
-line-height: normal;
-margin: 0;
-padding: em(8) em(16);
-position: relative;
-text-transform: uppercase;
-top: -#{em(8)};
-}
-
-.anti-pattern {
-background-color: #d20000;
-}
-
-.experimental {
-background-color: $highlight-color;
-}
 
 .inline-list {
 list-style: none;

@@ -162,7 +162,7 @@ margin: em(16) 0;
 kbd {
 background-color: #ccc;
 color: #000;
-border: em(1) dotted black
+border: rem(1) dotted black
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
@@ -321,7 +321,7 @@ width: 100%;
 
 .bug {
 border-radius: rem(5);
-border: em(1) #000 solid;
+border: rem(1) #000 solid;
 margin: em(16) 0;
 padding: em(8) em(32);
 
@@ -354,7 +354,7 @@ padding: em(8) em(32);
 .access-link {
 background-color: #777;
 border-radius: em(5);
-border: em(1) white solid;
+border: rem(1) white solid;
 color: #fff;
 inset-block-start: -999rem;
 inset-inline-start: em(5);
@@ -373,7 +373,7 @@ z-index: 100;
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
 border-radius: em(5);
-border: em(1) black solid;
+border: rem(1) black solid;
 color: #000;
 margin: em(16) 0;
 padding: em(8) em(16);
@@ -402,7 +402,7 @@ padding: em(8) em(16);
   }
 
   img {
-  border: em(1) #000 solid;
+  border: rem(1) #000 solid;
   }
 
   .alert {
@@ -514,7 +514,7 @@ display: none !important;
 
 .btn, input[type="file"]::file-selector-button {
 background-color: #ffcc36;
-border: em(1) #000 solid;
+border: rem(1) #000 solid;
 color: #000;
 display: inline-block;
 line-height: normal;
@@ -641,7 +641,7 @@ width: 100%;
 
 #author {
 background-color: #eee;
-border: em(1) #666 solid;
+border: rem(1) #666 solid;
 border-radius: em(10);
 margin-top: em(16);
 padding: em(16);
@@ -655,7 +655,7 @@ padding: em(16);
   width: rem(90);
   margin: 0 em(16) 0 0;
   vertical-align: middle;
-  border: em(4) $highlight-color solid;
+  border: rem(4) $highlight-color solid;
   border-radius: 50%;
   }
 
@@ -712,8 +712,7 @@ z-index: 2;
   background-position: center;
   background-size: rem(35);
   border-radius: em(5);
-  border: 0;
-  border: em(1) $highlight-color solid;
+  border: rem(1) $highlight-color solid;
   height: rem(45);
   margin: 0;
   padding: 0;
@@ -731,7 +730,7 @@ z-index: 2;
   > ul {
   background-color: #fff;
   border-radius: em(5);
-  border: em(1) $highlight-color solid;
+  border: rem(1) $highlight-color solid;
   display: none;
   list-style: none;
   margin: 0;
@@ -795,7 +794,7 @@ body:not(.component-library-disclosure) {
   .disclosure--content {
   background-color: transparent;
   border-radius: em(5);
-  border: em(1) #cccccc solid;
+  border: rem(1) #cccccc solid;
   margin: em(4) 0;
   padding: 0 em(16);
   }

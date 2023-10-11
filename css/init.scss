@@ -792,22 +792,16 @@ body:not(.component-library-disclosure) {
   }
   
 }
+
+// In Page Navigation (Component Library)
   
-body:not(#rad-in-page-index) {
-  
-  .in-page {
-  background-color: transparent;
-  border-radius: 0;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
+.in-page-custom {
 
     &__nav {
     margin: 0 0 em(32);
     }
   
     &__label {
-    font-weight: normal;
     
       @media(min-width: em(778)) {
   
@@ -823,4 +817,3 @@ body:not(#rad-in-page-index) {
   
   }
 
-}

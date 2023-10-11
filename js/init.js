@@ -167,6 +167,37 @@ layout: null
 
 	}
 
+	// URL Copier (Component Library)
+
+	var codeButton = document.querySelectorAll("button[data-code]");
+	var codeText = "Copy link to example";
+
+	codeButton.forEach(function(code, e){
+
+  		code.addEventListener("click", function () {
+
+    		var codeURL = this.getAttribute("data-code");
+
+    		navigator.clipboard.writeText(codeURL).then(function() {
+
+      			code.innerText = "Link Copied!";
+
+    		}, function() {
+
+      			code.innerText = "Link not copied!!"
+  
+    		});
+
+    		setTimeout(function(){
+
+      			code.innerText = codeText;
+
+    		}, 3000);
+
+  		});
+
+	});
+
 })();
 
 /*!

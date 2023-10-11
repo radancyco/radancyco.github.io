@@ -523,6 +523,34 @@ display: none !important;
 
 }
 
+.component-functions {
+  
+  ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  }
+
+  a, button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  padding: 1.5em 1em;
+  text-decoration: none;
+
+    &:hover, &:focus {
+    text-decoration: underline;
+    }
+
+  }
+
+}
+
 .btn, input[type="file"]::file-selector-button {
 background-color: #ffcc36;
 border: rem(1) #000 solid;

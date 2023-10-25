@@ -386,8 +386,11 @@ vertical-align: middle;
   
   g {
   fill: $highlight-color;
+  }
 
-    &:has(h2) {
+  &:has(h2) {
+
+    g {
     fill: #000;
     }
 

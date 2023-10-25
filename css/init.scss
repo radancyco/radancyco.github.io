@@ -283,7 +283,6 @@ border-collapse: collapse;
   }
 
   caption {
-  color: $highlight-color;
   font-size: rem(25.6);
   text-align: start;
   margin-bottom: em(8);
@@ -385,15 +384,7 @@ vertical-align: middle;
   }
   
   g {
-  fill: $highlight-color;
-  }
-
-  &:has(h2) {
-
-    g {
-    fill: #000;
-    }
-
+  fill: #000;
   }
 
 }

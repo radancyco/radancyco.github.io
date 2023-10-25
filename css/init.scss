@@ -563,7 +563,6 @@ margin-top: 2em;
   cursor: pointer;
   display: flex;
   font-size: inherit;
-  justify-content: center;
   line-height: 1.2;
   margin-bottom: 0.5em;  
   padding: 1.2em;
@@ -572,6 +571,7 @@ margin-top: 2em;
 
     @media(min-width: em(680)) {
 
+      justify-content: center;
       margin-bottom: 0;
       margin-right: 0.5em;
       min-width: calc(210rem / 16);
@@ -589,7 +589,7 @@ margin-top: 2em;
 
     .icon {
     line-height: 0;
-    margin-inline-start: em(8);
+    margin-inline-end: em(8);
     }
 
     svg {

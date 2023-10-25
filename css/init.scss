@@ -373,6 +373,28 @@ z-index: 100;
 
 }
 
+.anchor {
+display: inline-block;
+line-height: 0;
+text-decoration: none;
+vertical-align: middle;
+
+  svg {
+  width: rem(25);
+  height: rem(25);
+  }
+  
+  g {
+  fill: $highlight-color;
+
+    &:has(h2) {
+    fill: #000;
+    }
+
+  }
+
+}
+
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
 border-radius: em(5);
 border: rem(1) black solid;

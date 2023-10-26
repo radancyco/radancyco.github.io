@@ -570,7 +570,7 @@ margin: 2em 0;
   font-size: rem(14);
   line-height: 1.2;
   margin-bottom: 0.5em;  
-  padding: 1em;
+  padding: 1.2em;
   text-decoration: none;
   width: 100%;
 
@@ -599,6 +599,22 @@ margin: 2em 0;
     svg {
     width: rem(16);
     height: rem(16);
+    }
+
+    .icon__check {
+    display: none;
+    }
+
+    &.link-copied {
+
+      .icon__copy-url {
+      display: none;
+      }
+
+      .icon__check {
+      display: inline-block;
+      }
+
     }
 
   }

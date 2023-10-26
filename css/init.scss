@@ -592,26 +592,27 @@ margin: 2em 0;
     }
 
     .icon {
+    display: inline-block;
     line-height: 0;
     margin-inline-end: em(11);
     }
 
     svg {
-    width: rem(16);
     height: rem(16);
+    width: rem(16);
     }
 
-    .icon__check {
+    .icon-check {
     display: none;
     }
 
     &.link-copied {
 
-      .icon__copy-url {
+      .icon-copy-url {
       display: none;
       }
 
-      .icon__check {
+      .icon-check {
       display: inline-block;
       }
 

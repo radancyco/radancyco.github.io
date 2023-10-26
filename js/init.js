@@ -170,7 +170,6 @@ layout: null
 	// URL Copier (Component Library)
 
 	var codeButton = document.querySelectorAll("button[data-code]");
-	var codeText = "Copy link to example";
 
 	codeButton.forEach(function(code, e){
 
@@ -180,17 +179,18 @@ layout: null
 
     		navigator.clipboard.writeText(codeURL).then(function() {
 
-      			code.innerText = "Link Copied!";
+				code.add.classList("link-copied");
 
     		}, function() {
 
-      			code.innerText = "Link not copied!!"
+				code.add.classList("link-not-copied");
   
     		});
 
     		setTimeout(function(){
 
-      			code.innerText = codeText;
+				code.remove.classList("link-copied");
+				code.remove.classList("link-not-copied");
 
     		}, 3000);
 

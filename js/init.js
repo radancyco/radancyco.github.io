@@ -179,18 +179,18 @@ layout: null
 
     		navigator.clipboard.writeText(codeURL).then(function() {
 
-				code.add.classList("link-copied");
+				code.classList.add("link-copied");
 
     		}, function() {
 
-				code.add.classList("link-not-copied");
+				code.classList.add("link-not-copied");
   
     		});
 
     		setTimeout(function(){
 
-				code.remove.classList("link-copied");
-				code.remove.classList("link-not-copied");
+				code.classList.remove("link-copied");
+				code.classList.remove("link-not-copied");
 
     		}, 3000);
 

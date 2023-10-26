@@ -542,10 +542,11 @@ display: none !important;
 }
 
 .component-functions {
-margin-top: 2em;
+margin: 2em 0;
   
   ul {
   list-style: none;
+  margin: 0;
   padding: 0;
 
     @media(min-width: em(680)) {
@@ -554,18 +555,22 @@ margin-top: 2em;
 
     }
 
+    li {
+    width: auto;
+    }
+
   }
 
   a, button {
   background-color: transparent;
-  border: calc(1rem / 16) solid #ccc;
+  border: calc(1rem / 16) solid #000;
   color: #000;
   cursor: pointer;
   display: flex;
   font-size: inherit;
   line-height: 1.2;
   margin-bottom: 0.5em;  
-  padding: 1.2em;
+  padding: 1em;
   text-decoration: none;
   width: 100%;
 

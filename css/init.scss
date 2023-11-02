@@ -395,9 +395,12 @@ color: #000;
 margin: em(16) 0;
 padding: em(16);
 
-
   a, button, h3 {
   color: inherit;
+  }
+
+  h3 {
+  font-weight: 600;
   }
 
   h2:first-child, .info-heading {

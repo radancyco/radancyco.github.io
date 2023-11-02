@@ -390,11 +390,11 @@ vertical-align: middle;
 }
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
-border-radius: em(5);
-border: rem(1) black solid;
+border-left: em(4) #000 solid;
 color: #000;
 margin: em(16) 0;
-padding: em(8) em(16);
+padding: em(16);
+
 
   a, button, h3 {
   color: inherit;
@@ -410,11 +410,11 @@ padding: em(8) em(16);
     background-size: contain;
     content: "";
     display: inline-block;
-    height: rem(50);
+    height: rem(40);
     margin-inline-end: em(8);
-    min-width: rem(50);
+    min-width: rem(40);
     vertical-align: middle;
-    width: rem(50);
+    width: rem(40);
     }
 
   }
@@ -431,6 +431,7 @@ padding: em(8) em(16);
 
 .a11y-info {
 background-color: #40E8D4;
+border-color: #4068e8;
 color: #000;
 
   h2:first-child, .info-heading {
@@ -457,6 +458,7 @@ padding: em(16);
 
 .reminder-info {
 background-color: #f5cd01;
+border-color: orange;
 
   h2:first-child, .info-heading {
 
@@ -470,6 +472,7 @@ background-color: #f5cd01;
 
 .resource-info {
 background-color: #f8924d;
+border-color: #9e4307;
 
   h2:first-child, .info-heading {
 
@@ -493,7 +496,7 @@ padding: em(16);
 }
 
 .warning-info {
-background-color: #dda1a1;
+background-color: pink;
 border-color: red;
 
   h2:first-child, .info-heading {
@@ -508,6 +511,7 @@ border-color: red;
 
 .qa-info {
 background-color: #dfc9f8;
+border-color: $highlight-color;
 
   h2:first-child, .info-heading {
 

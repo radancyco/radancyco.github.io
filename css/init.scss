@@ -403,6 +403,10 @@ padding: em(16);
   font-weight: 600;
   }
 
+  video {
+  max-width: rem(800);
+  }
+
   h2:first-child, .info-heading {
   display: flex;
   align-items: center;

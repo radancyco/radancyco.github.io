@@ -122,8 +122,10 @@ display: inline-block;
 font: inherit;
 margin: em(2);
 padding: em(3.2) em(16);
-word-wrap: break-word;
+white-space: nowrap;
 }
+
+code:not(".language-html"):not(".language-html"):not(".language-html")
 
 code {
 background-color: #333;
@@ -644,8 +646,32 @@ padding: em(15) em(25);
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
-}
 
+  // Only used for examples.
+
+  .icon {
+  display: inline-block;
+  line-height: 0;
+  margin-inline-end: em(11);
+  }
+
+  .icon-check {
+  display: none;
+  }
+
+  &[aria-pressed="true"] {
+
+    .icon-copy-url {
+    display: none;
+    }
+
+    .icon-check {
+    display: inline-block;
+    }
+
+  }
+
+}
 
 .inline-list {
 list-style: none;

@@ -646,8 +646,11 @@ padding: em(15) em(25);
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
+}
 
-  // Only used for examples.
+// Only used for examples.
+
+.btn {
 
   .icon {
   display: inline-block;
@@ -666,7 +669,7 @@ text-transform: uppercase;
 
   &[aria-pressed="true"] {
 
-    .icon-copy-url {
+    .icon-favorite {
     display: none;
     }
 

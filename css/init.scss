@@ -964,6 +964,7 @@ body:not(.component-library-disclosure) {
 
       @media(min-width: em(320)) {
 
+        width: auto;
         min-width: rem(320);
 
       }

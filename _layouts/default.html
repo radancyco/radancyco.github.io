@@ -2,7 +2,7 @@
 <html lang="{{ site.lang }}" class="no-js">
 <head>
     <meta charset="{{ site.charset }}">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
     <meta content="noindex, nofollow" name="robots">
     <meta content="{{ site.theme-color }}" name="theme-color">{% if page.slick %}
     <link href="{{ site.git-url }}/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">{% endif %}{% if page.in-page %}
@@ -11,8 +11,8 @@
     <link href="{{ site.git-url }}/component-library/tabcordion/init.css" rel="stylesheet">{% endif %}
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.librarycss %}
     <link href="{{ page.librarycss}}" rel="stylesheet">{% endif %}{% if page.localcss %}
-    <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}{% if page.custom %}
-    <link href="{{ page.customcss}}" rel="stylesheet">{% endif %}
+    <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customcss %}
+    <link href="{{ component.customcss }}.css" rel="stylesheet">{% endif %}{% endfor %}{% endif %}
     <link href="{{ site.git-url }}/favicon.ico" rel="icon">
     <link href="{{ site.git-url }}/manifest.json" rel="manifest">
     <title>{{ page.title }} - {{ site.company-name }}</title>
@@ -82,8 +82,8 @@
   <script src="{{ site.git-url }}/component-library/tabcordion/init.js"></script>{% endif %}
   <script src="{{ site.git-url }}/js/init.js"></script>{% if page.libraryjs %}
   <script src="{{ page.libraryjs}}"></script>{% endif %}{% if page.localjs %}
-  <script src="{{ page.localjs }}"></script>{% endif %}{% if page.customjs %}
-  <script src="{{ page.customjs}}"></script>{% endif %}
+  <script src="{{ page.localjs }}"></script>{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customjs %}
+  <script src="{{ component.customjs }}"></script>{% endif %}{% endfor %}{% endif %}
 
 </body>
 </html>

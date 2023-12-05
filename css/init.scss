@@ -959,16 +959,7 @@ body:not(.component-library-disclosure) {
 
     &__select {
     font-size: inherit;
-    width: 98%;
     padding: em(8);
-
-      @media(min-width: em(320)) {
-
-        width: auto;
-        min-width: rem(320);
-
-      }
-
     }
 
     &__content {

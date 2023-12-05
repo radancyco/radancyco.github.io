@@ -16,7 +16,8 @@ self.addEventListener("install", function(event) {
 
       return caches.open("radancy-offline").then(function(cache) {
 
-        console.log("{{ site.company-name }} cached index page during install" + response.url);
+        console.log("{{ site.company-name }} cached index page during install: " + response.url);
+        
         return cache.put(indexPage, response);
 
       });
@@ -35,7 +36,7 @@ self.addEventListener("fetch", function(event) {
 
       return fetch(request).then(function (response) {
 
-        console.log("{{ site.company-name }} added page to offline" + response.url)
+        console.log("{{ site.company-name }} added page to offline: " + response.url)
 
         return cache.put(request, response);
 

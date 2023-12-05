@@ -959,7 +959,7 @@ body:not(.component-library-disclosure) {
 
     &__select {
     font-size: inherit;
-    min-width: rem(420);
+    max-width: rem(420);
     padding: em(8);
     width: 100%;
     }

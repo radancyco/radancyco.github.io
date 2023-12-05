@@ -18,21 +18,19 @@ At {{ site.company-name }}, we embrace web standards and keep up-to-date with th
 
 * HTML5
 * CSS3
-* JavaScript (ES6/ES5)
+* JavaScript (Latest))
 * jQuery (Latest)
 
 ### 1.1 Accessibility
 
-All of your prospective job candidates, regardless of physical or technological capabilities, have the right to learn more about your company and access all job listings. To preserve a users right to universal access, our baseline development standards for all of our web offerings attempt to meet WCAG 2.1 Level AA guidelines at all times.
+See [{{ site.company-name }} Support]({{ site.company-url }}/support/#accessibility) for more details. For more detailed information about WCAG, please see:
 
-* [WCAG 2.1 Documentation](https://www.w3.org/TR/WCAG21/)
-* [How to Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.1)
-* [Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
-* [Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
+* [WCAG 2.2 Documentation](https://www.w3.org/TR/WCAG22/)
+* [How to Meet WCAG 2.2](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2)
+* [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/)
+* [Techniques for WCAG 2.2](https://www.w3.org/WAI/WCAG22/Techniques/)
 
 ### 1.2 Operating System Support
-
-{{ site.company-name }} supports websites and applications on the following operating systems:
 
 See [{{ site.company-name }} Support]({{ site.company-url }}/support/#operating-systems) for more details.
 
@@ -50,17 +48,25 @@ See [{{ site.company-name }} Support]({{ site.company-url }}/support/#browser-su
 
 <p class="alert">Not Recommended</p>
 
-<pre><code>Banner Home Background.jpg
+{% highlight html %}
+
+Banner Home Background.jpg
 logo_1.png
 doc-How_To_Apply.pdf
-coffee.shop.jpg</code></pre>
+coffee.shop.jpg
+
+{% endhighlight %}
 
 <p class="success"> Recommended</p>
 
-<pre><code>home-banner-background.jpg
+{% highlight html %}
+
+home-banner-background.jpg
 logo-1.png
 doc-how-to-apply.pdf
-coffee-shop.jpg</code></pre>
+coffee-shop.jpg
+
+{% endhighlight %}
 
 [Return to Table of Contents](#toc){: .back-to-toc }
 
@@ -116,7 +122,7 @@ Make all efforts to optimize video as much as possible—especially if it is bei
 
 <h2>Video Captions</h2>
 
-Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
+Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](hhttps://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
 
 </section>
 
@@ -177,7 +183,9 @@ All third-party libraries should be minified unless some sort of customization h
 
 <p class="alert">Not Recommended: Using a span</p>
 
-<pre><code>.nav-item {
+{% highlight css %}
+
+.nav-item {
 padding: .5em;
 
   span {
@@ -188,11 +196,15 @@ padding: .5em;
   width: 20px;
   }
 
-}</code></pre>
+}
+
+{% endhighlight %}
 
 <p class="success">Recommended: Using a pseudo-element</p>
 
-<pre><code>.nav-item {
+{% highlight css %}
+
+.nav-item {
 padding: .5em;
 
   &::after {
@@ -203,7 +215,9 @@ padding: .5em;
   width: 20px;
   }
 
-}</code></pre>
+}
+
+{% endhighlight %}
 
 [Return to Table of Contents](#toc){: .back-to-toc }
 
@@ -215,7 +229,9 @@ padding: .5em;
 
 **Always include an author comment block at the top of your CSS.** This is an important resource for any developers who work on the code after you.
 
-<pre><code>/*!
+{% highlight css %}
+
+/*!
 
 Title: [Project Title]
 Author: [Company & Office Name]
@@ -231,7 +247,9 @@ Manager: PSS or DPM Name (Email Address)
 Date: [YYYY-MM-DD]
 Comments: [Succinct description of tasks performed]
 
-*/</code></pre>
+*/
+
+{% endhighlight %}
 
 #### 4.1.2 CSS Spacing & Line Breaks
 
@@ -262,7 +280,9 @@ Comments: [Succinct description of tasks performed]
 * Use single quotes around strings (or URLs), unless the single quotes would need to be escaped.
     * E.g. `url('hello-world.png');` or `content: "'this has single quotes'";`.
 
-<pre><code>/* Example */
+{% highlight css %}
+
+/* Example */
 
 .box {
 background-color: #fff;
@@ -277,7 +297,9 @@ display: block;
 
 .box + .box {
 margin-top: 1em;
-}</code></pre>
+}
+
+{% endhighlight %}
 
 #### 4.1.4 CSS Selectors
 
@@ -287,16 +309,23 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 
 <p class="alert">Not Recommended</p>
 
-<pre><code>.one .two .three .four div {
+{% highlight css %}
+
+.one .two .three .four div {
 display: block;
-}</code></pre>
+}
+
+{% endhighlight %}
 
 <p class="success">Recommended</p>
 
-<pre><code>.one .two div {
+{% highlight css %}
+
+.one .two div {
 display: block;
 }
-</code></pre>
+
+{% endhighlight %}
 
 ##### 4.1.4.2 Naming
 
@@ -310,14 +339,25 @@ display: block;
 
 <p class="alert">Not Recommended</p>
 
-<pre><code>.parent__child {}
+{% highlight css %}
+
+.parent__child {}
+
 .parent_child {}
-.left-box {}</code></pre>
+
+.left-box {}
+
+{% endhighlight %}
 
 <p class="success">Recommended</p>
 
-<pre><code>.parent-name-child-name {}
-.related-links {}</code></pre>
+{% highlight css %}
+
+.parent-name-child-name {}
+
+.related-links {}
+
+{% endhighlight %}
 
 ##### 4.1.4.3 Complexity
 
@@ -327,21 +367,29 @@ display: block;
 
 <p class="alert">Not Recommended</p>
 
-<pre><code>&lt;ul class="floatLeft paddingT10 paddingB10 nav-parent"&gt;
-  &lt;li class="caps paddingL10 paddingR10 marginT10"&gt;&lt;a class="bold textRed" href="#link-1"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="caps paddingL10 paddingR10 marginT10"&gt;&lt;a class="bold textRed" href="#link-2"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="caps paddingL10 paddingR10 marginT10"&gt;&lt;a class="bold textRed" href="#link-3"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="caps paddingL10 paddingR10 marginT10"&gt;&lt;a class="bold textRed" href="#link-4"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+{% highlight html %}
+
+<ul class="floatLeft paddingT10 paddingB10 nav-parent">
+  <li class="caps paddingL10 paddingR10 marginT10"><a class="bold textRed" href="#link-1">Link 1</a></li>
+  <li class="caps paddingL10 paddingR10 marginT10"><a class="bold textRed" href="#link-2">Link 2</a></li>
+  <li class="caps paddingL10 paddingR10 marginT10"><a class="bold textRed" href="#link-3">Link 3</a></li>
+  <li class="caps paddingL10 paddingR10 marginT10"><a class="bold textRed" href="#link-4">Link 4</a></li>
+</ul>
+
+{% endhighlight %}
 
 <p class="success">Recommended</p>
 
-<pre><code>&lt;ul class="nav-parent"&gt;
-  &lt;li&gt;&lt;a href="#link-1"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#link-2"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#link-3"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#link-4"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+{% highlight html %}
+
+<ul class="nav-parent">
+  <li><a href="#link-1">Link 1</a></li>
+  <li><a href="#link-2">Link 2</a></li>
+  <li><a href="#link-3">Link 3</a></li>
+  <li><a href="#link-4">Link 4</a></li>
+</ul>
+
+{% endhighlight %}
 
 [Return to Table of Contents](#toc){: .back-to-toc }
 
@@ -378,12 +426,16 @@ The same rules for CSS also apply to SASS, unless specified below.
 
 It is very important that all UI Developers have a consistent and uniform structure for their SASS directories. You will find yourself using the same base SASS files for multiple projects.
 
-<pre><code>scss/
+{% highlight html %}
+
+scss/
 ├── core/        Variables, functions, mixins
 ├── partials/    Global styles
 ├── vendor/      Vendor-provided styles, e.g. Flexslider
 ├── views/       Page-specific styles
-└── global.scss  Primary SASS file</code></pre>
+└── global.scss  Primary SASS file
+
+{% endhighlight %}
 
 [Return to Table of Contents](#toc){: .back-to-toc }
 
@@ -522,5 +574,3 @@ Below are recommended plugins listed for each recommended editor (if they suppor
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
 
 [Return to Table of Contents](#toc){: .back-to-toc }
-
-{% include bio-spell.html %}

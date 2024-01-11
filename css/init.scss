@@ -514,10 +514,10 @@ border-color: #9e4307;
   display: inline-block;
   width: em(18);
   vertical-align: middle;
-  margin-inline-end: em(.5);
+  margin-inline-end: em(5);
   }
 
-  .active & {
+  &.active {
 
     svg {
     fill: #fff;

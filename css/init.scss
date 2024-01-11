@@ -508,6 +508,25 @@ border-color: #9e4307;
 
 }
 
+.tab-accordion__button {
+
+  .icon {
+  display: inline-block;
+  width: em(18);
+  vertical-align: middle;
+  margin-inline-end: em(.5);
+  }
+
+  .active & {
+
+    svg {
+    fill: #fff;
+    }
+
+  }
+
+}
+
 .warning {
 background-color: pink;
 border-left: em(4) red solid;

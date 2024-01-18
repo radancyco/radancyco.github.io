@@ -472,6 +472,7 @@ color: #000;
 .experimental {
 background-color: lighten($highlight-color, 35%);
 border-left: em(4) $highlight-color solid;
+margin-bottom: em(5);
 padding: em(16);
     
   p {
@@ -530,6 +531,7 @@ border-color: #9e4307;
 .warning {
 background-color: pink;
 border-left: em(4) red solid;
+margin-bottom: em(5);
 padding: em(16);
 
   p {

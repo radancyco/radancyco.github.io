@@ -338,32 +338,22 @@ height: auto;
 width: 100%;
 }
 
+// Accessibility Patch Page
+
 .bug {
-border-radius: rem(5);
 border: rem(1) #000 solid;
 margin: em(16) 0;
-padding: em(8) em(32);
+padding: em(16) em(32);
 
-  ul {
-  padding: 0;
+  dl {
+  margin: 0;
   }
+  
+  dt {
+  font-weight: bold;
 
-  li {
-  display: inline-block;
-  margin-right: 1em;
-  }
-
-  &.high {
-  background-color: #d20000;
-  color: #fff;
-
-    a, h3 {
-    color: inherit;
-    }
-
-    code {
-    //background-color: salmon;
-    //color: #000;
+    &::after {
+    content: ":";
     }
 
   }

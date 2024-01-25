@@ -470,18 +470,6 @@ color: #000;
 
 }
 
-.experimental {
-background-color: lighten($highlight-color, 35%);
-border-left: em(4) $highlight-color solid;
-margin-bottom: em(5);
-padding: em(16);
-    
-  p {
-  margin: 0;
-  }
-    
-}
-
 .reminder-info {
 background-color: #f5cd01;
 border-color: orange;
@@ -529,16 +517,31 @@ border-color: #9e4307;
 
 }
 
-.warning {
-background-color: pink;
-border-left: em(4) red solid;
+.experimental, .warning, .note {
+border-left-width: em(4);
+border-left-style: solid;
 margin-bottom: em(5);
 padding: em(16);
-
+      
   p {
   margin: 0;
   }
+      
+}
 
+.experimental {
+background-color: lighten($highlight-color, 35%);
+border-left-color: $highlight-color;
+}
+
+.note {
+background-color: lightblue;
+border-left-color: blue;
+}
+
+.warning {
+background-color: pink;
+border-left-color: red;
 }
 
 .warning-info {

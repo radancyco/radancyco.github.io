@@ -790,8 +790,9 @@ width: 1px;
 }
 
 .table-container {
-margin-bottom: em(32);
+margin-bottom: em(16);
 overflow-X: auto;
+padding-bottom: em(16);
 scrollbar-color: $highlight-color;
 scrollbar-gutter: always; 
 -webkit-overflow-scrolling: touch;

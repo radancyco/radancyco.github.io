@@ -30,7 +30,11 @@
 
         {% if page.navigation != false %}
 
-          {% include navigation.html %}
+          <nav aria-label="Main" id="main-navigation">
+
+            {% include navigation.html %}
+
+          </nav>
 
         {% endif %}
 

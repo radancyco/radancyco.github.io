@@ -1,0 +1,39 @@
+---
+title: "Radancy DevBlog"
+---
+
+<p>Explore Radancy's DevBlog, brimming with insightful posts and expert guidance covering a diverse array of topics from our Subject Matter Experts.</p>
+
+<h2>All Posts</h2>
+
+{% for post in site.posts %} 
+
+{% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+
+    <article class="article-overview">
+
+        <div class="article-overview__img">
+
+            <img src="{{ post.img }}" alt="Headshot of {{ post.author }}">
+      
+        </div>
+
+        <div class="article-overview__details">
+
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+
+            <ul>
+                <li><span class="visually-hidden">Posted by:</span> {{ post.author }}{% if post.role %}, {{ post.role }}{% endif %}</li>
+                <li><span class="visually-hidden">Posted:</span> {{ post.date | date: "%A, %B %e, %Y" }}</li>
+                {% if post.update %}
+                <li><span>Update:</span> {{ post.update | date: "%A, %B %e, %Y" }}</li>
+                {% endif %}
+            </ul>
+
+        </div>
+
+    </article>
+
+{% endfor %}
+
+

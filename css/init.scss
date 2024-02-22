@@ -588,6 +588,59 @@ display: none !important;
 
 }
 
+.article-overview {
+align-items: center;
+border-bottom: 4px $highlight-color solid;
+display: flex;
+padding: 1em;
+position: relative;
+transition: 300ms;
+
+  &:hover, &:focus-within {
+  background-color: rgba($highlight-color, 0.2);
+  }
+
+  h2 {
+  margin: 0;
+  }
+
+  a {
+  text-decoration: none;
+
+    &:before {
+    content: "";
+    display: block;
+    inset: 0;
+    position: absolute;
+    }
+
+    &:active {
+    color: inherit;
+    }
+
+  }
+  
+  img {
+  border-radius: 50%;
+  max-width: calc(80rem/16);
+  }
+  
+  span {
+  font-weight: bold;
+  }
+
+  &__details {
+  margin-left: 1em;
+  }
+  
+  ul {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  }
+    
+}
+
 .component-functions {
 margin: 2em 0;
   
@@ -769,6 +822,35 @@ text-decoration: none;
   color: inherit;
   }
 
+}
+
+// Blog Posting
+
+.post-overview {
+align-items: center;
+border-bottom: 4px $highlight-color solid;
+display: inline-flex;
+font-size: 0.92rem;
+margin-bottom: 1em;
+padding-bottom: 1em;
+
+  &
+
+  img {
+  border-radius: 50%;
+  max-width: calc(65rem/16);
+  }
+
+  span {
+  font-weight: bold;
+  }
+
+  ul {
+  list-style: none;
+  margin: 0 0 0 1em;
+  padding: 0;
+  }
+  
 }
 
 // Read More Override

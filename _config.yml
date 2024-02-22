@@ -14,19 +14,19 @@ exclude: [
 ]
 description: Our open design and development resource! We believe in open standards, transparency, collaboration and want to give back to a community that has given so much to us!
 destination: _httpdocs
+# git-url: https://radancy.dev
 highlighter: rouge
+include: [_*.*]
 lang: en
 markdown: kramdown
 name: Web Standards
 navigation: true
-nickname: RadDev
 owner-name: Michael Spellacy
 owner-email: michael.spellacy@radancy.com
 owner-image: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
 permalink: /:title/
 port: 4005
-repo: https://github.com/radancyco/radancyco.github.io
+repo: https://github.com/radancyco/component-library
 sass:
   style: :compressed
 theme-color: "#6E00EE"
-url: https://radancy.dev

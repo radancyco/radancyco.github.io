@@ -521,43 +521,15 @@ The decision to remove outlines from focusable elements must be carefully consid
 
 [Return to Table of Contents](#toc){: .back-to-toc }
 
-## 10. Recommended Tools
+## 10. Publications
 
-### 10.1 Editors
-
-* [Sublime Text](https://www.sublimetext.com/)
-* [Atom](https://atom.io/)
-
-#### 10.1.1 Editor Plugins
-
-Below are recommended plugins listed for each recommended editor (if they support plugins).
-
-##### 10.1.1.1 Sublime Text
-
-* [Package Control](https://sublime.wbond.net/)
-* [EditorConfig](https://sublime.wbond.net/packages/EditorConfig)
-    * [Download our standard EditorConfig file](../../docs/editorconfig.txt), rename it to `.editorconfig`, and place it in your project root.
-* [Emmet](https://sublime.wbond.net/packages/Emmet)
-* [HTML-CSS-JS Prettify](https://sublime.wbond.net/packages/HTML-CSS-JS%20Prettify)
-* [Nettuts+ Fetch](https://sublime.wbond.net/packages/Nettuts%2B%20Fetch)
-* [SASS](https://sublime.wbond.net/packages/Sass)
-* [SublimeLinter](https://sublime.wbond.net/packages/SublimeLinter)
-    * [SublimeLinter-contrib-scss-lint](https://sublime.wbond.net/packages/SublimeLinter-contrib-scss-lint)
-    * [SublimeLinter-csslint](https://sublime.wbond.net/packages/SublimeLinter-csslint)
-    * [SublimeLinter-html-tidy](https://sublime.wbond.net/packages/SublimeLinter-html-tidy)
-    * [SublimeLinter-jshint](https://sublime.wbond.net/packages/SublimeLinter-jshint)
-
-[Return to Table of Contents](#toc){: .back-to-toc }
-
-## 11. Publications
-
-### 11.1 Required Reading
+### 10.1 Required Reading
 
 * [A Dao of Web Design by John Allsopp](https://alistapart.com/article/dao)
 * [Ethical Design Manifesto](https://2017.ind.ie/)
 * [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
 
-### 11.2 (Highly) Recommended Reading
+### 10.2 (Highly) Recommended Reading
 
 * [Accessibility for Everyone by Laura Kalbag](https://abookapart.com/products/accessibility-for-everyone/)
 * [Adaptive Web Design (1st Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)

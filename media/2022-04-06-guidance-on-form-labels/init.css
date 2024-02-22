@@ -1,0 +1,50 @@
+
+.examples label, .examples input, .examples legend {
+display: block;
+font-size: 1.5rem;
+}
+    
+.examples label, .examples legend {
+font-weight: bold;
+margin-bottom: 0;
+}
+    
+.examples fieldset {
+border-radius: 10px;
+border: 1px #000 solid;
+padding: 1em;
+}
+    
+.examples input {
+border: 1px #000 solid;
+padding: .5em;
+}
+    
+.examples fieldset input {
+max-width: 100px;
+margin: .5em .5em .5em 0;
+display: inline-block;
+}
+    
+.examples .float-example {
+position: relative;
+}
+    
+.examples .float-example label {
+display: inline-block;
+font-weight: normal;
+inset-block-start: 8px;
+inset-inline-start: 10px;
+line-height: normal;
+position: absolute;
+transition: all .2s ease;
+z-index: 2;
+}
+    
+.examples .float-example input:focus ~ label,  .examples .float-example input:valid ~ label {
+background-color: #fff;
+font-size: .8rem;
+inset-block-start: -9px;
+padding: 0 1em;
+}
+    

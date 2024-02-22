@@ -1,0 +1,45 @@
+---
+author: Michael "Spell" Spellacy
+date: "2023-06-16 10:42:04"
+email: michael.spellacy@radancy.com
+img: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+layout: micropubpost
+role: Director, Accessibility
+tags: Accessibility
+title: "Guidance on Designing and Implementing New Windows"
+update: "2024-02-14 08:32:27"
+---
+
+<p>Launching a new window unexpectedly changes context, which can be very disorienting for some people. Especially those who are blind, have low-vision, or who have cognitive disabilities. The decision to open a new window should always be made carefully and in the service of solving particular problems.</p>
+
+<h2>The Exception and Not the Rule</h2>
+
+<p>Opening new windows because somebody is leaving your site or for fear of diminished SEO is not a good enough reason. Often, it is best to leave the decision to open a new window up to the user. However, there are a couple of good reasons to open new windows. These include:</p>
+ 
+<ul>
+	<li>Opening a page containing context-sensitive information, such as help or other relevant content. For example, while filling out a form, you may wish for a user to access critical information before continuing. Opening a new window is necessary here, so that the user does not lose the information that they have already filled out.</li>
+	<li>The user is logged into a secured area of a site, and following a link to a page outside of the secured area would terminate the user's logon. In this case opening external links in an external window allows the user to access such references while keeping their login active in the original window.</li>
+    <li>Third-party features, such as social sharing functionality.</li>
+</ul>
+    
+<p>When we do make the decision to open a new window, we must take care to design and develop <em>responsibly</em>. Visually, we should include a signifier icon and a developer or CMS content creator will then do their part in the code to make it accessible to assistive technology users. A perfect example of this can be found in the privacy policy links often found on Job Alert forms. If we do not open a new window here, data will be lost, which is a justified reason:</p>
+ 
+<img alt="Screenshot of Job Alert form that contains a signifier link, indicating that it will open a new window." src="{{ site.url }}{{ site.baseurl }}/media/2023-06-16-guidance-on-new-windows/job-alerts.png">
+
+<p>The code may look something like this:</p>
+
+{% highlight html %}<a href="../privacy-policy/" target="_blank">Privcy Policy <img src="new-window.png" alt="Opens in a new window"></a>{% endhighlight %}
+
+<p>There are several different ways to handle coding here. This is the most direct and is an excellent example of doing something in an equal way for both disabled and non-disabled users alike.</p>
+ 
+<p>Thank you for <em>your</em> effort in helping make the websites Radancy produces more inclusive and friendly to all.</p> 
+
+<h2>Resources</h2>
+
+<ul>
+    <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G201.html">Giving users advanced warning when opening a new window by W3C</a></li>
+    <li><a href="https://adrianroselli.com/2020/02/link-targets-and-3-2-5.html">Link Targets and 3.2.5 by Adrian Roselli</a></li>
+    <li><a href="https://michaelspellacy.com/the-last-word-on-opening-new-windows/">The Last Word (Maybe) on Opening New Windows by Michael Spellacy</a></li>
+    <li><a href="https://knowbility.org/blog/2019/links-opening-new-windows-no-warning">How to Stop Opening Links in New Windows without Warning by Nicholas Steenhout</a></li>
+</ul>
+

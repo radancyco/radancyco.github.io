@@ -1,0 +1,260 @@
+---
+author: Michael "Spell" Spellacy
+date: "2022-04-06 09:27:48"
+disclosure: true
+email: michael.spellacy@radancy.com
+img: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+layout: micropubpost
+localcss: /media/2022-04-06-guidance-on-form-labels/init.css
+role: Director, Accessibility
+tags: Accessibility Development
+title: "Guidance on Designing & Implementing Form Labels"
+update: 2024-02-21 02:21:11
+---
+
+<p>In an effort to improve the way in which Radancy includes form labels within its sites and products, this document seeks to introduce more clearly defined guidance that can be shared with all team members. Especially designers, developers, and QA engineers. Inclusion of a proper label is critical and allows more people to understand and use the form. Omission or poor implementation of a label is also considered a direct failure of <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html">Success Criterion 3.3.2 Labels or Instructions</a>.</p>
+
+<section class="examples" id="overview">
+
+  <h2>Label Placement Overview</h2>
+
+  <h3>Placeholder as Label Replacement</h3>
+
+  <input placeholder="Keyword">
+
+  <p>This is bad. Don't do it. Placeholder text, as seen here, is not a replacement for a label. Development will likely ask you to alter it with one of the two solutions below.</p>
+
+  <h3>Floating Label</h3>
+  
+  <form class="float-example">
+
+    <input id="overview-1" required>
+
+    <label for="overview-1">Keyword</label>
+
+  </form>
+
+  <p>This is better, but not a perfect solution (go ahead and click on it). <a href="#floating-labels">Know the risks</a> and use with caution. While we can make an exception from time to time to use this technique on basic search forms, on more complex forms like the Job Alert, we should always include a label outside of the field.</p>
+
+  <h3>Label Outside of Field</h3>
+  
+  <label for="overview-2">Keyword</label>
+
+  <input id="overview-2">
+
+  <p>This is best. Simple and bulletproof and clear to all users, including those with disabilities. Can be designed in several different ways. Here, additional placeholder text can be added if desired, but see below details on when and when not to use placeholder text.</p>
+
+</section>
+
+<section id="rules">
+
+  <h2>Rules</h2>
+
+  <ol>
+    <li>All form fields must include a visible label. See <a href="#exceptions">exceptions</a>.</li>
+    <li><a href="#placeholder-as-label">Placeholder values are not an appropriate alternative for labels.</a></li>
+    <li><a href="#placeholder-redundancy">Placeholder values may not duplicate what is already found in a label.</a></li>
+    <li><a href="#placeholder-hidden-label">Placeholders may not be used with hidden labels.</a></li>
+    <li><a href="#proper-placeholder-use">Placeholder values may only be used to provide supplemental or suggestive information.</a></li>
+    <li><a href="#critical-information">Critical information about a form field must always be placed outside of the field.</a></li>
+    <li><a href="#contrast-friendly">Placeholder values must always be contrast friendly.</a></li>
+  </ol>
+
+</section>
+
+<section id="exceptions">
+
+  <h2>Exceptions</h2>
+
+  <ol>
+    <li>Certain types of forms are so ubiquitous that they have become a common and well understood convention across the web. For example, a global site search that utilizes a single input field and button may not require a visible label.</li>
+    <li>Certain types of information may have labels omitted if they are grouped together properly. See <a href="#grouping-inputs">grouping inputs</a> example.</li>
+  </ol>
+
+</section>
+
+<section class="warning-info" id="floating-labels">
+
+  <h2>Floating Labels: A Word of Warning</h2>
+
+  <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. However, there may be times when this is not always possible. In such cases, the <a href="https://radancy.dev/component-library/floating-labels/">floating label</a> technique could be used, but there are <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks with this method</a> that one should be familiar with before deciding to implement. Approach usage with the utmost of caution.</p>
+
+</section>
+
+<section class="examples" id="examples">
+
+  <h2>Examples</h2>
+
+  <p>The following examples are meant to illustrate best (and poor) practices of labeling form fields.</p>
+
+  <div class="note">
+    
+    <p><strong>Note:</strong> The placeholder attribute used in some examples may not be included in some assistive technology/browser combinations. This is but one reason why we can't fully rely on it to stand in as a label.</p>
+
+  </div>
+
+  <section id="placeholder-as-label">
+
+    <h3>Placeholder Values Are Not An Appropriate Alternative For Labels <span class="alert">(Avoid)</span></h3>
+
+    <p>While using placeholders as labels may seem like a great way to reduce visual clutter, placeholders and labels are very different things. Please familiarize with the <a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research">numerous pitfalls</a> of using placeholder text to stand-in for proper labels.</p>
+
+    <input placeholder="Keyword">
+
+    <h4>Assistive Technology</h4>
+
+    <p>"Keyword edit blank"</p>
+
+  </section>
+
+  <section id="placeholder-redundancy">
+
+    <h3>Placeholder Values May Not Duplicate What is Already Found In a Label <span class="alert">(Avoid)</span></h3>
+
+    <p>Do not duplicate the label as placeholder text. Not only is this visually redundant, but assistive technology users may have to listen to it twice, too. Alternatives measures to fill in the empty space with similar text, because empty space may not be aesthetically pleasing, will be equally frowned upon (Enter your first name, Ex. John, etc.).</p>
+
+    <label for="example-2-first-name">First Name</label>
+
+    <input id="example-2-first-name" placeholder="First Name">
+
+    <h4>Assistive Technology</h4>
+
+    <p>"First Name edit First Name blank"</p>
+
+  </section>
+
+  <section id="placeholder-hidden-label">
+
+    <h3>Placeholders May Not Be Used With Hidden Labels <span class="alert">(Avoid)</span></h3>
+
+    <p>Using a placeholder value and hiding the label does not solve the problems we seek to avoid. While hiding labels may seem like a terrific way to address accessibility, it is often prone to issue. For example, we may be hiding a label that includes <a href="#placeholder-redundancy">redundant placeholder text</a>. All we have done is mask the issue, visually. Include labels or use the <a href="https://radancy.dev/component-library/floating-labels/">floating label</a> pattern instead.</p>
+
+    <label class="sr-only" for="example-3-keyword">Keyword</label>
+
+    <input id="example-3-keyword" placeholder="Keyword">
+
+    <h4>Code</h4>
+
+{% highlight html %}<label class="sr-only" for="example-3-keyword">Keyword</label> <input id="example-3-keyword" placeholder="Keyword">{% endhighlight %}
+
+<h4>Assistive Technology</h4>
+
+<p>"Keyword edit Keyword blank"</p>
+
+  </section>
+
+  <section id="proper-placeholder-use">
+
+    <h3>Placeholder Values May Only Be Used To Provide Supplemental or Suggestive Information <span class="pass">(Best Practice)</span></h3>
+
+    <p>Placeholder text should be used to provide <em>supplemental information</em>. For example, formatting or suggestive hints are an ideal use of placeholder text.</p>
+
+    <label for="example-3-phone-number">Phone Number</label>
+
+    <input id="example-3-phone-number" placeholder="e.g., 5551234567">
+
+    <div class="note">
+
+      <p><strong>Note:</strong> Please note that this is an example of suggested placeholder text. All forms are different, so please use formatting required by the system accepting the data.</p>
+
+    </div>
+
+    <h4>Assistive Technology</h4>
+
+    <p>"Phone Number edit e dot g dot 5551234567 blank"</p>
+
+  </section>
+
+  <section id="critical-information">
+
+    <h3>Critical Information About a Form Field Must Always Be Placed Outside of the Field <span class="pass">(Best Practice)</span></h3>
+
+    <p>Placeholder text does have its limitations. If a field is pre-populated with data or a user begins typing, the placeholder text will vanish. A problem for people who have cognitive disabilities, to name but one group it may affect. If formatted or supplemental information is critical, then instructions should be placed outside of a field, where it will <em>always</em> be present.</p>
+
+    <label for="example-4-phone-number">Phone Number</label>
+
+    <input aria-describedby="phone-formatting" id="example-4-phone-number">
+
+    <p id="phone-formatting"><em>Required format: 5551234567</em></p>
+
+    <h4>Code</h4>
+
+    <p>To convey this information to assistive technology users, use <code>aria-describedby</code>, which will append the message to the input field.</p>
+
+{% highlight html %}<label for="example-4-phone-number">Phone Number</label> 
+
+<input aria-describedby="phone-formatting" id="example-4-phone-number"> 
+
+<p id="phone-formatting"><em>Required format: 5551234567</em></p>{% endhighlight %}
+
+    <h4>Assistive Technology</h4>
+
+    <p>"Phone Number edit  Required format: 5551234567  blank"</p>
+
+  </section>
+
+  <section id="contrast-friendly">
+
+    <h3>Placeholder Values Must Always Be Contrast Friendly <span class="pass">(Best Practice)</span></h3>
+
+    <p>Default placeholder text, often a lighter shade of gray, can be hard to read in some browsers, so always aim for a color of <a href="https://webaim.org/resources/contrastchecker/?fcolor=767676&bcolor=FFFFFF">#767676 on white backgrounds</a>. The text must meet a 4.5:1 ratio or higher.</p>
+
+    <figure>
+
+      <img alt="Screenshot of default placeholder text in Safari" src="/media/2022-04-06-guidance-on-form-labels/safari-example.png">
+
+      <figcaption>An example of default placeholder color in iOS Safari, which is very hard to see.</figcaption>
+
+    </figure>
+
+    <p><strong>Note:</strong> Please also note that the form field itself must meet an acceptable contrast ratio of 3:1 with its background color. In short, interactive objects, like forms and buttons, must be able to be discerned as such.</p>
+
+  </section>
+
+  <section id="grouping-inputs">
+
+    <h3>Grouping Inputs Without Visible Form Labels (Exception)</h3>
+
+    <p>In certain circumstance, traditional labels can be omitted, but should be grouped together via a <code>fieldset</code>. For example, three separate fields for a single date entry. In addition to the <code>fieldset</code>, we would include a <code>legend</code> as our primary label, along with <code>aria-label</code> to distinguish each field.</p>
+    
+    <fieldset>
+      <legend>Select Date (Month, Day, Year)</legend>
+      <input aria-label="Month" placeholder="MM">
+      <input aria-label="Day" placeholder="DD">
+      <input aria-label="Year" placeholder="YY">
+    </fieldset>
+
+    <div class="note">
+    
+      <p><strong>Note:</strong> This is not a technique we would use on a single search form, but to better organize groups of fields, within a complex form.</p>
+
+    </div>
+
+    <h4>Code</h4>
+
+{% highlight html %}<fieldset> 
+  
+  <legend>Select Date (Month, Day, Year)</legend> 
+  
+  <input aria-label="Month" placeholder="MM"> 
+  <input aria-label="Day" placeholder="DD"> 
+  <input aria-label="Year" placeholder="YY"> 
+
+</fieldset>{% endhighlight %}
+
+  <h4>Assistive Technology</h4>
+
+  <p>"Select Date (Month, Day, Year) grouping, Month  edit  MM  blank"
+
+  </section>
+
+</section>
+
+<h2>Resources</h2>
+
+<ul>
+  <li><a href="https://www.nngroup.com/articles/form-design-placeholders/">Placeholders in Form Fields Are Harmful</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html">Success Criterion 3.3.2 Labels or Instructions</a></li>
+  <li><a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">Floating labels are problematic</a></li>
+  <li><a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research">Low Vision Accessibility Task Force: Placeholder Research</a></li>
+</ul>

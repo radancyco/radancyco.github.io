@@ -1,0 +1,40 @@
+---
+author: Michael "Spell" Spellacy
+date: "2021-08-05 00:48:34"
+disclosure: true
+email: michael.spellacy@radancy.com
+img: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+layout: micropubpost
+role: Director, Accessibility
+tags: Accessibility Development
+title: "Accessible HTML5 Video with Captions and Transcript"
+---
+
+<p>Here is an example of how to set up HTML5 video that can be enjoyed by everybody!</p>
+
+<video aria-label="The Empire Strikes Back: Trailer A" autoplay muted controls poster="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.png" preload="metadata">
+  <source src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.mp4" type="video/mp4">
+  <track default label="English" kind="captions" src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.vtt" srclang="en">
+</video>
+
+<button class="disclosure--btn" data-disclosure-icon>Transcript</button>
+
+<div class="disclosure--content">
+
+  <p><strong>Narrator:</strong> Luke Skywalker and Han Solo rescue the princess, destroy the Death Star, but their story didn't end there.</p>
+
+  <p>Now, the creators of the biggest smash hit of all time, bring you the next episode in the "Star Wars" saga, "The Empire Strikes Back."</p>
+
+  <p>The continuing story of our band of heroes. Luke Skywalker, Princess Leia, Han Solo, C3PO, R2D2 and Chewbacca and introducing Lando Calrissian.</p>
+
+  <p>It's an epic of romance. Of heroes and villains. They cross trackless voids to unknown worlds.</p>
+
+  <p>A galactic odyssey against oppression.</p>
+
+  <p>A big new sprawling space adventure in the "Star Wars" saga, "The Empire Strikes Back."</p>
+
+  <p>Coming to your galaxy next summer.</p>
+
+</div>
+
+

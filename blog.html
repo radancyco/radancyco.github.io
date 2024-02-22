@@ -24,6 +24,9 @@ title: "Radancy DevBlog"
 
             <ul>
                 <li><span class="visually-hidden">Posted by:</span> {{ post.author }}{% if post.role %}, {{ post.role }}{% endif %}</li>
+                {% if post.pronouns %}
+                <li><span class="visually-hidden">Pronouns:</span> {{ post.pronouns }}</li>
+                {% endif %}
                 <li><span class="visually-hidden">Posted:</span> {{ post.date | date: "%A, %B %e, %Y" }}</li>
                 {% if post.update %}
                 <li><span>Update:</span> {{ post.update | date: "%A, %B %e, %Y" }}</li>

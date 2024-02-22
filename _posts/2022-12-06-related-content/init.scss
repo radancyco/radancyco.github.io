@@ -1,0 +1,83 @@
+/*!
+
+  Related Content Example (Pseudo-element Trick)
+
+  Contributor(s):
+  Michael "Spell" Spellacy
+
+  sass --watch init.scss:../../media/2022-12-06-related-content/init.css --style compressed
+
+*/
+
+.related-content {
+margin: 1em 0;
+padding: 0;
+list-style: none;
+
+  @media(min-width: 48.625em) {
+
+    display: flex; 
+
+  }
+
+  &__item {
+  border: 1px #ccc solid;
+  flex: 1;
+  margin: 0.5em;
+  padding: 1em;
+  position: relative; // Needed for pseudo-element trick.
+  transition: all 300ms ease-in-out;
+
+    &:focus-within, &:hover {
+    background-color: #eee;
+
+      a {
+      text-decoration: underline;
+      }
+
+    }
+    
+  }
+
+  &__media {
+  border-radius: 5px;
+  border: 1px #000 solid;
+  }
+
+  &__title {
+  font-size: 1.4rem;
+  line-height: normal;
+  margin: 1em 0;
+  
+    a {
+    text-decoration: none;
+
+      // CTA
+
+      &::after {
+      content: " \02C3";
+      }
+    
+      // Pseudo-element Trick
+      // Makes all content in container clickable. 
+
+      &::before {
+      content: "";
+      display: block;
+      inset: 0;
+      position: absolute;
+      }
+
+    }
+
+    &:not(h2):not(h3):not(h4):not(h5):not(h6) {
+    text-align: center;
+    }
+
+  }
+
+  &__more {
+  font-weight: bold;
+  }
+
+}

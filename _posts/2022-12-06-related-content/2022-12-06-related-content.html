@@ -1,0 +1,53 @@
+---
+author: Michael Spellacy (Spell)
+date: "2022-12-06 12:58:32"
+email: michael.spellacy@radancy.com
+img: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+layout: micropubpost
+localcss: /media/2022-12-06-related-content/init.css
+localjsnote: false
+pronouns: He/Him
+role: Director, Accessibility
+tags: Accessibility Development
+title: "A Better Way To Link Related Content Cards"
+---
+
+<p>Properly implementing a card-like interface, such as Related Content, can significantly improve users' comprehension. Often, we link entire content regions of the card or vague labels like "Learn More", which may have an adverse impact on disabled users. Here are some tips to consider for your next project to improve the experience.</p>
+
+<h2 id="link-heading">Always Link Your Headings</h2>
+
+<ul>
+  <li>Avoid linking "Learn More" text. This provides <strong>no context</strong> to assistive technology users who navigate by hyperlink (and is bad for SEO). Instead, link your heading and use the <a href="#pseudo-element-trick">pseudo-element trick</a> to make entire region clickable.</li>
+  <li>This being a well-known and ubiquitous pattern on the web, ask yourself if "Learn More" is even required here.</li>
+  <li>Approach linking of entire region (image, title, description) with extreme caution. This only creates extra "noise" for assistive technology users. Being concise here makes for a more pleasant experience.</li>
+  <li>If images are present, use alt text when needed. <strong>Do not repeat the title text in alt text.</strong></li>
+  <li>Make sure your heading levels are based on surrounding content. These tend to be <code>h3</code> or <code>h2</code>. Skipping of headings should be avoided.</li>
+  <li>If content is not present (or removed in the future), <a href="#no-content">a heading must not be used</a>.</li>
+  <li>Be mindful of focus states. Applying <code>:focus</code> to <code>li</code> or <code>div</code> will not work. Use <code>:focus-within</code> instead.</li>
+</ul>
+
+{% include_relative code-related-content.html %}
+
+<h3>HTML</h3>
+
+{% highlight html%}{% include_relative code-related-content.html %}{% endhighlight %}
+
+<h3 id="pseudo-element-trick">CSS: Pseudo-element Trick</h3>
+
+{% highlight css %}{% include_relative init.scss %}{% endhighlight %}
+
+<h2 id="no-content">No Content Means No Heading</h2>
+
+<ul>
+  <li>When a related content area has no content other than a title&mdash;do not use a heading.</li>
+  <li>Headings must only be used to precede content (paragraphs, lists, etc.)</li>
+  <li>If asked to remove content, the heading must be changed to a <code>div</code> or <code>span</code>.</li>
+  <li>Heading adjustments are a common task in accessibility, so using classes on your headings makes future mark-up changes easier.</li>
+  <li>The <a href="#pseudo-element-trick">pseudo-element trick</a> can be used here as well.</li>
+</ul>
+
+{% include_relative code-no-heading.html %}
+
+<h3>HTML</h3>
+
+{% highlight html%}{% include_relative code-no-heading.html %}{% endhighlight %}

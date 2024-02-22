@@ -606,6 +606,7 @@ transition: 300ms;
 
   a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 
     &:before {
     content: "";
@@ -620,7 +621,7 @@ transition: 300ms;
 
   }
   
-  img {
+  img { 
   border-radius: 50%;
   max-width: calc(80rem/16);
   }
@@ -831,7 +832,7 @@ align-items: center;
 border-bottom: 4px $highlight-color solid;
 display: inline-flex;
 font-size: 0.92rem;
-margin-bottom: 1em;
+margin-bottom: 1.5em;
 padding-bottom: 1em;
 
   &

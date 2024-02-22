@@ -997,20 +997,24 @@ z-index: 2;
   inset-block-start: inherit;
   width: rem(45);
 
-    &[aria-expanded="true"] + ul {
+    &[aria-expanded="true"] + .main-navigation__content {
     display: block;
     }
 
   }
 
-  > ul {
+  .main-navigation__content {
   background-color: #fff;
   border-radius: em(5);
   border: rem(1) $highlight-color solid;
   display: none;
+  padding: em(16);
+  }
+
+  ul {
   list-style: none;
   margin: 0;
-  padding: em(16);
+  padding: 0;
   }
 
   a {

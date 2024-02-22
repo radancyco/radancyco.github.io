@@ -36,12 +36,13 @@ layout: null
 
 	// Get Navigation
 
-	var primaryNavigation = document.getElementById("main-navigation");
+	var primaryNavigation = document.querySelector(".main-navigation");
 
 	// Make Mobile Button
 
 	var primaryNavigationBtn = document.createElement("button");
 
+	primaryNavigationBtn.classList.add("main-navigation__button")
 	primaryNavigationBtn.setAttribute("aria-expanded", "false");
 	primaryNavigationBtn.setAttribute("aria-label", "Menu");
 
@@ -67,7 +68,7 @@ layout: null
 
 	// Highlight Navigation
 
-	var navigationLink = document.querySelectorAll("#main-navigation a");
+	var navigationLink = document.querySelectorAll(".main-navigation a");
 
 	navigationLink.forEach(function(link, e){
 

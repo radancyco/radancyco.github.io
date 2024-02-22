@@ -6,34 +6,38 @@ title: "Radancy DevBlog"
 
 {% for post in site.posts %} 
 
-{% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
+    {% if post.tags contains "Article" %}
 
-    <article class="article-overview">
+        {% capture day %}{{ post.date | date: '%m%d%Y' }}{% endcapture %}
 
-        <div class="article-overview__img">
+        <article class="article-overview">
 
-            <img src="{{ post.img }}" alt="Headshot of {{ post.author }}">
+            <div class="article-overview__img">
+
+                <img src="{{ post.img }}" alt="Headshot of {{ post.author }}">
       
-        </div>
+            </div>
 
-        <div class="article-overview__details">
+            <div class="article-overview__details">
 
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
-            <ul>
-                <li><span class="visually-hidden">Posted by:</span> {{ post.author }}{% if post.role %}, {{ post.role }}{% endif %}</li>
-                {% if post.pronouns %}
-                <li><span class="visually-hidden">Pronouns:</span> {{ post.pronouns }}</li>
-                {% endif %}
-                <li><span class="visually-hidden">Posted:</span> {{ post.date | date: "%A, %B %e, %Y" }}</li>
-                {% if post.update %}
-                <li><span>Update:</span> {{ post.update | date: "%A, %B %e, %Y" }}</li>
-                {% endif %}
-            </ul>
+                <ul>
+                    <li><span class="visually-hidden">Posted by:</span> {{ post.author }}{% if post.role %}, {{ post.role }}{% endif %}</li>
+                    {% if post.pronouns %}
+                    <li><span class="visually-hidden">Pronouns:</span> {{ post.pronouns }}</li>
+                    {% endif %}
+                    <li><span class="visually-hidden">Posted:</span> {{ post.date | date: "%A, %B %e, %Y" }}</li>
+                    {% if post.update %}
+                    <li><span>Update:</span> {{ post.update | date: "%A, %B %e, %Y" }}</li>
+                    {% endif %}
+                </ul>
 
-        </div>
+            </div>
 
-    </article>
+        </article>
+    
+    {% endif %}
 
 {% endfor %}
 

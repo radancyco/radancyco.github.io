@@ -1,0 +1,254 @@
+/*!
+
+  Floating Labels Example
+
+  Contributor(s):
+  Michael "Spell" Spellacy
+
+  sass --watch init.scss:../../media/2021-06-18-floating-labels/init.css --style compressed
+
+*/
+
+$base-color: #6F00EF;
+
+// Example 1: Inner Float
+
+.inner-float {
+padding: 1em 0;
+
+  @media (min-width: 900px) {
+
+    display: flex;
+    margin: 0 -10px;
+
+  }
+
+  .field-container {
+  border: 1px $base-color solid;
+  flex: 1 1 0;
+  margin-bottom: 10px;
+  position: relative;
+
+    @media (min-width: 900px) {
+
+      margin: 0 10px;
+
+    }
+
+  }
+
+  label {
+  display: inline-block;
+  font-size: 1rem;
+  inset-inline-start: 10px;
+  line-height: normal;
+  position: absolute;
+  inset-block-start: 30px;
+  transition: all .2s ease;
+  z-index: 2;
+  }
+
+  input, select {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  font-size: 1.25rem;
+  height: 75px;
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+
+    &:focus ~ label, &:valid ~ label {
+    inset-block-start: 5px;
+    font-size: .8rem;
+    }
+
+    &:focus {
+    background-color: lightgoldenrodyellow;
+    }
+
+    &[type="submit"] {
+    background-color: $base-color;
+    color: #fff;
+
+      &:focus, &:hover {
+
+        background-color: gainsboro;
+        color: #000;
+
+      }
+
+    }
+
+  }
+
+}
+
+// Example 2: Outer Float
+
+.outer-float {
+padding: 2em 0 1em;
+
+  @media (min-width: 900px) {
+
+    display: flex;
+    margin: 0 -10px;
+
+  }
+
+  .field-container {
+  border: 1px $base-color solid;
+  flex: 1 1 0;
+  margin-bottom: 50px;
+  position: relative;
+
+    @media (min-width: 900px) {
+
+      margin: 0 10px;
+
+    }
+
+  }
+
+  label {
+  display: inline-block;
+  font-size: 1rem;
+  inset-inline-start: 10px;
+  line-height: normal;
+  position: absolute;
+  inset-block-start: 30px;
+  transition: all .2s ease;
+  z-index: 2;
+  }
+
+  input, select {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  font-size: 1.25rem;
+  height: 75px;
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+
+    &:focus ~ label, &:valid ~ label {
+    inset-block-start: -30px;
+    }
+
+    &:focus, &:focus {
+    background-color: lightgoldenrodyellow;
+    }
+
+    &[type="submit"] {
+    background-color: $base-color;
+    color: #fff;
+
+      &:focus, &:hover {
+
+        background-color: gainsboro;
+        color: #000;
+
+      }
+
+    }
+
+  }
+
+}
+
+// Example 3: Outer Float (JS)
+
+.outer-float-js {
+padding: 2em 0 1em;
+
+  @media (min-width: 900px) {
+
+    display: flex;
+    margin: 0 -10px;
+
+  }
+
+  .field-container {
+  flex: 1 1 0;
+  margin-bottom: 50px;
+  position: relative;
+
+    @media (min-width: 900px) {
+
+      margin: 0 10px;
+
+    }
+
+  }
+
+  label {
+  display: inline-block;
+  font-size: 1rem;
+  inset-inline-start: 10px;
+  line-height: normal;
+  position: absolute;
+  inset-block-start: 30px;
+  transition: all .2s ease;
+  z-index: 2;
+  }
+
+  input, select {
+  background-color: #fff;
+  border: 1px $base-color solid;
+  display: block;
+  font-size: 1.25rem;
+  height: 75px;
+  margin: 0;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+
+    &:not([type=submit]), select {
+    color: transparent; // HACK: This is so that the select text does not show up _behind_ the label. Hacky hack is hacky. Wondering if SEO red flag?
+
+      &[disabled], &[disabled] ~ label {
+      cursor: not-allowed;
+      }
+
+      &[disabled] {
+      border-color: #808080;
+
+          ~ label {
+          color: #808080;
+          }
+
+      }
+
+      &.has-text, &.has-focus {
+      color: inherit;
+
+        ~ label {
+          font-size: .9em;
+          inset-block-start: -30px;
+
+        }
+
+      }
+
+    }
+
+    // Submit Button
+
+    &[type="submit"] {
+    background-color: $base-color;
+    color: #fff;
+
+      &:focus, &:hover {
+
+        background-color: gainsboro;
+        color: #000;
+
+      }
+
+    }
+
+  }
+
+}

@@ -67,7 +67,7 @@
         <div>
 
           <ul>
-            <li><span class="visually-hidden">Posted by:</span> <a href="mailto:{{ page.email }}?Subject={{ page.title }}">{{ page.author }}</a>{% if page.role %}, {{ page.role }}{% endif %}</li>
+            <li><span class="visually-hidden">Posted by:</span> <a href='mailto:{{ page.email }}?Subject={{ page.title | replace: " ", "%20" }}'>{{ page.author }}</a>{% if page.role %}, {{ page.role }}{% endif %}</li>
             {% if page.pronouns %}
             <li><span class="visually-hidden">Pronouns:</span> {{ page.pronouns }}</li>
             {% endif %}

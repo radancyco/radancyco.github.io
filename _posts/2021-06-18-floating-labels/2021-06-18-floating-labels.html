@@ -1,0 +1,60 @@
+---
+author: Michael Spellacy (Spell)
+date: "2021-06-18 09:44:32"
+email: michael.spellacy@radancy.com
+img: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
+layout: micropubpost
+localcss: /media/2021-06-18-floating-labels/init.css
+localjs: /media/2021-06-18-floating-labels/init.js
+pronouns: He/Him
+role: Director, Accessibility
+tags: Article Accessibility Development
+title: "How to Float Form Labels"
+---
+
+<div class="warning">
+
+  <p><strong>Anti-Pattern:</strong> This is considered an anti-pattern. Including a visible label, often outside of the field, is <em>always the best solution</em>. Please understand the <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks</a> associated with this technique before using.</p>
+
+</div>
+
+<p>Since it comes up often, the following is a quick example of how to float form labels.</p>
+
+<h2 id="example-1">Example 1: Inner Float (CSS Only)</h2>
+
+{% include_relative form-example-1.html %}
+
+<h3>HTML</h3>
+
+{% highlight html %}{% include_relative form-example-1.html %}{% endhighlight %}
+
+<h2 id="example-2">Example 2: Outer Float (CSS Only)</h2>
+
+{% include_relative form-example-2.html %}
+
+<h3>HTML</h3>
+
+{% highlight html %}{% include_relative form-example-1.html %}{% endhighlight %}
+
+<h2 id="example-3">Example 3: Outer Float (CSS and JavaScript)</h2>
+
+{% include_relative form-example-3.html %}
+
+<div class="note">
+
+  <p><strong>Note:</strong> Use in circumstances when fields are dynamic in nature.</p>
+
+</div>
+
+<h3>HTML</h3>
+
+{% highlight html %}{% include_relative form-example-3.html %}{% endhighlight %}
+
+<h3>CSS (All Examples)</h3>
+
+{% highlight css %}{% include_relative init.scss %}{% endhighlight %}
+
+<h3>JavaScript</h3>
+
+{% highlight javascript %}{% include_relative init.js %}{% endhighlight %}
+

@@ -8,7 +8,8 @@
     <link href="{{ site.git-url }}/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">{% endif %}{% if page.in-page %}
     <link href="{{ site.git-url }}/component-library/in-page/init.css" rel="stylesheet">{% endif %}{% if page.read-more %}
     <link href="{{ site.git-url }}/component-library/read-more/init.css" rel="stylesheet">{% endif %}{% if page.tabcordion %}
-    <link href="{{ site.git-url }}/component-library/tabcordion/init.css" rel="stylesheet">{% endif %}
+    <link href="{{ site.git-url }}/component-library/tabcordion/init.css" rel="stylesheet">{% endif %}{% if page.tablist %}
+    <link href="{{ site.git-url }}/component-library/tablist/init.css" rel="stylesheet">{% endif %}
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.librarycss %}
     <link href="{{ page.librarycss}}" rel="stylesheet">{% endif %}{% if page.localcss %}
     <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customcss %}
@@ -116,7 +117,8 @@
   <script src="{{ site.git-url }}/component-library/disclosure/init.js"></script>{% endif %}{% if page.in-page %}
   <script src="{{ site.git-url }}/component-library/in-page/init.js"></script>{% endif %}{% if page.read-more %}
   <script src="{{ site.git-url }}/component-library/read-more/init.js"></script>{% endif %}{% if page.tabcordion %}
-  <script src="{{ site.git-url }}/component-library/tabcordion/init.js"></script>{% endif %}
+  <script src="{{ site.git-url }}/component-library/tabcordion/init.js"></script>{% endif %}{% if page.tablist %}
+  <script src="{{ site.git-url }}/component-library/tablist/init.js"></script>{% endif %}
   <script src="{{ site.git-url }}/js/init.js"></script>{% if page.libraryjs %}
   <script src="{{ page.libraryjs}}"></script>{% endif %}{% if page.localjs %}
   <script src="{{ page.localjs }}"></script>{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customjs %}

@@ -501,7 +501,7 @@ border-color: #9e4307;
   margin-inline-end: em(5);
   }
 
-  &.active {
+  &.active, &[aria-selected="true"] {
 
     svg {
     fill: #fff;

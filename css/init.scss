@@ -1101,6 +1101,7 @@ body:not(.component-library-disclosure) {
     }
 
     &__select {
+    background-color: #fff;
     font-size: inherit;
     max-width: rem(420);
     padding: em(8);

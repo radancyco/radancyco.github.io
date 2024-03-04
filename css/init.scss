@@ -52,6 +52,7 @@ $weight-black: 900 !default; // Black (Heavy)
 // Common variables
 
 $highlight-color: #6F00EF;
+$highlight-color-active: #FFF;
 $fallback-font: "Helvetica", "Arial", sans-serif;
 
 // Other font variables
@@ -876,27 +877,8 @@ width: 1px;
 margin-bottom: em(16);
 overflow-X: auto;
 padding-bottom: em(16);
-scrollbar-color: $highlight-color;
-scrollbar-gutter: always; 
--webkit-overflow-scrolling: touch;
-
-  // Scrollbar styling may be limited cross-browser. This is NOT a bad thing as majority of browsers are WebKit based.
-  // However, if you require full support, then have a look at http://grsmto.github.io/simplebar/
-
-  &::-webkit-scrollbar {
-  height: calc(6em / 16);
-  }
-  
-  /* Track */
-  
-  &::-webkit-scrollbar-track {
-  background-color: #fff;
-  }
-  
-  &::-webkit-scrollbar-thumb {
-  background-color: $highlight-color;
-  }
-
+scrollbar-color: $highlight-color $highlight-color-active;
+scrollbar-width: thin;
 }
 
 .video-container {

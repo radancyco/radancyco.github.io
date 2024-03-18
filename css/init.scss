@@ -654,13 +654,15 @@ margin: 2em 0;
     @media(min-width: em(680)) {
 
       display: flex;
+      flex-wrap: wrap;
+      gap: .5em;
 
     }
 
-    li {
-    width: auto;
-    }
+  }
 
+  li {
+  flex-grow: 1;
   }
 
   a, button {

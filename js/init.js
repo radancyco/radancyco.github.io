@@ -199,6 +199,34 @@ layout: null
 
 	});
 
+	// View Code Toggle
+
+	var viewCodeBtn = document.querySelector(".btn-view-code");
+	var viewCodeContent = document.querySelector(".content-view-code");
+
+	if (viewCodeBtn) {
+
+		viewCodeContent.setAttribute("hidden", "");
+		viewCodeBtn.setAttribute("aria-expanded", "false");
+
+		viewCodeBtn.addEventListener("click", function () {
+	
+			if(this.getAttribute("aria-expanded") === "true") {
+	
+				this.setAttribute("aria-expanded", "false");
+				viewCodeContent.setAttribute("hidden", "");
+	
+			} else {
+	
+				this.setAttribute("aria-expanded", "true");
+				viewCodeContent.removeAttribute("hidden");
+	
+			}
+	
+		});
+
+	}
+
 })();
 
 /*!

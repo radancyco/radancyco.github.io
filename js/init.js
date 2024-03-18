@@ -201,28 +201,40 @@ layout: null
 
 	// View Code Toggle
 
-	var viewCodeBtn = document.querySelector(".btn-view-code");
-	var viewCodeContent = document.querySelector(".content-view-code");
+	var viewCodeBtnClass = ".btn-view-code";
+	var viewCodeContentClass = ".content-view-code";
 
-	if (viewCodeBtn) {
+	var viewCodeBtn = document.querySelectorAll(viewCodeBtnClass);
+	var viewCodeContent = document.querySelectorAll(viewCodeContentClass);
 
-		viewCodeContent.setAttribute("hidden", "");
-		viewCodeBtn.setAttribute("aria-expanded", "false");
+	if (viewCodeBtn.length) {
 
-		viewCodeBtn.addEventListener("click", function () {
+		viewCodeContent.forEach(function(content){
+
+			content.setAttribute("hidden", "");
+
+		});
+
+		viewCodeBtn.forEach(function(btn){
+
+			btn.setAttribute("aria-expanded", "false");
+
+			btn.addEventListener("click", function () {
 	
-			if(this.getAttribute("aria-expanded") === "true") {
-	
-				this.setAttribute("aria-expanded", "false");
-				viewCodeContent.setAttribute("hidden", "");
-	
-			} else {
-	
-				this.setAttribute("aria-expanded", "true");
-				viewCodeContent.removeAttribute("hidden");
-	
-			}
-	
+				if(this.getAttribute("aria-expanded") === "true") {
+		
+					this.setAttribute("aria-expanded", "false");
+					this.parentElement.parentElement.parentElement.nextElementSibling.setAttribute("hidden", "");
+		
+				} else {
+		
+					this.setAttribute("aria-expanded", "true");
+					this.parentElement.parentElement.parentElement.nextElementSibling.removeAttribute("hidden");
+		
+				}
+		
+			});
+
 		});
 
 	}

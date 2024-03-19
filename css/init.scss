@@ -661,10 +661,6 @@ margin: 2em 0;
 
   }
 
-  li {
-  // flex-grow: 1;
-  }
-
   a, button {
   background-color: transparent;
   border: calc(1rem / 16) solid #000;
@@ -1073,13 +1069,8 @@ body:not(.component-library-disclosure) {
     }
   
     &__label {
-    
-      @media(min-width: em(778)) {
-  
-        display: block;
-  
-      }
-  
+    display: block;
+
     }
 
     &__select {

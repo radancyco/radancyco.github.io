@@ -89,8 +89,10 @@ box-sizing: inherit;
 
 :root {
 box-sizing: border-box;
-font-size: 100%;
-  
+background-color: #fff;
+font: 100%/2 "Graphik", $fallback-font;
+text-rendering: optimizeLegibility;
+
   @media (prefers-reduced-motion: no-preference) {
   
     scroll-behavior: smooth;
@@ -121,12 +123,8 @@ a {
 }
 
 body {
-background-color: #fff;
-font-family: "Graphik", $fallback-font;
-line-height: 2;
 margin: 0;
 padding: em(16);
-text-rendering: optimizeLegibility;
 }
 
 code:not(.language-html):not(.language-css):not(.language-javascript) {

@@ -87,6 +87,18 @@ $font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
 box-sizing: inherit;
 }
 
+:root {
+box-sizing: border-box;
+font-size: 100%;
+  
+  @media (prefers-reduced-motion: no-preference) {
+  
+    scroll-behavior: smooth;
+  
+  }
+  
+}
+
 a {
 
   &[target="_blank"] {
@@ -116,9 +128,6 @@ margin: 0;
 padding: em(16);
 text-rendering: optimizeLegibility;
 }
-
-
-
 
 code:not(.language-html):not(.language-css):not(.language-javascript) {
 border-radius: em(4);
@@ -198,17 +207,6 @@ hr[aria-hidden="true"] {
 border: 0;
 border-bottom: em(1) dashed $highlight-color;
 margin: em(32) 0;
-}
-
-html {
-box-sizing: border-box;
-
-  @media (prefers-reduced-motion: no-preference) {
-
-    scroll-behavior: smooth;
-
-  }
-
 }
 
 img {

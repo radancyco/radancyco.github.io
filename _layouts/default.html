@@ -21,7 +21,7 @@
     <link href="{{ component.customcss }}.css" rel="stylesheet">{% endif %}{% endfor %}{% endif %}
     <link href="{{ site.git-url }}/favicon.ico" rel="icon">
     <link href="{{ site.git-url }}/manifest.json" rel="manifest">
-    <title>{% if component %}{{ component.title }}{% else %}{{ page.title }}{% endif %} - {{ site.company-name }}</title>
+    <title>{% if component %}{{ component.title }} v{{ component.version }}{% else %}{{ page.title }}{% endif %} - {{ site.company-name }}</title>
 </head>
 
 <body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>

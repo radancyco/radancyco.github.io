@@ -1,0 +1,92 @@
+---
+author: "Jon Schock"
+date: "2024-04-30 15:20:00"
+email: jon.schock@radancy.com
+img: https://media.licdn.com/dms/image/D5603AQHWmQsSmfXstQ/profile-displayphoto-shrink_200_200/0/1689882291537?e=1720051200&v=beta&t=EG2GcMZwqMEDV5DK3FIMQ3isWKoDWhoic_BU-sQ1GQc
+layout: micropubpost
+pronouns: He/Him
+role: Associate Creative Director
+tags: Article Creative Tutorials
+title: "Transparent Video for the Web"
+---
+
+<p>While struggling to find a solution to handle alpha-transparent animations for a recent project, various options were considered. Animated gifs? They feel outdated and lack quality. How about CSS animations? Too custom and not quite feasible given the level of detail and animation required for the project. After Effects animations were also pondered, but they are often best suited for vector-based needs. What about video? Surely alpha-transparent video is achievable by now. I mean, it's 2024, right? Hmm, the idea has merit, but it took some doing to get there. To accomplish this remarkable feat, a few steps were necessary. First, several video converters were tested until the ideal solution was found: Rotato. The reason for the extensive search? Transparent video on a website can pose issues if the output slightly alters the color of the webpage area behind the video. Rotato's converter functions exceptionally well and circumvents this problem. To begin, we first need to create (or source) a transparent MOV file.</p>
+
+<h2>Exporting</h2>
+
+<p>From After Effects, exporting to Adobe Media Encoder, select QuickTime formatting and export to an RGB format with Alpha (in this case, Apple ProRes 4444 with alpha):</p>
+
+<figure>
+
+    <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/after-effects.png">
+
+</figure>
+
+<h2>Rotato Conversion</h2>
+
+<p>With the transparent MOV file exported, you can then convert it for web use by using the <a href="https://rotato.app/tools/converter">Rotato converter</a>, which is a free download.</p>
+ 
+<figure>
+
+    <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/rotato-01.png">
+ 
+</figure>
+
+<p>Once downloaded, the app appearance in your dock looks like this:</p>
+ 
+<figure>
+
+    <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/rotato-02.png">
+
+</figure>
+
+<p>Opening the app, the screen is very simple and dragging the transparent MOV will begin the conversion:</p>
+
+<figure>
+
+    <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/rotato-03.png">
+
+</figure>
+
+<h2>Testing Your Video</h2>
+
+<p>Once converted, you can launch the test windows in Chrome and Safari from Rotato with a button click, or go directly to the URL in each browser by visiting <a href="https://rotato.app/tools/transparent-video">https://rotato.app/tools/transparent-video</a> and then select the appropriate generated file with the "Choose File” button seen there. These files will be the name of your original video file with <code>-hevc-safari.mp4</code> and <code>-vp9-chrome.webm</code> added, automatically appearing in the same folder location as your original MOV file. Both are ready to use on the web and can be sent on to your developer (but there are <a href="#additional-considerations">additional considerations</a> to be mindful of first)</p>
+
+<figure>
+
+    <img alt="File Manager, Selecting Video to Preview" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/file-manager.png">
+
+</figure>
+
+<figure>
+
+    <img alt="Rotato Google Chrome Test Window" src="{{ site.url }}{{ site.baseurl }}/media/2024-04-30-transparent-video-for-the-web/chrome.png">
+
+    <figcaption>Example of a test window in Google Chrome</figcaption>
+
+</figure>
+
+<h2 id="additionalconsiderations">Additional Considerations</h2>
+
+<p>If your video isn't intended to be confined within a defined box or area with clear edges, starting it abruptly from behind a hard edge can present issues if you aim for a consistent appearance across all devices. Instead, within AfterEffects, you can implement a fade-in at the beginning and a fade-out at the end of the animation.</p>
+
+<p>Moreover, a transparent video with some width, such as a character running for a moderate distance before vanishing, works well on both large monitor devices and handheld devices. However, on handheld devices, the entire width of the transparent video will be scaled down to fit, potentially resulting in tiny content.</p>
+
+<p>To address this, create a mobile version of the same video with a narrower canvas and adjusted fade-in/out points. Export this as a transparent MOV file, then convert it using Rotato to generate webm and hevc files suitable for mobile viewing. These files can then be provided to your developer.</p>
+
+<h2>Code</h2>
+
+<p>Finally, to get all of our different alpha-transparent videos set up to reneder properly across different browsers, <code>hvc1</code> for Safari and <code>webm</code> for everything else, we use the HTML5 <code>video</code> element to pass in different <code>source</code> MIME types for each version and can also leverage the newly added support for inline media queries, using the <code>media</code> attribute!</p>
+
+{% highlight html %}
+
+<video>
+    <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-lg.mp4" type='video/mp4; codecs="hvc1"'>
+    <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-webm-lg.webm" type="video/webm">
+    <source src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-sm.mp4" type='video/mp4; codecs="hvc1"'>
+    <source src="https://radancy.dev/component-library/animation-toggle/demo-webm-sm.webm" type="video/webm">
+</video>
+
+{% endhighlight %}
+
+<p>And that's all it takes! Animated alpha-transparent video! Big shout out to Michael Spellacy for his technical brilliance in coming up with the idea and the coding implementation. If you would like to see a demo of the final result in action, just head on over to the <a href="https://radancy.dev/component-library/animation-toggle/#transparent">component library</a>.</p>

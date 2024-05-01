@@ -85,9 +85,7 @@ title: "Transparent Video for the Web"
 
 <p>If your video isn't intended to be confined within a defined box or area with clear edges, starting it abruptly from behind a hard edge can present issues if you aim for a consistent appearance across all devices. Instead, within After Effects, you can implement a fade-in at the beginning and a fade-out at the end of the animation.</p>
 
-<p>Moreover, a transparent video with some width, such as a character running for a moderate distance before vanishing, works well on both large monitor devices and handheld devices. However, on handheld devices, the entire width of the transparent video will be scaled down to fit, potentially resulting in tiny content.</p>
-
-<p>To address this, create a mobile version of the same video with a narrower canvas and adjusted fade-in/out points. Export this as a transparent MOV file, then convert it using Rotato to generate webm and hevc files suitable for cross-browser, mobile viewing. These files can then be provided to your developer.</p>
+<p>Moreover, a transparent video with some width, such as a character running for a moderate distance before vanishing, works well on both large monitor devices and handheld devices. However, on handheld devices, the entire width of the transparent video will be scaled down to fit, potentially resulting in tiny content. To address this, create a mobile version of the same video with a narrower canvas and adjusted fade-in/out points. Export this as a transparent MOV file, then convert it using Rotato to generate webm and hevc files suitable for cross-browser, mobile viewing. These files can then be provided to your developer.</p>
 
 <h2>Code</h2>
 
@@ -95,7 +93,7 @@ title: "Transparent Video for the Web"
 
 {% highlight html %}
 
-<video>
+<video autoplay loop muted>
     <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-lg.mp4" type='video/mp4; codecs="hvc1"'>
     <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-webm-lg.webm" type="video/webm">
     <source src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-sm.mp4" type='video/mp4; codecs="hvc1"'>
@@ -107,3 +105,5 @@ title: "Transparent Video for the Web"
 <p>You can also see this in action in our <a href="https://radancy.dev/component-library/animation-toggle/#transparent">component library</a> and on <a href="https://www.disneycareers.com/en">Disney's newly launched careers site</a>.</p>
 
 <p>And that's all it takes! Animated, alpha-transparent, live action video and the client was thrilled! w00t! Big shout out to <a href="mailto:michael.spellacy@radancy.com?subject={{ page.title | replace: ' ', '%20' }}">Michael Spellacy</a> for his technical brilliance in coming up with the idea to begin with and his coding implementation behind it.</p>
+
+<p>Happy animating!</p>

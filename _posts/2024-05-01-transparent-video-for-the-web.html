@@ -25,7 +25,7 @@ title: "Transparent Video for the Web"
 
 </figure>
 
-<p>First, we needed to find a converter that could handle the task. One of the first issue we ran into is that alpha-transparent video not converted properly, can create an issue where color discrepancies exist between the background color of the webpage and the foreground video. We also required a tool that could output into the various file formats we would need for cross-browser support. Several converters were tested and we eventually landed on <a href="https://rotato.app/">Rotato</a>, whose converter functions exceptionally well and circumvents these problem. We'll come back to Rotato in a moment. Before we can convert the video to something we can use on the web, we first need to create (or source) a transparent MOV file.</p>
+<p>First, we needed to find a converter that could handle the task. One of the first issue we ran into is that alpha-transparent video not converted properly, can create an issue where color discrepancies exist between the background color of the webpage and the foreground video. We also required a tool that could output into the various file formats we would need for cross-browser support. Currently, Safari does not support <code>webm</code>. Several converters were tested and we eventually landed on <a href="https://rotato.app/">Rotato</a>, whose converter functions exceptionally well and circumvents these problem. We'll come back to Rotato in a moment. Before we can convert the video to something we can use on the web, we first need to create (or source) a transparent MOV file.</p>
 
 <h2>Exporting to MOV</h2>
 
@@ -65,7 +65,7 @@ title: "Transparent Video for the Web"
 
 <h2>Testing Your Video</h2>
 
-<p>Once converted, you can launch the test windows in Chrome or Safari from Rotato with a button click, or go directly to the URL in each browser by visiting <a href="https://rotato.app/tools/transparent-video">https://rotato.app/tools/transparent-video</a> and then select the appropriate generated file. These files will be the name of your original video file with <code>-hevc-safari.mp4</code> and <code>-vp9-chrome.webm</code> added, automatically appearing in the same folder location as your original MOV file. By the way, the reason we need to convert the file into two different formats is because Safari does not support <code>webm</code>. Now, both are ready to use on the web and can be sent on to development to implement, but there are some <a href="#additional-considerations">additional considerations</a> to be mindful of before doing so.</p>
+<p>Once converted, you can launch the test windows in Chrome or Safari from Rotato with a button click, or go directly to the URL in each browser by visiting <a href="https://rotato.app/tools/transparent-video">https://rotato.app/tools/transparent-video</a> and then select the appropriate generated file. These files will be the name of your original video file with <code>-hevc-safari.mp4</code> and <code>-vp9-chrome.webm</code> added, automatically appearing in the same folder location as your original MOV file. Now, both are ready to use on the web and can be sent to development to implement, but there are some <a href="#additional-considerations">additional considerations</a> to be mindful of before doing so.</p>
 
 <figure>
 

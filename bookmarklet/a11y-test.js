@@ -41,7 +41,7 @@ function expandUrlSet(urlset) {
 
                 // Check if the count exceeds the limit (10)
 
-                if (subfolderCounts[subfolder] <= 10) {
+                if (subfolderCounts[subfolder] <= 5) {
 
                     let row = { loc };
 

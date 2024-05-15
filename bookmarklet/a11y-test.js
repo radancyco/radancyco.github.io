@@ -19,7 +19,7 @@ function loadSitemap(url) {
 function expandUrlSet(urlset) {
 
     let urls = [];
-    const allowedSubfolders = ["/job/", "/location/", "employment", "category", "business"];
+    const allowedSubfolders = ["/job/", "/location/", "/employment/", "/category/", "/business/", "/job-location/"];
     let subfolderCounts = {}; // Object to store counts for each allowed subfolder
 
     for (let url of urlset.children) {
@@ -159,7 +159,7 @@ function makeCsv(data) {
 
 function triggerDownload(csv) {
 
-    let blob = new Blob([csv], { type: 'text/csv' });
+    let blob = new Blob([csv], { type: "text/csv" });
     let url = URL.createObjectURL(blob);
 
     window.location.href = url;

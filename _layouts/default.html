@@ -1,6 +1,14 @@
-{% assign id = page.id %}
-{% assign module = page.module %}
-{% assign component = site.data.module[module][id] %}
+{% if site.name == "Component Library" %}
+
+  {% assign current_id = page.id %}
+  {% assign module = page.module %}
+  {% assign component = site.data.module[module] | where: "id", current_id | first %}
+
+  {% assign selectedComponents = site.data.module.components %}
+  {% assign selectedFeeds = site.data.module.feeds %}
+  {% assign allSelections = selectedComponents | concat: selectedFeeds %}
+
+{% endif %}
 
 <!DOCTYPE html>
 <html lang="{{ site.lang }}" class="no-js">
@@ -17,14 +25,14 @@
     <link href="{{ site.git-url }}/component-library/card/init.css" rel="stylesheet">{% endif %}
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">{% if page.librarycss %}
     <link href="{{ page.librarycss}}" rel="stylesheet">{% endif %}{% if page.localcss %}
-    <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customcss %}
-    <link href="{{ component.customcss }}.css" rel="stylesheet">{% endif %}{% endfor %}{% endif %}
+    <link href="{{ page.localcss }}" rel="stylesheet">{% endif %}{% for component in allSelections %}{% if component.id == current_id %}{% for example in component.examples %}{% if example.customcss %}
+    <link href="{{ example.customcss }}.css" rel="stylesheet">{% endif %}{% endfor %}{% endif %}{% endfor %}
     <link href="{{ site.git-url }}/favicon.ico" rel="icon">
     <link href="{{ site.git-url }}/manifest.json" rel="manifest">
     <title>{% if component %}{{ component.title }} v{{ component.version }}{% else %}{{ page.title }}{% endif %} - {{ site.company-name }}</title>
 </head>
 
-<body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
+<body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
 
   <div id="page">
 
@@ -130,8 +138,8 @@
   <script src="{{ site.git-url }}/component-library/tablist/init.js"></script>{% endif %}
   <script src="{{ site.git-url }}/js/init.js"></script>{% if page.libraryjs %}
   <script src="{{ page.libraryjs}}"></script>{% endif %}{% if page.localjs %}
-  <script src="{{ page.localjs }}"></script>{% endif %}{% if page.components %}{% for component in page.components %}{% if component.customjs %}
-  <script src="{{ component.customjs }}"></script>{% endif %}{% endfor %}{% endif %}
+  <script src="{{ page.localjs }}"></script>{% endif %}{% for component in allSelections %}{% if component.id == current_id %}{% for example in component.examples %}{% if example.customjs %}
+  <script src="{{ example.customjs }}"></script>{% endif %}{% endfor %}{% endif %}{% endfor %}
 
 </body>
 </html>

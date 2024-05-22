@@ -81,6 +81,12 @@ $font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
 @include fontface("#{$font-file-path}/graphik/", "graphik-semibold", "Graphik", $weight-bold); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
 @include fontface("#{$font-file-path}/graphik/", "graphik-semibolditalic", "Graphik", $weight-bold, "italic"); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
 
+@view-transition {
+
+  navigation: auto;
+
+}
+
 // Global CSS
 
 *, *::before, *::after {

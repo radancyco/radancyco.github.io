@@ -35,7 +35,7 @@ update: 2024-02-21 02:21:11
 
   </form>
 
-  <p>This is better, but not a perfect solution (go ahead and click on it). <a href="#floating-labels">Know the risks</a> and use with caution. While we can make an exception from time to time to use this technique on basic search forms, on more complex forms like the Job Alert, we should always include a label outside of the field.</p>
+  <p>This is not much better (go ahead and click on it). <a href="#floating-labels">Know the risks</a> and use only as a last resort in your design work. While we can make an exception from time to time, it is always preferable to include a label outside of the field.</p>
 
   <h3>Label Outside of Field</h3>
   
@@ -59,6 +59,7 @@ update: 2024-02-21 02:21:11
     <li><a href="#proper-placeholder-use">Placeholder values may only be used to provide supplemental or suggestive information.</a></li>
     <li><a href="#critical-information">Critical information about a form field must always be placed outside of the field.</a></li>
     <li><a href="#contrast-friendly">Placeholder values must always be contrast friendly.</a></li>
+    <li><a href="#field-design">Form fields should always look like form fields.</a></li>
   </ol>
 
 </section>
@@ -78,7 +79,7 @@ update: 2024-02-21 02:21:11
 
   <h2>Floating Labels: A Word of Warning</h2>
 
-  <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. However, there may be times when this is not always possible. In such cases, the <a href="/floating-labels/">floating label</a> technique could be used, but there are <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks with this method</a> that one should be familiar with before deciding to implement. Approach usage with the utmost of caution.</p>
+  <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. Floating lables should therefore be used in the <em>rarest</em> of circumstances. If floating lables are a client requirement, please be aware of the <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks they present</a> before using in your design and present these risks to your client and fellow colleagues.</p>
 
 </section>
 
@@ -246,6 +247,22 @@ update: 2024-02-21 02:21:11
   <h4>Assistive Technology</h4>
 
   <p>"Select Date (Month, Day, Year) grouping, Month  edit  MM  blank"
+
+  </section>
+
+  <section id="field-design">
+
+    <h3>Form Fields Should Always Look Like Form Fields <span class="alert">(Avoid)</span></h3>
+
+    <p>While it can be tempting to do unique things to form fields to make them look less conventional, this can actually be a detriment to usability. Across the web, input fields are very similar to each other, so breaking common conventions can cause confusion. Including an outline around each field is always preferable.</p>
+    
+    <figure>
+
+      <img alt="Screenshot of input field with underline" src="/media/2022-04-06-guidance-on-form-labels/bad-design-example.png">
+
+      <figcaption>An example of an input field with a single underline. Here, the input may be mistaken for a hyperlink.</figcaption>
+
+    </figure>
 
   </section>
 

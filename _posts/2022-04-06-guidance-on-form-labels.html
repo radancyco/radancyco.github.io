@@ -10,7 +10,7 @@ pronouns: He/Him
 role: Director, Accessibility
 tags: Article Accessibility Development
 title: "Guidance on Designing & Implementing Form Labels"
-update: 2024-02-21 02:21:11
+update: 2024-04-22 04:45:33
 ---
 
 <p>In an effort to improve the way in which Radancy includes form labels within its sites and products, this document seeks to introduce more clearly defined guidance that can be shared with all team members. Especially designers, developers, and QA engineers. Inclusion of a proper label is critical and allows more people to understand and use the form. Omission or poor implementation of a label is also considered a direct failure of <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html">Success Criterion 3.3.2 Labels or Instructions</a>.</p>
@@ -79,7 +79,7 @@ update: 2024-02-21 02:21:11
 
   <h2>Floating Labels: A Word of Warning</h2>
 
-  <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. Floating lables should therefore be used in the <em>rarest</em> of circumstances. If floating lables are a client requirement, please be aware of the <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks they present</a> before using in your design and present these risks to your client and fellow colleagues.</p>
+  <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. Floating labels should therefore be used in the <em>rarest</em> of circumstances. If floating labels are a client requirement, please be aware of the <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks they present</a> before using in your design and present these risks to your client and fellow colleagues.</p>
 
 </section>
 
@@ -246,7 +246,7 @@ update: 2024-02-21 02:21:11
 
   <h4>Assistive Technology</h4>
 
-  <p>"Select Date (Month, Day, Year) grouping, Month  edit  MM  blank"
+  <p>"Select Date (Month, Day, Year) grouping, Month  edit  MM  blank"</p>
 
   </section>
 
@@ -254,13 +254,29 @@ update: 2024-02-21 02:21:11
 
     <h3>Form Fields Should Always Look Like Form Fields <span class="alert">(Avoid)</span></h3>
 
-    <p>While it can be tempting uniquely design form fields to make them look less conventional, this can actually be a detriment to usability. Across the web, input fields are very similar to each other, so breaking common convention can cause confusion some users. Including an outline around each field is always preferable.</p>
+    <p>While it can be tempting to uniquely design form fields to make them look less conventional, this can be a detriment to usability. Across the web, input fields are very similar to each other, so breaking common convention can cause confusion for some users. Including an outline around each field is always preferable.</p>
     
     <figure>
 
       <img alt="Screenshot of input field with underline" src="/media/2022-04-06-guidance-on-form-labels/bad-design-example.png">
 
       <figcaption>An example of an input field with a single underline. Here, the input may be mistaken for a hyperlink.</figcaption>
+
+    </figure>
+
+    <h2>What Happened To Text Inputs?</h2>
+
+    <p>If you would like to watch a hilarious take on this issue, please watch this video:</p>
+
+    <figure>
+
+      <div class="video-container">
+        
+        <iframe src="https://player.vimeo.com/video/773690550" title="What Happened To Text Inputs? (Video)" allow="fullscreen" allowfullscreen></iframe>
+
+      </div>
+
+      <figcaption>Webbed Briefs by Heydon Pickering</figcaption>
 
     </figure>
 
@@ -275,4 +291,5 @@ update: 2024-02-21 02:21:11
   <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html">Success Criterion 3.3.2 Labels or Instructions</a></li>
   <li><a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">Floating labels are problematic</a></li>
   <li><a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research">Low Vision Accessibility Task Force: Placeholder Research</a></li>
+  <li><a href="https://briefs.video/videos/what-happened-to-text-inputs/">What Happened To Text Inputs?</a></li>
 </ul>

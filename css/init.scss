@@ -885,16 +885,12 @@ scrollbar-width: thin;
 }
 
 .video-container {
-height: 0;
-position: relative;
-width: 100%;
+
 
   iframe {
+  aspect-ratio: 16 / 9;
   border: 0;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
   }
 

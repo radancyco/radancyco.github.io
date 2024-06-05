@@ -886,7 +886,6 @@ scrollbar-width: thin;
 
 .video-container {
 
-
   iframe {
   aspect-ratio: 16 / 9;
   border: 0;
@@ -1074,6 +1073,7 @@ body:not(.component-library-disclosure) {
 
     &__select {
     background-color: #fff;
+    border: 1px #767676 solid;
     font-size: inherit;
     max-width: rem(420);
     padding: em(8);

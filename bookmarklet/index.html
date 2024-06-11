@@ -10,6 +10,14 @@ title: "Useful Bookmarklets"
 
 <p>Used to retrieve and output a spreadhseet of <strong>necessary</strong> pages on a careers site that will be used in accessibility testing. The sheet will also include links to the W3C Validator and WAVE. Works on both QA and Production domains.</p>
 
+<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/reflow-1280x1024.js'); document.body.appendChild(jsCode);}());">Reflow (1280 x 1024)</a>
+
+<p>Used to to open the page you are viewing in a 1280 x 1024 window. Zooming into the page by 400% will then mimic the conditions needed to test <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">reflow</a>.</p>
+
+<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/text-spacing.js'); document.body.appendChild(jsCode);}());">Text Spacing</a>
+
+<p>Used to to mimic the minimum adjustments users may make in order to test against <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">test spacing</a>.</p>
+
 <h2>General Utilities</h2>
 
 <a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/automated-publish.js'); document.body.appendChild(jsCode);}());">Career Site Publish</a>

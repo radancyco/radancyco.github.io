@@ -14,15 +14,29 @@ self.addEventListener("install", function(event) {
 
     fetch(indexPage).then(function(response) {
 
-      return caches.open("radancy-offline").then(function(cache) {
+      if (response.status === 200) {
 
-        console.log("{{ site.company-name }} cached index page during install: " + response.url);
-        
-        return cache.put(indexPage, response);
+        return caches.open("radancy-offline").then(function(cache) {
 
-      });
+          console.log("Radancy cached index page during install: " + response.url);
 
-    }));
+          return cache.put(indexPage, response);
+
+        });
+
+      } else {
+
+        console.warn("Failed to cache index page during install: " + response.status);
+
+      }
+
+    }).catch(function(error) {
+
+      console.error("Fetch error during install: ", error);
+
+    })
+
+  );
 
 });
 
@@ -30,15 +44,27 @@ self.addEventListener("install", function(event) {
 
 self.addEventListener("fetch", function(event) {
 
-  var updateCache = function(request){
+  var updateCache = function(request) {
 
-    return caches.open("radancy-offline").then(function (cache) {
+    return caches.open("radancy-offline").then(function(cache) {
 
-      return fetch(request).then(function (response) {
+      return fetch(request).then(function(response) {
 
-        console.log("{{ site.company-name }} added page to offline: " + response.url)
+        if (response.status === 200) {
 
-        return cache.put(request, response);
+          console.log("Radancy added page to offline: " + response.url);
+
+          return cache.put(request, response);
+
+        } else {
+
+          console.warn("Failed to cache request: " + response.url + " with status: " + response.status);
+
+        }
+
+      }).catch(function(error) {
+
+        console.error("Fetch error: ", error);
 
       });
 
@@ -52,21 +78,21 @@ self.addEventListener("fetch", function(event) {
 
     fetch(event.request).catch(function(error) {
 
-      console.log("{{ site.company-name }} network request failed. Serving content from cache: " + error );
+      console.log("Radancy network request failed. Serving content from cache: " + error);
 
       // Check to see if you have it in the cache
 
-      //Return response
+      // Return response
 
       // If not in the cache, then return error page
 
-      return caches.open("radancy-offline").then(function (cache) {
+      return caches.open("radancy-offline").then(function(cache) {
 
-        return cache.match(event.request).then(function (matching) {
+        return cache.match(event.request).then(function(matching) {
 
-          var report =  !matching || matching.status == 404?Promise.reject("no-match"): matching;
+          var report = !matching || matching.status == 404 ? Promise.reject("no-match") : matching;
 
-          return report
+          return report;
 
         });
 
@@ -76,4 +102,5 @@ self.addEventListener("fetch", function(event) {
 
   );
 
-})
+});
+

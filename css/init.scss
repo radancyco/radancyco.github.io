@@ -361,6 +361,14 @@ padding: 0 em(16) em(16);
 
   }
 
+  dt, dd {
+  display: inline-block;
+  }
+    
+  dd {
+  margin-left: .5em;
+  }
+
   &.warning {
   padding: 0 em(16) em(16);
   }
@@ -519,6 +527,10 @@ border-left-width: em(4);
 border-left-style: solid;
 margin-top: em(16);
 padding: em(16);
+
+  h2, h3 {
+  color: inherit;
+  }
       
   p {
   margin: 0;

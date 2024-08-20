@@ -9,74 +9,65 @@
 
 */
 
-$base-color: #6F00EF;
-
 // Example 1: Inner Float
 
 .inner-float {
-padding: 1em 0;
 
-  @media (min-width: 900px) {
+  .search-form-container {
 
-    display: flex;
-    margin: 0 -10px;
+    @media (min-width: 56.25em) {
 
-  }
-
-  .field-container {
-  border: 1px $base-color solid;
-  flex: 1 1 0;
-  margin-bottom: 10px;
-  position: relative;
-
-    @media (min-width: 900px) {
-
-      margin: 0 10px;
+      display: grid;
+      gap: 0.625em;
+      grid-template-columns: repeat(4, 1fr);
 
     }
 
-  }
-
-  label {
-  display: inline-block;
-  font-size: 1rem;
-  inset-inline-start: 10px;
-  line-height: normal;
-  position: absolute;
-  inset-block-start: 30px;
-  transition: all .2s ease;
-  z-index: 2;
-  }
-
-  input, select {
-  background-color: transparent;
-  border: 0;
-  display: block;
-  font-size: 1.25rem;
-  height: 75px;
-  margin: 0;
-  padding: 0 10px;
-  position: relative;
-  width: 100%;
-
-    &:focus ~ label, &:valid ~ label {
-    inset-block-start: 5px;
-    font-size: .8rem;
+    .search-form-item {
+    border: 1px #6F00EF solid;
+    position: relative;
     }
 
-    &:focus {
-    background-color: lightgoldenrodyellow;
+    label {
+    display: block;
+    font-size: 16px;
+    inset-block-start: 50%;
+    inset-inline-start: 20px;
+    line-height: normal;
+    margin: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    z-index: 1;
     }
 
-    &[type="submit"] {
-    background-color: $base-color;
-    color: #fff;
+    input, select {
+    border: 0;
+    font-size: 1.25rem;
+    height: 100%;
+    width: 100%;
+  
+      &:not([type="submit"]) {
+      background-color: transparent;
+      display: block;
+      margin: 0;
+      padding: 30px 20px 10px;
+      position: relative;
+    
+        &:focus ~ label, &:valid ~ label {
+        font-size: 13px;
+        inset-block-start: 14px;
+        }
 
-      &:focus, &:hover {
+        &:focus {
+        background-color: lightgoldenrodyellow;
+        }
 
-        background-color: gainsboro;
-        color: #000;
+      }
 
+      &[type="submit"] {
+      background-color: #6F00EF;
+      color: #fff;
       }
 
     }
@@ -88,68 +79,63 @@ padding: 1em 0;
 // Example 2: Outer Float
 
 .outer-float {
-padding: 2em 0 1em;
+padding-block-start: 20px;
 
-  @media (min-width: 900px) {
+  .search-form-container {
 
-    display: flex;
-    margin: 0 -10px;
+    @media (min-width: 56.25em) {
 
-  }
-
-  .field-container {
-  border: 1px $base-color solid;
-  flex: 1 1 0;
-  margin-bottom: 50px;
-  position: relative;
-
-    @media (min-width: 900px) {
-
-      margin: 0 10px;
+      display: grid;
+      gap: 0.625em;
+      grid-template-columns: repeat(4, 1fr);
 
     }
 
-  }
-
-  label {
-  display: inline-block;
-  font-size: 1rem;
-  inset-inline-start: 10px;
-  line-height: normal;
-  position: absolute;
-  inset-block-start: 30px;
-  transition: all .2s ease;
-  z-index: 2;
-  }
-
-  input, select {
-  background-color: transparent;
-  border: 0;
-  display: block;
-  font-size: 1.25rem;
-  height: 75px;
-  margin: 0;
-  padding: 0 10px;
-  position: relative;
-  width: 100%;
-
-    &:focus ~ label, &:valid ~ label {
-    inset-block-start: -30px;
+    .search-form-item {
+    border: 1px #6F00EF solid;
+    position: relative;
     }
 
-    &:focus, &:focus {
-    background-color: lightgoldenrodyellow;
+    label {
+    display: block;
+    font-size: 16px;
+    inset-block-start: 50%;
+    inset-inline-start: 20px;
+    line-height: normal;
+    margin: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    z-index: 1;
     }
 
-    &[type="submit"] {
-    background-color: $base-color;
-    color: #fff;
+    input, select {
+    border: 0;
+    font-size: 1.25rem;
+    height: 100%;
+    width: 100%;
+  
+      &:not([type="submit"]) {
+      background-color: transparent;
+      display: block;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+    
+        &:focus ~ label, &:valid ~ label {
+        font-size: 13px;
+        inset-block-start: -18px;
+        }
 
-      &:focus, &:hover {
+        &:focus {
+        background-color: lightgoldenrodyellow;
+        }
 
-        background-color: gainsboro;
-        color: #000;
+      }
 
+      &[type="submit"] {
+      background-color: #6F00EF;
+      color: #fff;
       }
 
     }
@@ -161,94 +147,91 @@ padding: 2em 0 1em;
 // Example 3: Outer Float (JS)
 
 .outer-float-js {
-padding: 2em 0 1em;
+padding-block-start: 20px;
+  
+  .search-form-container {
+  
+    @media (min-width: 56.25em) {
+  
+      display: grid;
+      gap: 0.625em;
+      grid-template-columns: repeat(4, 1fr);
+  
+    }
+  
+    .search-form-item {
+    border: 1px #6F00EF solid;
+    position: relative;
 
-  @media (min-width: 900px) {
+      &:has([disabled]) {
+      border-color: #808080;
+      }
 
-    display: flex;
-    margin: 0 -10px;
-
-  }
-
-  .field-container {
-  flex: 1 1 0;
-  margin-bottom: 50px;
-  position: relative;
-
-    @media (min-width: 900px) {
-
-      margin: 0 10px;
+      &:has([disabled] ~ label) {
+      color: #808080;
+      }
 
     }
+  
+    label {
+    display: block;
+    font-size: 16px;
+    inset-block-start: 50%;
+    inset-inline-start: 20px;
+    line-height: normal;
+    margin: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all .2s ease;
+    z-index: 1;
+    }
+  
+    input, select {
+    border: 0;
+    font-size: 1.25rem;
+    height: 100%;
+    width: 100%;
+    
+      &:not([type="submit"]), select {
+      background-color: transparent;
+      display: block;
+      margin: 0;
+      padding: 20px;
+      position: relative;
 
-  }
+        &.has-text, &.has-focus {
+        color: inherit;
+  
+          ~ label {
+            font-size: 13px;
+            inset-block-start: -18px;
+  
+          }
+  
+        }
 
-  label {
-  display: inline-block;
-  font-size: 1rem;
-  inset-inline-start: 10px;
-  line-height: normal;
-  position: absolute;
-  inset-block-start: 30px;
-  transition: all .2s ease;
-  z-index: 2;
-  }
+        &.has-focus {
+        background-color: lightgoldenrodyellow;
+        }
+      
+      }
+  
+      &[type="submit"] {
+      background-color: #6F00EF;
+      color: #fff;
+      }
+  
+    }
 
-  input, select {
-  background-color: #fff;
-  border: 1px $base-color solid;
-  display: block;
-  font-size: 1.25rem;
-  height: 75px;
-  margin: 0;
-  padding: 0 10px;
-  position: relative;
-  width: 100%;
-
-    &:not([type=submit]), select {
+    select {
     color: transparent; // HACK: This is so that the select text does not show up _behind_ the label. Hacky hack is hacky. Wondering if SEO red flag?
 
       &[disabled], &[disabled] ~ label {
       cursor: not-allowed;
       }
 
-      &[disabled] {
-      border-color: #808080;
-
-          ~ label {
-          color: #808080;
-          }
-
-      }
-
-      &.has-text, &.has-focus {
-      color: inherit;
-
-        ~ label {
-          font-size: .9em;
-          inset-block-start: -30px;
-
-        }
-
-      }
-
     }
-
-    // Submit Button
-
-    &[type="submit"] {
-    background-color: $base-color;
-    color: #fff;
-
-      &:focus, &:hover {
-
-        background-color: gainsboro;
-        color: #000;
-
-      }
-
-    }
-
+  
   }
-
+  
 }

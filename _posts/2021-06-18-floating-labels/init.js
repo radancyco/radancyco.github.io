@@ -1,74 +1,79 @@
 /*!
 
-  Floating Labels Example
+  Floating Labels Example: Outer Float (JS)
 
   Contributor(s):
   Michael "Spell" Spellacy
 
 */
 
-// Example 3: Outer Float
-
 var searchFormField = document.querySelectorAll(".outer-float-js input:not([type=submit]), .outer-float-js select");
-var locationField = document.getElementsByClassName("search-location");
+var locationField = document.querySelectorAll(".search-location");
 
-for (var i = 0; i < searchFormField.length; i++) {
+searchFormField.forEach(function(field){
 
-  searchFormField[i].addEventListener("focus", function(){
+  field.addEventListener("focus", function(){
 
-    this.classList.add("has-focus");
+    field.classList.add("has-focus");
 
   });
 
-  searchFormField[i].addEventListener("blur", function(){
+  field.addEventListener("blur", function(){
 
-    this.classList.remove("has-focus");
+    field.classList.remove("has-focus");
 
-    if (this.value !== "") {
+    if (field.value !== "") {
 
-       this.classList.add("has-text");
+       field.classList.add("has-text");
 
     } else {
 
-      this.classList.remove("has-text");
+      field.classList.remove("has-text");
 
     }
 
   });
 
-}
+});
 
-for (var i = 0; i < locationField.length; i++) {
+locationField.forEach(function(field){
 
-  locationField[i].addEventListener("blur", function(){
+  field.addEventListener("blur", function(){
 
-    if(this.value !== "") {
+    var radiusField = field.parentNode.nextElementSibling.querySelector("select");
 
-      this.parentNode.nextElementSibling.querySelector("select").classList.add("has-text")
-      this.parentNode.nextElementSibling.querySelector("select").removeAttribute("disabled");
+    if(field.value !== "") {
+
+      radiusField.classList.add("has-text")
+      radiusField.removeAttribute("disabled");
 
     } else {
 
-      this.parentNode.nextElementSibling.querySelector("select").classList.remove("has-text");
-      this.parentNode.nextElementSibling.querySelector("select").setAttribute("disabled", "");
+      radiusField.classList.remove("has-text");
+      radiusField.setAttribute("disabled", "");
 
     }
 
   });
 
-}
+});
 
 function checkSearchFormFields() {
 
-  for (var i = 0; i < searchFormField.length; i++) {
+  locationField.forEach(function(field){
 
-    if (searchFormField[i].value !== "") {
+    var radiusField = field.parentNode.nextElementSibling.querySelector("select");
 
-       searchFormField[i].classList.add("has-text");
+    if (field.value !== "") {
+
+      field.classList.add("has-text");
+
+      radiusField.classList.add("has-text");
+      radiusField.removeAttribute("disabled");
 
     }
 
-  }
+  });
 
 }
 

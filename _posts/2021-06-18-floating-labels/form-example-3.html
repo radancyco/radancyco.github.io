@@ -1,39 +1,42 @@
-<form class="outer-float-js">
+<form class="search-form outer-float-js">
 
-    <div class="field-container">
+  <div class="search-form-container">
+
+    <div class="search-form-item">
   
-      <input id="search-item-1" class="search-keyword" required>
+      <input id="item-7" required>
   
-      <label for="search-item-1">Keyword</label>
-  
-    </div>
-  
-    <div class="field-container">
-  
-      <input id="search-item-2" class="search-location">
-  
-      <label for="search-item-2">Country, City, State or Zip Code</label>
+      <label for="item-7">Enter a Keyword</label>
   
     </div>
   
-    <div class="field-container">
+    <div class="search-form-item">
   
-      <select id="search-item-3" class="search-radius" disabled>
+      <input class="search-location has-text" id="item-8" required value="Allentown, PA">
+  
+      <label for="item-8">Country, City, State or Zip Code</label>
+  
+    </div>
+  
+    <div class="search-form-item">
+  
+      <select id="item-9" required disabled>
         <option value>Please Select</option>
         <option value="10">10 Miles</option>
         <option value="75">75 Miles</option>
         <option value="500">500 Miles</option>
       </select>
   
-      <label for="search-item-3">Radius</label>
+      <label for="item-9">Radius</label>
   
     </div>
   
-    <div class="field-container">
+    <div class="search-form-item">
   
       <input type="submit" value="Submit">
   
     </div>
+
+  </div>
   
 </form>
-  

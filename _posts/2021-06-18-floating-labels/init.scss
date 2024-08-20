@@ -15,7 +15,7 @@
 
   .search-form-container {
 
-    @media (min-width: 56.25em) {
+    @media (min-width: 64em) {
 
       display: grid;
       gap: 0.625em;
@@ -25,6 +25,7 @@
 
     .search-form-item {
     border: 1px #6F00EF solid;
+    margin: 1em 0;
     position: relative;
     }
 
@@ -68,6 +69,7 @@
       &[type="submit"] {
       background-color: #6F00EF;
       color: #fff;
+      padding: 1em;
       }
 
     }
@@ -79,11 +81,10 @@
 // Example 2: Outer Float
 
 .outer-float {
-padding-block-start: 20px;
 
   .search-form-container {
 
-    @media (min-width: 56.25em) {
+    @media (min-width: 64em) {
 
       display: grid;
       gap: 0.625em;
@@ -93,6 +94,7 @@ padding-block-start: 20px;
 
     .search-form-item {
     border: 1px #6F00EF solid;
+    margin: 40px 0;
     position: relative;
     }
 
@@ -136,6 +138,7 @@ padding-block-start: 20px;
       &[type="submit"] {
       background-color: #6F00EF;
       color: #fff;
+      padding: 1em;
       }
 
     }
@@ -147,11 +150,10 @@ padding-block-start: 20px;
 // Example 3: Outer Float (JS)
 
 .outer-float-js {
-padding-block-start: 20px;
   
   .search-form-container {
   
-    @media (min-width: 56.25em) {
+    @media (min-width: 64em) {
   
       display: grid;
       gap: 0.625em;
@@ -161,6 +163,7 @@ padding-block-start: 20px;
   
     .search-form-item {
     border: 1px #6F00EF solid;
+    margin: 40px 0;
     position: relative;
 
       &:has([disabled]) {
@@ -219,6 +222,7 @@ padding-block-start: 20px;
       &[type="submit"] {
       background-color: #6F00EF;
       color: #fff;
+      padding: 1em;
       }
   
     }

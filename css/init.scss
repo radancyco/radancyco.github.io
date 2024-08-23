@@ -154,7 +154,7 @@ font-weight: normal;
 details {
 margin: em(8) 0;
 
-  summary:not(.btn) {
+  summary:not(.btn, .video__transcript-toggle) {
   text-decoration: underline;
   }
 

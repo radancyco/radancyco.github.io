@@ -1,24 +1,43 @@
-<video aria-label="The Empire Strikes Back: Trailer A" controls poster="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.png" preload="metadata">
-    <source src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.mp4" type="video/mp4">
-    <track default label="English" kind="captions" src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.vtt" srclang="en">
-</video>
 
-<details>
+<div class="video">
 
-    <summary class="btn">Transcript</summary>
+    <div class="video__container">
+
+        <video aria-label="The Empire Strikes Back: Trailer A" controls poster="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.png" preload="metadata">
+            <source src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.mp4" type="video/mp4">
+            <track default label="English" kind="captions" src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.vtt" srclang="en">
+        </video>
+
+        <details class="video__transcript">
+
+            <summary class="video__transcript-toggle">Transcript</summary>
+
+            <div class="video__transcript-content">
+        
+                <p><strong>Narrator (Harrison Ford):</strong> Luke Skywalker and Han Solo rescue the princess, destroy the Death Star, but their story didn't end there.</p>
+        
+                <p>Now, the creators of the biggest smash hit of all time, bring you the next episode in the "Star Wars" saga, "The Empire Strikes Back."</p>
+        
+                <p>The continuing story of our band of heroes. Luke Skywalker, Princess Leia, Han Solo, C3PO, R2D2 and Chewbacca and introducing Lando Calrissian.</p>
+        
+                <p>It's an epic of romance. Of heroes and villains. They cross trackless voids to unknown worlds.</p>
+        
+                <p>A galactic odyssey against oppression.</p>
+        
+                <p>A big new sprawling space adventure in the "Star Wars" saga, "<a href="https://www.imdb.com/title/tt0080684/">The Empire Strikes Back</a>."</p>
+        
+                <p>Coming to your galaxy <strong>next summer</strong>.</p>
+
+            </div>
     
-    <p><strong>Narrator (Harrison Ford):</strong> Luke Skywalker and Han Solo rescue the princess, destroy the Death Star, but their story didn't end there.</p>
-  
-    <p>Now, the creators of the biggest smash hit of all time, bring you the next episode in the "Star Wars" saga, "The Empire Strikes Back."</p>
-  
-    <p>The continuing story of our band of heroes. Luke Skywalker, Princess Leia, Han Solo, C3PO, R2D2 and Chewbacca and introducing Lando Calrissian.</p>
-  
-    <p>It's an epic of romance. Of heroes and villains. They cross trackless voids to unknown worlds.</p>
-  
-    <p>A galactic odyssey against oppression.</p>
-  
-    <p>A big new sprawling space adventure in the "Star Wars" saga, "<a href="https://www.imdb.com/title/tt0080684/">The Empire Strikes Back</a>."</p>
-  
-    <p>Coming to your galaxy next summer.</p>
+        </details>
 
-</details>
+    </div>
+
+    <div class="video__content">
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget <a href="#">tincidunt condimentum</a>, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+    </div>
+
+</div>

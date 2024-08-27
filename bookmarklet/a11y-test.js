@@ -145,7 +145,7 @@ function makeCsv(data) {
 
         let paddedID = String(ID).padStart(3, "0"); // Pad the ID with zeros to ensure three digits
 
-        csv += '"' + row.title + '","' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '#headingoutline", " ", " "," ","https://wave.webaim.org/report#/' + row.loc + '"," "," "," "," ","A11Y' + paddedID + '"\n'; // Reversed and renamed columns
+        csv += '"' + row.title + '","' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '", " ", "https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '#headingoutline", " ", " "," ","https://wave.webaim.org/report#/' + row.loc + '"," "," "," "," ","A11Y' + paddedID + '"\n'; // Reversed and renamed columns
 
         ID++; // Increment the counter
 

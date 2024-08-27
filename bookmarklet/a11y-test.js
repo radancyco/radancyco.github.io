@@ -138,14 +138,14 @@ function convertSitemapToArray(url) {
 
 function makeCsv(data) {
 
-    let csv = "Title, URL, W3C Validation, Error, WAVE Validation, Errors, Contrast Errors, Screenshot, Radancy Notes, ID\n"; // CSV header with renamed columns
+    let csv = "Title, URL, W3C Validation, Error, Heading Validation, Error, Screenshot, WAVE Validation, Errors, Contrast Errors, Screenshot, Radancy Notes, ID\n"; // CSV header with renamed columns
     let ID = 1; // Initialize the counter
 
     data.forEach(function(row) {
 
         let paddedID = String(ID).padStart(3, "0"); // Pad the ID with zeros to ensure three digits
 
-        csv += '"' + row.title + '","' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '"," ","https://wave.webaim.org/report#/' + row.loc + '"," "," "," "," ","A11Y' + paddedID + '"\n'; // Reversed and renamed columns
+        csv += '"' + row.title + '","' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '","https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=' + row.loc + '#headingoutline", " ", " "," ","https://wave.webaim.org/report#/' + row.loc + '"," "," "," "," ","A11Y' + paddedID + '"\n'; // Reversed and renamed columns
 
         ID++; // Increment the counter
 

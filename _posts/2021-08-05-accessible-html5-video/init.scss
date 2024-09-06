@@ -13,7 +13,7 @@
 
     .video {
     grid-template-columns: 40% auto;
-    gap: 2em;
+    column-gap: 2em;
 
         @media (min-width: 60em) {
 

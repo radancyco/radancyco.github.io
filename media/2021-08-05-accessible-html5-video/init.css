@@ -7,4 +7,4 @@
 
   sass --watch init.scss:../../media/2021-08-05-accessible-html5-video/init.css --style compressed
 
-*/@layer videoExample{.video{grid-template-columns:40% auto;gap:2em}@media(min-width: 60em){.video{display:grid}}.video video{border-radius:1em}.video__transcript-toggle{text-decoration:none}.video__transcript-content{background-color:#eee;border:1px #ccc solid;margin-top:1em;padding:1em}.video__content p{margin-top:0}}/*# sourceMappingURL=init.css.map */
+*/@layer videoExample{.video{grid-template-columns:40% auto;column-gap:2em}@media(min-width: 60em){.video{display:grid}}.video video{border-radius:1em}.video__transcript-toggle{text-decoration:none}.video__transcript-content{background-color:#eee;border:1px #ccc solid;margin-top:1em;padding:1em}.video__content p{margin-top:0}}/*# sourceMappingURL=init.css.map */

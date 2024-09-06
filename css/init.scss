@@ -225,10 +225,6 @@ input, textarea, button {
 appearnace: none;
 }
 
-input, button {
-transition: all 0.1s linear;
-}
-
 input:not([type="checkbox"]), button {
 border-radius: 0;
 box-sizing: border-box;

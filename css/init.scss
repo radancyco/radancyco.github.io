@@ -133,12 +133,12 @@ margin: 0;
 padding: em(16);
 }
 
-code:not(.language-html):not(.language-css):not(.language-javascript) {
+code:not(.language-html):not(.language-css):not(.language-javascript):not(.language-json) {
 border-radius: em(4);
 display: inline-block;
 padding: 0 em(14);
 font: inherit;
-white-space:nowrap;
+white-space: nowrap;
 background-color: #333;
 color: #fff;
 margin: 2px;

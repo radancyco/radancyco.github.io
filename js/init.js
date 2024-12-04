@@ -243,12 +243,10 @@ layout: null
 
 /*!
 
-  Radancy Component Library: Jump Menu (In-Page, Custom)
+  Radancy Component Library: Select Navigation (Internal, Custom)
 
   Contributor(s):
   Michael "Spell" Spellacy
-  
-  Dependencies: None
 
 */
 
@@ -258,19 +256,20 @@ layout: null
 
 	// Display which component is in use via console:
 
-	console.log("%c Select Navigation (Internal, Custom) v1.4 in use. ", "background: #6e00ee; color: #fff");
-
+	console.log("%c Select Navigation (Internal, Custom) v1.6 in use. ", "background: #6e00ee; color: #fff");
+  
 	var inPageClass = ".in-page-custom";
 	var inPageLabelClass = ".in-page-custom__label";
 	var inPageSelectClass = ".in-page-custom__select";
 	var inPageOptionClass = ".in-page-custom__select option";
 	var inPageContentClass = ".in-page-custom__content";
+	var inPageDataCustomAriaLive = "data-custom-aria-live";
 	var inPage = document.querySelectorAll(inPageClass);
 	var inPageLabel = document.querySelectorAll(inPageLabelClass);
 	var inPageSelect = document.querySelectorAll(inPageSelectClass);
 	var inPageState = "active";
 	var inPageContentList = [];
-  
+
 	// On page load
   
 	inPage.forEach(function(component) {
@@ -305,11 +304,9 @@ layout: null
 		  option.setAttribute("value", "#" + contentID);
 		  option.textContent = content.getAttribute("data-in-page-name");
   
-		  var thisSelect = content.closest(inPageClass).getElementsByTagName("select")[0];
-  
 		  // Append each dynamic option.
   
-		  thisSelect.appendChild(option);
+		  component.querySelector("select").appendChild(option);
   
 		});
   
@@ -407,25 +404,25 @@ layout: null
   
 	// Hash change event listener
   
-	  window.addEventListener("hashchange", function() {
+	window.addEventListener("hashchange", function() {
   
-		  inPageSelectedState();
+		inPageSelectedState();
   
-		  // When link is pressed, place programatic focus on selected content. This is useful if links are elsewhere on the page.
-		  // If this causes issues elsewhere on page when haschange is fired, let me know.
+		// When link is pressed, place programatic focus on selected content. This is useful if links are elsewhere on the page.
+		// If this causes issues elsewhere on page when haschange is fired, let me know.
   
-		  var selectedContent = document.querySelector(inPageContentClass + ":not([hidden])");
-	  var selectedContentID = selectedContent.getAttribute("id");
-	  var URLHash = location.hash.slice(1);
+		var selectedContent = document.querySelector(inPageContentClass + ":not([hidden])");
+	 	var selectedContentID = selectedContent.getAttribute("id");
+	  	var URLHash = location.hash.slice(1);
   
-	  if(URLHash === selectedContentID) {
+	  	if(URLHash === selectedContentID) {
   
 			selectedContent.setAttribute("tabindex", "-1");
 			selectedContent.focus();
   
-	  }
+		}
   
-	  });
+	});
   
 	inPageSelect.forEach(function(select) {
   
@@ -436,7 +433,7 @@ layout: null
   
 		// Send message to screen reader.
   
-		if(!inPageParent.hasAttribute("data-in-page-aria-live")){
+		if(!inPageParent.hasAttribute(inPageDataCustomAriaLive)){
   
 		  var inPageAnnounce = inPageParent.querySelector("div[aria-live]");
   
@@ -480,7 +477,7 @@ layout: null
   
 		if (!menu.classList.contains(inPageState)) {
   
-		  menu.getElementsByTagName("select")[0].selectedIndex = 0;
+		  menu.querySelector("select").selectedIndex = 0;
   
 		}
   

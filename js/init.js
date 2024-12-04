@@ -254,10 +254,12 @@ layout: null
 
 (function() {
 
-	// Display which Jump Menu in use via console:
-	
-	console.log('%c Jump Menu (In-page, Custom) v1.0 in use. ', 'background: #6e00ee; color: #fff');
-	
+	"use strict";
+
+	// Display which component is in use via console:
+
+	console.log("%c Select Navigation (Internal, Custom) v1.4 in use. ", "background: #6e00ee; color: #fff");
+
 	var inPageClass = ".in-page-custom";
 	var inPageLabelClass = ".in-page-custom__label";
 	var inPageSelectClass = ".in-page-custom__select";
@@ -267,187 +269,188 @@ layout: null
 	var inPageLabel = document.querySelectorAll(inPageLabelClass);
 	var inPageSelect = document.querySelectorAll(inPageSelectClass);
 	var inPageState = "active";
-	var inPageHash =  window.location.hash;
-	var inPageFragment = inPageHash.substr(1);
 	var inPageContentList = [];
-	
+
 	// On page load
-	
-	inPage.forEach(function(component, e){
-	
-	  // Check to see if "dynamic" Jump Menu in use.
-	
-	  if(component.hasAttribute("data-in-page-dynamic")){
-	
+
+	inPage.forEach(function(component) {
+
+		// Check if "dynamic" Jump Menu is in use.
+
+		if (component.hasAttribute("data-in-page-dynamic")) {
+
 		var inPageContent = component.querySelectorAll(inPageContentClass);
 		var inPageContentNth = component.querySelectorAll(inPageContentClass + ":nth-of-type(n + 2)");
-	
-		inPageContentNth.forEach(function(content, i){
-	
-		  content.setAttribute("hidden", "");
-	
+
+		inPageContentNth.forEach(function(content) {
+
+			content.setAttribute("hidden", "");
+
 		});
-	
-		inPageContent.forEach(function(content, i){
-	
-		  var count = (i + 1);
-	
-		  // If custom ID present
-	
-		  if(content.hasAttribute("data-in-page-id")) {
-	
-			var contentID = content.getAttribute("data-in-page-id");
-	
-		  } else { 
-	
-			var contentID = "content-" + count;
-	
-		  }
-	
-		  content.setAttribute("id", contentID);
-	
-		  // Create option element
-	
-		  var option = document.createElement("option");
-		  option.setAttribute("value", "#" + contentID);
-		  option.textContent = content.getAttribute("data-in-page-name");
-	
-		  var thisSelect = content.closest(inPageClass).getElementsByTagName("select")[0];
-	
-		  // Append each dynamic option.
-	
-		  thisSelect.appendChild(option);
-	
+
+		inPageContent.forEach(function(content, i) {
+
+			var count = i + 1;
+
+			// If custom ID present
+
+			var contentID = content.hasAttribute("data-in-page-id") ? content.getAttribute("data-in-page-id"): "content-" + count;
+
+			content.setAttribute("id", contentID);
+
+			// Create option element
+
+			var option = document.createElement("option");
+
+			option.setAttribute("value", "#" + contentID);
+			option.textContent = content.getAttribute("data-in-page-name");
+
+			var thisSelect = content.closest(inPageClass).getElementsByTagName("select")[0];
+
+			// Append each dynamic option.
+
+			thisSelect.appendChild(option);
+
 		});
-	
-	  }
-	
+
+		}
+
 	});
-	
+
 	var inPageOption = document.querySelectorAll(inPageOptionClass);
-	
-	inPageLabel.forEach(function(label, e){
-	
-	  // Apply "for" attribute to each label.
-	
-	  label.setAttribute("for", "in-page-select-" + (e + 1));
-	
+
+	inPageLabel.forEach(function(label, e) {
+
+		// Apply "for" attribute to each label.
+
+		label.setAttribute("for", "in-page-select-" + (e + 1));
+
 	});
-	
-	inPageSelect.forEach(function(select, e){
-	
-	  // Apply "id" to each select.
-	
-	  select.setAttribute("id", "in-page-select-" + (e + 1));
-	
+
+	inPageSelect.forEach(function(select, e) {
+
+		// Apply "id" to each select.
+
+		select.setAttribute("id", "in-page-select-" + (e + 1));
+
 	});
-	
+
 	// Get all Job Menu options on page and push to array.
-	
-	inPageOption.forEach(function(option, e){
-	
-	  inPageContentList.push(option.getAttribute("value"));
-	
+
+	inPageOption.forEach(function(option) {
+
+		inPageContentList.push(option.getAttribute("value"));
+
 	});
-	
-	// console.log(inPageContentList)
-	
+
 	function inPageSelectedState() {
-	
-	  // Check array against hash
-	
-	  if(inPageContentList.includes(inPageHash)) {
-	
-		// If hash matches one of the array selections, then load the selected content in hash
-	
-		var inPageSelected =  document.getElementById(inPageFragment);
+
+		var inPageHash = window.location.hash || inPageContentList[0];
+		var inPageFragment = inPageHash.substr(1);
+
+		// Check array against hash
+
+		if (inPageContentList.includes(inPageHash)) {
+
+		// If hash matches one of the array selections, load the selected content in hash
+		
+		var inPageSelected = document.getElementById(inPageFragment);
 		var inPageContent = inPageSelected.closest(inPageClass).querySelectorAll(inPageContentClass);
-	
-		inPageContent.forEach(function(content, i){
-	
-		  content.setAttribute("hidden", "");
-	
+
+		inPageContent.forEach(function(content) {
+		
+			content.setAttribute("hidden", "");
+
 		});
-	
+
 		inPageSelected.removeAttribute("hidden");
-	
-		inPageOption.forEach(function(select, i){
-	
-		  var optionvalue  = select.getAttribute("value");
-	
-		  if (location.hash === optionvalue) {
-	
-			select.setAttribute("selected", "");
-			select.closest(inPageClass).classList.add(inPageState);
-	
-		  }
-	
+
+		inPageOption.forEach(function(option) {
+
+			var optionValue = option.getAttribute("value");
+
+			if (location.hash === optionValue) {
+
+			option.setAttribute("selected", "");
+			option.closest(inPageClass).classList.add(inPageState);
+
+			} else {
+
+			option.removeAttribute("selected");
+
+			}
+
 		});
-	
-	  }
-	
+
+		// Update select dropdown
+
+		var select = document.querySelector(`${inPageClass} select`);
+
+		if (select) {
+
+			select.value = inPageHash;
+
+		}
+
+		}
+
 	}
-	
+
 	inPageSelectedState();
-	
-	inPageSelect.forEach(function(select, e){
-	
-	  select.addEventListener("change", function () {
-	
+
+	// Hash change event listener
+
+	window.addEventListener("hashchange", inPageSelectedState);
+
+	inPageSelect.forEach(function(select) {
+
+		select.addEventListener("change", function() {
+
 		var inPageParent = this.closest(inPageClass);
-	
-		var inPageSelected = inPageParent.getElementsByTagName("select")[0];
-	
-		if(!inPageParent.hasAttribute("data-in-page-aria-live")){
-	
-		  var inPageAnnounce = inPageParent.querySelector("div[aria-live]");
-	
-		  inPageAnnounce.textContent = "Selected Content: " + this.options[this.selectedIndex].text;
-	
-		}
-	
-		history.replaceState(null, null, inPageSelected.value);
-	
-		var inPageContentSelected = window.location.hash.substr(1);
-	
 		var inPageContent = inPageParent.querySelectorAll(inPageContentClass);
-	
-		inPageContent.forEach(function(content, i){
-	
-		  content.setAttribute("hidden", "");
-	
+
+		// Update hash in URL
+
+		history.replaceState(null, null, this.value);
+
+		inPageContent.forEach(function(content) {
+
+			content.setAttribute("hidden", "");
+
 		});
-	
+
+		var inPageContentSelected = window.location.hash.substr(1);
+
 		document.getElementById(inPageContentSelected).removeAttribute("hidden");
-	
+
 		// Set selected jump menu to active.
-	
-		inPage.forEach(function(menu, e){
-	
-		  menu.classList.remove(inPageState);
-	
+
+		inPage.forEach(function(menu) {
+
+			menu.classList.remove(inPageState);
+
 		});
-	
+
 		inPageParent.classList.add(inPageState);
-	
-	  });
-	
+
+		});
+
 	});
-	
-	// Some browsers fail to place the select back to 0 when back button selected. This fixes that.
-	
-	window.addEventListener("beforeunload", function () {
-	
-	  inPage.forEach(function(menu, e){
-	
+
+	// Fix for some browsers not resetting the select index on page unload.
+
+	window.addEventListener("beforeunload", function() {
+
+		inPage.forEach(function(menu) {
+
 		if (!menu.classList.contains(inPageState)) {
-	
-		  menu.getElementsByTagName("select")[0].selectedIndex = 0;
-	
+
+			menu.getElementsByTagName("select")[0].selectedIndex = 0;
+
 		}
-	
-	  });
-	
+
+		});
+
 	});
-	
+
 })();

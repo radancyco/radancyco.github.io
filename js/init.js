@@ -421,6 +421,16 @@ layout: null
 		var inPageParent = this.closest(inPageClass);
 		var inPageContent = inPageParent.querySelectorAll(inPageContentClass);
 
+		// Send message to screen reader.
+
+		if(!inPageParent.hasAttribute("data-in-page-aria-live")){
+
+			var inPageAnnounce = inPageParent.querySelector("div[aria-live]");
+
+			inPageAnnounce.textContent = "Selected Content: " + this.options[this.selectedIndex].text;
+
+		}
+
 		// Update hash in URL
 
 		history.replaceState(null, null, this.value);

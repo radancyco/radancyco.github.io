@@ -345,52 +345,52 @@ layout: null
 
 	function inPageSelectedState() {
 
-		var inPageHash = window.location.hash || inPageContentList[0];
-		var inPageFragment = inPageHash.substr(1);
+		var inPageHash = location.hash || inPageContentList[0];
+		var inPageFragment = inPageHash.slice(1);
 
 		// Check array against hash
 
 		if (inPageContentList.includes(inPageHash)) {
 
-		// If hash matches one of the array selections, load the selected content in hash
-		
-		var inPageSelected = document.getElementById(inPageFragment);
-		var inPageContent = inPageSelected.closest(inPageClass).querySelectorAll(inPageContentClass);
+			// If hash matches one of the array selections, load the selected content in hash
+			
+			var inPageSelected = document.getElementById(inPageFragment);
+			var inPageContent = inPageSelected.closest(inPageClass).querySelectorAll(inPageContentClass);
 
-		inPageContent.forEach(function(content) {
-		
-			content.setAttribute("hidden", "");
+			inPageContent.forEach(function(content) {
+			
+				content.setAttribute("hidden", "");
 
-		});
+			});
 
-		inPageSelected.removeAttribute("hidden");
+			inPageSelected.removeAttribute("hidden");
 
-		inPageOption.forEach(function(option) {
+			inPageOption.forEach(function(option) {
 
-			var optionValue = option.getAttribute("value");
+				var optionValue = option.getAttribute("value");
 
-			if (location.hash === optionValue) {
+				if (location.hash === optionValue) {
 
-			option.setAttribute("selected", "");
-			option.closest(inPageClass).classList.add(inPageState);
+				option.setAttribute("selected", "");
+				option.closest(inPageClass).classList.add(inPageState);
 
-			} else {
+				} else {
 
-			option.removeAttribute("selected");
+				option.removeAttribute("selected");
+
+				}
+
+			});
+
+			// Update select dropdown
+
+			var select = document.querySelector(inPageClass + " select");
+
+			if (select) {
+
+				select.value = inPageHash;
 
 			}
-
-		});
-
-		// Update select dropdown
-
-		var select = document.querySelector(inPageClass + " select");
-
-		if (select) {
-
-			select.value = inPageHash;
-
-		}
 
 		}
 
@@ -441,7 +441,7 @@ layout: null
 
 		});
 
-		var inPageContentSelected = window.location.hash.substr(1);
+		var inPageContentSelected = location.hash.slice(1);
 
 		document.getElementById(inPageContentSelected).removeAttribute("hidden");
 

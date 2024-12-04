@@ -346,7 +346,7 @@ layout: null
 	function inPageSelectedState() {
 
 		var inPageHash = window.location.hash || inPageContentList[0];
-		var inPageFragment = inPageHash.substr(1);
+		var inPageFragment = inPageHash.slice(1);
 
 		// Check array against hash
 
@@ -384,7 +384,7 @@ layout: null
 
 		// Update select dropdown
 
-		var select = document.querySelector(`${inPageClass} select`);
+		var select = document.querySelector(inPageClass + " select");
 
 		if (select) {
 
@@ -400,7 +400,19 @@ layout: null
 
 	// Hash change event listener
 
-	window.addEventListener("hashchange", inPageSelectedState);
+	window.addEventListener("hashchange", function() {
+
+		inPageSelectedState();
+
+		// When link is pressed, place programatic focus on selected content. This is useful if links are elsewhere on the page.
+		// If this causes issues elsewhere on page when haschange is fired, let me know.
+
+		var selectedContent = document.querySelector(inPageContentClass + ":not([hidden])");
+
+		selectedContent.setAttribute("tabindex", "-1");
+		selectedContent.focus();
+
+	});
 
 	inPageSelect.forEach(function(select) {
 

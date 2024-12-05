@@ -305,6 +305,10 @@ margin: 0;
   margin-bottom: em(11);
   }
 
+  tbody {
+  background-color: #fff;
+  }
+
   th, td {
   border-bottom: em(1) $highlight-color solid;
   padding: em(16);

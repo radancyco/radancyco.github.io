@@ -889,7 +889,6 @@ width: 1px;
 }
 
 .table-container {
-margin-bottom: em(16);
 overflow-X: auto;
 padding-bottom: em(16);
 scrollbar-color: $highlight-color $highlight-color-active;
@@ -1069,37 +1068,3 @@ body:not(.component-library-disclosure) {
   }
   
 }
-
-// In Page Navigation (Component Library)
-  
-.in-page-custom {
-
-    &__nav {
-    margin: 0 0 em(32);
-    }
-  
-    &__label {
-    display: block;
-
-    }
-
-    &__select {
-    background-color: #fff;
-    border: 1px #767676 solid;
-    color: inherit;
-    font-size: inherit;
-    max-width: rem(420);
-    padding: em(8);
-    width: 100%;
-    }
-
-    &__content {
-  
-      &:target {
-      scroll-margin-top: calc(190em / 16);
-      }
-  
-    }
-  
-  }
-

@@ -704,11 +704,16 @@ margin: 2em 0;
   cursor: pointer;
   display: grid;
   font-size: calc(14rem/16);
-  grid-template-columns: min-content auto; 
+  grid-template-columns: min-content max-content; 
   line-height: 1.2; 
   padding: 1.2em;
-  text-align: start;
   text-decoration: none;
+
+    @media (min-width: $breakpoint-medium) {
+  
+      justify-content: center;
+
+    }
     
     &:hover, &:focus {
     text-decoration: underline;

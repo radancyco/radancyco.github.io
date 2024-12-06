@@ -285,6 +285,7 @@ font-size: rem(8);
 table {
 width: 375%;
 border-collapse: collapse;
+border-inline-end: $highlight-color 1px solid;
 margin: 0;
 
   @media(min-width: em(680)) {

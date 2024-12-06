@@ -701,7 +701,7 @@ margin: 2em 0;
   cursor: pointer;
   display: grid;
   font-size: calc(14rem/16);
-  grid-template-columns: min-content max-content; 
+  grid-template-columns: min-content auto; 
   line-height: 1.2; 
   padding: 1.2em;
   text-decoration: none;

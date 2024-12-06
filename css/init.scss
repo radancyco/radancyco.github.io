@@ -293,12 +293,6 @@ margin: 0;
 
   }
 
-  &:target {
-  background-color: #eee;
-  color: #000;
-  transition: background-color 300ms 1.2s ease-in-out;
-  }
-
   caption {
   font-size: rem(25.6);
   text-align: start;
@@ -320,11 +314,11 @@ margin: 0;
   text-align: start;
   white-space: nowrap;
 
-    &[scope="row"] {
+    /* &[scope="row"] {
     left: 0;
     position: sticky;
     z-index: 1;
-    }
+    } */
 
   }
 

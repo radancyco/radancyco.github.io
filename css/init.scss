@@ -1081,3 +1081,47 @@ body:not(.component-library-disclosure) {
   }
   
 }
+
+.note-label {
+border-radius: calc(3rem/16);
+border: calc(2rem/16) transparent solid;
+display: inline-block;
+line-height: normal;
+margin: calc(2rem/16) 0;
+min-width: calc(100rem/16);
+padding: calc(5rem/16);
+text-align: center;
+      
+    &.behavior {
+    background-color: orange;
+    border-color: darkorange;
+    }
+
+    &.bug {
+    background-color: tomato;
+    border-color: red;
+    }
+
+    &.feature {
+    background-color: rebeccapurple;
+    border-color: purple;
+    color: #fff
+    }
+
+    &.logic {
+    background-color: lightblue;
+    border-color: darkblue;
+    }
+    
+    &.roadmap {
+    background-color: green;
+    border-color: darkgreen;
+    color: #fff;
+    }
+    
+    &.testing {
+    background-color: yellow;
+    border-color: goldenrod;
+    }
+  
+  }

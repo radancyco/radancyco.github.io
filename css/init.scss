@@ -1086,10 +1086,12 @@ body:not(.component-library-disclosure) {
 border-radius: calc(3rem/16);
 border: calc(2rem/16) transparent solid;
 display: inline-block;
+font-weight: bold;
 line-height: normal;
-margin: calc(2rem/16) 0;
+margin: 2em 0;
+margin-inline-end: .5em;
 min-width: calc(100rem/16);
-padding: calc(5rem/16);
+padding: .5em;
 text-align: center;
       
     &.behavior {

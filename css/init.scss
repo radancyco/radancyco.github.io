@@ -283,7 +283,6 @@ font-size: rem(8);
 }
 
 table {
-width: 375%;
 border-collapse: collapse;
 border-inline-end: $highlight-color 1px solid;
 margin: 0;
@@ -334,6 +333,17 @@ margin: 0;
     white-space: nowrap;
     }
 
+  }
+
+  div {
+  width: calc(325rem / 16);
+
+    @media(min-width: em(680)) {
+
+      width: auto;
+
+    }
+  
   }
 
 }

@@ -1114,6 +1114,11 @@ text-align: center;
     background-color: lightblue;
     border-color: darkblue;
     }
+
+    &.maintenance {
+    background-color: hotpink;
+    border-color: crimson;
+    }
     
     &.roadmap {
     background-color: green;
@@ -1130,5 +1135,6 @@ text-align: center;
 
   ul:has(.note-label) {
   list-style: none;
+  margin: 0;
   padding: 0;
   }

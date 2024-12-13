@@ -239,4 +239,38 @@ layout: null
 
 	}
 
+	// Code Copier
+	// Note: I probably have dupes of this. Condense into a single function.
+
+	var btnCopyCode = document.querySelectorAll(".btn-code-copy");
+
+	btnCopyCode.forEach(function(code){
+
+		code.addEventListener("click", function () {
+
+			var codeID = this.getAttribute("data-content-id");
+			var codeContainer = document.getElementById(codeID);
+			var codeCopy = codeContainer.textContent;
+
+			navigator.clipboard.writeText(codeCopy).then(function() {
+
+				code.classList.add("code-copied");
+
+			}, function() {
+
+				code.classList.add("code-not-copied");
+
+			});
+
+			setTimeout(function(){
+
+				code.classList.remove("code-copied");
+				code.classList.remove("code-not-copied");
+
+			}, 3000);
+
+		});
+
+	});
+
 })();

@@ -142,7 +142,6 @@ white-space: nowrap;
 background-color: #333;
 color: #fff;
 margin: 2px;
-outline: 1px #fff solid;
 line-height: 2;
 font-weight: normal;
 
@@ -313,13 +312,17 @@ margin: 0;
   background-color: $highlight-color;
   color: #fff;
   text-align: start;
-  white-space: nowrap;
+  // white-space: nowrap;
 
     /* &[scope="row"] {
     left: 0;
     position: sticky;
     z-index: 1;
     } */
+
+    code {
+    outline: 1px #fff solid;
+    }
 
   }
 
@@ -328,10 +331,9 @@ margin: 0;
   }
 
   td:nth-child(1), td:nth-child(2) {
-    
-    
+
     &:has(code) {
-    white-space: nowrap;
+   // white-space: nowrap;
     }
 
   }

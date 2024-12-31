@@ -130,7 +130,14 @@ a {
 
 body {
 margin: 0;
-padding: 0;
+padding: 1em;
+
+  &:has(main[id="content"]) {
+
+    padding: 0; // Hack: Need this include padding in codepen, but not on Radancy template. 
+
+  }
+
 }
 
 code:not(.language-html):not(.language-css):not(.language-javascript):not(.language-json) {

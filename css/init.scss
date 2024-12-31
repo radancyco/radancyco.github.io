@@ -898,9 +898,11 @@ padding-bottom: 1em;
 
 .primary-header {
 background-color: $highlight-color;
-padding: em(12.8) 8% em(6.4);
 
   &__container {
+  margin: 0 auto;
+  max-width: rem(1600);
+  padding: 1em;
   position: relative;
   }
   
@@ -938,8 +940,8 @@ padding: em(12.8) 8% em(6.4);
     border-radius: em(5);
     border: rem(1) $highlight-color solid;
     height: rem(45);
-    inset-block-start: .8em;
-    inset-inline-end: .8em;
+    inset-block-start: 1em;
+    inset-inline-end: 1em;
     margin: 0;
     padding: 0;
     position: absolute;

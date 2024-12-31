@@ -1013,7 +1013,6 @@ width: 1px;
 --scroll-color-active: #666; // Active State
 
 overflow-X: auto;
-padding-bottom: em(16);
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
 scrollbar-width: thin;
 
@@ -1023,7 +1022,7 @@ scrollbar-width: thin;
     scrollbar-width: auto;
 
     &::-webkit-scrollbar {
-    height: calc(6rem / 16);
+    height: calc(20rem / 16);
     }
 
     &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
@@ -1036,6 +1035,7 @@ scrollbar-width: thin;
 
     &::-webkit-scrollbar-thumb {
     background-color: var(--scroll-color-thumb);
+    border: calc(8rem / 16) #d3d3d3 solid;
 
       &:hover {
       background-color: var(--scroll-color-active);

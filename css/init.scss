@@ -1002,10 +1002,44 @@ width: 1px;
 }
 
 .table-container {
+
+--scroll-color-track: #EEE; // Track Color
+--scroll-color-thumb: #6F00EF; // Thumb Color
+--scroll-color-active: #666; // Active State
+
 overflow-X: auto;
 padding-bottom: em(16);
-scrollbar-color: $highlight-color $highlight-color-active;
+scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
 scrollbar-width: thin;
+
+  @supports selector(::-webkit-scrollbar) {
+
+    scrollbar-color: initial;
+    scrollbar-width: auto;
+
+    &::-webkit-scrollbar {
+    height: calc(6rem / 16);
+    }
+
+    &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
+    border-radius: 100vw;
+    }
+
+    &::-webkit-scrollbar-track {
+    background-color: var(--scroll-color-track);
+    }
+
+    &::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-color-thumb);
+
+      &:hover {
+      background-color: var(--scroll-color-active);
+      }
+
+    }
+
+  }
+
 }
 
 .video-container {

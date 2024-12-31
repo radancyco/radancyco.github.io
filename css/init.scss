@@ -204,11 +204,6 @@ font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
 margin: em(16) 0;
-
-  + * {
-  margin-block-end: 0;
-  }
-
 }
 
 h3 {

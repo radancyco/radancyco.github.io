@@ -927,8 +927,8 @@ background-color: $highlight-color;
   }
 
   &__navigation {
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  inset-block-start: 1em;
+  inset-inline-end: 1em;
   position: absolute;
   z-index: 2;
   
@@ -940,11 +940,11 @@ background-color: $highlight-color;
     border-radius: em(5);
     border: rem(1) $highlight-color solid;
     height: rem(45);
-    inset-block-start: 1em;
-    inset-inline-end: 1em;
+    inset-block-start: inherit;
+    inset-inline-end: inherit;
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: inherit;
     width: rem(45);
   
       &[aria-expanded="true"] + .primary-header__navigation__content {

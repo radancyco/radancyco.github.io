@@ -196,7 +196,7 @@ h1, h2, h3, h4, h5, h6, caption, table {
 font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
-margin: em(16) 0;
+margin: em(16) 0 0;
 }
 
 h3 {
@@ -1038,7 +1038,6 @@ padding: em(16);
 
 }
 
-
 #content, #contentinfo, #contribute {
 display: block;
 color: inherit;
@@ -1066,31 +1065,6 @@ padding: em(16);
 	margin-right: em(5);
 	}
 
-}
-
-// Component Library Overrides 
-
-body:not(.component-library-disclosure) { 
-  
-  .disclosure--btn {
-  border-radius: em(5);
-  font-size: inherit;
-  margin: em(4) 0;
-  
-    .open {
-    background-color: #69788C;
-    }
-
-  }
-
-  .disclosure--content {
-  background-color: transparent;
-  border-radius: em(5);
-  border: rem(1) #cccccc solid;
-  margin: em(4) 0;
-  padding: 0 em(16);
-  }
-  
 }
 
 .note-label {
@@ -1187,3 +1161,29 @@ width: calc(30rem / 16);
     
 }
 
+// A11y Smoke Test Overrides 
+// Note: Remove these when extension has it's own styklesheet and no longer shares global
+
+body.extension-active {
+padding: 1em; 
+    
+  .disclosure--btn {
+  border-radius: em(5);
+  font-size: inherit;
+  margin: em(4) 0;
+  
+    .open {
+    background-color: #69788C;
+    }
+
+  }
+
+  .disclosure--content {
+  background-color: transparent;
+  border-radius: em(5);
+  border: rem(1) #cccccc solid;
+  margin: em(4) 0;
+  padding: 0 em(16);
+  }
+    
+}

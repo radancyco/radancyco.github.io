@@ -203,12 +203,7 @@ h1, h2, h3, h4, h5, h6, caption, table {
 font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
-margin: em(16) 0 0;
-
-  + .card {
-  margin-top: 1em;
-  }
-
+margin: em(16) 0;
 }
 
 h3 {
@@ -361,6 +356,10 @@ margin: 0;
   
   }
 
+}
+
+p {
+margin: 0 0 1em;
 }
 
 video {
@@ -974,7 +973,7 @@ background-color: $highlight-color;
     }
   
     ul {
-    margin: 1em 0 0;
+    margin: 0;
     padding: 0 0 0 1.6em;
     list-style-type: disc;
     }

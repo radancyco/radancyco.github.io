@@ -1013,11 +1013,13 @@ width: 1px;
 --scroll-color-active: #666; // Active State
 
 overflow-X: auto;
+padding-block-end: 1em;
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
 scrollbar-width: thin;
 
   @supports #{"\selector(::-webkit-scrollbar)"} {
 
+    padding-block-end: 0;
     scrollbar-color: initial;
     scrollbar-width: auto;
 

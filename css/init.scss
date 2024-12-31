@@ -204,6 +204,11 @@ font-family: "Campton", $fallback-font;
 font-weight: 400;
 line-height: normal;
 margin: em(16) 0 0;
+
+  + .card {
+  margin-top: 1em;
+  }
+
 }
 
 h3 {

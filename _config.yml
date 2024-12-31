@@ -26,7 +26,7 @@ owner-email: michael.spellacy@radancy.com
 owner-image: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg
 permalink: /:title/
 port: 4005
-repo: https://github.com/radancyco/component-library
+repo: https://github.com/radancyco/radancyco.github.io
 sass:
   style: :compressed
 theme-color: "#6E00EE"

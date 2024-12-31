@@ -894,11 +894,15 @@ padding-bottom: 1em;
   
 }
 
-// Primary Header 
+// Primary Header & Navigation
 
 .primary-header {
 background-color: $highlight-color;
 padding: em(12.8) 8% em(6.4);
+
+  &__container {
+  position: relative;
+  }
   
   &__logo {
   color: white;
@@ -921,10 +925,9 @@ padding: em(12.8) 8% em(6.4);
   }
 
   &__navigation {
-  margin-left: em(16);
+  inset-block-start: 0;
+  inset-inline-end: 0;
   position: absolute;
-  inset-inline-end: em(8);
-  inset-block-start: em(12.8);
   z-index: 2;
   
     &__button {
@@ -935,11 +938,11 @@ padding: em(12.8) 8% em(6.4);
     border-radius: em(5);
     border: rem(1) $highlight-color solid;
     height: rem(45);
+    inset-block-start: .8em;
+    inset-inline-end: .8em;
     margin: 0;
     padding: 0;
-    position: inherit;
-    inset-inline-end: inherit;
-    inset-block-start: inherit;
+    position: absolute;
     width: rem(45);
   
       &[aria-expanded="true"] + .primary-header__navigation__content {

@@ -37,27 +37,31 @@
 
   <div id="page">
 
-    <header id="banner">
+    <header class="primary-header" id="banner">
 
-      <a href="/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
+      <div class="primary-header__container">
 
-      {% if site.navigation %}
+        <a class="primary-header__logo" href="/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
 
-        {% if page.navigation != false %}
+        {% if site.navigation %}
 
-          <nav aria-label="Main" class="main-navigation">
+          {% if page.navigation != false %}
 
-            <div class="main-navigation__content">
+            <nav aria-label="Main" class="primary-header__navigation">
 
-              {% include navigation.html %}
+              <div class="primary-header__navigation__content">
 
-            </div>
+                {% include navigation.html %}
 
-          </nav>
+              </div>
+
+            </nav>
+
+          {% endif %}
 
         {% endif %}
 
-      {% endif %}
+      </div>
 
     </header>
 

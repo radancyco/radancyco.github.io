@@ -320,20 +320,14 @@ margin: 0;
 
     code {
     outline: 1px #fff solid;
+    text-align: center;
+    width: 100%;
     }
 
   }
 
   td:first-child {
   font-weight: bold;
-  }
-
-  td:nth-child(1), td:nth-child(2) {
-
-    &:has(code) {
-   // white-space: nowrap;
-    }
-
   }
 
   div {

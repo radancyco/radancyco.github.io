@@ -97,7 +97,6 @@ box-sizing: inherit;
 box-sizing: border-box;
 background-color: #fff;
 font: 100%/2 "Graphik", $fallback-font;
-text-rendering: optimizeLegibility;
 
   @media (prefers-reduced-motion: no-preference) {
   
@@ -185,20 +184,6 @@ margin: 0;
 
 }
 
-kbd {
-background-color: #ccc;
-border-radius: 0.25em;
-border: rem(1) dotted black;
-color: #000;
-display: inline-block;
-font-weight: normal;
-font: inherit;
-line-height: 2;
-margin: 2px;
-padding: 0 0.875em;
-white-space: nowrap;
-}
-
 h1, h2, h3, h4, h5, h6, caption, table {
 font-family: "Campton", $fallback-font;
 font-weight: 400;
@@ -246,16 +231,32 @@ input[type="checkbox"], input[type="radio"] {
 appearnace: checkbox;
 }
 
+kbd {
+background-color: #ccc;
+border-radius: 0.25em;
+border: rem(1) dotted black;
+color: #000;
+display: inline-block;
+font-weight: normal;
+font: inherit;
+line-height: 2;
+margin: 2px;
+padding: 0 0.875em;
+white-space: nowrap;
+}
+
 label {
 display: inline-block;
 margin-bottom: em(8);
 }
 
-textarea {
-display: block;
-margin: 0 auto em(16);
-padding: em(16) 2%;
-width: 96%;
+p {
+margin: 0 0 1em;
+
+  &:last-child {
+  margin-block-end: 0;
+  }
+
 }
 
 pre {
@@ -355,6 +356,13 @@ margin: 0;
   
   }
 
+}
+
+textarea {
+display: block;
+margin: 0 auto em(16);
+padding: em(16) 2%;
+width: 96%;
 }
 
 video {
@@ -1006,7 +1014,6 @@ width: 1px;
 --scroll-color-thumb: #6F00EF; // Thumb Color
 --scroll-color-active: #666; // Active State
 
-scroll-snap-type: inline mandatory;
 overflow-X: auto;
 
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
@@ -1226,6 +1233,10 @@ padding: 1em;
   border: rem(1) #cccccc solid;
   margin: em(4) 0;
   padding: 0 em(16);
+  }
+
+  button.reset {
+  z-index: 2;
   }
     
 }

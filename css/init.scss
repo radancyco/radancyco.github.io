@@ -250,15 +250,6 @@ display: inline-block;
 margin-bottom: em(8);
 }
 
-p {
-margin: 0 0 1em;
-
-  &:last-child {
-  margin-block-end: 0;
-  }
-
-}
-
 pre {
 border-radius: em(4);
 white-space: pre;

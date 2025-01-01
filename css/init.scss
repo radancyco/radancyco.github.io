@@ -1006,6 +1006,7 @@ width: 1px;
 --scroll-color-thumb: #6F00EF; // Thumb Color
 --scroll-color-active: #666; // Active State
 
+scroll-snap-type: inline mandatory;
 overflow-X: auto;
 
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);

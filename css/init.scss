@@ -418,12 +418,9 @@ vertical-align: middle;
   svg {
   width: rem(25);
   height: rem(25);
+  fill: blue;
   }
   
-  g {
-  fill: #000;
-  }
-
 }
 
 .a11y-info, .reminder-info, .resource-info, .warning-info, .qa-info {
@@ -742,7 +739,6 @@ margin: 2em 0;
     svg {
     height: 1rem;
     width: 1rem;
-    fill: blue;
     }
     
     .icon-check {

@@ -174,6 +174,8 @@ layout: null
 
 	codeButton.forEach(function(code, e){
 
+		code.setAttribute("aria-pressed", "false");
+
   		code.addEventListener("click", function () {
 
     		var codeURL = this.getAttribute("data-code");
@@ -181,6 +183,7 @@ layout: null
     		navigator.clipboard.writeText(codeURL).then(function() {
 
 				code.classList.add("link-copied");
+				code.setAttribute("aria-pressed", "true");
 
     		}, function() {
 
@@ -192,6 +195,7 @@ layout: null
 
 				code.classList.remove("link-copied");
 				code.classList.remove("link-not-copied");
+				code.setAttribute("aria-pressed", "false");
 
     		}, 3000);
 
@@ -254,12 +258,11 @@ layout: null
 			var codeContainer = document.getElementById(codeID);
 			var codeCopy = codeContainer.textContent;
 			
-			code.setAttribute("aria-pressed", "true");
-
 			navigator.clipboard.writeText(codeCopy).then(function() {
 
 				code.classList.add("code-copied");
-
+				code.setAttribute("aria-pressed", "true");
+				
 			}, function() {
 
 				code.classList.add("code-not-copied");

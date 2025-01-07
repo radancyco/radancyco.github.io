@@ -246,11 +246,15 @@ layout: null
 
 	btnCopyCode.forEach(function(code){
 
+		code.setAttribute("aria-pressed", "false");
+
 		code.addEventListener("click", function () {
 
 			var codeID = this.getAttribute("data-content-id");
 			var codeContainer = document.getElementById(codeID);
 			var codeCopy = codeContainer.textContent;
+			
+			code.setAttribute("aria-pressed", "true");
 
 			navigator.clipboard.writeText(codeCopy).then(function() {
 
@@ -266,6 +270,7 @@ layout: null
 
 				code.classList.remove("code-copied");
 				code.classList.remove("code-not-copied");
+				code.setAttribute("aria-pressed", "false");
 
 			}, 3000);
 

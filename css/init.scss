@@ -898,7 +898,6 @@ background-color: $highlight-color;
 
   &__container {
   margin: 0 auto;
-  max-width: rem(1600);
   padding: 1em;
   position: relative;
   }
@@ -1070,11 +1069,14 @@ padding: em(16);
 
 }
 
+.primary-header__container, #content, #contentinfo, #contribute {
+max-width: rem(1600);
+}
+
 #content, #contentinfo, #contribute {
 display: block;
 color: inherit;
 margin: em(32) auto 0;
-max-width: rem(1600);
 padding: 0 em(16);
 }
 

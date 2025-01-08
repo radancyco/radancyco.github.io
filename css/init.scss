@@ -1248,6 +1248,17 @@ body#rad-baseline {
     border: 1px #cccccc solid;
     margin-block: 3px;
     padding-block: 0;
+
+      [data-horizontal] & {
+
+        @media (min-width: 55em) {
+  
+          grid-column: 1 / span 3;
+  
+        }
+  
+      }
+
     }
 
   }

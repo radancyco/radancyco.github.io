@@ -1200,10 +1200,7 @@ width: calc(30rem / 16);
 
 body.extension-active {
 padding: 1em; 
-}
 
-body.extension-active, body#rad-baseline {
-    
   .disclosure--btn {
   border-radius: em(5);
   margin: em(6) 0;
@@ -1223,4 +1220,23 @@ body.extension-active, body#rad-baseline {
   right: 16px;
   }
     
+}
+
+// Accessibility Baselines (https://radancy.dev/a11y/baseline)
+
+body#rad-baseline {
+
+  .accordion__toggle {
+  border-radius: 5px;
+  }
+
+  .accordion__content {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px #cccccc solid;
+  margin-block: 3px;
+  padding-block: 0;
+  }
+
+
 }

@@ -1228,16 +1228,12 @@ body#rad-baseline {
 
   .accordion {
 
-    &[data-horizontal] {
-
-      @media (min-width: 55em) {
+    @media (min-width: 55em) {
   
-        grid-template-columns: repeat(3, 1fr); 
+      grid-template-columns: repeat(3, 1fr); 
   
-      } 
+    } 
         
-    }
-
     &__toggle {
     border-radius: 5px; 
     }
@@ -1249,13 +1245,9 @@ body#rad-baseline {
     margin-block: 3px;
     padding-block: 0;
 
-      [data-horizontal] & {
-
-        @media (min-width: 55em) {
+      @media (min-width: 55em) {
   
-          grid-column: 1 / span 3;
-  
-        }
+        grid-column: 1 / span 3;
   
       }
 

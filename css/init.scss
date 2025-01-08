@@ -1226,17 +1226,20 @@ padding: 1em;
 
 body#rad-baseline {
 
-  .accordion__toggle {
-  border-radius: 5px;
-  }
+  .accordion {
 
-  .accordion__content {
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px #cccccc solid;
-  margin-block: 3px;
-  padding-block: 0;
-  }
+    &__toggle {
+    border-radius: 5px;
+    }
 
+    &__content {
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px #cccccc solid;
+    margin-block: 3px;
+    padding-block: 0;
+    }
+
+  }
 
 }

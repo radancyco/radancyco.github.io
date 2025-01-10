@@ -1233,6 +1233,10 @@ body#rad-baseline {
   --accordion-column-large: 3;
   --accordion-toggle-border-radius: 5px; 
 
+    &__toggle {
+    min-height: calc(100rem / 16);
+    }
+
     &__panel {
     padding-block: 0;
     }

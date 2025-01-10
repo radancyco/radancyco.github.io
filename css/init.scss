@@ -1228,12 +1228,9 @@ body#rad-baseline {
 
   .accordion {
   --accordion-panel-default: #fff;
-  --accordion-pointer-size: calc(30rem / 16);
+  --accordion-pointer-size: calc(25rem / 16);
   --accordion-column-large: 3;
-     
-    &__toggle {
-    border-radius: 5px; 
-    }
+  --accordion-toggle-border-radius: 5px; 
 
     &__panel {
     padding-block: 0;

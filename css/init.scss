@@ -355,7 +355,6 @@ height: auto;
 width: 100%;
 }
 
-
 .access-link {
 background-color: #777;
 border-radius: em(5);
@@ -500,7 +499,7 @@ border-color: #9e4307;
 
 }
 
-.experimental, .warning, .note, .reminder {
+.experimental, .warning, .note, .reminder, .bug {
 border-left-width: em(4);
 border-left-style: solid;
 margin-top: em(16);
@@ -516,7 +515,7 @@ padding: em(16);
   }
 
   dl {
-  margin: 0 0 1em;
+  margin: 0;
   }
     
   dt {
@@ -556,6 +555,10 @@ border-left-color: red;
 .reminder {
 background-color: #f5cd01;
 border-color: orange;
+}
+
+.bug {
+border: rem(1) #ccc solid;
 }
 
 .warning-info {

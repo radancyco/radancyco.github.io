@@ -499,7 +499,7 @@ border-color: #9e4307;
 
 }
 
-.experimental, .warning, .note, .reminder, .bug {
+.experimental, .warning, .note, .reminder, .issue {
 border-left-width: em(4);
 border-left-style: solid;
 margin-top: em(16);
@@ -515,7 +515,7 @@ padding: em(16);
   }
 
   dl {
-  margin: 0;
+  margin: 0 0 1em;
   }
     
   dt {
@@ -557,7 +557,7 @@ background-color: #f5cd01;
 border-color: orange;
 }
 
-.bug {
+.issue {
 border: rem(1) #ccc solid;
 }
 

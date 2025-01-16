@@ -537,11 +537,11 @@ border-color: #9e4307;
 border-left-width: em(4);
 border-left-style: solid;
 margin-top: em(16);
-padding: 1px em(16) em(16);
+padding: em(16);
 
   h2, h3 {
   color: inherit;
-  // margin-block-start: 0;
+  //margin-block-start: 0;
   }
       
   p {

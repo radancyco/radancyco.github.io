@@ -59,6 +59,18 @@
 
     <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">
 
+    {%- if site.css %}
+
+    <link href="{{ site.baseurl }}/css/init.css" rel="stylesheet">
+
+    {%- endif %}
+
+    {%- if site.repo == "https://github.com/radancyco/magicbullet" -%}
+
+    <link href="/component-library/css/init.css" rel="stylesheet">
+
+    {%- endif %}
+
     {%- if page.librarycss %}
 
     <link href="{{ page.librarycss}}" rel="stylesheet">

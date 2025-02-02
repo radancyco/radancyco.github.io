@@ -4,24 +4,26 @@ layout: null
 
 (function(){
 
-	// Debounce function to limit the rate at which a function can fire
+	// Debounce
 
-	function debounce(func, delay) {
-	
-		let timeoutId;
-		
-		return function() {
-	
-			clearTimeout(timeoutId);
+	function debounce(mainFunction, delay) {
+
+		var timer;
+
+		return function () {
+
+			var args = arguments;
 			
-			timeoutId = setTimeout(function() {
-	
-				func.apply(this, arguments);
-	
+			clearTimeout(timer);
+
+			timer = setTimeout(function () {
+
+				mainFunction.apply(null, args);
+
 			}, delay);
-	
+
 		};
-	
+
 	}
 
 	document.getElementsByTagName("html")[0].className = "js";
@@ -303,33 +305,79 @@ layout: null
 
 	// Dynamic Iframe Height
 
-
 	// Function to adjust iframe height based on its content
-function adjustIframeHeight() {
-	var codeDemos = document.querySelectorAll(".code-demo");
-  
-	codeDemos.forEach(function(frame) {
-	  // Ensure the iframe is fully loaded
-	  frame.addEventListener("load", function() {
-		// Check if the iframe's content is accessible
-		if (frame.contentWindow && frame.contentWindow.document && frame.contentWindow.document.body) {
-		  // Set the iframe height to match its content
-		  frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
-		}
-	  });
-  
-	  // For iframes that are already loaded, adjust the height immediately
-	  if (frame.complete) {
-		frame.dispatchEvent(new Event("load"));
-	  }
-	});
-  }
-  
-  // Adjust iframe height on page load
-  window.addEventListener("load", adjustIframeHeight);
-  
-  // Adjust iframe height on window resize with debouncing
-  window.addEventListener("resize", debounce(adjustIframeHeight, 250));
-  
 
+	function adjustIframeHeight(frame) {
+
+		if (frame.contentWindow && frame.contentWindow.document && frame.contentWindow.document.body) {
+
+			frame.style.height = frame.contentWindow.document.body.scrollHeight + "px";
+
+		}
+
+	}
+
+	// Function to initialize iframe resizing
+
+	function initializeIframeResizing() {
+
+		var codeDemos = document.querySelectorAll(".code-demo");
+
+		codeDemos.forEach.call(codeDemos, function(frame) {
+
+			// Adjust height on initial load
+
+			frame.addEventListener("load", function () {
+
+				adjustIframeHeight(frame);
+
+				// Observe changes in the iframe's content
+
+				var iframeBody = frame.contentDocument.body;
+				var resizeObserver = new ResizeObserver(function () {
+
+					adjustIframeHeight(frame);
+
+				});
+
+				resizeObserver.observe(iframeBody);
+
+			});
+
+			// For iframes that are already loaded (e.g., from cache), adjust the height immediately
+
+			if (frame.complete) {
+
+				frame.dispatchEvent(new Event("load"));
+
+			}
+
+		});
+
+	}
+
+	// Execute when the DOM is fully loaded
+
+	document.addEventListener("DOMContentLoaded", function () {
+
+		initializeIframeResizing();
+
+	});
+
+	// Adjust iframe height on window resize with debouncing
+
+	window.addEventListener("resize", debounce(function () {
+
+		var codeDemos = document.querySelectorAll(".code-demo");
+
+		codeDemos.forEach.call(codeDemos, function(frame) {
+
+			frame.contentWindow.location.reload(); // Reload iframe contents
+
+			adjustIframeHeight(frame);
+
+		});
+
+	}, 250));
+  
 })();

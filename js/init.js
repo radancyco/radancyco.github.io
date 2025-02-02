@@ -281,4 +281,19 @@ layout: null
 
 	});
 
+	// Dynamic Iframe Height
+
+	var codeDemo = document.querySelectorAll(".code-demo");
+
+	codeDemo.forEach(function(frame){
+
+		frame.addEventListener("load", function () {
+
+			frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
+			frame.style.width  = frame.contentWindow.document.body.scrollWidth + 'px';
+
+		});
+
+	});
+
 })();

@@ -303,25 +303,33 @@ layout: null
 
 	// Dynamic Iframe Height
 
-	function codeIframe() {
 
-		var codeDemo = document.querySelectorAll(".code-demo");
-
-		codeDemo.forEach(function(frame){
-
-			frame.addEventListener("load", function () {
-
-				frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
-
-			});
-
-		});
-
-	}
-
-	codeIframe();
-
-  	window.addEventListener("resize", debounce(codeIframe, 250));
+	// Function to adjust iframe height based on its content
+function adjustIframeHeight() {
+	var codeDemos = document.querySelectorAll(".code-demo");
+  
+	codeDemos.forEach(function(frame) {
+	  // Ensure the iframe is fully loaded
+	  frame.addEventListener("load", function() {
+		// Check if the iframe's content is accessible
+		if (frame.contentWindow && frame.contentWindow.document && frame.contentWindow.document.body) {
+		  // Set the iframe height to match its content
+		  frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
+		}
+	  });
+  
+	  // For iframes that are already loaded, adjust the height immediately
+	  if (frame.complete) {
+		frame.dispatchEvent(new Event("load"));
+	  }
+	});
+  }
+  
+  // Adjust iframe height on page load
+  window.addEventListener("load", adjustIframeHeight);
+  
+  // Adjust iframe height on window resize with debouncing
+  window.addEventListener("resize", debounce(adjustIframeHeight, 250));
   
 
 })();

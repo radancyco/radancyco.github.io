@@ -13,222 +13,224 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}" class="no-js">
 <head>
-    <meta charset="{{ site.charset }}">
+  <meta charset="{{ site.charset }}">
 
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
 
-    <meta content="noindex, nofollow" name="robots">
+  <meta content="noindex, nofollow" name="robots">
 
-    <meta content="{{ site.theme-color }}" name="theme-color">
+  <meta content="{{ site.theme-color }}" name="theme-color">
 
-    {%- if page.slick %}
+  {%- if page.slick %}
 
-    <link href="{{ site.git-url }}/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/lib/a11y-slick-1.0.1/slick.min.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.accordion %}
+  {%- if page.accordion %}
 
-    <link href="{{ site.git-url }}/component-library/accordion/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/accordion/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.select-internal %}
+  {%- if page.select-internal %}
 
-    <link href="{{ site.git-url }}/component-library/select-internal/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/select-internal/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.read-more %}
+  {%- if page.read-more %}
 
-    <link href="{{ site.git-url }}/component-library/read-more/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/read-more/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.tablist %}
+  {%- if page.tablist %}
 
-    <link href="{{ site.git-url }}/component-library/tablist/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/tablist/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.card %}
+  {%- if page.card %}
 
-    <link href="{{ site.git-url }}/component-library/card/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/card/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">
 
-    {%- if site.css %}
+  {%- if site.css %}
 
-    <link href="{{ site.baseurl }}/css/init.css" rel="stylesheet">
+  <link href="{{ site.baseurl }}/css/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if site.repo == "https://github.com/radancyco/magicbullet" %}
+  {%- if site.repo == "https://github.com/radancyco/magicbullet" %}
 
-    <link href="{{ site.git-url }}/component-library/css/init.css" rel="stylesheet">
+  <link href="{{ site.git-url }}/component-library/css/init.css" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.librarycss %}
+  {%- if page.librarycss %}
 
-    <link href="{{ page.librarycss}}" rel="stylesheet">
+  <link href="{{ page.librarycss}}" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- if page.localcss %}
+  {%- if page.localcss %}
 
-    <link href="{{ page.localcss }}" rel="stylesheet">
+  <link href="{{ page.localcss }}" rel="stylesheet">
 
-    {%- endif %}
+  {%- endif %}
 
-    {%- for component in allSelections %}
+  {%- for component in allSelections %}
 
-      {%- if component.id == current_id -%}
+    {%- if component.id == current_id -%}
 
-        {%- for example in component.examples -%}
+      {%- for example in component.examples -%}
 
-          {%- if example.customcss -%}
+        {%- if example.customcss -%}
 
-            <link href="{{ example.customcss }}.css" rel="stylesheet">
+          <link href="{{ example.customcss }}.css" rel="stylesheet">
 
-          {%- endif -%}
+        {%- endif -%}
 
-        {%- endfor -%}
+      {%- endfor -%}
 
-      {%- endif -%}
+    {%- endif -%}
 
-    {%- endfor %}
+  {%- endfor %}
 
-    <link href="{{ site.git-url }}/favicon.ico" rel="icon">
+  <link href="{{ site.git-url }}/favicon.ico" rel="icon">
 
-    <link href="{{ site.git-url }}/manifest.json" rel="manifest">
+  <link href="{{ site.git-url }}/manifest.json" rel="manifest">
 
-    <title>
+  <title>
 
-      {%- if component -%}
+    {%- if component -%}
 
-        {{ component.title }} v{{ component.version }}
+      {{ component.title }} v{{ component.version }}
 
-      {% else %}
+    {% else %}
 
-      {{ page.title }}
+    {{ page.title }}
 
-      {%- endif %} - {{ site.company-name }}
+    {%- endif %} - {{ site.company-name }}
 
-    </title>
+  </title>
 </head>
 
 <body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
 
-  <div id="page">
+  <header class="primary-header" id="banner">
 
-    <header class="primary-header" id="banner">
+    <div class="primary-header__container">
 
-      <div class="primary-header__container">
+      <div class="primary-header__logo">
 
-        <a class="primary-header__logo" href="/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }}"> <span>{{ site.name }}</span></a>
+        <a href="/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }} (Home)"></a> 
+        
+        <span>{{ site.name }}</span>
+      
+      </div>
 
-        {%- if site.navigation %}
+      {%- if site.navigation %}
 
-          {%- if page.navigation != false %}
+        {%- if page.navigation != false %}
 
-            <nav aria-label="Main" class="primary-header__navigation">
+          <nav aria-label="Main" class="primary-header__navigation">
 
-              <div class="primary-header__navigation__content">
+            <div class="primary-header__navigation__content">
 
-                {% include navigation.html %}
+              {% include navigation.html %}
 
-              </div>
+            </div>
 
-            </nav>
+          </nav>
+
+        {%- endif %}
+
+      {%- endif %}
+
+    </div>
+
+  </header>
+
+  <main id="content">
+
+    {%- if component %}
+
+    <h1 class="primary-heading">{{ component.title }} v{{ component.version }}</h1>
+
+    {%- else if page.title %}
+
+      {%- if page.heading != false %}
+
+      <h1 class="primary-heading">{{ page.title }}</h1>
+
+      {%- endif %}
+
+    {%- endif %}
+
+    {%- if page.layout == "micropubpost" %}
+
+    <div class="post-overview">
+
+      <div>
+
+        <img src="{{ page.img }}" alt="Headshot of {{ page.author }}">
+
+      </div>
+
+      <div>
+
+        <ul role="list">
+
+          <li><span class="visually-hidden">Posted by:</span> <a href='mailto:{{ page.email }}?Subject={{ page.title | replace: " ", "%20" }}'>{{ page.author }}</a>{% if page.role %}, {{ page.role }}{% endif %}</li>
+
+          {%- if page.pronouns %}
+
+          <li><span class="visually-hidden">Pronouns:</span> {{ page.pronouns }}</li>
 
           {%- endif %}
 
-        {%- endif %}
+          <li><span class="visually-hidden">Posted:</span> {{ page.date | date: "%A, %B %e, %Y" }}</li>
+
+          {%- if page.update %}
+
+          <li><span>Update:</span> {{ page.update | date: "%A, %B %e, %Y" }}</li>
+
+          {%- endif %}
+
+        </ul>
 
       </div>
 
-    </header>
+    </div>
 
-    <main id="content">
+    {%- endif %}
 
-      {%- if component %}
+    {%- if page.toc %}
 
-      <h1 class="primary-heading">{{ component.title }} v{{ component.version }}</h1>
+    <details class="nav">
 
-      {%- else if page.title %}
+      <summary class="btn">Table of Contents</summary>
 
-        {%- if page.heading != false %}
+      {% include toc.html html=content h_max=4 ordered=true %}
 
-        <h1 class="primary-heading">{{ page.title }}</h1>
+    </details>
 
-        {%- endif %}
+    {%- endif %}
 
-      {%- endif %}
+    {{ content }}
 
-      {%- if page.layout == "micropubpost" %}
+  </main>
 
-      <div class="post-overview">
+  <footer id="contentinfo">
 
-        <div>
+    <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer. <a href="/contribute/">Contributions</a> to this project are welcome.</small></p>
 
-          <img src="{{ page.img }}" alt="Headshot of {{ page.author }}">
-
-        </div>
-
-        <div>
-
-          <ul role="list">
-
-            <li><span class="visually-hidden">Posted by:</span> <a href='mailto:{{ page.email }}?Subject={{ page.title | replace: " ", "%20" }}'>{{ page.author }}</a>{% if page.role %}, {{ page.role }}{% endif %}</li>
-
-            {%- if page.pronouns %}
-
-            <li><span class="visually-hidden">Pronouns:</span> {{ page.pronouns }}</li>
-
-            {%- endif %}
-
-            <li><span class="visually-hidden">Posted:</span> {{ page.date | date: "%A, %B %e, %Y" }}</li>
-
-            {%- if page.update %}
-
-            <li><span>Update:</span> {{ page.update | date: "%A, %B %e, %Y" }}</li>
-
-            {%- endif %}
-
-          </ul>
-
-        </div>
-
-      </div>
-
-      {%- endif %}
-
-      {%- if page.toc %}
-
-      <details class="nav">
-
-        <summary class="btn">Table of Contents</summary>
-
-        {% include toc.html html=content h_max=4 ordered=true %}
-
-      </details>
-
-      {%- endif %}
-
-      {{ content }}
-
-    </main>
-
-    <footer id="contentinfo">
-
-      <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer. <a href="/contribute/">Contributions</a> to this project are welcome.</small></p>
-
-    </footer>
-
-  </div>
+  </footer>
 
   {%- if page.jquery == true %}
 

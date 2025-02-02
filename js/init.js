@@ -4,6 +4,26 @@ layout: null
 
 (function(){
 
+	// Debounce function to limit the rate at which a function can fire
+
+	function debounce(func, delay) {
+	
+		let timeoutId;
+		
+		return function() {
+	
+			clearTimeout(timeoutId);
+			
+			timeoutId = setTimeout(function() {
+	
+				func.apply(this, arguments);
+	
+			}, delay);
+	
+		};
+	
+	}
+
 	document.getElementsByTagName("html")[0].className = "js";
 
 	var bodyId = document.getElementsByTagName("body")[0].id;
@@ -283,18 +303,25 @@ layout: null
 
 	// Dynamic Iframe Height
 
-	// TODO: Add matchMedia for resize.
+	function codeIframe() {
 
-	var codeDemo = document.querySelectorAll(".code-demo");
+		var codeDemo = document.querySelectorAll(".code-demo");
 
-	codeDemo.forEach(function(frame){
+		codeDemo.forEach(function(frame){
 
-		frame.addEventListener("load", function () {
+			frame.addEventListener("load", function () {
 
-			frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
+				frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
+
+			});
 
 		});
 
-	});
+	}
+
+	codeIframe();
+
+  	window.addEventListener("resize", debounce(codeIframe, 250));
+  
 
 })();

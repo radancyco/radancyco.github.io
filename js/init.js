@@ -283,6 +283,8 @@ layout: null
 
 	// Dynamic Iframe Height
 
+	// TODO: Add matchMedia for resize.
+
 	var codeDemo = document.querySelectorAll(".code-demo");
 
 	codeDemo.forEach(function(frame){
@@ -290,7 +292,6 @@ layout: null
 		frame.addEventListener("load", function () {
 
 			frame.style.height = frame.contentWindow.document.body.scrollHeight + 'px';
-			frame.style.width  = frame.contentWindow.document.body.scrollWidth + 'px';
 
 		});
 

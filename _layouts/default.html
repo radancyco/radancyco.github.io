@@ -57,6 +57,12 @@
 
   {%- endif %}
 
+  {%- if page.card-local %}
+
+  <link href="{{ site.baseurl }}/card/init.css" rel="stylesheet">
+
+  {%- endif %}
+
   <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">
 
   {%- if site.css %}

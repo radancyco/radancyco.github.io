@@ -204,13 +204,16 @@ margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
-align-items: center;
-display: grid;
 font-family: "Campton", $fallback-font;
 font-weight: 400;
+line-height: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+align-items: center;
+display: grid;
 gap: 0.5em;
 grid-auto-flow: column;
-line-height: normal;
 width: fit-content;
 }
 

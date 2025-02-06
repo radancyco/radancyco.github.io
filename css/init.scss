@@ -208,7 +208,7 @@ align-items: center;
 display: grid;
 font-family: "Campton", $fallback-font;
 font-weight: 400;
-gap: 0.8em;
+gap: 0.5em;
 grid-auto-flow: column;
 line-height: normal;
 width: fit-content;
@@ -400,10 +400,8 @@ z-index: 100;
 }
 
 .anchor {
-display: inline-block;
+display: block;
 line-height: 0;
-text-decoration: none;
-vertical-align: middle;
 
   svg {
   width: rem(25);

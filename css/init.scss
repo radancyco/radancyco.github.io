@@ -427,19 +427,19 @@ padding: em(16);
   }
 
   h2:first-child, .info-heading {
-  display: flex;
   align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  width: fit-content;
 
     &::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    display: inline-block;
+    display: block;
     height: rem(40);
     margin-inline-end: em(8);
-    min-width: rem(40);
-    vertical-align: middle;
     width: rem(40);
     }
 
@@ -493,25 +493,6 @@ border-color: #9e4307;
 
     &::before {
     background-image: url("/img/resource-info.png");
-    }
-
-  }
-
-}
-
-.tab-accordion__button, .tablist__tab {
-
-  .icon {
-  display: inline-block;
-  width: em(15);
-  vertical-align: middle;
-  margin-inline-end: em(5);
-  }
-
-  &.active, &[aria-selected="true"] {
-
-    svg {
-    fill: #fff;
     }
 
   }

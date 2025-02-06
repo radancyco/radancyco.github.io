@@ -204,9 +204,14 @@ margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
+align-items: center;
+display: grid;
 font-family: "Campton", $fallback-font;
 font-weight: 400;
+gap: 0.8em;
+grid-auto-flow: column;
 line-height: normal;
+width: fit-content;
 }
 
 h3 {
@@ -427,10 +432,6 @@ padding: em(16);
   }
 
   h2:first-child, .info-heading {
-  align-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  width: fit-content;
 
     &::before {
     background-position: center;

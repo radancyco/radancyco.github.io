@@ -147,12 +147,12 @@ a {
 }
 
 body {
-margin: 0;
-padding: 1em;
+display: grid;
+margin: 1em;
 
   &:has(main[id="content"]) {
 
-    padding: 0; // Hack: Need this include padding in codepen, but not on Radancy template. 
+    margin: 0; // Hack: We do not need this margin in codepen.
 
   }
 
@@ -985,9 +985,8 @@ max-width: rem(1600);
 }
 
 #content, #contentinfo, #contribute {
-display: block;
 color: inherit;
-margin: em(32) auto 0;
+margin: 0 auto;
 padding: 0 em(16);
 }
 
@@ -1037,29 +1036,6 @@ padding: 1em;
   right: 16px;
   }
     
-}
-
-// Accessibility Baselines (https://radancy.dev/a11y/baseline) 
-
-body#rad-baseline {
-
-  .accordion {
-
-  --accordion-panel-default: #fff;
-  --accordion-pointer-size: calc(25rem / 16);
-  --accordion-column-large: 2;
-  --accordion-toggle-border-radius: 5px; 
-
-    &__toggle {
-    overflow: hidden;
-    }
-
-    &__panel {
-    padding-block: 0;
-    }
-
-  }
-
 }
 
 // used on blog.

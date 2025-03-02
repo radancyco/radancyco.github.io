@@ -147,7 +147,7 @@ a {
 }
 
 body {
-display: grid;
+// display: grid;
 margin: 1em;
 
   &:has(main[id="content"]) {
@@ -988,7 +988,7 @@ max-width: rem(1600);
 color: inherit;
 margin: 0 auto;
 padding: 0 em(16);
-width: 100%; // Pages that do not meet max-width set above (1600) will appear less wide when not enough content is in it, so we need to force it to 100%;
+// width: 100%; // Pages that do not meet max-width set above (1600) will appear less wide when not enough content is in it, so we need to force it to 100%;
 }
 
 

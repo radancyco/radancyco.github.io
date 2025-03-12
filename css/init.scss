@@ -201,6 +201,28 @@ margin: em(8) 0;
 
 }
 
+dl {
+margin: 0 0 1em;
+
+  dt {
+  font-weight: bold;
+  
+    &::after {
+    content: ":";
+    }
+  
+  }
+  
+  dt, dd {
+  display: inline-block;
+  }
+      
+  dd {
+  margin-inline-start: .5em;
+  }
+
+}
+
 figure {
 margin: 0;
 
@@ -526,27 +548,6 @@ padding: em(16);
   margin: 0;
   }
 
-  dl {
-  margin: 0 0 1em;
-  }
-    
-  dt {
-  font-weight: bold;
-  
-    &::after {
-    content: ":";
-    }
-  
-  }
-  
-  dt, dd {
-  display: inline-block;
-  }
-      
-  dd {
-  margin-left: .5em;
-  }
-      
 }
 
 .experimental {

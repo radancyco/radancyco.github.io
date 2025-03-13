@@ -204,6 +204,10 @@ margin: em(8) 0;
 dl {
 margin: 0 0 1em;
 
+  a {
+  overflow-wrap: anywhere;
+  }
+
   dt {
   font-weight: bold;
   

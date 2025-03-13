@@ -267,6 +267,10 @@ border-bottom: em(1) dashed $highlight-color;
 margin: em(32) 0;
 }
 
+html {
+scrollbar-gutter: stable;
+}
+
 img {
 display: block;
 max-width: 100%;

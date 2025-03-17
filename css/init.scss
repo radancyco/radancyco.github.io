@@ -1040,7 +1040,7 @@ padding: em(16);
 // Note: Remove these when extension has it's own styklesheet and no longer shares global
 
 body.extension-active {
-margin: 0;
+margin: 1em;
 
   .disclosure--btn {
   border-radius: em(5);

@@ -125,14 +125,14 @@ outline: .375rem double black;
 border-radius: .125rem;
 }
 
-a[target="_blank"], button:has(img[src*="new-tab"]) {
+a[target="_blank"], button:has(img[src*="new-tab"]), button:has(img[src*="btn-ai"]) {
 
   img {
   display: inline-block;
-  height: rem(14);
+  height: calc(14em/16);
   margin-inline-start: em(8);
   vertical-align: middle;
-  width: rem(14);
+  width: calc(14em/16);
   }
 
 }
@@ -213,7 +213,7 @@ figure {
 margin: 0;
 
   figcaption {
-  font-size: rem(14.4);
+  font-size: calc(14.4rem/16);
   font-style: italic;
   margin: em(8) 0;
   }

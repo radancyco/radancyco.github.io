@@ -14,7 +14,26 @@ title: "Transparent Video for the Web"
 
 <figure>
 
-    <iframe class="code-demo" loading="lazy" scrolling="no" src="https://radancy.dev/component-library/animation-toggle/transparent/" title="Code Example"></iframe>
+    <link href="https://radancy.dev/component-library/animation-toggle/init.css" rel="stylesheet">
+    <link href="https://radancy.dev/component-library/animation-toggle/transparent.css" rel="stylesheet">
+
+    <div class="transparent-video-example">
+
+        <div class="animation-toggle section-animation" data-callback="scrollObserver" data-pause-remove>
+    
+            <video class="animation-toggle__video section-animation__video" data-autoplay-disable data-decorative data-loop="1" data-poster="1.8">
+                <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-lg.mp4" type='video/mp4; codecs="hvc1"'>
+                <source media="(min-width: 46.5em)" src="https://radancy.dev/component-library/animation-toggle/demo-webm-lg.webm" type="video/webm">
+                <source src="https://radancy.dev/component-library/animation-toggle/demo-hvc1-sm.mp4" type='video/mp4; codecs="hvc1"'>
+                <source src="https://radancy.dev/component-library/animation-toggle/demo-webm-sm.webm" type="video/webm">
+            </video>
+    
+        </div>
+    
+    </div>
+
+    <script src="https://radancy.dev/component-library/animation-toggle/init.js"></script>
+    <script src="https://radancy.dev/component-library/animation-toggle/transparent.js"></script>
 
     <figcaption>A working, more advanced example of alpha-transparent video, which comes into view on page load or upon scrolling to it. You can review the code in our <a href="https://radancy.dev/component-library/animation-toggle/#transparent">component library</a>.</figcaption>
 

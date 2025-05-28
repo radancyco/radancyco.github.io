@@ -253,7 +253,7 @@ html {
 scrollbar-gutter: stable;
 }
 
-img {
+img:not([hidden]) {
 display: block;
 max-width: 100%;
 height: auto;

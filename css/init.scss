@@ -212,6 +212,10 @@ margin: 0 0 1em;
 figure {
 margin: 0;
 
+  &.block-figure {
+  max-width: 60rem;
+  }
+
   figcaption {
   font-size: calc(14.4rem/16);
   font-style: italic;

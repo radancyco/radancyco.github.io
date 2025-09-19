@@ -10,7 +10,7 @@ pronouns: He/Him
 role: Director, Accessibility
 tags: Article Accessibility Development
 title: "Guidance on Designing & Implementing Form Labels"
-update: 2024-04-22 04:45:33
+update: 2025-09-18 04:45:33
 ---
 
 <p>In an effort to improve the way in which Radancy includes form labels within its sites and products, this document seeks to introduce more clearly defined guidance that can be shared with all team members. Especially designers, developers, and QA engineers. Inclusion of a proper label is critical and allows more people to understand and use the form. Omission or poor implementation of a label is also considered a direct failure of <a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html">Success Criterion 3.3.2 Labels or Instructions</a>.</p>
@@ -50,12 +50,6 @@ update: 2024-04-22 04:45:33
 {% highlight html %}<label for="overview-2">Keyword</label>
 
 <input id="overview-2" type="text">{% endhighlight %}
-
-  <div class="note">
-    
-    <p><strong>Note:</strong> Alternatively, <code>aria-label</code> can also be used on the field, but then you miss out on having a larger target area available when clicking on the label (click the label above to see what happens), which will apply focus to associated field.</p>
-
-  </div>
 
 </section>
 
@@ -118,6 +112,12 @@ update: 2024-04-22 04:45:33
     <h4>Assistive Technology</h4>
 
     <p>"Keyword edit blank"</p>
+
+    <div class="note">
+    
+      <p><strong>Note:</strong> While the placeholder is announced here, this may not be the case with all assisitve technologies, which is why it is a risk.</p>
+
+    </div>
 
   </section>
 

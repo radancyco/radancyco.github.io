@@ -257,7 +257,7 @@ html {
 scrollbar-gutter: stable;
 }
 
-img:not([hidden]) {
+img {
 display: block;
 max-width: 100%;
 height: auto;
@@ -349,6 +349,11 @@ margin: 0;
   font-size: rem(25.6);
   text-align: start;
   margin-bottom: em(11);
+  }
+
+  thead {
+  position: sticky;
+  top: 0;
   }
 
   tbody {

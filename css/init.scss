@@ -125,9 +125,9 @@ outline: .375rem double black;
 border-radius: .125rem;
 }
 
-a[target="_blank"], button:has(img[src*="new-tab"]), button:has(img[src*="btn-ai"]) {
+a[target="_blank"], button {
 
-  img[src*="new-tab"] {
+  img[src*="new-tab"], img[src*="btn-ai"] {
   display: inline-block;
   height: calc(14em/16);
   margin-inline-start: em(8);

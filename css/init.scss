@@ -127,7 +127,7 @@ border-radius: .125rem;
 
 a[target="_blank"], button:has(img[src*="new-tab"]), button:has(img[src*="btn-ai"]) {
 
-  img {
+  img[src*="new-tab"] {
   display: inline-block;
   height: calc(14em/16);
   margin-inline-start: em(8);

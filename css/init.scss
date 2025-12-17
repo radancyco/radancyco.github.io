@@ -89,6 +89,11 @@ $font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
 
 // Global CSS
 
+::target-text {
+background-color: $highlight-color;
+color: $highlight-color-active;
+}
+
 *, *::before, *::after {
 box-sizing: inherit;
 }

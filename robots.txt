@@ -1,2 +1,32 @@
+# ================================
+# Global crawler restrictions
+# ================================
+
 User-agent: *
+Disallow: /
+
+# ================================
+# Explicit AI / ML crawlers
+# (Redundant by design to show intent)
+# ================================
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
 Disallow: /

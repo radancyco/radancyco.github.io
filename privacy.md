@@ -4,7 +4,7 @@ title: Privacy Statement
 
 <h2>Artificial Intelligence and Machine Learning Restrictions</h2>
 
-<p>The content of this website, including but not limited to text, images, audio, video, code, design, and structure ("Content"), may not be used, reproduced, copied, scraped, harvested, aggregated, mined, processed, or otherwise exploited for the purposes of training, fine-tuning, validating, testing, benchmarking, or operating any machine learning, artificial intelligence, or similar automated systems, whether commercial or non-commercial, without the express prior written consent of the site owner.</p>
+<p>The content of this website, including but not limited to text, images, audio, video, design, and structure ("Content"), may not be used, reproduced, copied, scraped, harvested, aggregated, mined, processed, or otherwise exploited for the purposes of training, fine-tuning, validating, testing, benchmarking, or operating any machine learning, artificial intelligence, or similar automated systems, whether commercial or non-commercial, without the express prior written consent of the site owner.</p>
 
 <p>This prohibition includes the use of Content to create derivative datasets, embeddings, representations, summaries, transformations, or outputs that are substantially similar to or derived from the Content.</p>
 
@@ -12,7 +12,7 @@ title: Privacy Statement
 
 <p>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. All rights reserved.</p>
 
-Unless otherwise stated, all Content on this website — including text, articles, images, graphics, illustrations, icons, videos, audio, source code, scripts, markup, stylesheets, and documentation — is the exclusive property of the site owner and is protected by United States and international copyright laws.</p>
+Unless otherwise stated, all Content on this website — including images, graphics, illustrations, icons, videos, audio, and documentation — is the exclusive property of the site owner and is protected by United States and international copyright laws.</p>
 
 <p>No Content may be reproduced, distributed, transmitted, displayed, published, sublicensed, or otherwise exploited in any form or by any means, including automated systems, without prior written permission, except where expressly permitted by law.</p>
 

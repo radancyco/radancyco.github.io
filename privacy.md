@@ -71,7 +71,7 @@ title: Privacy Policy, Acceptable Use, and Open Source License
             <li>Open-source licensing grants limited rights under defined terms and does not waive ownership.</li>
         </ul>
 
-    <li>
+    </li>
     <li>
     
         <h2>Open Source License (Human Use Welcome)</h2>
@@ -159,9 +159,7 @@ title: Privacy Policy, Acceptable Use, and Open Source License
 
         <h2>Contact</h2>
 
-        <p>For licensing questions, reuse requests, or AI-related permissions:</p>
-
-        <p><a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a></p>
+        <p>For licensing questions, reuse requests, or AI-related permissions: <a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a></p>
 
     </li>
-</ul>
+</ol>

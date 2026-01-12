@@ -1,31 +1,167 @@
 ---
-title: Privacy Statement
+title: Privacy Policy, Acceptable Use, and Open Source License
 ---
 
-<h2>Artificial Intelligence and Machine Learning Restrictions</h2>
+<ol>
+    <li>
+    
+        <h2>Overview</h2>
 
-<p>The content of this website, including but not limited to text, images, audio, video, design, and structure ("Content"), may not be used, reproduced, copied, scraped, harvested, aggregated, mined, processed, or otherwise exploited for the purposes of training, fine-tuning, validating, testing, benchmarking, or operating any machine learning, artificial intelligence, or similar automated systems, whether commercial or non-commercial, without the express prior written consent of the site owner.</p>
+        <p>This website (the “Site”) publishes original content, design, and source code intended to support learning, collaboration, accessibility, and professional development.</p>
 
-<p>This prohibition includes the use of Content to create derivative datasets, embeddings, representations, summaries, transformations, or outputs that are substantially similar to or derived from the Content.</p>
+        <p>We welcome <strong>human reuse by developers and designers</strong> under an open-source license, while <strong>explicitly prohibiting automated scraping and AI-based exploitation</strong>.</p>
 
-<h2>Copyright Notice</h2>
+    </li>
+    <li>
+    
+        <h2>Privacy & Data Collection</h2>
 
-<p>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. All rights reserved.</p>
+        <p>This Site does not knowingly collect personal information beyond standard server logs required for basic operation and security.</p>
 
-Unless otherwise stated, all Content on this website — including images, graphics, illustrations, icons, videos, audio, and documentation — is the exclusive property of the site owner and is protected by United States and international copyright laws.</p>
+        <p>Collected technical data may include:</p>
 
-<p>No Content may be reproduced, distributed, transmitted, displayed, published, sublicensed, or otherwise exploited in any form or by any means, including automated systems, without prior written permission, except where expressly permitted by law.</p>
+        <ul>
+            <li>IP address</li>
+            <li>Browser and device type</li>
+            <li>Date and time of access</li>
+            <li>Pages requested</li>
+        </ul>
 
-<p>Open-source software distributed under a separate license is governed solely by the terms of that license and is excluded from this restriction.</p>
+        <p>This data is not sold, shared, or used for profiling.</p>
 
-<h2>Automated Access and Use Restrictions</h2>
+    </li>
+    <li>
+    
+        <h2>Prohibited Automated Access & AI Use</h2>
 
-<p>You may not access, monitor, scrape, crawl, download, or copy any Content from this website using automated means, including but not limited to bots, spiders, scrapers, crawlers, or artificial intelligence systems, without prior written authorization.</p>
+        <p>Automated access to this Site is not authorized, except where explicitly permitted by open-source licenses applied to specific source code files.</p>
 
-<p>Automated access for the purpose of content extraction, analysis, model training, dataset generation, or AI system development is expressly prohibited.</p>
+        <p>The following uses are explicitly prohibited:</p>
 
-<p>Any attempt to bypass, evade, or circumvent technical measures used to restrict automated access constitutes a violation of these Terms.</p>
+        <ul>
+            <li>Web scraping or crawling of Site content</li>
+            <li>Automated harvesting or bulk downloading</li>
+            <li>Use of content, code, text, or design assets for:
 
-<h2>Reservation of Rights</h2>
+                <ul>
+                    <li>Training machine learning models</li>
+                    <li>Fine-tuning large language models</li>
+                    <li>Generative AI systems</li>
+                    <li>Dataset creation or enrichment</li>
+                    <li>Automated summarization at scale</li>
+                </ul>
 
-<p>All rights not expressly granted are reserved. Unauthorized use of this website’s Content may result in legal action, including claims for injunctive relief, damages, and statutory remedies.</p>
+            </li>
+        </ul>
+        
+        <p><strong>Public accessibility does not imply permission.</strong></p>
+
+        <p>No license—express or implied—is granted for AI or machine-learning use without prior written consent.</p>
+
+    </li>
+    <li>
+
+        <h2>Copyright & Ownership</h2>
+
+        <p>Unless otherwise stated:</p>
+
+        <ul>
+            <li>All original content on this Site is &copy; {{ "now" | date: "%Y" }} {{ site.company-name }}.</li>
+            <li>Copyright is retained by the author.</li>
+            <li>Open-source licensing grants limited rights under defined terms and does not waive ownership.</li>
+        </ul>
+
+    <li>
+    <li>
+    
+        <h2>Open Source License (Human Use Welcome)</h2>
+
+        <h3>MIT License (Applied to Source Code)</h3>
+
+        <p>Unless a file states otherwise, <strong>source code published on this Site is licensed under the MIT License:</strong></p>
+
+        <h3>MIT License</h3>
+
+        <p>Copyright &copy; {{ "now" | date: "%Y" }} {{ site.company-name }}</p>
+
+        <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to:</p>
+
+        <ul>
+            <li>use</li>
+            <li>copy</li>
+            <li>modify</li>
+            <li>merge</li>
+            <li>publish</li>
+            <li>distribute</li>
+            <li>sublicense</li>
+            <li>and/or sell copies</li>
+        </ul>
+
+        <p>subject to the following conditions:</p>
+
+        <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+        <p><strong>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</strong></p>
+
+        <h3>Important Clarification</h3>
+
+        <p>This license is intended for human developers and designers.</p>
+
+        <p>It does not grant permission for:</p>
+
+        <ul>
+            <li>Automated scraping</li>
+            <li>Bulk ingestion</li>
+            <li>AI or ML training</li>
+            <li>Dataset generation</li>
+        </ul>
+
+        <p>Human collaboration is encouraged. Machine exploitation is not.</p>
+
+    </li>
+    <li>
+    
+        <h2>Design, Writing, and Non-Code Content</h2>
+
+        <p>Unless otherwise stated, non-code content (including articles, documentation, design patterns, and examples) is:</p>
+
+        <ul>
+            <li>Available for reference, learning, and inspiration</li>
+            <li>Not licensed for automated reuse or AI training</li>
+            <li>Protected against bulk or commercial extraction</li>
+        </ul>
+
+        <p>If you wish to reuse non-code content beyond fair use, please request permission.</p>
+
+    </li>
+    <li>
+
+        <h2>Enforcement & Technical Measures</h2>
+
+        <p>These terms may be enforced through:</p>
+
+        <ul>
+            <li>robots.txt</li>
+            <li>Legal remedies where appropriate</li>
+        </ul>
+
+        <p>Ignoring technical signals or policy restrictions constitutes unauthorized access.</p>
+    
+    </li>
+    <li>
+
+        <h2>Changes</h2>
+
+        <p>This document may be updated periodically. Continued use of the Site constitutes acceptance of the current version.</p>
+
+    </li>
+    <li>
+
+        <h2>Contact</h2>
+
+        <p>For licensing questions, reuse requests, or AI-related permissions:</p>
+
+        <p><a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a></p>
+
+    </li>
+</ul>

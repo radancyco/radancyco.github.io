@@ -140,152 +140,140 @@
 
         <a href="{{ site.baseurl }}/"><img src="{{ site.git-url }}/img/logo.svg" alt="{{ site.company-name }} (Home)"></a> 
         
-        <span>{{ site.name }}</span>
+        <span>Design & Development</span>
       
       </div>
 
-      {%- if site.navigation %}
+      {%- if page.navigation != false %}
 
-        {%- if page.navigation != false %}
+        <nav aria-label="Main" class="primary-header__navigation">
 
-          <nav aria-label="Main" class="primary-header__navigation">
+          <div class="primary-header__navigation__content">
 
-            <div class="primary-header__navigation__content">
+            <ul>
+              <li><a href="/">Home</a>
+              <li><a href="/a11y/">Accessibility at Radancy</a></li>
+              <li><a href="/a11y/">Accessibility Pulse</a></li>
+              <li>
+                
+                <details name="navigation-parent">
 
-              <ul>
-                <li><a href="/" data-nav-id="rad-index">Home</a>
+                  <summary>Component Library</summary>
 
                   <ul>
-                    <li><a href="/a11y/">Accessibility at Radancy</a></li>
-                    <li>
-                      
-                      <details>
-  
-                        <summary>Component Library</summary>
-
-                        <ul>
-                          <li><a href="/component-library/">Component Library (Home)</a></li>
-                          <li>
-
-                              <details>
-  
-                                <summary>Components</summary>
-
-                                <ul role="list">
-
-                                  {% for component in site.data.module.components %}
-
-                                    {% if component.hidden != true %}
-
-                                      <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}/component-library/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
-
-                                    {% endif %}
-  
-                                  {% endfor %}
-
-                                </ul>
-
-                              </details>
-
-                              <details>
-  
-                                <summary>Third-Party</summary>
-
-                                <ul role="list">
-
-                                  {% for feed in site.data.module.feeds %}
-
-                                    {% if feed.hidden != true %}
-
-                                      <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}/component-library/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
-
-                                    {% endif %}
-
-                                  {% endfor %}
-
-                                </ul>
-
-                              </details>
-
-                              <details>
-  
-                                <summary>Layouts</summary>
-
-                                <ul role="list">
-
-                                  {% for layout in site.data.module.layouts %}
-
-                                    {% if layout.hidden != true %}
-
-                                      <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}/component-library/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
-
-                                    {% endif %}
-
-                                  {% endfor %}
-
-                                </ul>
-
-                              </details>
-
-                              <details>
-  
-                                <summary>Resources</summary>
-
-                                <ul role="list">
-
-                                  {% for resource in site.data.module.resources %}
-
-                                    {% if feed.hidden != true %}
-
-                                      <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}/component-library/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
-
-                                    {% endif %}
-
-                                  {% endfor %}
-
-                                </ul>
-
-                              </details>
-
-                          </li>
-                        </ul>
-
-                      </details>
-                      
-                    </li>
+                    <li><a href="/component-library/"><span class="visually-hidden">Component Library</span> Home</a></li>
                     <li>
 
-                      <details>
+                        <details name="navigation-child">
 
-                        <summary>MagicBullet</summary>
+                          <summary>Components</summary>
 
-                        <ul>
-                          <li><a href="/magicbullet/">MagicBullet (Home)</a>
-    
-                            <ul>
-                              <li><a href="/magicbullet/a11y/" data-nav-id="rad-a11y-index">Accessibility Patch</a></li>
-                              <li><a href="/magicbullet/ccpa/" data-nav-id="rad-ccpa-index">California Consumer Privacy Act (CCPA) Notice</a></li>
-                              <li><a href="/magicbullet/gdpr/" data-nav-id="rad-gdpr-index">General Data Protection Regulation (GDPR) Notice</a></li>
-                              <li><a href="/magicbullet/alert/" data-nav-id="rad-alert-index">System Alert</a></li>
-                            </ul>
+                          <ul role="list">
 
-                          </li>
+                            {% for component in site.data.module.components %}
 
-                      </details>
+                              {% if component.hidden != true %}
+
+                                <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}/component-library/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                              {% endif %}
+
+                            {% endfor %}
+
+                          </ul>
+
+                        </details>
+
+                        <details name="navigation-child">
+
+                          <summary>Third-Party</summary>
+
+                          <ul role="list">
+
+                            {% for feed in site.data.module.feeds %}
+
+                              {% if feed.hidden != true %}
+
+                                <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}/component-library/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                              {% endif %}
+
+                            {% endfor %}
+
+                          </ul>
+
+                        </details>
+
+                        <details name="navigation-child">
+
+                          <summary>Layouts</summary>
+
+                          <ul role="list">
+
+                            {% for layout in site.data.module.layouts %}
+
+                              {% if layout.hidden != true %}
+
+                                <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}/component-library/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                              {% endif %}
+
+                            {% endfor %}
+
+                          </ul>
+
+                        </details>
+
+                        <details name="navigation-child">
+
+                          <summary>Resources</summary>
+
+                          <ul role="list">
+
+                            {% for resource in site.data.module.resources %}
+
+                              {% if feed.hidden != true %}
+
+                                <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}/component-library/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                              {% endif %}
+
+                            {% endfor %}
+
+                          </ul>
+
+                        </details>
 
                     </li>
-                    <li><a href="/blog/" data-nav-id="rad-blog">Radancy DevBlog</a></li>
-                    <li><a href="/uid/code-standards/" data-nav-id="rad-uid-code-standards">User Interface Standards and Guidelines</a></li>
                   </ul>
 
+                </details>
+                
               </li>
+              <li>
+
+                <details name="navigation-parent">
+
+                  <summary>MagicBullet</summary>
+                   
+                  <ul>
+                    <li><a href="/magicbullet/"><span class="visually-hidden">MagicBullet</span> Home</a>
+                    <li><a href="/magicbullet/a11y/" data-nav-id="rad-a11y-index">Accessibility Patch</a></li>
+                    <li><a href="/magicbullet/ccpa/" data-nav-id="rad-ccpa-index">California Consumer Privacy Act (CCPA) Notice</a></li>
+                    <li><a href="/magicbullet/gdpr/" data-nav-id="rad-gdpr-index">General Data Protection Regulation (GDPR) Notice</a></li>
+                    <li><a href="/magicbullet/alert/" data-nav-id="rad-alert-index">System Alert</a></li>
+                  </ul>
+
+                </details>
+
+              </li>
+              <li><a href="/blog/" data-nav-id="rad-blog">Radancy DevBlog</a></li>
+              <li><a href="/uid/code-standards/" data-nav-id="rad-uid-code-standards">User Interface Standards and Guidelines</a></li>
             </ul>
 
-            </div>
+          </div>
 
-          </nav>
-
-        {%- endif %}
+        </nav>
 
       {%- endif %}
 

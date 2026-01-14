@@ -964,10 +964,11 @@ background-color: $highlight-color;
   }
 
   &__navigation {
+  color: blue;
   inset-block-start: 1em;
   inset-inline-end: 1em;
   position: absolute;
-  max-inline-size: calc(380rem/16);
+  max-inline-size: calc(360rem/16);
   z-index: 3;
   
     &__button {
@@ -997,6 +998,17 @@ background-color: $highlight-color;
     border: rem(1) $highlight-color solid;
     display: none;
     padding: em(16);
+    }
+
+    details {
+      
+      summary {
+
+        cursor: pointer;
+        list-style: none;
+
+      }
+
     }
   
     ul {

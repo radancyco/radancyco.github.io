@@ -19,8 +19,6 @@ highlighter: rouge
 include: [_*.*]
 lang: en
 markdown: kramdown
-name: Web Standards
-navigation: true
 owner-name: Michael Spellacy
 owner-email: michael.spellacy@radancy.com
 owner-image: https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg

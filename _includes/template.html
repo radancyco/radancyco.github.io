@@ -1,0 +1,856 @@
+{% comment %}
+
+  Radancy Component Library: Component Page Template
+
+  Contributor(s):
+  Michael "Spell" Spellacy
+
+{% endcomment %}
+
+{% comment %} Data connections and other variables. {% endcomment %}
+
+{% if site.repo == "https://github.com/radancyco/component-library" %}
+
+  {% assign current_id = page.id %}
+  {% assign selectedComponents = site.data.module.components %}
+  {% assign selectedFeeds = site.data.module.feeds %}
+  {% assign allSelections = selectedComponents | concat: selectedFeeds %}
+  {% assign counter = 0 %}
+
+{% endif %}
+
+{% comment %} Get Icon Library {% endcomment %}
+
+{% include icon.html %}
+
+{% comment %} Top Messages {% endcomment %}
+
+{%- if page.warning %}
+  
+  <div class="warning">
+  
+    <p><strong>Warning:</strong> {{ page.warning }}</p>
+
+  </div>
+
+{%- endif %}
+
+{%- if page.note %}
+  
+  <div class="note">
+  
+    <p><strong>Note:</strong> {{ page.note }}</p>
+
+  </div>
+
+{%- endif %}
+
+{%- if page.reminder %}
+  
+  <div class="reminder">
+  
+    <p><strong>Reminder:</strong> {{ page.reminder }}</p>
+
+  </div>
+
+{%- endif %}
+
+{% if page.messages %} 
+
+    {% for message in page.messages %}
+
+      {% include message/{{ message }}.html %}
+
+    {% endfor %}
+
+{% endif %}
+
+{%- if component %}
+
+  <p class="component__summary">{{ component.desc }}</p>
+
+{%- else if page.desc %}
+
+  <p class="page__summary">{{ page.desc }}</p>
+
+{%- endif %}
+
+{%- if contentblock %}
+
+  {{ contentblock }}
+
+{%- endif %}
+
+{%- if page.select-internal %}
+
+  <div class="select-internal">
+
+    <nav aria-label="Examples" class="select-internal__nav">
+
+      <label class="select-internal__label">Choose an example:</label>
+
+      <select class="select-internal__select">
+
+      {%- for component in allSelections %}
+
+          {% if component.id == current_id %}
+
+            {% assign grouped_examples = component.examples | group_by: "group" %}
+
+            {% for group in grouped_examples %}
+
+              {% if group.name != "" %}
+
+                <optgroup label="{{ group.name }}">
+
+                  {% for example in group.items %}
+
+                    <option value="#{{ example.id }}">{{ example.name }}</option>
+
+                  {% endfor %}
+
+                </optgroup>
+
+              {% else %}
+
+                {% for example in group.items %}
+
+                  <option value="#{{ example.id }}">{{ example.name }}</option>
+
+                {% endfor %}
+
+              {% endif %}
+
+            {% endfor %}
+
+          {% endif %}
+
+      {%- endfor %}
+
+      </select>
+
+      <div class="sr-only" aria-live="polite"></div>
+
+    </nav>
+
+{%- endif %}
+
+{% assign total_example_count = 0 %}
+
+{% for component in allSelections %}
+
+  {% if component.id == current_id %}
+
+    {% assign example_count = component.examples | size %}
+    {% assign total_example_count = total_example_count | plus: example_count %}
+
+  {% endif %}
+
+{% endfor %}
+
+{% for component in allSelections %}
+
+  {% if component.id == current_id %}
+  
+    {% for example in component.examples %}
+
+      {% capture html %}{% include_relative html/{{ example.id }}.html %}{% endcapture %}
+
+      {% if page.localcss %}
+
+        {% capture css %}{% include_relative init.scss %}{% endcapture %}
+
+      {% endif %}
+
+      {% if page.localjs %}
+
+        {% capture js %}{% include_relative script.js title=component.title version=component.version %}{% endcapture %}
+
+      {% endif %}
+
+      {% if example.customcss %}
+
+        {% capture customcss %}{% include_relative {{ example.customcss }}.scss %}{% endcapture %}
+
+      {% endif %}
+
+      {% if example.customjs %}
+
+        {% capture customjs %}{% include_relative {{ example.customjs }} %}{% endcapture %}
+
+      {% endif %}
+
+      {%- if page.select-internal %}
+
+        <div class="select-internal__content" id="{{ example.id }}" {% unless forloop.first %}hidden{% endunless %}>
+
+      {%- endif %}
+
+      {%- if page.select-internal != true %}
+
+        <h2 id="{{ example.id }}">{{ example.name }} <a class="anchor" href="#{{ example.id }}">{{ iconAnchor }} <span class="sr-only">({{ example.name }} Anchor)</span></a></h2>
+
+      {%- endif %}
+
+      <div class="component__view">
+  
+      {% include_relative html/{{ example.id }}.html %}
+
+      </div>
+
+      {%- if example.warning %}
+  
+        <div class="warning">
+        
+          <p><strong>Warning:</strong> {{ example.warning }}</p>
+
+        </div>
+
+      {%- endif %}
+
+      {%- if example.best-practice %}
+  
+      <div class="best-practice">
+      
+        <p><strong>Best Practice:</strong> {{ example.best-practice }}</p>
+
+      </div>
+
+      {%- endif %}
+  
+      {%- if example.note %}
+  
+        <div class="note">
+          
+          <p><strong>Note:</strong> {{ example.note }}</p>
+
+        </div>
+  
+      {%- endif %}
+
+      {%- if example.reminder %}
+  
+        <div class="reminder">
+        
+          <p><strong>Reminder:</strong> {{ example.reminder }}</p>
+
+        </div>
+
+      {%- endif %}
+
+      {%- if example.experimental %}
+  
+        <div class="experimental">
+        
+          <p><strong>Experimental:</strong> {{ example.experimental }}</p>
+
+        </div>
+
+      {%- endif %}
+
+      {%- if component.message %}
+        
+        {% for msg in component.message %}
+
+          {% include message/{{ msg }}.html %}
+
+        {% endfor %}
+
+      {%- endif %}
+
+      {%- if example.message %}
+        
+        {% for msg in example.message %}
+
+          {% include message/{{ msg }}.html %}
+
+        {% endfor %}
+
+      {%- endif %}
+
+      {%- if component.guidance %}
+        
+        {% for msg in component.guidance %}
+
+          {% include guidance/{{ msg }}.html %}
+
+        {% endfor %}
+
+      {%- endif %}
+
+      <nav aria-label="Component Tools" class="component-functions">
+
+        <ul role="list">
+          <li><button class="btn-copy-link" data-code="{{ page.url | absolute_url }}#{{ example.id }}">{{ iconCheck }}{{ iconCopyURL }} <span>Copy link to example</span></button></li>
+          <li><form action="https://codepen.io/pen/define" id="{{ example.id }}-codepen" method="POST" target="_blank"><button class="btn-edit-codepen">{{ iconCodePen }} <span>Edit on CodePen</span></button></form></li>
+          <li><a class="btn-new-window" href="{{ example.id }}" target="_blank">{{ iconNewWindow }} <span>Open in new window</span></a></li>
+          <li><button class="btn-refresh-page" onclick="javascript:location.reload();">{{ iconRefresh }} <span>Refresh Page</span></button></li>
+          <li><a class="btn-repository" href="{{ site.repo }}/blob/main/{{ component.path }}/">{{ iconGit }} <span>View Repository</span></a></li>
+          <li><button class="btn-view-code">{{ iconCode }} <span>View Source Code</span></button></li>
+        </ul>
+
+      </nav>
+
+      {% assign counter = counter | plus: 1 %}
+
+      <div class="content-view-code">
+
+        <div class="tablist" data-fixed-height>
+
+          <ul class="tablist__list">
+            <li><a class="tablist__tab" href="#html-{{counter}}">{{ iconHTML }} HTML</a></li>
+            {%- if page.localcss %}
+            <li><a class="tablist__tab" href="#css-{{counter}}">{{ iconCSS }} CSS</a></li>
+            {%- endif %}
+            {%- if example.customcss %}
+            <li><a class="tablist__tab" href="#custom-css-{{counter}}">{{ iconCSS }} CSS (Custom)</a></li>
+            {%- endif %}
+            {%- if page.localjs %}
+            <li><a class="tablist__tab" href="#javascript-{{counter}}">{{ iconJS }} JavaScript</a></li>
+            {%- endif %}
+            {%- if example.customjs %}
+            <li><a class="tablist__tab" href="#custom-javascript-{{counter}}">{{ iconJS }} JavaScript (Custom)</a></li>
+            {%- endif %}
+          </ul>
+      
+          <div class="tablist__panel" id="html-{{counter}}">
+
+            <button aria-label="Copy HTML" class="btn-code-copy" data-content-id="content-html-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
+      
+            <div class="tablist__content" contenteditable id="content-html-{{counter}}" spellcheck="false">{% highlight html %}{% include_relative html/{{ example.id }}.html %}{% endhighlight %}</div>
+
+          </div>
+
+          {%- if page.localcss %}
+
+            <div class="tablist__panel" id="css-{{counter}}">
+
+              <button aria-label="Copy CSS" class="btn-code-copy" data-content-id="content-css-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
+
+              <div class="tablist__content" contenteditable id="content-css-{{counter}}" spellcheck="false">{% highlight css %}{% include_relative init.scss %}{% endhighlight %}</div>
+
+            </div>
+
+          {%- endif %}
+
+          {%- if example.customcss %}
+
+            <div class="tablist__panel" id="custom-css-{{counter}}">
+
+              <button aria-label="Copy Custom CSS" class="btn-code-copy" data-content-id="content-custom-css-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
+
+              <div class="tablist__content" contenteditable id="content-custom-css-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative {{ example.customcss }}.scss %}{% endhighlight %}</div>
+
+            </div>
+
+          {%- endif %}
+
+          {%- if page.localjs %}
+
+            <div class="tablist__panel" id="javascript-{{counter}}">
+
+              <button aria-label="Copy JavaScript" class="btn-code-copy" data-content-id="content-javascript-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
+      
+              <div class="tablist__content" contenteditable id="content-javascript-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative script.js title=component.title version=component.version %}{% endhighlight %}</div>
+
+            </div>
+
+          {%- endif %}
+
+          {%- if example.customjs %}
+
+            <div class="tablist__panel" id="custom-javascript-{{counter}}">
+
+              <button aria-label="Copy Custom JavaScript" class="btn-code-copy" data-content-id="content-custom-javascript-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
+      
+              <div class="tablist__content" contenteditable id="content-custom-javascript-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative {{ example.customjs }} %}{% endhighlight %}</div>
+
+            </div>
+
+          {%- endif %}
+
+        </div>
+
+      </div>
+
+      {%- if example.guidance %}
+  
+        {% for item in example.guidance %}
+  
+          {% include guidance/{{ item }}.html %}
+  
+        {% endfor %}
+  
+      {%- endif %}
+
+      <script>
+
+      var codePenForm = document.getElementById("{{ example.id }}-codepen");
+    
+      var obj = {
+            
+        title: "{{ component.title }} {% if example.name %}: {{ example.name }} {% endif %}",
+        html: {{ html | jsonify }},
+        css_external: "https://radancy.dev/css/init.css",
+        css_pre_processor: "scss",
+        {%- if example.customcss %}
+        css: {{ css | append: customcss | jsonify }},
+        {%- else %}
+        css: {{ css | jsonify }}, 
+        {%- endif %}
+        {%- if example.customjs %}
+        js: {{ js | append: customjs | jsonify }},
+        {%- else %}
+        js: {{ js | jsonify }},
+        {%- endif %}
+        {%- if example.codepenjs %}
+        js_external: '{% for item in example.codepenjs %}{% if item contains "://" %}{{ item }}{% else %}{{site.url}}/animation-library/{{ item }}{% endif %}{% if forloop.last %}{% else %};{% endif %}{% endfor %}',
+        {%- endif %}
+    
+      };
+    
+      var json = JSON.stringify(obj);
+      var codePenInput = document.createElement("input");
+      
+      codePenInput.setAttribute("type", "hidden");
+      codePenInput.setAttribute("name", "data");
+      codePenInput.setAttribute("value", json);
+      codePenForm.prepend(codePenInput);
+    
+      </script>
+
+      {%- if page.select-internal %}
+  
+      </div>
+
+      {%- endif %}
+
+    {% endfor %}
+
+  {% endif %}
+
+{% endfor %}
+
+{%- if page.select-internal %}
+  
+</div>
+
+{%- endif %}
+
+{% if page.guidance %} 
+
+  {% assign sortGuidance = page.guidance %}
+
+  {% for item in sortGuidance %}
+
+    {% include guidance/{{ item }}.html %}
+
+  {% endfor %}
+
+{% endif %}
+
+{%- if page.elements or page.aria or page.attributes or page.sass or page.class or page.cookies or page.parameters %}
+
+  <h2 id="properties">Properties</h2>
+
+  <p>Use the following properties to configure this component.</p>
+
+  <div class="accordion">
+
+{%- endif %}
+
+{%- if page.elements %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="elements">Elements</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Elements" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Element</th>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortElements = page.elements %}
+
+    {% for element in sortElements %}
+
+      <tr>
+        <th scope="row">{% for html in element.html %}<code>{{ html }}</code>{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</th>
+        <td>{% for note in element.note %}{{ note }}{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td><div>{{ element.desc }}</div></td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.aria %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="aria">ARIA</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="ARIA" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">ARIA</th>
+      <th>Applies To</th>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortAria = page.aria %}
+
+    {% for aria in sortAria %}
+
+      <tr>
+        <th scope="row"><code>{{ aria.name }}</code></th>
+        <td>{% for html in aria.html %}<code>{{ html }}</code>{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td>{% for note in aria.note %}{{ note }}{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td><div>{{ aria.desc }}</div></td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.attributes %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="attributes">Attributes</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Attributes" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Attribute</th>
+      <th>Applies To</th>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortAttributes = page.attributes %}
+
+    {% for attribute in sortAttributes %}
+
+      <tr>
+        <th scope="row"><code>{{ attribute.name }}</code></th>
+        <td>{% for html in attribute.html %}<code>{{ html }}</code>{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td>{% for note in attribute.note %}{{ note }}{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td><div>{{ attribute.desc }}</div></td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.sass %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="sass">SASS</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Variables" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Variable</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortSass = page.sass %}
+
+    {% for scss in sortSass %}
+
+      <tr>
+        <th scope="row"><code>{{ scss.name }}</code></th>
+        <td><div>{{ scss.desc }}</div></td>
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.classes %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="classes">Classes</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Classes" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Class</th>
+      <th>Applies To</th>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortClasses = page.classes %}
+
+    {% for class in sortClasses %}
+
+      <tr>
+        <th scope="row"><code>{{ class.name }}</code></th>
+        <td>{% for html in class.html %}<code>{{ html }}</code>{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td>{% for note in class.note %}{{ note }}{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td><div>{{ class.desc }}</div></td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.cookies %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="cookies">Cookies</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Cookies" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Name</th>
+      <th>Value</th>
+      <th>Type</th>
+      <th>Secure</th>
+      <th>SameSite</th>
+      <th>Domain</th>
+      <th>Path</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortCookies = page.cookies %}
+
+    {% for cookie in sortCookies %}
+
+      <tr>
+        <th scope="row"><code>{{ cookie.name }}</code></th>
+        <td>{{ cookie.value }}</td>
+        <td>{{ cookie.type }}</td>
+        <td>{{ cookie.secure }}</td>
+        <td>{{ cookie.samesite }}</td>
+        <td>{{ cookie.domain }}</td>
+        <td>{{ cookie.path }}</td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{%- endif %}
+
+{%- if page.parameters %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="parameters">Parameters</button></h3>
+
+<div class="accordion__panel">
+
+  <div aria-label="Parameters" class="table-container" role="region" tabindex="0">
+
+    <table>
+    <thead>
+    <tr>
+      <th scope="row">Parameter</th>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% assign sortParameters = page.parameters %}
+
+    {% for parameter in sortParameters %}
+
+      <tr>
+        <th scope="row"><code>{{ parameter.name }}</code></th>
+        <td>{% for note in parameter.note %}{{ note }}{% if forloop.last %}{% else %}, {% endif %} {% endfor %}</td>
+        <td><div>{{ parameter.desc }}</div></td>
+      </tr>
+
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+{% endif %}
+
+{%- if page.elements or page.aria or page.attributes or page.sass or page.class or page.cookies or page.parameters %}
+
+</div>
+
+{%- endif %}
+
+{%- if page.notes or page.changelog or page.roadmap %}
+
+  <h2 id="release-notes">Release Notes</h2>
+
+  <p>Keep up to date on major changes to this component.</p>
+
+  <div class="accordion">
+
+{%- endif %}
+
+{%- if page.changelog %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="changelog">Changelog</button></h3>
+
+  <div class="accordion__panel">
+
+    <ul class="notes" role="list">
+
+      {% assign sortChangelog = page.changelog %}
+
+      {% for log in sortChangelog %}
+
+        <li class="notes__item">
+      
+          <span class="notes__label notes__label--{{ log.label | downcase }}">{{ log.label }}:</span>
+          <span class="notes__content">{{ log.content }}</span>
+    
+        </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
+{%- endif %}
+
+{%- if page.notes %} 
+
+<h3 class="accordion__heading"><button class="accordion__toggle" id="notes">Additional Notes</button></h3>
+
+  <div class="accordion__panel">
+
+    <ul class="notes" role="list">
+    
+      {% assign sortNotes = page.notes %}
+
+      {% for note in sortNotes %}
+    
+      <li class="notes__item">
+        
+        <span class="notes__label notes__label--{{ note.label | downcase }}">{{ note.label }}:</span>
+        <span class="notes__content">{{ note.content }}</span>
+  
+      </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
+  {%- endif %}
+
+  {%- if page.roadmap %} 
+
+  <h3 class="accordion__heading"><button class="accordion__toggle" id="roadmap">Roadmap</button></h3>
+
+  <div class="accordion__panel">
+
+    <ul class="notes" role="list">
+
+      {% assign sortRoadmap = page.roadmap %}
+
+      {% for roadmap in sortRoadmap %}
+
+        <li class="notes__item">
+        
+          <span class="notes__label notes__label--{{ roadmap.label | downcase }}">{{ roadmap.label }}:</span>
+          <span class="notes__content">{{ roadmap.content }}</span>
+      
+        </li>
+
+      {% endfor %}
+
+    </ul>
+
+  </div>
+
+{%- endif %}
+
+{%- if page.notes or page.changelog or page.roadmap %}
+
+</div>
+
+{%- endif %}
+
+<div class="reminder">
+
+  <h2 id="issues">Report Issues</h2>
+
+  <p>Find a bug? Want a new feature? Report it on <a href="https://jira.radancy.com/secure/Dashboard.jspa#create_link">JIRA</a>. You're so awesome!</p>
+
+</div>

@@ -1,0 +1,634 @@
+components:
+
+  - id: "accordion"
+    desc: "Organize content into expandable and collapsible sections, allowing users to reveal or hide information as needed."
+    path: "accordion"
+    title: "Accordion"
+    version: "2.9" 
+    examples: 
+
+      - name: "Default Setup"
+        id: "default"
+        note: "Please note that this is a basic example of accordion functionality. Adding additional markup, such as headings, can enhance the component's accessibility and make it more understandable to assistive technology users. See the <a href='#headings'>Interactive Headings (FAQ)</a> example for more details."
+
+      - name: "Animation"
+        id: "animation"
+        message: 
+        
+          - use-tablist
+          - starting-style
+      
+      - name: "Default Opened"
+        id: "default-opened"
+        note: "Please note that only one accordion may be opened on page load. This content can be closed and should not be confused with the <a href='../tablist/'>TabList</a>, which may never have collapsed content."
+
+      - name: "Disable Anchor"
+        id: "disable-anchor"
+        note: "By default, clicking a button adds an anchor to the URL, but this can be disabled if needed. However, anchors are useful for sharing specific content and tracking, so they should only be removed with a valid reason."
+
+      - name: "Fixed Height"
+        id: "fixed-height"
+        guidance: a11y-scrollbars
+
+      - name: "Default (Horizontal)"
+        id: "horizontal"
+        group: Horizontal Layout
+        message: use-tablist
+
+      - name: "Content Pointer"
+        id: "horizontal-pointer"
+        group: Horizontal Layout
+        message: 
+
+          - use-tablist
+
+      - name: "Interactive Headings (FAQ)"
+        id: "headings"
+        note: 'In this example, take note of the headings used to wrap the <code>button</code> elements, creating a more logical, interactive, and navigable structure for assistive technology users. Default list markup is also present to help convey the number of accordion items there are, and wrapping the accordion in a <code>section</code> element connected to the "My FAQ" heading via <code>aria-labelledby</code> creates a landmark region for the grouping. Together, these techniques improve the overall understanding of the component for users with certain disabilities, specifically blind and low vision users. Please watch the <a href="headings.mp4">demo</a> to see this behavior in action.'
+        
+      - name: "Multiple Open"
+        id: "multiple-open"
+        note: "Ideally, only one accordion section should be open at a time. However, there may be cases where allowing multiple sections to be open simultaneously is desirable, such as when a user wants to compare or search through the content."
+
+      - name: "Toggle All"
+        id: "toggle-all"
+
+      - name: "Viewport Context"
+        id: "viewport-context"
+        note: "In some scenarios, we may only want the accordion to be present on smaller viewports. In such cases, it is crucial to ensure that accessibility on larger screens is not compromised by leaving buttons accessible to assistive technologies. To see this solution in action, try pressing or tabbing to the headings in larger viewport sizes. As you'll notice, the headings are not interactive and all content that would normally be collapsed is revealed, which is exactly what we want. However, when you change the viewport to a smaller size, the component then becomes a traditional accordion. This kind of behavior can often be found in the footer of applications or website, where space is more limited on smaller screens."
+        message: button-removal
+
+      - name: "Overlay"
+        id: "horizontal-overlay"
+        group: Experimental
+        message: 
+        
+          - experimental
+          - use-tablist
+
+  - id: "animation-toggle"
+    desc: "Allow users to pause or resume web animations, videos, or other dynamic content for improved control and accessibility."
+    path: "animation-toggle"
+    title: "Animation Toggle"
+    version: "2.9"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+        group: Video
+
+      - name: "After Effects (Callback)"
+        id: "callback"
+        group: Non-Video
+        codepenjs: "https://radancy.dev/component-library/animation-toggle/callback-lottie.js"
+        customcss: "callback-custom"
+        customjs: "callback-custom.js"
+
+      - name: "CSS Animation"
+        id: "css-animation"
+        group: Non-Video
+        customcss: "css-animation"
+
+      - name: "Custom Loop"
+        id: "custom-loop"
+        group: Video
+        note: "In this example, the video is set to loop one time. Once complete, it cannot be restarted."
+
+      - name: "Audio Description"
+        id: "audio-description"
+        group: Experimental
+        experimental: "This is an experimental feature that will allow the video to include an audio description. A valid, third-party or self-produced <a href='demo.vtt'>VTT</a> file is required."
+      
+      - name: "GIF Animation"
+        id: "gif-animation"
+        group: Non-Video
+        customcss: "gif-animation"
+        note: 'To "pause" an animated GIF, you will need two images: the animated version and a static version, which can be any desired frame. Animated GIFs should only be used as a last resort when video is not a viable option.'
+
+      - name: "Hero Banner (Video)"
+        id: "hero-banner"
+        group: Video
+
+      - name: "Multiple Videos"
+        id: "multiple-videos"
+        group: Video
+        customcss: "multiple-videos"
+
+      - name: "No Pause Button"
+        id: "no-pause-button"
+        group: Video
+        warning: In some situations, it may be desirable to remove a pause button but still have animation benefit from cookie setting enabled in videos that do contain a pause button. This is not a feature that should be used lightly.
+
+      - name: "Poster (Fallback Image)"
+        id: "poster"
+        group: Video
+        note: "Pause the video and then refresh the page. The first frame is from 25 seconds in. Please note that when pressing play, video will resume from this point."
+
+      - name: "Responsive (Media Queries)"
+        id: "responsive"
+        group: Video
+        note: "Resize your browser window and refresh page. Loading alternatively sized and/or video formats to improve layout and performance is fully supported."
+
+      - name: "SVG Animation"
+        id: "svg-animation"
+        group: Non-Video
+        customcss: "svg-animation"
+
+      - name: "Transparent Video"
+        id: "transparent"
+        group: Demo
+        customcss: "transparent"
+        customjs: "transparent.js"
+        note: This video utilizes an <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer</a> triggered by a callback function. When positioned at the top of the page, it loads instantly; when lower, it plays as you scroll to it. This demo will only play once, requiring a page refresh for replay.
+        guidance: note-transparent-video
+
+  - id: "breadcrumbs" 
+    desc: "Provides a navigational trail that helps users understand their location within a website's hierarchy."
+    path: "breadcrumbs"
+    title: "Breadcrumbs"
+    version: "1.1"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Horizontal Scroll (Mobile)"
+        id: "horizontal-scroll"
+        guidance: a11y-scrollbars
+        note: "To test the scrollable area, resize the screen to a smaller width. When designing, ensure a partial item is visible at the edge to indicate scrollability and enhance usability."
+  
+  - id: "card" 
+    desc: "Group content such as images, text, and related links, offering a compact and organized way to display information."
+    path: "card"
+    title: "Card"
+    version: "1.5"
+    examples: 
+
+      - name: "Card (Images)"
+        id: "default-setup"
+        guidance: 
+    
+          - best-practice-card
+          - reminder-pseudo-element
+
+      - name: "Card (Categories)"
+        id: "card-category"
+
+      - name: "Card (Eyebrow)"
+        id: "card-eyebrow"
+        note: 'Examine this markup closely and you will notice that we are using an element called <code>hgroup</code> to encapsulate the eyebrow and heading. This should be done instead of using multiple headings to markup alternative titles. See <a href="https://www.tpgi.com/subheadings-subtitles-alternative-titles-and-taglines-in-html/">Subheadings, subtitles, alternative titles and taglines in HTML</a> for more details about this useful element and best practice.'
+  
+      - name: "Card (Metadata)"
+        id: "card-metadata"
+
+      - name: "Card (No Summary)"
+        id: "card-no-summary"
+        warning: "Examine this markup closely and you will notice the absence of heading levels. This in intentional. The omission stems from the lack of a clear summary. Headings should exclusively introduce content; otherwise, they should not be used at all."
+      
+      - name: "Card (Video)"
+        id: "card-video"
+        note: 'When incorporating a video, ensure that the title explicitly includes "(Video)" to aid assistive technology users, signaling their engagement with video content. If this content is not visually desired, you may use various techniques to <a href="https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html">hide it</a>, but still make it accessible to assistive technology. Additionally, always provide captions for videos, and when needed, ensure transcripts are available. In the design of the module, we are also offsetting the play button, which often obstructs the selected images in undesirable ways.' 
+
+      - name: "Card (No Images)"
+        id: "card-no-image"
+
+      - name: "Horizontal Card (Image)"
+        id: "card-horizontal-image"
+
+      - name: "Card Link (Link Heading)"
+        id: "card-link-heading"
+        note: In this example, the heading serves as the primary link, with an arrow affordance to draw attention to it instead of using a text-based call to action like <a href="#learn-more">Learn More</a>. A CSS <a href="#pseudo-element-trick">pseudo-element trick</a> makes the entire card clickable, ensuring broad usability while maintaining a unique link in each card for better accessibility. 
+        best-practice: This strategy can be used by developers and CMS authors. 
+        group: Linking Strategies
+
+      - name: "Card Link (Distinct CTA)"
+        id: "card-distinct"
+        group: Linking Strategies
+        note: In this example, the heading does not need to be the primary link because each call to action (CTA) provides distinct and unique hypertext. 
+        best-practice: This strategy can be used by developers and CMS authors. While designers may not embrace this strategy due to the length of the CTA, this may be the most universal, straightforward, and accessible way to handle CTAs across a wide range of situations.
+
+      - name: "Card Link (Visually Hidden CTA)"
+        id: "card-visually-hidden"
+        note: In this example, the heading does not need to be the primary link because each call to action (CTA) provides unique hypertext. However, the distinct portions of the link are visually hidden to maintain a clean appearance while still providing contextual meaning for assistive technology users.
+        warning: This strategy can be used by developers but it is not recommended for CMS-authored content.
+        group: Linking Strategies
+
+      - name: "Card Link (Faux CTA)"
+        id: "card-faux"
+        note: In this example, the heading serves as the primary link, but the arrow affordance has been replaced with a text-based call to action (Learn More). This is often called a "Faux CTA" because it is not clickable and it is intentionally hidden from assistive technology. Like an arrow affordance, it is meant purely as a visual call to action. 
+        warning: This strategy can be used by developers but it is not recommended for CMS-authored content.
+        group: Linking Strategies
+
+      - name: "Card Link (Link Heading & CTA)"
+        id: "card-duplicate"
+        note: In this example, both the heading and the call to action point to the same URL, with the call to action effectively hidden from assistive technology and keyboard users via <code>aria-hidden="true"</code> and <code>tabindex="-1"</code>. While this strategy is uncommon, it is considered a more <a href="https://alistapart.com/article/material-honesty-on-the-web/">materially honest</a> technique compared to many commonly used methods of linking a card. If nothing else, it can serve as a practical solution for addressing adjacent duplicate links, which can be a problem for accessibility.
+        group: Linking Strategies
+        warning: This strategy can be used by developers but it is not recommended for CMS-authored content.
+
+      - name: "Card Link (Link Block)"
+        id: "card-block"
+        note: In this example, a hyperlink is placed around the image, heading, and content, making the entire region clickable. 
+        warning: This strategy should be avoided unless the content output is known to not be excessive. Wrapping excessive amounts of content (including alternative text) within a hyperlink can overwhelm assistive technology users. This strategy, when deemed appropriate, can be used by developers but it is not recommended for CMS-authored content.
+        group: Linking Strategies
+
+      - name: "Card Link (Structural Context)"
+        id: "card-structural-context"
+        note:  In this example, the card interface uses list markup with nested images, headings and hyperlinks, ensuring clarity without the need for visually hidden text. This applies to cards with single or multiple links. While including visually hidden text is always recommended, content structure alone may provide sufficient context when hidden text is not possible or advisable. See WCAG <a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H77">Technique H77</a> and <a href="https://www.w3.org/WAI/WCAG22/Techniques/html/H81">Technique H81</a> for more information.
+        group: Linking Strategies
+        best-practice: This strategy can be used by developers, with visually hidden text as recommended, and CMS authors if visually hidden text is not included.
+
+  - id: "carousel"
+    desc: "Display a series of content items, such as images or text, in a rotating or sliding manner, allowing user to cycle through them."
+    path: "carousel"
+    title: "Carousel"
+    version: "1.0"
+    hidden: true
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Arrow Placement"
+        id: "arrow-placement"
+
+  - id: "dialog"
+    desc: "Do dialog things without Fancybox."
+    path: "dialog"
+    title: "Dialog"
+    version: "0.5"
+    hidden: true
+    examples:
+
+      - name: "Default"
+        id: "default"
+
+  - id: "disclosure"
+    desc: "Reaveal or hide additional content when triggered, helping to manage the display of supplementary information."
+    message: disclosure-use
+    path: "disclosure"
+    title: "Disclosure"
+    version: "2.4"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Animation"
+        id: "animation"
+        message: starting-style
+
+      - name: "Default Opened"
+        id: "default-opened"
+
+      - name: "Enable Anchor"
+        id: "enable-anchor"
+
+      - name: "Interactive Heading"
+        id: "heading"
+
+      - name: "Persistent State"
+        id: "persistent"
+        note: Reduce your screen size to reveal the disclosure button. In some cases, we may only require a discosure to be present on mobile, but not on desktop. 
+        message: button-removal
+
+      - name: "Viewport Context"
+        id: "viewport-context"
+        note: "In some scenarios, we may only want the disclosure to be present on smaller viewports. In such cases, it is crucial to ensure that accessibility on larger screens is not compromised by leaving buttons accessible to assistive technologies. To see this solution in action, try pressing or tabbing to the headings in larger viewport sizes. As you'll notice, the headings are not interactive and all content that would normally be collapsed is revealed, which is exactly what we want. However, when you change the viewport to a smaller size, the component then becomes a traditional accordion. This kind of behavior can often be found in the footer of applications or website, where space is more limited on smaller screens."
+        message: button-removal
+
+  - id: "hero-banner" 
+    desc: "Highlight key content or messaging with a bold visual, featuring an image, heading, and call-to-action at the top of a page."
+    message: picture-element
+    path: "hero-banner"
+    title: "Hero Banner (Image)"
+    version: "1.1"
+    examples:
+
+      - name: "Text Left Top"
+        id: "text-left-top"
+
+      - name: "Text Left Top (Constrain)"
+        id: "text-left-top-constrain"
+        group: "Constrain"
+
+      - name: "Text Left Center"
+        id: "text-left-center"
+
+      - name: "Text Left Center (Constrain)"
+        id: "text-left-center-constrain"
+        group: "Constrain"
+
+      - name: "Text Left Bottom"
+        id: "text-left-bottom"
+
+      - name: "Text Left Bottom (Constrain)"
+        id: "text-left-bottom-constrain"
+        group: "Constrain"
+
+      - name: "Text Center Top"
+        id: "text-center-top"
+
+      - name: "Text Center Center"
+        id: "text-center-center"
+
+      - name: "Text Center Bottom"
+        id: "text-center-bottom"
+
+      - name: "Text Right Top"
+        id: "text-right-top"
+
+      - name: "Text Right Top (Constrain)"
+        id: "text-right-top-constrain"
+        group: "Constrain"
+
+      - name: "Text Right Center"
+        id: "text-right-center"
+
+      - name: "Text Right Center (Constrain)"
+        id: "text-right-center-constrain"
+        group: "Constrain"
+
+      - name: "Text Right Bottom"
+        id: "text-right-bottom"
+
+      - name: "Text Right Bottom (Constrain)"
+        id: "text-right-bottom-constrain"
+        group: "Constrain"
+
+  - id: "hero-banner-video" 
+    desc: "Highlight key content or messaging with a bold visual, featuring a video, heading, and call-to-action at the top of a page."
+    hash: "#hero-banner"
+    path: "animation-toggle"
+    title: "Hero Banner (Video)"
+
+  - id: "horizontal-scroll" 
+    desc: "Enables horizontal scrolling of content within a limited width, serving as a sleek alternative to carousels."
+    guidance: a11y-scrollbars
+    path: "horizontal-scroll"
+    title: "Horizontal Free-Scroller"
+    version: "1.4"
+    examples:
+
+      - name: "Default Setup"
+        id: "default"
+        note: "All markup examples include <code>aria-label</code>, <code>role</code>, and <code>tabindex</code> attributes. These are required when the content is generated by a CMS or when it's unclear if interactive elements will be present. If interactive elements are detected, the script will dynamically remove these attributes. The script is optional—if you're certain the component will always include interactive content, you can omit these attributes and take a hardcoded approach instead."
+
+      - name: "Default Setup (Non-Interactive)"
+        id: "default-non-interactive"
+
+      - name: "Desktop Layout (Interactive)"
+        id: "desktop-layout"
+        customcss: "desktop-layout"
+
+      - name: "Dynamic Label"
+        id: "dynamic-label"
+        note: "In this example, we use a hidden <code>li</code> element with <code>data-aria-label-replace</code> to dynamically append a value to the <code>aria-label</code> attribute on the <code>.horizontal-scroll</code> container. This can be used in certain templating situations where updating the default <code>aria-label</code> value may not be possible. "
+  
+      - name: "Mouse Wheel Support"
+        id: "wheel-support"
+        group: Experimental
+        message: 
+        
+          - experimental
+  
+  
+  - id: "job-list"
+    desc: 'Display job opportunity listings in various layouts, featuring options like a "Save Job" button.'
+    hidden: true
+    path: "job-list"
+    title: "Job List"
+    version: "1.0" 
+    examples: 
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Basic Layout (Save Job)"
+        id: "save-job"
+
+      - name: "Basic Layout (Save Job, Summary, View Role)"
+        id: "summary"
+
+      - name: "Basic Layout (View Role, Save Job)"
+        id: "view-role"
+
+      - name: "Grid Layout (View Role, Save Job)"
+        id: "grid-layout"
+
+  - id: "load-more"
+    desc: "Allow user to reveal additional content by pressing a button to load more items dynamically."
+    message: experimental
+    path: "load-more"
+    title: "Load More"
+    version: "1.0"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+        codepenjs: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+
+  - id: "partial-disclosure"
+    desc: "Reaveal or hide partially visible content when triggered, helping to manage the display of supplementary information."
+    path: "partial-disclosure"
+    title: "Partial Disclosure"
+    version: "1.7"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+        note: "In this example, the title triggers the hidden content below it. This is more clear and preferred over offsetting a button. The <code>.partial-disclosure__trigger</code> class can be placed on any element you wish to include as a trigger."
+
+      - name: "Offset Button (Default)"
+        id: "offset-button"
+
+      - name: "Offset Button (Custom Label)"
+        id: "offset-button-custom-label"
+          
+      - name: "Offset Button (Bottom)"
+        id: "offset-button-bottom"
+        group: Anti-Pattern
+        warning: 'Positioning disclosure buttons on the bottom of content to be opened above them is considered a poor user experience and <a href="#button-placement">not recommended</a>. Use at your own risk.'
+        guidance: anti-pattern-read-more
+
+  - id: "rating"
+    desc: "Allow user to evaluate content by selecting a rating, typically displayed as stars or other visual indicators."
+    path: "rating"
+    title: "Rating"
+    version: "1.0"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+  - id: "select-external"
+    desc: "Allow user to choose an item from a select menu and navigate to a corresponding page."
+    path: "select-external"
+    title: "Select Navigation (External)"
+    version: "1.2"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+  - id: "select-internal"
+    desc: "Allow user to choose an item from a select menu, updating the content on the same page."
+    path: "select-internal"
+    title: "Select Navigation (Internal)"
+    version: "1.7"
+    examples:
+      
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Custom Aria-Live"
+        id: "custom-aria-live"
+
+      - name: "Dynamic Setup"
+        id: "dynamic-setup"
+        message: experimental
+
+      - name: "Placeholder Option"
+        id: "placeholder"
+
+      - name: "Placeholder Option (Optgroup)" 
+        id: "optgroup"
+
+  - id: "step-indicator"
+    desc: "Use the step indicator to show a user's progress in a multi-step process, commonly seen in forms or workflow screens."
+    path: "step-indicator"
+    title: "Step Indicator"
+    version: "1.0"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+  - id: "tablist"
+    desc: "Organize content into separate sections, allowing user to switch between them by selecting different tabs."
+    path: "tablist"
+    message: use-accordion
+    title: "TabList"
+    version: "1.9"
+    examples:
+
+      - name: "Default Setup"
+        id: "default-setup"
+        note: "By default, tabs display inline on both mobile and desktop, wrapping as needed based on screen size."
+
+      - name: "Animation"
+        id: "animation"
+        message: starting-style
+
+      - name: "Disable Anchor"
+        id: "disable-anchor"
+        note: "By default, clicking a tab adds an anchor to the URL, but this can be disabled if needed. However, anchors are useful for sharing specific content and tracking, so they should only be removed with a valid reason."
+
+      - name: "Fixed Height"
+        id: "fixed-height"
+        guidance: a11y-scrollbars
+
+      - name: "Scrolling Tabs"
+        id: "scrolling-tabs"
+        note: "Tabs can be designed to scroll on mobile and display inline on desktop. To test the scrollable tabs, resize the screen to a smaller width. When designing, ensure a partial tab is visible at the edge to indicate scrollability and enhance usability."
+        guidance: a11y-scrollbars
+
+      - name: "Stacked Tabs"
+        id: "stacked-tabs"
+        note: "Tabs can stack on mobile and display inline on desktop. To see the stacked tabs, resize the screen to a smaller width."
+
+      - name: "Default (Vertical)"
+        id: "vertical-tabs"
+        group: Vertical Tabs
+        note: "In this example, tabs will be placed vertically on desktop and display inline on mobile. To test this, resize the screen to a smaller width."
+
+      - name: "Section Heading"
+        group: Vertical Tabs
+        id: "vertical-heading"
+
+  - id: "tile"
+    desc: "Group content in a visually organized layout, with the ability to flip and reveal additional information when a button is pressed."
+    path: "tile"
+    title: "Tile"
+    version: "1.2"
+    examples: 
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      - name: "Button Click Only"
+        id: "button-click"
+        note: In this example, only the button is clickable because the tile contains specific interactive elements, like hyperlinks, which should never be obscured. By default, the entire tile region is clickable.
+      
+      - name: "Open All Tiles"
+        id: "open-all"
+        note: "In this example, each tile is allowed to be opened. By default, opening a new tile will close any others that are open."
+
+layouts: 
+
+  - id: "ajd"
+    desc: "A boierplate system to produce Advanced Job Decscription pages more easily."
+    path-full: "/tb-ajd-template"
+    thumbnail: "thumb-ajd.png"
+    title: "Advanced Job Details (AJD)"
+    version: "2.0"
+
+  - id: "cpg"
+    desc: "A tool to help you easily produce career paths to be used in Advanced Job Detail pages."
+    path-full: "/career-path-generator"
+    thumbnail: "thumb-cpg.png"
+    title: "Career Path Generator (CPG)"
+    version: "1.0"
+
+  - id: "flexspan"
+    desc: "A flexible grid system capable of various functionalities, such as optional pre-defining of rows, gaps, customizable breakpoints, and offsets in both directions."
+    path-full: "https://brockenstein.github.io/Flexspan-Grid-System/"
+    thumbnail: "thumb-flexspan.png"
+    title: "FlexSpan Grid System (FGS)"
+    version: "1.0"
+
+resources: 
+
+  - id: "css-animation" 
+    desc: "Elevate your upcoming website design by incorporating these popular CSS animations."
+    path: "css-animation"
+    title: "CSS Animation Library"
+    version: "2.0"
+
+feeds: 
+
+  - id: "instagram"
+    desc: "Display a series of posts from an Instagram account, including images and captions." 
+    path: "feeds/instagram"
+    title: "Instagram Feed"
+    message: feed
+    # version: "1.3"
+    version: "1.2"
+    examples: 
+
+      - name: "Default Setup"
+        id: "default-setup"
+
+      #- name: "Horizontal Scroll (Mobile)"
+      #  id: "horizontal-scroll"
+
+  - id: "youtube"
+    desc: "Display a series of videos from a YouTube channel or playlist, including video thumbnails and titles."
+    path: "feeds/youtube"
+    title: "YouTube Feed"
+    version: "1.0"
+    examples:
+
+    - name: "Default Setup"
+      id: "default-setup"
+
+    - name: "Custom Styling"
+      id: "custom-styling"
+
+    - name: "Embedded Video"
+      id: "embedded-video"
+
+    - name: "Load Playlist"
+      id: "playlist"
+
+    - name: "No Thumbnails"
+      id: "no-thumbnails"

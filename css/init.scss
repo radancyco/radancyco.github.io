@@ -967,6 +967,7 @@ background-color: $highlight-color;
   inset-block-start: 1em;
   inset-inline-end: 1em;
   position: absolute;
+  max-inline-size: calc(380rem/16);
   z-index: 3;
   
     &__button {
@@ -1001,7 +1002,7 @@ background-color: $highlight-color;
     ul {
     margin: 0;
     padding: 0 0 0 1.6em;
-    list-style-type: disc;
+    list-style: none;
     }
   
     a {

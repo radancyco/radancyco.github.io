@@ -152,7 +152,134 @@
 
             <div class="primary-header__navigation__content">
 
-              {% include navigation.html %}
+              <ul>
+                <li><a href="/" data-nav-id="rad-index">Home</a>
+
+                  <ul>
+                    <li><a href="/a11y/">Accessibility at Radancy</a></li>
+                    <li>
+                      
+                      <details>
+  
+                        <summary>Component Library</summary>
+
+                        <ul>
+                          <li><a href="/component-library/">Component Library (Home)</a></li>
+                          <li>
+
+                              <details>
+  
+                                <summary>Components</summary>
+
+                                <ul role="list">
+
+                                  {% for component in site.data.module.components %}
+
+                                    {% if component.hidden != true %}
+
+                                      <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}{{ site.baseurl }}/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                                    {% endif %}
+  
+                                  {% endfor %}
+
+                                </ul>
+
+                              </details>
+
+                              <details>
+  
+                                <summary>Third-Party</summary>
+
+                                <ul role="list">
+
+                                  {% for feed in site.data.module.feeds %}
+
+                                    {% if feed.hidden != true %}
+
+                                      <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}{{ site.baseurl }}/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                                    {% endif %}
+
+                                  {% endfor %}
+
+                                </ul>
+
+                              </details>
+
+                              <details>
+  
+                                <summary>Layouts</summary>
+
+                                <ul role="list">
+
+                                  {% for layout in site.data.module.layouts %}
+
+                                    {% if layout.hidden != true %}
+
+                                      <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}{{ site.baseurl }}/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                                    {% endif %}
+
+                                  {% endfor %}
+
+                                </ul>
+
+                              </details>
+
+                              <details>
+  
+                                <summary>Resources</summary>
+
+                                <ul role="list">
+
+                                  {% for resource in site.data.module.resources %}
+
+                                    {% if feed.hidden != true %}
+
+                                      <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}{{ site.baseurl }}/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+
+                                    {% endif %}
+
+                                  {% endfor %}
+
+                                </ul>
+
+                              </details>
+
+                          </li>
+                        </ul>
+
+                      </details>
+                      
+                    </li>
+                    <li>
+
+                      <details>
+
+                        <summary>MagicBullet</summary>
+
+                        <ul>
+                          <li><a href="/magicbullet/">MagicBullet (Home)</a>
+    
+                            <ul>
+                              <li><a href="{{ site.baseurl }}/a11y/" data-nav-id="rad-a11y-index">Accessibility Patch</a></li>
+                              <li><a href="{{ site.baseurl }}/ccpa/" data-nav-id="rad-ccpa-index">California Consumer Privacy Act (CCPA) Notice</a></li>
+                              <li><a href="{{ site.baseurl }}/gdpr/" data-nav-id="rad-gdpr-index">General Data Protection Regulation (GDPR) Notice</a></li>
+                              <li><a href="{{ site.baseurl }}/alert/" data-nav-id="rad-alert-index">System Alert</a></li>
+                            </ul>
+
+                          </li>
+
+                      </details>
+
+                    </li>
+                    <li><a href="/blog/" data-nav-id="rad-blog">Radancy DevBlog</a></li>
+                    <li><a href="/uid/code-standards/" data-nav-id="rad-uid-code-standards">User Interface Standards and Guidelines</a></li>
+                  </ul>
+
+              </li>
+            </ul>
 
             </div>
 

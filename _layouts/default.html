@@ -177,7 +177,7 @@
 
                                     {% if component.hidden != true %}
 
-                                      <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}{{ site.baseurl }}/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                      <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}/component-library/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                                     {% endif %}
   
@@ -197,7 +197,7 @@
 
                                     {% if feed.hidden != true %}
 
-                                      <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}{{ site.baseurl }}/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                      <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}/component-library/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                                     {% endif %}
 
@@ -217,7 +217,7 @@
 
                                     {% if layout.hidden != true %}
 
-                                      <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}{{ site.baseurl }}/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                      <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}/component-library/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                                     {% endif %}
 
@@ -237,7 +237,7 @@
 
                                     {% if feed.hidden != true %}
 
-                                      <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}{{ site.baseurl }}/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                      <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}/component-library/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                                     {% endif %}
 
@@ -263,10 +263,10 @@
                           <li><a href="/magicbullet/">MagicBullet (Home)</a>
     
                             <ul>
-                              <li><a href="{{ site.baseurl }}/a11y/" data-nav-id="rad-a11y-index">Accessibility Patch</a></li>
-                              <li><a href="{{ site.baseurl }}/ccpa/" data-nav-id="rad-ccpa-index">California Consumer Privacy Act (CCPA) Notice</a></li>
-                              <li><a href="{{ site.baseurl }}/gdpr/" data-nav-id="rad-gdpr-index">General Data Protection Regulation (GDPR) Notice</a></li>
-                              <li><a href="{{ site.baseurl }}/alert/" data-nav-id="rad-alert-index">System Alert</a></li>
+                              <li><a href="/magicbullet/a11y/" data-nav-id="rad-a11y-index">Accessibility Patch</a></li>
+                              <li><a href="/magicbullet/ccpa/" data-nav-id="rad-ccpa-index">California Consumer Privacy Act (CCPA) Notice</a></li>
+                              <li><a href="/magicbullet/gdpr/" data-nav-id="rad-gdpr-index">General Data Protection Regulation (GDPR) Notice</a></li>
+                              <li><a href="/magicbullet/alert/" data-nav-id="rad-alert-index">System Alert</a></li>
                             </ul>
 
                           </li>

@@ -1018,6 +1018,8 @@ background-color: $highlight-color;
     }
   
     a {
+    display: block;
+    line-height: 1.5;
   
       &[aria-current] {
       font-weight: bold;

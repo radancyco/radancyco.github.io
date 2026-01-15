@@ -49,11 +49,25 @@ $weight-black: 900 !default; // Black (Heavy)
 
 }
 
-// Common variables
+// Common
 
-$highlight-color: #6F00EF;
-$highlight-color-active: #FFF;
-$fallback-font: "Helvetica", "Arial", sans-serif;
+:root {
+
+  --highlight-color: #6F00EF;
+  --highlight-color-active: #FFF;
+  --fallback-font: "Helvetica", "Arial", sans-serif;
+
+  box-sizing: border-box;
+  background-color: #fff;
+  font: 100%/2 "Graphik", var(--fallback-font);
+
+  @media (prefers-reduced-motion: no-preference) {
+  
+    scroll-behavior: smooth;
+  
+  }
+
+}
 
 // Other font variables
 
@@ -90,25 +104,12 @@ $font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
 // Global CSS
 
 ::target-text {
-background-color: $highlight-color;
-color: $highlight-color-active;
+background-color: var(--highlight-color);
+color: var(--highlight-color-active);
 }
 
 *, *::before, *::after {
 box-sizing: inherit;
-}
-
-:root {
-box-sizing: border-box;
-background-color: #fff;
-font: 100%/2 "Graphik", $fallback-font;
-
-  @media (prefers-reduced-motion: no-preference) {
-  
-    scroll-behavior: smooth;
-  
-  }
-  
 }
 
 // Ensure that all placeholder text is contrast friendly.
@@ -229,7 +230,7 @@ margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6, caption, table {
-font-family: "Campton", $fallback-font;
+font-family: "Campton", var(--fallback-font);
 font-weight: 400;
 line-height: normal;
 }
@@ -244,7 +245,7 @@ width: fit-content;
 }
 
 h3 {
-color: $highlight-color;
+color: var(--highlight-color);
 }
 
 h4 {
@@ -253,7 +254,7 @@ font-weight: bold;
 
 hr[aria-hidden="true"] {
 border: 0;
-border-bottom: em(1) dashed $highlight-color;
+border-bottom: em(1) dashed var(--highlight-color);
 margin: em(32) 0;
 }
 
@@ -339,8 +340,8 @@ font-size: rem(8);
 
 table {
 border-collapse: collapse;
-border-inline-end: $highlight-color 1px solid;
-border-inline-start: $highlight-color 1px solid;
+border-inline-end: var(--highlight-color) 1px solid;
+border-inline-start: var(--highlight-color) 1px solid;
 margin: 0;
 
   @media(min-width: em(680)) {
@@ -365,12 +366,12 @@ margin: 0;
   }
 
   th, td {
-  border-bottom: em(1) $highlight-color solid;
+  border-bottom: em(1) var(--highlight-color) solid;
   padding: em(16);
   }
 
   th {
-  background-color: $highlight-color;
+  background-color: var(--highlight-color);
   color: #fff;
   text-align: start;
   white-space: nowrap;
@@ -666,8 +667,8 @@ padding: em(16);
 }
 
 .experimental {
-background-color: lighten($highlight-color, 35%);
-border-left-color: $highlight-color;
+background-color: color-mix(in srgb, var(--highlight-color) 65%, white);
+border-left-color: var(--highlight-color);
 }
 
 .note {
@@ -711,7 +712,7 @@ border-color: red;
 
 .qa-info {
 background-color: #dfc9f8;
-border-color: $highlight-color;
+border-color: var(--highlight-color);
 
   h2:first-child, .info-heading {
 
@@ -747,14 +748,14 @@ display: none !important;
 
 .article-overview {
 align-items: center;
-border-bottom: 4px $highlight-color solid;
+border-bottom: 4px var(--highlight-color) solid;
 display: flex;
 padding: 1em;
 position: relative;
 transition: 300ms;
 
   &:hover, &:focus-within {
-  background-color: rgba($highlight-color, 0.2);
+  background-color: rgba(var(--highlight-color), 0.2);
   }
 
   h2 {
@@ -905,7 +906,7 @@ text-decoration: none;
 
 .post-overview {
 align-items: center;
-border-bottom: 4px $highlight-color solid;
+border-bottom: 4px var(--highlight-color) solid;
 display: inline-flex;
 font-size: 0.92rem;
 margin-bottom: 1.5em;
@@ -931,7 +932,7 @@ padding-bottom: 1em;
 // Primary Header & Navigation
 
 .primary-header {
-background-color: $highlight-color;
+background-color: var(--highlight-color);
 
   &__container {
   margin: 0 auto;
@@ -978,11 +979,11 @@ background-color: $highlight-color;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 75%;
-    block-size: calc(45rem/16);
+    block-size: calc(40rem/16);
     border-radius: 100vw;
-    border: calc(1rem/16) $highlight-color solid;
+    border: calc(1rem/16) var(--highlight-color) solid;
     cursor: pointer;
-    inline-size: calc(45rem/16);
+    inline-size: calc(40rem/16);
     inset-block-start: inherit;
     inset-inline-end: inherit;
     margin: 0;
@@ -998,7 +999,7 @@ background-color: $highlight-color;
     &__content {
     background-color: #fff;
     border-radius: em(5);
-    border: rem(1) $highlight-color solid;
+    border: rem(1) var(--highlight-color) solid;
     display: none;
     padding: em(16);
     }
@@ -1114,7 +1115,7 @@ padding: em(16);
   width: rem(90);
   margin: 0 em(16) 0 0;
   vertical-align: middle;
-  border: rem(4) $highlight-color solid;
+  border: rem(4) var(--highlight-color) solid;
   border-radius: 50%;
   }
 
@@ -1137,7 +1138,7 @@ padding: 0 em(16);
 
 
 #share-button {
-background-color: $highlight-color;
+background-color: var(--highlight-color);
 border-radius: em(5);
 border: 0;
 color: #fff;

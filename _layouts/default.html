@@ -121,11 +121,11 @@
 
       {{ component.title }} v{{ component.version }}
 
-    {% else %}
+    {%- else -%}
 
     {{ page.title }}
 
-    {%- endif %} - {{ site.company-name }}
+    {%- endif %} - {{ site.company-name -}}
 
   </title>
 </head>
@@ -353,7 +353,7 @@
 
   <footer id="contentinfo">
 
-    <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer. <a href="{{ site.baseurl }}/contribute/">Contributions</a> to this project are welcome. Please see our <a href="/privacy/">privacy statement</a>.</small></p>
+    <p><small>&copy; {{ "now" | date: "%Y" }} {{ site.company-name }}. An equal opportunity employer. <a href="{{ "/contribute/" | relative_url }}">Contributions</a> to this project are welcome. Please see our <a href="/privacy/">privacy statement</a>.</small></p>
 
   </footer>
 

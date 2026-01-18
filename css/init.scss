@@ -667,7 +667,7 @@ padding: em(16);
 }
 
 .experimental {
-background-color: color-mix(in srgb, var(--highlight-color) 65%, white);
+background-color: color-mix(in srgb, var(--highlight-color) 35%, white);
 border-left-color: var(--highlight-color);
 }
 

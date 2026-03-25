@@ -366,7 +366,7 @@ components:
     guidance: a11y-scrollbars
     path: "horizontal-scroll"
     title: "Horizontal Free-Scroller"
-    version: "1.4"
+    version: "1.5"
     examples:
 
       - name: "Default Setup"
@@ -383,14 +383,6 @@ components:
       - name: "Dynamic Label"
         id: "dynamic-label"
         note: "In this example, we use a hidden <code>li</code> element with <code>data-aria-label-replace</code> to dynamically append a value to the <code>aria-label</code> attribute on the <code>.horizontal-scroll</code> container. This can be used in certain templating situations where updating the default <code>aria-label</code> value may not be possible. "
-  
-      - name: "Mouse Wheel Support"
-        id: "wheel-support"
-        group: Experimental
-        message: 
-        
-          - experimental
-  
   
   - id: "job-list"
     desc: 'Display job opportunity listings in various layouts, featuring options like a "Save Job" button.'
@@ -474,7 +466,7 @@ components:
     desc: "Allow user to choose an item from a select menu, updating the content on the same page."
     path: "select-internal"
     title: "Select Navigation (Internal)"
-    version: "1.7"
+    version: "1.8"
     examples:
       
       - name: "Default Setup"
@@ -493,6 +485,9 @@ components:
       - name: "Placeholder Option (Optgroup)" 
         id: "optgroup"
 
+      - name: "Option (Optgroup) - Custom Select" 
+        id: "optgroup-custom"
+
   - id: "step-indicator"
     desc: "Use the step indicator to show a user's progress in a multi-step process, commonly seen in forms or workflow screens."
     path: "step-indicator"
@@ -507,6 +502,7 @@ components:
     desc: "Organize content into separate sections, allowing user to switch between them by selecting different tabs."
     path: "tablist"
     message: use-accordion
+    guidance: a11y-tab-placement
     title: "TabList"
     version: "1.9"
     examples:

@@ -83,7 +83,7 @@
 
 {%- if page.select-internal %}
 
-  <div class="select-internal">
+  <div class="select-internal" data-custom-select>
 
     <nav aria-label="Examples" class="select-internal__nav">
 
@@ -103,11 +103,17 @@
 
                 <optgroup label="{{ group.name }}">
 
+                  <legend>{{ group.name }}</legend>
+
+                  <div>
+
                   {% for example in group.items %}
 
                     <option value="#{{ example.id }}">{{ example.name }}</option>
 
                   {% endfor %}
+
+                  </div>
 
                 </optgroup>
 

@@ -472,21 +472,22 @@ components:
       - name: "Default Setup"
         id: "default-setup"
 
-      - name: "Custom Aria-Live"
+      - name: "Custom Aria-Live Setup"
         id: "custom-aria-live"
 
-      - name: "Dynamic Setup"
+      - name: "Dynamic Option Elements"
         id: "dynamic-setup"
         message: experimental
 
-      - name: "Placeholder Option"
+      - name: "Select with Placeholder"
         id: "placeholder"
 
-      - name: "Placeholder Option (Optgroup)" 
+      - name: "Select with Option Group" 
         id: "optgroup"
 
-      - name: "Option (Optgroup) - Custom Select" 
+      - name: "Select with Option Group (Customized Select Element)" 
         id: "optgroup-custom"
+        message: experimental
 
   - id: "step-indicator"
     desc: "Use the step indicator to show a user's progress in a multi-step process, commonly seen in forms or workflow screens."

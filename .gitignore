@@ -13,4 +13,5 @@ coverage
 .ruby-version
 .sass-cache
 node_modules
+.claude
 .jekyll-cache

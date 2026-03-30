@@ -7,6 +7,7 @@ defaults:
   values:
     layout: "default"
 exclude: [
+  .claude,
   README.md,
   CNAME,
   _config.yml,

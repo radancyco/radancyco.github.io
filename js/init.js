@@ -67,7 +67,7 @@ layout: null
 	primaryNavigationBtn.classList.add("primary-header__navigation__button")
 	primaryNavigationBtn.setAttribute("aria-expanded", "false");
 	primaryNavigationBtn.setAttribute("aria-label", "Menu");
-	primaryNavigation.setAttribute("aria-controls", "primary-navigation");
+	primaryNavigationBtn.setAttribute("aria-controls", "primary-navigation");
 
 	primaryNavigationBtn.addEventListener("click", function () {
 

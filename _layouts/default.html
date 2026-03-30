@@ -136,7 +136,7 @@
   </title>
 </head>
 
-<body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}{% endif %}">
+<body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}{% endif %}" tabindex="-1">
 
   <header class="primary-header" id="banner">
 
@@ -157,7 +157,7 @@
           <div class="primary-header__navigation__content">
 
             <ul>
-              <li><a data-nav-id="rad-home-index" href="/">Home</a>
+              <li><a data-nav-id="rad-home-index" href="/">Home</a></li>
               <li><a data-nav-id="rad-a11y-index" href="/a11y/">Accessibility at Radancy</a></li>
               <li><a data-nav-id="rad-pulse-index" href="/a11y/pulse/">Accessibility Pulse</a></li>
               <li>

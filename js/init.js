@@ -67,6 +67,7 @@ layout: null
 	primaryNavigationBtn.classList.add("primary-header__navigation__button")
 	primaryNavigationBtn.setAttribute("aria-expanded", "false");
 	primaryNavigationBtn.setAttribute("aria-label", "Menu");
+	primaryNavigation.setAttribute("aria-controls", "primary-navigation");
 
 	primaryNavigationBtn.addEventListener("click", function () {
 
@@ -118,7 +119,7 @@ layout: null
 
 	document.addEventListener("keydown", function (e) {
 
-		if (e.which === 27) {
+		if (e.which === "Escape") {
 
 	  		primaryNavigationBtn.setAttribute("aria-expanded", "false");
 

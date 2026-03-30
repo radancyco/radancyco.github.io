@@ -505,7 +505,7 @@ components:
     message: use-accordion
     guidance: a11y-tab-placement
     title: "TabList"
-    version: "1.9"
+    version: "2.0"
     examples:
 
       - name: "Default Setup"

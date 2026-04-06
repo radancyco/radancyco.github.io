@@ -1052,7 +1052,9 @@ width: 1px;
 --scroll-color-thumb: #6F00EF; // Thumb Color
 --scroll-color-active: #666; // Active State
 
+background-color: #d3d3d3;
 overflow-X: auto;
+padding: 1em;
 
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
 scrollbar-width: thin;
@@ -1070,17 +1072,13 @@ scrollbar-width: thin;
     border-radius: 100vw;
     }
 
-    @at-root .accordion__panel &::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track {
     background-color: #d3d3d3;
     }
 
     &::-webkit-scrollbar-thumb {
     background-color: var(--scroll-color-thumb);
-    border: calc(8rem / 16) #fff solid;
-
-      @at-root .accordion__panel &::-webkit-scrollbar-thumb {
-      border-color: #d3d3d3;
-      }
+    border: calc(8rem / 16) #d3d3d3 solid;
 
       &:hover {
       background-color: var(--scroll-color-active);

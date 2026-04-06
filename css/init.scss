@@ -1076,9 +1076,10 @@ scrollbar-width: thin;
 
     &::-webkit-scrollbar-thumb {
     background-color: var(--scroll-color-thumb);
+    border: calc(8rem / 16) #fff solid;
 
       @at-root .accordion__panel &::-webkit-scrollbar-thumb {
-      border: calc(8rem / 16) #d3d3d3 solid;
+      border-color: #d3d3d3;
       }
 
       &:hover {

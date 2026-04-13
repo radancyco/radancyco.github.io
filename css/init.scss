@@ -1057,6 +1057,10 @@ overflow-X: auto;
 scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
 scrollbar-width: thin;
 
+}
+
+.table-container:not([data-override-scroll]) {
+
   @supports #{"\selector(::-webkit-scrollbar)"} {
 
     scrollbar-color: initial;

@@ -1047,14 +1047,8 @@ width: 1px;
 }
 
 .table-container {
-
---scroll-color-track: #EEE; // Track Color
---scroll-color-thumb: #6F00EF; // Thumb Color
---scroll-color-active: #666; // Active State
-
 overflow-X: auto;
-scrollbar-color: var(--scroll-color-thumb) var(--scroll-color-track);
-
+scrollbar-color: var(--highlight-color) transparent;
 }
 
 .video-container {

@@ -1059,39 +1059,6 @@ scrollbar-width: thin;
 
 }
 
-.table-container:not([data-override-scroll]) {
-
-  @supports #{"\selector(::-webkit-scrollbar)"} {
-
-    scrollbar-color: initial;
-    scrollbar-width: auto;
-
-    &::-webkit-scrollbar {
-    height: calc(20rem / 16);
-    }
-
-    &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb {
-    border-radius: 100vw;
-    }
-
-    &::-webkit-scrollbar-track {
-    background-color: #d3d3d3;
-    }
-
-    &::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-color-thumb);
-    border: calc(8rem / 16) #d3d3d3 solid;
-
-      &:hover {
-      background-color: var(--scroll-color-active);
-      }
-
-    }
-
-  }
-
-}
-
 .video-container {
 
   iframe {

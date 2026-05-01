@@ -289,6 +289,7 @@
         <ul role="list">
           <li><button class="btn-copy-link" data-code="{{ page.url | absolute_url }}#{{ example.id }}">{{ iconCheck }}{{ iconCopyURL }} <span>Copy link to example</span></button></li>
           <li><form action="https://codepen.io/cpe/pen/define" id="{{ example.id }}-codepen" method="POST" target="_blank"><button class="btn-edit-codepen">{{ iconCodePen }} <span>Edit on CodePen</span></button></form></li>
+          <li><a class="btn-ai" href="https://chatgpt.com/?prompt=Hi%20ChatGPT!%20Can%20you%20please%20read%20{{ page.url | absolute_url }}%23{{ example.id }}%20and%20prepare%20to%20answer%20questions%20about%20it?" target="_blank">{{ iconAI }} <span>Open in AI</span></a></li>
           <li><a class="btn-new-window" href="{{ example.id }}" target="_blank">{{ iconNewWindow }} <span>Open in new window</span></a></li>
           <li><button class="btn-refresh-page" onclick="javascript:location.reload();">{{ iconRefresh }} <span>Refresh Page</span></button></li>
           <li><a class="btn-repository" href="{{ site.repo }}/blob/main/{{ component.path }}/">{{ iconGit }} <span>View Repository</span></a></li>

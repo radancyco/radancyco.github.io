@@ -344,7 +344,7 @@ border-inline-end: var(--highlight-color) 1px solid;
 border-inline-start: var(--highlight-color) 1px solid;
 margin: 0;
 
-  @container (width > em(680)) {
+  @container(width > 680px) {
 
     width: 100%;
 

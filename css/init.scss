@@ -372,10 +372,10 @@ table-layout: fixed;
   th, td {
   border-bottom: em(1) var(--highlight-color) solid;
   padding: em(16);
+  vertical-align: top;
   }
 
   td {
-  vertical-align: top;
   text-wrap: pretty;
       
     &:first-child  {

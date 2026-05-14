@@ -377,11 +377,6 @@ table-layout: fixed;
 
   td {
   text-wrap: pretty;
-      
-    &:first-child  {
-    font-weight: normal;
-    }
-
   }
 
   th {
@@ -402,10 +397,6 @@ table-layout: fixed;
     width: 100%;
     }
 
-  }
-
-  td:first-child {
-  font-weight: bold;
   }
 
   div {

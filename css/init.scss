@@ -699,10 +699,11 @@ border-color: #9e4307;
 }
 
 .experimental, .warning, .note, .reminder, .issue, .best-practice {
-border-left-width: em(4);
+border-left-width: calc(6rem / 16);
 border-left-style: solid;
-margin-top: em(16);
-padding: em(16);
+border-radius: calc(5rem / 16);
+margin-top: 1rem;
+padding: 1rem;
 
   h2, h3 {
   color: inherit;

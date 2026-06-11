@@ -73,7 +73,7 @@ $weight-black: 900 !default; // Black (Heavy)
 
 .flow {
 
-  * + * {
+  > * + * {
 	margin-block-start: 1rem;
   }
 

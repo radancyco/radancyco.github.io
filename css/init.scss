@@ -69,6 +69,16 @@ $weight-black: 900 !default; // Black (Heavy)
 
 }
 
+// Use the class to set global margins, until it can be set globally. 
+
+.flow {
+
+  * + * {
+	margin-block-start: 1rem;
+  }
+
+}
+
 // Other font variables
 
 $font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";

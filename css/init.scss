@@ -738,8 +738,9 @@ text-transform: uppercase;
   }
 
   svg {
-  height: 1rem;
-  width: 1rem;
+  block-size: 1rem;
+  display: block;
+  inline-size: 1rem;
   }
 
   .icon-check {
@@ -764,14 +765,14 @@ text-transform: uppercase;
 
 .post-overview {
 align-items: center;
-border-bottom: 4px var(--highlight-color) solid;
+border-block-end: calc(4rem / 16) var(--highlight-color) solid;
 display: inline-flex;
 font-size: 0.92rem;
-padding-bottom: 1em;
+padding-block-end: 1em;
 
   img {
   border-radius: 50%;
-  max-width: calc(65rem/16);
+  max-inline-size: calc(65rem/16);
   }
 
   span {
@@ -1074,16 +1075,11 @@ margin: 2em 0;
     border-radius: calc(6rem / 16) calc(6rem / 16) 0 0;
     display: grid;
     gap: 0.8rem;
+    grid-template-columns: auto 1fr;
     line-height: normal;
     padding: 1rem;
     transition: background-color 300ms ease-in-out, color 150ms ease-in-out;
 
-      &:has(.icon) {
-
-        grid-template-columns: auto 1fr;
-
-      }
-    
       &:hover {
       background-color: #6F00EF40;
       color: black;

@@ -354,7 +354,7 @@ color: black;
 min-inline-size: calc(692rem / 16);
 table-layout: fixed;
 
-  @container(min-width: calc(692rem / 16)) {
+  @container(width > calc(692rem / 16)) {
 
     inline-size: 100%;
 
@@ -411,7 +411,7 @@ table-layout: fixed;
   div {
   inline-size: calc(325rem / 16);
 
-    @container(inline-size: calc(692rem / 16)) {
+    @container(width > calc(692rem / 16)) {
 
       inline-size: auto;
 

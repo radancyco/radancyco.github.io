@@ -354,11 +354,11 @@ color: black;
 min-inline-size: calc(692rem / 16);
 table-layout: fixed;
 
-  @container(width > calc(692rem / 16)) {
+  //@container(width > calc(692rem / 16)) {
 
     inline-size: 100%;
 
-  }
+ // }
 
   caption {
   font-size: calc(18.7rem / 16);
@@ -411,11 +411,11 @@ table-layout: fixed;
   div {
   inline-size: calc(325rem / 16);
 
-    @container(width > calc(692rem / 16)) {
+   // @container(width > calc(692rem / 16)) {
 
       inline-size: auto;
 
-    }
+  //  }
   
   }
 

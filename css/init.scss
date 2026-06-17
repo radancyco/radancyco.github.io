@@ -84,29 +84,22 @@ $weight-black: 900 !default; // Black (Heavy)
 
 // Other font variables
 
-$font-file-path: "https://tbcdn.talentbrew.com/company/34730/full_v1_0/fonts";
-
-// Maax Mono
-
-@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-regular-205tf", "Maax-Mono", $weight-normal);
-@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-italic-205tf", "Maax-Mono", $weight-normal, "italic");
-@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-bold-205tf", "Maax-Mono", $weight-bold);
-@include fontface("#{$font-file-path}/maax-mono/", "maax-mono-bold-italic-205tf", "Maax-Mono", $weight-bold, "italic");
+$font-file-path: "https://radancy.dev/font/";
 
 // Campton
 
-@include fontface("#{$font-file-path}/campton/", "campton-book", "Campton", $weight-normal);
-@include fontface("#{$font-file-path}/campton/", "campton-book-italic", "Campton", $weight-normal, "italic");
-@include fontface("#{$font-file-path}/campton/", "campton-light", "Campton", $weight-light);
-@include fontface("#{$font-file-path}/campton/", "Campton", "campton-light-italic", "Campton", $weight-light, "italic");
+@include fontface("#{$font-file-path}", "campton-book", "Campton", $weight-normal);
+@include fontface("#{$font-file-path}", "campton-book-italic", "Campton", $weight-normal, "italic");
+@include fontface("#{$font-file-path}", "campton-light", "Campton", $weight-light);
+@include fontface("#{$font-file-path}", "Campton", "campton-light-italic", "Campton", $weight-light, "italic");
 
 // Graphik
 
-@include fontface("#{$font-file-path}/graphik/", "graphik-regular", "Graphik", $weight-normal);
-@include fontface("#{$font-file-path}/graphik/", "graphik-regularitalic", "Graphik", $weight-normal, "italic");
-@include fontface("#{$font-file-path}/graphik/", "graphik-semibolditalic", "Graphik", $weight-light, "italic");
-@include fontface("#{$font-file-path}/graphik/", "graphik-semibold", "Graphik", $weight-bold); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
-@include fontface("#{$font-file-path}/graphik/", "graphik-semibolditalic", "Graphik", $weight-bold, "italic"); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
+@include fontface("#{$font-file-path}", "graphik-regular", "Graphik", $weight-normal);
+@include fontface("#{$font-file-path}", "graphik-regularitalic", "Graphik", $weight-normal, "italic");
+@include fontface("#{$font-file-path}", "graphik-semibolditalic", "Graphik", $weight-light, "italic");
+@include fontface("#{$font-file-path}", "graphik-semibold", "Graphik", $weight-bold); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
+@include fontface("#{$font-file-path}", "graphik-semibolditalic", "Graphik", $weight-bold, "italic"); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
 
 @view-transition {
 

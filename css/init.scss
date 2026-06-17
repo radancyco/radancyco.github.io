@@ -494,7 +494,8 @@ margin-block-start: 1.5rem;
 padding: 0 1rem 1rem;
 text-wrap: balance;
 
-  p:only-child {
+
+  p:only-child, *:not(p):last-child {
   margin-block-end: 0;
   }
 

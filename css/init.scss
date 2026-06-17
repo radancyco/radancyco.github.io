@@ -986,7 +986,7 @@ margin: 2em 0;
     display: grid;
     gap: 0.8rem;
     grid-template-columns: auto 1fr;
-    inline-size: fit-content;
+    inline-size: max-content;
     line-height: normal;
     padding: 1rem;
     transition: background-color 300ms ease-in-out, color 150ms ease-in-out;

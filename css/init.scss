@@ -157,6 +157,7 @@ font-weight: normal;
 margin: calc(2rem / 16);
 padding: calc(7rem / 16) calc(14rem / 16);
 text-box-trim: trim-both;
+white-space: nowrap;
 }
 
 code:not(.highlight code) {
@@ -490,8 +491,12 @@ border-width: calc(1rem / 16) calc(1rem / 16) calc(1rem / 16) calc(6rem / 16);
 display: flow-root;
 inline-size: 100%; // Note: This seems redundant, but needed in tables > details > summary
 margin-block-start: 1.5rem;
-padding: 0 1rem;
+padding: 0 1rem 1rem;
 text-wrap: balance;
+
+  p:only-child {
+  margin-block-end: 0;
+  }
 
   h3, h4 {
   color: inherit;

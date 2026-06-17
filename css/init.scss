@@ -916,10 +916,10 @@ container-type: inline-size;
   summary { 
   align-items: center;
   background-color: color-mix(in srgb, var(--highlight-color) 20%, white);
-  border-radius: 5px;
-  border: 1px rebeccapurple solid;
+  border-radius: calc(5rem / 16);
+  border: calc(1rem / 16) var(--highlight-color) solid;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.8rem;
   grid-template-columns: auto 1fr;
   inline-size: fit-content;
   line-height: normal;
@@ -1078,7 +1078,6 @@ margin: 2em 0;
     line-height: normal;
     padding: 1rem;
     transition: background-color 300ms ease-in-out, color 150ms ease-in-out;
-    text-align: start;
 
       &:hover {
       background-color: #6F00EF40;

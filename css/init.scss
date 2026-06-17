@@ -985,11 +985,12 @@ margin: 2em 0;
     border-radius: calc(6rem / 16) calc(6rem / 16) 0 0;
     display: grid;
     gap: 0.8rem;
-    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
     inline-size: fit-content;
     line-height: normal;
     padding: 1rem;
     transition: background-color 300ms ease-in-out, color 150ms ease-in-out;
+    text-align: start;
 
       &:hover {
       background-color: #6F00EF40;

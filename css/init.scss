@@ -474,6 +474,63 @@ z-index: 2;
   
 }
 
+// Blog Home 
+
+.article-overview {
+align-items: center;
+background-color: color-mix(in srgb, var(--highlight-color) 20%, white);
+border-block-end: calc(6rem / 16) var(--highlight-color) solid;
+border-radius: calc(5rem / 16);
+display: grid;
+gap: 1rem;
+grid-template-columns: auto 1fr;
+padding: 1em;
+position: relative;
+transition: 300ms;
+
+  &:focus-within, &:hover {
+  background-color: white;
+  }
+
+  h2 {
+  margin: 0;
+  }
+
+  a {
+  text-decoration: none;
+
+    // Pseudo-element Trick
+
+    &::before {
+    content: "";
+    display: block;
+    inset: 0;
+    position: absolute;
+    }
+
+    &:active {
+    color: inherit;
+    }
+
+  }
+  
+  img { 
+  border-radius: 50%;
+  max-inline-size: calc(80rem/16);
+  }
+  
+  span {
+  font-weight: bold;
+  }
+
+  ul {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0;
+  }
+    
+}
+
 // Information CTA 
 
 .info {
@@ -835,18 +892,6 @@ background-color: var(--highlight-color);
   
 }
 
-// Accessibility: Visually Hide Content Off Screen
-
-.visually-hidden:not(:focus):not(:active) {
-block-size: 1px;
-clip-path: inset(100%);
-clip: rect(0 0 0 0);
-inline-size: 1px;
-overflow: hidden;
-position: absolute;
-white-space: nowrap;
-}
-
 .table-container {
 overflow-inline: auto;
 scrollbar-color: var(--highlight-color) transparent;
@@ -862,6 +907,52 @@ container-type: inline-size;
   inline-size: 100%;
   }
 
+}
+
+// Table of Contents
+
+.table-of-contents {
+
+  summary { 
+  align-items: center;
+  background-color: color-mix(in srgb, var(--highlight-color) 20%, white);
+  border-radius: 5px;
+  border: 1px rebeccapurple solid;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: auto 1fr;
+  inline-size: fit-content;
+  line-height: normal;
+  list-style: none;
+  padding: 1rem;
+
+    &::-webkit-details-marker {
+    display: none;
+    }
+
+    &::before {
+    color: var(--highlight-color);
+    content: "\f03a";
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    font-size: calc(19rem / 16);
+    font-weight: 900;
+    }
+
+  }
+
+}
+
+// Accessibility: Visually Hide Content Off Screen
+
+.visually-hidden:not(:focus):not(:active) {
+block-size: 1px;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+inline-size: 1px;
+overflow: hidden;
+position: absolute;
+white-space: nowrap;
 }
 
 .primary-header__container, #content, #contentinfo, #contribute {

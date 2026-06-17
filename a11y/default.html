@@ -2,19 +2,19 @@
 
 <p>At {{ site.company-name }}, we believe that all of your prospective job candidates, regardless of physical, mental or technological capabilities, have a right to learn more about your company and access all job listings. To preserve an individual’s right to universal access, <a href="{{site.git-url}}/a11y/baseline/">we attempt to meet</a> as much of <strong>WCAG (Web Content and Accessibility Guidelines) 2.2 Level A and AA</strong> as possible, within our everyday process. However, if there is a need to fully support a specific level of WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
 
-<h2 id="knowledge-base">Knowledge Base</h2>
+<h2 id="knowledge-base">Knowledge Base {% include permalink.html hash="knowledge-base" %}</h2>
 
 <p>Common accessibility information and tools for employees of {{ site.company-name }}. Please note that some links will redirect.</p>
 
 <ul>
+  <li><a href="{{ site.baseurl }}/a11y/baseline"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Testing Baselines</a></li>
   <li><a href="{{ site.baseurl }}/audit/">Accessibility Audit Process (Intranet)</a></li>
-  <li><a href="{{ site.baseurl }}/baseline"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Testing Baselines</a></li>
   <li><a href="{{ site.baseurl }}/caption">Multimedia Captioning & Transcripts (Intranet){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
   <li><a href="{{ site.baseurl }}/onboarding/"{% if page.intranet %} target="_blank"{% endif %}> Accessibility Onboarding (Google Slides){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
   <li><a href="{{ site.baseurl }}/audit/boilerplate"{% if page.intranet %} target="_blank"{% endif %}>Testing Boilerplate (Google Sheet){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
 </ul>
 
-<h2 id="accessibility-overlays">Accessibility Overlays</h2>
+<h2 id="accessibility-overlays">Accessibility Overlays {% include permalink.html hash="accessibility-overlays" %}</h2>
 
 <p>Accessibility overlays are <strong>not supported</strong>, as they are not in line with {{ site.company-name }}'s vision on how best to support people with disabilities in our digital offerings. In our experience, use of these tools may promote ableism, reinforce discrimination and are often perceived, particularly among the disabled and advocacy communities, as a performative commitment to accessibility. Companies using overlays have frequently been subjected to legal actions based on non-compliance with accessibility laws and principles. More information can be found here:</p>
 
@@ -26,13 +26,13 @@
 
 <p>Note that a legal waiver is now required if a client still wishes to place an accessibility overlay on their website.</p>
 
-<h2 id="testing">Testing</h2>
+<h2 id="testing">Testing {% include permalink.html hash="testing" %}</h2>
 
 <ul>
-    <li><a href="{{ site.baseurl }}/pulse/"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Pulse v{{ pulseVersion }}{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+    <li><a href="{{ site.baseurl }}/a11y/pulse/"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Pulse v{{ pulseVersion }}{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
 </ul>
 
-<h2 id="resources">Resources</h2>
+<h2 id="resources">Resources {% include permalink.html hash="resources" %}</h2>
 
 <p>Fantastic resources from across the web!</p>
 

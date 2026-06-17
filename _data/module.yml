@@ -4,7 +4,7 @@ components:
     desc: "Organize content into expandable and collapsible sections, allowing users to reveal or hide information as needed."
     path: "accordion"
     title: "Accordion"
-    version: "2.9" 
+    version: "2.9.1" 
     examples: 
 
       - name: "Default Setup"
@@ -70,7 +70,7 @@ components:
     desc: "Allow users to pause or resume web animations, videos, or other dynamic content for improved control and accessibility."
     path: "animation-toggle"
     title: "Animation Toggle"
-    version: "2.9"
+    version: "2.9.0"
     examples:
 
       - name: "Default Setup"
@@ -146,7 +146,7 @@ components:
     desc: "Provides a navigational trail that helps users understand their location within a website's hierarchy."
     path: "breadcrumbs"
     title: "Breadcrumbs"
-    version: "1.1"
+    version: "1.1.0"
     examples:
 
       - name: "Default Setup"
@@ -161,7 +161,7 @@ components:
     desc: "Group content such as images, text, and related links, offering a compact and organized way to display information."
     path: "card"
     title: "Card"
-    version: "1.5"
+    version: "1.5.0"
     examples: 
 
       - name: "Card (Images)"
@@ -241,7 +241,7 @@ components:
     desc: "Display a series of content items, such as images or text, in a rotating or sliding manner, allowing user to cycle through them."
     path: "carousel"
     title: "Carousel"
-    version: "1.0"
+    version: "1.0.0"
     hidden: true
     examples:
 
@@ -255,7 +255,7 @@ components:
     desc: "Do dialog things without Fancybox."
     path: "dialog"
     title: "Dialog"
-    version: "0.5"
+    version: "1.0.0"
     hidden: true
     examples:
 
@@ -267,7 +267,7 @@ components:
     message: disclosure-use
     path: "disclosure"
     title: "Disclosure"
-    version: "2.4"
+    version: "2.4.0"
     examples:
 
       - name: "Default Setup"
@@ -301,7 +301,7 @@ components:
     message: picture-element
     path: "hero-banner"
     title: "Hero Banner (Image)"
-    version: "1.1"
+    version: "1.1.0"
     examples:
 
       - name: "Text Left Top"
@@ -366,7 +366,7 @@ components:
     guidance: a11y-scrollbars
     path: "horizontal-scroll"
     title: "Horizontal Free-Scroller"
-    version: "1.5"
+    version: "1.5.0"
     examples:
 
       - name: "Default Setup"
@@ -389,7 +389,7 @@ components:
     hidden: true
     path: "job-list"
     title: "Job List"
-    version: "1.0" 
+    version: "1.0.0" 
     examples: 
 
       - name: "Default Setup"
@@ -412,7 +412,7 @@ components:
     message: experimental
     path: "load-more"
     title: "Load More"
-    version: "1.0"
+    version: "1.0.0"
     examples:
 
       - name: "Default Setup"
@@ -423,7 +423,7 @@ components:
     desc: "Reaveal or hide partially visible content when triggered, helping to manage the display of supplementary information."
     path: "partial-disclosure"
     title: "Partial Disclosure"
-    version: "1.7"
+    version: "1.7.0"
     examples:
 
       - name: "Default Setup"
@@ -446,7 +446,7 @@ components:
     desc: "Allow user to evaluate content by selecting a rating, typically displayed as stars or other visual indicators."
     path: "rating"
     title: "Rating"
-    version: "1.0"
+    version: "1.0.0"
     examples:
 
       - name: "Default Setup"
@@ -456,7 +456,7 @@ components:
     desc: "Allow user to choose an item from a select menu and navigate to a corresponding page."
     path: "select-external"
     title: "Select Navigation (External)"
-    version: "1.2"
+    version: "1.2.0"
     examples:
 
       - name: "Default Setup"
@@ -466,7 +466,7 @@ components:
     desc: "Allow user to choose an item from a select menu, updating the content on the same page."
     path: "select-internal"
     title: "Select Navigation (Internal)"
-    version: "1.8"
+    version: "1.8.0"
     examples:
       
       - name: "Default Setup"
@@ -493,7 +493,7 @@ components:
     desc: "Use the step indicator to show a user's progress in a multi-step process, commonly seen in forms or workflow screens."
     path: "step-indicator"
     title: "Step Indicator"
-    version: "1.0"
+    version: "1.0.0"
     examples:
 
       - name: "Default Setup"
@@ -505,7 +505,7 @@ components:
     message: use-accordion
     guidance: a11y-tab-placement
     title: "TabList"
-    version: "2.0"
+    version: "2.0.0"
     examples:
 
       - name: "Default Setup"
@@ -546,7 +546,7 @@ components:
     desc: "Group content in a visually organized layout, with the ability to flip and reveal additional information when a button is pressed."
     path: "tile"
     title: "Tile"
-    version: "1.2"
+    version: "1.2.0"
     examples: 
 
       - name: "Default Setup"
@@ -567,21 +567,21 @@ layouts:
     path-full: "/tb-ajd-template"
     thumbnail: "thumb-ajd.png"
     title: "Advanced Job Details (AJD)"
-    version: "2.0"
+    version: "2.0.0"
 
   - id: "cpg"
     desc: "A tool to help you easily produce career paths to be used in Advanced Job Detail pages."
     path-full: "/career-path-generator"
     thumbnail: "thumb-cpg.png"
     title: "Career Path Generator (CPG)"
-    version: "1.0"
+    version: "1.0.0"
 
   - id: "flexspan"
     desc: "A flexible grid system capable of various functionalities, such as optional pre-defining of rows, gaps, customizable breakpoints, and offsets in both directions."
     path-full: "https://brockenstein.github.io/Flexspan-Grid-System/"
     thumbnail: "thumb-flexspan.png"
     title: "FlexSpan Grid System (FGS)"
-    version: "1.0"
+    version: "1.0.0"
 
 resources: 
 
@@ -589,7 +589,7 @@ resources:
     desc: "Elevate your upcoming website design by incorporating these popular CSS animations."
     path: "css-animation"
     title: "CSS Animation Library"
-    version: "2.0"
+    version: "2.0.0"
 
 feeds: 
 
@@ -599,7 +599,7 @@ feeds:
     title: "Instagram Feed"
     message: feed
     # version: "1.3"
-    version: "1.2"
+    version: "1.2.9"
     examples: 
 
       - name: "Default Setup"
@@ -612,7 +612,7 @@ feeds:
     desc: "Display a series of videos from a YouTube channel or playlist, including video thumbnails and titles."
     path: "feeds/youtube"
     title: "YouTube Feed"
-    version: "1.0"
+    version: "1.0.0"
     examples:
 
     - name: "Default Setup"

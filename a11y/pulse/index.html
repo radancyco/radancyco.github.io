@@ -1,0 +1,65 @@
+---
+changelog: 
+
+  - label: Feature
+    content: 'February 10, 2026: Version 2.6: Added language support for AI generated alternative text. Thank you, Carla!'
+
+  - label: Feature
+    content: 'January 30, 2026: Version 2.5: Added an opt-in for AI generated alternative text.'
+
+  - label: Feature
+    content: 'January 28, 2026: Version 2.4: Included a "Utilities" section to house useful scripts and other resources for debugging. Thank you, Carla!'
+
+  - label: Feature
+    content: "January 15, 2026: Version 2.3: Included experimental feature to allow team to use AI to produce alternative image text."
+
+  - label: Important
+    content: "May 15, 2025: Initial revision and conversion of application to a web component."
+
+accordion: true
+heading: false
+title: "Accessibility Pulse"
+---
+
+{% include icon.html %}
+
+{% include variables.html %}
+
+{% capture contentblock %}
+
+<h1>Accessibility Pulse v{{ pulseVersion }}</h1>
+
+<p>A companion tool for testing web pages that helps identify common accessibility issues and provides useful guidance for learning and remediation.</p>
+
+<div>
+  
+  <a class="btn" href="javascript:(() => {
+
+  if (!document.getElementById('a11y-pulse-component')) {
+
+    const bookMarklet = document.createElement('script');
+    bookMarklet.id = 'a11y-pulse-component';
+    bookMarklet.src = '{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/load.js';
+    document.body.append(bookMarklet);
+
+  }
+
+})();">💜 A11y Pulse</a>
+
+</div>
+
+<h2 id="installation">Installation {% include permalink.html hash="installation" %}</h2>
+
+<figure class="block-figure">
+
+  <video aria-label="A11y Pulse installation" controls preload="metadata">
+    <source src="install.mp4" type="video/mp4">
+  </video>
+
+  <figcaption>To install, press on, hold, and drag the "A11y Pulse" button to your browser's bookmark bar or folder, then press it on any desired web page to launch the tool and begin testing.</figcaption>
+
+</figure>
+
+{% endcapture %}
+
+{% include template.html %}

@@ -75,12 +75,6 @@
 
   {%- endif %}
 
-  {%- if site.repo == "https://github.com/radancyco/magicbullet" or site.repo == "https://github.com/radancyco/a11y" %}
-
-  <link href="{{ site.git-url }}/component-library/css/init.css" rel="stylesheet">
-
-  {%- endif %}
-
   {%- if site.repo == "https://github.com/radancy-pe/a11y" %}
 
   <link href="/css/init.css" rel="stylesheet">
@@ -267,8 +261,6 @@
                   <ul>
                     <li><a data-nav-id="rad-magicbullet-index" href="https://radancy.dev/magicbullet/"><span class="visually-hidden">MagicBullet</span> Home</a></li>
                     <li><a data-nav-id="rad-a11y-index" href="https://radancy.dev/magicbullet/a11y/">Accessibility Patch</a></li>
-                    <li><a data-nav-id="rad-ccpa-index" href="https://radancy.dev/magicbullet/ccpa/" class="alert">California Consumer Privacy Act (CCPA) Notice (Deprecated)</a></li>
-                    <li><a data-nav-id="rad-gdpr-index" href="https://radancy.dev/magicbullet/gdpr/" class="alert">General Data Protection Regulation (GDPR) Notice (Deprecated)</a></li>
                     <li><a data-nav-id="rad-alert-index" href="https://radancy.dev/magicbullet/alert/">System Alert</a></li>
                   </ul>
 
@@ -293,7 +285,7 @@
 
     {%- if component %}
 
-    <h1 class="primary-heading">{{ component.title }} v{{ component.version }} <a class="anchor" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ iconAnchor }} <span class="sr-only">({{ component.title }} Anchor)</span></a></h1>
+    <h1 class="primary-heading">{{ component.title }} v{{ component.version }} </h1>
 
     {%- else if page.title %}
 
@@ -349,7 +341,7 @@
 
       <summary class="btn">Table of Contents</summary>
 
-      {% include toc.html html=content h_max=4 ordered=true %}
+      {% include table-of-contents.html html=content h_max=4 ordered=true %}
 
     </details>
 

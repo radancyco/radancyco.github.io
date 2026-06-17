@@ -1,0 +1,19 @@
+<form action="https://validator.w3.org/nu/?showsource=yes" class="a11y-pulse__form" enctype="multipart/form-data" id="submitPartialPage" method="post" target="_blank">
+
+    <fieldset>
+
+        <legend>Validate HTML by Direct Input</legend>
+
+        <input name="showsource" type="hidden" value="yes">
+
+        <p id="note-char"><em>Maximum of <strong id="charlimit">2049</strong> characters.</em></p>
+
+        <label for="contentToValidate">Markup:</label>
+
+        <textarea aria-describedby="note-char" cols="60" name="contentToValidate" id="contentToValidate" maxlength="2049" placeholder="e.g., <p>Hello World!</p>" required rows="5"></textarea>
+
+        <button class="a11y-pulse__cta" id="submitValidate" type="submit">Validate {{ newWindow }}</button>
+
+    </fieldset>
+
+</form>

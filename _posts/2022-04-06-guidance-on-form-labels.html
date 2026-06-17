@@ -17,7 +17,7 @@ update: 2025-09-18 04:45:33
 
 <section class="examples" id="overview">
 
-  <h2>Label Placement Overview</h2>
+  <h2>Label Placement Overview {% include permalink.html hash="overview" %}</h2>
 
   <h3>Placeholder as Label Replacement</h3>
 
@@ -55,7 +55,7 @@ update: 2025-09-18 04:45:33
 
 <section id="rules">
 
-  <h2>Rules</h2>
+  <h2>Rules {% include permalink.html hash="rules" %}</h2>
 
   <ol>
     <li>All form fields must include a visible label. See <a href="#exceptions">exceptions</a>.</li>
@@ -72,7 +72,7 @@ update: 2025-09-18 04:45:33
 
 <section id="exceptions">
 
-  <h2>Exceptions</h2>
+  <h2>Exceptions {% include permalink.html hash="exceptions" %}</h2>
 
   <ol>
     <li>Certain types of forms are so ubiquitous that they have become a common and well understood convention across the web. For example, a global site search that utilizes a single input field and button may not require a visible label.</li>
@@ -83,7 +83,7 @@ update: 2025-09-18 04:45:33
 
 <section class="warning-info" id="floating-labels">
 
-  <h2>Floating Labels: A Word of Warning</h2>
+  <h2>Floating Labels: A Word of Warning {% include permalink.html hash="floating-labels" %}</h2>
 
   <p>Including a visible label, often outside of the field, is <strong>always the best solution</strong>. If floating labels are a client requirement, please be aware of the <a href="https://medium.com/simple-human/floating-labels-are-a-bad-idea-82edb64220f6">risks they present</a> before using in your design and present these risks to your client and fellow colleagues. Radancy would prefer not to see this technique used.</p>
 
@@ -91,11 +91,11 @@ update: 2025-09-18 04:45:33
 
 <section class="examples" id="examples">
 
-  <h2>Examples</h2>
+  <h2>Examples {% include permalink.html hash="examples" %}</h2>
 
   <p>The following examples are meant to illustrate best (and poor) practices of designing form fields.</p>
 
-  <div class="note">
+  <div class="info info--note">
     
     <p><strong>Note:</strong> The placeholder attribute used in some examples may not be included in some assistive technology/browser combinations. This is but one reason why we can't fully rely on it to stand in as a label.</p>
 
@@ -137,13 +137,13 @@ update: 2025-09-18 04:45:33
 
     <p>Using a placeholder value and hiding the label does not solve the problems we seek to avoid. While hiding labels may seem like a terrific way to address accessibility, it is often prone to issue. For example, we may be hiding a label that includes <a href="#placeholder-redundancy">redundant placeholder text</a>. All we have done is mask the issue, visually. Include labels or use the <a href="/floating-labels/">floating label</a> pattern instead.</p>
 
-    <label class="sr-only" for="example-3-keyword">Keyword</label>
+    <label class="visually-hidden" for="example-3-keyword">Keyword</label>
 
     <input id="example-3-keyword" placeholder="Keyword">
 
     <h4>Code</h4>
 
-{% highlight html %}<label class="sr-only" for="example-3-keyword">Keyword</label> <input id="example-3-keyword" placeholder="Keyword">{% endhighlight %}
+{% highlight html %}<label class="visually-hidden" for="example-3-keyword">Keyword</label> <input id="example-3-keyword" placeholder="Keyword">{% endhighlight %}
 
 <h4>Assistive Technology</h4>
 
@@ -161,7 +161,7 @@ update: 2025-09-18 04:45:33
 
     <input id="example-3-phone-number" placeholder="e.g., 5551234567">
 
-    <div class="note">
+    <div class="info info--note">
 
       <p><strong>Note:</strong> Please note that this is an example of suggested placeholder text. All forms are different, so please use formatting required by the system accepting the data.</p>
 
@@ -232,7 +232,7 @@ update: 2025-09-18 04:45:33
       <input aria-label="Year" placeholder="YY">
     </fieldset>
 
-    <div class="note">
+    <div class="info info--note">
     
       <p><strong>Note:</strong> This is not a technique we would use on a single search form, but to better organize groups of fields, within a complex form.</p>
 
@@ -270,7 +270,7 @@ update: 2025-09-18 04:45:33
 
     </figure>
 
-    <h2>What Happened To Text Inputs?</h2>
+    <h2>What Happened To Text Inputs? {% include permalink.html hash="field-design" %}</h2>
 
     <p>If you would like to watch a hilarious take on this issue, please watch this video:</p>
 
@@ -290,7 +290,7 @@ update: 2025-09-18 04:45:33
 
 </section>
 
-<h2>Resources</h2>
+<h2 id="resources">Resources {% include permalink.html hash="resources" %}</h2>
 
 <ul>
   <li><a href="https://www.nngroup.com/articles/form-design-placeholders/">Placeholders in Form Fields Are Harmful</a></li>

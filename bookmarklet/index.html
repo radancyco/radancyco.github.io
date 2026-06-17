@@ -4,30 +4,20 @@ title: "Useful Bookmarklets"
 
 <p>Drag the following bookmarklets to your browser's bookmark folder or bar. When on a specifc page, click on the bookmarklet to run it.</p>
 
-<h2>Accessibility Testing</h2>
+<h2 id="general-utilities">General Utilities {% include permalink.html hash="general-utilities" %}</h2>
 
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/a11y-test.js'); document.body.appendChild(jsCode);}());">A11y Test (Career Site)</a>
+<div>
 
-<p>Used to retrieve and output a spreadhseet of <strong>necessary</strong> pages on a careers site that will be used in accessibility testing. The sheet will also include links to the W3C Validator and WAVE. Works on both QA and Production domains.</p>
+    <a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/automated-publish.js'); document.body.appendChild(jsCode);}());">Career Site Publish</a>
 
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/review-alt.js'); document.body.appendChild(jsCode);}());">Review Alt Text (Career Site)</a>
-
-<p>Used to retrieve and output a spreadhseet of of all page related images and alternative text values. This script will also indicate if the <code>alt</code> attribute has been ommited. Works on both QA and Production domains.</p>
-
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/reflow-1280x1024.js'); document.body.appendChild(jsCode);}());">Reflow (1280 x 1024)</a>
-
-<p>Used to to open the page you are viewing in a 1280 x 1024 window. Zooming into the page by 400% will then mimic the conditions needed to test <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">reflow</a>.</p>
-
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/text-spacing.js'); document.body.appendChild(jsCode);}());">Text Spacing</a>
-
-<p>Used to to mimic the minimum adjustments users may make in order to test against <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow">text spacing</a>.</p>
-
-<h2>General Utilities</h2>
-
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/automated-publish.js'); document.body.appendChild(jsCode);}());">Career Site Publish</a>
+</div>
 
 <p>Used to automate publishing of a careers site. Will publish 20 files at a time until task is completed. Use on any publishing admin page. Open dev console to see status of publishing.</p>
 
-<a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/sitemap.js'); document.body.appendChild(jsCode);}());">Sitemap (Career Site)</a>
+<div>
+
+    <a class="btn" href="javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'https://radancy.dev/bookmarklet/sitemap.js'); document.body.appendChild(jsCode);}());">Sitemap (Career Site)</a>
+
+</div>
 
 <p>Used to retrieve and output a spreadhseet of <strong>all</strong> pages on a careers site based on sitemap.xml. Works on both QA and Production domains.</p> 

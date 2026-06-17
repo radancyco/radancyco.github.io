@@ -1,0 +1,37 @@
+/* A11y Pulse: Color Blindness Test */
+
+.color-blindness-filter {
+display: none;
+}
+
+body[data-color-blindness="achromatomaly"] {
+filter: url("#achromatomaly");
+}
+  
+body[data-color-blindness="achromatopsia"] {
+filter: url("#achromatopsia");
+}
+  
+body[data-color-blindness="deuteranomaly"] {
+filter: url("#deuteranomaly");
+}
+  
+body[data-color-blindness="deuteranopia"] {
+filter: url("#deuteranopia");
+}
+  
+body[data-color-blindness="protanomaly"] {
+filter: url("#protanomaly");
+}
+  
+body[data-color-blindness="protanopia"] {
+filter: url("#protanopia");
+}
+  
+body[data-color-blindness="tritanopia"] {
+filter: url("#tritanopia");
+}
+  
+body[data-color-blindness="tritanomaly"] {
+filter: url("#tritanomaly");
+}

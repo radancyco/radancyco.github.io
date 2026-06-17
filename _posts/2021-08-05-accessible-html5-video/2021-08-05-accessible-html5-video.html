@@ -10,16 +10,16 @@ pronouns: He/Him
 role: Director, Accessibility
 tags: Accessibility Article Development
 title: "Accessible HTML5 Video with Captions and Transcript"
-update: 2024-08-22 14:22:36
+update: 2026-06-14 14:00:00
 ---
 
-<p>Here is an example of how to set up HTML5 video that can be enjoyed by everybody! Want to be truly inclusive? Make accessibility a priority by having captioning present <em>by default</em>. In addition to captioning, transcripts are also strongly recommended. The transcript should live near the video for easy access. If you require captions and transcripts, head on over to <a href="/a11y/caption/">our intranet</a> for more information.</p>
+<p>Here is an example of how to set up HTML5 video that can be enjoyed by everybody! Want to be truly inclusive? Make accessibility a priority by having captioning present <em>by default</em>. In addition to captioning, transcripts are also strongly recommended. The transcript should live near the video for easy access. If you require captions and transcripts, head on over to <a href="https://tmpww.sharepoint.com/sites/delivery/SitePages/Creating-Accessible-Multimedia.aspx">our intranet</a> for more information.</p>
 
-<section aria-labelledby="hdr-a11y-transcripts" class="a11y-info" id="are-transcripts-necessary">
+<section aria-labelledby="hdr-a11y-transcripts" class="info info--a11y" id="are-transcripts-necessary">
 
-	<h2 id="hdr-a11y-transcripts">Are Transcripts Necessary? <a class="anchor" href="#are-transcripts-necessary"><span class="icon icon-anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></svg></span> <span class="sr-only">Anchor (Are Transcripts Necessary?)</span></a></h2>
+	<h2 class="info__heading" id="hdr-a11y-transcripts">Are Transcripts Necessary? {% include permalink.html hash="are-transcripts-necessary" %}</h2>
 
-    <p>Yes! Providing an alternative way to share information through a transcript is a great idea! Here are some reasons why you should include them:<p>
+    <p>Yes! Providing an alternative way to share information through a transcript is a great idea! Here are some reasons why you should include them:</p>
 
     <ol>
         <li>Captions may not be accessible to certain assistive technologies, like refreshable Braille displays or screen readers.</li>
@@ -33,14 +33,33 @@ update: 2024-08-22 14:22:36
 
 </section>
 
-<h2>Example Layout</h2>
+<h2 id="example">Example {% include permalink.html hash="example" %}</h2>
 
-{% include_relative code-accessible-html5-video.html %}
+<video aria-label="The Empire Strikes Back: Trailer A" controls poster="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.png" preload="metadata">
+    <source src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.mp4" type="video/mp4">
+    <track default label="English" kind="captions" src="{{ site.url }}{{ site.baseurl }}/media/2021-08-05-accessible-html5-video/example.vtt" srclang="en">
+</video>
 
-<h2>HTML</h2>
+<details>
 
-{% highlight html%}{% include_relative code-accessible-html5-video.html %}{% endhighlight %}
+    <summary>Transcript</summary>
 
-<h2>CSS</h2>
+    <div>
 
-{% highlight css%}{% include_relative init.scss %}{% endhighlight %}
+        <p><strong>Narrator (Harrison Ford):</strong> Luke Skywalker and Han Solo rescue the princess, destroy the Death Star, but their story didn't end there.</p>
+
+        <p>Now, the creators of the biggest smash hit of all time, bring you the next episode in the "Star Wars" saga, "The Empire Strikes Back."</p>
+
+        <p>The continuing story of our band of heroes. Luke Skywalker, Princess Leia, Han Solo, C3PO, R2D2 and Chewbacca and introducing Lando Calrissian.</p>
+
+        <p>It's an epic of romance. Of heroes and villains. They cross trackless voids to unknown worlds.</p>
+
+        <p>A galactic odyssey against oppression.</p>
+
+        <p>A big new sprawling space adventure in the "Star Wars" saga, "<a href="https://www.imdb.com/title/tt0080684/">The Empire Strikes Back</a>."</p>
+
+        <p>Coming to your galaxy <strong>next summer</strong>.</p>
+
+    </div>
+
+</details>

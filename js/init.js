@@ -269,116 +269,58 @@ layout: null
 	// Code Copier
 	// Note: I probably have dupes of this. Condense into a single function.
 
-	var btnCopyCode = document.querySelectorAll(".btn-code-copy");
+	const figureHighlight = document.querySelectorAll("figure.highlight");
 
-	btnCopyCode.forEach(function(code){
+	figureHighlight.forEach(function(highlight) {
 
-		code.setAttribute("aria-pressed", "false");
+		const btnCopyCode = document.createElement("button");
 
-		code.addEventListener("click", function () {
+		btnCopyCode.classList.add("btn-code-copy");
+		btnCopyCode.setAttribute("aria-pressed", "false");
+		btnCopyCode.setAttribute("aria-label", "Copy Code");
 
-			var codeID = this.getAttribute("data-content-id");
-			var codeContainer = document.getElementById(codeID);
-			var codeCopy = codeContainer.textContent;
+		const iconParser = new DOMParser();
+		const iconDoc = iconParser.parseFromString(`<span class='icon icon-check' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z'/></svg></span><span class='icon icon-copy-url' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z'/></svg></span>`, "text/html");
+
+		Array.from(iconDoc.body.childNodes).forEach(function(node) {
 			
+			btnCopyCode.appendChild(document.adoptNode(node));
+		
+		});
+
+		btnCopyCode.addEventListener("click", function() {
+
+			const parent = this.parentElement;
+			const clone = parent.cloneNode(true);
+			const cloneBtn = clone.querySelector(".btn-code-copy");
+			
+			cloneBtn.remove();
+
+			const codeCopy = clone.textContent;
+
 			navigator.clipboard.writeText(codeCopy).then(function() {
 
-				code.classList.add("code-copied");
-				code.setAttribute("aria-pressed", "true");
-				
+				btnCopyCode.classList.add("code-copied");
+				btnCopyCode.setAttribute("aria-pressed", "true");
+
 			}, function() {
 
-				code.classList.add("code-not-copied");
+				btnCopyCode.classList.add("code-not-copied");
 
 			});
 
-			setTimeout(function(){
+			setTimeout(function() {
 
-				code.classList.remove("code-copied");
-				code.classList.remove("code-not-copied");
-				code.setAttribute("aria-pressed", "false");
+				btnCopyCode.classList.remove("code-copied");
+				btnCopyCode.classList.remove("code-not-copied");
+				btnCopyCode.setAttribute("aria-pressed", "false");
 
 			}, 3000);
 
 		});
 
-	});
-
-	// Dynamic Iframe Height
-
-	// Function to adjust iframe height based on its content
-
-	function adjustIframeHeight(frame) {
-
-		if (frame.contentWindow && frame.contentWindow.document && frame.contentWindow.document.body) {
-
-			frame.style.height = frame.contentWindow.document.body.scrollHeight + "px";
-
-		}
-
-	}
-
-	// Function to initialize iframe resizing
-
-	function initializeIframeResizing() {
-
-		var codeDemos = document.querySelectorAll(".code-demo");
-
-		codeDemos.forEach.call(codeDemos, function(frame) {
-
-			// Adjust height on initial load
-
-			frame.addEventListener("load", function () {
-
-				adjustIframeHeight(frame);
-
-				// Observe changes in the iframe's content
-
-				var iframeBody = frame.contentDocument.body;
-				var resizeObserver = new ResizeObserver(function () {
-
-					adjustIframeHeight(frame);
-
-				});
-
-				resizeObserver.observe(iframeBody);
-
-			});
-
-			// For iframes that are already loaded (e.g., from cache), adjust the height immediately
-
-			if (frame.complete) {
-
-				frame.dispatchEvent(new Event("load"));
-
-			}
-
-		});
-
-	}
-
-	// Execute when the DOM is fully loaded
-
-	document.addEventListener("DOMContentLoaded", function () {
-
-		initializeIframeResizing();
+		highlight.prepend(btnCopyCode);
 
 	});
 
-	// Adjust iframe height on window resize with debouncing
-
-	window.addEventListener("resize", debounce(function () {
-
-		var codeDemos = document.querySelectorAll(".code-demo");
-
-		codeDemos.forEach.call(codeDemos, function(frame) {
-
-			frame.contentWindow.location.reload(); // Reload iframe contents
-
-			adjustIframeHeight(frame);
-
-		});
-
-	}, 250));
-  
 })();

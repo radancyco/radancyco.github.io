@@ -16,7 +16,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <p>While the development process is generally very structured, by contrast, the design process is quite often spontaneous and full of experimentation. This can lead to a host of unused and unnamed layers that don't end up as part of the final approved design. For developers, sifting through many unnamed layers (Layer 1, Layer 23 copy, etc.) can be confusing and time consuming.</p>
 
-<h2>Prepping the File</h2> 
+<h2 id="prepping-the-file">Prepping the File {% include permalink.html hash="prepping-the-file" %}</h2> 
 
 <p>If possible, create separate Photoshop Document files for the homepage and each separate template page layout (example: secondary, tertiary, and specialized pages). As efficient as it may seem to use one PSD for all page layouts, it's actually easier to work with multiple small PSD files, each containing a single template.</p>
 
@@ -43,13 +43,13 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2015-03-18-photoshop-guidelines/ppdwf-palette.jpg">
 
-<h2>Common Elements</h2>
+<h2 id="common-elements">Common Elements {% include permalink.html hash="common-elements" %}</h2>
 
 <p>Common elements, such as images, which are placed in the same area on a page or are part of the navigation, should be the same width and height. For instance, an employee profile page will most likely have a large image of the employee. These images should be consistent in size, as well as thumbnail images used as navigation.</p>
 
 <p>Common elements, if <strong><em>possible</em></strong>, could have their own PSD file to the width and height of the element, instead of creating a PSD file for each page, especially when these pages have the same layout. If each page has been laid out for the client's approval, this process is not necessary.</p>
 
-<h2>Navigation and Button States</h2>
+<h2 id="navigation-and-button-states">Navigation and Button States {% include permalink.html hash="navigation-and-button-states" %}</h2>
 
 <p>Navigation elements sometimes get overlooked but should have at least two and maybe three states of user interaction that the developer will need to define in the style sheet. Place each state on its own layer name to correspond to its function, such as topnav, topnav:hover, etc.  This also should be done for any type of button. As mentioned later within this document, these elements should be grouped in their own folder.</p>
 
@@ -57,7 +57,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2015-03-18-photoshop-guidelines/ppdwf-sprite-groups.jpg">
 
-<h2>Flattening Artwork</h2>
+<h2 id="flattening-artwork">Flattening Artwork {% include permalink.html hash="flattening-artwork" %}</h2>
 
 <p>Sometimes, flattening layers, such as complex graphics, is necessary to preserve the approved design and to combine multiple layered elements into a single layer, so that the developer does not need to guess which layer goes with another. Examples of this would be a base layer which is being used as a clipping mask and secondary layers that are being clipped by the base layer; photomontages or a group of layers that comprise the background of the site; or even a photo used on the site.</p>
 
@@ -111,7 +111,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <p>If you're designing an icon create it in illustrator and embed as a smart object.</p>
 
-<div class="note">
+<div class="info info--note">
     
     <p><strong>Note:</strong> If the site that is being designed is responsive, images may need to be sized or cropped differently, so rasterizing an image may not always be ideal. If you are uncertain, work closely with the UI development team to determine the best course of action.  
 
@@ -121,7 +121,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <p>The web is a dynamic environment, so make sure that any complex background graphics fit. Check that the image or images extend beyond the right and bottom of the browser window so that the images are large enough to accommodate an expanded browser window. This is especially important now because responsive websites can be viewed on many devices.</p>
 
-<h2>Organizing the Layers Panel</h2>
+<h2 id="organizing-the-layers-panel">Organizing the Layers Panel {% include permalink.html hash="organizing-the-layers-panel" %}</h2>
 
 <p>The first item is to delete all unnecessary layers, especially those duplicate layers, which were created to test ideas during the design process.</p>
 
@@ -147,7 +147,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <img alt="" src="{{ site.url }}{{ site.baseurl }}/media/2015-03-18-photoshop-guidelines/folder-states.jpg">
 
-<h2>Finalizing Files</h2>
+<h2 id="finalizing-files">Finalizing Files {% include permalink.html hash="finalizing-files" %}</h2>
 
 <p>This process may be little too structured for most art directors, especially when the art director is caught in the throes of a great design, but it may make the art director's life easier when they need to go in and make client changes.</p>
 
@@ -155,7 +155,7 @@ title: "Guidelines for Preparing Photoshop Files for Web Developers"
 
 <p>There is certainly no one right way to organize PSD files, so these are suggestions. The art directors may want to reach out to the developers, or the developers may reach out to the art directors.</p>
 
-<h2>Checklist</h2>
+<h2 id="checklist">Checklist {% include permalink.html hash="checklist" %}</h2>
 
 <ol>
     <li>Company's branding specs</li>

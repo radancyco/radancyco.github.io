@@ -1,0 +1,43 @@
+﻿SystemID​,Language Code (HTML lang),Language Name,​Platform Codes,Category Folder,Location Folder,Employement  Folder,Job Folder,Job Location Folder,Search Results Folder,Content Folder,Facet Folder,Referral Folder
+8,EN,English,​EN,category,location,employment,job,business,search-jobs,content,business,referral
+31,AR,Arabic,​AR,الفئة,الموقع,التوظبف,الوظيفة,موقع-الوظيفة,البحث-عن-وظائف,المحتوى,العمل,الإحالة
+43,BG,Bulgarian,BG,категория,Местоположение,наемане-на-работа,работа,Местоположение-на-работата,Работи-за-търсене,Съдържание,бизнес,препращане
+44,CA,Catalan,CA,categoria,ubicació,ocupació,treball,Ubicació-del-treball,Cerqueu-feines,content,negocis,derivació
+2,zh-hans,Chinese (Simplified),​ZH,类别,位置,雇用,工作,工作地点,求职,内容,公司,推荐
+3,zh-hant,Chinese (Traditional),​TW,類別,位置,僱用,工作,工作地點,搜索工作,內容,公司,推薦
+4,HR,Croatian,​CO,kategorija,lokacija,zapošljavanje,posao,posao-lokacija,pretraga-poslova,sadržaj,poslovanje,Upućivanje
+5,CS,Czech,​CS,kategorie,místo,zaměstnanost,práce,místo-práce,vyhledávat-nabídky,obsah,faseta,Doporučení
+6,DA,Danish,​DA,kategori,placering,ansaettelse,job,jobplacering,soeg-jobs,indhold,virksomhed,Henvisning
+7,NL,Dutch,​NL,categorie,plaats,werk,banen,banen-locatie,jobs-zoeken,inhoud,firma,Doorverwijzing
+9,EN-GB,English (Great Britain),​GB,category,location,employment,job,job_location,search-jobs,content,business,referral
+37,ET,Estonian,​ET,kategooria,asukoht,teenistus,tööpakkumine,töö-asukoht,otsi-tööpakkumisi,sisu,ettevõte,Saatekiri
+11,FI,Finnish,​FI,kategoria,sijainti,tyollistaminen,tyopaikka,tyopaikan-sijainti,hae-tyopaikkoja,sisalto,liiketoiminta,Lähetys
+13,FR,French,​FR,catégorie,lieu,emplois,emploi,lieu-de-travail,recherche-d'offres,contenu,entreprise,Référence
+12,FR-ca,French Canadian,​FC,catégorie,lieu,emplois,emploi,lieu-de-travail,recherche-d'offres,contenu,entreprise,Référence
+14,DE,German,​DE,berufsfeld,länderauswahl,beschäftigung,stellenbeschreibung,arbeitsort,jobsuche,inhalt,firma,Verweisung
+15,EL,Greek,EL,κατηγορία,τοποθεσία,εργασία,δουλειά,τοποθεσία-εργασίας,εργασίες-αναζήτησης,περιεχόμενο,επιχείρηση,παραπομπή
+42,​HE,Hebrew​,HE​,קטגוריה,מקום,תעסוקה,עבודה,עבודה-מיקום,חיפוש-משרות,תוֹכֶן,עֵסֶק,הפניה
+16,HU,Hungarian,​HU,kategória,hely,foglalkoztatás,állás,munkahelye,álláskeresés,tartalom,vállalkozás,Beterjesztés
+34,IS,Icelandic,​IS,flokkur,staður,ráðning,starf,starf-staðsetning,leit-störf,efnisinnihald,viðskipti,Tilvísun
+41,ID,Indonesian,ID,kategori,lokasi,hubungan-kerja,pekerjaan,lokasi-pekerjaan,cari-pekerjaan,konten,bisnis,Rujukan
+17,IT,Italian,​IT,categoria,luogo,occupazione,lavoro,luogo-di-lavoro,lavori-di-ricerca,contenuto,azienda,rinvio
+18,JA,Japanese,​JA,カテゴリー,ロケーション,雇用,ジョブ,仕事の場所,検索ジョブ,コンテンツ,会社,照会
+19,KO,Korean,​KO,범주,위치,고용,직무,직무-위치,검색-직무,내용,사업,추천
+32,LV,Latvian,​LV,kategorija,atrašanās-vieta,nodarbinātība,vakance,vakances-atrašanās-vieta,meklēt-darbu,saturs,uzņēmums,Nodošana
+33,LT,Lithuanian,LT​,kategorija,vieta,įdarbinimas,darbas,darbo-vieta,ieškoti-darbų,turinys,veikla,Siuntimas
+38,MS,Malay,​MS,kategori,lokasi,pekerjaan,kerja,lokasi-pekerjaan,cari-pekerjaan,kandungan,perniagaan,Rujukan
+20,NO,Norwegian,NO​,kategori,sted,ansettelse,jobb,jobb-sted,søk-jobber,innhold,virksomhet,Henvisning
+21,PL,Polish,​PL,kategoria,lokalizacja,zatrudnienie,praca,miejsce-pracy,szukanie-pracy,zawartość,faseta,Skierowanie
+22,PT-pt,Portuguese  ,PP,área,localização,emprego,vaga,sub-Localização,busca-de-vagas,conteúdo,firma,Referência
+23,PT-br,Portuguese (Brazil),​PT,área,localização,emprego,vaga,sub-Localização,busca-de-vagas,conteúdo,firma,Referência
+35,RO,Romanian,​RO,categorie,loc,angajare,post-vacant,loc-post-vacant,căutare-posturi-vacante,conținut,afaceri,Recomandare
+24,RU,Russian,​RU,kатегория,место,занятость,pабота,место-работы,Поиск-вакансий,cодержание,бизнес,Направления
+25,SR,Serbian,​SR,kategorija,lokacija,zaposlenje,posao,lokacija-posla,pretraži-poslove,sadržaj,poslovanje,Упућивање
+26,SK,Slovak,​SK,kategória,umiestnenie,zamestnanosť,pracovné-miesto,umiestnenie-pracovného-miesta,vyhľadávať-pracovné-miesta,obsah,podnik,Odporúčanie
+27,SL,Slovenian,​SL,kategorija,lokacija,zaposlitev,delovno-mesto,delovno-mesto-lokacija,iskanje-delovna-mesta,vsebina,podjetje,Napotitev
+28,ES,Spanish,​ES,categoría,ubicación,empleo,trabajo,ciudad-o-región,buscar-trabajo,contenido,empresa,Remisión
+29,SV,Swedish,​SV,kategori,plats,sysselsättning,jobb,arbetsplats,jobbsökande,innehåll,firma,Remiss
+36,TH,Thai,​TH,ประเภท,สถานที่ตั้ง,การจ้างงาน,งาน,งานสถานที่ตั้ง,ค้นหาตำแหน่งงาน,เนื้อหา,ธุรกิจ,การอ้างอิง
+30,TR,Turkish,TR,kategori,konum,işe-alım,iş,iş-bulma,iş-arama,içerik,işletme,Referans
+40,UK,Ukranian,​UK,категорія,місцезнаходження,зайнятість,вакансія,місцезнаходження-вакансії,пошук-вакансій,контент,бізнес,Направлення
+39,VI,Vietnamese,​VI,danh-mục,địa-điểm,tuyển-dụng,công-việc,công-việc-địa-điểm,tìm-kiếm-công-việc,nội-dung,kinh-doanh,Giới-thiệu

@@ -1,0 +1,37 @@
+/*!
+
+    Radancy: Accessibility Pulse - Image Inventory
+
+    Contributor(s):
+    Michael "Spell" Spellacy
+
+*/
+
+#results {
+margin-top: 2em;
+
+    h2, ol, .failure, .details, .stats, .success, #permalink:empty, #imagereport + p {
+    display: none;
+    }
+
+    p {
+    display: inline;
+    }
+
+    table {
+    margin-top: 2em;
+
+        img {
+        background-color: #ccc;
+        }
+
+    }
+    
+}
+
+.loader {
+inline-size: calc(130em / 16);
+margin: 2em 0;
+place-self: center;
+}
+      

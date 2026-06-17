@@ -1,0 +1,33 @@
+<form action="https://webaim.org/resources/linkcontrastchecker/" class="a11y-pulse__form" target="_blank">
+                    
+    <fieldset>
+    
+        <legend>Check Link & Text Contrast</legend>
+    
+        <p>Use this form to validate specific color combinations. Results open in new tab.</p>
+    
+        <div class="a11y-pulse__form--fields a11y-pulse__form--fields--column-4">
+
+            <label class="a11y-pulse__form--fields--label-1" for="lcolor-1-{{ include.id }}">Link:</label>
+
+            <input class="a11y-pulse__form--fields--input-1" id="lcolor-1-{{ include.id }}" name="lcolor" type="color" value="#3333FF">
+
+            <label class="a11y-pulse__form--fields--label-2" for="fcolor-1-{{ include.id }}">Body Text:</label>
+
+            <input class="a11y-pulse__form--fields--input-2" id="fcolor-1-{{ include.id }}" name="fcolor" type="color" value="#000000">
+
+            <label class="a11y-pulse__form--fields--label-3" for="bcolor-1-{{ include.id }}">Background:</label>
+
+            <input class="a11y-pulse__form--fields--input-3" id="bcolor-1-{{ include.id }}" name="bcolor" type="color" value="#FFFFFF">
+
+            <div>
+
+                <button class="a11y-pulse__cta">Check {{ newWindow }}</button>
+
+            </div>
+
+        </div>
+    
+    </fieldset>
+    
+</form>

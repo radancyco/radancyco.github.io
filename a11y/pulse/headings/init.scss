@@ -1,0 +1,65 @@
+/*!
+
+    Radancy: Accessibility Pulse - Heading Outline
+
+    Contributor(s):
+    Michael "Spell" Spellacy
+
+*/
+
+#headingoutline {
+margin-top: 2em;
+
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #000;
+    font-weight: bold;
+    }
+
+    h2 {
+    display: none;
+    }
+
+    .headinglevel, .missingheadinglevel {
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    line-height: normal;
+    margin-right: .5em;
+    padding: .5em;
+    }
+
+    .headinglevel {
+    background-color: darkgreen;
+    }
+
+    .missingheadinglevel {
+    background-color: #d20000;
+    }
+
+    .h2 {
+    margin-left: 2em;
+    }
+
+    .h3 {
+    margin-left: 4em;
+    }
+
+    .h4 {
+    margin-left: 6em;
+    }
+
+    .h5 {
+    margin-left: 8em;
+    }
+
+    .h6 {
+    margin-left: 10em;
+    }
+
+}  
+
+.loader {
+inline-size: calc(130em / 16);
+margin: 2em 0;
+place-self: center;
+}

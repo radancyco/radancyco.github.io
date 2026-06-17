@@ -1,0 +1,379 @@
+---
+accordion: true
+localcss: init.css
+heading: false
+title: "Accessibility Testing Baselines"
+---
+
+{% include variables.html %}
+
+<h1>{{ page.title }}</h1>
+
+<div class="post-overview">
+
+    <div>
+
+      <img src="https://www.gravatar.com/avatar/89e429d4a3effa9601cd19a851c0003e.jpg" alt="Headshot of Michael Spellacy">
+
+    </div>
+
+    <div>
+
+      <ul>
+        <li><span class="visually-hidden">Posted by:</span> <a href='mailto:michael.spellacy@radancy.com?Subject={{ page.title | replace: " ", "%20" }}'>Michael "Spell" Spellacy</a>, Director of Accessibility</li>
+        <li><span class="visually-hidden">Pronouns:</span> He/Him</li>
+        <li><span class="visually-hidden">Posted:</span> Friday, July 29, 2021</li>
+        <li><span>Update:</span> June 11, 2026</li>
+      </ul>
+
+    </div>
+
+</div>
+
+<p>The following subset of WCAG 2.2 Success Criteria forms the <em>baseline</em> of accessibility guidelines that Radancy <em>strives</em> to meet in our products and websites. These guidelines reflect the most common accessibility barriers and issues we encounter on a day-to-day basis. Because we believe accessibility is critical, we make a good-faith effort to identify and address these issues in our work and make them the focal point of internal training efforts.</p>
+
+<p>However, striving to meet certain guidelines, while great, is no guarantee that a digital experience is accessible or that any specific level of conformance has been met. Only comprehensive accessibility testing can tell us where a product or website truly stand. Radancy can provide this level of testing upon request if more robust WCAG support is required. Please be sure to notify your account representative as early as possible.</p>
+
+<p class="info info--note">
+  
+  <p><em>Please note that these baselines are subject to change as both the guidelines and our understanding of accessibility continue to evolve.</em></p>
+
+</div>
+
+<div class="accordion">
+
+  <h2 class="accordion__heading"><button id="non-text-content-images" class="accordion__toggle"><span>1.1.1: Non-text Content (Alternative Text, Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Provide text alternatives for non-text content, such as images. <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content" target="_blank">Understanding 1.1.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Copywriter, Content Producers, Developer</p>
+
+    <div class="info info--warning">
+
+      <p><strong>Warning:</strong> At this time, AI (Artificial Intelligence) should not be used to generate alternative text until the impact on accessibility is better understood. Please speak to <a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a> for more details.</p>
+
+    </div>
+
+    <h3>Understanding Image Types</h3>
+
+    <p>Generally, images fall into one of several categories. It is very important to understand the difference between these image types in order to make a more informed decision on whether to include an alternative text value or not and what kind of value you may need to add.</p>
+
+    <ul>
+      <li><strong>Decorative:</strong> Images that add accent or embellish. If content on the page can be experienced and understood without these images, then an alternative text value is not required.</li>
+      <li><strong>Functional:</strong> Images that indicate action to be taken, rather than a description of the image. Functional images are found within interactive elements, such as hyperlinks or buttons.</li>
+      <li><strong>Informative:</strong> Images that provide value to the surrounding content. If content on the page can't be experienced or understood without these images, or content is locked within image, then an alternative text value is required.</li>
+      <li><strong>Images of Text:</strong> Images that contain text. The alternative text used within this image type should often be verbatim.</li>
+      <li><strong>Complex Images:</strong> Images such as graphs or diagrams. These image often contain detailed information, so alternative text is not adequate here. This content should be conveyed through alternative text equivalents.</li>
+      <li><strong>Groups of Images:</strong> Multiple images that convey a single piece of information. In this case, the text alternative for one image should convey the information for the entire group.</li>
+      <li><strong>Image Maps:</strong> While used rarely, the text alternative for an image that contains multiple clickable areas should provide an overall context for the set of links. Also, each individually clickable area should have alternative text that describes the purpose or destination of the link.</li>
+    </ul>
+
+    <h3>The Rules</h3>
+
+    <ol>
+      <li>All inline image elements require an alt attribute. For example: <code>&lt;img alt="" src="..."&gt;</code>. An image with an alt attribute that has no value, is known as a "null alt". Images with a null alt are ignored by assistive technology.</li>
+      <li>If image is informative or contextually important to surrounding content, then it must include an alternative text value. Some things to ask yourself about images:
+
+        <ul>
+          <li>Are they meant as labels?</li>
+          <li>Do they supplement or enhance surrounding content?</li>
+          <li>Are they meant to convey an impression or emotion?</li>
+        </ul>
+
+      </li>
+      <li>If image contains complex information, then alternative methods of conveying this information will be required as alternative text may not suffice. For example, a graph or chart may require the information be marked-up in HTML and linked to, etc.</li>
+      <li>If image contains text, then it must include an alternative text value if same information not conveyed nearby. Typically verbatim, to match what is embedded in the image.</li>
+      <li>If race or gender provide important context, then include them in your description.</li>
+      <li>If image is purely decorative, then it requires no alternative text value. While an <code>img</code> element that is decorative must contain a null alt, a decorative <code>SVG</code> element will require <code>aria-hidden="true"</code>. For example: <code>&lt;svg aria-hidden="true" ... &gt;&lt;/svg&gt;</code></li>
+      <li>If image is functional and contained within an interactive element (e.g., a hyperlink or button), then it must contain alternative text if no other functional text present within. For example: <code>&lt;a href="..."&gt;&lt;img alt="My Awesome Vacation (Video)" src="..."&gt;&lt;/a&gt;</code></li>
+      <li>Avoid superfluous phrases like "Image of ..." or "Picture of ..." as these are redundant to assistive technology (AT) users. If your image is a screenshot, then you may say this in your description.</li>
+      <li>Unless relevant to the image, avoid cute or clever jokes in your alternative text.</li>
+      <li>Background images are important if picture within is informative. The first rule of ARIA is to always use HTML, so an <code>&lt;img&gt;</code> element should be used, but in a pinch, the following may be acceptable: <code>&lt;div aria-label="..." role="img"&gt;&lt;/div&gt;</code></li>
+    </ol>
+
+    <div class="info info--a11y">
+
+      <h3 class="info__heading">Accessibility Tip</h3>
+
+      <p>Alternative text should be as descriptive as possible. Think of how you might describe an image to a friend who is blind. For example:</p>
+
+      <figure>
+
+        <img alt="" height="289" loading="lazy" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/example-alt.jpg" width="504">
+
+        <figcaption>Black woman and child sitting outdoors, smiling and wearing American flag sunglasses. The child also wears a flag-themed shirt and a red, white, and blue lei, suggesting a festive, patriotic occasion such as Independence Day.</figcaption>
+
+      </figure>
+
+      <div class="info info--reminder">
+              
+        <p><strong>Reminder:</strong> Unless it is relevant to the image, intentionally including keywords in alternative text descriptions, for the sole benefit of SEO (Search Engine Optimization), is strongly discouraged. <em>Websites are for people; not machines.</em></p>
+
+      </div>
+  
+    </div>
+
+    <div class="info info--resources">
+
+      <h3 class="info__heading">Resources</h3>
+
+      <ul>
+        <li><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">An Alt Decision Tree {{ newWindow }}</a></li>
+        <li><a href="https://webaim.org/techniques/alttext/" target="_blank">WebAim: Alternative Text Guide {{ newWindow }}</a></li>
+        <li><a href="https://www.levelaccess.com/resources/quick-tips-writing-meaningful-alt-text-webinar-qa-resources/" target="_blank">Quick Tips for Writing Meaningful Alt Text Webinar {{ newWindow }}</a></li>
+        <li><a href="https://jakearchibald.com/2021/great-alt-text/" target="_blank">Writing great alt text: Emotion matters {{ newWindow }}</a></li>
+        <li><a href="https://medium.com/shopify-ux/the-case-for-describing-race-in-alternative-text-attributes-a093380634f2" target="_blank">The Case for Describing Race in Alternative Text Attributes {{ newWindow }}</a></li>
+        <li><a href="https://www.smashingmagazine.com/2021/06/img-alt-attribute-alternate-description-decorative/" target="_blank">Your Image Is Probably Not Decorative {{ newWindow }}</a></li>
+        <li><a href="https://www.w3.org/WAI/tutorials/images/" target="_blank">Image Concepts {{ newWindow }}</a></li>
+        <li><a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html" target="_blank">Contextually Marking Up Accessible Images and SVGs {{ newWindow }}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="non-text-content-components-multimedia" class="accordion__toggle"><span>1.1.1: Non-text Content (Components and Multimedia, Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Provide text alternatives for non-text content, such as multimedia (audio, images, video) and interactive components (buttons, controls, inputs). <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content" target="_blank">Understanding 1.1.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+    <h3>The Rules</h3>
+
+    <ol>
+      <li>Ensure that interactive components (e.g., buttons, controls, inputs), have an accessible name. Interactive elements that are not visually labeled, must still include an accessible name.</li>
+      <li>If text is not explicit in the design of a component, then use various methods to provide this information. Accessible names can be applied in various ways, such as with, labels, inclusively hidden techniques, and with ARIA.</li>
+      <li>Ensure that multimedia is identified via accessible text. For example: <code>&lt;video src="..." controls aria-label="My Summer Vacation"&gt;...&lt;/video&gt;</code></li>
+      <li>Ensure that inline frames (iframe) are appropriately titled and describe contents of the frame accurately. For example: <code>&lt;iframe src="..." title="Job Application Form"&gt;...&lt;/iframe&gt;</code>.</li>
+    </ol>
+
+     <div class="info info--resources">
+
+      <h3 class="info__heading">Resources</h3>
+
+      <ul>
+        <li><a href="https://www.deque.com/blog/accessible-forms-the-problem-with-placeholders/" target="_blank">The Anatomy of Accessible Forms: The Problem with Placeholders {{ newWindow }}</a></li>
+        <li><a href="https://www.nngroup.com/articles/form-design-placeholders/" target="_blank">Placeholders in Form Fields Are Harmful {{ newWindow }}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="captions-pre-recorded" class="accordion__toggle"><span>1.2.2: Captions (Prerecorded) (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Provide captions for videos with audio	<a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded" target="_blank">Understanding 1.2.2 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Everybody</p>
+
+     <div class="info info--resources">
+
+      <h3 class="info__heading">Resources</h3>
+
+      <ul>
+        <li><a href="https://meryl.net/captioned-videos-complete-guide/" target="_blank">The Complete Guide to Captioned Videos by Meryl Evans {{ newWindow }}</a></li>
+        <li><a href="https://www.w3.org/WAI/media/av/" target="_blank">Making Audio and Video Media Accessible {{ newWindow }}</a></li>
+        <li><a href="https://www.3playmedia.com/blog/add-audio-description-videos/" target="_blank">How to Add Audio Description by Jaclyn Leduc {{ newWindow }}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="info-and-relationships" class="accordion__toggle"><span>1.3.1: Info and Relationships (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Semantic markup is used appropriately. Logical structure, etc.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships" target="_blank">Understanding 1.3.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer</p>
+
+     <div class="info info--resources">
+
+      <h3 class="info__heading">Resources</h3>
+
+      <ul>
+        <li><a href="https://www.a11yproject.com/posts/how-to-accessible-heading-structure/" target="_blank">Accessible heading structure {{ newWindow }}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="use-of-color" class="accordion__toggle"><span>1.4.1: Use of Color (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Don't use presentation that relies solely on color. <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color" target="_blank">Understanding 1.4.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+     <div class="info info--resources">
+
+      <h3 class="info__heading">Resources</h3>
+
+      <ul>
+        <li><a href="https://www.tpgi.com/well-color-us-surprised-this-sc-can-be-a-tricky-customer/" target="_blank">Well Color Us Surprised—This SC Can Be a Tricky Customer {{ newWindow }}</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="contrast-minimum" class="accordion__toggle"><span>1.4.3: Contrast (Minimum) (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Contrast ratio between text and background is at least <strong>4.5:1</strong>. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum" target="_blank">Understanding 1.4.3 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="resize-text" class="accordion__toggle"><span>1.4.4: Resize Text (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Text can be resized to 200% without loss of content or functionality. <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text" target="_blank">Understanding 1.4.4 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="reflow" class="accordion__toggle"><span>1.4.10: Reflow (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Content can be resized without loss of functionality and no horizontal scrollbar.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank">Understanding 1.4.10 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="text-spacing" class="accordion__toggle"><span>1.4.12: Text Spacing (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Let users adjust text spacing to make it easier to read.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing" target="_blank">Understanding 1.4.12 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="non-text-contrast" class="accordion__toggle"><span>1.4.11: Non-text Contrast (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Ensure <em>important</em> visual components, such as images, icons, and buttons, have a contrast ratio of at least <strong>3:1</strong>. <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast" target="_blank">Understanding 1.4.11 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="keyboard" class="accordion__toggle"><span>2.1.1: Keyboard (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Accessible by keyboard only.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard" target="_blank">Understanding 2.1.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer, QA</p>
+
+     <div class="info info--a11y">
+
+      <h3 class="info__heading">Accessibility Tip</h3>
+
+      <p><em>Buttons do things; hyperlinks take us places.</em></p>
+
+      <p>The difference between using a hyperlink and a button can have a very big impact on accessibility. By using the correct element for the job, we can set the right expectation for AT users and make our code much easier to write. Be sure to read <a href="https://michaelspellacy.com/pushing-buttons/" target="_blank">Pushing Buttons {{ newWindow }}</a> for more details on why this distinction is important.</p>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="pause-stop-hide" class="accordion__toggle"><span>2.2.2: Pause, Stop, Hide (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Provide user controls for moving content. <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide" target="_blank">Understanding 2.2.2 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+     <div class="info info--a11y">
+
+      <h3 class="info__heading">Accessibility Tip</h3>
+
+      <p>Unless there is continuous movement, subtle web (a.k.a micro) animations are typically exempt from this rule, but it is strongly recommended that development leverage <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank">prefers-reduced-motion {{ newWindow }}</a> in their work to avoid creating an unpleasant experience for those who may find animation problematic.</p>
+
+    </div>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="three-flashes-or-below" class="accordion__toggle"><span>2.3.1: Three Flashes or Below Threshold (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>No content flashes more than three times per second.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold" target="_blank">Understanding 2.3.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Everybody</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="bypass-blocks" class="accordion__toggle"><span>2.4.1: Bypass Blocks (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Provide a "Skip to Content" link. <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks" target="_blank">Understanding 2.4.1 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="page-titled" class="accordion__toggle"><span>2.4.2: Page Titled (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Use helpful and clear page titles.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled" target="_blank">Understanding 2.4.2 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> SEO, Copywriter, Content Creators</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="focus-order" class="accordion__toggle"><span>2.4.3: Focus Order (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>The navigation order of links, form elements, etc. is logical and intuitive.	<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order" target="_blank">Understanding 2.4.3 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="focus-visible" class="accordion__toggle"><span>2.4.7: Focus Visible (Level AA)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Ensure keyboard focus is visible and clear. Default focus outlines are a browser <em>feature</em> meant to aid those with low vision, and should <em>never</em> be removed without an adequate replacement. If default focus outlines are undesirable, they may be redesigned or an alternative focus state can be used. However, any redesigned outline or alternative focus state must then meet a <strong>3:1</strong> contrast ratio. <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible" target="_blank">Understanding 2.4.7 {{ newWindow }}</a></p>
+
+    <p><b>Who is responsible?</b> Designer, Developer, QA</p>
+
+  </div>
+
+  <h2 class="accordion__heading"><button id="name-role-value" class="accordion__toggle"><span>4.1.2: Name, Role, Value (Level A)</span></button></h2>
+
+  <div class="accordion__panel">
+
+    <p>Build all elements for accessibility. <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value" target="_blank">Understanding 4.1.2 {{ newWindow }}</a></p>
+
+    <p>Ensure that each element has an accessible name, role, value, state and property which can be properly conveyed to AT users. How an interface is conveyed to AT users is as equally important to how they are conveyed to users who do not rely on assistive technology to access the web. For example, if a screen reader user accesses a disclosure component, how might the fact that it is opened be conveyed to them? Is the correct state of the component, or any state at all, being presented in this scenario? Using semantic HTML along with properly implemented ARIA can assist us in creating an equal and accessible experience for everybody.</p>
+
+    <p><b>Who is responsible?</b> Developer</p>
+
+  </div>
+
+</div>

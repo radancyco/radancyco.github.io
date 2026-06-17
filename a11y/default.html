@@ -1,0 +1,48 @@
+{% include variables.html %}
+
+<p>At {{ site.company-name }}, we believe that all of your prospective job candidates, regardless of physical, mental or technological capabilities, have a right to learn more about your company and access all job listings. To preserve an individual’s right to universal access, <a href="{{site.git-url}}/a11y/baseline/">we attempt to meet</a> as much of <strong>WCAG (Web Content and Accessibility Guidelines) 2.2 Level A and AA</strong> as possible, within our everyday process. However, if there is a need to fully support a specific level of WCAG or other specific guidelines, please bring this to the attention of your account representative as soon as possible.</p>
+
+<h2 id="knowledge-base">Knowledge Base</h2>
+
+<p>Common accessibility information and tools for employees of {{ site.company-name }}. Please note that some links will redirect.</p>
+
+<ul>
+  <li><a href="{{ site.baseurl }}/audit/">Accessibility Audit Process (Intranet)</a></li>
+  <li><a href="{{ site.baseurl }}/baseline"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Testing Baselines</a></li>
+  <li><a href="{{ site.baseurl }}/caption">Multimedia Captioning & Transcripts (Intranet){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="{{ site.baseurl }}/onboarding/"{% if page.intranet %} target="_blank"{% endif %}> Accessibility Onboarding (Google Slides){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="{{ site.baseurl }}/audit/boilerplate"{% if page.intranet %} target="_blank"{% endif %}>Testing Boilerplate (Google Sheet){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+</ul>
+
+<h2 id="accessibility-overlays">Accessibility Overlays</h2>
+
+<p>Accessibility overlays are <strong>not supported</strong>, as they are not in line with {{ site.company-name }}'s vision on how best to support people with disabilities in our digital offerings. In our experience, use of these tools may promote ableism, reinforce discrimination and are often perceived, particularly among the disabled and advocacy communities, as a performative commitment to accessibility. Companies using overlays have frequently been subjected to legal actions based on non-compliance with accessibility laws and principles. More information can be found here:</p>
+
+<ul>
+  <li><a href="https://shouldiuseanaccessibilityoverlay.com/"{% if page.intranet %} target="_blank"{% endif %}>Should I Use An Accessibility Overlay?{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://overlayfactsheet.com/"{% if page.intranet %} target="_blank"{% endif %}>Overlay Fact Sheet{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://overlayfalseclaims.com/"{% if page.intranet %} target="_blank"{% endif %}>Overlay False Claims{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+</ul>
+
+<p>Note that a legal waiver is now required if a client still wishes to place an accessibility overlay on their website.</p>
+
+<h2 id="testing">Testing</h2>
+
+<ul>
+    <li><a href="{{ site.baseurl }}/pulse/"{% if page.intranet %} target="_blank"{% endif %}>Accessibility Pulse v{{ pulseVersion }}{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+
+<p>Fantastic resources from across the web!</p>
+
+<ul>
+  <li><a href="https://a11y-tools.com/"{% if page.intranet %} target="_blank"{% endif %}>A11y Tools{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://a11ysupport.io/"{% if page.intranet %} target="_blank"{% endif %}>ARIA Support Check{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG21/quickref/"{% if page.intranet %} target="_blank"{% endif %}>How to Meet WCAG (Quick Reference){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.powermapper.com/tests/screen-readers/"{% if page.intranet %} target="_blank"{% endif %}>PowerMapper - Screen Reader Reliability{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.w3.org/TR/using-aria/"{% if page.intranet %} target="_blank"{% endif %}>Using ARIA{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-practices/"{% if page.intranet %} target="_blank"{% endif %}>WAI-ARIA Authoring Practices{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.w3.org/WAI/"{% if page.intranet %} target="_blank"{% endif %}>Web Accessibility Initiative (WAI){% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+  <li><a href="https://www.w3.org/WAI/policies/"{% if page.intranet %} target="_blank"{% endif %}>Web Accessibility Laws & Policies{% if page.intranet %} <span class="visually-hidden"> (Opens in new tab)</span>{% endif %}</a></li>
+</ul>

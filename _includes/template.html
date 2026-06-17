@@ -27,7 +27,7 @@
 
 {%- if page.warning %}
   
-  <div class="warning">
+  <div class="info info--warning">
   
     <p><strong>Warning:</strong> {{ page.warning }}</p>
 
@@ -37,7 +37,7 @@
 
 {%- if page.note %}
   
-  <div class="note">
+  <div class="info info--note">
   
     <p><strong>Note:</strong> {{ page.note }}</p>
 
@@ -47,7 +47,7 @@
 
 {%- if page.reminder %}
   
-  <div class="reminder">
+  <div class="info info--reminder">
   
     <p><strong>Reminder:</strong> {{ page.reminder }}</p>
 
@@ -135,7 +135,7 @@
 
       </select>
 
-      <div class="sr-only" aria-live="polite"></div>
+      <div class="visually-hidden" aria-live="polite"></div>
 
     </nav>
 
@@ -194,7 +194,10 @@
 
       {%- if page.select-internal != true %}
 
-        <h2 id="{{ example.id }}">{{ example.name }} <a class="anchor" href="#{{ example.id }}">{{ iconAnchor }} <span class="sr-only">({{ example.name }} Anchor)</span></a></h2>
+        {% assign example_hash = example.id %}
+        {% assign example_name = example.name %}
+
+        <h2 id="{{ example_hash }}">{{ example_name }} {% include permalink.html hash=example_hash name=example_name %}</h2>
 
       {%- endif %}
 
@@ -206,7 +209,7 @@
 
       {%- if example.warning %}
   
-        <div class="warning">
+        <div class="info info--warning">
         
           <p><strong>Warning:</strong> {{ example.warning }}</p>
 
@@ -216,7 +219,7 @@
 
       {%- if example.best-practice %}
   
-      <div class="best-practice">
+      <div class="info info--best-practice">
       
         <p><strong>Best Practice:</strong> {{ example.best-practice }}</p>
 
@@ -226,7 +229,7 @@
   
       {%- if example.note %}
   
-        <div class="note">
+        <div class="info info--note">
           
           <p><strong>Note:</strong> {{ example.note }}</p>
 
@@ -236,7 +239,7 @@
 
       {%- if example.reminder %}
   
-        <div class="reminder">
+        <div class="info info--reminder">
         
           <p><strong>Reminder:</strong> {{ example.reminder }}</p>
 
@@ -246,7 +249,7 @@
 
       {%- if example.experimental %}
   
-        <div class="experimental">
+        <div class="info info--experimental">
         
           <p><strong>Experimental:</strong> {{ example.experimental }}</p>
 
@@ -302,7 +305,7 @@
 
       <div class="content-view-code">
 
-        <div class="tablist" data-fixed-height>
+        <div class="tablist" data-scroll data-fixed-height>
 
           <ul class="tablist__list">
             <li><a class="tablist__tab" href="#html-{{counter}}">{{ iconHTML }} HTML</a></li>
@@ -321,8 +324,6 @@
           </ul>
       
           <div class="tablist__panel" id="html-{{counter}}">
-
-            <button aria-label="Copy HTML" class="btn-code-copy" data-content-id="content-html-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
       
             <div class="tablist__content" contenteditable id="content-html-{{counter}}" spellcheck="false">{% highlight html %}{% include_relative html/{{ example.id }}.html %}{% endhighlight %}</div>
 
@@ -332,9 +333,7 @@
 
             <div class="tablist__panel" id="css-{{counter}}">
 
-              <button aria-label="Copy CSS" class="btn-code-copy" data-content-id="content-css-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
-
-              <div class="tablist__content" contenteditable id="content-css-{{counter}}" spellcheck="false">{% highlight css %}{% include_relative init.scss %}{% endhighlight %}</div>
+              <div class="tablist__content" contenteditable id="content-css-{{counter}}" spellcheck="false">{% highlight scss %}{% include_relative init.scss %}{% endhighlight %}</div>
 
             </div>
 
@@ -344,9 +343,7 @@
 
             <div class="tablist__panel" id="custom-css-{{counter}}">
 
-              <button aria-label="Copy Custom CSS" class="btn-code-copy" data-content-id="content-custom-css-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
-
-              <div class="tablist__content" contenteditable id="content-custom-css-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative {{ example.customcss }}.scss %}{% endhighlight %}</div>
+              <div class="tablist__content" contenteditable id="content-custom-css-{{counter}}" spellcheck="false">{% highlight scss %}{% include_relative {{ example.customcss }}.scss %}{% endhighlight %}</div>
 
             </div>
 
@@ -356,8 +353,6 @@
 
             <div class="tablist__panel" id="javascript-{{counter}}">
 
-              <button aria-label="Copy JavaScript" class="btn-code-copy" data-content-id="content-javascript-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
-      
               <div class="tablist__content" contenteditable id="content-javascript-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative script.js title=component.title version=component.version %}{% endhighlight %}</div>
 
             </div>
@@ -368,8 +363,6 @@
 
             <div class="tablist__panel" id="custom-javascript-{{counter}}">
 
-              <button aria-label="Copy Custom JavaScript" class="btn-code-copy" data-content-id="content-custom-javascript-{{counter}}">{{ iconCheck }}{{ iconCopyURL }}</button>
-      
               <div class="tablist__content" contenteditable id="content-custom-javascript-{{counter}}" spellcheck="false">{% highlight javascript %}{% include_relative {{ example.customjs }} %}{% endhighlight %}</div>
 
             </div>
@@ -458,7 +451,7 @@
 
 {%- if page.elements or page.aria or page.attributes or page.sass or page.class or page.cookies or page.parameters %}
 
-  <h2 id="properties">Properties</h2>
+  <h2 id="properties">Properties {% include permalink.html hash="properties" name="Properties" %}</h2>
 
   <p>Use the following properties to configure this component.</p>
 
@@ -759,7 +752,7 @@
 
 {%- if page.notes or page.changelog or page.roadmap %}
 
-  <h2 id="release-notes">Release Notes</h2>
+  <h2 id="release-notes">Release Notes {% include permalink.html hash="release-notes" name="Release Notes" %}</h2>
 
   <p>Keep up to date on major changes to this component.</p>
 
@@ -773,22 +766,22 @@
 
   <div class="accordion__panel">
 
-    <ul class="notes" role="list">
+    <dl class="notes">
 
       {% assign sortChangelog = page.changelog %}
 
       {% for log in sortChangelog %}
 
-        <li class="notes__item">
+        <div class="notes__item">
       
-          <span class="notes__label notes__label--{{ log.label | downcase }}">{{ log.label }}:</span>
-          <span class="notes__content">{{ log.content }}</span>
+          <dt class="notes__label notes__label--{{ log.label | downcase }}">{{ log.label }}</dt>
+          <dd class="notes__content">{{ log.content }}</dd>
     
-        </li>
+        </div>
 
       {% endfor %}
 
-    </ul>
+      </dl>
 
   </div>
 
@@ -800,18 +793,18 @@
 
   <div class="accordion__panel">
 
-    <ul class="notes" role="list">
+    <dl class="notes">
     
       {% assign sortNotes = page.notes %}
 
       {% for note in sortNotes %}
     
-      <li class="notes__item">
+      <div class="notes__item">
         
-        <span class="notes__label notes__label--{{ note.label | downcase }}">{{ note.label }}:</span>
-        <span class="notes__content">{{ note.content }}</span>
+        <dt class="notes__label notes__label--{{ note.label | downcase }}">{{ note.label }}</span>
+        <dd class="notes__content">{{ note.content }}</dd>
   
-      </li>
+      </div>
 
       {% endfor %}
 
@@ -827,22 +820,22 @@
 
   <div class="accordion__panel">
 
-    <ul class="notes" role="list">
+    <dl class="notes">
 
       {% assign sortRoadmap = page.roadmap %}
 
       {% for roadmap in sortRoadmap %}
 
-        <li class="notes__item">
+        <div class="notes__item">
         
-          <span class="notes__label notes__label--{{ roadmap.label | downcase }}">{{ roadmap.label }}:</span>
-          <span class="notes__content">{{ roadmap.content }}</span>
+          <dt class="notes__label notes__label--{{ roadmap.label | downcase }}">{{ roadmap.label }}</dt>
+          <dd class="notes__content">{{ roadmap.content }}</dd>
       
-        </li>
+        </div>
 
       {% endfor %}
 
-    </ul>
+      </dl>
 
   </div>
 
@@ -854,9 +847,9 @@
 
 {%- endif %}
 
-<div class="reminder">
+<div class="info info--reminder">
 
-  <h2 id="issues">Report Issues</h2>
+  <h2 id="issues" class="info__heading">Report Issues</h2>
 
   <p>Find a bug? Want a new feature? Report it on <a href="https://jira.radancy.com/secure/Dashboard.jspa#create_link">JIRA</a>. You're so awesome!</p>
 

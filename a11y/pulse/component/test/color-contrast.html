@@ -1,0 +1,29 @@
+<form action="https://webaim.org/resources/contrastchecker/" class="a11y-pulse__form" target="_blank">
+
+    <fieldset>
+    
+        <legend>Check Color Contrast</legend>
+    
+        <p>Use this form to validate the contrast of two specific colors combinations. Results open in new tab.</p>
+
+        <div class="a11y-pulse__form--fields a11y-pulse__form--fields--column-3">
+    
+            <label class="a11y-pulse__form--fields--label-1" for="fcolor-2-{{ include.id }}">Foreground:</label>
+    
+            <input class="a11y-pulse__form--fields--input-1" id="fcolor-2-{{ include.id }}" name="fcolor" type="color" value="#0000FF">
+
+            <label class="a11y-pulse__form--fields--label-2" for="bcolor-2-{{ include.id }}">Background:</label>
+
+            <input class="a11y-pulse__form--fields--input-2" id="bcolor-2-{{ include.id }}" name="bcolor" type="color" value="#FFFFFF">
+
+            <div>
+
+                <button class="a11y-pulse__cta">Check {{ newWindow }}</button>
+
+            </div>
+
+        </div>
+
+    </fieldset>
+    
+</form>

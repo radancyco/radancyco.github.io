@@ -1,0 +1,8 @@
+/*!
+
+    Radancy: Accessibility Pulse - Heading Outline
+
+    Contributor(s):
+    Michael "Spell" Spellacy
+
+*/#headingoutline{margin-top:2em}#headingoutline .h1,#headingoutline .h2,#headingoutline .h3,#headingoutline .h4,#headingoutline .h5,#headingoutline .h6{color:#000;font-weight:bold}#headingoutline h2{display:none}#headingoutline .headinglevel,#headingoutline .missingheadinglevel{border-radius:5px;color:#fff;display:inline-block;line-height:normal;margin-right:.5em;padding:.5em}#headingoutline .headinglevel{background-color:#006400}#headingoutline .missingheadinglevel{background-color:#d20000}#headingoutline .h2{margin-left:2em}#headingoutline .h3{margin-left:4em}#headingoutline .h4{margin-left:6em}#headingoutline .h5{margin-left:8em}#headingoutline .h6{margin-left:10em}.loader{inline-size:8.125em;margin:2em 0;place-self:center}/*# sourceMappingURL=init.css.map */

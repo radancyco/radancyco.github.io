@@ -1,0 +1,968 @@
+---
+localcss: init.css
+title: "Accessibility Pulse Component"
+id: a11y-smoke-test
+---
+
+{% include variables.html %}
+
+<dialog class="a11y-pulse" dir="ltr" lang="en-US">
+
+    <div class="a11y-pulse__banner">
+        
+        <h1 class="a11y-pulse__label">
+            
+            <img alt="" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/icon-48.png"> A11y Pulse v{{ pulseVersion }}
+        
+        </h1>
+
+        <div class="a11y-pulse__controls">
+
+            <button aria-label="Minimize" class="a11y-pulse__btn a11y-pulse__btn--minimize"><img alt="" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/btn-minimize.png"><img alt="" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/btn-maximize.png"></button>
+            <button aria-label="Close Dialog" class="a11y-pulse__btn a11y-pulse__btn--close"><img alt="" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/btn-close.png"></button>
+
+        </div>
+
+    </div>
+
+    <div class="a11y-pulse__container">
+        
+        <div class="accordion" data-disable-anchor>
+
+            <h2 class="accordion__heading"><button id="alerts" class="accordion__toggle"><span>Alerts</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <h3>Issue(s) Found</h3>
+
+                <p>Page issues have been automatically detected. Please review and log them as soon as possible to ensure they're tracked and resolved promptly.</p>
+
+                <div id="magicbullet-message" class="a11y-pulse__info a11y-pulse__info--warning" hidden>
+
+                    <p><strong>Issue:</strong> MagicBullet is not currently installed on this site. Adding it will help address many product-related accessibility issues. See the <a href="https://radancy.dev/magicbullet/a11y/" target="_blank">support page {{ newWindow }}</a> for installation details.</p>
+
+                </div>
+
+                <div id="title-message" class="a11y-pulse__info a11y-pulse__info--warning" hidden>
+
+                    <p><strong>Issue:</strong> The page is missing a <code>title</code> element or is empty. All pages must include a proper title element with value. This not only benefits accessibility but SEO. See <a href="{{ site.url }}{{ site.baseurl }}/baseline/#page-titled" target="_blank">2.4.2: Page Titled (Level A) {{ newWindow}}</a> for more details.</p>
+
+                </div>
+
+                <div id="language-message" class="a11y-pulse__info a11y-pulse__info--warning" hidden>
+
+                    <p><strong>Issue:</strong> The document does not specify the current language in use. The <code>html</code> element must contain a <code>lang</code> attribute and proper language code. See <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html" target="_blank">Understanding SC 3.1.1: Language of Page (Level A) {{ newWindow }}</a> for more details.</p>
+
+                </div>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="automated-tests" class="accordion__toggle"><span>Automated Testing</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <h3>Mandatory: Development & QA</h3>
+
+                <p>Web pages must always be validated. Errors flagged by WAVE or heading validation tools must be addressed. Accessibility and QA engineers should link directly to validation reports in BugHerd or JIRA when filing issues.</p>
+
+                <ul>
+                    <li>{% include_relative /test/validation-wave.html %}</li>
+                    <li>{% include_relative /test/validation-heading.html %}</li>
+                </ul>
+
+                <div class="a11y-pulse__info a11y-pulse__info--reminder">
+
+                    <h3 class="a11y-pulse__info__heading">Development Reminder!</h3>
+    
+                    <p>Have you tested your work with Axe? Radancy developers are responsible for identifying and resolving all critical and serious accessibility issues. QA testing is optional at this time.</p>
+    
+                    <ul>
+                        <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US" target="_blank">Chrome {{ newWindow }}</a></li>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">FireFox {{ newWindow }}</a></li>
+                        <li><a href="https://microsoftedge.microsoft.com/addons/detail/axe-devtools-web-access/kcenlimkmjjkdfcaleembgmldmnnlfkn" target="_blank">Edge {{ newWindow }}</a></li>
+                    </ul>
+
+                    <div id="bugherd">
+
+                        <h3>Note on BugHerd</h3>
+
+                        <p>Bugherd may produce false positive in your results, so you can remove it before running Axe.</p>
+
+                        <p>{% include_relative /test/bugherd-remove.html %}</p>
+
+                    </div>
+    
+                </div>
+
+                <h3>Optional</h3>
+
+                <p>The following tests are available but optional.</p>
+
+                <ul>
+                    <li>{% include_relative /test/validation-css.html %}</li>
+                    <li>{% include_relative /test/validation-link.html %}</li>
+                    <li>{% include_relative /test/validation-spelling.html %}</li>
+                    <li>{% include_relative /test/validation-seo.html %}</li>
+                </ul>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="manual-test" class="accordion__toggle"><span>Manual Testing</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <h3>Mandatory: Development & QA</h3>
+
+                <p>Web pages may have deeper problems that automated tools cannot find, so manual testing methods will need to be performed.</p>
+
+                <details>
+                
+                    <summary>Non-text Content: Images</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>Review images and ensure that the aforementioned rules are met. You can run the following tests to review page images in more depth:</p>
+                    
+                        <ul>
+                            <li>{% include_relative /test/validation-image-internal.html %}</li>
+                            <li>{% include_relative /test/validation-image-external.html %}</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#non-text-content-images">1.1.1: Non-text Content (Alternative Text, Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Captions</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                
+                        <ul>
+                            <li>Video on a page should be manually reviewed. If the video includes spoken dialogue or important information, then it must contain captions <!-- and/or an audio description -->.</li>
+                            <li>Caption accuracy is also critical. If a video is found to have inaccurate captions, new captions must be produced. See <a href="{{ site.git-url }}/a11y/caption/" target="_blank">Creating Accessible Multimedia {{ newWindow }}</a>.</li>
+                            <li>Some advanced issues to be on the lookout for include:
+                
+                                <ul>
+                                    <li>Caption synchronization. Viewers can tell when captions are out of sync without sound.</li>
+                                    <li>Caption length. This makes a difference in preventing cognitive overload.</li>
+                                    <li>Caption position. Bottom except for temporary movement to the top for on-screen text like credits.</li>
+                                    <li>Sound.</li>
+                                    <li>Credits. Viewers want to see both captions and credits or whatever is on-screen.</li>
+                                    <li>Voice changes.</li>
+                                    <li>Speaker identification</li>
+                                    <li>Flow / movement</li>
+                                </ul>
+                
+                            </li>
+                        </ul>
+                
+                        <p><strong>Note:</strong> While not a failure here, providing transcripts with video and audio content is becoming a necessity and <strong>strongly</strong> encouraged. Including them would pass <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded">1.2.1 Prerecorded Audio-only and Video-only</a>, which is not currently included in our baselines, but will be eventually.</p>
+                
+                    </div>
+                
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#captions-pre-recorded" target="_blank">1.2.2: Captions (Prerecorded) (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Info and Relationships</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>HTML should be structured and labeled accordingly, so that the page makes visual <em>and structural</em> sense to everybody. Here are some important things to be on the lookout for during review:</p>
+                    
+                        <ul>
+                            <li>Is semantic markup being used to convey proper structure and meaning? {% include_relative /test/validation-w3c.html %}</li>
+                            <li>Are headings (<code>h1</code>-<code>h6</code>) being used properly to identify content hierarchy? {% include_relative /test/validation-heading.html %}</li>
+                            <li>Are lists being marked up and implemented correctly? {% include_relative /test/validation-list.html %}</li>
+                            <li>Are <code>label</code> elements associated with specific form controls? Is the <code>label</code> element being hidden with <code>display: none</code>? {% include_relative /test/validation-form.html %}</li>
+                            <li>Are <code>iframe</code> and multimedia elements, like <code>audio</code> and <code>video</code> properly labeled? {% include_relative /test/validation-iframe.html %}, {% include_relative /test/validation-title-attribute.html %}</li>
+                            <li>Is <code>table</code> markup being used to implement tabular data only? {% include_relative /test/validation-table.html %}</li>
+                            <li>Does the page identify its language properly via the <code>lang</code> attribute? Are shifts to other languages present within the page? {% include_relative /test/i18n-lang.html %}</li>
+                            <li>Does the page contain landmarks and regions? Are the labeled properly? Are there too many landmarks? {% include_relative /test/validation-landmark.html %}</li>
+                            <li>Is ARIA being used to provide roles, accessible names, and states to interface controls? {% include_relative /test/validation-aria.html %}</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#info-and-relationships" target="_blank">1.3.1: Info and Relationships (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Use of Color</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Manually ensure that color is not used as the sole method of conveying content or distinguishing visual elements. For example, saying "Please correct all text highlighted in red", would be a failure.</li>
+                            <li>For better usability, links should be <strong>underlined by default</strong>. Otherwise, link text must:
+                    
+                                <ol>
+                                    <li>Have a 3:1 contrast ratio with surrounding body text, and must present a visual indicator (typically an underline) when hovering over or receiving focus.</li>
+                                    <li>Both link and body text must have a 4.5:1 contrast ratio with the background (3:1 for large text).</li>
+                                    <li>Links in the header and footer are typically understood to be a link, so the above rules may not apply.</li>
+                                </ol>
+                    
+                            </li>
+                        </ul>
+                    
+                        {% include_relative /test/link-contrast.html id="uranus" %}
+                    
+                        <p>In addition to testing specific color contrast ratios, pages should always be reviewed under various color-blindness or low vision simulations. Any concerns should be flagged with DPM (Digital Project Manager) and added to your report.</p>
+                    
+                        {% include_relative /test/color-blindness.html %}
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#use-of-color" target="_blank">1.4.1: Use of Color (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Contrast</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                
+                        <p>Review page and test any <strong>text</strong> or <strong>images of text</strong> that you suspect may fail this guideline. Running {% include_relative /test/validation-wave.html %} may also be helpful.</p>
+                    
+                        {% include_relative /test/color-contrast.html id="saturn" %}
+                    
+                        <p>This rule does not apply to the following:</p>
+                    
+                        <ul>
+                            <li><strong>Large Text:</strong> Large text and images of large text have a contrast ratio of at least 3:1. <strong>Note:</strong> In WCAG, points are often referred to as the unit of measure in determining the size between regular and large text. However, pixels are much more common on the web. 18pt maps to 24px and 14pt to approximately 18.67px. In CSS, bold text typically has <code>font-weight: bold</code>, or <code>font-weight: 700</code> or greater.</li>
+                            <li><strong>Incidental:</strong> Text or images of text that are part of an inactive user interface component (i.e., disabled button), that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</li>
+                            <li><strong>Logotypes:</strong> Text that is part of a logo or brand name has no contrast requirement.</li>
+                        </ul>
+                    
+                        <p>In addition to testing specific color contrast ratios, pages should always be reviewed under various color-blindness or low vision simulations. Any concerns should be flagged with DPM and added to your report.</p>
+                    
+                        {% include_relative /test/color-blindness.html %}
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#contrast-minimum" target="_blank">1.4.3: Contrast (Minimum) (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Resize Text</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Use your browser settings to increase text size from 16 (100%) to 32 (200%). When 200% is reached, test to see if all page content can still be accessed and that site continues to be fully operable and usable.</li>
+                            <li>Captions and images of text are exempt from this rule.</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#resize-text" target="_blank">1.4.4: Resize Text (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Reflow</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Resize browser to 1280 x 1024 and then use <kbd>Control</kbd> (PC) or <kbd>Command</kbd> (Mac) and <kbd>+</kbd> keys to increase zoom level of browser viewport. When 400% is reached, test to see if all page features can be used at this size and that the user does not need to horizontally scroll.</li>
+                            <li>There are exceptions for content that requires horizontal and vertical scrolling to be understood. For example, tables, maps, or some charts, if they cannot be made responsive.</li>
+                            <li>Page zoom should never be intentionally disabled. If the page cannot be zoomed in on at all, it is failure.</li>
+                        </ul>
+                    
+                        <p>{% include_relative /test/reflow-1280-1024.html %} and then zoom in to 400%.</p>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#reflow" target="_blank">1.4.10: Reflow (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Text Spacing</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+
+                        <p>Ensure no loss of content or functionality occurs when:</p>
+
+                        <ul>
+                            <li>Line height (line spacing) to at least 1.5 times the font size.</li>
+                            <li>Spacing following paragraphs to at least 2 times the font size.</li>
+                            <li>Letter spacing (tracking) to at least 0.12 times the font size.</li>
+                            <li>Word spacing is at least 0.16 times the font size.</li>
+                        </ul>
+                    
+                        <p>{% include_relative /test/text-spacing.html %}</p>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#text-spacing" target="_blank">1.4.12: Text Spacing (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Non-text Contrast</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>Ensure that the visual presentation of the following have a contrast ratio of at least <strong>3:1</strong> against adjacent color(s):</p>
+                    
+                        <ul>
+                            <li><strong>User Interface (UI) Components:</strong> Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the browser.</li>
+                            <li><strong>Graphical Objects:</strong> Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.</li>
+                        </ul>
+                    
+                        <p>Review page and test any UI components or images that you suspect may fail this guideline. Running {% include_relative /test/validation-wave.html %} may also be helpful.</p>
+                    
+                        {% include_relative /test/color-contrast.html id="jupiter" %}
+                    
+                        <p>In addition to testing specific color contrast ratios, pages should always be reviewed under various color-blindness or low vision simulations. Any concerns should be flagged with DPM and added to your report.</p>
+                    
+                        {% include_relative /test/color-blindness.html %}
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#non-text-content" target="_blank">1.4.11: Non-text Contrast (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Keyboard</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Using your <kbd>Tab</kbd> key, navigate through the page and engage with interactive components. Anything that can be used with a pointing device, such as a mouse, must be equally usable via keyboard.</li>
+                            <li>Anything that receives focus must have an accessible name.</li>
+                            <li>Ensure that interactive components on the page work when accessed with <kbd>Enter</kbd> key. Buttons will be expected to work with both the <kbd>Enter</kbd> and <kbd>Spacebar</kbd> keys.</li>
+                            <li>See where focus is brought when certain components are engaged with. For example, what happens when a button is accessed and a modal is shown? Will continuing to tab take you behind the modal, or keep you within the modal itself?</li>
+                            <li>Does keyboard focus become trapped within any portion of the interface while tabbing? While this is acceptable behavior in modal dialogs, in other scenarios it could be an indication of a keyboard trap.</li>
+                            <li>Non-interactive elements, such as a <code>div</code>, should not receive keyboard focus while tabbing.</li>
+                        </ul>
+                    
+                        <p><strong>Note:</strong> If focus outlines have been suppressed (which is also a failure), you can override this to see where you are navigating by running {% include_relative /test/force-focus.html %}.</p>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#keyboard" target="_blank">2.1.1: Keyboard (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Pause, Stop, Hide & High Flash Rate</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Manually check to see if the page contains automatically moving content, such as a carousel or video. If such features have no mechanism to pause them, then this is a failure.</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#pause-stop-hide" target="_blank">2.2.2: Pause, Stop, Hide (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Three Flashes or Below Threshold</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>A high rate of flashing can cause potential harm, or even death, in individuals with epilepsy. If you suspect that any feature on a page is harmful, you can download and install <a href="https://trace.umd.edu/peat/" target="_blank">PEAT (Photosensitive Epilepsy Analysis Tool) {{ newWindow }}</a> to see if there is any risk or reach out to the <a href="mailto:a11y@radancy.com">Accessibility Team</a> to perform this test for you.</li>
+                        </ul>
+                    
+                        <p><strong>Important:</strong> Any suspect animation or failures should be immediately brought to the attention of <a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a>.</p>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#three-flashes-or-below" target="_blank">2.3.1: Three Flashes or Below Threshold (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Bypass Blocks</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Areas of a web page that may be cumbersome to navigate through via keyboard or assistive technology, must provide a mechanism to skip over that content. These "Skip" links should be available to <em>all</em> users when needed and not obscure other content on the page when visible. You will often find these links placed before a websites primary navigation, but they can be useful elsewhere. If it takes you a long time to tab through a certain portion of the interface, then this may be a good indication that a skip link is necessary.</li>
+                        </ul>
+                    
+                        <figure>
+                    
+                            <img alt="Screen grab of a website, with a 'Skip to Main Content' hyperlink." height="104" loading="lazy" src="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/img/example-skip-link.jpg" width="506">
+                    
+                            <figcaption>An example of a "Skip" link. These links, when present, will display when keyboard testing is performed. If it perfectly normal for the mechanism to be present for all user types.</figcaption>
+                    
+                        </figure>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#bypass-blocks" target="_blank">2.4.1: Bypass Blocks (Level A) {{ newWindow}}</a></p>
+            
+                </details>
+
+                <details>
+
+                    <summary>Page Titled</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>Ensure that all pages have a title and that it is useful and adequately describes the page at hand. Pages that are dynamic in nature, such as those found when utilizing React or similar frameworks, will need their <code>title</code> element continuously updated.</p>
+                    
+                        <p><strong>Note:</strong> This test is run automatically and will appear in the <a href="#alerts">Alert</a> section if a the page title is missing.</p>
+
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#page-titled" target="_blank">2.4.2: Page Titled (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Focus Order</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Navigate through the page using the <kbd>Tab</kbd> key on your keyboard, while being mindful of the focus order. Tab stops that are not in a fairly logical visual order should be considered a failure. You can view the focus order with the following tool:
+                    
+                                <ul>
+                                    <li>{% include_relative /test/focus-order.html %}</li>
+                                </ul>
+                    
+                            </li>
+                            <li>An interactive element with a tabindex other than 0 will interfere with a pages natural tab order and should be considered a failure. A tabindex with -1 will not interfere with tabbing. You can view tabindexs with the following tool:
+                    
+                                <ul>
+                                    <li>{% include_relative /test/tabindex.html %}</li>
+                                </ul>
+                    
+                            </li>
+                        </ul>
+                    
+                        <p><strong>Note:</strong> If focus outlines have been suppressed (which is also a failure), you can override this to see where you are navigating by running {% include_relative /test/force-focus.html %}.</p>
+    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#focus-order" target="_blank">2.4.3: Focus Order (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <details>
+
+                    <summary>Focus Visible</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <ul>
+                            <li>Using your <kbd>Tab</kbd> key, navigate through the page and review all focus rings of interactive elements. If focus ring is missing or an alternative and adequate focus ring or state has not been provided, then this is a failure.</li>
+                            <li>Any redesigned focus state must meet a <strong>3:1</strong> contrast ratio with its background color.</li>
+                            <li>Non-interactive elements, like a <code>div</code> element, should not contain a focus ring or state. The only exception to this rule is if the non-interactive element is accepting temporary focus via <code>tabindex="-1"</code>.</li>
+                        </ul>
+
+                        <p>Review and test page against criteria above. If you not sure if the state of the element or ring is meeting the correct ratio, you can test the colors manually:</p>
+                    
+                        {% include_relative /test/color-contrast.html id="mars" %}
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#focus-visible" target="_blank">2.4.7: Focus Visible (Level AA) {{ newWindow}}</a></p>
+
+                </details>
+
+                <h3>Development-Only Testing</h3>
+
+                <p>The current tests are currently optional for QA. Development must still ensure these ctiteria are being met.</p>
+
+                <details>
+
+                    <summary>Non-text Content: Components & Multimedia</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>Review page components and ensure that the aforementioned rules are met. Here are some important things to be on the lookout for during review:</p>
+                    
+                        <ul>
+                            <li>Are <code>label</code> elements associated with specific form controls? Is the <code>label</code> element being hidden with <code>display: none</code>? {% include_relative /test/validation-form.html %}</li>
+                            <li>Are placeholder attributes being used to stand-in for labels? Inappropriate use of placeholders <a href="https://www.deque.com/blog/accessible-forms-the-problem-with-placeholders/" target="_blank">can have a negative impact {{ newWindow }}</a> on the user experience.</li>
+                            <li>Are <code>iframe</code> and multimedia elements, like <code>audio</code> and <code>video</code> properly labeled? {% include_relative /test/validation-iframe.html %}, {% include_relative /test/validation-title-attribute.html %}</li>
+                            <li>Is ARIA being used to provide an accessible name for user interface controls? {% include_relative /test/validation-aria.html %}</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#non-text-content-components-multimedia" target="_blank">1.1.1: Non-text Content (Components and Multimedia, Level A) {{ newWindow}}</a></p>
+       
+                </details>
+
+                <details>
+
+                    <summary>Name, Role, Value</summary>
+
+                    <div class="a11y-pulse__info a11y-pulse__info--qa">
+
+                        <h3 class="a11y-pulse__info__heading">Testing</h3>
+                    
+                        <p>The usual suite of tests can be run to take a deep dive into the code. Be sure to ask yourself some of the following questions:</p>
+                    
+                        <ul>
+                            <li>Is ARIA being implemented on the page? Is it used correctly? Do accessible names, roles, values, states and properties make sense? Can HTML be used instead of a custom control? {% include_relative /test/validation-aria.html %}</li>
+                            <li>Is form markup correct? Is labeling present and correctly associated with its input field? {% include_relative /test/validation-form.html %}</li>
+                            <li>Do <code>iframe</code>'s have an accessible name? Does that name describe the contents of the <code>iframe</code> adequately? {% include_relative /test/validation-iframe.html %}</li>
+                        </ul>
+                    
+                    </div>
+
+                    <p><b>Related Baseline:</b> <a href="{{ site.url }}{{ site.baseurl }}/baseline/#name-role-value" target="_blank">4.1.2: Name, Role, Value (Level A) {{ newWindow}}</a></p>
+
+                </details>
+
+                <div class="a11y-pulse__info a11y-pulse__info--reminder">
+
+                    <h2 class="a11y-pulse__info__heading">Need More Help?</h2>
+
+                    <p>The <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank">WCAG Quick Reference {{ newWindow }}</a> is a helpful guide that explains web accessibility rules in a clear, easy-to-use format with tips and examples.</p>
+            
+                </div>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="audits" class="accordion__toggle"><span>Auditing Tools & Resources</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <h2>Tools for Specialists</h2>
+
+                <p>More advanced tools and resources for specialized accessibility testing.</p>
+
+                <details>
+
+                    <summary>Audit Setup</summary>
+
+                    <p>A collection of tools designed to assist in preparing, organizing, and executing accessibility audits efficiently.</p>
+    
+                    <ul>
+                        <li>
+                            
+                            {% include_relative /test/career-site-pages.html %} - Generates key career site pages for testing and PopeTech upload. Please allow up to several minutes to scan.
+
+                            <p aria-live="polite" class="status-message status-message--career-site-pages"></p>
+                            
+                            <div class="status-container status-container--career-site-pages"></div>
+    
+                        </li>
+                        <li>
+                            
+                            {% include_relative /test/career-site-images.html %} - Generates all images and alternative text used across a career site. Please allow up to several minutes to scan.
+                        
+                            <p aria-live="polite" class="status-message status-message--career-site-images"></p>
+                            
+                            <div class="status-container status-container--career-site-images"></div>
+                        
+                        </li>
+                        <li><a href="https://login.pope.tech/login?redirect=/" target="_blank">PopeTech {{ newWindow }}</a> - Automated web accessibility testing tool that scans websites for WCAG compliance issues using the WAVE engine, helping organizations identify and fix accessibility barriers.</li>
+                        <li><a href="{{ site.url }}{{ site.baseurl }}/audit/boilerplate" target="_blank">Testing Sheet {{ newWindow }}</a> - Bolierplate sheet used to set up a new audit.</li>
+                    </ul>
+    
+                </details>
+
+                <details>
+
+                    <summary>Browser Extensions and Desktop Tools</summary>
+
+                    <p>A selection of plugins and desktop applications designed to support accessibility testing and help identify potential issues across different environments.</p>
+
+                    <h3>Axe Extension</h3>
+
+                    <ul>
+                        <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US" target="_blank">Chrome {{ newWindow }}</a></li>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/" target="_blank">Firefox {{ newWindow }}</a></li>
+                        <li><a href="https://microsoftedge.microsoft.com/addons/detail/axe-devtools-web-access/kcenlimkmjjkdfcaleembgmldmnnlfkn" target="_blank">Edge {{ newWindow }}</a></li>
+                    </ul>
+
+                    <h3>IBM Equal Access Accessibility Extension</h3>
+
+                    <ul>
+                        <li><a href="https://chromewebstore.google.com/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp?hl=en-US" target="_blank">Chrome {{ newWindow }}</a></li>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/accessibility-checker/" target="_blank">Firefox {{ newWindow }}</a></li>
+                        <li><a href="https://microsoftedge.microsoft.com/addons/detail/ibm-equal-access-accessib/ompccpejakabkmfepbijnagedbdfldka" target="_blank">Edge {{ newWindow }}</a></li>
+                    </ul>
+
+                    <h3>ARC Toolkit Extension</h3>
+
+                    <ul>
+                        <li><a href="https://chromewebstore.google.com/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en" target="_blank">Chrome {{ newWindow }}</a></li>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/arc-toolkit/" target="_blank">Firefox {{ newWindow }}</a></li>
+                    </ul>
+
+                    <h3>Desktop</h3>
+
+                    <ul>
+                        <li><a href="https://accessibilityinsights.io/" target="_blank">Accessibility Insights for Windows {{ newWindow }}</a></li>
+                        <li><a href="https://www.tpgi.com/aviewer-2013/" target="_blank">Accessibility Viewer (aViewer) {{ newWindow }}</a></li>
+                        <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Colour Contrast Analyser (CCA) {{ newWindow }}</a></li>
+                        <li><a aria-describedby="peat-note" href="https://trace.umd.edu/peat/" target="_blank">PEAT (Photosensitive Epilepsy Analysis Tool) {{ newWindow }}</a></li>
+                        <li><a aria-describedby="pdf-note" href="https://pac.pdf-accessibility.org/en" target="_blank">PAC (PDF Accessibility Checker) {{ newWindow }}</a></li>
+                    </ul>
+
+                    <p id="peat-note"><strong>Note:</strong> Animations that fail PEAT should be brought to the attention of your team immediately and could be a legal concern. Please contact <a href="mailto:{{site.owner-email}}">{{site.owner-name}}</a> for more information.</p>
+    
+                    <p id="pdf-note"><strong>Note:</strong> PDF remediation is unlike web remediation and will need to go through a third party. Please contact <a href="mailto:{{site.owner-email}}">{{site.owner-name}}</a> for more information.</p>
+    
+                </details>
+
+                <details>
+    
+                    <summary>Screen Readers</summary>
+    
+                    <p>Accessibility testing is not complete until the work has been engaged with via a screen reader. Listening to your work is just as important as visual inspection.</p>
+    
+                    <ul>
+                        <li>
+                        
+                            <a href="https://support.freedomscientific.com/Downloads/JAWS" target="_blank">JAWS (Paid, 30 Minute Mode) {{ newWindow }}</a>
+    
+                            <ul>
+                                <li><a href="https://webaim.org/resources/shortcuts/jaws" target="_blank">Keyboard Shortcuts for JAWS {{ newWindow }}</a></li>
+                            </ul>
+    
+                        </li>
+                        <li>
+                        
+                            <a href="https://www.nvaccess.org/download/" target="_blank">NVDA (Free) {{ newWindow }}</a>
+    
+                            <ul>
+                                <li><a href="https://webaim.org/resources/shortcuts/nvda" target="_blank">Keyboard Shortcuts for NVDA {{ newWindow }}</a></li>
+                            </ul>
+    
+                        </li>
+                        <li><a href="https://support.apple.com/guide/mac-help/change-voiceover-preferences-accessibility-mh40578/mac" target="_blank">VoiceOver for Mac {{ newWindow }}</a></li>
+                        <li><a href="https://support.microsoft.com/en-us/windows/hear-text-read-aloud-with-narrator-040f16c1-4632-b64e-110a-da4a0ac56917" target="_blank">Windows Narrator {{ newWindow }}</a></li>
+                    </ul>
+    
+                </details>
+    
+                <details>
+    
+                    <summary>Disability User Testing</summary>
+    
+                    <p>Automated and manual testing are valuable, but nothing matches the lived experience of people with disabilities and the unique insights they can provide into our work. When needed, consider reaching out to one of the following organizations to help with usability testing:</p>
+    
+                    <ul>
+                        <li><a href="https://access-works.com/" target="_blank">Access Works {{ newWindow }} </a></li>
+                        <li><a href="https://theweco.com/" target="_blank">WeCo Digital Accessibility {{ newWindow }}</a></li>
+                    </ul>
+    
+                </details>
+    
+                <details>
+    
+                    <summary>Testing Knowledge Base, Resources, and Tools</summary>
+
+                    <p>Browse a curated collection of tools, references, and educational materials to deepen your understanding of accessibility testing and best practices.</p>
+    
+                    <h3>Acceptance Criteria & Use Cases</h3>
+
+                    <ul>
+                        <li><a href="http://atomica11y.com" target="_blank">Atomic: Acceptance Criteria Guide {{ newWindow }}</a></li>
+                        <li><a href="https://www.w3.org/WAI/people-use-web/" target="_blank">How People with Disabilities Use the Web (User Stories) {{ newWindow }}</a></li>
+                    </ul>
+
+                    <h3>Assistive Technology Support References</h3>
+
+                    <ul>
+                        <li><a href="https://a11ysupport.io/" target="_blank">ARIA Support Check {{ newWindow }}</a></li>
+                        <li><a href="https://thepaciellogroup.github.io/AT-browser-tests/" target="_blank">HTML Element Test File Index {{ newWindow }}</a></li>
+                        <li><a href="https://www.powermapper.com/tests/screen-readers/" target="_blank">PowerMapper - Screen Reader Reliability {{ newWindow }}</a></li>
+                        <li><a href="https://tetralogical.com/blog/2025/07/10/html-support/" target="_blank">Screen reader HTML support tables {{ newWindow }}</a>
+                        
+                            <ul>
+                                <li><a href="https://tetralogical.github.io/screen-reader-HTML-support/JAWS.html" target="_blank">JAWS HTML Support {{ newWindow }}</a></li>
+                                <li><a href="https://tetralogical.github.io/screen-reader-HTML-support/NVDA.html" target="_blank">NVDA HTML Support {{ newWindow }}</a></li>
+                            </ul>
+                        
+                        </li>
+                    </ul>   
+  
+                    <h3>Foundational Knowledge</h3>   
+                        
+                    <ul>
+                        <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.2 {{ newWindow }}</a>
+                        
+                            <ul>
+                                <li><a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank">How to Meet WCAG (Quick Reference) {{ newWindow }}</a></li>
+                            </ul>
+                        
+                        </li>
+                        <li><a href="https://www.w3.org/TR/wcag-3.0/" target="_blank">W3C Accessibility Guidelines (WCAG) 3.0 - Working Draft {{ newWindow }}</a>
+                        <li><a href="https://www.w3.org/TR/using-aria/" target="_blank">Using ARIA {{ newWindow }}</a></li>
+                        <li><a href="https://www.w3.org/TR/wai-aria-practices/" target="_blank">WAI-ARIA Authoring Practices {{ newWindow }}</a></li>
+                        <li><a href="https://www.w3.org/WAI/" target="_blank">Web Accessibility Initiative (WAI) {{ newWindow }}</a></li>
+                        <li><a href="https://www.w3.org/WAI/policies/" target="_blank">Web Accessibility Laws & Policies {{ newWindow }}</a></li>
+                    </ul>
+
+                    <h3>Tools</h3>
+
+                    <ul>
+                        <li><a href="https://a11y-tools.com/markup-de-crapulator/">HTML De-crapulator {{ newWindow }}</a></li>
+                    </ul>
+    
+                </details>
+
+                <details>
+                    
+                    <summary>W3C Validation Services</summary>
+
+                    <p>While it is <em>still</em> best practice for developers to continue to validate their markup, please note that as of WCAG 2.2, <strong>4.1.1 Parsing (Level A)</strong> has been removed. As a result, this is <strong>no longer a required QA test</strong>. Issues previously flagged under this guideline are generally caught through other testing methods.</p>
+                
+                    <ul>
+                        <li>{% include_relative /test/validation-w3c.html %}
+                    
+                            <h3>Advanced Validation</h3>
+
+                            <ul>
+                                <li>
+                            
+                                    {% include_relative /test/validation-w3c-dom.html %} - <span>Runs validation on entire DOM, including <strong>script generated content</strong>. Cannot be linked to.</span>
+            
+                                </li>
+                                <li>
+            
+                                    {% include_relative /test/validation-w3c-wcag-parse.html %} - <span>Not all errors may affect accessibility. Run on W3C Validator <em>results page</em> to remove non-WCAG issues.</span>
+            
+                                </li>
+                            </ul>
+                                    
+                        </li>
+                    </ul>
+
+                    {% include_relative /test/validation-markup.html %}
+
+                </details>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="quick-test" class="accordion__toggle"><span>Quick Test Access</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <p>This section contains easy access to all related tests.</p>
+
+                <h3>Contrast Checkers</h3>
+
+                {% include_relative /test/color-contrast.html id="pluto" %}
+
+                {% include_relative /test/link-contrast.html id="earth" %}
+
+                <h3>Color Blindness</h3>
+
+                {% include_relative /test/color-blindness.html %}
+
+                <h3>Focus Visibility & Order</h3>
+
+                <ul>
+                    <li>{% include_relative /test/force-focus.html %}</li>
+                    <li>{% include_relative /test/focus-order.html %}</li>
+                    <li>{% include_relative /test/tabindex.html %}</li>
+                </ul>
+
+                <h3>Images</h3>
+
+                <ul>
+                    <li>{% include_relative /test/validation-image-external.html %}</li>
+                    <li>{% include_relative /test/validation-image-internal.html %}</li>
+                </ul>
+
+                <h3>Internationalization (i18n)</h3>
+
+                <ul>
+                    <li>{% include_relative /test/i18n-rtl.html %}</li>
+                    <li>{% include_relative /test/i18n-ltr.html %}</li>
+                </ul>
+
+                <h3>Reflow and Text Spacing</h3>
+
+                <ul>
+                    <li>{% include_relative /test/reflow-1280-1024.html %}</li>
+                    <li>{% include_relative /test/text-spacing.html %}</li>
+                </ul>
+
+                <h3>Semantics & Structure</h3>
+
+                <ul>
+                    <li>{% include_relative /test/validation-aria.html %}</li>
+                    <li>{% include_relative /test/validation-form.html %}</li>
+                    <li>{% include_relative /test/validation-heading.html %}</li>
+                    <li>{% include_relative /test/validation-iframe.html %}</li>
+                    <li>{% include_relative /test/validation-landmark.html %}</li>
+                    <li>{% include_relative /test/validation-list.html %}</li>
+                    <li>{% include_relative /test/validation-table.html %}</li>
+                    <li>{% include_relative /test/validation-title-attribute.html %}</li>
+                </ul>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="best-practices" class="accordion__toggle"><span>Best Practices & Reminders</span></button></h2>
+
+            <div class="accordion__panel">
+
+                <p>Some of the following issues may not specifically fall under WCAG, but are considered industry-wide best practice and strongly suggested.</p>
+
+                <p><b>Who is responsible?</b> Everybody</p>
+
+                <h3>Accessibility Overlays</h3>
+
+                <p>Accessibility overlays are <strong>not supported</strong>, as they are not in line with Radancy's vision on how best to support people with disabilities in our digital offerings. In our experience, use of these tools may promote ableism, reinforce discrimination and are often perceived, particularly among the disabled and advocacy communities, as a performative commitment to accessibility. Companies using overlays have frequently been subjected to legal actions based on non-compliance with accessibility laws and principles. More information can be found here:</p>
+
+                <ul>
+                    <li><a href="https://shouldiuseanaccessibilityoverlay.com/" target="_blank">Should I Use An Accessibility Overlay? {{ newWindow }}</a></li>
+                    <li><a href="https://overlayfactsheet.com/" target="_blank">Overlay Fact Sheet {{ newWindow }}</a></li>
+                    <li><a href="https://overlayfalseclaims.com/" target="_blank">Overlay False Claims {{ newWindow }}</a></li>
+                </ul>
+
+                <p>Note that a legal waiver is now required if a client still wishes to place an accessibility overlay on their website.</p>
+
+                <h3>Carousels</h3>
+
+                <p>Radancy UI/UX discourages use of carousels whenever possible and instead recommends alternative forms of page layout. While carousels may be useful in certain situations, they can bury important content you may wish for users to access and engage with and are often inaccessible. Approach usage with caution. Check out <a href="https://shouldiuseacarousel.com/" target="_blank">Should I Use A Carousel? {{ newWindow }}</a> for more information.</p>
+
+                <p><strong>Important:</strong> Slick is a popular plugin that many developers use to easily implement a carousel. If a carousel is required, please only use the approved version, <a href="https://accessible360.github.io/accessible-slick/" target="_blank">Accessible Slick {{ newWindow }}</a>, in new implementations.</p>
+
+                <h3>PDF</h3>
+
+                <ul>
+                    <li>When possible, a PDF should never be used over HTML. PDF files often have accessibility issues that can only be remediated by a PDF specialist. Should PDF's require accessibility testing and/or remediation, please contact <a href="mailto:{{ site.owner-email }}">{{ site.owner-name }}</a>.</li>
+                    <li>When linking to a PDF (or other third-party documents), it is customary to include the file type, visually, within the link itself. For example: <code>&lt;a href="../docs/legal-waiver.pdf"&gt;Legal Waiver (PDF)&lt;/a&gt;</code>. PDF's are common in our footers but can also be found in other areas of our sites, pointing to brochures or other company related information. By including this helper text, we are setting a better expectation for users as to what will happen when the link is accessed.</li>
+                    <li>In some cases, legal documents may required to be a PDF, but even here it is encourgarged that HTML be used if possible.</li>
+                </ul>
+
+                <h3>New Tabs (Windows)</h3>
+
+                <p>Launching new tabs should only occur in the rarest of circumstances and, if required, be approached with great care and caution. You can learn more about this best practice by reading <a href="https://radancy.dev/guidance-on-new-windows/" target="_blank">Guidance on Designing For and Implementing New Windows {{ newWindow }}</a>.</p>
+
+            </div>
+
+             <h2 class="accordion__heading"><button id="utilities" class="accordion__toggle"><span>Utilities</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <p>A collection of utility tools designed to run directly on a web page to flag, inspect, and log issues.</p>
+
+                <ul>
+                    <li><button data-script="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/test/selector-picker.js">Selector Picker</button> - Use to copy a selector to your clipboard.</li>
+                    <li>{% include_relative /test/bugherd-remove.html %} - Bugherd may produce false positive in your results, so you can remove it before running Axe.</li>
+                </ul>
+
+            </div>
+
+            <h2 class="accordion__heading"><button id="ai" class="accordion__toggle"><span>Artificial Intelligence (AI)</span></button></h2>
+        
+            <div class="accordion__panel">
+
+                <h3>Alternative Text Generation</h3>
+
+                <p>Before using this feature, please confirm that you have <a href="https://radancy.dev/a11y/baseline/#non-text-content-images" target="_blank">read and understand {{ newWindow }}</a> when alternative text should and should not be used</a>. AI-generated alt text is provided as a <strong>suggestion only</strong> and must be reviewed, edited, or removed as appropriate. Not all images require alt text, and applying it incorrectly—such as to decorative or redundant images—can negatively impact accessibility.</p>
+
+                <p><input id="ai-img-optin" type="checkbox"> <label for="ai-img-optin">I understand my responsibility</label></p>
+
+                <button id="btn-gen-ai" class="inline-icon" data-script="{{ site.url }}{{ site.baseurl }}/a11y/pulse/component/test/ai-images.js" disabled>Generate Alternative Text {{ btnAI }}</button>
+    
+                <div class="a11y-pulse__info a11y-pulse__info--reminder">
+
+                    <h3 class="a11y-pulse__info__heading">API Key</h3>
+
+                    <p>To generate alternative text, you’ll need to create a free API token from <a href="https://console.groq.com/keys" target="_blank">Groq {{ newWindow }}</a>. Once you’ve got it, be sure to store it somewhere safe—you'll want it handy later.</p>
+
+                </div>
+
+                <h3>AI Agent Skills</h3>
+
+                <p>Specialised accessibility skills designed to guide AI agents in building and reviewing accessible web interfaces.</p>
+
+                <ul>
+                    <li><a href="https://intopia.digital/articles/can-ai-agent-skills-help-developers-ship-accessible-code/">Can AI Agent Skills Help Developers Ship Accessible Code? {{ newWindow }}</a>
+                    
+                        <ul>
+                            <li><a href="https://github.com/Intopia/intopia-web-accessibility-skill" target="_blank">Intopia Web Accessibility Skill {{ newWindow }}</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- TODO: include 2.5.3 Label in Name -->
+
+        <div class="a11y-pulse__footer">
+
+            <ul>
+                <li><a href="{{ site.url }}{{ site.baseurl }}" target="_blank">Accessibility at Radancy {{ newWindow }}</a></li>
+                <li><a href="{{ site.url }}{{ site.baseurl }}/a11y/pulse/about/" target="_blank">About A11y Pulse {{ newWindow }}</a></li>
+                <li><a href="https://jira.tmp.com/browse/TCDQ-60657" target="_blank">Report Issue {{ newWindow }}</a></li>
+            </ul>
+        
+            <p><small>&copy; {{ "now" | date: "%Y" }} Radancy. An equal opportunity employer.</small></p>
+        
+        </div>
+
+    </div>
+
+</dialog>
+
+<script>document.querySelector(".a11y-pulse").removeAttribute("open");</script>
+    

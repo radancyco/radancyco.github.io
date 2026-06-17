@@ -1,0 +1,40 @@
+/*!
+
+  Radancy: Accessibility Testing Baselines
+
+  Contributor(s):
+  Michael "Spell" Spellacy
+
+*/
+
+/* Accordion Override */
+
+.accordion {
+
+    /* Component Variables */
+    
+    --accordion-panel-default: #ffffff; /* Panel State (Default) */
+    --accordion-toggle-border-radius: 5px; /* Button Border Radius */
+    
+    /* Accordion Panel */
+    
+    &__panel {
+    border-radius: calc(5rem / 16);
+    border: calc(1rem / 16) #ccc solid;
+    margin-top: calc(0.5rem / 16);
+
+      > * {
+        
+        &:first-child {
+        margin-block-start: 0;
+        }
+
+        &:last-child {
+        margin-block-end: 0;
+        }
+
+      }
+
+    }
+    
+}

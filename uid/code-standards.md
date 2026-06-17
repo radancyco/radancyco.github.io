@@ -10,7 +10,7 @@ Please note that this is a living document that changes *frequently*. You may bo
 
 Help us make this document even better! [Contributions are encouraged!](#contributors)
 
-{% include toc.md %}
+{% include table-of-contents.md %}
 
 ## 1. General Concepts
 
@@ -57,7 +57,7 @@ coffee.shop.jpg
 
 {% endhighlight %}
 
-<p class="success"> Recommended</p>
+<p class="success">Recommended</p>
 
 {% highlight html %}
 
@@ -68,7 +68,7 @@ coffee-shop.jpg
 
 {% endhighlight %}
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 2. Optimization
 
@@ -80,9 +80,9 @@ Check each completed project using the [W3C Markup Validation Service](https://v
 
 Many browser add-ons and development tools have validation built right in, so be sure to use them.
 
-<section id="axe-core" class="a11y-info" markdown="1">
+<section id="axe-core" class="info info--a11y" markdown="1">
 
-<h2>Accessibility Testing</h2>
+<h2 class="info__heading">Accessibility Testing</h2>
 
 A really great tool to have at your disposal is Deque System's [aXe extension](https://www.deque.com/products/axe/). If you are interested in including aXe testing within your local development or build process, please see [Accessibility Testing with aXe-core](https://www.deque.com/products/axe-core).
 
@@ -118,9 +118,9 @@ Our performance budget is:
 
 Make all efforts to optimize video as much as possible—especially if it is being self-hosted. [Handbrake](https://handbrake.fr/) is a very useful tool for this task. There are lots of great tutorials on the web that can teach you how to use Handbrake and tighten up the screws for optimal video streaming and playback.
 
-<section id="video-captions" class="a11y-info" markdown="1">
+<section id="video-captions" class="info info--a11y" markdown="1">
 
-<h2>Video Captions</h2>
+<h2 class="info__heading">Video Captions</h2>
 
 Did you know that all video needs to be captioned in order to meet basic accessibility guidelines (See [Understanding Success Criterion 1.2.1](hhttps://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded))? If you are not hosting your video on Youtube, which can generate captions for you, then you will need to manually add captions. There are great services, like [Rev](https://www.rev.com/), that can perform this task for you very easily.
 
@@ -148,7 +148,7 @@ JavaScript should be minified if saving memory is worth sacrificing readability.
 
 All third-party libraries should be minified unless some sort of customization has been made to it and requires readability.
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 3. Markup
 
@@ -219,7 +219,7 @@ padding: .5em;
 
 {% endhighlight %}
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 4. CSS
 
@@ -391,7 +391,7 @@ display: block;
 
 {% endhighlight %}
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 5. SASS
 
@@ -437,7 +437,7 @@ scss/
 
 {% endhighlight %}
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 6. JavaScript
 
@@ -464,7 +464,7 @@ scss/
     * `CONSTANT_NAME` (UPPER_CASE)
 * End all variable assignments, function calls, and `return` statements with a `;`.
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 7. Images
 
@@ -476,9 +476,9 @@ While extracting images from a creative design, it's important to consider which
 * **.png** &mdash; PNG is a lossless format (larger file size) and is recommended in situations where the quality of the image is important, or where transparency is required. A possible use-case for a PNG image is a clients' logo, where the quality of the logo is important and may contain transparent sections around it.
 * **.svg** &mdash; SVG is an older vector image format that has recently become a more viable option for the web. SVG is recommended for more simple images that need to scale or retain sharpness on a number of different screen densities. SVG also supports transparency. A great use-case for the SVG format would be, again, a logo or icons.
 
-<section id="alternative-text" class="a11y-info" markdown="1">
+<section id="alternative-text" class="info info--a11y" markdown="1">
 
-<h2>Alternative Text</h2>
+<h2 class="info__heading">Alternative Text</h2>
 
 Alternative text is very important to assistive technology users. If an image has text in it or is relevant to the surrounding content, then these are cases where alternative text is typically required. Images within hyperlinks also require alternative text. If you are not sure about when to add alternative text, then check out this handy [Alternative Text Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
@@ -490,7 +490,7 @@ To aid in adhering to our [Performance Budget](#performance-budget), it's recomm
 
 If you're not using a build tool, such as [Grunt](https://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 8. Git
 
@@ -505,7 +505,7 @@ To configure Git to use the commit template:
 
 When you make a new commit, do not use the `-m` option. Instead just use `git commit` and let Git create a new commit message using the template.
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 9. Patterns & Anti-patterns
 
@@ -519,7 +519,7 @@ If new windows must be opened, please ensure they are being implemented properly
 
 The decision to remove outlines from focusable elements must be carefully considered. Users with low-vision may depend on outlines to navigate through the page they are visiting in their browser. Please note that many browsers may render outlines differently. If these default outlines are not desirable, a new default outline can be designed, but should be just as clear in bringing attention to the element that is being interacted with. Before taking this approach, keep in mind that many users may expect outlines to look and behave the same way that they do when they visit other websites, so changing outlines could have a negative impact on the user experience.
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
 ## 10. Publications
 
@@ -545,4 +545,4 @@ The decision to remove outlines from focusable elements must be carefully consid
 * [Responsive Web Design (2nd Edition) by Ethan Marcotte](https://www.abookapart.com/products/responsive-web-design)
 * [Using ARIA by Steve Faulkner and David MacDonald](https://www.w3.org/TR/using-aria/)
 
-[Return to Table of Contents](#toc){: .back-to-toc }
+[Return to Table of Contents](#table-of-contents){: .back-to-toc }

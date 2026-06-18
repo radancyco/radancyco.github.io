@@ -22,11 +22,6 @@
     border-radius: calc(5rem / 16);
     border: calc(1rem / 16) #ccc solid;
     margin-block-start: calc(0.5rem / 16);
-
-      > * + * {
-      margin-block-start: var(--flow-space, 1.5rem);
-      }
-
     }
     
 }

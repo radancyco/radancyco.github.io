@@ -215,7 +215,6 @@ margin-inline: 0;
   display: grid;
   margin-block: 0;
   border-radius: calc(6rem / 16);
-  overflow: hidden;
   position: relative;
 
     pre {
@@ -1126,6 +1125,7 @@ grid-area: 1 / 1;
 inline-size: calc(30rem / 16);
 inset-block-start: 1rem;
 inset-inline-end: 1rem;
+margin-inline-end: 1rem;
 justify-self: end;
 position: absolute;
 z-index: 1;

@@ -1,50 +1,75 @@
 
-.examples label, .examples input, .examples legend {
-display: block;
-font-size: 1.5rem;
-}
+.examples {
+
+    label, input, legend {
+    display: block;
+    font-size: 1.5rem;
+    }
+
+    label, legend {
+    font-weight: bold;
+    margin-bottom: 0;
+    text-box-trim: trim-both;
+    }
     
-.examples label, .examples legend {
-font-weight: bold;
-margin-bottom: 0;
-}
+    fieldset {
+    border-radius: calc(10rem / 16);
+    border: calc(1rem / 16) black solid;
+    padding: 1rem;
+    }
     
-.examples fieldset {
-border-radius: 10px;
-border: 1px #000 solid;
-padding: 1em;
-}
+    input {
+    border: calc(1rem / 16) black solid;
+    margin-block-start: .5rem;
+    padding: .5rem;
+    }
+
+    input:not(fieldset input) {
+    inline-size: stretch;
+
+        @media(min-width: 26.25rem) {
+
+            inline-size: calc(318rem / 16);
+
+        }
+
+    }
+
+    #phone-formatting {
+    margin: 0;
+    }
     
-.examples input {
-border: 1px #000 solid;
-padding: .5em;
-}
+    fieldset { 
+        
+        input {
+        display: inline-block;
+        margin: .5rem .5rem .5rem 0;
+        max-width: calc(100rem / 16);
+        }
+
+    }
     
-.examples fieldset input {
-max-width: 100px;
-margin: .5em .5em .5em 0;
-display: inline-block;
-}
+    .float-example {
+    position: relative;
+
+        label {
+        display: inline-block;
+        font-weight: normal;
+        inset-block-start: calc(5rem / 16);
+        inset-inline-start: calc(10rem / 16);
+        line-height: normal;
+        position: absolute;
+        transition: all .2s ease;
+        z-index: 2;
+        }
     
-.examples .float-example {
-position: relative;
+        input:focus ~ label, input:valid ~ label {
+        background-color: white;
+        font-size: .8rem;
+        inset-block-start: -9px;
+        padding: 0 1rem;
+        }
+
+    }
+
 }
-    
-.examples .float-example label {
-display: inline-block;
-font-weight: normal;
-inset-block-start: 8px;
-inset-inline-start: 10px;
-line-height: normal;
-position: absolute;
-transition: all .2s ease;
-z-index: 2;
-}
-    
-.examples .float-example input:focus ~ label,  .examples .float-example input:valid ~ label {
-background-color: #fff;
-font-size: .8rem;
-inset-block-start: -9px;
-padding: 0 1em;
-}
-    

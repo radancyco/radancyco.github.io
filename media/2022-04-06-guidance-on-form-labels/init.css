@@ -55,7 +55,7 @@
         label {
         display: inline-block;
         font-weight: normal;
-        inset-block-start: calc(5rem / 16);
+        inset-block-start: 5px;
         inset-inline-start: calc(10rem / 16);
         line-height: normal;
         position: absolute;

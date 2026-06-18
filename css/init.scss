@@ -243,7 +243,7 @@ gap: 1rem;
 grid-auto-flow: column;
 inline-size: fit-content;
 line-height: normal;
-scroll-margin: 2rem;
+scroll-margin-block-start: 2rem;
 text-wrap: balance;
 }
 
@@ -303,7 +303,7 @@ border: calc(1rem / 16) transparent solid;
 display: flow-root;
 margin-block-start: 1.5rem;
 padding: 0 1.5rem 1.5rem;
-scroll-margin: 2rem;
+scroll-margin-block-start: 2rem;
 transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
   // Note: Eventually replace with margin-trim when better supported.
@@ -909,7 +909,7 @@ container-type: inline-size;
 // Table of Contents
 
 .table-of-contents {
- scroll-margin: 2rem;
+ scroll-margin-block-start: 2rem;
 
   summary { 
   align-items: center;

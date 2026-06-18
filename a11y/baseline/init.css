@@ -18,7 +18,7 @@
     
     /* Accordion Panel */
     
-    &__panel {
+    .accordion__panel {
     border-radius: calc(5rem / 16);
     border: calc(1rem / 16) #ccc solid;
     margin-block-start: calc(0.5rem / 16);

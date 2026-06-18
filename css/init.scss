@@ -909,6 +909,7 @@ container-type: inline-size;
 // Table of Contents
 
 .table-of-contents {
+ scroll-margin: 2rem;
 
   summary { 
   align-items: center;
@@ -922,7 +923,6 @@ container-type: inline-size;
   line-height: normal;
   list-style: none;
   padding: 1rem;
-  scroll-margin: 2rem;
 
     &::-webkit-details-marker {
     display: none;

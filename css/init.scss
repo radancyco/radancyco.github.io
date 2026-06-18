@@ -203,7 +203,7 @@ dl {
   }
  
   dd {
-  margin-inline-start: .5em;
+  margin-inline-start: .5rem;
   }
 
 }
@@ -490,7 +490,7 @@ border-radius: calc(5rem / 16);
 display: grid;
 gap: 1rem;
 grid-template-columns: auto 1fr;
-padding: 1em;
+padding: 1rem;
 position: relative;
 transition: 300ms;
 
@@ -577,10 +577,10 @@ text-wrap: balance;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    block-size: calc(32em / 16);
+    block-size: calc(32rem / 16);
     content: "";
     display: block;
-    inline-size: calc(32em / 16);
+    inline-size: calc(32rem / 16);
     }
   
   }
@@ -774,7 +774,7 @@ align-items: center;
 border-block-end: calc(4rem / 16) var(--highlight-color) solid;
 display: inline-flex;
 font-size: 0.92rem;
-padding-block-end: 1em;
+padding-block-end: 1rem;
 
   img {
   border-radius: 50%;
@@ -787,7 +787,7 @@ padding-block-end: 1em;
 
   ul {
   list-style: none;
-  margin: 0 0 0 1em;
+  margin: 0 0 0 1rem;
   padding: 0;
   }
   
@@ -875,7 +875,7 @@ background-color: var(--highlight-color);
     ul {
     list-style: none;
     margin: 0;
-    padding: 0 0 0 1.6em;
+    padding: 0 0 0 1.6rem;
     }
   
     a {
@@ -989,7 +989,6 @@ padding: 1rem;
 
 }
 
-
 // Component Functions
 
 .component-functions {
@@ -997,8 +996,8 @@ margin: 2em 0;
     
   ul {
   display: grid;
-  gap: .5em;
-  grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fill, minmax(13.25rem, 1fr));
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1131,6 +1130,7 @@ position: absolute;
 
   .tablist & { 
   position: sticky;
+  inset-block-start: 1rem;
   }
 
   svg {

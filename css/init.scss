@@ -216,6 +216,11 @@ margin-inline: 0;
   margin-block: 0;
   border-radius: calc(6rem / 16);
   position: relative;
+
+    pre {
+    grid-area: 1 / 1;
+    }
+
   }
 
   img {
@@ -1104,11 +1109,6 @@ margin: 2em 0;
 
   .highlight {
   min-block-size: 20rem;
-
-    pre {
-    margin-block-start: -1.5rem;
-    }
-
   }
 
 }

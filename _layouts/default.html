@@ -1,14 +1,14 @@
 {%- if site.repo == "https://github.com/radancyco/component-library" -%}
 
-  {% assign current_id = page.id %}
-  {% assign module = page.module %}
-  {% assign component = site.data.module[module] | where: "id", current_id | first %}
+  {%- assign current_id = page.id %}
+  {%- assign module = page.module %}
+  {%- assign component = site.data.module[module] | where: "id", current_id | first %}
 
-  {% assign selectedComponents = site.data.module.components %}
-  {% assign selectedFeeds = site.data.module.feeds %}
-  {% assign allSelections = selectedComponents | concat: selectedFeeds %}
+  {%- assign selectedComponents = site.data.module.components %}
+  {%- assign selectedFeeds = site.data.module.feeds %}
+  {%- assign allSelections = selectedComponents | concat: selectedFeeds %}
 
-  {%- include icon.html -%}
+  {%- include icon.html %}
 
 {%- endif -%}
 
@@ -95,19 +95,19 @@
 
   {%- for component in allSelections %}
 
-    {%- if component.id == current_id -%}
+    {%- if component.id == current_id %}
 
-      {%- for example in component.examples -%}
+      {%- for example in component.examples %}
 
-        {%- if example.customcss -%}
+        {%- if example.customcss %}
 
-          <link href="{{ example.customcss }}.css" rel="stylesheet">
+        <link href="{{ example.customcss }}.css" rel="stylesheet">
 
-        {%- endif -%}
+        {%- endif %}
 
-      {%- endfor -%}
+      {%- endfor %}
 
-    {%- endif -%}
+    {%- endif %}
 
   {%- endfor %}
 
@@ -415,19 +415,19 @@
 
   {%- for component in allSelections %}
 
-    {% if component.id == current_id %}
+    {%- if component.id == current_id %}
 
-      {% for example in component.examples %}
+      {%- for example in component.examples %}
 
-        {% if example.customjs %}
+        {%- if example.customjs %}
   
-          <script src="{{ example.customjs }}"></script>
+        <script src="{{ example.customjs }}"></script>
 
-        {% endif %}
+        {%- endif %}
 
-      {% endfor %}
+      {%- endfor %}
 
-    {% endif %}
+    {%- endif %}
 
   {%- endfor %}
 

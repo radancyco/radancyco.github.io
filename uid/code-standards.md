@@ -183,7 +183,7 @@ All third-party libraries should be minified unless some sort of customization h
 
 <p class="alert">Not Recommended: Using a span</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .nav-item {
 padding: .5em;
@@ -202,7 +202,7 @@ padding: .5em;
 
 <p class="success">Recommended: Using a pseudo-element</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .nav-item {
 padding: .5em;
@@ -229,7 +229,7 @@ padding: .5em;
 
 **Always include an author comment block at the top of your CSS.** This is an important resource for any developers who work on the code after you.
 
-{% highlight css %}
+{% highlight scss %}
 
 /*!
 
@@ -280,7 +280,7 @@ Comments: [Succinct description of tasks performed]
 * Use single quotes around strings (or URLs), unless the single quotes would need to be escaped.
     * E.g. `url('hello-world.png');` or `content: "'this has single quotes'";`.
 
-{% highlight css %}
+{% highlight scss %}
 
 /* Example */
 
@@ -309,7 +309,7 @@ At most, aim for three levels or less of selector specificity, not counting pseu
 
 <p class="alert">Not Recommended</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .one .two .three .four div {
 display: block;
@@ -319,7 +319,7 @@ display: block;
 
 <p class="success">Recommended</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .one .two div {
 display: block;
@@ -339,7 +339,7 @@ display: block;
 
 <p class="alert">Not Recommended</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .parent__child {}
 
@@ -351,7 +351,7 @@ display: block;
 
 <p class="success">Recommended</p>
 
-{% highlight css %}
+{% highlight scss %}
 
 .parent-name-child-name {}
 

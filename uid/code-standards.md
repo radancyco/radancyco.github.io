@@ -349,7 +349,7 @@ display: block;
 
 {% endhighlight %}
 
-<p class="success">Recommended</p>
+<p class="success">Recommended</p> 
 
 {% highlight scss %}
 

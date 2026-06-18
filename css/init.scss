@@ -693,8 +693,7 @@ text-wrap: balance;
 
 }
 
-.alert {
-color: #d20000;
+.alert, .success {
 font-style: italic;
 text-decoration: none;
 
@@ -702,6 +701,14 @@ text-decoration: none;
   color: inherit;
   }
 
+}
+
+.alert {
+color: #d20000;
+}
+
+.success {
+color: green;
 }
 
 // Used for web components

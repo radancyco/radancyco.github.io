@@ -559,6 +559,10 @@ z-index: 2147483647;
     margin-block-start: var(--flow-space, 1rem);
     }
 
+    details {
+    margin-block-end: 1rem;
+    }
+
     h2, h3, h4, h5, h6 {
     align-items: center;
     color: inherit;
@@ -571,20 +575,20 @@ z-index: 2147483647;
     text-wrap: balance;
     }
 
-    p:only-child, *:not(p):last-child {
-    margin-block-end: 0;
-    }
-
     img {
     border: calc(1rem / 16) black solid;
     }
 
-    video {
-    max-inline-size: calc(800rem / 16);
+    p:only-child, *:not(p):last-child {
+    margin-block-end: 0;
     }
 
-    details {
-    margin-block-end: 1rem;
+    ul, ol {
+    padding-inline-start: 1rem;
+    }
+
+    video {
+    max-inline-size: calc(800rem / 16);
     }
 
     &__heading {

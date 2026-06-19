@@ -21,7 +21,7 @@
     input {
     border: calc(1rem / 16) black solid;
     margin-block-start: .5rem;
-    padding: .5rem;
+    padding: 8px;
     }
 
     input:not(fieldset input) {

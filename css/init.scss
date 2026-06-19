@@ -804,7 +804,10 @@ padding-block-end: 1rem;
 // Primary Header & (Temporary) Navigation
 
 .primary-header {
-background-color: var(--highlight-color);
+background-color: white;
+border-block-end-width: 2px;
+border-block-end-style: solid;
+border-image: linear-gradient(to right, #8900f700 0%, #8900f7 10%, #08bff7 90%, #08bff700 100%) 0 0 1;
 
   &__container {
   margin: 0 auto;
@@ -813,7 +816,7 @@ background-color: var(--highlight-color);
   }
   
   &__logo {
-  color: white;
+  color: var(--highlight-color);
   display: inline-block;
   font-size: calc(12.8rem / 16);
   letter-spacing: calc(1rem / 16);
@@ -823,11 +826,11 @@ background-color: var(--highlight-color);
 
     a {
     display: block;
-    color: white;
+    color: var(--highlight-color);
     }
   
     img {
-    inline-size: calc(220rem / 16);
+    inline-size: calc(160rem / 16);
     }
   
     span {
@@ -870,9 +873,8 @@ background-color: var(--highlight-color);
     }
   
     &__content {
-    background-color: white;
-    border-radius: calc(5rem / 16);
-    border: calc(1rem / 16) var(--highlight-color) solid;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #8900f7 0%, #8900f7 10%, #08bff7 90%, #08bff7 100%) border-box;
+    border: calc(1rem / 16) solid transparent;
     display: none;
     padding: 1rem;
     }

@@ -636,8 +636,8 @@ z-index: 2147483647;
     }
 
     &--experimental {
-    background-color: color-mix(in srgb, var(--highlight-color) 35%, white);
-    border-color: var(--highlight-color);
+    background-color: color-mix(in srgb, var(--primary-color) 35%, white);
+    border-color: var(--primary-color);
 
       .a11y-pulse__info__heading {
 
@@ -707,7 +707,7 @@ z-index: 2147483647;
 
     &--qa {
     background-color: #dfc9f8;
-    border-color: var(--highlight-color);
+    border-color: var(--primary-color);
 
       .a11y-pulse__info__heading {
       

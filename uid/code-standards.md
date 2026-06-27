@@ -36,7 +36,7 @@ See [{{ site.company-name }} Support]({{ site.company-url }}/support/#operating-
 
 ### 1.3 Browser Support
 
-{{ site.company-name }} supports the **current** and **prior** major release versions of all browsers. Corresponding to the date in which your project has launched, we test all development in the following:
+{{ site.company-name }} supports the **current** and **prior** major release versions of all browsers, with the exception of Internet Explorer. 
 
 See [{{ site.company-name }} Support]({{ site.company-url }}/support/#browser-support) for more details.
 
@@ -57,7 +57,7 @@ coffee.shop.jpg
 
 {% endhighlight %}
 
-<p class="success">Recommended</p>
+<p class="success"> Recommended</p>
 
 {% highlight html %}
 
@@ -136,13 +136,17 @@ Do not minify HTML.
 
 CSS should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large CSS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted.
 
+Site Admin utilizes a CSS preprocessor, so no CSS output file will exist for Career Sites.
+
 #### 2.6.3 Sass (SCSS)
 
-SCSS should never be minified. If the server has the ability to tie in a CSS preprocessor, no CSS output file should exist. However, if server-side CSS preprocessing is not available, all compiled CSS should be minified.
+SCSS should never be minified.
 
 #### 2.6.4 JavaScript
 
-JavaScript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
+JavaScript should be minified if saving memory is worth sacrificing readability. Such occasions would include extremely large JS files, or when minifying the code would push the site size under the designated performance budget and all other optimizations have been exhausted. 
+
+Another occasion would include a custom library commonly used on many sites with a solid understanding of how to implement it among all team members.
 
 #### 2.6.5 Third-Party Libraries
 
@@ -156,7 +160,7 @@ All third-party libraries should be minified unless some sort of customization h
 
 #### 3.1.1 HTML Spacing & Line Breaks
 
-* Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any development environment.
+* Use soft tabs with a 4-space indentation. This is important because it's the only way to guarantee that the code will look the same in any development environment.
 * Do not leave white-space at the end of any lines.
 
 #### 3.1.2 HTML Formatting
@@ -253,7 +257,7 @@ Comments: [Succinct description of tasks performed]
 
 #### 4.1.2 CSS Spacing & Line Breaks
 
-* Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
+* Use soft tabs with a 4-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
 * Align all rule declarations to the left edge of the editor.
 * Do not leave white-space at the end of any lines.
 * Use a space before `{` in rule declarations.
@@ -332,28 +336,28 @@ display: block;
 * CSS selectors should be semantic, describing the elements' function. Semantic names do not include:
     * the name of a person.
     * an elements' placement on the page, such as `.left` or `.top`.
-* Selectors should use hyphens to separate levels.
+* Selectors should use hyphens to separate levels and underscores, if using BEM Naming.
     * E.g. `.job-group-title`.
-* Selectors should not include underscores or any uncommon Unicode characters.
+* Selectors should not include any uncommon Unicode characters.
 * Selectors should not use camelCase.
 
 <p class="alert">Not Recommended</p>
 
 {% highlight scss %}
 
-.parent__child {}
+.parentChild {}
 
-.parent_child {}
+.parent@ {}
 
 .left-box {}
 
 {% endhighlight %}
 
-<p class="success">Recommended</p> 
+<p class="success">Recommended</p>
 
 {% highlight scss %}
 
-.parent-name-child-name {}
+.block__element-modifier {}
 
 .related-links {}
 
@@ -404,7 +408,7 @@ The same rules for CSS also apply to SASS, unless specified below.
 #### 5.1.1 SASS Spacing & Line Breaks
 
 * Align first-level rule declarations to the left edge of the editor.
-* Nested rule declarations should have two-space indentation from the edge of the parent.
+* Nested rule declarations should have 4-space indentation from the edge of the parent.
 * Put one blank line between property declarations and nested rule declarations.
 
 #### 5.1.2 SASS Formatting
@@ -416,36 +420,13 @@ The same rules for CSS also apply to SASS, unless specified below.
 
 * At most, aim for three levels of selector specificity, not counting pseudo selectors, media queries, or mixins.
 
-#### 5.1.4 SASS Variables, Functions, and Mixins
-
-* Variables, functions, and mixins should follow the same naming rules as CSS selectors.
-* Variables, functions, and mixins should be kept together in their respective groupings.
-    * E.g. `variables.scss`, `functions.scss`, `mixins.scss`.
-
-### 5.2 SASS Directory Structure
-
-It is very important that all UI Developers have a consistent and uniform structure for their SASS directories. You will find yourself using the same base SASS files for multiple projects.
-
-{% highlight html %}
-
-scss/
-├── core/        Variables, functions, mixins
-├── partials/    Global styles
-├── vendor/      Vendor-provided styles, e.g. Flexslider
-├── views/       Page-specific styles
-└── global.scss  Primary SASS file
-
-{% endhighlight %}
-
-[Return to Table of Contents](#table-of-contents){: .back-to-toc }
-
 ## 6. JavaScript
 
 ### 6.1 JavaScript Coding Style
 
 #### 6.1.1 JavaScript Spacing & Line-Breaks
 
-* Use soft tabs with a 2-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
+* Use soft tabs with a 4-space indentation. This is important because it's the only way to guarantee that the code will look the same in any environment.
 * Do not leave white-space at the end of any lines.
 * Separate function declarations and control statements (`if`, `switch`, etc.) with a blank line, unless the function is a closure.
 * Curly braces (`{}`) can be omitted in `if` statements if the statement can comfortably fit on one line.
@@ -457,11 +438,8 @@ scss/
 #### 6.1.2 JavaScript Formatting
 
 * Use single-quotes around strings.
-* Declare new variables with `var`.
-* Use the following conventions for naming:
+* Use the following convention for naming:
     * `variableOrFunctionName` (camelCase)
-    * `ClassName` (PascalCase/CapitalCase)
-    * `CONSTANT_NAME` (UPPER_CASE)
 * End all variable assignments, function calls, and `return` statements with a `;`.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
@@ -496,14 +474,8 @@ If you're not using a build tool, such as [Grunt](https://gruntjs.com/), you can
 
 ### 8.1 Git Commits
 
-When committing changes to a repository, use the standardized commit message template to detail your changes.
+When committing changes to a repository, be sure to stage all changes that are logically related to each other. Your commits should only contain changes for one topic. Do not mix multiple topics into one commit. Make your commits frequently and include clear and concise commit messages. This will create a well-formed commit that will make it easy to track the history of your project, keep any collaborators updated, and revert changes, if necessary.
 
-To configure Git to use the commit template:
-
-1. [Download the standardized commit message template](../../docs/commit-template.txt) and place it in a permanent location on your local hard drive.
-1. From your shell, type `git config --global commit.template path/to/commit/message`. Be sure to replace `path/to/commit/message` with the actual path to the commit message template.
-
-When you make a new commit, do not use the `-m` option. Instead just use `git commit` and let Git create a new commit message using the template.
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
@@ -513,7 +485,7 @@ Through the trial and errors of our community or just plain common sense, we hav
 
 ### 9.1 New Window Links
 
-If new windows must be opened, please ensure they are being implemented properly, otherwise it is often best to avoid the practice entirely. Before making a decision, please read [The Last Word (Maybe) on Opening New Windows](https://michaelspellacy.com/the-last-word-on-opening-new-windows/).
+If new windows must be opened, please ensure they are being implemented properly, otherwise it is often best to avoid the practice entirely. Before making a decision, please read [Guidance on Designing For and Implementing New Windows](/guidance-on-new-windows/).
 
 ### 9.2 Focus Outlines
 
@@ -521,16 +493,11 @@ The decision to remove outlines from focusable elements must be carefully consid
 
 [Return to Table of Contents](#table-of-contents){: .back-to-toc }
 
-## 10. Publications
-
-### 10.1 Required Reading
+## 10. Recommended Reading
 
 * [A Dao of Web Design by John Allsopp](https://alistapart.com/article/dao)
 * [Ethical Design Manifesto](https://2017.ind.ie/)
 * [Resilient Web Design by Jeremy Keith](https://resilientwebdesign.com/)
-
-### 10.2 (Highly) Recommended Reading
-
 * [Accessibility for Everyone by Laura Kalbag](https://abookapart.com/products/accessibility-for-everyone/)
 * [Adaptive Web Design (1st Edition) by Aaron Gustafson](https://adaptivewebdesign.info/1st-edition/)
 * [Anything written by Scott O'Hara](https://www.scottohara.me/writing/)

@@ -2,12 +2,21 @@ name: Accessibility Scanner
 on: workflow_dispatch
 
 jobs:
-  accessibility_scanner:
+  scan_radancy_dev:
     runs-on: ubuntu-latest
     steps:
       - uses: github/accessibility-scanner@v3
         with:
           urls: https://radancy.dev
-          repository: radancyco/radancy.github.io
+          repository: radancyco/radancyco.github.io
           token: ${{ secrets.GH_TOKEN }}
           cache_key: a11y-scan-v1
+  scan_component_library:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/accessibility-scanner@v3
+        with:
+          urls: https://radancy.dev/component-library
+          repository: radancyco/component-library
+          token: ${{ secrets.GH_TOKEN }}
+          cache_key: a11y-scan-v2

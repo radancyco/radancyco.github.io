@@ -11,14 +11,3 @@ jobs:
           repository: radancyco/radancyco.github.io
           token: ${{ secrets.GH_TOKEN }}
           cache_key: a11y-scan-v1
-
-  scan_component_library:
-    runs-on: ubuntu-latest
-    needs: scan_radancy_dev
-    steps:
-      - uses: github/accessibility-scanner@v3
-        with:
-          urls: https://radancy.dev/component-library
-          repository: radancyco/component-library
-          token: ${{ secrets.GH_TOKEN }}
-          cache_key: a11y-scan-v2

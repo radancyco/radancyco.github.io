@@ -1,5 +1,5 @@
 name: Accessibility Scanner
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   scan_radancy_dev:
@@ -7,7 +7,14 @@ jobs:
     steps:
       - uses: github/accessibility-scanner@v3
         with:
-          urls: https://radancy.dev
+          urls: |
+            https://radancy.dev
+            https://radancy.dev/a11y/
+            https://radancy.dev/a11y/pulse/
+            https://radancy.dev/a11y/pulse/component/
+            https://radancy.dev/a11y/baseline/
+            https://radancy.dev/bookmarklet/
+            https://radancy.dev/uid/
           repository: radancyco/radancyco.github.io
           token: ${{ secrets.GH_TOKEN }}
           cache_key: a11y-scan-v1

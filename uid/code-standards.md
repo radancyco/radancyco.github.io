@@ -461,7 +461,7 @@ Alternative text is very important to assistive technology users. If an image ha
 
 ### 7.2 Image Sprites
 
-To aid in adhering to our [Performance Budget](#performance-budget), it's recommended that logos, icons, and other small images be combined into a sprite. This results in a reduction in page requests, as well as a small reduction in file size.
+To aid in adhering to our [Performance Budget](#23-performance-budget), it's recommended that logos, icons, and other small images be combined into a sprite. This results in a reduction in page requests, as well as a small reduction in file size.
 
 If you're not using a build tool, such as [Grunt](https://gruntjs.com/), you can create a sprite in an image editing program or use a [sprite generator](http://spritegen.website-performance.org/).
 

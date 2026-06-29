@@ -1,5 +1,5 @@
 name: Accessibility Scanner
-on: workflow_dispatch
+on: push
 
 jobs:
   scan_radancy_dev:

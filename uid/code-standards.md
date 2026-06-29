@@ -6,10 +6,6 @@ title: User Interface Standards and Guidelines
 
 This document defines best practices for HTML, CSS, and JavaScript development, as well as other industry wide best practices that have been adopted by {{ site.company-name }} designers and developers. This document seeks to foster a standard approach to user interace development and should be shared with any designers and developers who produce user interfaces within our company as well as with vendors who produce interfaces for {{ site.company-name }}.
 
-Please note that this is a living document that changes *frequently*. You may bookmark it and check back on a regular basis or [subscribe to notifications]({{ site.repo }}/subscription) for this repository.
-
-Help us make this document even better! [Contributions are encouraged!](#contributors)
-
 {% include table-of-contents.md %}
 
 ## 1. General Concepts
@@ -18,7 +14,7 @@ At {{ site.company-name }}, we embrace web standards and keep up-to-date with th
 
 * HTML5
 * CSS3
-* JavaScript (Latest))
+* JavaScript (Latest)
 * jQuery (Latest)
 
 ### 1.1 Accessibility
@@ -29,6 +25,7 @@ See [{{ site.company-name }} Support]({{ site.company-url }}/support/#accessibil
 * [How to Meet WCAG 2.2](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2)
 * [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/)
 * [Techniques for WCAG 2.2](https://www.w3.org/WAI/WCAG22/Techniques/)
+* [Using ARIA](https://www.w3.org/TR/using-aria/)
 
 ### 1.2 Operating System Support
 
@@ -36,7 +33,7 @@ See [{{ site.company-name }} Support]({{ site.company-url }}/support/#operating-
 
 ### 1.3 Browser Support
 
-{{ site.company-name }} supports the **current** and **prior** major release versions of all browsers, with the exception of Internet Explorer. 
+{{ site.company-name }} supports the **current** and **prior** major release versions of all browsers, with the exception of Internet Explorer.
 
 See [{{ site.company-name }} Support]({{ site.company-url }}/support/#browser-support) for more details.
 
@@ -107,7 +104,7 @@ Our performance budget is:
 
 ### 2.4 Image Compression
 
-**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also contribute to adhering to our [Performance Budget](#performance-budget). There are various tools for this including (but not limited to):
+**All** images should be run through an image optimization tool in order to reduce their file sizes for the web. In many cases, image file sizes can be drastically reduced, resulting in faster load times and helping to deliver the best experience possible to the user. This will also contribute to adhering to our [Performance Budget](#23-performance-budget). There are various tools for this including (but not limited to):
 
 * [Tiny PNG](https://tinypng.com/) (Online Tool, not only png)
 * [Compressor.io](https://compressor.io/) (Online Tool)

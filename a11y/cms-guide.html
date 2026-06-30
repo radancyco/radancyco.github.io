@@ -2,7 +2,7 @@
 title: Accessibility for Radancy CMS Publishers
 ---
 
-<h2>Why is Accessibility Important?</h2>
+<h2 id="why-is-accessibility-important">Why is Accessibility Important? {% include permalink.html hash="why-is-accessibility-important" %}</h2>
 
 <ul>
     <li>Nearly 20% of the world population is disabled - 1 billion people! (WHO)</li>
@@ -12,11 +12,11 @@ title: Accessibility for Radancy CMS Publishers
     <li>Risk of Litigation - Over 4,500 web accessibility lawsuits filed under ADA in 2021 - Up from 50 in 2014 and a 15% increase from prior year!</li>
 </ul>
 
-<h2>WYSIWYG ≠ Perfection</h2>
+<h2 id="wysiwyg-perfection">WYSIWYG ≠ Perfection {% include permalink.html hash="wysiwyg-perfection" %}</h2>
 
 <p>WYSIWYG (What You See Is What You Get) editors are useful tools that allow for greater, customized control over our digital content, but the output of that content and how it imapcts disabled users, is only as good as the effort an author puts in. The greater care one takes for the craftsmanship of their content, the more accessible it will be. This document will help you to address common issues that impact disabled users.</p>
 
-<h2>Common Issues</h2>
+<h2 id="common-issues">Common Issues {% include permalink.html hash="common-issues" %}</h2>
 
 <ul>
     <li>Headings</li>
@@ -24,7 +24,7 @@ title: Accessibility for Radancy CMS Publishers
     <li>Alternative Text</li>
 </ul>
 
-<h2>Headings</h2>
+<h2 id="headings">Headings {% include permalink.html hash="headings" %}</h2>
 
 <p>Assistive technology (AT) users can access all of the headings on the page to better understand and navigate that content. The more clear and structured your headings are, the easier this task will be.</p>
 
@@ -42,7 +42,7 @@ title: Accessibility for Radancy CMS Publishers
 
 <p>TODO: Show examples of or proper heading structure and possible screen reader demo of heading navigation.</p>
 
-<h2>Hyperlinks</h2>
+<h2 id="hyperlinks">Hyperlinks {% include permalink.html hash="hyperlinks" %}</h2>
 
 <ul>
     <li>Assistive technology users depend on hyperlinks to navigate. </li>
@@ -63,9 +63,9 @@ title: Accessibility for Radancy CMS Publishers
     <li>Ask yourself if you really need a new window. (The answer is usually no.)</li>
 </ul>
 
-<p>TODO: Add or point to guidance document on this issue. </p>
+<p>See <a href="/guidance-on-new-windows/">Guidance on Designing For and Implementing New Windows</a></p>
 
-<h2>Alternative Text</h2>
+<h2 id="alternative-text">Alternative Text {% include permalink.html hash="alternative-text" %}</h2>
 
 <ul>
     <li>Not all images require alternative text. Most common types: Informative and Decorative.</li>
@@ -78,7 +78,6 @@ title: Accessibility for Radancy CMS Publishers
     <li>Avoid keyword stuffing alternative text values. Alternative text is for people—not search engines.</li> 
 </ul>
 
-
 <h3>Images Use In Hyperlinks</h3>
 
 <p>Single images wrapped within hyperlinks must contain alternative text, even if they are decorative. However, the text should be more functional in nature. Here is an example that might link to a YouTube video:</p>
@@ -86,19 +85,22 @@ title: Accessibility for Radancy CMS Publishers
 {% highlight html %}
 
 <a href="...">
-      <img src="..." alt="My Summer Vacation (Video)">
+
+    <img src="..." alt="My Summer Vacation (Video)">
+
 </a>
 
 {% endhighlight %}
-
 
 <p>The only exception to this rule is if adjacent or nearby text is present within the link, too. Here, no alternative text is really required because the content in the <span> element is already sufficient.  
 
 {% highlight html %}
 
 <a href="...">
+
       <img src="..." alt="">
       <span>My Summer Vacation</span>
+
 </a>
 
 {% endhighlight %}
@@ -110,6 +112,6 @@ title: Accessibility for Radancy CMS Publishers
     <li>Add more resources</li>
 </ul>
 
-<h2>Testing Your Work</h2>
+<h2 id="testing-your-work">Testing Your Work {% include permalink.html hash="testing-your-work" %}</h2>
 
 <p>WAVE, AxE, Lighthouse, New Tool for Clients</p>

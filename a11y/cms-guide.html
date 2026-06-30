@@ -1,0 +1,115 @@
+---
+title: Accessibility for Radancy CMS Publishers
+---
+
+<h2>Why is Accessibility Important?</h2>
+
+<ul>
+    <li>Nearly 20% of the world population is disabled - 1 billion people! (WHO)</li>
+    <li>Aging Job Market - Americans 55 and over hold nearly 25% of all jobs. (CNBC)
+    <li>First Impressions - A candidates first impression of a company is important and should be a positive one. We seek to reach all potential candidates!</li>
+    <li>Right thing to do!</li>
+    <li>Risk of Litigation - Over 4,500 web accessibility lawsuits filed under ADA in 2021 - Up from 50 in 2014 and a 15% increase from prior year!</li>
+</ul>
+
+<h2>WYSIWYG ≠ Perfection</h2>
+
+<p>WYSIWYG (What You See Is What You Get) editors are useful tools that allow for greater, customized control over our digital content, but the output of that content and how it imapcts disabled users, is only as good as the effort an author puts in. The greater care one takes for the craftsmanship of their content, the more accessible it will be. This document will help you to address common issues that impact disabled users.</p>
+
+<h2>Common Issues</h2>
+
+<ul>
+    <li>Headings</li>
+    <li>Hyperlinks </li>
+    <li>Alternative Text</li>
+</ul>
+
+<h2>Headings</h2>
+
+<p>Assistive technology (AT) users can access all of the headings on the page to better understand and navigate that content. The more clear and structured your headings are, the easier this task will be.</p>
+
+<ul>
+    <li>Headings represent the hierarchical structure of the page's content.</li>
+    <li>Headings are used by various assistive technology (AT) users to help navigate the page. Well organized and structured headings can benefit AT (and SEO).</li>
+    <li>A heading must never be selected for its size. Choose the right heading level and use CSS to style to your design needs. Structure over aesthetics. </li>
+    <li>Avoid using more than one h1 element.</li>
+    <li>The h1 element should loosely match the title of the page when possible.</li>
+    <li>Headings may be nested. (h1, h2, h3, h3, h2)</li>
+    <li>Avoid skipping heading levels. (h1, h3, h6)</li>
+</ul>
+
+<p>TODO: Add something more clear on hierarchy.</p>
+
+<p>TODO: Show examples of or proper heading structure and possible screen reader demo of heading navigation.</p>
+
+<h2>Hyperlinks</h2>
+
+<ul>
+    <li>Assistive technology users depend on hyperlinks to navigate. </li>
+    <li>Good hyperlinks provide context. Link relevant word, words or phrases. Better for accessibility and SEO.</li>
+    <li>Avoid linking terms like "click here" or "here", etc. </li>
+    <li>Many other elements, such as headings and images can contain hyperlinks.</li>
+</ul>
+
+<p>TODO: Share example of link that uses “click here” and suggested alternatives that can be used.</p>
+
+<p>TODO: Show example of this issue in actual screen reader link list. </p>
+
+<h3>A Note on Hyperlinks that Open New Window Tabs</h3>
+
+<ul>
+    <li>Hyperlinks that open in new windows should be approached with caution. </li>
+    <li>Poor implementation of them can have negative effects on Accessibility, UX, Performance and Security!</li>
+    <li>Ask yourself if you really need a new window. (The answer is usually no.)</li>
+</ul>
+
+<p>TODO: Add or point to guidance document on this issue. </p>
+
+<h2>Alternative Text</h2>
+
+<ul>
+    <li>Not all images require alternative text. Most common types: Informative and Decorative.</li>
+    <li>If image is relevant to, supplements, or enhances surrounding content, then it is considered informative and should contain alternative text. </li>
+    <li>Decorative images are often icons, branded page dressing or other design flourishes. These require no alternative text, buyt should include a blank alt (alt="").</li>
+    <li>Alternative text should succinctly describe an image. Imagine describing the picture to a blind friend.</li>
+    <li>Avoid terms like "Picture of..." or "Image of..." within alternative text. This is redundant to AT users.</li>
+    <li>Logos and images with embedded text must contain verbatim alternative text.</li>
+    <li>Chart or graphica data should be described, but not in detail and should point to equivelent and accessible version of this content.</li>
+    <li>Avoid keyword stuffing alternative text values. Alternative text is for people—not search engines.</li> 
+</ul>
+
+
+<h3>Images Use In Hyperlinks</h3>
+
+<p>Single images wrapped within hyperlinks must contain alternative text, even if they are decorative. However, the text should be more functional in nature. Here is an example that might link to a YouTube video:</p>
+
+{% highlight html %}
+
+<a href="...">
+      <img src="..." alt="My Summer Vacation (Video)">
+</a>
+
+{% endhighlight %}
+
+
+<p>The only exception to this rule is if adjacent or nearby text is present within the link, too. Here, no alternative text is really required because the content in the <span> element is already sufficient.  
+
+{% highlight html %}
+
+<a href="...">
+      <img src="..." alt="">
+      <span>My Summer Vacation</span>
+</a>
+
+{% endhighlight %}
+
+<h3>Alternative Text Resources</h3>
+
+<ul>
+    <li>When in doubt, use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">Alt Decision Tree</a></li>
+    <li>Add more resources</li>
+</ul>
+
+<h2>Testing Your Work</h2>
+
+<p>WAVE, AxE, Lighthouse, New Tool for Clients</p>

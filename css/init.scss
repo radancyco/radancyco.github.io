@@ -1018,57 +1018,58 @@ margin: 2em 0;
   margin: 0;
   padding: 0;
 
-    li, form {
+    > li, > form {
     display: contents;
-    }
 
-  }
+      a, button {
+      align-items: center;
+      background-color: transparent;
+      border-radius: calc(4rem / 16);
+      border: calc(1rem / 16) solid #000;
+      color: #000;
+      cursor: pointer;
+      display: grid;
+      font-size: calc(14rem / 16);
+      gap: 0.8rem;
+      grid-template-columns: min-content auto; 
+      line-height: 1.2; 
+      padding: 1.2rem;
+      text-align: start;
+      text-decoration: none;
+      transition: background-color 300ms ease-in-out;
 
-  a, button {
-  align-items: center;
-  background-color: transparent;
-  border-radius: calc(4rem / 16);
-  border: calc(1rem / 16) solid #000;
-  color: #000;
-  cursor: pointer;
-  display: grid;
-  font-size: calc(14rem / 16);
-  gap: 0.8rem;
-  grid-template-columns: min-content auto; 
-  line-height: 1.2; 
-  padding: 1.2rem;
-  text-align: start;
-  text-decoration: none;
-  transition: background-color 300ms ease-in-out;
+        @media (min-width: 37.5em) {
 
-    @media (min-width: 37.5em) {
+          justify-content: center;
 
-      justify-content: center;
+        }
 
-    }
+        &:focus, &:hover {
+        background-color: #6F00EF40;
+        }
 
-    &:focus, &:hover {
-    background-color: #6F00EF40;
-    }
+        svg {
+        block-size: 1rem;
+        display: block;
+        inline-size: 1rem;
+        }
 
-    svg {
-    block-size: 1rem;
-    display: block;
-    inline-size: 1rem;
-    }
+        .icon-check {
+        display: none;
+        }
 
-    .icon-check {
-    display: none;
-    }
+        &.link-copied {
 
-    &.link-copied {
+          .icon-copy-url {
+          display: none;
+          }
 
-      .icon-copy-url {
-      display: none;
-      }
+          .icon-check {
+          display: block;
+          }
 
-      .icon-check {
-      display: block;
+        }
+
       }
 
     }

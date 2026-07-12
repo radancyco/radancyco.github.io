@@ -1077,11 +1077,13 @@ margin: 2em 0;
       border-radius: calc(5rem / 16);
       inline-size: anchor-size();
       inset: calc(5rem / 16) 0;
-      padding: 0.8rem;
+      padding: 0.5rem;
       position-area: block-end;
       position-try-fallbacks: flip-block;
 
         ul {
+        display: grid;
+        gap: 0.5rem;
         list-style: none;
         padding: 0;
 
@@ -1090,6 +1092,7 @@ margin: 2em 0;
           text-decoration: none;
           display: grid;
           grid-auto-flow: column;
+          border-radius: calc(5rem / 16);
 
             img {
             align-self: center;

@@ -1073,15 +1073,22 @@ margin: 2em 0;
       }
 
       [popover] {
-      position-area: block-end;
+      border: 1px black solid;
+      border-radius: calc(5rem / 16);
       inline-size: anchor-size();
       inset: calc(5rem / 16) 0;
       padding: 1rem;
+      position-area: block-end;
       position-try-fallbacks: flip-block;
 
         ul {
         list-style: none;
         padding: 0;
+
+          a {
+          color: inherit;
+          }
+
         }
 
       }

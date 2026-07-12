@@ -546,7 +546,7 @@ components:
     desc: "Group content in a visually organized layout, with the ability to flip and reveal additional information when a button is pressed."
     path: "tile"
     title: "Tile"
-    version: "1.2.0"
+    version: "1.2.1"
     examples: 
 
       - name: "Default Setup"

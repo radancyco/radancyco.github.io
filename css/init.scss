@@ -1077,7 +1077,7 @@ margin: 2em 0;
       border-radius: calc(5rem / 16);
       inline-size: anchor-size();
       inset: calc(5rem / 16) 0;
-      padding: 1rem;
+      padding: 0.8rem;
       position-area: block-end;
       position-try-fallbacks: flip-block;
 
@@ -1087,6 +1087,7 @@ margin: 2em 0;
 
           a {
           color: inherit;
+          text-decoration: none;
           }
 
         }

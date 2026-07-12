@@ -1076,7 +1076,14 @@ margin: 2em 0;
       position-area: block-end;
       inline-size: anchor-size();
       inset: calc(5rem / 16) 0;
+      padding: 1rem;
       position-try-fallbacks: flip-block;
+
+        ul {
+        list-style: none;
+        padding: 0;
+        }
+
       }
 
     }

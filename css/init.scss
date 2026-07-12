@@ -1021,7 +1021,7 @@ margin: 2em 0;
     > li, > li > form {
     display: contents;
 
-      a, button {
+      > a, > button {
       align-items: center;
       background-color: transparent;
       border-radius: calc(4rem / 16);

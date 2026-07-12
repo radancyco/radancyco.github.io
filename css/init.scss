@@ -1088,6 +1088,14 @@ margin: 2em 0;
           a {
           color: inherit;
           text-decoration: none;
+          display: grid;
+          grid-auto-flow: column;
+
+            img {
+            align-self: center;
+            justify-self: end;
+            }
+
           }
 
         }

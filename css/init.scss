@@ -1095,6 +1095,10 @@ margin: 2em 0;
           border-radius: calc(5rem / 16);
           padding: calc(8rem / 16);
 
+            &:focus, &:hover {
+            background-color: #6F00EF40;
+            }
+
             img {
             align-self: center;
             justify-self: end;

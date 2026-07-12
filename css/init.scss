@@ -1010,7 +1010,7 @@ padding: 1rem;
 .component-functions {
 margin: 2em 0;
     
-  ul {
+  > ul {
   display: grid;
   gap: .5rem;
   grid-template-columns: repeat(auto-fill, minmax(13.25rem, 1fr));
@@ -1024,7 +1024,7 @@ margin: 2em 0;
 
   }
 
-  a, button {
+  > a, > button {
   align-items: center;
   background-color: transparent;
   border-radius: calc(4rem / 16);

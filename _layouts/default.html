@@ -124,7 +124,7 @@
   </title>
 </head>
 
-<body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}{% endif %}" tabindex="-1">
+<body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}rad-{% if site.segment %}{{ site.segment }}-{% endif %}{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}{% endif %}" tabindex="-1">
 
   <a class="access-link" href="#content">Skip to main content</a>
   
@@ -147,9 +147,9 @@
           <div class="primary-header__navigation__content" id="primary-navigation">
 
             <ul>
-              <li><a data-nav-id="rad-home-index" href="https://radancy.dev/">Home</a></li>
-              <li><a data-nav-id="rad-a11y-index" href="https://radancy.dev/a11y/">Accessibility at Radancy</a></li>
-              <li><a data-nav-id="rad-pulse-index" href="https://radancy.dev/a11y/pulse/">Accessibility Pulse</a></li>
+              <li><a data-nav-id="rad-global-index" href="https://radancy.dev/">Home</a></li>
+              <li><a data-nav-id="rad-global-a11y-index" href="https://radancy.dev/a11y/">Accessibility at Radancy</a></li>
+              <li><a data-nav-id="rad-global-pulse-index" href="https://radancy.dev/a11y/pulse/">Accessibility Pulse</a></li>
               <li>
                 
                 <details name="navigation-parent">
@@ -254,15 +254,15 @@
                    
                   <ul>
                     <li><a data-nav-id="rad-magicbullet-index" href="https://radancy.dev/magicbullet/"><span class="visually-hidden">MagicBullet</span> Home</a></li>
-                    <li><a data-nav-id="rad-a11y-index" href="https://radancy.dev/magicbullet/a11y/">Accessibility Patch</a></li>
-                    <li><a data-nav-id="rad-alert-index" href="https://radancy.dev/magicbullet/alert/">System Alert</a></li>
+                    <li><a data-nav-id="rad-magicbullet-a11y-index" href="https://radancy.dev/magicbullet/a11y/">Accessibility Patch</a></li>
+                    <li><a data-nav-id="rad-magicbullet-alert-index" href="https://radancy.dev/magicbullet/alert/">System Alert</a></li>
                   </ul>
 
                 </details>
 
               </li>
-              <li><a data-nav-id="rad-blog" href="https://radancy.dev/blog/">Radancy DevBlog</a></li>
-              <li><a data-nav-id="rad-uid-code-standards" href="https://radancy.dev/uid/code-standards/">User Interface Standards and Guidelines</a></li>
+              <li><a data-nav-id="rad-global-blog" href="https://radancy.dev/blog/">Radancy DevBlog</a></li>
+              <li><a data-nav-id="rad-global-uid-code-standards" href="https://radancy.dev/uid/code-standards/">User Interface Standards and Guidelines</a></li>
             </ul>
 
           </div>

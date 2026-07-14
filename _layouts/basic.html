@@ -11,7 +11,7 @@
     <title>{{ page.title }} - {{ site.company-name }}</title>
 </head>
 
-<body id="rad-{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-'}}"{% if page.section %} class="{{ page.section }}"{% endif %}>
+<body id="{% if page.bodyid %}{{ page.bodyid }}{% else %}rad-{% if site.segment %}{{ site.segment }}-{% endif %}{{ page.path | replace:'.html',''|  replace:'.md','' | replace:'_','' | replace: '/', '-' | replace:'feeds-',''}}{% endif %}" tabindex="-1">
 
   <main id="content">
     

@@ -294,9 +294,9 @@
           <li><form action="https://codepen.io/cpe/pen/define" id="{{ example.id }}-codepen" method="POST" target="_blank"><button class="btn-edit-codepen">{{ iconCodePen }} <span>Edit on CodePen</span></button></form></li>
           <li>
 
-            <button  popovertarget="ai-models" class="btn-ai">{{ iconAI }} AI</button>
+            <button  popovertarget="ai-models-{{ example.id }}" class="btn-ai">{{ iconAI }} AI</button>
 
-            <div id="ai-models" popover>
+            <div id="ai-models-{{ example.id }}" popover>
 
               <ul>
                 <li><a href="https://chatgpt.com/?prompt=Hi%20ChatGPT!%20Can%20you%20please%20read%20{{ page.url | absolute_url }}%23{{ example.id }}%20and%20prepare%20to%20answer%20questions%20about%20it?" target="_blank">ChatGPT {{ iconNewTab }}</a></li>

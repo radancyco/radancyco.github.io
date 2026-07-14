@@ -28,4 +28,5 @@ port: 4005
 repo: https://github.com/radancyco/radancyco.github.io
 sass:
   style: :compressed
+segment: global
 theme-color: "#6E00EE"

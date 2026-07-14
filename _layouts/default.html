@@ -149,7 +149,7 @@
             <ul>
               <li><a data-nav-id="rad-global-index" href="https://radancy.dev/">Home</a></li>
               <li><a data-nav-id="rad-global-a11y-index" href="https://radancy.dev/a11y/">Accessibility at Radancy</a></li>
-              <li><a data-nav-id="rad-global-pulse-index" href="https://radancy.dev/a11y/pulse/">Accessibility Pulse</a></li>
+              <li><a data-nav-id="rad-global-a11y-pulse-index" href="https://radancy.dev/a11y/pulse/">Accessibility Pulse</a></li>
               <li>
                 
                 <details name="navigation-parent">
@@ -170,7 +170,7 @@
 
                               {% if component.hidden != true %}
 
-                                <li><a data-nav-id="rad-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}https://radancy.dev/component-library/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                <li><a data-nav-id="rad-rcl-{{ component.id }}-index" href="{% if component.path-full %}{{ component.path-full }}{% else %}https://radancy.dev/component-library/{{ component.path }}/{{ component.hash }}{% endif %}">{{ component.title }}</a> {% if component.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                               {% endif %}
 

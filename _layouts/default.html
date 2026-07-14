@@ -190,7 +190,7 @@
 
                               {% if feed.hidden != true %}
 
-                                <li><a data-nav-id="rad-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}https://radancy.dev/component-library/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                <li><a data-nav-id="rad-rcl-{{ feed.id }}-index" href="{% if feed.path-full %}{{ feed.path-full }}{% else %}https://radancy.dev/component-library/{{ feed.path }}/{{ feed.hash }}{% endif %}">{{ feed.title }}</a> {% if feed.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                               {% endif %}
 

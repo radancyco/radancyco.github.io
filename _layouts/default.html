@@ -210,7 +210,7 @@
 
                               {% if layout.hidden != true %}
 
-                                <li><a data-nav-id="rad-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}https://radancy.dev/component-library/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                <li><a data-nav-id="rad-rcl-{{ layout.id }}-index" href="{% if layout.path-full %}{{ layout.path-full }}{% else %}https://radancy.dev/component-library/{{ layout.path }}/{{ layout.hash }}{% endif %}">{{ layout.title }}</a> {% if layout.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                               {% endif %}
 
@@ -230,7 +230,7 @@
 
                               {% if feed.hidden != true %}
 
-                                <li><a data-nav-id="rad-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}https://radancy.dev/component-library/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
+                                <li><a data-nav-id="rad-rcl-{{ resource.id }}-index" href="{% if resource.path-full %}{{ resource.path-full }}{% else %}https://radancy.dev/component-library/{{ resource.path }}/{{ resource.hash }}{% endif %}">{{ resource.title }}</a> {% if resource.deprecated == true %}<span class="alert">(Deprecated)</span>{% endif %}</li>
 
                               {% endif %}
 

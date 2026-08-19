@@ -4,7 +4,7 @@ components:
     desc: "Organize content into expandable and collapsible sections, allowing users to reveal or hide information as needed."
     path: "accordion"
     title: "Accordion"
-    version: "2.9.1" 
+    version: "2.9.3" 
     examples: 
 
       - name: "Default Setup"
@@ -267,7 +267,7 @@ components:
     message: disclosure-use
     path: "disclosure"
     title: "Disclosure"
-    version: "2.4.0"
+    version: "2.4.1"
     examples:
 
       - name: "Default Setup"
@@ -466,7 +466,7 @@ components:
     desc: "Allow user to choose an item from a select menu, updating the content on the same page."
     path: "select-internal"
     title: "Select Navigation (Internal)"
-    version: "1.8.0"
+    version: "1.8.1"
     examples:
       
       - name: "Default Setup"
@@ -505,7 +505,7 @@ components:
     message: use-accordion
     guidance: a11y-tab-placement
     title: "TabList"
-    version: "2.0.0"
+    version: "2.0.1"
     examples:
 
       - name: "Default Setup"

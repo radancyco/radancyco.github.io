@@ -21,8 +21,6 @@
 
   <meta content="noindex, nofollow" name="robots">
 
-  <meta content="noai, noimageai" name="robots">
-
   <meta content="{{ site.theme-color }}" name="theme-color">
 
   {%- if page.slick %}
@@ -66,6 +64,10 @@
   <link href="{{ site.baseurl }}/card/init.css" rel="stylesheet">
 
   {%- endif %}
+
+  <link as="font" crossorigin href="{{ site.git-url }}/font/graphik-regular.woff2" rel="preload" type="font/woff2">
+  <link as="font" crossorigin href="{{ site.git-url }}/font/graphik-semibold.woff2" rel="preload" type="font/woff2">
+  <link as="font" crossorigin href="{{ site.git-url }}/font/campton-book.woff2" rel="preload" type="font/woff2">
 
   <link href="{{ site.git-url }}/css/init.css" rel="stylesheet">
 

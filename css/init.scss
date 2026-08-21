@@ -100,6 +100,8 @@ $font-file-path: "https://radancy.dev/font/";
 @include fontface("#{$font-file-path}", "graphik-semibold", "Graphik", $weight-bold); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
 @include fontface("#{$font-file-path}", "graphik-semibolditalic", "Graphik", $weight-bold, "italic"); // NOTE: We are usuing the same weight as Bold here as the creative want to use the semi bold font as their bold
 
+// Page Transition
+
 @view-transition {
 
   navigation: auto;
@@ -1123,11 +1125,14 @@ margin: 2em 0;
     border-block-start: calc(6rem / 16) #6F00EF solid;
     border-radius: calc(6rem / 16) calc(6rem / 16) 0 0;
     display: grid;
-    gap: 0.8rem;
     grid-template-columns: auto 1fr;
     line-height: normal;
     padding: 1rem;
     transition: background-color 300ms ease-in-out, color 150ms ease-in-out;
+
+      &:has(.icon) {
+      gap: 0.8rem;
+      }
 
       &:hover {
       background-color: #6F00EF40;

@@ -366,7 +366,7 @@ components:
     guidance: a11y-scrollbars
     path: "horizontal-scroll"
     title: "Horizontal Free-Scroller"
-    version: "1.5.0"
+    version: "1.5.2"
     examples:
 
       - name: "Default Setup"
@@ -384,6 +384,11 @@ components:
         id: "dynamic-label"
         note: "In this example, we use a hidden <code>li</code> element with <code>data-aria-label-replace</code> to dynamically append a value to the <code>aria-label</code> attribute on the <code>.horizontal-scroll</code> container. This can be used in certain templating situations where updating the default <code>aria-label</code> value may not be possible. "
   
+      - name: "Mouse Wheel Support"
+        id: "wheel-support"
+        group: Experimental
+        message: experimental
+
   - id: "job-list"
     desc: 'Display job opportunity listings in various layouts, featuring options like a "Save Job" button.'
     hidden: true

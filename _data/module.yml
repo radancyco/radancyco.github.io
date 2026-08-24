@@ -4,7 +4,7 @@ components:
     desc: "Organize content into expandable and collapsible sections, allowing users to reveal or hide information as needed."
     path: "accordion"
     title: "Accordion"
-    version: "2.9.3" 
+    version: "2.9.4" 
     examples: 
 
       - name: "Default Setup"
@@ -22,9 +22,9 @@ components:
         id: "default-opened"
         note: "Please note that only one accordion may be opened on page load. This content can be closed and should not be confused with the <a href='../tablist/'>TabList</a>, which may never have collapsed content."
 
-      - name: "Disable Anchor"
-        id: "disable-anchor"
-        note: "By default, clicking a button adds an anchor to the URL, but this can be disabled if needed. However, anchors are useful for sharing specific content and tracking, so they should only be removed with a valid reason."
+      - name: "Enable Anchor"
+        id: "enable-anchor"
+        note: "In this demo, selecting a disclosure adds an anchor to the URL. Each disclosure can be configured with a unique anchor. Anchors make it easier to link directly to specific content, share specific sections of the page, and track user interactions."
 
       - name: "Fixed Height"
         id: "fixed-height"
@@ -282,6 +282,7 @@ components:
 
       - name: "Enable Anchor"
         id: "enable-anchor"
+        note: "In this demo, selecting a disclosure appends its configured anchor to the URL. Anchors can be useful for tracking interactions and creating links that navigate directly to specific content."
 
       - name: "Interactive Heading"
         id: "heading"
@@ -510,7 +511,7 @@ components:
     message: use-accordion
     guidance: a11y-tab-placement
     title: "TabList"
-    version: "2.0.1"
+    version: "2.0.2"
     examples:
 
       - name: "Default Setup"
@@ -521,9 +522,9 @@ components:
         id: "animation"
         message: starting-style
 
-      - name: "Disable Anchor"
-        id: "disable-anchor"
-        note: "By default, clicking a tab adds an anchor to the URL, but this can be disabled if needed. However, anchors are useful for sharing specific content and tracking, so they should only be removed with a valid reason."
+      - name: "Enable Anchor"
+        id: "enable-anchor"
+        note: "In this demo, selecting a tab appends its configured anchor to the URL. Anchors can be useful for tracking interactions and creating links that navigate directly to specific content."
 
       - name: "Fixed Height"
         id: "fixed-height"

@@ -303,7 +303,7 @@ main > * + *, section > * + * {
 margin-block-start: var(--flow-space, 1.5rem);
 }
 
-section:not(.info) { 
+section:not(.info):not(.business-areas) { 
 border-radius: calc(5rem / 16);
 border: calc(1rem / 16) transparent solid;
 display: flow-root;

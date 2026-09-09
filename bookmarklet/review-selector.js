@@ -60,14 +60,30 @@ function processSitemap(sitemap) {
 }
 
 // Turn user input into a usable CSS selector.
-// Accepts standard selectors (".my-button", "#id", "a[href]") as-is, and also
-// bare attribute names (e.g. "data-fancybox") by wrapping them as [data-fancybox].
+// Accepts standard selectors (".my-button", "#id", "a[href]") as-is.
+// Also accepts two shorthands so users don't have to hand-write bracket syntax:
+//   - a bare attribute name (e.g. "data-fancybox") -> [data-fancybox] (attribute exists)
+//   - "attr=value" or "attr:value" (e.g. "data-src=youtube") -> [data-src*="youtube"]
+//     (attribute value CONTAINS "youtube" anywhere). Prefix the "=" with ^ or $ to
+//     match "starts with" or "ends with" instead, e.g. "data-src^=youtube".
 function normalizeSelector(input) {
     const trimmed = input.trim();
+
+    const partialMatch = trimmed.match(/^([a-zA-Z_][a-zA-Z0-9_-]*)\s*([*^$]?=|:)\s*(.+)$/);
+    if (partialMatch) {
+        let [, attr, operator, value] = partialMatch;
+        if (operator === ":" || operator === "=") {
+            operator = "*="; // default to "contains" for the plain shorthand
+        }
+        const escapedValue = value.trim().replace(/"/g, '\\"');
+        return `[${attr}${operator}"${escapedValue}"]`;
+    }
+
     const looksLikeBareAttribute = /^[a-zA-Z_][a-zA-Z0-9_-]*$/.test(trimmed);
     if (looksLikeBareAttribute) {
         return `[${trimmed}]`;
     }
+
     return trimmed;
 }
 
@@ -168,7 +184,7 @@ function triggerDownload(csv) {
 
 // Execute the process
 (async function(){
-    const rawInput = window.prompt("Enter a CSS class, attribute, or selector to search for on each page (e.g. .my-button, data-fancybox, [data-fancybox=\"true\"]):");
+    const rawInput = window.prompt("Enter a CSS class, attribute, or selector to search for on each page (e.g. .my-button, data-fancybox, data-src=youtube for a partial value match, or a full selector like [data-fancybox=\"true\"]):");
 
     if (!rawInput || !rawInput.trim()) {
         console.warn("No selector entered. Aborting.");

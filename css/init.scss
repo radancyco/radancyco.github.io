@@ -1160,6 +1160,13 @@ margin: 2em 0;
 
     }
 
+    &__panel {
+    border-end-end-radius: calc(6rem / 16);
+    border-end-start-radius: calc(6rem / 16);
+    border-start-end-radius: calc(6rem / 16);
+    border-start-start-radius: 0;
+    }
+
   }
 
   .highlight {

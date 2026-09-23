@@ -252,15 +252,82 @@ components:
         id: "arrow-placement"
 
   - id: "dialog"
-    desc: "Do dialog things without Fancybox."
+    desc: "Displays video or other content in a modal dialog, opened when a user presses a button."
     path: "dialog"
     title: "Dialog"
     version: "1.0.0"
-    hidden: true
     examples:
 
       - name: "Default"
         id: "default"
+
+      - name: "Content"
+        id: "content-id"
+        group: "Content"
+
+      - name: "Audio Description"
+        id: "audio-description"
+        group: "Accessibility"
+
+      - name: "Captions"
+        id: "captions"
+        guidance: a11y-dont-forget-captions
+        group: "Accessibility"
+
+      - name: "Labelled By ID"
+        id: "labelledby"
+        group: "Accessibility"
+
+      - name: "Transcript (ID)"
+        id: "transcript-id"
+        group: "Accessibility"
+
+      - name: "Transcript (URL)"
+        id: "transcript-url"
+        group: "Accessibility"
+
+      - name: "Dynamic Label"
+        id: "dynamic-label"
+        group: "Experimental"
+
+      - name: "ARIA Dialog"
+        id: "aria-dialog"
+        note: "By default, the component loads only the <code>dialog</code> element. This fallback is provided in the event that the <code>dialog</code> element causes compatibility or rendering issues. For example, absolutely positioned elements that need to render within the dialog may otherwise be positioned behind it due to stacking context of the <code>dialog</code> element."
+        group: "Utilities"
+
+      - name: "Enable Heading"
+        id: "enable-heading"
+        note: "By default, dialogs do not render a heading. Set the <code>data-enable-heading</code> attribute to enable one, using the required value provided via the <code>data-label</code> attribute. Note that an <code>h1</code> element is used for this heading; this is acceptable within the context of a dialog, since all other page content is rendered inert while it is open."
+        group: "Utilities"
+
+      - name: "Play Button"
+        id: "play-button"
+        group: "Utilities"
+
+      - name: "Cloudflare"
+        id: "video-cloudflare"
+        group: "Video"
+
+      - name: "MP4"
+        id: "video-mp4"
+        group: "Video"
+
+      - name: "Vimeo"
+        id: "video-vimeo"
+        group: "Video"
+
+      - name: "WebM"
+        id: "video-webm"
+        group: "Video"
+
+      - name: "YouTube Shorts"
+        id: "video-youtube-shorts"
+        note: "The script automatically detects when a YouTube Shorts video is being played and adjusts its default size to render at the correct aspect ratio."
+        group: "Video"
+
+      - name: "YouTube"
+        id: "video-youtube"
+        group: "Video"
 
   - id: "disclosure"
     desc: "Reaveal or hide additional content when triggered, helping to manage the display of supplementary information."

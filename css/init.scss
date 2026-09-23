@@ -518,12 +518,12 @@ transition: 300ms;
     }
 
   }
-  
+
   img { 
   border-radius: 50%;
   max-inline-size: calc(80rem/16);
   }
-  
+
   span {
   font-weight: bold;
   }
@@ -533,7 +533,7 @@ transition: 300ms;
   margin: 0 0 0 0;
   padding: 0;
   }
-    
+
 }
 
 // Information CTA 
@@ -1163,7 +1163,7 @@ margin: 2em 0;
     &__panel {
     border-end-end-radius: calc(6rem / 16);
     border-end-start-radius: calc(6rem / 16);
-    border-start-end-radius: calc(6rem / 16);
+    border-start-end-radius: 0;
     border-start-start-radius: 0;
     }
 

@@ -203,6 +203,16 @@
 
       </div>
 
+      {%- if example.a11y %}
+  
+        <div class="info info--a11y">
+        
+          <p><strong>Accessibility:</strong> {{ example.a11y }}</p>
+
+        </div>
+
+      {%- endif %}
+
       {%- if example.warning %}
   
         <div class="info info--warning">

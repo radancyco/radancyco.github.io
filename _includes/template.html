@@ -468,6 +468,22 @@
 
 {% endif %}
 
+{%- if page.diagram %}
+
+  <h2 id="diagram">Diagram {% include permalink.html hash="diagram" name="Diagram" %}</h2>
+
+  <p>Use the following diagram to understand this component's structure.</p>
+
+  <figure class="diagram">
+  
+    <img alt="Screenshot of component's structure." src="diagram.png">
+
+    <figcaption>{{ page.diagram-description }}</figcaption>
+
+  </figure>
+
+{%- endif %}
+
 {%- if page.elements or page.aria or page.attributes or page.sass or page.class or page.cookies or page.parameters %}
 
   <h2 id="properties">Properties {% include permalink.html hash="properties" name="Properties" %}</h2>

@@ -219,11 +219,10 @@ margin-inline: 0;
 
   img {
   border-radius: calc(5rem / 16);
+  }
 
-    &:not(.diagram) {
-    border: calc(1rem / 16) black solid;
-    }
-
+  &:not(.diagram) img {
+  border: calc(1rem / 16) black solid;
   }
 
   video {

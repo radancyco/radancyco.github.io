@@ -203,21 +203,31 @@
 
       </div>
 
-      {%- if example.a11y %}
-  
-        <div class="info info--a11y">
-        
-          <p><strong>Accessibility:</strong> {{ example.a11y }}</p>
-
-        </div>
-
-      {%- endif %}
-
       {%- if example.warning %}
   
         <div class="info info--warning">
         
           <p><strong>Warning:</strong> {{ example.warning }}</p>
+
+        </div>
+
+      {%- endif %}
+  
+      {%- if example.note %}
+  
+        <div class="info info--note">
+          
+          <p><strong>Note:</strong> {{ example.note }}</p>
+
+        </div>
+  
+      {%- endif %}
+
+      {%- if example.a11y %}
+  
+        <div class="info info--a11y">
+        
+          <p><strong>Accessibility:</strong> {{ example.a11y }}</p>
 
         </div>
 
@@ -231,16 +241,6 @@
 
       </div>
 
-      {%- endif %}
-  
-      {%- if example.note %}
-  
-        <div class="info info--note">
-          
-          <p><strong>Note:</strong> {{ example.note }}</p>
-
-        </div>
-  
       {%- endif %}
 
       {%- if example.reminder %}
@@ -291,6 +291,16 @@
 
         {% endfor %}
 
+      {%- endif %}
+
+      {%- if example.guidance %}
+  
+        {% for item in example.guidance %}
+  
+          {% include guidance/{{ item }}.html %}
+  
+        {% endfor %}
+  
       {%- endif %}
 
       <nav aria-label="{{ example.name }} Tools" class="component-functions">
@@ -392,16 +402,6 @@
 
       </div>
 
-      {%- if example.guidance %}
-  
-        {% for item in example.guidance %}
-  
-          {% include guidance/{{ item }}.html %}
-  
-        {% endfor %}
-  
-      {%- endif %}
-
       <script>
 
       var codePenForm = document.getElementById("{{ example.id }}-codepen");
@@ -475,8 +475,11 @@
   <p>Use the following diagram to understand this component's structure.</p>
 
   <figure class="diagram">
-  
-    <img alt="Screenshot of component's structure." src="diagram.png">
+
+    <picture>
+      <source media="(min-width: 45rem)" srcset="diagram-lg.png">
+      <img alt="Screenshot of component's structure." src="diagram-sm.png">
+    </picture>
 
     <figcaption>{{ page.diagram-description }}</figcaption>
 

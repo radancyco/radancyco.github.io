@@ -24,7 +24,7 @@ components:
 
       - name: "Enable Anchor"
         id: "enable-anchor"
-        note: "In this demo, selecting a disclosure adds an anchor to the URL. Each disclosure can be configured with a unique anchor. Anchors make it easier to link directly to specific content, share specific sections of the page, and track user interactions."
+        note: "In this example, selecting a disclosure adds an anchor to the URL. Each disclosure can be configured with a unique anchor. Anchors make it easier to link directly to specific content, share specific sections of the page, and track user interactions."
 
       - name: "Fixed Height"
         id: "fixed-height"
@@ -255,7 +255,7 @@ components:
     desc: "An accessible, easy-to-implement modal for video and other content, replacing third-party components such as Fancybox."
     path: "dialog"
     title: "Dialog"
-    version: "1.2.3"
+    version: "1.2.5"
     examples:
 
       - name: "Default Setup"
@@ -305,6 +305,11 @@ components:
         id: "description"
         a11y: "This text is exposed only to assistive technology users, and is only meant to act as supplementary information. Keep it to one or two sentences that provide context beyond the dialog's name, rather than repeating its label or heading, which screen readers announce first."
         note: "Set the <code>data-description</code> attribute to a plain text string to use as the dialog's accessible description. The text is inserted into a hidden element referenced by <code>aria-describedby</code>."
+        group: "Accessibility"
+
+      - name: "Initial Focus"
+        id: "initial-focus"
+        note: "Set the <code>data-initial-focus</code> attribute to any CSS selector to move focus to that element when the dialog opens, instead of the default close button. The selector is resolved against the dialog's own contents; an absent, invalid, or non-matching selector falls back to the default close-button focus. To test, use your keyboard to navigate."
         group: "Accessibility"
 
       - name: "Label"
@@ -404,7 +409,7 @@ components:
     message: disclosure-use
     path: "disclosure"
     title: "Disclosure"
-    version: "2.4.2"
+    version: "2.5.0"
     examples:
 
       - name: "Default Setup"
@@ -419,10 +424,14 @@ components:
 
       - name: "Enable Anchor"
         id: "enable-anchor"
-        note: "In this demo, selecting a disclosure appends its configured anchor to the URL. Anchors can be useful for tracking interactions and creating links that navigate directly to specific content."
+        note: "In this example, selecting a disclosure appends its configured anchor to the URL. Anchors can be useful for tracking interactions and creating links that navigate directly to specific content."
 
       - name: "Interactive Heading"
         id: "heading"
+
+      - name: "Light Dismiss"
+        id: "light-dismiss"
+        note: "In this example, the disclosure closes when you press <code>Escape</code>, click outside of it, or tab away from it. This is not typical for a simple disclosure, so use it sparingly, such as when the disclosure acts more like a dropdown."
 
       - name: "Persistent State"
         id: "persistent"

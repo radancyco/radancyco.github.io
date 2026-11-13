@@ -255,7 +255,7 @@ components:
     desc: "An accessible, easy-to-implement modal for video and other content, replacing third-party components such as Fancybox."
     path: "dialog"
     title: "Dialog"
-    version: "1.2.5"
+    version: "1.2.6"
     examples:
 
       - name: "Default Setup"
